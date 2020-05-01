@@ -1,0 +1,252 @@
+函数参考
+========
+
+**目录**
+
+-   [影响 PHP 行为的扩展](/refs/basic/php.html)
+    -   [APC](/book/apc.html) — Alternative PHP Cache (可选 PHP 缓存)
+    -   [APCu](/book/apcu.html) — APC User Cache
+    -   [APD](/book/apd.html) — Advanced PHP debugger
+    -   [bcompiler](/book/bcompiler.html) — PHP 字节码编译器
+    -   [BLENC](/book/blenc.html) — Blenc - BLowfish ENCoder for PHP
+        source scripts
+    -   [Componere](/book/componere.html) — Componere
+    -   [错误处理](/book/errorfunc.html) — 错误处理和日志记录
+    -   [FFI](/book/ffi.html) — Foreign Function Interface
+    -   [htscanner](/book/htscanner.html) — htaccess-like support for
+        all SAPIs
+    -   [inclued](/book/inclued.html) — Inclusion hierarchy viewer
+    -   [Memtrack](/book/memtrack.html) — Memtrack
+    -   [OPcache](/book/opcache.html)
+    -   [输出控制](/book/outcontrol.html) — 输出缓冲控制
+    -   [PHP 选项/信息](/book/info.html) — PHP 选项和信息
+    -   [phpdbg](/book/phpdbg.html) — Interactive PHP Debugger
+    -   [runkit](/book/runkit.html)
+    -   [runkit7](/book/runkit7.html) — runkit7
+    -   [scream](/book/scream.html) — Break the silence operator
+    -   [uopz](/book/uopz.html) — User Operations for Zend
+    -   [Weakref](/book/weakref.html) — Weak References
+    -   [WinCache](/book/wincache.html) — Windows Cache for PHP
+    -   [Xhprof](/book/xhprof.html) — 层次式性能分析器
+    -   [Yac](/book/yac.html) — Yac
+-   [音频格式操作](/refs/utilspec/audio.html)
+    -   [ID3](/book/id3.html) — ID3 Tags
+    -   [KTaglib](/book/ktaglib.html)
+    -   [oggvorbis](/book/oggvorbis.html) — OGG/Vorbis
+    -   [OpenAL](/book/openal.html) — OpenAL Audio Bindings
+-   [身份认证服务](/refs/remote/auth.html)
+    -   [KADM5](/book/kadm5.html) — Kerberos V
+    -   [Radius](/book/radius.html)
+-   [针对命令行的扩展](/refs/utilspec/cmdline.html)
+    -   [Ncurses](/book/ncurses.html) — Ncurses Terminal Screen Control
+    -   [Newt](/book/newt.html)
+    -   [Readline](/book/readline.html) — GNU Readline
+-   [压缩与归档扩展](/refs/compression.html)
+    -   [Bzip2](/book/bzip2.html)
+    -   [LZF](/book/lzf.html) — LZF
+    -   [Phar](/book/phar.html)
+    -   [Rar](/book/rar.html) — Rar Archiving
+    -   [Zip](/book/zip.html)
+    -   [Zlib](/book/zlib.html) — Zlib Compression
+-   [信用卡处理](/refs/creditcard.html)
+    -   [MCVE](/book/mcve.html) — MCVE (Monetra) Payment
+-   [加密扩展](/refs/crypto.html)
+    -   [Crack](/book/crack.html) — Cracklib
+    -   [CSPRNG](/book/csprng.html)
+    -   [Hash](/book/hash.html) — 哈希信息摘要框架
+    -   [Mcrypt](/book/mcrypt.html)
+    -   [Mhash](/book/mhash.html)
+    -   [OpenSSL](/book/openssl.html)
+    -   [密码散列算法](/book/password.html)
+    -   [Sodium](/book/sodium.html) — Sodium
+-   [数据库扩展](/refs/database.html)
+    -   [数据库抽象层](/refs/database/abstract.html)
+    -   [针对各数据库系统对应的扩展](/refs/database/vendors.html)
+-   [日期与时间相关扩展](/refs/calendar.html)
+    -   [Calendar](/book/calendar.html)
+    -   [日期/时间](/book/datetime.html) — 日期和时间
+    -   [HRTime](/book/hrtime.html) — High resolution timing
+-   [文件系统相关扩展](/refs/fileprocess/file.html)
+    -   [Direct IO](/book/dio.html)
+    -   [目录](/book/dir.html)
+    -   [Fileinfo](/book/fileinfo.html) — 文件信息
+    -   [文件系统](/book/filesystem.html)
+    -   [Inotify](/book/inotify.html)
+    -   [Mimetype](/book/mime-magic.html)
+    -   [Phdfs](/book/phdfs.html) — Phdfs
+    -   [Proctitle](/book/proctitle.html) — Proctitle
+    -   [xattr](/book/xattr.html)
+    -   [xdiff](/book/xdiff.html)
+-   [国际化与字符编码支持](/refs/international.html)
+    -   [Enchant](/book/enchant.html) — Enchant spelling library
+    -   [FriBiDi](/book/fribidi.html)
+    -   [Gender](/book/gender.html) — Determine gender of firstnames
+    -   [Gettext](/book/gettext.html)
+    -   [iconv](/book/iconv.html)
+    -   [intl](/book/intl.html) — Internationalization Functions
+    -   [多字节字符串](/book/mbstring.html)
+    -   [Pspell](/book/pspell.html)
+    -   [Recode](/book/recode.html) — GNU Recode
+-   [图像生成和处理](/refs/utilspec/image.html)
+    -   [Cairo](/book/cairo.html) — Cairo
+    -   [Exif](/book/exif.html) — 可交换图像信息
+    -   [GD](/book/image.html) — 图像处理和 GD
+    -   [Gmagick](/book/gmagick.html) — Gmagick
+    -   [ImageMagick](/book/imagick.html) — 图像处理(ImageMagick)
+-   [邮件相关扩展](/refs/remote/mail.html)
+    -   [Cyrus](/book/cyrus.html) — Cyrus IMAP administration
+    -   [IMAP](/book/imap.html) — IMAP, POP3 和 NNTP
+    -   [Mail](/book/mail.html)
+    -   [Mailparse](/book/mailparse.html)
+    -   [vpopmail](/book/vpopmail.html)
+-   [数学扩展](/refs/math.html)
+    -   [BC Math](/book/bc.html) — BCMath 任意精度数学
+    -   [GMP](/book/gmp.html) — GNU Multiple Precision
+    -   [Lapack](/book/lapack.html) — Lapack
+    -   [Math](/book/math.html) — Mathematical Functions
+    -   [Statistics](/book/stats.html)
+    -   [Trader](/book/trader.html) — Technical Analysis for Traders
+-   [非文本内容的 MIME 输出](/refs/utilspec/nontext.html)
+    -   [FDF](/book/fdf.html) — Forms Data Format
+    -   [GnuPG](/book/gnupg.html) — GNU Privacy Guard
+    -   [haru](/book/haru.html) — Haru PDF
+    -   [Ming](/book/ming.html) — Ming (flash)
+    -   [PDF](/book/pdf.html)
+    -   [wkhtmltox](/book/wkhtmltox.html) — wkhtmltox
+    -   [PS](/book/ps.html) — PostScript document creation
+    -   [RPM Reader](/book/rpmreader.html) — RPM Header Reading
+    -   [RpmInfo](/book/rpminfo.html) — RpmInfo
+    -   [XLSWriter](/book/xlswriter.html)
+-   [进程控制扩展](/refs/fileprocess/process.html)
+    -   [Eio](/book/eio.html) — Eio
+    -   [Ev](/book/ev.html) — Ev
+    -   [Expect](/book/expect.html)
+    -   [Libevent](/book/libevent.html) — Libevent
+    -   [PCNTL](/book/pcntl.html) — 进程控制
+    -   [POSIX](/book/posix.html)
+    -   [程序执行](/book/exec.html) — 系统程序执行
+    -   [parallel](/book/parallel.html) — parallel
+    -   [pthreads](/book/pthreads.html) — pthreads
+    -   [pht](/book/pht.html)
+    -   [Semaphore](/book/sem.html) — Semaphore, Shared Memory and IPC
+    -   [Shared Memory](/book/shmop.html)
+    -   [Sync](/book/sync.html) — Sync
+-   [其它基本扩展](/refs/basic/other.html)
+    -   [GeoIP](/book/geoip.html) — Geo IP 定位
+    -   [FANN](/book/fann.html) — FANN (快速人工神经网络)
+    -   [JSON](/book/json.html) — JavaScript对象符号（JSON）
+    -   [Judy](/book/judy.html) — Judy Arrays
+    -   [Lua](/book/lua.html) — Lua
+    -   [LuaSandbox](/book/luasandbox.html) — LuaSandbox
+    -   [Misc.](/book/misc.html) — 杂项函数
+    -   [Parsekit](/book/parsekit.html)
+    -   [SeasLog](/book/seaslog.html) — SeasLog
+    -   [SPL](/book/spl.html) — PHP标准库 (SPL)
+    -   [SPL Types](/book/spl-types.html) — SPL Type Handling
+    -   [Streams](/book/stream.html)
+    -   [Swoole](/book/swoole.html)
+    -   [Tidy](/book/tidy.html)
+    -   [Tokenizer](/book/tokenizer.html)
+    -   [URLs](/book/url.html)
+    -   [V8js](/book/v8js.html) — V8 Javascript Engine Integration
+    -   [Yaml](/book/yaml.html) — YAML 数据序列化
+    -   [Yaf](/book/yaf.html) — Yet Another Framework
+    -   [Yaconf](/book/yaconf.html) — Yaconf
+    -   [Taint](/book/taint.html) — Taint
+    -   [Data Structures](/book/ds.html)
+-   [其它服务](/refs/remote/other.html)
+    -   [chdb](/book/chdb.html) — Constant hash database
+    -   [cURL](/book/curl.html) — Client URL 库
+    -   [Event](/book/event.html) — Event
+    -   [FAM](/book/fam.html) — File Alteration Monitor
+    -   [FTP](/book/ftp.html)
+    -   [Gearman](/book/gearman.html) — Gearman
+    -   [Gopher](/book/net-gopher.html) — Net Gopher
+    -   [Gupnp](/book/gupnp.html) — Gupnp
+    -   [Hyperwave API](/book/hwapi.html)
+    -   [LDAP](/book/ldap.html) — Lightweight Directory Access Protocol
+    -   [Memcache](/book/memcache.html)
+    -   [Memcached](/book/memcached.html) — Memcached
+    -   [mqseries](/book/mqseries.html)
+    -   [网络](/book/network.html)
+    -   [RRD](/book/rrd.html) — RRDtool
+    -   [SAM](/book/sam.html) — Simple Asynchronous Messaging
+    -   [ScoutAPM](/book/scoutapm.html) — ScoutAPM
+    -   [SNMP](/book/snmp.html)
+    -   [Sockets](/book/sockets.html)
+    -   [SSH2](/book/ssh2.html) — Secure Shell2
+    -   [Stomp](/book/stomp.html) — Stomp Client
+    -   [SVM](/book/svm.html) — 支持向量机
+    -   [SVN](/book/svn.html) — Subversion
+    -   [TCP](/book/tcpwrap.html) — TCP Wrappers
+    -   [Varnish](/book/varnish.html) — Varnish
+    -   [YAZ](/book/yaz.html)
+    -   [YP/NIS](/book/nis.html)
+    -   [0MQ消息系统](/book/zmq.html) — ZMQ
+    -   [ZooKeeper](/book/zookeeper.html) — ZooKeeper
+-   [搜索引擎扩展](/refs/search.html)
+    -   [mnoGoSearch](/book/mnogosearch.html)
+    -   [Solr](/book/solr.html) — Apache Solr
+    -   [Sphinx](/book/sphinx.html) — Sphinx 客户端
+    -   [Swish](/book/swish.html) — Swish Indexing
+-   [针对服务器的扩展](/refs/utilspec/server.html)
+    -   [Apache](/book/apache.html)
+    -   [FastCGI 进程管理器](/book/fpm.html)
+    -   [IIS](/book/iisfunc.html) — IIS Administration
+    -   [NSAPI](/book/nsapi.html)
+-   [Session 扩展](/refs/basic/session.html)
+    -   [Msession](/book/msession.html) — Mohawk Software Session
+        Handler Functions
+    -   [Sessions](/book/session.html) — Session Handling
+    -   [Session PgSQL](/book/session-pgsql.html) — PostgreSQL Session
+        Save Handler
+-   [文本处理](/refs/basic/text.html)
+    -   [BBCode](/book/bbcode.html) — Bulletin Board Code
+    -   [CommonMark](/book/cmark.html) — CommonMark
+    -   [Parle](/book/parle.html) — Parsing and lexing
+    -   [PCRE](/book/pcre.html) — 正则表达式(兼容 Perl)
+    -   [POSIX Regex](/book/regex.html) — Regular Expression (POSIX
+        Extended)
+    -   [ssdeep](/book/ssdeep.html) — ssdeep Fuzzy Hashing
+    -   [字符串](/book/strings.html)
+-   [变量与类型相关扩展](/refs/basic/vartype.html)
+    -   [数组](/book/array.html)
+    -   [类/对象](/book/classobj.html) — 类/对象的信息
+    -   [Classkit](/book/classkit.html)
+    -   [Ctype](/book/ctype.html) — 字符类型检测
+    -   [Filter](/book/filter.html) — Data Filtering
+    -   [函数处理](/book/funchand.html)
+    -   [Quickhash](/book/quickhash.html) — Quickhash
+    -   [反射](/book/reflection.html) — 反射
+    -   [Variable handling](/book/var.html)
+-   [Web 服务](/refs/webservice.html)
+    -   [OAuth](/book/oauth.html)
+    -   [SCA](/book/sca.html)
+    -   [SOAP](/book/soap.html) — SOAP
+    -   [Yar](/book/yar.html) — Yet Another RPC Framework
+    -   [XML-RPC](/book/xmlrpc.html)
+-   [Windows 专用扩展](/refs/utilspec/windows.html)
+    -   [COM](/book/com.html) — COM and .Net (Windows)
+    -   [win32ps](/book/win32ps.html)
+    -   [win32service](/book/win32service.html)
+-   [XML 操作](/refs/xml.html)
+    -   [DOM](/book/dom.html) — Document Object Model
+    -   [libxml](/book/libxml.html)
+    -   [SDO](/book/sdo.html) — Service Data Objects
+    -   [SDO-DAS-Relational](/book/sdodasrel.html) — SDO Relational Data
+        Access Service
+    -   [SDO DAS XML](/book/sdo-das-xml.html) — SDO XML Data Access
+        Service
+    -   [SimpleXML](/book/simplexml.html)
+    -   [WDDX](/book/wddx.html)
+    -   [XMLDiff](/book/xmldiff.html) — XML diff and merge
+    -   [XML 解析器](/book/xml.html)
+    -   [XMLReader](/book/xmlreader.html)
+    -   [XMLWriter](/book/xmlwriter.html)
+    -   [XSL](/book/xsl.html)
+-   [图形用户界面(GUI) 扩展](/refs/ui.html)
+    -   [UI](/book/ui.html) — UI
+
+**小贴士**
+
+参见 <a href="/extensions.html" class="xref">扩展库列表／归类</a>.

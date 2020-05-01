@@ -1,0 +1,30 @@
+类与对象
+========
+
+**目录**
+
+-   [简介](/oop5/intro.html)
+-   [基本概念](/language/oop5/basic.html)
+-   [属性](/language/oop5/properties.html)
+-   [类常量](/language/oop5/constants.html)
+-   [类的自动加载](/language/oop5/autoload.html)
+-   [构造函数和析构函数](/language/oop5/decon.html)
+-   [访问控制（可见性）](/language/oop5/visibility.html)
+-   [对象继承](/language/oop5/inheritance.html)
+-   [范围解析操作符 （::）](/language/oop5/paamayim-nekudotayim.html)
+-   [Static（静态）关键字](/language/oop5/static.html)
+-   [抽象类](/language/oop5/abstract.html)
+-   [对象接口](/language/oop5/interfaces.html)
+-   [Trait](/language/oop5/traits.html)
+-   [匿名类](/language/oop5/anonymous.html)
+-   [重载](/language/oop5/overloading.html)
+-   [遍历对象](/language/oop5/iterations.html)
+-   [魔术方法](/language/oop5/magic.html)
+-   [Final 关键字](/language/oop5/final.html)
+-   [对象复制](/language/oop5/cloning.html)
+-   [对象比较](/language/oop5/object-comparison.html)
+-   [类型约束](/language/oop5/typehinting.html)
+-   [后期静态绑定](/language/oop5/late-static-bindings.html)
+-   [对象和引用](/language/oop5/references.html)
+-   [对象序列化](/language/oop5/serialization.html)
+-   [OOP 变更日志](/language/oop5/changelog.html)

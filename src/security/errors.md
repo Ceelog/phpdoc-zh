@@ -1,0 +1,76 @@
+错误报告
+========
+
+对于 PHP
+的安全性来说错误报告是一把双刃剑。一方面可以提高安全性，另一方面又有害。
+
+攻击系统时经常使用的手法就是输入不正确的数据，然后查看错误提示的类型及上下文。这样做有利于攻击者收集服务器的信息以便寻找弱点。比如说，如果一个攻击者知道了一个页面所基于的表单信息，那么他就会尝试修改变量：
+
+**示例 \#1 用自定义的 HTML 页面攻击变量**
+
+``` html
+<form method="post" action="attacktarget?username=badfoo&amp;password=badfoo">
+<input type="hidden" name="username" value="badfoo" />
+<input type="hidden" name="password" value="badfoo" />
+</form>
+```
+
+通常 PHP
+所返回的错误提示都能帮助开发者调试程序，它会提出哪个文件的哪些函数或代码出错，并指出错误发生的在文件的第几行，这些就是
+PHP 本身所能给出的信息。很多 PHP 开发者会使用 <span
+class="function">show\_source</span>、<span
+class="function">highlight\_string</span> 或者 <span
+class="function">highlight\_file</span>
+函数来调试代码，但是在正式运行的网站中，这种做法可能会暴露出隐藏的变量、未检查的语法和其它的可能危及系统安全的信息。在运行一些具有内部调试处理的程序，或者使用通用调试技术是很危险的。如果让攻击者确定了程序是使用了哪种具体的调试技术，他们会尝试发送变量来打开调试功能：
+
+**示例 \#2 利用变量打开调式功能**
+
+``` html
+<form method="post" action="attacktarget?errors=Y&amp;showerrors=1&amp;debug=1">
+<input type="hidden" name="errors" value="Y" />
+<input type="hidden" name="showerrors" value="1" />
+<input type="hidden" name="debug" value="1" />
+</form>
+```
+
+不管错误处理机制如何，可以探测系统错误的能力会给攻击者提供更多信息。
+
+比如说，PHP 的独有的错误提示风格可以说明系统在运行
+PHP。如果攻击者在寻找一个 .html
+为页面，想知道其后台的技术（为了寻找系统弱点），他们就会把错误的数据提交上去，然后就有可以得知系统是基于
+PHP 的了。
+
+一个函数错误就可能暴露系统正在使用的数据库，或者为攻击者提供有关网页、程序或设计方面的有用信息。攻击者往往会顺藤摸瓜地找到开放的数据库端口，以及页面上某些
+bug
+或弱点等。比如说，攻击者可以一些不正常的数据使程序出错，来探测脚本中认证的顺序（通过错误提示的行号数字）以及脚本中其它位置可能泄露的信息。
+
+一个文件系统或者 PHP 的错误就会暴露 web
+服务器具有什么权限，以及文件在服务器上的组织结构。开发者自己写的错误代码会加剧此问题，导致泄漏了原本隐藏的信息。
+
+有三个常用的办法处理这些问题。第一个是彻底地检查所有函数，并尝试弥补大多数错误。第二个是对在线系统彻底关闭错误报告。第三个是使用
+PHP
+自定义的错误处理函数创建自己的错误处理机制。根据不同的安全策略，三种方法可能都适用。
+
+一个能提前阻止这个问题发生的方法就是利用 <span
+class="function">error\_reporting</span>
+来帮助使代码更安全并发现变量使用的危险之处。在发布程序之前，先打开
+E\_ALL
+测试代码，可以帮你很快找到变量使用不当的地方。一旦准备正式发布，就应该把
+<span class="function">error\_reporting</span> 的参数设为 0
+来彻底关闭错误报告或者把 `php.ini` 中的 *display\_errors* 设为 off
+来关闭所有的错误显示以将代码隔绝于探测。当然，如果要迟一些再这样做，就不要忘记打开
+ini 文件内的 *log\_errors* 选项，并通过 *error\_log*
+指定用于记录错误信息的文件。
+
+**示例 \#3 用 E\_ALL 来查找危险的变量**
+
+``` php
+<?php
+if ($username) {  // Not initialized or checked before usage
+    $good_login = 1;
+}
+if ($good_login == 1) { // If above test fails, not initialized or checked before usage
+    readfile ("/highly/sensitive/data/index.html");
+}
+?>
+```

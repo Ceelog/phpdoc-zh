@@ -1,0 +1,39 @@
+连接处理
+========
+
+在 PHP 内部，系统维护着连接状态，其状态有三种可能的情况：
+
+-   <span class="simpara">0 - NORMAL（正常）</span>
+-   <span class="simpara">1 - ABORTED（异常退出）</span>
+-   <span class="simpara">2 - TIMEOUT（超时）</span>
+
+当 PHP 脚本正常地运行 NORMAL
+状态时，连接为有效。当远程客户端中断连接时，ABORTED
+状态的标记将会被打开。远程客户端连接的中断通常是由用户点击 STOP
+按钮导致的。当连接时间超过 PHP 的时限（请参阅 <span
+class="function">set\_time\_limit</span> 函数）时，TIMEOUT
+状态的标记将被打开。
+
+可以决定脚本是否需要在客户端中断连接时退出。有时候让脚本完整地运行会带来很多方便，即使没有远程浏览器接受脚本的输出。默认的情况是当远程客户端连接中断时脚本将会退出。该处理过程可由
+`php.ini` 的 ignore\_user\_abort 或由 `httpd.conf`
+设置中对应的“php\_value ignore\_user\_abort”以及 <span
+class="function">ignore\_user\_abort</span> 函数来控制。如果没有告诉 PHP
+忽略用户的中断，脚本将会被中断，除非通过 <span
+class="function">register\_shutdown\_function</span>
+设置了关闭触发函数。通过该关闭触发函数，当远程用户点击 STOP
+按钮后，脚本再次尝试输出数据时，PHP
+将会检测到连接已被中断，并调用关闭触发函数。
+
+脚本也有可能被内置的脚本计时器中断。默认的超时限制为 30
+秒。这个值可以通过设置 `php.ini` 的 **max\_execution\_time** 或
+`httpd.conf` 设置中对应的“*php\_value max\_execution\_time*”参数或者
+<span class="function">set\_time\_limit</span>
+函数来更改。当计数器超时的时候，脚本将会类似于以上连接中断的情况退出，先前被注册过的关闭触发函数也将在这时被执行。在该关闭触发函数中，可以通过调用
+<span class="function">connection\_status</span>
+函数来检查超时是否导致关闭触发函数被调用。如果超时导致了关闭触发函数的调用，该函数将返回
+2。
+
+需要注意的一点是 ABORTED 和 TIMEOUT 状态可以同时有效。这在告诉 PHP
+忽略用户的退出操作时是可能的。PHP
+将仍然注意用户已经中断了连接但脚本仍然在运行的情况。如果到了运行的时间限制，脚本将被退出，设置过的关闭触发函数也将被执行。在这时会发现函数
+<span class="function">connection\_status</span> 返回 3。
