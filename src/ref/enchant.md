@@ -20,7 +20,8 @@ Broker resource
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+Returns an <span class="type">array</span> of available Enchant
+providers with their details, 或者在失败时返回 **`FALSE`**.
 
 ### 范例
 
@@ -269,7 +270,8 @@ Broker resource
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+Returns an <span class="type">array</span> of available dictionaries
+with their details, 或者在失败时返回 **`FALSE`**.
 
 ### 范例
 

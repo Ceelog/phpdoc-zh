@@ -155,7 +155,7 @@ DATETIME2 columns are now treated like DATETIME columns.
 
 SQLite3 databases can now be opened in read-only mode by setting the new
 **`PDO::SQLITE_ATTR_OPEN_FLAGS`** attribute to
-**`PDO::SQLITE_READONLY`**.
+**`PDO::SQLITE_OPEN_READONLY`**.
 
 ### Session Handling
 
