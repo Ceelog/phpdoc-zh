@@ -35,8 +35,8 @@ ODBC (Unified)
         code
     -   [odbc\_errormsg](/book/uodbc.html#odbc_errormsg) — Get the last
         error message
-    -   [odbc\_exec](/book/uodbc.html#odbc_exec) — Prepare and execute
-        an SQL statement
+    -   [odbc\_exec](/book/uodbc.html#odbc_exec) — Directly execute an
+        SQL statement
     -   [odbc\_execute](/book/uodbc.html#odbc_execute) — Execute a
         prepared statement
     -   [odbc\_fetch\_array](/book/uodbc.html#odbc_fetch_array) — Fetch
@@ -968,7 +968,7 @@ This function returns meaningful value only if last odbc query failed
 odbc\_exec
 ==========
 
-Prepare and execute an SQL statement
+Directly execute an SQL statement
 
 ### 说明
 
@@ -2501,8 +2501,8 @@ and TABLE\_NAME.
 -   [odbc\_error](/book/uodbc.html#odbc_error) — Get the last error code
 -   [odbc\_errormsg](/book/uodbc.html#odbc_errormsg) — Get the last
     error message
--   [odbc\_exec](/book/uodbc.html#odbc_exec) — Prepare and execute an
-    SQL statement
+-   [odbc\_exec](/book/uodbc.html#odbc_exec) — Directly execute an SQL
+    statement
 -   [odbc\_execute](/book/uodbc.html#odbc_execute) — Execute a prepared
     statement
 -   [odbc\_fetch\_array](/book/uodbc.html#odbc_fetch_array) — Fetch a

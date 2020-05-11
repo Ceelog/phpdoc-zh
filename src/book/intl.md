@@ -7110,7 +7110,7 @@ class="methodparam"><span class="type">int</span> `$minimalDays`</span>
 )
 
 <span class="type">bool</span> <span
-class="methodname">intlcal\_get\_minimal\_days\_in\_first\_week</span> (
+class="methodname">intlcal\_set\_minimal\_days\_in\_first\_week</span> (
 <span class="methodparam"><span class="type">IntlCalendar</span>
 `$cal`</span> , <span class="methodparam"><span class="type">int</span>
 `$minimalDays`</span> )
@@ -10344,7 +10344,7 @@ Set minimal number of days the first week in a year or month can have
 过程化风格
 
 <span class="type">bool</span> <span
-class="methodname">intlcal\_get\_minimal\_days\_in\_first\_week</span> (
+class="methodname">intlcal\_set\_minimal\_days\_in\_first\_week</span> (
 <span class="methodparam"><span class="type">IntlCalendar</span>
 `$cal`</span> , <span class="methodparam"><span class="type">int</span>
 `$minimalDays`</span> )
@@ -11334,7 +11334,7 @@ class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 `$minimalDays`</span> )
 
 <span class="type">bool</span> <span
-class="methodname">intlcal\_get\_minimal\_days\_in\_first\_week</span> (
+class="methodname">intlcal\_set\_minimal\_days\_in\_first\_week</span> (
 <span class="methodparam"><span class="type">IntlCalendar</span>
 `$cal`</span> , <span class="methodparam"><span class="type">int</span>
 `$minimalDays`</span> )
