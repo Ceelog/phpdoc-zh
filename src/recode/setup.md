@@ -26,6 +26,21 @@ or one of the available alternatives like the
 安装
 ----
 
+PHP 7.4
+-------
+
+此扩展已被移至
+<a href="https://pecl.php.net/" class="link external">» PECL</a>
+资源库且不再与 PHP 捆绑。7.4.0
+
+安装此 PECL 扩展相关的信息可在手册中标题为
+<a href="/install/pecl.html" class="link">PECL 扩展的安装</a>章节中找到。更多信息如新的发行版本、下载、源文件、
+维护人员信息及变更日志等，都在此处：
+<a href="https://pecl.php.net/package/recode" class="link external">» https://pecl.php.net/package/recode</a>.
+
+PHP \< 7.4
+----------
+
 To be able to use the functions defined in this module you must compile
 your PHP interpreter using the **--with-recode\[=DIR\]** option.
 
