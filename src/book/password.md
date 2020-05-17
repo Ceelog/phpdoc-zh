@@ -11,6 +11,8 @@
     -   [资源类型](/password/setup.html#资源类型)
 -   [预定义常量](/password/constants.html)
 -   [密码散列算法函数](/ref/password.html)
+    -   [password\_algos](/ref/password.html#password_algos) — Get
+        available password hashing algorithm IDs
     -   [password\_get\_info](/ref/password.html#password_get_info) —
         返回指定散列（hash）的相关信息
     -   [password\_hash](/ref/password.html#password_hash) —

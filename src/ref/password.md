@@ -1,3 +1,45 @@
+password\_algos
+===============
+
+Get available password hashing algorithm IDs
+
+### 说明
+
+<span class="type">array</span> <span
+class="methodname">password\_algos</span> ( <span
+class="methodparam">void</span> )
+
+Returns a complete list of all registered password hashing algorithm IDs
+as an <span class="type">array</span> of <span
+class="type">string</span>s.
+
+### 参数
+
+此函数没有参数。
+
+### 返回值
+
+Returns the available password hashing algorithm IDs.
+
+### 范例
+
+**示例 \#1 Basic <span class="function">password</span> usage**
+
+``` php
+<?php
+print_r(password_algos());
+?>
+```
+
+以上例程的输出类似于：
+
+    Array
+    (
+        [0] => 2y
+        [1] => argon2i
+        [2] => argon2id
+    )
+
 password\_get\_info
 ===================
 
@@ -392,6 +434,8 @@ if (password_verify('rasmuslerdorf', $hash)) {
 
 **目录**
 
+-   [password\_algos](/ref/password.html#password_algos) — Get available
+    password hashing algorithm IDs
 -   [password\_get\_info](/ref/password.html#password_get_info) —
     返回指定散列（hash）的相关信息
 -   [password\_hash](/ref/password.html#password_hash) —

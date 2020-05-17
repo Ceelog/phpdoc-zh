@@ -3,7 +3,7 @@
 
 下列常量作为 PHP 核心的一部分总是可用的。
 
-**`PASSWORD_BCRYPT`** (<span class="type">integer</span>)  
+**`PASSWORD_BCRYPT`** (<span class="type">string</span>)  
 **`PASSWORD_BCRYPT`** is used to create new password hashes using the
 **`CRYPT_BLOWFISH`** algorithm.
 
@@ -29,7 +29,7 @@ Supported Options:
     baseline cost, but you may want to consider increasing it depending
     on your hardware.
 
-**`PASSWORD_ARGON2I`** (<span class="type">integer</span>)  
+**`PASSWORD_ARGON2I`** (<span class="type">string</span>)  
 **`PASSWORD_ARGON2I`** is used to create new password hashes using the
 Argon2i algorithm.
 
@@ -49,7 +49,7 @@ Supported Options:
 
 Available as of PHP 7.2.0.
 
-**`PASSWORD_ARGON2ID`** (<span class="type">integer</span>)  
+**`PASSWORD_ARGON2ID`** (<span class="type">string</span>)  
 **`PASSWORD_ARGON2ID`** is used to create new password hashes using the
 Argon2id algorithm. It supports the same options as
 <a href="/password/constants.html#" class="link"><strong><code>PASSWORD_ARGON2I</code></strong></a>.
@@ -73,7 +73,7 @@ Default number of threads that Argon2lib will use.
 
 Available as of PHP 7.2.0.
 
-**`PASSWORD_DEFAULT`** (<span class="type">integer</span>)  
+**`PASSWORD_DEFAULT`** (<span class="type">mixed</span>)  
 The default algorithm to use for hashing if no algorithm is provided.
 This may change in newer PHP releases when newer, stronger hashing
 algorithms are supported.
@@ -87,3 +87,9 @@ store the resulting hash in a way that can store more than 60 characters
 Values for this constant:
 
 -   <span class="simpara"> PHP 5.5.0 - **`PASSWORD_BCRYPT`** </span>
+
+##### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                                                                              |
+|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.4.0 | The values of the password algo IDs (**`PASSWORD_BCRYPT`**, **`PASSWORD_ARGON2I`**, **`PASSWORD_ARGON2ID`** and **`PASSWORD_DEFAULT`**) are now <span class="type">string</span>s. Previously, they have been <span class="type">integer</span>s. |
