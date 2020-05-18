@@ -3140,6 +3140,12 @@ comes first.
 
 Returns the number of bytes written, or **`FALSE`** on error.
 
+### 更新日志
+
+| 版本  | 说明                                                             |
+|-------|------------------------------------------------------------------|
+| 7.4.0 | The function now returns **`FALSE`** instead of zero on failure. |
+
 ### 范例
 
 **示例 \#1 <span class="methodname">SplFileObject::fwrite</span>
