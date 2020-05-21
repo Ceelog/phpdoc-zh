@@ -90,6 +90,15 @@ at
 安装
 ----
 
+此扩展已被移至
+<a href="https://pecl.php.net/" class="link external">» PECL</a>
+资源库且不再与 PHP 捆绑。5.1.0
+
+安装此 PECL 扩展相关的信息可在手册中标题为
+<a href="/install/pecl.html" class="link">PECL 扩展的安装</a>章节中找到。更多信息如新的发行版本、下载、源文件、
+维护人员信息及变更日志等，都在此处：
+<a href="https://pecl.php.net/package/dbx" class="link external">» https://pecl.php.net/package/dbx</a>.
+
 In order to have these functions available, you must compile PHP with
 dbx support by using the **--enable-dbx** option and all options for the
 databases that will be used, e.g. for MySQL you must also specify

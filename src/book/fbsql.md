@@ -165,6 +165,14 @@ client libraries to use this functions. You can get FrontBase from
 安装
 ----
 
+此扩展已被移至
+<a href="https://pecl.php.net/" class="link external">» PECL</a>
+资源库且不再与 PHP 捆绑。5.3.0
+
+安装此 PECL 扩展相关的信息可在手册中标题为
+<a href="/install/pecl.html" class="link">PECL 扩展的安装</a>章节中找到。更多信息如新的发行版本、下载、源文件、
+维护人员信息及变更日志等，都在此处：.
+
 In order to have these functions available, you must compile PHP with
 fbsql support by using the **--with-fbsql\[=DIR\]** option. If you use
 this option without specifying the path to fbsql, PHP will search for
