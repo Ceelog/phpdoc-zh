@@ -823,8 +823,9 @@ class="methodparam"><span class="type">array</span>
 class="type">mixed</span> `$subject`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$limit`<span
 class="initializer"> = -1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `&$count`</span> \]\]
-)
+class="methodparam"><span class="type">int</span> `&$count`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = 0</span></span> \]\]\] )
 
 The behavior of this function is similar to <span
 class="function">preg\_replace\_callback</span>, except that callbacks
@@ -846,6 +847,12 @@ string. Defaults to *-1* (no limit).
 If specified, this variable will be filled with the number of
 replacements done.
 
+`flags`  
+`flags` can be a combination of the **`PREG_OFFSET_CAPTURE`** and
+**`PREG_UNMATCHED_AS_NULL`** flags, which influence the format of the
+matches array. See the description in <span
+class="function">preg\_match</span> for more details.
+
 ### 返回值
 
 <span class="function">preg\_replace\_callback\_array</span> returns an
@@ -854,6 +861,12 @@ errors the return value is **`NULL`**
 
 If matches are found, the new subject will be returned, otherwise
 `subject` will be returned unchanged.
+
+### 更新日志
+
+| 版本  | 说明                             |
+|-------|----------------------------------|
+| 7.4.0 | The `flags` parameter was added. |
 
 ### 范例
 

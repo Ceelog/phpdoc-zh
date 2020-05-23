@@ -116,6 +116,12 @@ Concept asa always had an interest in supporting open source languages,
 db++ has had Perl and Tcl call interfaces for years now and uses Tcl as
 its internal stored procedure language.
 
+> **Note**:
+>
+> 此扩展已被移至
+> <a href="https://pecl.php.net/" class="link external">» PECL</a>
+> 资源库且不再与 PHP 捆绑。4.3.0
+
 **Warning**
 
 此扩展是*实验性* 的。
@@ -148,6 +154,15 @@ db++, but this extension doesn't support it (yet).
 
 安装
 ----
+
+此扩展已被移至
+<a href="https://pecl.php.net/" class="link external">» PECL</a>
+资源库且不再与 PHP 捆绑。4.3.0
+
+安装此 PECL 扩展相关的信息可在手册中标题为
+<a href="/install/pecl.html" class="link">PECL 扩展的安装</a>章节中找到。更多信息如新的发行版本、下载、源文件、
+维护人员信息及变更日志等，都在此处：
+<a href="https://pecl.php.net/package/dbplus" class="link external">» https://pecl.php.net/package/dbplus</a>.
 
 In order to build this extension yourself you need the db++ client
 libraries and header files to be installed on your system (these are
