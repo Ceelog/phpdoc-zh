@@ -26,8 +26,8 @@ In order to use these functions you must compile PHP with mailparse
 support by using the **--enable-mailparse** configure option.
 
 Windows users will enable `php_mailparse.dll` inside of `php.ini` in
-order to use these functions. PECL 扩展的 DLL 当前不可用。参见
-<a href="/install/windows/legacy/index.html#install.windows.building" class="link">在 Windows 上构建</a>章节。
+order to use these functions. Windows binaries (DLL files) for this PECL
+extension are available from the PECL website.
 
 It is necessary that the
 <a href="/ref/mbstring.html" class="link">mbstring</a> extension is
