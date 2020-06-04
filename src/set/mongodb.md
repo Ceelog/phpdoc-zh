@@ -2001,10 +2001,10 @@ A
 connection URI:
 
 ``` txt
-mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[defaultAuthDb][?options]]
 ```
 
-For details on supported options, see
+For details on supported URI options, see
 <a href="https://docs.mongodb.com/manual/reference/connection-string/#connections-connection-options" class="link external">» Connection String Options</a>
 in the MongoDB manual.
 <a href="https://docs.mongodb.com/manual/reference/connection-string/#connection-pool-options" class="link external">» Connection pool options</a>
@@ -2020,6 +2020,13 @@ connecting via a Unix domain socket, the socket path may contain special
 characters such as slashes and must be encoded. The <span
 class="function">rawurlencode</span> function may be used to encode
 constituent parts of the URI.
+
+The *defaultAuthDb* component may be used to specify the database name
+associated with the user's credentials; however the *authSource* URI
+option will take priority if specified. If neither *defaultAuthDb* nor
+*authSource* are specified, the *admin* database will be used by
+default. The *defaultAuthDb* component has no effect in the absence of
+user credentials.
 
 `uriOptions`  
 Additional
@@ -2064,7 +2071,7 @@ parameter.
 <tr class="even">
 <td>authSource</td>
 <td><span class="type">string</span></td>
-<td><p>The database name associated with the user's credentials. Defaults to the database component of the connection URI.</p>
+<td><p>The database name associated with the user's credentials. Defaults to the database component of the connection URI, or the <em>admin</em> database if both are unspecified.</p>
 <p>For authentication mechanisms that delegate credential storage to other services (e.g. GSSAPI), this should be <em>"$external"</em>.</p></td>
 </tr>
 <tr class="odd">
@@ -2562,7 +2569,7 @@ user and database:
 ``` php
 <?php
 
-$manager = new MongoDB\Driver\Manager("mongodb://myusername:mypassword@example.com/mydatabase");
+$manager = new MongoDB\Driver\Manager("mongodb://myusername:mypassword@example.com/?authSource=databaseName");
 
 ?>
 ```
@@ -2577,7 +2584,7 @@ components that may contain special characters.
 ``` php
 <?php
 
-$manager = new MongoDB\Driver\Manager("mongodb://myusername:myp%40ss%3Aw%25rd@example.com/mydatabase");
+$manager = new MongoDB\Driver\Manager("mongodb://myusername:myp%40ss%3Aw%25rd@example.com/?authSource=databaseName");
 
 ?>
 ```
