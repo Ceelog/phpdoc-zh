@@ -196,31 +196,38 @@ for performance.
 需求
 ====
 
-The driver requires PHP 5.5 or higher.
+As of version 1.8.0, the driver requires PHP 7.0 or higher. Previous
+versions of the driver allow compatibility with older PHP versions.
 
 The driver requires
 <a href="https://github.com/mongodb/libbson" class="link external">» libbson</a>
 and
 <a href="https://github.com/mongodb/mongo-c-driver" class="link external">» libmongoc</a>,
-and will use bundled versions of both libraries by default.
+and will use bundled versions of both libraries by default. System
+libraries may also be used, as discussed in the
+<a href="/set/mongodb.html#Building%20the%20MongoDB%20PHP%20Driver%20from%20source" class="link">manual installation</a>
+documentation.
 
-The driver requires
-<a href="http://www.openssl.org/" class="link external">» OpenSSL</a>
-and will rely on PHP to find its headers (i.e. *PHP\_SETUP\_OPENSSL*).
-If the build process fails to find OpenSSL, check that the OpenSSL
-development package (e.g. *libssl-dev*) and
+The driver, via libmongoc, optionally depends on a TLS library (e.g.
+OpenSSL) and will use it if available. If the build process fails to
+find a TLS library, users should check that the appropriate development
+package (e.g. *libssl-dev*) and
 <a href="https://en.wikipedia.org/wiki/Pkg-config" class="link external">» pkg-config</a>
-are both installed.
-
-Due to potential problems representing 64-bit integers on 32-bit
-platforms, users are advised to use 64-bit environments. When using a
-32-bit platform, be aware that any 64-bit integer read from the database
-will be returned as a <span
-class="classname">MongoDB\\BSON\\Int64</span> instance instead of a PHP
-integer type.
+are both installed. The process for detecting and configuring TLS
+libraries is discussed in more detail in the
+<a href="/set/mongodb.html#Building%20the%20MongoDB%20PHP%20Driver%20from%20source" class="link">manual installation</a>
+documentation.
 
 <a href="http://cyrusimap.org/" class="link external">» Cyrus SASL</a>
-is an optional dependency and will be used if available.
+is an optional dependency to support Kerberos authentication and will be
+used if available.
+
+> **Note**: <span class="simpara"> Due to potential problems
+> representing 64-bit integers on 32-bit platforms, users are advised to
+> use 64-bit environments. When using a 32-bit platform, be aware that
+> any 64-bit integer read from the database will be returned as a <span
+> class="classname">MongoDB\\BSON\\Int64</span> instance instead of a
+> PHP integer type. </span>
 
 安装
 ====
