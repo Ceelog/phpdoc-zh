@@ -1,6 +1,10 @@
 预定义常量
 ==========
 
+**`INTL_ICU_VERSION`** (<span class="type">string</span>)  
+<span class="simpara"> The current ICU library version as a
+dotted-decimal string. </span>
+
 **`INTL_MAX_LOCALE_LEN`** (<span class="type">integer</span>)  
 <span class="simpara"> Limit on locale length, set to 80 in PHP code.
 Locale names longer than this limit will not be accepted. </span>
