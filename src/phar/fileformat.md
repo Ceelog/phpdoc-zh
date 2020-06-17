@@ -221,7 +221,8 @@ Phar Signature format
 
 Phars containing a signature always have the signature appended to the
 end of the Phar archive after the loader, manifest, and file contents.
-The two signature formats supported at this time are MD5 and SHA1.
+The signature formats supported at this time are MD5, SHA1, SHA256 and
+SHA512.
 
 | Length in bytes | Description                                                                                                                                                                                                                                                                                    |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
