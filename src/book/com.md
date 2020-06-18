@@ -299,6 +299,10 @@ methods and properties are
 Neither instantiating static classes nor calling static methods is
 supported.
 
+Some .Net classes do not implement IDispatch, so while they can be
+instantiated, calling methods or accessing properties on these classes
+is not supported.
+
 > **Note**:
 >
 > You need to install the .Net runtime on your web server to take

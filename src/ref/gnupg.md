@@ -345,7 +345,7 @@ echo $plain;
 ?>
 ```
 
-**示例 \#2 OO <span class="function">gnupg\_encrypt</span> example**
+**示例 \#2 OO <span class="function">gnupg\_decrypt</span> example**
 
 ``` php
 <?php
