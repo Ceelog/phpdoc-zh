@@ -4104,12 +4104,12 @@ class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$name`</span> \]\]
 )
 
-<span class="type">bool</span> <span
-class="methodname">change\_user</span> ( <span class="methodparam"><span
-class="type">string</span> `$user`</span> , <span
-class="methodparam"><span class="type">string</span> `$password`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$database`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">change\_user</span> ( <span
+class="methodparam"><span class="type">string</span> `$user`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$password`</span> , <span class="methodparam"><span
+class="type">string</span> `$database`</span> )
 
 <span class="type">string</span> <span
 class="methodname">character\_set\_name</span> ( <span
@@ -4129,26 +4129,26 @@ class="methodparam">void</span> )
 class="methodname">mysqli\_connect\_error</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">void</span> <span class="methodname">connect</span>
-(\[ <span class="methodparam"><span class="type">string</span>
-`$host`<span class="initializer"> =
-ini\_get("mysqli.default\_host")</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$username`<span
-class="initializer"> = ini\_get("mysqli.default\_user")</span></span>
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">connect</span> (\[ <span
+class="methodparam"><span class="type">string</span> `$host`<span
+class="initializer"> = ini\_get("mysqli.default\_host")</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$passwd`<span class="initializer"> =
-ini\_get("mysqli.default\_pw")</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$dbname`<span
-class="initializer"> = ""</span></span> \[, <span
+`$username`<span class="initializer"> =
+ini\_get("mysqli.default\_user")</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$passwd`<span
+class="initializer"> = ini\_get("mysqli.default\_pw")</span></span> \[,
+<span class="methodparam"><span class="type">string</span>
+`$dbname`<span class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$port`<span
 class="initializer"> = ini\_get("mysqli.default\_port")</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$socket`<span class="initializer"> =
 ini\_get("mysqli.default\_socket")</span></span> \]\]\]\]\]\] )
 
-<span class="type">bool</span> <span class="methodname">debug</span> (
-<span class="methodparam"><span class="type">string</span>
-`$message`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">debug</span> ( <span class="methodparam"><span
+class="type">string</span> `$message`</span> )
 
 <span class="type">bool</span> <span
 class="methodname">dump\_debug\_info</span> ( <span
@@ -4170,8 +4170,8 @@ class="methodparam"><span class="type">mysqli</span> `$link`</span> )
 class="methodname">mysqli\_field\_count</span> ( <span
 class="methodparam"><span class="type">mysqli</span> `$link`</span> )
 
-<span class="type">object</span> <span
-class="methodname">get\_charset</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">get\_charset</span> ( <span
 class="methodparam">void</span> )
 
 <span class="type">string</span> <span
@@ -4202,7 +4202,8 @@ class="methodparam"><span class="type">mysqli</span> `$link`</span> )
 class="methodname">mysqli\_get\_server\_version</span> ( <span
 class="methodparam"><span class="type">mysqli</span> `$link`</span> )
 
-<span class="type">mysqli\_warning</span> <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_warning</span> <span
 class="methodname">get\_warnings</span> ( <span
 class="methodparam">void</span> )
 
@@ -4362,7 +4363,8 @@ class="methodparam"><span class="type">mysqli</span> `$link`</span> )
 class="methodname">mysqli\_thread\_safe</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">mysqli\_result</span> <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
 class="methodname">use\_result</span> ( <span
 class="methodparam">void</span> )
 
@@ -4635,7 +4637,7 @@ Starts a transaction
 
 ### 说明
 
-面向对象风格 (method):
+面向对象风格
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">mysqli::begin\_transaction</span> (\[ <span
@@ -4746,8 +4748,8 @@ Changes the user of the specified database connection
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli::change\_user</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli::change\_user</span> ( <span
 class="methodparam"><span class="type">string</span> `$user`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$password`</span> , <span class="methodparam"><span
@@ -5307,7 +5309,8 @@ Open a new connection to the MySQL server
 
 面向对象风格
 
-<span class="methodname">mysqli::\_\_construct</span> (\[ <span
+<span class="modifier">public</span> <span
+class="methodname">mysqli::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$host`<span
 class="initializer"> = ini\_get("mysqli.default\_host")</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -5323,8 +5326,8 @@ class="initializer"> = ini\_get("mysqli.default\_port")</span></span>
 `$socket`<span class="initializer"> =
 ini\_get("mysqli.default\_socket")</span></span> \]\]\]\]\]\] )
 
-<span class="type">void</span> <span
-class="methodname">mysqli::connect</span> (\[ <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">mysqli::connect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$host`<span
 class="initializer"> = ini\_get("mysqli.default\_host")</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -5549,8 +5552,8 @@ Performs debugging operations
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli::debug</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli::debug</span> ( <span
 class="methodparam"><span class="type">string</span> `$message`</span> )
 
 过程化风格
@@ -6030,8 +6033,8 @@ Returns a character set object
 
 面向对象风格
 
-<span class="type">object</span> <span
-class="methodname">mysqli::get\_charset</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">mysqli::get\_charset</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -6759,7 +6762,8 @@ Get result of SHOW WARNINGS
 
 面向对象风格
 
-<span class="type">mysqli\_warning</span> <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_warning</span> <span
 class="methodname">mysqli::get\_warnings</span> ( <span
 class="methodparam">void</span> )
 
@@ -9833,7 +9837,8 @@ Initiate a result set retrieval
 
 面向对象风格
 
-<span class="type">mysqli\_result</span> <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
 class="methodname">mysqli::use\_result</span> ( <span
 class="methodparam">void</span> )
 
@@ -10118,33 +10123,35 @@ class="methodname">mysqli\_stmt\_affected\_rows</span> ( <span
 class="methodparam"><span class="type">mysqli\_stmt</span>
 `$stmt`</span> )
 
-<span class="type">int</span> <span class="methodname">attr\_get</span>
-( <span class="methodparam"><span class="type">int</span> `$attr`</span>
-)
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">attr\_get</span> ( <span class="methodparam"><span
+class="type">int</span> `$attr`</span> )
 
-<span class="type">bool</span> <span class="methodname">attr\_set</span>
-( <span class="methodparam"><span class="type">int</span> `$attr`</span>
-, <span class="methodparam"><span class="type">int</span> `$mode`</span>
-)
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">attr\_set</span> ( <span
+class="methodparam"><span class="type">int</span> `$attr`</span> , <span
+class="methodparam"><span class="type">int</span> `$mode`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">bind\_param</span> ( <span class="methodparam"><span
-class="type">string</span> `$types`</span> , <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">bind\_param</span> ( <span
+class="methodparam"><span class="type">string</span> `$types`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`&$var1`</span> \[, <span class="methodparam"><span
+class="type">mixed</span> `&$...`</span> \] )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">bind\_result</span> ( <span
 class="methodparam"><span class="type">mixed</span> `&$var1`</span> \[,
 <span class="methodparam"><span class="type">mixed</span> `&$...`</span>
 \] )
 
-<span class="type">bool</span> <span
-class="methodname">bind\_result</span> ( <span class="methodparam"><span
-class="type">mixed</span> `&$var1`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `&$...`</span> \] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">close</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">close</span> (
-<span class="methodparam">void</span> )
-
-<span class="type">void</span> <span
-class="methodname">data\_seek</span> ( <span class="methodparam"><span
-class="type">int</span> `$offset`</span> )
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">data\_seek</span> ( <span
+class="methodparam"><span class="type">int</span> `$offset`</span> )
 
 <span class="type">int</span> <span
 class="methodname">mysqli\_stmt\_errno</span> ( <span
@@ -10161,27 +10168,30 @@ class="methodname">mysqli\_stmt\_error</span> ( <span
 class="methodparam"><span class="type">mysqli\_stmt</span>
 `$stmt`</span> )
 
-<span class="type">bool</span> <span class="methodname">execute</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">execute</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">fetch</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">fetch</span> ( <span
+class="methodparam">void</span> )
 
 <span class="type">int</span> <span
 class="methodname">mysqli\_stmt\_field\_count</span> ( <span
 class="methodparam"><span class="type">mysqli\_stmt</span>
 `$stmt`</span> )
 
-<span class="type">void</span> <span
-class="methodname">free\_result</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">free\_result</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">mysqli\_result</span> <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
 class="methodname">get\_result</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">object</span> <span
-class="methodname">get\_warnings</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">get\_warnings</span> ( <span
 class="methodparam">void</span> )
 
 <span class="type">mixed</span> <span
@@ -10197,27 +10207,30 @@ class="methodparam">void</span> )
 <span class="methodname">next\_result</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span class="methodname">num\_rows</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">num\_rows</span> ( <span
+class="methodparam">void</span> )
 
 <span class="type">int</span> <span
 class="methodname">mysqli\_stmt\_param\_count</span> ( <span
 class="methodparam"><span class="type">mysqli\_stmt</span>
 `$stmt`</span> )
 
-<span class="type">mixed</span> <span class="methodname">prepare</span>
-( <span class="methodparam"><span class="type">string</span>
-`$query`</span> )
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">prepare</span> ( <span
+class="methodparam"><span class="type">string</span> `$query`</span> )
 
-<span class="type">bool</span> <span class="methodname">reset</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">reset</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">mysqli\_result</span> <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
 class="methodname">result\_metadata</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">send\_long\_data</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">send\_long\_data</span> ( <span
 class="methodparam"><span class="type">int</span> `$param_nr`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$data`</span> )
@@ -10227,8 +10240,8 @@ class="methodname">mysqli\_stmt\_sqlstate</span> ( <span
 class="methodparam"><span class="type">mysqli\_stmt</span>
 `$stmt`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">store\_result</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">store\_result</span> ( <span
 class="methodparam">void</span> )
 
 }
@@ -10381,7 +10394,7 @@ Used to get the current value of a statement attribute
 
 面向对象风格
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysqli\_stmt::attr\_get</span> ( <span
 class="methodparam"><span class="type">int</span> `$attr`</span> )
 
@@ -10421,8 +10434,8 @@ Used to modify the behavior of a prepared statement
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_stmt::attr\_set</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_stmt::attr\_set</span> ( <span
 class="methodparam"><span class="type">int</span> `$attr`</span> , <span
 class="methodparam"><span class="type">int</span> `$mode`</span> )
 
@@ -10487,8 +10500,8 @@ Binds variables to a prepared statement as parameters
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_stmt::bind\_param</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_stmt::bind\_param</span> ( <span
 class="methodparam"><span class="type">string</span> `$types`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `&$var1`</span> \[, <span class="methodparam"><span
@@ -10653,8 +10666,8 @@ Binds variables to a prepared statement for result storage
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_stmt::bind\_result</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_stmt::bind\_result</span> ( <span
 class="methodparam"><span class="type">mixed</span> `&$var1`</span> \[,
 <span class="methodparam"><span class="type">mixed</span> `&$...`</span>
 \] )
@@ -10798,8 +10811,8 @@ Closes a prepared statement
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_stmt::close</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_stmt::close</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -10836,7 +10849,8 @@ Constructs a new <span class="classname">mysqli\_stmt</span> object
 
 ### 说明
 
-<span class="methodname">mysqli\_stmt::\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">mysqli\_stmt::\_\_construct</span> ( <span
 class="methodparam"><span class="type">mysqli</span> `$link`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$query`</span> \] )
@@ -10884,8 +10898,8 @@ Seeks to an arbitrary row in statement result set
 
 面向对象风格
 
-<span class="type">void</span> <span
-class="methodname">mysqli\_stmt::data\_seek</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">mysqli\_stmt::data\_seek</span> ( <span
 class="methodparam"><span class="type">int</span> `$offset`</span> )
 
 过程化风格
@@ -11396,8 +11410,8 @@ Executes a prepared Query
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_stmt::execute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_stmt::execute</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -11569,8 +11583,8 @@ Fetch results from a prepared statement into the bound variables
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_stmt::fetch</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_stmt::fetch</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -11734,8 +11748,8 @@ Frees stored result memory for the given statement handle
 
 面向对象风格
 
-<span class="type">void</span> <span
-class="methodname">mysqli\_stmt::free\_result</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">mysqli\_stmt::free\_result</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -11774,7 +11788,8 @@ Gets a result set from a prepared statement
 
 面向对象风格
 
-<span class="type">mysqli\_result</span> <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
 class="methodname">mysqli\_stmt::get\_result</span> ( <span
 class="methodparam">void</span> )
 
@@ -11927,8 +11942,8 @@ Get result of SHOW WARNINGS
 
 面向对象风格
 
-<span class="type">object</span> <span
-class="methodname">mysqli\_stmt::get\_warnings</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">mysqli\_stmt::get\_warnings</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -11977,7 +11992,7 @@ Check if there are more query results from a multiple query
 
 ### 说明
 
-面向对象风格 (method):
+面向对象风格
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">mysqli\_stmt::more\_results</span> ( <span
@@ -12022,7 +12037,7 @@ Reads the next result from a multiple query
 
 ### 说明
 
-面向对象风格 (method):
+面向对象风格
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">mysqli\_stmt::next\_result</span> ( <span
@@ -12082,7 +12097,7 @@ Return the number of rows in statements result set
 
 <span class="type">int</span>`$mysqli_stmt->num_rows`;
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysqli\_stmt::num\_rows</span> ( <span
 class="methodparam">void</span> )
 
@@ -12298,8 +12313,8 @@ Prepare an SQL statement for execution
 
 面向对象风格
 
-<span class="type">mixed</span> <span
-class="methodname">mysqli\_stmt::prepare</span> ( <span
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">mysqli\_stmt::prepare</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> )
 
 过程化风格
@@ -12481,8 +12496,8 @@ Resets a prepared statement
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_stmt::reset</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_stmt::reset</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -12529,7 +12544,8 @@ Returns result set metadata from a prepared statement
 
 面向对象风格
 
-<span class="type">mysqli\_result</span> <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
 class="methodname">mysqli\_stmt::result\_metadata</span> ( <span
 class="methodparam">void</span> )
 
@@ -12668,8 +12684,8 @@ Send data in blocks
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_stmt::send\_long\_data</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_stmt::send\_long\_data</span> ( <span
 class="methodparam"><span class="type">int</span> `$param_nr`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$data`</span> )
@@ -12872,8 +12888,8 @@ Transfers a result set from a prepared statement
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_stmt::store\_result</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_stmt::store\_result</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -13028,45 +13044,45 @@ class="methodname">mysqli\_field\_tell</span> ( <span
 class="methodparam"><span class="type">mysqli\_result</span>
 `$result`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">data\_seek</span> ( <span class="methodparam"><span
-class="type">int</span> `$offset`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">data\_seek</span> ( <span
+class="methodparam"><span class="type">int</span> `$offset`</span> )
 
-<span class="type">mixed</span> <span
-class="methodname">fetch\_all</span> (\[ <span class="methodparam"><span
-class="type">int</span> `$resulttype`<span class="initializer"> =
-MYSQLI\_NUM</span></span> \] )
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">fetch\_all</span> (\[ <span
+class="methodparam"><span class="type">int</span> `$resulttype`<span
+class="initializer"> = MYSQLI\_NUM</span></span> \] )
 
-<span class="type">mixed</span> <span
-class="methodname">fetch\_array</span> (\[ <span
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">fetch\_array</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$resulttype`<span
 class="initializer"> = MYSQLI\_BOTH</span></span> \] )
 
-<span class="type">array</span> <span
-class="methodname">fetch\_assoc</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">fetch\_assoc</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">object</span> <span
-class="methodname">fetch\_field\_direct</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">fetch\_field\_direct</span> ( <span
 class="methodparam"><span class="type">int</span> `$fieldnr`</span> )
 
-<span class="type">object</span> <span
-class="methodname">fetch\_field</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">fetch\_field</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">fetch\_fields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">fetch\_fields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">object</span> <span
-class="methodname">fetch\_object</span> (\[ <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">fetch\_object</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$class_name`<span
 class="initializer"> = "stdClass"</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$params`</span>
 \]\] )
 
-<span class="type">mixed</span> <span
-class="methodname">fetch\_row</span> ( <span
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">fetch\_row</span> ( <span
 class="methodparam">void</span> )
 
 <span class="type">int</span> <span
@@ -13074,12 +13090,13 @@ class="methodname">mysqli\_num\_fields</span> ( <span
 class="methodparam"><span class="type">mysqli\_result</span>
 `$result`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">field\_seek</span> ( <span class="methodparam"><span
-class="type">int</span> `$fieldnr`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">field\_seek</span> ( <span
+class="methodparam"><span class="type">int</span> `$fieldnr`</span> )
 
-<span class="type">void</span> <span class="methodname">free</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">free</span> ( <span
+class="methodparam">void</span> )
 
 <span class="type">array</span> <span
 class="methodname">mysqli\_fetch\_lengths</span> ( <span
@@ -13239,8 +13256,8 @@ Adjusts the result pointer to an arbitrary row in the result
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_result::data\_seek</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_result::data\_seek</span> ( <span
 class="methodparam"><span class="type">int</span> `$offset`</span> )
 
 过程化风格
@@ -13373,8 +13390,8 @@ both
 
 面向对象风格
 
-<span class="type">mixed</span> <span
-class="methodname">mysqli\_result::fetch\_all</span> (\[ <span
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">mysqli\_result::fetch\_all</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$resulttype`<span
 class="initializer"> = MYSQLI\_NUM</span></span> \] )
 
@@ -13441,8 +13458,8 @@ Fetch a result row as an associative, a numeric array, or both
 
 面向对象风格
 
-<span class="type">mixed</span> <span
-class="methodname">mysqli\_result::fetch\_array</span> (\[ <span
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">mysqli\_result::fetch\_array</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$resulttype`<span
 class="initializer"> = MYSQLI\_BOTH</span></span> \] )
 
@@ -13600,8 +13617,8 @@ Fetch a result row as an associative array
 
 面向对象风格
 
-<span class="type">array</span> <span
-class="methodname">mysqli\_result::fetch\_assoc</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">mysqli\_result::fetch\_assoc</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -13766,9 +13783,10 @@ Fetch meta-data for a single field
 
 面向对象风格
 
-<span class="type">object</span> <span
-class="methodname">mysqli\_result::fetch\_field\_direct</span> ( <span
-class="methodparam"><span class="type">int</span> `$fieldnr`</span> )
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">mysqli\_result::fetch\_field\_direct</span> (
+<span class="methodparam"><span class="type">int</span>
+`$fieldnr`</span> )
 
 过程化风格
 
@@ -13906,8 +13924,8 @@ Returns the next field in the result set
 
 面向对象风格
 
-<span class="type">object</span> <span
-class="methodname">mysqli\_result::fetch\_field</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">mysqli\_result::fetch\_field</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -14050,8 +14068,8 @@ Returns an array of objects representing the fields in a result set
 
 面向对象风格
 
-<span class="type">array</span> <span
-class="methodname">mysqli\_result::fetch\_fields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">mysqli\_result::fetch\_fields</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -14239,8 +14257,8 @@ Returns the current row of a result set as an object
 
 面向对象风格
 
-<span class="type">object</span> <span
-class="methodname">mysqli\_result::fetch\_object</span> (\[ <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">mysqli\_result::fetch\_object</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$class_name`<span
 class="initializer"> = "stdClass"</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$params`</span>
@@ -14380,8 +14398,8 @@ Get a result row as an enumerated array
 
 面向对象风格
 
-<span class="type">mixed</span> <span
-class="methodname">mysqli\_result::fetch\_row</span> ( <span
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">mysqli\_result::fetch\_row</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -14603,8 +14621,8 @@ Set result pointer to a specified field offset
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_result::field\_seek</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_result::field\_seek</span> ( <span
 class="methodparam"><span class="type">int</span> `$fieldnr`</span> )
 
 过程化风格
@@ -14738,16 +14756,16 @@ Frees the memory associated with a result
 
 面向对象风格
 
-<span class="type">void</span> <span
-class="methodname">mysqli\_result::free</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">mysqli\_result::free</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">void</span> <span
-class="methodname">mysqli\_result::close</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">mysqli\_result::close</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">void</span> <span
-class="methodname">mysqli\_result::free\_result</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">mysqli\_result::free\_result</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -15057,16 +15075,16 @@ class="modifier">readonly</span> <span class="type">string</span>
 
 /\* 方法 \*/
 
-<span class="type">void</span> <span
-class="methodname">mysqli\_driver::embedded\_server\_end</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">mysqli\_driver::embedded\_server\_end</span> (
+<span class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_driver::embedded\_server\_start</span> (
-<span class="methodparam"><span class="type">int</span> `$start`</span>
-, <span class="methodparam"><span class="type">array</span>
-`$arguments`</span> , <span class="methodparam"><span
-class="type">array</span> `$groups`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_driver::embedded\_server\_start</span>
+( <span class="methodparam"><span class="type">int</span>
+`$start`</span> , <span class="methodparam"><span
+class="type">array</span> `$arguments`</span> , <span
+class="methodparam"><span class="type">array</span> `$groups`</span> )
 
 <span class="type">bool</span> <span
 class="methodname">mysqli\_report</span> ( <span
@@ -15112,9 +15130,9 @@ Stop embedded server
 
 面向对象风格
 
-<span class="type">void</span> <span
-class="methodname">mysqli\_driver::embedded\_server\_end</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">mysqli\_driver::embedded\_server\_end</span> (
+<span class="methodparam">void</span> )
 
 过程化风格
 
@@ -15138,12 +15156,12 @@ Initialize and start embedded server
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">mysqli\_driver::embedded\_server\_start</span> (
-<span class="methodparam"><span class="type">int</span> `$start`</span>
-, <span class="methodparam"><span class="type">array</span>
-`$arguments`</span> , <span class="methodparam"><span
-class="type">array</span> `$groups`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_driver::embedded\_server\_start</span>
+( <span class="methodparam"><span class="type">int</span>
+`$start`</span> , <span class="methodparam"><span
+class="type">array</span> `$arguments`</span> , <span
+class="methodparam"><span class="type">array</span> `$groups`</span> )
 
 过程化风格
 
