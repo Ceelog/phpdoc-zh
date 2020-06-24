@@ -3360,7 +3360,7 @@ var_dump($file->getMaxLineLen());
 
 ### 参见
 
--   <span class="methodname">Classname::Method</span>
+-   <span class="methodname">SplFileObject::setMaxLineLen</span>
 
 SplFileObject::hasChildren
 ==========================
@@ -3806,7 +3806,7 @@ Nulla vitae magna vitae purus aliquet consequat.
 
 ### 参见
 
--   <span class="methodname">Classname::Method</span>
+-   <span class="methodname">SplFileObject::getMaxLineLen</span>
 
 SplFileObject::\_\_toString
 ===========================
