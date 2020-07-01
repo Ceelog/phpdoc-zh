@@ -6,7 +6,7 @@ Unix 系统下的 Nginx 1.4.x
 
 本指南假定您已经从源代码成功构建 Nginx，并且其二进制文件和配置文件都位于
 */usr/local/nginx*。 如果您使用其他方式获取的 Nginx，请参考
-<a href="http://wiki.nginx.org/Main" class="link external">» Nginx Wiki</a>
+<a href="https://www.nginx.com/resources/wiki/" class="link external">» Nginx Wiki</a>
 并对照本文档完成安装。
 
 本文档仅包含 Nginx 服务器的基本配置，它将通过 80 端口提供 PHP
@@ -17,7 +17,7 @@ Nginx 和 PHP-FPM 的文档。
 替换为对应的版本号。
 
 1.  建议您访问 Nginx Wiki
-    <a href="http://wiki.nginx.org/Install" class="link external">» 安装</a>
+    <a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/install/" class="link external">» 安装</a>
     页面以获取并在您的系统上安装 Nginx。
 
 2.  获取并解压 PHP 源代码:

@@ -1764,12 +1764,6 @@ priority exceptional ("out-of-band") data arriving.
 > `read`, `write` and `except` are modified to indicate which stream
 > resource(s) actually changed status.
 
-<span class="simpara"> You do not need to pass every array to <span
-class="function">stream\_select</span>. You can leave it out and use an
-empty array or **`NULL`** instead. Also do not forget that those arrays
-are passed *by reference* and will be modified after <span
-class="function">stream\_select</span> returns. </span>
-
 `tv_sec`  
 The `tv_sec` and `tv_usec` together form the *timeout* parameter,
 `tv_sec` specifies the number of seconds while `tv_usec` the number of
