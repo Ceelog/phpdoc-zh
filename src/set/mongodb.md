@@ -18462,8 +18462,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* 继承的属性 \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -18554,8 +18554,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 <span class="modifier">protected</span> <span
 class="type">MongoDB\\Driver\\WriteResult</span> `$writeResult` ;
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -18649,8 +18649,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* 继承的属性 \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -18742,8 +18742,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* 继承的属性 \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -18849,8 +18849,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* 继承的属性 \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -19106,8 +19106,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* 属性 \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 /\* 继承的属性 \*/
 
@@ -19260,8 +19260,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* 继承的属性 \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -19437,8 +19437,8 @@ class="type">MongoDB\\Driver\\WriteResult</span> `$writeResult` ;
 
 /\* 继承的属性 \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
