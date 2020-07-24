@@ -4288,7 +4288,7 @@ class="methodparam"><span class="type">int</span> `&$count`</span> \] )
 ### 参数
 
 如果 `search` 和 `replace` 为数组，那么 <span
-class="function">str\_replace</span> 将对 `subject`
+class="function">str\_ireplace</span> 将对 `subject`
 做二者的映射替换。如果 `replace` 的值的个数少于 `search`
 的个数，多余的替换将使用空字符串来进行。如果 `search` 是一个数组而
 `replace` 是一个字符串，那么 `search`
@@ -4300,8 +4300,7 @@ class="function">str\_replace</span> 将对 `subject`
 要搜索的值，就像是 *needle*。可以使用 array 来提供多个 needle。
 
 `replace`  
-The replacement value that replaces found `search` values. An array may
-be used to designate multiple replacements.
+`search` 的替换值。一个数组可以被用来指定多重替换。
 
 `subject`  
 要被搜索和替换的字符串或数组，就像是 *haystack*。
@@ -4310,7 +4309,7 @@ be used to designate multiple replacements.
 `subject`，并且也将返回一个数组。
 
 `count`  
-如果设定了，将会设置执行替换的次数。
+如果被指定，它的值将被设置为替换发生的次数。
 
 ### 返回值
 
