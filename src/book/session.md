@@ -621,12 +621,11 @@ serialization method.
 简介
 ----
 
-<span class="classname">SessionHandlerInterface</span> is an
-<a href="/language/oop5/interfaces.html" class="link">interface</a>
-which defines a prototype for creating a custom session handler. In
-order to pass a custom session handler to <span
-class="function">session\_set\_save\_handler</span> using its *OOP*
-invocation, the class must implement this interface.
+<span class="classname">SessionHandlerInterface</span> is an interface
+which defines the minimal prototype for creating a custom session
+handler. In order to pass a custom session handler to <span
+class="function">session\_set\_save\_handler</span> using its OOP
+invocation, the class can implement this interface.
 
 Please note the callback methods of this class are designed to be called
 internally by PHP and are not meant to be called from user-space code.

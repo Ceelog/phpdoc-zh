@@ -3,24 +3,26 @@
 
 **目录**
 
--   [DateTime Arithmetic](/datetime/examples.html#DateTime%20Arithmetic)
+-   [Date/Time
+    Arithmetic](/datetime/examples.html#Date/Time%20Arithmetic)
 
-DateTime Arithmetic
--------------------
+Date/Time Arithmetic
+--------------------
 
-The following examples show some pitfalls of DateTime arithmetic with
+The following examples show some pitfalls of Date/Time arithmetic with
 regard to DST transitions and months having different numbers of days.
 
-**示例 \#1 DateTime::add/sub add intervals which cover elapsed time**
+**示例 \#1 DateTimeImmutable::add/sub add intervals which cover elapsed
+time**
 
 Adding PT24H over a DST transition will appear to add 23/25 hours (for
 most timezones).
 
 ``` php
 <?php
-$dt = new DateTime("2015-11-01 00:00:00", new DateTimeZone("America/New_York"));
+$dt = new DateTimeImmutable("2015-11-01 00:00:00", new DateTimeZone("America/New_York"));
 echo "Start: ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
-$dt->add(new DateInterval("PT3H"));
+$dt = $dt->add(new DateInterval("PT3H"));
 echo "End:   ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
 ?>
 ```
@@ -30,8 +32,8 @@ echo "End:   ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
     Start: 2015-11-01 00:00:00 -04:00
     End:   2015-11-01 02:00:00 -05:00
 
-**示例 \#2 DateTime::modify and strtotime increment or decrement
-individual component values**
+**示例 \#2 DateTimeImmutable::modify and strtotime increment or
+decrement individual component values**
 
 Adding +24 hours over a DST transition will add exactly 24 hours as seen
 in the date/time string (unless the start or end time is on a transition
@@ -39,9 +41,9 @@ point).
 
 ``` php
 <?php
-$dt = new DateTime("2015-11-01 00:00:00", new DateTimeZone("America/New_York"));
+$dt = new DateTimeImmutable("2015-11-01 00:00:00", new DateTimeZone("America/New_York"));
 echo "Start: ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
-$dt->modify("+24 hours");
+$dt = $dt->modify("+24 hours");
 echo "End:   ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
 ?>
 ```
@@ -59,15 +61,15 @@ or 3rd (normal year).
 ``` php
 <?php
 echo "Normal year:\n"; // February has 28 days
-$dt = new DateTime("2015-01-31 00:00:00", new DateTimeZone("America/New_York"));
+$dt = new DateTimeImmutable("2015-01-31 00:00:00", new DateTimeZone("America/New_York"));
 echo "Start: ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
-$dt->modify("+1 month");
+$dt = $dt->modify("+1 month");
 echo "End:   ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
 
 echo "Leap year:\n"; // February has 29 days
-$dt = new DateTime("2016-01-31 00:00:00", new DateTimeZone("America/New_York"));
+$dt = new DateTimeImmutable("2016-01-31 00:00:00", new DateTimeZone("America/New_York"));
 echo "Start: ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
-$dt->modify("+1 month");
+$dt = $dt->modify("+1 month");
 echo "End:   ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
 ?>
 ```
@@ -87,15 +89,15 @@ the *last day of* format is available as of PHP 5.3.0.
 ``` php
 <?php
 echo "Normal year:\n"; // February has 28 days
-$dt = new DateTime("2015-01-31 00:00:00", new DateTimeZone("America/New_York"));
+$dt = new DateTimeImmutable("2015-01-31 00:00:00", new DateTimeZone("America/New_York"));
 echo "Start: ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
-$dt->modify("last day of next month");
+$dt = $dt->modify("last day of next month");
 echo "End:   ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
 
 echo "Leap year:\n"; // February has 29 days
-$dt = new DateTime("2016-01-31 00:00:00", new DateTimeZone("America/New_York"));
+$dt = new DateTimeImmutable("2016-01-31 00:00:00", new DateTimeZone("America/New_York"));
 echo "Start: ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
-$dt->modify("last day of next month");
+$dt = $dt->modify("last day of next month");
 echo "End:   ", $dt->format("Y-m-d H:i:s P"), PHP_EOL;
 ?>
 ```

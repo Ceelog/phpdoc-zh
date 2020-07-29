@@ -11,8 +11,8 @@
     -   [资源类型](/datetime/setup.html#资源类型)
 -   [预定义常量](/datetime/constants.html)
 -   [范例](/datetime/examples.html)
-    -   [DateTime
-        Arithmetic](/datetime/examples.html#DateTime%20Arithmetic)
+    -   [Date/Time
+        Arithmetic](/datetime/examples.html#Date/Time%20Arithmetic)
 -   [DateTime](/class/datetime.html) — DateTime 类
     -   [DateTime::add](/class/datetime.html#DateTime::add) — 给一个
         DateTime 对象增加一定量的天，月，年，小时，分钟 以及秒。
@@ -155,7 +155,7 @@
         — Get info about given date formatted according to the specified
         format
     -   [date\_parse](/ref/datetime.html#date_parse) — Returns
-        associative array with detailed info about given date
+        associative array with detailed info about given date/time
     -   [date\_sub](/ref/datetime.html#date_sub) — 别名 DateTime::sub
     -   [date\_sun\_info](/ref/datetime.html#date_sun_info) — Returns an
         array with information about sunset/sunrise and twilight
@@ -320,7 +320,7 @@ class="type">DateTimeZone</span> `$timezone`</span> \] )
 class="modifier">static</span> <span class="type">DateTime</span> <span
 class="methodname">createFromImmutable</span> ( <span
 class="methodparam"><span class="type">DateTimeImmutable</span>
-`$datetime`</span> )
+`$object`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">array</span> <span
@@ -375,7 +375,7 @@ class="type">DateInterval</span> `$interval`</span> )
 <span class="modifier">public</span> <span
 class="type">DateInterval</span> <span class="methodname">diff</span> (
 <span class="methodparam"><span class="type">DateTimeInterface</span>
-`$datetime2`</span> \[, <span class="methodparam"><span
+`$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
 **`FALSE`**</span></span> \] )
 
@@ -897,11 +897,11 @@ object
 class="modifier">static</span> <span class="type">DateTime</span> <span
 class="methodname">DateTime::createFromImmutable</span> ( <span
 class="methodparam"><span class="type">DateTimeImmutable</span>
-`$datetime`</span> )
+`$object`</span> )
 
 ### 参数
 
-`datetime`  
+`object`  
 The immutable <span class="classname">DateTimeImmutable</span> object
 that needs to be converted to a mutable version. This object is not
 modified, but instead a new <span class="classname">DateTime</span>
@@ -1820,8 +1820,7 @@ echo $date->format('Y-m-d') . "\n";
 简介
 ----
 
-This class behaves the same as <span class="classname">DateTime</span>
-except it never modifies itself but returns a new object instead.
+Representation of date and time.
 
 类摘要
 ------
@@ -1886,7 +1885,7 @@ O"</span> ;
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$time`<span
+class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
 `$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
@@ -1902,15 +1901,15 @@ class="type">DateTimeImmutable</span> <span
 class="methodname">createFromFormat</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$time`</span> \[, <span class="methodparam"><span
+`$datetime`</span> \[, <span class="methodparam"><span
 class="type">DateTimeZone</span> `$timezone`</span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span
 class="type">DateTimeImmutable</span> <span
 class="methodname">createFromMutable</span> ( <span
-class="methodparam"><span class="type">DateTime</span>
-`$datetime`</span> )
+class="methodparam"><span class="type">DateTime</span> `$object`</span>
+)
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">array</span> <span
@@ -1920,7 +1919,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span
 class="type">DateTimeImmutable</span> <span
 class="methodname">modify</span> ( <span class="methodparam"><span
-class="type">string</span> `$modify`</span> )
+class="type">string</span> `$modifier`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span
@@ -1950,13 +1949,13 @@ class="type">int</span> `$hour`</span> , <span class="methodparam"><span
 class="type">int</span> `$minute`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$second`<span
 class="initializer"> = 0</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$microseconds`<span
+class="methodparam"><span class="type">int</span> `$microsecond`<span
 class="initializer"> = 0</span></span> \]\] )
 
 <span class="modifier">public</span> <span
 class="type">DateTimeImmutable</span> <span
 class="methodname">setTimestamp</span> ( <span class="methodparam"><span
-class="type">int</span> `$unixtimestamp`</span> )
+class="type">int</span> `$timestamp`</span> )
 
 <span class="modifier">public</span> <span
 class="type">DateTimeImmutable</span> <span
@@ -1971,7 +1970,7 @@ class="type">DateInterval</span> `$interval`</span> )
 <span class="modifier">public</span> <span
 class="type">DateInterval</span> <span class="methodname">diff</span> (
 <span class="methodparam"><span class="type">DateTimeInterface</span>
-`$datetime2`</span> \[, <span class="methodparam"><span
+`$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
 **`FALSE`**</span></span> \] )
 
@@ -2028,7 +2027,7 @@ Returns new DateTimeImmutable object
 
 <span class="modifier">public</span> <span
 class="methodname">DateTimeImmutable::\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$time`<span
+class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
 `$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
@@ -2037,7 +2036,7 @@ class="methodparam"><span class="type">DateTimeZone</span>
 
 <span class="type">DateTimeImmutable</span> <span
 class="methodname">date\_create\_immutable</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$time`<span
+class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
 `$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
@@ -2063,7 +2062,7 @@ class="type">DateTimeImmutable</span> <span
 class="methodname">DateTimeImmutable::createFromFormat</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$time`</span> \[, <span class="methodparam"><span
+`$datetime`</span> \[, <span class="methodparam"><span
 class="type">DateTimeZone</span> `$timezone`</span> \] )
 
 过程化风格
@@ -2072,7 +2071,7 @@ class="type">DateTimeZone</span> `$timezone`</span> \] )
 class="methodname">date\_create\_immutable\_from\_format</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$time`</span> \[, <span class="methodparam"><span
+`$datetime`</span> \[, <span class="methodparam"><span
 class="type">DateTimeZone</span> `$timezone`</span> \] )
 
 Like <span class="methodname">DateTime::createFromFormat</span> but
@@ -2090,12 +2089,12 @@ object
 class="modifier">static</span> <span
 class="type">DateTimeImmutable</span> <span
 class="methodname">DateTimeImmutable::createFromMutable</span> ( <span
-class="methodparam"><span class="type">DateTime</span>
-`$datetime`</span> )
+class="methodparam"><span class="type">DateTime</span> `$object`</span>
+)
 
 ### 参数
 
-`datetime`  
+`object`  
 The mutable <span class="classname">DateTime</span> object that you want
 to convert to an immutable version. This object is not modified, but
 instead a new <span class="classname">DateTimeImmutable</span> object is
@@ -2142,7 +2141,8 @@ Creates a new object with modified timestamp
 <span class="modifier">public</span> <span
 class="type">DateTimeImmutable</span> <span
 class="methodname">DateTimeImmutable::modify</span> ( <span
-class="methodparam"><span class="type">string</span> `$modify`</span> )
+class="methodparam"><span class="type">string</span> `$modifier`</span>
+)
 
 Creates a new <span class="type">DateTimeImmutable</span> object with
 modified timestamp. The original object is not modified.
@@ -2153,7 +2153,7 @@ modified timestamp. The original object is not modified.
 仅过程化风格：由 <span class="function">date\_create</span> 返回的 <span
 class="classname">DateTime</span> 类型的对象。此函数会修改这个对象。
 
-`modify`  
+`modifier`  
 日期/时间字符串。正确格式的说明详见
 <a href="/datetime/formats.html" class="link">日期与时间格式</a>。
 
@@ -2226,7 +2226,7 @@ class="methodparam"><span class="type">int</span> `$hour`</span> , <span
 class="methodparam"><span class="type">int</span> `$minute`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$second`<span
 class="initializer"> = 0</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$microseconds`<span
+class="methodparam"><span class="type">int</span> `$microsecond`<span
 class="initializer"> = 0</span></span> \]\] )
 
 Like <span class="methodname">DateTime::setTime</span> but works with
@@ -2242,8 +2242,7 @@ Sets the date and time based on a Unix timestamp
 <span class="modifier">public</span> <span
 class="type">DateTimeImmutable</span> <span
 class="methodname">DateTimeImmutable::setTimestamp</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$unixtimestamp`</span> )
+class="methodparam"><span class="type">int</span> `$timestamp`</span> )
 
 Like <span class="methodname">DateTime::setTimestamp</span> but works
 with <span class="classname">DateTimeImmutable</span>.
@@ -2348,7 +2347,7 @@ O"</span> ;
 <span class="modifier">public</span> <span
 class="type">DateInterval</span> <span class="methodname">diff</span> (
 <span class="methodparam"><span class="type">DateTimeInterface</span>
-`$datetime2`</span> \[, <span class="methodparam"><span
+`$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
 **`FALSE`**</span></span> \] )
 
@@ -2473,7 +2472,7 @@ Returns the difference between two DateTime objects
 class="type">DateInterval</span> <span
 class="methodname">DateTime::diff</span> ( <span
 class="methodparam"><span class="type">DateTimeInterface</span>
-`$datetime2`</span> \[, <span class="methodparam"><span
+`$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
 **`FALSE`**</span></span> \] )
 
@@ -2481,7 +2480,7 @@ class="type">bool</span> `$absolute`<span class="initializer"> =
 class="type">DateInterval</span> <span
 class="methodname">DateTimeImmutable::diff</span> ( <span
 class="methodparam"><span class="type">DateTimeInterface</span>
-`$datetime2`</span> \[, <span class="methodparam"><span
+`$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
 **`FALSE`**</span></span> \] )
 
@@ -2489,7 +2488,7 @@ class="type">bool</span> `$absolute`<span class="initializer"> =
 class="type">DateInterval</span> <span
 class="methodname">DateTimeInterface::diff</span> ( <span
 class="methodparam"><span class="type">DateTimeInterface</span>
-`$datetime2`</span> \[, <span class="methodparam"><span
+`$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
 **`FALSE`**</span></span> \] )
 
@@ -2497,9 +2496,9 @@ class="type">bool</span> `$absolute`<span class="initializer"> =
 
 <span class="type">DateInterval</span> <span
 class="methodname">date\_diff</span> ( <span class="methodparam"><span
-class="type">DateTimeInterface</span> `$datetime1`</span> , <span
+class="type">DateTimeInterface</span> `$originObject`</span> , <span
 class="methodparam"><span class="type">DateTimeInterface</span>
-`$datetime2`</span> \[, <span class="methodparam"><span
+`$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
 **`FALSE`**</span></span> \] )
 
@@ -2516,8 +2515,12 @@ Should the interval be forced to be positive?
 
 ### 返回值
 
-The <span class="classname">DateInterval</span> object representing the
+The <span class="classname">DateInterval</span> object represents the
 difference between the two dates 或者在失败时返回 **`FALSE`**.
+
+The return value more specifically represents the interval to apply to
+the original object (`$this` or `$originObject`) to arrive at the
+`$targetObject`. This process is not always reversible.
 
 ### 范例
 
@@ -2527,9 +2530,9 @@ difference between the two dates 或者在失败时返回 **`FALSE`**.
 
 ``` php
 <?php
-$datetime1 = new DateTime('2009-10-11');
-$datetime2 = new DateTime('2009-10-13');
-$interval = $datetime1->diff($datetime2);
+$origin = new DateTime('2009-10-11');
+$target = new DateTime('2009-10-13');
+$interval = $origin->diff($target);
 echo $interval->format('%R%a days');
 ?>
 ```
@@ -2538,9 +2541,9 @@ echo $interval->format('%R%a days');
 
 ``` php
 <?php
-$datetime1 = date_create('2009-10-11');
-$datetime2 = date_create('2009-10-13');
-$interval = date_diff($datetime1, $datetime2);
+$origin = date_create('2009-10-11');
+$target = date_create('2009-10-13');
+$interval = date_diff($origin, $target);
 echo $interval->format('%R%a days');
 ?>
 ```
@@ -2625,7 +2628,70 @@ Returns date formatted according to given format.
 <span class="classname">DateTime</span> 类型的对象。
 
 `format`  
-Format accepted by <span class="function">date</span>.
+The format of the outputted date <span class="type">string</span>. See
+the formatting options below. There are also several
+<a href="/class/datetimeinterface.html#预定义常量" class="link">predefined date constants</a>
+that may be used instead, so for example **`DATE_RSS`** contains the
+format string *'D, d M Y H:i:s'*.
+
+|  `format` character | Description                                                                                                                                                                                                                                                                                                                               | Example returned values                       |
+|:-------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
+|        *Day*        | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
+|         *d*         | Day of the month, 2 digits with leading zeros                                                                                                                                                                                                                                                                                             | *01* to *31*                                  |
+|         *D*         | A textual representation of a day, three letters                                                                                                                                                                                                                                                                                          | *Mon* through *Sun*                           |
+|         *j*         | Day of the month without leading zeros                                                                                                                                                                                                                                                                                                    | *1* to *31*                                   |
+| *l* (lowercase 'L') | A full textual representation of the day of the week                                                                                                                                                                                                                                                                                      | *Sunday* through *Saturday*                   |
+|         *N*         | ISO-8601 numeric representation of the day of the week (added in PHP 5.1.0)                                                                                                                                                                                                                                                               | *1* (for Monday) through *7* (for Sunday)     |
+|         *S*         | English ordinal suffix for the day of the month, 2 characters                                                                                                                                                                                                                                                                             | *st*, *nd*, *rd* or *th*. Works well with *j* |
+|         *w*         | Numeric representation of the day of the week                                                                                                                                                                                                                                                                                             | *0* (for Sunday) through *6* (for Saturday)   |
+|         *z*         | The day of the year (starting from 0)                                                                                                                                                                                                                                                                                                     | *0* through *365*                             |
+|        *Week*       | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
+|         *W*         | ISO-8601 week number of year, weeks starting on Monday                                                                                                                                                                                                                                                                                    | Example: *42* (the 42nd week in the year)     |
+|       *Month*       | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
+|         *F*         | A full textual representation of a month, such as January or March                                                                                                                                                                                                                                                                        | *January* through *December*                  |
+|         *m*         | Numeric representation of a month, with leading zeros                                                                                                                                                                                                                                                                                     | *01* through *12*                             |
+|         *M*         | A short textual representation of a month, three letters                                                                                                                                                                                                                                                                                  | *Jan* through *Dec*                           |
+|         *n*         | Numeric representation of a month, without leading zeros                                                                                                                                                                                                                                                                                  | *1* through *12*                              |
+|         *t*         | Number of days in the given month                                                                                                                                                                                                                                                                                                         | *28* through *31*                             |
+|        *Year*       | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
+|         *L*         | Whether it's a leap year                                                                                                                                                                                                                                                                                                                  | *1* if it is a leap year, *0* otherwise.      |
+|         *o*         | ISO-8601 week-numbering year. This has the same value as *Y*, except that if the ISO week number (*W*) belongs to the previous or next year, that year is used instead. (added in PHP 5.1.0)                                                                                                                                              | Examples: *1999* or *2003*                    |
+|         *Y*         | A full numeric representation of a year, 4 digits                                                                                                                                                                                                                                                                                         | Examples: *1999* or *2003*                    |
+|         *y*         | A two digit representation of a year                                                                                                                                                                                                                                                                                                      | Examples: *99* or *03*                        |
+|        *Time*       | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
+|         *a*         | Lowercase Ante meridiem and Post meridiem                                                                                                                                                                                                                                                                                                 | *am* or *pm*                                  |
+|         *A*         | Uppercase Ante meridiem and Post meridiem                                                                                                                                                                                                                                                                                                 | *AM* or *PM*                                  |
+|         *B*         | Swatch Internet time                                                                                                                                                                                                                                                                                                                      | *000* through *999*                           |
+|         *g*         | 12-hour format of an hour without leading zeros                                                                                                                                                                                                                                                                                           | *1* through *12*                              |
+|         *G*         | 24-hour format of an hour without leading zeros                                                                                                                                                                                                                                                                                           | *0* through *23*                              |
+|         *h*         | 12-hour format of an hour with leading zeros                                                                                                                                                                                                                                                                                              | *01* through *12*                             |
+|         *H*         | 24-hour format of an hour with leading zeros                                                                                                                                                                                                                                                                                              | *00* through *23*                             |
+|         *i*         | Minutes with leading zeros                                                                                                                                                                                                                                                                                                                | *00* to *59*                                  |
+|         *s*         | Seconds with leading zeros                                                                                                                                                                                                                                                                                                                | *00* through *59*                             |
+|         *u*         | Microseconds (added in PHP 5.2.2). Note that <span class="function">date</span> will always generate *000000* since it takes an <span class="type">integer</span> parameter, whereas <span class="methodname">DateTime::format</span> does support microseconds if <span class="classname">DateTime</span> was created with microseconds. | Example: *654321*                             |
+|         *v*         | Milliseconds (added in PHP 7.0.0). Same note applies as for *u*.                                                                                                                                                                                                                                                                          | Example: *654*                                |
+|      *Timezone*     | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
+|         *e*         | Timezone identifier (added in PHP 5.1.0)                                                                                                                                                                                                                                                                                                  | Examples: *UTC*, *GMT*, *Atlantic/Azores*     |
+|   *I* (capital i)   | Whether or not the date is in daylight saving time                                                                                                                                                                                                                                                                                        | *1* if Daylight Saving Time, *0* otherwise.   |
+|         *O*         | Difference to Greenwich time (GMT) without colon between hours and minutes                                                                                                                                                                                                                                                                | Example: *+0200*                              |
+|         *P*         | Difference to Greenwich time (GMT) with colon between hours and minutes (added in PHP 5.1.3)                                                                                                                                                                                                                                              | Example: *+02:00*                             |
+|         *T*         | Timezone abbreviation                                                                                                                                                                                                                                                                                                                     | Examples: *EST*, *MDT* ...                    |
+|         *Z*         | Timezone offset in seconds. The offset for timezones west of UTC is always negative, and for those east of UTC is always positive.                                                                                                                                                                                                        | *-43200* through *50400*                      |
+|   *Full Date/Time*  | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
+|         *c*         | ISO 8601 date (added in PHP 5)                                                                                                                                                                                                                                                                                                            | 2004-02-12T15:19:21+00:00                     |
+|         *r*         | <a href="http://www.faqs.org/rfcs/rfc2822" class="link external">» RFC 2822</a> formatted date                                                                                                                                                                                                                                            | Example: *Thu, 21 Dec 2000 16:01:07 +0200*    |
+|         *U*         | Seconds since the Unix Epoch (January 1 1970 00:00:00 GMT)                                                                                                                                                                                                                                                                                | See also <span class="function">time</span>   |
+
+Unrecognized characters in the format string will be printed as-is. The
+*Z* format will always return *0* when using <span
+class="function">gmdate</span>.
+
+> **Note**:
+>
+> Since this function only accepts <span class="type">integer</span>
+> timestamps the *u* format character is only useful when using the
+> <span class="function">date\_format</span> function with user based
+> timestamps created with <span class="function">date\_create</span>.
 
 ### 返回值
 
@@ -3035,11 +3101,10 @@ class="type">DateTime</span> `$datetime`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">getTransitions</span> (\[ <span
-class="methodparam"><span class="type">int</span>
-`$timestamp_begin`<span class="initializer"> =
-**`PHP_INT_MIN`**</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$timestamp_end`<span class="initializer"> =
-**`PHP_INT_MAX`**</span></span> \]\] )
+class="methodparam"><span class="type">int</span> `$timestampBegin`<span
+class="initializer"> = **`PHP_INT_MIN`**</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$timestampEnd`<span
+class="initializer"> = **`PHP_INT_MAX`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">array</span> <span
@@ -3347,11 +3412,10 @@ Returns all transitions for the timezone
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">DateTimeZone::getTransitions</span> (\[ <span
-class="methodparam"><span class="type">int</span>
-`$timestamp_begin`<span class="initializer"> =
-**`PHP_INT_MIN`**</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$timestamp_end`<span class="initializer"> =
-**`PHP_INT_MAX`**</span></span> \]\] )
+class="methodparam"><span class="type">int</span> `$timestampBegin`<span
+class="initializer"> = **`PHP_INT_MIN`**</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$timestampEnd`<span
+class="initializer"> = **`PHP_INT_MAX`**</span></span> \]\] )
 
 过程化风格
 
@@ -3359,9 +3423,9 @@ class="type">int</span> `$timestamp_end`<span class="initializer"> =
 class="methodname">timezone\_transitions\_get</span> ( <span
 class="methodparam"><span class="type">DateTimeZone</span>
 `$object`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$timestamp_begin`<span class="initializer"> =
+class="type">int</span> `$timestampBegin`<span class="initializer"> =
 **`PHP_INT_MIN`**</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$timestamp_end`<span class="initializer"> =
+class="type">int</span> `$timestampEnd`<span class="initializer"> =
 **`PHP_INT_MAX`**</span></span> \]\] )
 
 ### 参数
@@ -3370,10 +3434,10 @@ class="type">int</span> `$timestamp_end`<span class="initializer"> =
 仅过程化风格：由 <span class="function">timezone\_open</span> 返回的
 <span class="classname">DateTimeZone</span> 对象。
 
-`timestamp_begin`  
+`timestampBegin`  
 Begin timestamp.
 
-`timestamp_end`  
+`timestampEnd`  
 End timestamp.
 
 ### 返回值
@@ -3383,9 +3447,9 @@ transitions on success 或者在失败时返回 **`FALSE`**.
 
 ### 更新日志
 
-| 版本  | 说明                                                           |
-|-------|----------------------------------------------------------------|
-| 5.3.0 | The optional `timestamp_begin` and `timestamp_end` were added. |
+| 版本  | 说明                                                         |
+|-------|--------------------------------------------------------------|
+| 5.3.0 | The optional `timestampBegin` and `timestampEnd` were added. |
 
 ### 范例
 
@@ -3635,13 +3699,14 @@ for ($i=0; $i < 5; $i++) {
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$interval_spec`</span> )
+class="methodparam"><span class="type">string</span> `$duration`</span>
+)
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">DateInterval</span>
 <span class="methodname">createFromDateString</span> ( <span
-class="methodparam"><span class="type">string</span> `$time`</span> )
+class="methodparam"><span class="type">string</span> `$datetime`</span>
+)
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">format</span> ( <span class="methodparam"><span
@@ -3700,14 +3765,14 @@ Creates a new DateInterval object
 
 <span class="modifier">public</span> <span
 class="methodname">DateInterval::\_\_construct</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$interval_spec`</span> )
+class="methodparam"><span class="type">string</span> `$duration`</span>
+)
 
 Creates a new DateInterval object.
 
 ### 参数
 
-`interval_spec`  
+`duration`  
 An interval specification.
 
 The format starts with the letter *P*, for “period.” Each duration
@@ -3745,8 +3810,8 @@ These formats are based on the
 
 ### 错误／异常
 
-Throws an <span class="classname">Exception</span> when the
-`interval_spec` cannot be parsed as an interval.
+Throws an <span class="classname">Exception</span> when the `duration`
+cannot be parsed as an interval.
 
 ### 范例
 
@@ -3800,14 +3865,14 @@ Sets up a DateInterval from the relative parts of the string
 class="modifier">static</span> <span class="type">DateInterval</span>
 <span class="methodname">DateInterval::createFromDateString</span> (
 <span class="methodparam"><span class="type">string</span>
-`$time`</span> )
+`$datetime`</span> )
 
 Uses the normal date parsers and sets up a DateInterval from the
 relative parts of the parsed string.
 
 ### 参数
 
-`time`  
+`datetime`  
 A date with relative parts. Specifically, the
 <a href="/datetime/formats.html#Relative%20Formats" class="link">relative formats</a>
 supported by the parser used for <span class="function">strtotime</span>

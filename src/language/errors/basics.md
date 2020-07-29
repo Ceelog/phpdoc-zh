@@ -6,7 +6,7 @@ These may be used to signal a number of different conditions, and can be
 displayed and/or logged as required.
 
 Every error that PHP generates includes a type. A
-<a href="/errorfunc/constants.html" class="link">list of these types</a>
+<a href="/errorfunc/constants.html" class="link">list of these error types</a>
 is available, along with a short description of their behaviour and how
 they can be caused.
 

@@ -2,14 +2,14 @@
 --------------------------
 
 该列表只包含核心的 `php.ini`
-配置选项。扩展的配置选项在各个扩展的文档页面分别被描述。有关 session
-的选项可以在
+配置选项。扩展的配置选项在各个扩展的文档页面分别被描述。比如，有关
+session 的选项可以在
 <a href="/session/setup.html#运行时配置" class="link">sessions 页面</a>找到。
 
 > **Note**:
 >
-> The defaults listed here are used when `php.ini` is not loaded; the
-> values for the production and development `php.ini` may vary.
+> 以下列出了未设置 `php.ini` 时的默认值；开发环境和生产环境的 `php.ini`
+> 值可能会有所不同。
 
 语言选项
 --------
@@ -19,7 +19,7 @@
 | <a href="/ini/core.html#ini.short-open-tag" class="link">short_open_tag</a>                                 | "1"  | PHP\_INI\_PERDIR        |                                                                                                                                   |
 | <a href="/ini/core.html#ini.asp-tags" class="link">asp_tags</a>                                             | "0"  | PHP\_INI\_PERDIR        | PHP 7.0.0. 中移除。                                                                                                               |
 | <a href="/ini/core.html#ini.precision" class="link">precision</a>                                           | "14" | PHP\_INI\_ALL           |                                                                                                                                   |
-| <a href="/ini/core.html#ini.serialize-precision" class="link">serialize_precision</a>                       | "17" | PHP\_INI\_ALL           | 在 PHP 5.3.5以前，默认值为 100                                                                                                    |
+| <a href="/ini/core.html#ini.serialize-precision" class="link">serialize_precision</a>                       | "17" | PHP\_INI\_ALL           | 在 PHP 5.3.5以前，默认值为 100 在 PHP 7.1.0以前，默认值为 17                                                                      |
 | <a href="/ini/core.html#ini.y2k-compliance" class="link">y2k_compliance</a>                                 | "1"  | PHP\_INI\_ALL           | 在 PHP 5.4.0 中移除该选项。                                                                                                       |
 | <a href="/ini/core.html#ini.allow-call-time-pass-reference" class="link">allow_call_time_pass_reference</a> | "1"  | PHP\_INI\_PERDIR        | 在 PHP 5.4.0 中移除该选项。                                                                                                       |
 | <a href="/ini/core.html#ini.disable-functions" class="link">disable_functions</a>                           | ""   | 仅仅为 PHP\_INI\_SYSTEM |                                                                                                                                   |
@@ -27,6 +27,7 @@
 | <a href="/ini/core.html#ini.exit-on-timeout" class="link">exit_on_timeout</a>                               | ""   | PHP\_INI\_ALL           | 从 PHP 5.3.0 起可用。                                                                                                             |
 | <a href="/ini/core.html#ini.expose-php" class="link">expose_php</a>                                         | "1"  | `php.ini` only          |                                                                                                                                   |
 | <a href="/ini/core.html#ini.hard-timeout" class="link">hard_timeout</a>                                     | "2"  | PHP\_INI\_SYSTEM        | PHP 7.1.0 起可用                                                                                                                  |
+| <a href="/ini/core.html#ini.zend.exception-ignore-args" class="link">zend.exception_ignore_args</a>         | "0"  | PHP\_INI\_ALL           | PHP 7.4.0 起可用                                                                                                                  |
 | <a href="/ini/core.html#ini.zend.multibyte" class="link">zend.multibyte</a>                                 | "0"  | PHP\_INI\_ALL           | 从 PHP 5.4.0 起可用                                                                                                               |
 | <a href="/ini/core.html#ini.zend.script-encoding" class="link">zend.script_encoding</a>                     | NULL | PHP\_INI\_ALL           | 从 PHP 5.4.0 起可用                                                                                                               |
 | <a href="/ini/core.html#ini.zend.detect-unicode" class="link">zend.detect-unicode</a>                       | NULL | PHP\_INI\_ALL           | 从 PHP 5.4.0 起可用                                                                                                               |
@@ -111,22 +112,16 @@ See also <span class="function">php\_logo\_guid</span> and <span
 class="function">phpcredits</span>.
 
 `disable_functions` <span class="type">string</span>  
-本指令允许你基于<a href="/security.html" class="link">安全</a>原因禁止某些函数。接受逗号分隔的函数名列表作为参数。
-disable\_functions
-不受<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>的影响。
+本指令可用于禁止某些函数。接受逗号分隔的函数名列表作为参数。
 
-Only
-<a href="/functions/internal.html" class="link">internal functions</a>
-can be disabled using this directive.
-<a href="/functions/user-defined.html" class="link">User-defined functions</a>
-are unaffected.
+此指令仅能禁用
+<a href="/functions/internal.html" class="link">内置函数</a>。
+不能影响<a href="/functions/user-defined.html" class="link">用户自定义函数</a>。
 
-本指令只能设置在 `php.ini` 中。例如不能将其设置在 `httpd.conf`。
+本指令只能设置在 `php.ini` 中。例如，无法在 `httpd.conf` 中设置。
 
 `disable_classes` <span class="type">string</span>  
-<span class="simpara">
-本指令可以使你出于<a href="/security.html" class="link">安全</a>的理由禁用某些类。用逗号分隔类名。disable\_classes
-不受<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>的影响。
+<span class="simpara"> 本指令可以使你禁用某些类。用逗号分隔类名。
 </span> <span class="simpara"> 本指令只能设置在 `php.ini`
 中。例如不能将其设置在 `httpd.conf`。 </span>
 
@@ -163,6 +158,9 @@ See also the section titled
 This feature has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
 
 `hard_timeout` <span class="type">integer</span>  
+
+`zend.exception_ignore_args` <span class="type">boolean</span>  
+Excludes arguments from stack traces generated from exceptions.
 
 `zend.multibyte` <span class="type">boolean</span>  
 Enables parsing of source files in multibyte encodings. Enabling
@@ -233,6 +231,12 @@ Performance Tuning
 |---------------------------------------------------------------------------------------|-------|------------------|-----------------------------------------------------------------------------------|
 | <a href="/ini/core.html#ini.realpath-cache-size" class="link">realpath_cache_size</a> | "4M"  | PHP\_INI\_SYSTEM | Available since PHP 5.1.0. Prior to PHP 7.0.16 and 7.1.2, the default was *"16K"* |
 | <a href="/ini/core.html#ini.realpath-cache-ttl" class="link">realpath_cache_ttl</a>   | "120" | PHP\_INI\_SYSTEM | Available since PHP 5.1.0.                                                        |
+
+> **Note**:
+>
+> Using
+> <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
+> will *disable* the realpath cache.
 
 这是配置指令的简短说明。
 
@@ -566,9 +570,9 @@ directories separated with a colon in Unix or semicolon in Windows.
 PHP considers each entry in the include path separately when looking for
 files to include. It will check the first path, and if it doesn't find
 it, check the next path, until it either locates the included file or
-returns with a <a href="" class="link">warning</a> or an
-<a href="" class="link">error</a>. You may modify or set your include
-path at runtime using <span class="function">set\_include\_path</span>.
+returns with an **`E_WARNING`** or an **`E_ERROR`**. You may modify or
+set your include path at runtime using <span
+class="function">set\_include\_path</span>.
 
 **示例 \#1 Unix include\_path**
 
@@ -653,6 +657,12 @@ The default is to allow all files to be opened.
 > class="function">ini\_set</span>. When listing several directories,
 > you can use the **`PATH_SEPARATOR`** constant as a separator
 > regardless of the operating system.
+
+> **Note**:
+>
+> Using open\_basedir will set
+> <a href="/ini/core.html#ini.realpath-cache-size" class="link">realpath_cache_size</a>
+> to *0* and thus *disable* the realpath cache.
 
 `doc_root` <span class="type">string</span>  
 PHP's "root directory" on the server. Only used if non-empty. If PHP is

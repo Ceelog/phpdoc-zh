@@ -19,12 +19,14 @@ different offsets), it will only be checked for UTF-8 validity once.
 
 ### Changes to INI File Handling
 
-*zend.exception\_ignore\_args* is a new INI directive for including or
-excluding arguments from stack traces generated from exceptions.
+<a href="/ini/core.html#ini.zend.exception-ignore-args" class="link">zend.exception_ignore_args</a>
+is a new INI directive for including or excluding arguments from stack
+traces generated from exceptions.
 
-*opcache.preload\_user* is a new INI directive for specifying the user
-account under which preloading code is execute if it would otherwise be
-run as root (which is not allowed for security reasons).
+<a href="/opcache/setup.html#" class="link">opcache.preload_user</a> is
+a new INI directive for specifying the user account under which
+preloading code is execute if it would otherwise be run as root (which
+is not allowed for security reasons).
 
 ### Migration to pkg-config
 

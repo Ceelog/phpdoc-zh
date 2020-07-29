@@ -9,9 +9,11 @@ Supported Date and Time Formats
 -   [Relative Formats](/datetime/formats.html#Relative%20Formats)
 
 This section describes all the different formats that the <span
-class="function">strtotime</span>, <span
-class="classname">DateTime</span> and <span
-class="function">date\_create</span> parser understands. The formats are
+class="classname">DateTimeImmutable</span>, <span
+class="classname">DateTime</span>, <span
+class="function">date\_create</span>, <span
+class="function">date\_create\_immutable</span>, and <span
+class="function">strtotime</span> parser understands. The formats are
 grouped by section. In most cases formats from different sections,
 separated by whitespace, comma or dot, can be used in the same date/time
 string. For each of the supported formats, one or more examples are
@@ -22,10 +24,12 @@ characters in double quotes are case-sensitive (*"T"* is only *T*).
 Time Formats
 ------------
 
-This page describes the different time formats that the <span
-class="function">strtotime</span>, <span
-class="classname">DateTime</span> and <span
-class="function">date\_create</span> parser understands.
+This page describes the different date/time formats that the <span
+class="classname">DateTimeImmutable</span>, <span
+class="classname">DateTime</span>, <span
+class="function">date\_create</span>, <span
+class="function">date\_create\_immutable</span>, and <span
+class="function">strtotime</span> parser understands.
 
 | Description    | Formats                                                               | Examples                                           |
 |----------------|-----------------------------------------------------------------------|----------------------------------------------------|

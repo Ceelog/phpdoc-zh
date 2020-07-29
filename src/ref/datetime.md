@@ -349,9 +349,9 @@ Get info about given date formatted according to the specified format
 class="methodname">date\_parse\_from\_format</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$date`</span> )
+`$datetime`</span> )
 
-Returns associative array with detailed info about given date.
+Returns associative array with detailed info about given date/time.
 
 ### 参数
 
@@ -359,12 +359,12 @@ Returns associative array with detailed info about given date.
 Format accepted by <span
 class="function">DateTime::createFromFormat</span>.
 
-`date`  
-String representing the date.
+`datetime`  
+String representing the date/time.
 
 ### 返回值
 
-Returns associative array with detailed info about given date.
+Returns associative array with detailed info about given date/time.
 
 ### 更新日志
 
@@ -419,28 +419,29 @@ print_r(date_parse_from_format("j.n.Y H:iP", $date));
 date\_parse
 ===========
 
-Returns associative array with detailed info about given date
+Returns associative array with detailed info about given date/time
 
 ### 说明
 
 <span class="type">array</span> <span
 class="methodname">date\_parse</span> ( <span class="methodparam"><span
-class="type">string</span> `$date`</span> )
+class="type">string</span> `$datetime`</span> )
 
 ### 参数
 
-`date`  
-Date in format accepted by <span class="function">strtotime</span>.
+`datetime`  
+Date/time in format accepted by <span
+class="function">DateTimeImmutable::\_\_construct</span>.
 
 ### 返回值
 
 Returns <span class="type">array</span> with information about the
-parsed date on success 或者在失败时返回 **`FALSE`**.
+parsed date/time on success 或者在失败时返回 **`FALSE`**.
 
 ### 错误／异常
 
-In case the date format has an error, the element 'errors' will contains
-the error messages.
+In case the date/time format has an error, the element 'errors' will
+contains the error messages.
 
 ### 更新日志
 
@@ -547,15 +548,15 @@ begin/end
 
 <span class="type">array</span> <span
 class="methodname">date\_sun\_info</span> ( <span
-class="methodparam"><span class="type">int</span> `$time`</span> , <span
-class="methodparam"><span class="type">float</span> `$latitude`</span> ,
+class="methodparam"><span class="type">int</span> `$timestamp`</span> ,
 <span class="methodparam"><span class="type">float</span>
-`$longitude`</span> )
+`$latitude`</span> , <span class="methodparam"><span
+class="type">float</span> `$longitude`</span> )
 
 ### 参数
 
-`time`  
-Timestamp.
+`timestamp`  
+Unix timestamp.
 
 `latitude`  
 Latitude in degrees.
@@ -569,16 +570,16 @@ Returns array on success 或者在失败时返回 **`FALSE`**. The structure of
 the array is detailed in the following list:
 
 *sunrise*  
-<span class="simpara"> The time of the sunrise (zenith angle = 90°35').
-</span>
+<span class="simpara"> The timestamp of the sunrise (zenith angle =
+90°35'). </span>
 
 *sunset*  
-<span class="simpara"> The time of the sunset (zenith angle = 90°35').
-</span>
+<span class="simpara"> The timestamp of the sunset (zenith angle =
+90°35'). </span>
 
 *transit*  
-<span class="simpara"> The time when the sun is at its zenith, i.e. has
-reached its topmost point. </span>
+<span class="simpara"> The timestamp when the sun is at its zenith, i.e.
+has reached its topmost point. </span>
 
 *civil\_twilight\_begin*  
 <span class="simpara"> The start of the civil dawn (zenith angle = 96°).
@@ -2680,8 +2681,8 @@ Returns the timezone name from abbreviation
 class="methodname">timezone\_name\_from\_abbr</span> ( <span
 class="methodparam"><span class="type">string</span> `$abbr`</span> \[,
 <span class="methodparam"><span class="type">int</span>
-`$gmtOffset`<span class="initializer"> = -1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$isdst`<span
+`$utcOffset`<span class="initializer"> = -1</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$isDST`<span
 class="initializer"> = -1</span></span> \]\] )
 
 ### 参数
@@ -2689,20 +2690,20 @@ class="initializer"> = -1</span></span> \]\] )
 `abbr`  
 Time zone abbreviation.
 
-`gmtOffset`  
+`utcOffset`  
 Offset from GMT in seconds. Defaults to -1 which means that first found
 time zone corresponding to `abbr` is returned. Otherwise exact offset is
 searched and only if not found then the first time zone with any offset
 is returned.
 
-`isdst`  
+`isDST`  
 Daylight saving time indicator. Defaults to -1, which means that whether
 the time zone has daylight saving or not is not taken into consideration
-when searching. If this is set to 1, then the `gmtOffset` is assumed to
-be an offset with daylight saving in effect; if 0, then `gmtOffset` is
+when searching. If this is set to 1, then the `utcOffset` is assumed to
+be an offset with daylight saving in effect; if 0, then `utcOffset` is
 assumed to be an offset without daylight saving in effect. If `abbr`
-doesn't exist then the time zone is searched solely by the `gmtOffset`
-and `isdst`.
+doesn't exist then the time zone is searched solely by the `utcOffset`
+and `isDST`.
 
 ### 返回值
 
@@ -2841,7 +2842,7 @@ echo timezone_version_get();
     — Get info about given date formatted according to the specified
     format
 -   [date\_parse](/ref/datetime.html#date_parse) — Returns associative
-    array with detailed info about given date
+    array with detailed info about given date/time
 -   [date\_sub](/ref/datetime.html#date_sub) — 别名 DateTime::sub
 -   [date\_sun\_info](/ref/datetime.html#date_sun_info) — Returns an
     array with information about sunset/sunrise and twilight begin/end
