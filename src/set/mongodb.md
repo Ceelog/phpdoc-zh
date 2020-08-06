@@ -2098,49 +2098,54 @@ parameter.
 <td><p>The time in milliseconds to attempt a connection before timing out. Defaults to 10,000 milliseconds.</p></td>
 </tr>
 <tr class="even">
+<td>directConnection</td>
+<td><span class="type">boolean</span></td>
+<td><p>This option can be used to control replica set discovery behavior when only a single host is provided in the connection string. By default, providing a single member in the connection string will establish a direct connection or discover additional members depending on whether the <em>"replicaSet"</em> URI option is omitted or present, respectively. Specify <strong><code>FALSE</code></strong> to force discovery to occur (if <em>"replicaSet"</em> is omitted) or specify <strong><code>TRUE</code></strong> to force a direct connection (if <em>"replicaSet"</em> is present).</p></td>
+</tr>
+<tr class="odd">
 <td>gssapiServiceName</td>
 <td><span class="type">string</span></td>
 <td><p>Set the Kerberos service name when connecting to Kerberized MongoDB instances. This value must match the service name set on MongoDB instances (i.e. <a href="https://docs.mongodb.com/manual/reference/parameters/#param.saslServiceName" class="link external">» saslServiceName</a> server parameter). Defaults to <em>"mongodb"</em>.</p>
 <p>This option is a deprecated alias for the <em>"SERVICE_NAME"</em> property of the <em>"authMechanismProperties"</em> URI option.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>heartbeatFrequencyMS</td>
 <td><span class="type">integer</span></td>
 <td><p>Specifies the interval in milliseconds between the driver's checks of the MongoDB topology, counted from the end of the previous check until the beginning of the next one. Defaults to 60,000 milliseconds.</p>
 <p>Per the <a href="https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-discovery-and-monitoring.rst#heartbeatfrequencyms" class="link external">» Server Discovery and Monitoring Specification</a>, this value cannot be less than 500 milliseconds.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>journal</td>
 <td><span class="type">boolean</span></td>
 <td><p>Corresponds to the default write concern's <code class="parameter">journal</code> parameter. If <strong><code>TRUE</code></strong>, writes will require acknowledgement from MongoDB that the operation has been written to the journal. For details, see <span class="classname">MongoDB\Driver\WriteConcern</span>.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>localThresholdMS</td>
 <td><span class="type">integer</span></td>
 <td><p>The size in milliseconds of the latency window for selecting among multiple suitable MongoDB instances while resolving a read preference. Defaults to 15 milliseconds.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>maxStalenessSeconds</td>
 <td><span class="type">integer</span></td>
 <td><p>Corresponds to the read preference's <em>"maxStalenessSeconds"</em>. Specifies, in seconds, how stale a secondary can be before the client stops using it for read operations. By default, there is no maximum staleness and clients will not consider a secondary’s lag when choosing where to direct a read operation. For details, see <span class="classname">MongoDB\Driver\ReadPreference</span>.</p>
 <p>If specified, the max staleness must be a signed 32-bit integer greater than or equal to <strong><code>MongoDB\Driver\ReadPreference::SMALLEST_MAX_STALENESS_SECONDS</code></strong> (i.e. 90 seconds).</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>password</td>
 <td><span class="type">string</span></td>
 <td>The password for the user being authenticated. This option is useful if the password contains special characters, which would otherwise need to be URL encoded for the connection URI.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>readConcernLevel</td>
 <td><span class="type">string</span></td>
 <td>Corresponds to the read concern's <code class="parameter">level</code> parameter. Specifies the level of read isolation. For details, see <span class="classname">MongoDB\Driver\ReadConcern</span>.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>readPreference</td>
 <td><span class="type">string</span></td>
 <td><p>Corresponds to the read preference's <code class="parameter">mode</code> parameter. Defaults to <em>"primary"</em>. For details, see <span class="classname">MongoDB\Driver\ReadPreference</span>.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>readPreferenceTags</td>
 <td><span class="type">array</span></td>
 <td><p>Corresponds to the read preference's <code class="parameter">tagSets</code> parameter. Tag sets allow you to target read operations to specific members of a replica set. For details, see <span class="classname">MongoDB\Driver\ReadPreference</span>.</p>
@@ -2148,67 +2153,67 @@ parameter.
 <p><strong>Note</strong>: <span class="simpara"> When not specified in the URI string, this option is expressed as an array consistent with the format expected by <span class="function">MongoDB\Driver\ReadPreference::__construct</span>. </span></p>
 </blockquote></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>replicaSet</td>
 <td><span class="type">string</span></td>
 <td><p>Specifies the name of the replica set.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>retryReads</td>
 <td><span class="type">boolean</span></td>
 <td><p>Specifies whether or not the driver should automatically retry certain read operations that fail due to transient network errors or replica set elections. This functionality requires MongoDB 3.6+. Defaults to <strong><code>TRUE</code></strong>.</p>
 <p>See the <a href="https://github.com/mongodb/specifications/blob/master/source/retryable-reads/retryable-reads.rst" class="link external">» Retryable Reads Specification</a> for more information.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>retryWrites</td>
 <td><span class="type">boolean</span></td>
 <td><p>Specifies whether or not the driver should automatically retry certain write operations that fail due to transient network errors or replica set elections. This functionality requires MongoDB 3.6+. Defaults to <strong><code>TRUE</code></strong>.</p>
 <p>See <a href="https://docs.mongodb.com/manual/core/retryable-writes/" class="link external">» Retryable Writes</a> in the MongoDB manual for more information.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>safe</td>
 <td><span class="type">boolean</span></td>
 <td><p>If <strong><code>TRUE</code></strong>, specifies <em>1</em> for the default write concern's <code class="parameter">w</code> parameter. If <strong><code>FALSE</code></strong>, <em>0</em> is specified. For details, see <span class="classname">MongoDB\Driver\WriteConcern</span>.</p>
 <p>This option is deprecated and should not be used.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>serverSelectionTimeoutMS</td>
 <td><span class="type">integer</span></td>
 <td><p>Specifies how long in milliseconds to block for server selection before throwing an exception. Defaults to 30,000 milliseconds.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>serverSelectionTryOnce</td>
 <td><span class="type">boolean</span></td>
 <td><p>When <strong><code>TRUE</code></strong>, instructs the driver to scan the MongoDB deployment exactly once after server selection fails and then either select a server or raise an error. When <strong><code>FALSE</code></strong>, the driver blocks and searches for a server up to the <em>"serverSelectionTimeoutMS"</em> value. Defaults to <strong><code>TRUE</code></strong>.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>slaveOk</td>
 <td><span class="type">boolean</span></td>
 <td><p>Specifies <em>"secondaryPreferred"</em> for the read preference mode if <strong><code>TRUE</code></strong>. For details, see <span class="classname">MongoDB\Driver\ReadPreference</span>.</p>
 <p>This option is deprecated and should not be used.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>socketCheckIntervalMS</td>
 <td><span class="type">integer</span></td>
 <td><p>If a socket has not been used recently, the driver must check it via an <em>isMaster</em> command before using it for any operation. Defaults to 5,000 milliseconds.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>socketTimeoutMS</td>
 <td><span class="type">integer</span></td>
 <td><p>The time in milliseconds to attempt a send or receive on a socket before timing out. Defaults to 300,000 milliseconds (i.e. five minutes).</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>ssl</td>
 <td><span class="type">boolean</span></td>
 <td><p>Initiates the connection with TLS/SSL if <strong><code>TRUE</code></strong>. Defaults to <strong><code>FALSE</code></strong>.</p>
 <p>This option is a deprecated alias for the <em>"tls"</em> URI option.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>tls</td>
 <td><span class="type">boolean</span></td>
 <td><p>Initiates the connection with TLS/SSL if <strong><code>TRUE</code></strong>. Defaults to <strong><code>FALSE</code></strong>.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>tlsAllowInvalidCertificates</td>
 <td><span class="type">boolean</span></td>
 <td><p>Specifies whether or not the driver should error when the server's TLS certificate is invalid. Defaults to <strong><code>FALSE</code></strong>.</p>
@@ -2217,7 +2222,7 @@ parameter.
 <p>Disabling certificate validation creates a vulnerability.</p>
 </div></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>tlsAllowInvalidHostnames</td>
 <td><span class="type">boolean</span></td>
 <td><p>Specifies whether or not the driver should error when there is a mismatch between the server's hostname and the hostname specified by the TLS certificate. Defaults to <strong><code>FALSE</code></strong>.</p>
@@ -2226,47 +2231,57 @@ parameter.
 <p>Disabling certificate validation creates a vulnerability. Allowing invalid hostnames may expose the driver to a <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" class="link external">» man-in-the-middle attack</a>.</p>
 </div></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>tlsCAFile</td>
 <td><span class="type">string</span></td>
 <td><p>Path to file with either a single or bundle of certificate authorities to be considered trusted when making a TLS connection. The system certificate store will be used by default.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>tlsCertificateKeyFile</td>
 <td><span class="type">string</span></td>
 <td><p>Path to the client certificate file or the client private key file; in the case that they both are needed, the files should be concatenated.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>tlsCertificateKeyFilePassword</td>
 <td><span class="type">string</span></td>
 <td><p>Password to decrypt the client private key (i.e. <em>"tlsCertificateKeyFile"</em> URI option) to be used for TLS connections.</p></td>
 </tr>
+<tr class="even">
+<td>tlsDisableCertificateRevocationCheck</td>
+<td><span class="type">boolean</span></td>
+<td><p>If <strong><code>TRUE</code></strong>, the driver will not attempt to check certificate revocation status (e.g. OCSP, CRL). Defaults to <strong><code>FALSE</code></strong>.</p></td>
+</tr>
 <tr class="odd">
+<td>tlsDisableOCSPEndpointCheck</td>
+<td><span class="type">boolean</span></td>
+<td><p>If <strong><code>TRUE</code></strong>, the driver will not attempt to contact an OCSP responder endpoint if needed (i.e. an OCSP response is not stapled). Defaults to <strong><code>FALSE</code></strong>.</p></td>
+</tr>
+<tr class="even">
 <td>tlsInsecure</td>
 <td><span class="type">boolean</span></td>
-<td><p>Relax TLS constraints as much as possible. Specifying <strong><code>TRUE</code></strong> for this option has the same effect as specifying <strong><code>TRUE</code></strong> for both the <em>tlsAllowInvalidCertificates</em> and <em>"tlsAllowInvalidHostnames"</em> URI options. Defaults to <strong><code>FALSE</code></strong>.</p>
+<td><p>Relax TLS constraints as much as possible. Specifying <strong><code>TRUE</code></strong> for this option has the same effect as specifying <strong><code>TRUE</code></strong> for both the <em>"tlsAllowInvalidCertificates"</em> and <em>"tlsAllowInvalidHostnames"</em> URI options. Defaults to <strong><code>FALSE</code></strong>.</p>
 <div class="warning">
 <strong>Warning</strong>
 <p>Disabling certificate validation creates a vulnerability. Allowing invalid hostnames may expose the driver to a <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" class="link external">» man-in-the-middle attack</a>.</p>
 </div></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>username</td>
 <td><span class="type">string</span></td>
 <td>The username for the user being authenticated. This option is useful if the username contains special characters, which would otherwise need to be URL encoded for the connection URI.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>w</td>
 <td><span class="type">integer|string</span></td>
 <td><p>Corresponds to the default write concern's <code class="parameter">w</code> parameter. For details, see <span class="classname">MongoDB\Driver\WriteConcern</span>.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>wTimeoutMS</td>
 <td><span class="type">integer|string</span></td>
 <td><p>Corresponds to the default write concern's <code class="parameter">wtimeout</code> parameter. Specifies a time limit, in milliseconds, for the write concern. For details, see <span class="classname">MongoDB\Driver\WriteConcern</span>.</p>
 <p>If specified, <em>wTimeoutMS</em> must be a signed 32-bit integer greater than or equal to zero.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>zlibCompressionLevel</td>
 <td><span class="type">integer</span></td>
 <td><p>Specifies the compression level to use for the zlib compressor. This option has no effect if <em>zlib</em> is not included in the <em>"compressors"</em> URI option. See the <a href="https://github.com/mongodb/specifications/blob/master/source/compression/OP_COMPRESSED.rst#zlibcompressionlevel" class="link external">» Driver Compression Specification</a> for more information.</p></td>
@@ -2432,9 +2447,9 @@ parameter.
 <tr class="odd">
 <td>driver</td>
 <td><span class="type">array</span></td>
-<td><p>Allows custom drivers to append their own metadata to the server handshake. By default, the driver submits its own name, its version as well as the PHP version to the handshake. Drivers can submit their own <em>name</em>, <em>version</em>, and <em>platform</em> information in this array.</p>
+<td><p>Allows custom drivers to append their own metadata to the server handshake. By default, the driver submits its own name, version, and platform (i.e. PHP version) in the handshake. Custom drivers can specify strings for the <em>"name"</em>, <em>"version"</em>, and <em>"platform"</em> keys of this array, which will be appended to the respective field(s) in the handshake document.</p>
 <blockquote>
-<p><strong>Note</strong>: <span class="simpara"> Handshake information is limited to 512 bytes. The driver will truncate handshake data to fit within this 512 byte string. Drivers and ODMs are encouraged to keep their own metadata concise. </span></p>
+<p><strong>Note</strong>: <span class="simpara"> Handshake information is limited to 512 bytes. The driver will truncate handshake data to fit within this 512-byte string. Drivers and ODMs are encouraged to keep their own metadata concise. </span></p>
 </blockquote></td>
 </tr>
 <tr class="even">
@@ -2482,13 +2497,14 @@ parameter.
 </thead>
 <tbody>
 <tr class="odd">
+<td>1.8.0</td>
+<td><p>Added the <em>"directConnection"</em>, <em>"tlsDisableCertificateRevocationCheck"</em>, and <em>"tlsDisableOCSPEndpointCheck"</em> URI options.</p>
+<p>Added the <em>"driver"</em> driver option.</p></td>
+</tr>
+<tr class="even">
 <td>1.7.0</td>
 <td><p>Added the <em>"autoEncryption"</em> driver option.</p>
 <p>Specifying any SSL or TLS option via the <code class="parameter">driverOptions</code> parameter will now implicitly enable TLS, as is done for the corresponding URI options.</p></td>
-</tr>
-<tr class="even">
-<td>1.8.0</td>
-<td><p>Added the <em>"driver"</em> driver option.</p></td>
 </tr>
 <tr class="odd">
 <td>1.6.0</td>
@@ -5230,6 +5246,13 @@ An empty predicate will match all documents in the collection.
 <td></td>
 </tr>
 <tr class="even">
+<td>hint</td>
+<td><span class="type">string|array|object</span></td>
+<td><p>Index specification. Specify either the index name as a string or the index key pattern. If specified, then the query system will only consider plans using the hinted index.</p>
+<p>This option is available in MongoDB 4.4+ and will result in an exception at execution time if specified for an older server version.</p></td>
+<td></td>
+</tr>
+<tr class="odd">
 <td>limit</td>
 <td><span class="type">boolean</span></td>
 <td>Delete all matching documents (<strong><code>FALSE</code></strong>), or only the first matching document (<strong><code>TRUE</code></strong>)</td>
@@ -5252,6 +5275,7 @@ An empty predicate will match all documents in the collection.
 
 | 版本  | 说明                            |
 |-------|---------------------------------|
+| 1.8.0 | Added the *"hint"* option.      |
 | 1.2.0 | Added the *"collation"* option. |
 
 ### 范例
@@ -5440,7 +5464,8 @@ replacement document (i.e. *only* *field:value* expressions), or an
 <tr class="odd">
 <td>hint</td>
 <td><span class="type">string|array|object</span></td>
-<td><p>Index specification. Specify either the index name as a string or the index key pattern. If specified, then the query system will only consider plans using the hinted index.</p></td>
+<td><p>Index specification. Specify either the index name as a string or the index key pattern. If specified, then the query system will only consider plans using the hinted index.</p>
+<p>This option is available in MongoDB 4.2+ and will result in an exception at execution time if specified for an older server version.</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -5472,6 +5497,7 @@ replacement document (i.e. *only* *field:value* expressions), or an
 
 | 版本  | 说明                                                                                                                                                                                         |
 |-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.7.0 | Added the *"hint"* option.                                                                                                                                                                   |
 | 1.6.0 | The `newObj` parameter now accepts an aggregation pipeline. This feature requires MongoDB 4.2+ and will result in an exception at execution time if specified for an older server version.   |
 | 1.5.0 | Using the *"arrayFilters"* option will result in an exception at execution time if unsupported by the server. Previously, no exception would be thrown and the option may have been ignored. |
 | 1.4.0 | Added the *"arrayFilters"* option.                                                                                                                                                           |
@@ -6525,8 +6551,8 @@ lowest network latency. This member may be a primary or secondary.
 <tr class="odd">
 <td>hedge</td>
 <td><span class="type">object|array</span></td>
-<td><p>Specifies whether to use hedged reads.</p>
-<p>Server hedged reads are available for all non-primary read preferences and are enabled by default when using the <em>"nearest"</em> mode. This object allows explicitly enabling server hedged reads for non-primary read preferences, as well as disabling them for the <em>"nearest"</em> read preference.</p></td>
+<td><p>Specifies whether to use <a href="https://docs.mongodb.com/manual/core/sharded-cluster-query-router/#mongos-hedged-reads" class="link external">» hedged reads</a>, which are supported by MongoDB 4.4+ for sharded queries.</p>
+<p>Server hedged reads are available for all non-primary read preferences and are enabled by default when using the <em>"nearest"</em> mode. This option allows explicitly enabling server hedged reads for non-primary read preferences by specifying <em>['enabled' =&gt; true]</em>, or explicitly disabling server hedged reads for the <em>"nearest"</em> read preference by specifying <em>['enabled' =&gt; false]</em>.</p></td>
 </tr>
 <tr class="even">
 <td>maxStalenessSeconds</td>
@@ -6560,6 +6586,7 @@ lowest network latency. This member may be a primary or secondary.
 
 | 版本  | 说明                                                                                                                                                                                  |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.8.0 | Added the *"hedge"* option.                                                                                                                                                           |
 | 1.3.0 | The `mode` argument now accepts a string value, which is consistent with the *"readPreference"* URI option for <span class="function">MongoDB\\Driver\\Manager::\_\_construct</span>. |
 | 1.2.0 | Added a third `options` argument, which supports the *"maxStalenessSeconds"* option.                                                                                                  |
 

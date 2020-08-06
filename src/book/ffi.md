@@ -873,7 +873,63 @@ class="interfacename">Throwable</span> </span> {
 
 /\* 继承的属性 \*/
 
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
+
 /\* 继承的方法 \*/
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getMessage</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">Throwable</span> <span
+class="methodname">Error::getPrevious</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">mixed</span> <span
+class="methodname">Error::getCode</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getFile</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Error::getLine</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">array</span> <span
+class="methodname">Error::getTrace</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getTraceAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Error::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span
+class="modifier">private</span> <span class="type">void</span> <span
+class="methodname">Error::\_\_clone</span> ( <span
+class="methodparam">void</span> )
 
 }
 
@@ -891,5 +947,17 @@ class="ooclass"> <span class="modifier">extends</span>
 class="interfacename">Throwable</span> </span> {
 
 /\* 继承的属性 \*/
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
 
 }

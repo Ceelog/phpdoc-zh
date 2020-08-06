@@ -27,6 +27,30 @@
         — 构造一个异常（Exception）
     -   [ErrorException::getSeverity](/errorexception/getseverity.html)
         — 获取异常的严重程度
+-   [Error](/class/error.html) — Error
+    -   [Error::\_\_construct](/error/construct.html) — 初始化 error
+        对象
+    -   [Error::getMessage](/error/getmessage.html) — 获取错误信息
+    -   [Error::getPrevious](/error/getprevious.html) — 返回先前的
+        Throwable
+    -   [Error::getCode](/error/getcode.html) — 获取错误代码
+    -   [Error::getFile](/error/getfile.html) — 获取错误发生时的文件
+    -   [Error::getLine](/error/getline.html) — 获取错误发生时的行号
+    -   [Error::getTrace](/error/gettrace.html) — 获取调用栈（stack
+        trace）
+    -   [Error::getTraceAsString](/error/gettraceasstring.html) —
+        获取字符串形式的调用栈（stack trace）
+    -   [Error::\_\_toString](/error/tostring.html) — error 的字符串表达
+    -   [Error::\_\_clone](/error/clone.html) — 克隆 error
+-   [ArgumentCountError](/class/argumentcounterror.html) —
+    ArgumentCountError
+-   [ArithmeticError](/class/arithmeticerror.html) — ArithmeticError
+-   [AssertionError](/class/assertionerror.html) — AssertionError
+-   [DivisionByZeroError](/class/divisionbyzeroerror.html) —
+    DivisionByZeroError
+-   [CompileError](/class/compileerror.html) — CompileError
+-   [ParseError](/class/parseerror.html) — ParseError
+-   [TypeError](/class/typeerror.html) — TypeError
 
 参见 <a href="/spl/exceptions.html" class="link">SPL 异常处理</a>
 
@@ -245,3 +269,652 @@ strpos();
     #1 /home/bjori/php/cleandocs/test.php(8): strpos()
     #2 {main}
       thrown in /home/bjori/tmp/ex.php on line 8
+
+简介
+----
+
+<span class="ooclass">**Error**</span> 是所有PHP内部错误类的基类。
+
+类摘要
+------
+
+**Error**
+
+<span class="ooclass"> class **Error** </span> <span class="ooclass">
+<span class="modifier">implements</span> **Throwable** </span> {
+
+/\* 属性 \*/
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
+
+/\* 方法 \*/
+
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> (\[ <span
+class="methodparam"><span class="type">string</span> `$message`<span
+class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$code`<span
+class="initializer"> = 0</span></span> \[, <span
+class="methodparam"><span class="type">Throwable</span> `$previous`<span
+class="initializer"> = **`NULL`**</span></span> \]\]\] )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">getMessage</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">Throwable</span> <span
+class="methodname">getPrevious</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">mixed</span> <span class="methodname">getCode</span>
+( <span class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span class="methodname">getFile</span>
+( <span class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span class="methodname">getLine</span> (
+<span class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">array</span> <span class="methodname">getTrace</span>
+( <span class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">getTraceAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span
+class="modifier">private</span> <span class="type">void</span> <span
+class="methodname">\_\_clone</span> ( <span
+class="methodparam">void</span> )
+
+}
+
+属性
+----
+
+`message`  
+错误消息内容
+
+`code`  
+错误代码
+
+`file`  
+抛出错误的文件名
+
+`line`  
+抛出错误的行数
+
+简介
+----
+
+<span class="ooclass">**ArgumentCountError**</span> is thrown when too
+few arguments are passed to a user-defined function or method.
+
+类摘要
+------
+
+**ArgumentCountError**
+
+<span class="ooclass"> class **ArgumentCountError** </span> <span
+class="ooclass"> <span class="modifier">extends</span> **TypeError**
+</span> {
+
+/\* 继承的属性 \*/
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
+
+/\* 继承的方法 \*/
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getMessage</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">Throwable</span> <span
+class="methodname">Error::getPrevious</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">mixed</span> <span
+class="methodname">Error::getCode</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getFile</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Error::getLine</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">array</span> <span
+class="methodname">Error::getTrace</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getTraceAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Error::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span
+class="modifier">private</span> <span class="type">void</span> <span
+class="methodname">Error::\_\_clone</span> ( <span
+class="methodparam">void</span> )
+
+}
+
+简介
+----
+
+<span class="ooclass">**ArithmeticError**</span> is thrown when an error
+occurs while performing mathematical operations. In PHP 7.0, these
+errors include attempting to perform a bitshift by a negative amount,
+and any call to <span class="function">intdiv</span> that would result
+in a value outside the possible bounds of an <span
+class="type">integer</span>.
+
+类摘要
+------
+
+**ArithmeticError**
+
+<span class="ooclass"> class **ArithmeticError** </span> <span
+class="ooclass"> <span class="modifier">extends</span> **Error** </span>
+{
+
+/\* 继承的属性 \*/
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
+
+/\* 继承的方法 \*/
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getMessage</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">Throwable</span> <span
+class="methodname">Error::getPrevious</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">mixed</span> <span
+class="methodname">Error::getCode</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getFile</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Error::getLine</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">array</span> <span
+class="methodname">Error::getTrace</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getTraceAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Error::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span
+class="modifier">private</span> <span class="type">void</span> <span
+class="methodname">Error::\_\_clone</span> ( <span
+class="methodparam">void</span> )
+
+}
+
+简介
+----
+
+<span class="ooclass">**AssertionError**</span> is thrown when an
+assertion made via <span class="function">assert</span> fails.
+
+类摘要
+------
+
+**AssertionError**
+
+<span class="ooclass"> class **AssertionError** </span> <span
+class="ooclass"> <span class="modifier">extends</span> **Error** </span>
+{
+
+/\* 继承的属性 \*/
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
+
+/\* 继承的方法 \*/
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getMessage</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">Throwable</span> <span
+class="methodname">Error::getPrevious</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">mixed</span> <span
+class="methodname">Error::getCode</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getFile</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Error::getLine</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">array</span> <span
+class="methodname">Error::getTrace</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getTraceAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Error::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span
+class="modifier">private</span> <span class="type">void</span> <span
+class="methodname">Error::\_\_clone</span> ( <span
+class="methodparam">void</span> )
+
+}
+
+简介
+----
+
+<span class="ooclass">**DivisionByZeroError**</span> is thrown when an
+attempt is made to divide a number by zero.
+
+类摘要
+------
+
+**DivisionByZeroError**
+
+<span class="ooclass"> class **DivisionByZeroError** </span> <span
+class="ooclass"> <span class="modifier">extends</span>
+**ArithmeticError** </span> {
+
+/\* 继承的属性 \*/
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
+
+/\* 继承的方法 \*/
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getMessage</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">Throwable</span> <span
+class="methodname">Error::getPrevious</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">mixed</span> <span
+class="methodname">Error::getCode</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getFile</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Error::getLine</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">array</span> <span
+class="methodname">Error::getTrace</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getTraceAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Error::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span
+class="modifier">private</span> <span class="type">void</span> <span
+class="methodname">Error::\_\_clone</span> ( <span
+class="methodparam">void</span> )
+
+}
+
+简介
+----
+
+<span class="ooclass">**CompileError**</span> is thrown for some
+compilation errors, which formerly issued a fatal error.
+
+类摘要
+------
+
+**CompileError**
+
+<span class="ooclass"> class **CompileError** </span> <span
+class="ooclass"> <span class="modifier">extends</span> **Error** </span>
+{
+
+/\* 继承的属性 \*/
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
+
+/\* 继承的方法 \*/
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getMessage</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">Throwable</span> <span
+class="methodname">Error::getPrevious</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">mixed</span> <span
+class="methodname">Error::getCode</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getFile</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Error::getLine</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">array</span> <span
+class="methodname">Error::getTrace</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getTraceAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Error::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span
+class="modifier">private</span> <span class="type">void</span> <span
+class="methodname">Error::\_\_clone</span> ( <span
+class="methodparam">void</span> )
+
+}
+
+简介
+----
+
+<span class="ooclass">**ParseError**</span> is thrown when an error
+occurs while parsing PHP code, such as when <span
+class="function">eval</span> is called.
+
+> **Note**: <span class="simpara"> <span
+> class="classname">ParseError</span> extends <span
+> class="classname">CompileError</span> as of PHP 7.3.0. Formerly, it
+> extended <span class="classname">Error</span>. </span>
+
+类摘要
+------
+
+**ParseError**
+
+<span class="ooclass"> class **ParseError** </span> <span
+class="ooclass"> <span class="modifier">extends</span> **CompileError**
+</span> {
+
+/\* 继承的属性 \*/
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
+
+/\* 继承的方法 \*/
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getMessage</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">Throwable</span> <span
+class="methodname">Error::getPrevious</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">mixed</span> <span
+class="methodname">Error::getCode</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getFile</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Error::getLine</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">array</span> <span
+class="methodname">Error::getTrace</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getTraceAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Error::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span
+class="modifier">private</span> <span class="type">void</span> <span
+class="methodname">Error::\_\_clone</span> ( <span
+class="methodparam">void</span> )
+
+}
+
+简介
+----
+
+There are three scenarios where a <span
+class="ooclass">**TypeError**</span> may be thrown. The first is where
+the argument type being passed to a function does not match its
+corresponding declared parameter type. The second is where a value being
+returned from a function does not match the declared function return
+type. The third is where an invalid number of arguments are passed to a
+built-in PHP function (strict mode only).
+
+类摘要
+------
+
+**TypeError**
+
+<span class="ooclass"> class **TypeError** </span> <span
+class="ooclass"> <span class="modifier">extends</span> **Error** </span>
+{
+
+/\* 继承的属性 \*/
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
+
+/\* 继承的方法 \*/
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getMessage</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">Throwable</span> <span
+class="methodname">Error::getPrevious</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">mixed</span> <span
+class="methodname">Error::getCode</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getFile</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Error::getLine</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">array</span> <span
+class="methodname">Error::getTrace</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getTraceAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Error::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span
+class="modifier">private</span> <span class="type">void</span> <span
+class="methodname">Error::\_\_clone</span> ( <span
+class="methodparam">void</span> )
+
+}

@@ -328,6 +328,7 @@
     * [OPcache](book/opcache.md)
       * [简介](intro/opcache.md)
       * [安装／配置](opcache/setup.md)
+      * [Preloading](opcache/preloading.md)
       * [OPcache 函数](ref/opcache.md)
     * [输出控制](book/outcontrol.md)
       * [简介](intro/outcontrol.md)

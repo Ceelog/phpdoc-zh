@@ -9,6 +9,7 @@ OPcache
     -   [安装](/opcache/setup.html#安装)
     -   [运行时配置](/opcache/setup.html#运行时配置)
     -   [资源类型](/opcache/setup.html#资源类型)
+-   [Preloading](/opcache/preloading.html)
 -   [OPcache 函数](/ref/opcache.html)
     -   [opcache\_compile\_file](/ref/opcache.html#opcache_compile_file)
         — 无需运行，即可编译并缓存 PHP 脚本

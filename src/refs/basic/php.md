@@ -82,6 +82,7 @@
 -   [OPcache](/book/opcache.html)
     -   [简介](/intro/opcache.html)
     -   [安装／配置](/opcache/setup.html)
+    -   [Preloading](/opcache/preloading.html)
     -   [OPcache 函数](/ref/opcache.html)
 -   [输出控制](/book/outcontrol.html) — 输出缓冲控制
     -   [简介](/intro/outcontrol.html)

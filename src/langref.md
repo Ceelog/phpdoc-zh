@@ -158,6 +158,16 @@
 -   [预定义异常](/reserved/exceptions.html)
     -   [Exception](/class/exception.html) — Exception
     -   [ErrorException](/class/errorexception.html) — ErrorException
+    -   [Error](/class/error.html) — Error
+    -   [ArgumentCountError](/class/argumentcounterror.html) —
+        ArgumentCountError
+    -   [ArithmeticError](/class/arithmeticerror.html) — ArithmeticError
+    -   [AssertionError](/class/assertionerror.html) — AssertionError
+    -   [DivisionByZeroError](/class/divisionbyzeroerror.html) —
+        DivisionByZeroError
+    -   [CompileError](/class/compileerror.html) — CompileError
+    -   [ParseError](/class/parseerror.html) — ParseError
+    -   [TypeError](/class/typeerror.html) — TypeError
 -   [预定义接口](/reserved/interfaces.html)
     -   [遍历](/class/traversable.html) — Traversable（遍历）接口
     -   [迭代器](/class/iterator.html) — Iterator（迭代器）接口

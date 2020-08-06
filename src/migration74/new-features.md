@@ -141,7 +141,8 @@ than bytes.
 
 ### OPcache
 
-Support for preloading code has been added.
+<a href="/opcache/preloading.html" class="link">Support for preloading code</a>
+has been added.
 
 ### Regular Expressions (Perl-Compatible)
 
