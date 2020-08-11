@@ -309,6 +309,13 @@ is not supported.
 > You need to install the .Net runtime on your web server to take
 > advantage of this feature.
 
+> **Note**:
+>
+> .Net framework 4.0 and later are not supported by the <span
+> class="classname">dotnet</span> class. If assemblies have been
+> registered with **regasm.exe**, the classes can be instantiated as
+> <span class="classname">com</span> objects, though.
+
 类摘要
 ------
 
