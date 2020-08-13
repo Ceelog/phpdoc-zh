@@ -534,7 +534,9 @@ Get or set the flags on a class or function entry at runtime
 The name of a class
 
 `function`  
-The name of the function
+The name of the function. If `class` is given and an empty string is
+passed as `function`, <span class="function">uopz\_flags</span> gets or
+sets the flags of the class entry.
 
 `flags`  
 A valid set of ZEND\_ACC\_ flags. If omitted, <span
@@ -581,6 +583,24 @@ var_dump((bool) (uopz_flags("Test", "method") & ZEND_ACC_STATIC));
     int(1234567890)
     bool(true)
     bool(true)
+
+**示例 \#2 "Unfinalize" a Class**
+
+``` php
+<?php
+final class MyClass
+{
+}
+
+$flags = uopz_flags(MyClass::class, '');
+uopz_flags(MyClass::class, '', $flags & ~ZEND_ACC_FINAL);
+var_dump((new ReflectionClass(MyClass::class)->isFinal());
+?>
+```
+
+以上例程会输出：
+
+    bool(false)
 
 uopz\_function
 ==============
