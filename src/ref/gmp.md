@@ -1770,9 +1770,6 @@ available memory.
 `bits`  
 The number of bits.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
-
 ### 返回值
 
 A random GMP number.
