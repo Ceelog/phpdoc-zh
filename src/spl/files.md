@@ -2442,8 +2442,10 @@ class="function">flock</span>.
     (writer). </span>
 -   <span class="simpara"> **`LOCK_UN`** to release a lock (shared or
     exclusive). </span>
--   <span class="simpara"> **`LOCK_NB`** to not block while locking.
-    </span>
+
+It is also possible to add **`LOCK_NB`** as a bitmask to one of the
+above operations, if <span class="function">flock</span> should not
+block during the locking attempt.
 
 `wouldblock`  
 Set to **`TRUE`** if the lock would block (EWOULDBLOCK errno condition).
