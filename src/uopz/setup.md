@@ -58,6 +58,11 @@ class="function">uopz\_allow\_exit</span>.
 `uopz.exit` <span class="type">bool</span>  
 Enables the ability to use <span class="function">uopz\_overload</span>.
 
+> **Note**: <span class="simpara"> When running with OPcache enabled, it
+> may be necessary to disable all
+> <a href="/opcache/setup.html#" class="link">OPcache optimizations</a>
+> (`opcache.optimization_level=0`). </span>
+
 资源类型
 --------
 

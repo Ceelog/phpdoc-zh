@@ -484,6 +484,14 @@ The name of the class to inherit
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 错误／异常
+
+As of PHP 7.4.0, <span class="function">uopz\_extends</span> throws a
+<span class="classname">RuntimeException</span>, if
+<a href="/book/opcache.html" class="link">OPcache</a> is enabled, and
+the class entry of either `class` or `parent` (if it is a trait) is
+immutable.
+
 ### 范例
 
 **示例 \#1 <span class="function">uopz\_extend</span> example**
@@ -545,6 +553,15 @@ class="function">uopz\_flags</span> acts as getter.
 ### 返回值
 
 If setting, returns old flags, else returns flags
+
+### 错误／异常
+
+As of PHP 7.4.0, if the parameter `flags` is passed, <span
+class="function">uopz\_flags</span> throws a <span
+class="classname">RuntimeException</span>, if
+<a href="/book/opcache.html" class="link">OPcache</a> is enabled, and
+the class entry of `class` or the function entry of `function` is
+immutable.
 
 ### 更新日志
 
@@ -1037,6 +1054,13 @@ Makes `class` implement `interface`
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 错误／异常
+
+As of PHP 7.4.0, <span class="function">uopz\_implements</span> throws a
+<span class="classname">RuntimeException</span>, if
+<a href="/book/opcache.html" class="link">OPcache</a> is enabled, and
+the class entry of `class` is immutable.
 
 ### 范例
 
