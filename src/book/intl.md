@@ -4822,7 +4822,7 @@ pairs for this locale
 
 ``` php
 <?php
-$keywords_arr = locale_get_keywords( 'de_DE@currency=EUR;collation=PHONEBOOK' );
+$keywords_arr = locale_get_keywords('de_DE@currency=EUR;collation=PHONEBOOK');
 if ($keywords_arr) {
     foreach ($keywords_arr as $key => $value) {
         echo "$key = $value\n"; 
@@ -4835,9 +4835,9 @@ if ($keywords_arr) {
 
 ``` php
 <?php
-$keywords_arr = Locale::getKeywords( 'de_DE@currency=EUR;collation=PHONEBOOK' );
+$keywords_arr = Locale::getKeywords('de_DE@currency=EUR;collation=PHONEBOOK');
 if ($keywords_arr) {
-    foreach( $keywords_arr as $key => $value){
+    foreach ($keywords_arr as $key => $value) {
         echo "$key = $value\n"; 
     }
 }
