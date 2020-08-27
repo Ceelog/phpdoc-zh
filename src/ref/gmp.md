@@ -19,8 +19,8 @@ Get the absolute value of a number.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -63,14 +63,14 @@ Add two numbers.
 `a`  
 The first summand (augent).
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
 The second summand (addend).
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -107,12 +107,12 @@ Calculates bitwise AND of two GMP numbers.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -153,8 +153,8 @@ Calculates the binomial coefficient C(n, k).
 ### 参数
 
 `n`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `k`  
 
@@ -183,8 +183,8 @@ Clears (sets to 0) bit `index` in `a`. The index starts at 0.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `index`  
 The index of the bit to clear. Index 0 represents the least significant
@@ -192,7 +192,8 @@ bit.
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -240,12 +241,12 @@ Compares two numbers.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -285,8 +286,8 @@ Returns the one's complement of `a`.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -328,14 +329,14 @@ Divides `a` by `b` and returns the integer result.
 `a`  
 The number being divided.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
 The number that `a` is being divided by.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `round`  
 The result rounding is defined by the `round`, which can have the
@@ -348,12 +349,13 @@ following values:
 -   <span class="simpara"> **`GMP_ROUND_MINUSINF`**: The result is
     rounded towards *-infinity*. </span>
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -419,14 +421,14 @@ The function divides `n` by `d`.
 `n`  
 The number being divided.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `d`  
 The number that `n` is being divided by.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `round`  
 See the <span class="function">gmp\_div\_q</span> function for
@@ -478,14 +480,14 @@ remainder has the sign of the `n` argument, if not zero.
 `n`  
 The number being divided.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `d`  
 The number that `n` is being divided by.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `round`  
 See the <span class="function">gmp\_div\_q</span> function for
@@ -545,18 +547,19 @@ divides `n`.
 `n`  
 The number being divided.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `d`  
 The number that `a` is being divided by.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -648,12 +651,13 @@ Calculates factorial (*a!*) of `a`.
 `a`  
 The factorial number.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -691,12 +695,12 @@ positive even if either of, or both, input operands are negative.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -745,12 +749,12 @@ have the form: *a\*x + b\*y = c*. For more information, go to the
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -803,20 +807,21 @@ be non-negative.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 It should be positive.
 
 `b`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 It should be positive.
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -931,7 +936,8 @@ first character is "0", octal is assumed, otherwise decimal is assumed.
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 更新日志
 
@@ -985,8 +991,8 @@ class="type">integer</span>s.
 ### 参数
 
 `gmpnumber`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -1040,12 +1046,12 @@ Computes the inverse of `a` modulo `b`.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -1086,18 +1092,19 @@ of `a` and `p`. `p` should be odd and must be positive.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `p`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 Should be odd and must be positive.
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -1137,12 +1144,12 @@ This function computes the Kronecker symbol of `a` and `b`.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -1169,16 +1176,17 @@ This function computes the least common multiple (lcm) of `a` and `b`.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 参见
 
@@ -1203,18 +1211,19 @@ of `a` and `p`. `p` should be odd and must be positive.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `p`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 Should be odd and must be positive.
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -1254,18 +1263,19 @@ of `d` is ignored.
 ### 参数
 
 `n`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `d`  
 The modulo that is being evaluated.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -1300,18 +1310,19 @@ Multiplies `a` by `b` and returns the result.
 `a`  
 A number that will be multiplied by `b`.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
 A number that will be multiplied by `a`.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -1343,8 +1354,8 @@ Returns the negative value of a number.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -1384,8 +1395,8 @@ Find next prime number
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -1433,16 +1444,17 @@ Calculates bitwise inclusive OR of two GMP numbers.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -1478,8 +1490,8 @@ Checks whether `a` is a perfect power.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -1507,8 +1519,8 @@ Check if a number is a perfect square.
 `a`  
 The number being checked as a perfect square.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -1559,8 +1571,8 @@ Get the population count.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -1602,8 +1614,8 @@ Raise `base` into power `exp`.
 `base`  
 The base number.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `exp`  
 The positive power to raise the `base`.
@@ -1653,20 +1665,20 @@ negative, result is undefined.
 `base`  
 The base number.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `exp`  
 The positive power to raise the `base`.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `mod`  
 The modulo.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -1708,16 +1720,16 @@ is a prime.
 `a`  
 The number being checked as a prime.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `reps`  
 Reasonable values of `reps` vary from 5 to 10 (default being 10); a
 higher value lowers the probability for a non-prime to pass as a
 "probable" prime.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -1859,12 +1871,12 @@ The seed to be set for the <span class="function">gmp\_random</span>,
 <span class="function">gmp\_random\_bits</span>, and <span
 class="function">gmp\_random\_range</span> functions.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-Returns **`NULL`** on success 或者在失败时返回 **`FALSE`**.
+成功时返回 **`NULL`**， 或者在失败时返回 **`FALSE`**。
 
 ### 错误／异常
 
@@ -1913,8 +1925,7 @@ Random number
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.2.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.2.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1936,8 +1947,8 @@ bits in a limb is either 32 or 64, but this is not guaranteed.
 `limiter`  
 The limiter.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -1979,8 +1990,8 @@ result.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `nth`  
 The positive root to take of `a`.
@@ -2007,8 +2018,8 @@ remainder of the result.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `nth`  
 The positive root to take of `a`.
@@ -2039,8 +2050,8 @@ until the first clear bit is found.
 `a`  
 The number to scan.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `start`  
 The starting bit.
@@ -2091,8 +2102,8 @@ until the first set bit is found.
 `a`  
 The number to scan.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `start`  
 The starting bit.
@@ -2144,8 +2155,8 @@ Sets bit `index` in `a`.
 `a`  
 The value to modify.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `index`  
 The index of the bit to set. Index 0 represents the least significant
@@ -2157,7 +2168,8 @@ True to set the bit (set it to 1/on); false to clear the bit (set it to
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -2292,8 +2304,8 @@ Calculates square root of `a`.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -2339,8 +2351,8 @@ Calculate the square root of a number, with remainder.
 `a`  
 The number being square rooted.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
@@ -2391,8 +2403,8 @@ base is 10.
 `gmpnumber`  
 The GMP number that will be converted to a string.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `base`  
 The base of the returned number. The default base is 10. Allowed values
@@ -2444,18 +2456,19 @@ Subtracts `b` from `a` and returns the result.
 `a`  
 The number being subtracted from.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
 The number subtracted from `a`.
 
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -2489,8 +2502,8 @@ Tests if the specified bit is set.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `index`  
 The bit to test
@@ -2544,16 +2557,17 @@ Calculates bitwise exclusive OR (XOR) of two GMP numbers.
 ### 参数
 
 `a`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `b`  
-可以是一个 GMP 数据 <span
-class="type">resouce</span>，或一个可以转换为数值的字符串。
+PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
+<span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-GMP 数值<span class="type">资源</span>.
+PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
+之后，返回 <span class="classname">GMP</span> 对象。
 
 ### 范例
 

@@ -73,14 +73,14 @@ B::bar();
 ?>
 ```
 
-Output of the above example in PHP 5:
+以上例程在 PHP 5 中的输出：
 
     $this is defined (A)
     $this is not defined.
     $this is defined (B)
     $this is not defined.
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     $this is defined (A)
     $this is not defined.

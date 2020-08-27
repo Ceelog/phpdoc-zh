@@ -273,10 +273,10 @@ install directory, which defaults to `/usr`.
 
 > **Note**: **Note to Win32/Win64 Users**  
 >
-> 为了使此扩展生效， DLL 文件必须能在 Windows 系统的 *PATH*
+> 为了使此扩展生效， DLL 文件必须能在 Windows 系统的 `PATH`
 > 指示的路径下找到。如何操作的信息，请参见题为“<a href="/faq/installation.html#faq.installation.addtopath" class="link">如何在 Windows 中将 PHP 目录加到 PATH 中</a>”的FAQ。虽然将
 > DLL 文件从 PHP 文件夹复制到 Windows 系统目录也行，但不建议这样做。
-> *此扩展需要下列文件在 *PATH* 路径中：* `fbclient.dll,gds32.dll`
+> *此扩展需要下列文件在 `PATH` 路径中：* `fbclient.dll,gds32.dll`
 >
 > If you installed the Firebird/InterBase database server on the same
 > machine PHP is running on, you will have this DLL already and

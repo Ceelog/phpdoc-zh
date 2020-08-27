@@ -26,7 +26,7 @@ class="initializer"> = 0</span></span> \]\]\] )
 
 > **Note**:
 >
-> PHP implements a superset of JSON as specified in the original
+> PHP 实现了 JSON 的一个超集，参考
 > <a href="http://www.faqs.org/rfcs/rfc7159" class="link external">» RFC 7159</a>.
 
 `assoc`  
@@ -272,7 +272,7 @@ class="initializer"> = 512</span></span> \]\] )
 
 > **Note**:
 >
-> PHP implements a superset of JSON as specified in the original
+> PHP 实现了 JSON 的一个超集，参考
 > <a href="http://www.faqs.org/rfcs/rfc7159" class="link external">» RFC 7159</a>.
 
 `options`  

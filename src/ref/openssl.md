@@ -2216,8 +2216,10 @@ class="initializer"> = OPENSSL\_PKCS1\_PADDING</span></span> \] )
 
 **Caution**
 
-本函数并不会生成安全加密的值，不应用于加密用途。若需要安全加密的值，考虑使用<span
-class="function">openssl\_random\_pseudo\_bytes</span>。
+本函数并不会生成安全加密的值，不应用于加密用途。若需要安全加密的值，考虑使用
+<span class="function">random\_int</span>、<span
+class="function">random\_bytes</span> 或 <span
+class="function">openssl\_random\_pseudo\_bytes</span> 替代。
 
 <span class="function">openssl\_private\_decrypt</span> 解密先前通过
 <span class="function">openssl\_public\_encrypt</span> 函数加密的 `data`

@@ -104,10 +104,3 @@ if (isset($_COOKIE['MAGIC_COOKIE'])) {
 
 更多关于模拟 register\_globals 为 on 或 off 的信息，请见此
 <a href="/faq/misc.html#faq.misc.registerglobals" class="link">FAQ</a>。
-
-> **Note**: **Superglobal 可用性说明：**  
->
-> 自 PHP 4.1.0 起可以使用 Superglobal 数组，例如 `$_GET`，`$_POST`，和
-> `$_SERVER`，等等。更多信息请阅读手册中的
-> <a href="/language/variables/predefined.html" class="link">superglobals</a>
-> 章节。

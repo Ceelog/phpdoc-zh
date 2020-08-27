@@ -23,7 +23,8 @@ class="methodparam"><span class="type">int</span> `$scale`</span> \] )
 
 ` scale`  
 此可选参数用于设置结果中小数点后的小数位数。也可通过使用 <span
-class="function">bcscale</span> 来设置全局默认的小数位数，用于所有函数。
+class="function">bcscale</span>
+来设置全局默认的小数位数，用于所有函数。如果未设置，则默认为 *0*。
 
 ### 返回值
 
@@ -121,7 +122,8 @@ class="initializer"> = int</span></span> \] )
 
 ` scale`  
 此可选参数用于设置结果中小数点后的小数位数。也可通过使用 <span
-class="function">bcscale</span> 来设置全局默认的小数位数，用于所有函数。
+class="function">bcscale</span>
+来设置全局默认的小数位数，用于所有函数。如果未设置，则默认为 *0*。
 
 ### 返回值
 
@@ -210,7 +212,8 @@ class="initializer"> = int</span></span> \] )
 
 ` scale`  
 此可选参数用于设置结果中小数点后的小数位数。也可通过使用 <span
-class="function">bcscale</span> 来设置全局默认的小数位数，用于所有函数。
+class="function">bcscale</span>
+来设置全局默认的小数位数，用于所有函数。如果未设置，则默认为 *0*。
 
 ### 返回值
 
@@ -256,7 +259,8 @@ class="methodparam"><span class="type">int</span> `$scale`</span> \] )
 
 ` scale`  
 此可选参数用于设置结果中小数点后的小数位数。也可通过使用 <span
-class="function">bcscale</span> 来设置全局默认的小数位数，用于所有函数。
+class="function">bcscale</span>
+来设置全局默认的小数位数，用于所有函数。如果未设置，则默认为 *0*。
 
 ### 返回值
 
@@ -330,7 +334,8 @@ The modulus, as an integral string (i.e. the scale has to be zero).
 
 ` scale`  
 此可选参数用于设置结果中小数点后的小数位数。也可通过使用 <span
-class="function">bcscale</span> 来设置全局默认的小数位数，用于所有函数。
+class="function">bcscale</span>
+来设置全局默认的小数位数，用于所有函数。如果未设置，则默认为 *0*。
 
 ### 返回值
 
@@ -426,7 +431,8 @@ class="type">int</span> `$scale`</span> \] )
 
 ` scale`  
 此可选参数用于设置结果中小数点后的小数位数。也可通过使用 <span
-class="function">bcscale</span> 来设置全局默认的小数位数，用于所有函数。
+class="function">bcscale</span>
+来设置全局默认的小数位数，用于所有函数。如果未设置，则默认为 *0*。
 
 ### 返回值
 
@@ -474,7 +480,8 @@ class="initializer"> = int</span></span> \] )
 
 ` scale`  
 此可选参数用于设置结果中小数点后的小数位数。也可通过使用 <span
-class="function">bcscale</span> 来设置全局默认的小数位数，用于所有函数。
+class="function">bcscale</span>
+来设置全局默认的小数位数，用于所有函数。如果未设置，则默认为 *0*。
 
 ### 返回值
 

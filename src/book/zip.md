@@ -532,9 +532,8 @@ class="initializer"> = ZipArchive::FL\_OVERWRITE</span></span> \]\]\]\]
 
 Adds a file to a ZIP archive from a given path.
 
-> **Note**: <span class="simpara">For maximum portability, it is
-> recommended to always use forward slashes (*/*) as directory separator
-> in ZIP filenames.</span>
+> **Note**: <span class="simpara">为了最大限度地提高代码可移植性，建议在
+> ZIP 文件名中使用斜线 (*/*) 做为目录分隔符。</span>
 
 ### 参数
 
@@ -622,9 +621,8 @@ ZipArchive::FL\_OVERWRITE</span></span> \] )
 
 Add a file to a ZIP archive using its contents.
 
-> **Note**: <span class="simpara">For maximum portability, it is
-> recommended to always use forward slashes (*/*) as directory separator
-> in ZIP filenames.</span>
+> **Note**: <span class="simpara">为了最大限度地提高代码可移植性，建议在
+> ZIP 文件名中使用斜线 (*/*) 做为目录分隔符。</span>
 
 ### 参数
 
@@ -702,9 +700,8 @@ class="initializer"> = array()</span></span> \]\] )
 
 Add files from a directory which match the glob `pattern`.
 
-> **Note**: <span class="simpara">For maximum portability, it is
-> recommended to always use forward slashes (*/*) as directory separator
-> in ZIP filenames.</span>
+> **Note**: <span class="simpara">为了最大限度地提高代码可移植性，建议在
+> ZIP 文件名中使用斜线 (*/*) 做为目录分隔符。</span>
 
 ### 参数
 
@@ -2052,9 +2049,8 @@ class="type">int</span> `$flags`<span class="initializer"> =
 
 Replace file in ZIP archive with a given path.
 
-> **Note**: <span class="simpara">For maximum portability, it is
-> recommended to always use forward slashes (*/*) as directory separator
-> in ZIP filenames.</span>
+> **Note**: <span class="simpara">为了最大限度地提高代码可移植性，建议在
+> ZIP 文件名中使用斜线 (*/*) 做为目录分隔符。</span>
 
 ### 参数
 

@@ -189,7 +189,9 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 
 本函数对一个 URL 执行部分请求。取得所有有关给定资源的重要信息后就停手。
 
-、 仅在将 PHP 安装为 Apache 模块时，支持此函数。
+仅在将 PHP 安装在 Netscape/iPlanet/SunONE Web 服务器，并以 Apache
+模块运行时，才支持此函数。参考
+<a href="/book/nsapi.html" class="link">NSAPI server module</a>。
 
 ### 参数
 
@@ -362,11 +364,10 @@ class="methodparam">void</span> )
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                  |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.7 | 此函数可用于 CLI server。                                                                                                             |
-| 5.4.0 | 此函数可用于 FastCGI。 此前仅在PHP以 Apache 模块方式运行时支持。                                                                      |
-| 4.3.3 | 从 PHP 4.3.3 起，也可在 Netscape/iPlanet/SunONE Web 服务器的 <a href="/book/nsapi.html" class="link">NSAPI 服务器模块</a>使用此函数。 |
+| 版本  | 说明                                                             |
+|-------|------------------------------------------------------------------|
+| 5.5.7 | 此函数可用于 CLI server。                                        |
+| 5.4.0 | 此函数可用于 FastCGI。 此前仅在PHP以 Apache 模块方式运行时支持。 |
 
 ### 范例
 
@@ -457,11 +458,11 @@ class="methodparam">void</span> )
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                  |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.7 | 此函数可用于 CLI server.                                                                                                              |
-| 5.4.0 | 此函数可用于 FastCGI。 此前仅在PHP以 Apache 模块方式运行时支持。                                                                      |
-| 4.3.3 | 从 PHP 4.3.3 起，也可在 Netscape/iPlanet/SunONE Web 服务器的 <a href="/book/nsapi.html" class="link">NSAPI 服务器模块</a>使用此函数。 |
+| 版本  | 说明                                                             |
+|-------|------------------------------------------------------------------|
+| 5.5.7 | 此函数可用于 CLI server.                                         |
+| 5.4.0 | 此函数可用于 FastCGI。 此前仅在PHP以 Apache 模块方式运行时支持。 |
+| 4.3.3 |                                                                  |
 
 ### 范例
 
@@ -572,12 +573,11 @@ class="methodparam">void</span> )
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                  |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.7 | 此函数可用于 CLI server。                                                                                                             |
-| 5.4.0 | 此函数可用于 FastCGI。 此前仅在PHP以 Apache 模块方式运行时支持。                                                                      |
-| 4.3.3 | 从 PHP 4.3.3 起，也可在 Netscape/iPlanet/SunONE Web 服务器的 <a href="/book/nsapi.html" class="link">NSAPI 服务器模块</a>使用此函数。 |
-| 4.3.0 | 被改名而成为 <span class="function">apache\_request\_headers</span> 的别名。因为此函数仅适用于 Apache 。                              |
+| 版本  | 说明                                                             |
+|-------|------------------------------------------------------------------|
+| 5.5.7 | 此函数可用于 CLI server。                                        |
+| 5.4.0 | 此函数可用于 FastCGI。 此前仅在PHP以 Apache 模块方式运行时支持。 |
+| 4.3.0 | 4.3.0                                                            |
 
 ### 范例
 
@@ -616,7 +616,9 @@ virtual
 
 为运行子请求，所有缓冲将中止并刷新至浏览器，包括头信息。
 
-、 仅在将 PHP 安装为 Apache 模块时，支持此函数。
+仅在将 PHP 安装在 Netscape/iPlanet/SunONE Web 服务器，并以 Apache
+模块运行时，才支持此函数。参考
+<a href="/book/nsapi.html" class="link">NSAPI server module</a>。
 
 ### 参数
 
@@ -626,13 +628,6 @@ virtual命令将执行的文件
 ### 返回值
 
 成功执行 virtual 命令，或失败时返回 **`FALSE`** 。
-
-### 更新日志
-
-| 版本  | 说明                                                                                                                                  |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------|
-| 4.3.3 | 从 PHP 4.3.3 起，也可在 Netscape/iPlanet/SunONE Web 服务器的 <a href="/book/nsapi.html" class="link">NSAPI 服务器模块</a>使用此函数。 |
-| 4.0.6 | 此函数可用于 PHP 文件。但是通常使用 <span class="function">include</span> 或 <span class="function">require</span> 更好。             |
 
 ### 范例
 

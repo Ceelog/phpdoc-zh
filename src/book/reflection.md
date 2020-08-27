@@ -8937,7 +8937,7 @@ var_dump($reflectionType2);
 ?>
 ```
 
-Output of the above example in PHP 7.0:
+以上例程在 PHP 7.0 中的输出：
 
     int
     NULL
@@ -10411,8 +10411,7 @@ To string
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 

@@ -13,7 +13,7 @@ function test($param){}
 test();
 ```
 
-Output of the above example in PHP 5.5:
+以上例程在 PHP 5.5 中的输出：
 
     Uncaught Error: Too few arguments to function test(), 0 passed in %s on line %d and exactly 1 expected in %s:%d
 
@@ -139,7 +139,7 @@ var_dump($array);
 ?>
 ```
 
-Output of the above example in PHP 7.0:
+以上例程在 PHP 7.0 中的输出：
 
     array(2) {
       ["a"]=>
@@ -148,7 +148,7 @@ Output of the above example in PHP 7.0:
       &int(1)
     }
 
-Output of the above example in PHP 7.1:
+以上例程在 PHP 7.1 中的输出：
 
     array(2) {
       ["b"]=>

@@ -1,11 +1,11 @@
-New Features
-------------
+新特性
+------
 
-### PHP Core
+### PHP 核心中的新特性
 
-#### Typed properties
+#### 属性添加限定类型
 
-Class properties now support type declarations.
+类的属性中现在支持添加指定的类型。
 
 ``` php
 <?php
@@ -16,15 +16,14 @@ class User {
 ?>
 ```
 
-The above example will enforce that *$user-\>id* can only be assigned
-<span class="type">integer</span> values and *$user-\>name* can only be
-assigned <span class="type">string</span> values.
+上面的例子中，会强制要求 *$user-\>id* 只能为 <span
+class="type">integer</span> 类型，同时 *$user-\>name* 只能为 <span
+class="type">string</span> 类型。
 
-#### Arrow functions
+#### 箭头函数
 
-<a href="/functions/arrow.html" class="link">Arrow functions</a> provide
-a shorthand syntax for defining functions with implicit by-value scope
-binding.
+<a href="/functions/arrow.html" class="link">箭头函数</a>
+提供了一种更简洁的定义函数的方法。
 
 ``` php
 <?php
@@ -34,9 +33,9 @@ $nums = array_map(fn($n) => $n * $factor, [1, 2, 3, 4]);
 ?>
 ```
 
-#### Limited return type covariance and argument type contravariance
+#### 有限返回类型协变与参数类型逆变
 
-The following code will now work:
+以下代码将不会正常工作：
 
 ``` php
 <?php
@@ -52,23 +51,21 @@ class ChildProducer extends Producer {
 ?>
 ```
 
-Full variance support is only available if autoloading is used. Inside a
-single file only non-cyclic type references are possible, because all
-classes need to be available before they are referenced.
+只有在使用自动加载的情况下，才会有完整的差异支持。在一个文件内，只有非循环类型引用是可能的，因为在引用之前，所有的类都需要可用。
 
-#### Null coalescing assignment operator
+#### 空合并运算符赋值
 
 ``` php
 <?php
 $array['key'] ??= computeDefault();
-// is roughly equivalent to
+// 等同于以下旧写法
 if (!isset($array['key'])) {
     $array['key'] = computeDefault();
 }
 ?>
 ```
 
-#### Unpacking inside arrays
+#### 数组展开操作
 
 ``` php
 <?php
@@ -78,9 +75,9 @@ $fruits = ['banana', 'orange', ...$parts, 'watermelon'];
 ?>
 ```
 
-#### Numeric literal separator
+#### 数值文字分隔符
 
-Numeric literals can contain underscores between digits.
+数字文字可以在数字之间包含下划线。
 
 ``` php
 <?php
@@ -96,13 +93,12 @@ Numeric literals can contain underscores between digits.
 Weak references allow the programmer to retain a reference to an object
 that does not prevent the object from being destroyed.
 
-#### Allow exceptions from \_\_toString()
+#### 允许从 \_\_toString() 抛出异常
 
-Throwing exceptions from
+现在允许从
 <a href="/language/oop5/magic.html#object.tostring" class="link">__toString()</a>
-is now permitted. Previously this resulted in a fatal error. Existing
-recoverable fatal errors in string conversions have been converted to
-<span class="classname">Error</span> exceptions.
+抛出异常。之前的版本，将会导致一个致命错误。新版本中，之前发生致命错误的代码，已经被转换为
+<span class="classname">Error</span> 异常。
 
 ### CURL
 
@@ -141,8 +137,8 @@ than bytes.
 
 ### OPcache
 
-<a href="/opcache/preloading.html" class="link">Support for preloading code</a>
-has been added.
+新增 <a href="/opcache/preloading.html" class="link">缓存预加载</a>
+特性。
 
 ### Regular Expressions (Perl-Compatible)
 

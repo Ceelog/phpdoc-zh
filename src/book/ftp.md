@@ -26,7 +26,8 @@ FTP
         连接
     -   [ftp\_delete](/ref/ftp.html#ftp_delete) — 删除 FTP
         服务器上的一个文件
-    -   [ftp\_exec](/ref/ftp.html#ftp_exec) — 请求运行一条 FTP 命令
+    -   [ftp\_exec](/ref/ftp.html#ftp_exec) — 在 FTP
+        服务器运行指定的命令
     -   [ftp\_fget](/ref/ftp.html#ftp_fget) — 从 FTP
         服务器上下载一个文件并保存到本地一个已经打开的文件中
     -   [ftp\_fput](/ref/ftp.html#ftp_fput) — 上传一个已经打开的文件到
@@ -40,7 +41,7 @@ FTP
     -   [ftp\_mlsd](/ref/ftp.html#ftp_mlsd) — Returns a list of files in
         the given directory
     -   [ftp\_nb\_continue](/ref/ftp.html#ftp_nb_continue) —
-        连续获取／发送文件（non-blocking）
+        连续获取／发送文件（以不分块的方式 non-blocking）
     -   [ftp\_nb\_fget](/ref/ftp.html#ftp_nb_fget) — 从 FTP
         服务器获取文件并写入到一个打开的文件（非阻塞）
     -   [ftp\_nb\_fput](/ref/ftp.html#ftp_nb_fput) — 将文件存储到 FTP

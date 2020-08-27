@@ -4262,7 +4262,7 @@ The **configure** command defaults to the value of the *CUBRID*
 environment variable.
 
 PECL 扩展的 DLL 当前不可用。参见
-<a href="/install/windows/legacy/index.html#install.windows.building" class="link">在 Windows 上构建</a>章节。
+<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">在 Windows 上构建</a>章节。
 Detailed information about installation on Linux and Windows manually,
 please read build-guide.html in PECL package CUBRID for reference.
 
@@ -4306,7 +4306,7 @@ Features
 <tr class="even">
 <td>LOBs</td>
 <td>PDO_CUBRID supports BLOB/CLOB data type. The LOB in PDO is represented as a stream, so you can insert LOBs by binding a stream, and get LOBs by reading a stream returned by CUBRID PDO. For example:
-<div id="example-1094" class="example">
+<div id="example-1079" class="example">
 <p><strong>示例 #1 Insert LOBs in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4322,7 +4322,7 @@ Features
 </div>
 </div>
 </div>
-<div id="example-1095" class="example">
+<div id="example-1080" class="example">
 <p><strong>示例 #2 Fetch LOBs in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4363,7 +4363,7 @@ Features
 <tr class="even">
 <td>Collection Data Type</td>
 <td>PDO_CUBRID supports SET/MULTISET/SEQUENCE data type. If you don't specify data type, the default data type is char,for example:
-<div id="example-1096" class="example">
+<div id="example-1081" class="example">
 <p><strong>示例 #3 Insert set in CUBRID PDO with default data type.</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4384,7 +4384,7 @@ Features
 </div>
 </div>
 </div>
-<div id="example-1097" class="example">
+<div id="example-1082" class="example">
 <p><strong>示例 #4 Specify data type when insert set in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -6401,10 +6401,10 @@ instead, and was the default, if *\[=DIR\]* has been omitted.
 
 > **Note**: **Additional setup on Windows as of PHP 7.4.0**  
 >
-> 为了使此扩展生效， DLL 文件必须能在 Windows 系统的 *PATH*
+> 为了使此扩展生效， DLL 文件必须能在 Windows 系统的 `PATH`
 > 指示的路径下找到。如何操作的信息，请参见题为“<a href="/faq/installation.html#faq.installation.addtopath" class="link">如何在 Windows 中将 PHP 目录加到 PATH 中</a>”的FAQ。虽然将
 > DLL 文件从 PHP 文件夹复制到 Windows 系统目录也行，但不建议这样做。
-> *此扩展需要下列文件在 *PATH* 路径中：* `libsqlite3.dll`.
+> *此扩展需要下列文件在 `PATH` 路径中：* `libsqlite3.dll`.
 
 PDO\_SQLITE DSN
 ===============

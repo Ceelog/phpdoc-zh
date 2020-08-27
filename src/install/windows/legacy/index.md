@@ -1061,7 +1061,7 @@ class="function">nsapi\_virtual</span> 被禁用。
 
 本章讲述了在 Windows 下如何使用 Microsoft 的工具编译 PHP。要在 CygWin
 中编译 PHP，请参考
-<a href="/install/unix.html" class="xref">Unix 系统下的安装</a>一章。
+<a href="/install/unix.html" class="xref">Unix 系统下的安装</a> 一章。
 
 具体内容见：<a href="https://wiki.php.net/internals/windows/stepbystepbuild" class="link external">» https://wiki.php.net/internals/windows/stepbystepbuild</a>。
 

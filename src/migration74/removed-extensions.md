@@ -1,9 +1,8 @@
-Removed Extensions
-------------------
+移除的扩展
+----------
 
-These extensions have been moved to PECL and are no longer part of the
-PHP distribution. The PECL package versions of these extensions will be
-created according to user demand.
+这些扩展已经被转移到 PECL 中，不再是 PHP 发行版的一部分。这些扩展的 PECL
+包版本将根据用户的需要来自行安装。
 
 -   <span class="simpara">
     <a href="/book/ibase.html" class="link">Firebird/Interbase</a> -

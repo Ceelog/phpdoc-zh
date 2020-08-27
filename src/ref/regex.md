@@ -375,14 +375,6 @@ print_r($chunks);
 
 ### 注释
 
-> **Note**:
->
-> 在 PHP 5.3.0 中，已放弃使用 regex 扩展而建议使用
-> <a href="/book/pcre.html" class="link">PCRE 扩展</a>。调用此函数将会发出
-> **`E_DEPRECATED`**
-> 通知。参见“<a href="/pcre/pattern.html#与%20POSIX%20正则表达式的不同" class="link">差异列表</a>”可帮助你转为使用
-> PCRE。
-
 ### 参见
 
 -   <span class="function">preg\_split</span>
@@ -435,14 +427,6 @@ echo sql_regcase("Foo - bar.");
 可以用于在仅支持区分大小写正则表达式的产品中完成不区分大小写的模式匹配。
 
 ### 注释
-
-> **Note**:
->
-> 在 PHP 5.3.0 中，已放弃使用 regex 扩展而建议使用
-> <a href="/book/pcre.html" class="link">PCRE 扩展</a>。调用此函数将会发出
-> **`E_DEPRECATED`**
-> 通知。参见“<a href="/pcre/pattern.html#与%20POSIX%20正则表达式的不同" class="link">差异列表</a>”可帮助你转为使用
-> PCRE。
 
 **目录**
 

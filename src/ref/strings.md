@@ -2464,10 +2464,8 @@ md5
 
 **Warning**
 
-It is not recommended to use this function to secure passwords, due to
-the fast nature of this hashing algorithm. See the
-<a href="/faq/passwords.html#faq.passwords.fasthash" class="link">Password Hashing FAQ</a>
-for details and best practices.
+由于此函数依赖的算法已不足够复杂,不推荐使用此函数对明文密码加密。详细内容参见
+<a href="/faq/passwords.html#faq.passwords.fasthash" class="link">这里</a>。
 
 ### 说明
 
@@ -3690,10 +3688,8 @@ sha1
 
 **Warning**
 
-It is not recommended to use this function to secure passwords, due to
-the fast nature of this hashing algorithm. See the
-<a href="/faq/passwords.html#faq.passwords.fasthash" class="link">Password Hashing FAQ</a>
-for details and best practices.
+由于此函数依赖的算法已不足够复杂,不推荐使用此函数对明文密码加密。详细内容参见
+<a href="/faq/passwords.html#faq.passwords.fasthash" class="link">这里</a>。
 
 ### 说明
 
@@ -4635,8 +4631,10 @@ class="type">string</span> `$str`</span> )
 
 **Caution**
 
-本函数并不会生成安全加密的值，不应用于加密用途。若需要安全加密的值，考虑使用<span
-class="function">openssl\_random\_pseudo\_bytes</span>。
+本函数并不会生成安全加密的值，不应用于加密用途。若需要安全加密的值，考虑使用
+<span class="function">random\_int</span>、<span
+class="function">random\_bytes</span> 或 <span
+class="function">openssl\_random\_pseudo\_bytes</span> 替代。
 
 ### 参数
 
@@ -7055,7 +7053,7 @@ echo "7) ".var_export(substr(1.2e3, 0, 4), true).PHP_EOL;
 ?>
 ```
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     1) 'pe'
     2) '54'
@@ -7065,7 +7063,7 @@ Output of the above example in PHP 7:
     6) false
     7) '1200'
 
-Output of the above example in PHP 5:
+以上例程在 PHP 5 中的输出：
 
     1) 'pe'
     2) '54'

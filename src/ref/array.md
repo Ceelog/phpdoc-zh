@@ -702,7 +702,8 @@ class="function">array\_diff</span> 不同的是键名也用于比较。
 
 `key_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。
+0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
+2147483647。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -809,7 +810,8 @@ More arrays to compare against
 
 `key_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。
+0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
+2147483647。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -1519,7 +1521,8 @@ Variable list of array arguments to compare values against.
 
 `key_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。
+0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
+2147483647。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -1593,7 +1596,8 @@ Variable list of array arguments to compare keys against.
 
 `key_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。
+0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
+2147483647。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -2475,8 +2479,7 @@ class="type">string</span>）键名保持不变，但数字键名会被重新索
 
 > **Note**:
 >
-> If two members compare as equal, their relative order in the sorted
-> array is undefined.
+> 如果两个成员完全相同，那么它们在排序数组中的相对顺序是未定义的。
 
 ### 参数
 
@@ -3771,7 +3774,8 @@ class="methodparam"><span class="type">callable</span>
 
 `value_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。
+0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
+2147483647。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -3887,7 +3891,8 @@ class="function">array\_udiff</span> 不同的是键名也用于比较。
 
 `value_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。
+0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
+2147483647。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4011,7 +4016,8 @@ class="function">array\_diff</span>
 回调对照函数。
 
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。
+0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
+2147483647。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4211,7 +4217,8 @@ class="methodparam"><span class="type">callable</span>
 
 `value_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。
+0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
+2147483647。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4279,7 +4286,8 @@ class="type">callable</span> `$key_compare_func`</span> )
 
 `value_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。
+0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
+2147483647。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4354,7 +4362,8 @@ class="methodparam"><span class="type">callable</span>
 
 `value_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。
+0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
+2147483647。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4929,8 +4938,7 @@ SORT\_REGULAR</span></span> \] )
 
 > **Note**:
 >
-> If two members compare as equal, their relative order in the sorted
-> array is undefined.
+> 如果两个成员完全相同，那么它们在排序数组中的相对顺序是未定义的。
 
 ### 参数
 
@@ -4990,8 +4998,7 @@ SORT\_REGULAR</span></span> \] )
 
 > **Note**:
 >
-> If two members compare as equal, their relative order in the sorted
-> array is undefined.
+> 如果两个成员完全相同，那么它们在排序数组中的相对顺序是未定义的。
 
 ### 参数
 
@@ -5304,8 +5311,7 @@ each
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.2.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.2.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -6099,7 +6105,7 @@ var_dump($a);
 产生如下输出（注意单元顺序和 <span class="function">list</span>
 语法中所写的顺序的比较）：
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     array(3) {
       [0]=>
@@ -6110,7 +6116,7 @@ Output of the above example in PHP 7:
       string(8) "caffeine"
     }
 
-Output of the above example in PHP 5:
+以上例程在 PHP 5 中的输出：
 
     array(3) {
       [2]=>
@@ -6202,8 +6208,7 @@ class="function">natsort</span> 函数的不区分大小写字母的版本。
 
 > **Note**:
 >
-> If two members compare as equal, their relative order in the sorted
-> array is undefined.
+> 如果两个成员完全相同，那么它们在排序数组中的相对顺序是未定义的。
 
 ### 参数
 
@@ -6283,8 +6288,7 @@ natsort
 
 > **Note**:
 >
-> If two members compare as equal, their relative order in the sorted
-> array is undefined.
+> 如果两个成员完全相同，那么它们在排序数组中的相对顺序是未定义的。
 
 ### 参数
 
@@ -6692,8 +6696,7 @@ SORT\_REGULAR</span></span> \] )
 
 > **Note**:
 >
-> If two members compare as equal, their relative order in the sorted
-> array is undefined.
+> 如果两个成员完全相同，那么它们在排序数组中的相对顺序是未定义的。
 
 ### 参数
 
@@ -6758,8 +6761,7 @@ shuffle
 
 > **Note**:
 >
-> If two members compare as equal, their relative order in the sorted
-> array is undefined.
+> 如果两个成员完全相同，那么它们在排序数组中的相对顺序是未定义的。
 
 ### 参数
 
@@ -6826,8 +6828,7 @@ SORT\_REGULAR</span></span> \] )
 
 > **Note**:
 >
-> If two members compare as equal, their relative order in the sorted
-> array is undefined.
+> 如果两个成员完全相同，那么它们在排序数组中的相对顺序是未定义的。
 
 ### 参数
 
@@ -6958,8 +6959,7 @@ class="type">callable</span> `$value_compare_func`</span> )
 
 > **Note**:
 >
-> If two members compare as equal, their relative order in the sorted
-> array is undefined.
+> 如果两个成员完全相同，那么它们在排序数组中的相对顺序是未定义的。
 
 ### 参数
 
@@ -7045,8 +7045,7 @@ class="type">callable</span> `$key_compare_func`</span> )
 
 > **Note**:
 >
-> If two members compare as equal, their relative order in the sorted
-> array is undefined.
+> 如果两个成员完全相同，那么它们在排序数组中的相对顺序是未定义的。
 
 ### 参数
 
@@ -7055,7 +7054,8 @@ class="type">callable</span> `$key_compare_func`</span> )
 
 `key_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。
+0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
+2147483647。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -7118,8 +7118,7 @@ class="type">callable</span> `$value_compare_func`</span> )
 
 > **Note**:
 >
-> If two members compare as equal, their relative order in the sorted
-> array is undefined.
+> 如果两个成员完全相同，那么它们在排序数组中的相对顺序是未定义的。
 
 > **Note**: <span class="simpara">此函数为 `array`
 > 中的元素赋与新的键名。这将删除原有的键名，而不是仅仅将键名重新排序。</span>
@@ -7131,7 +7130,8 @@ class="type">callable</span> `$value_compare_func`</span> )
 
 `cmp_function`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。
+0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
+2147483647。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span

@@ -18,6 +18,10 @@
 在这你可找到 PHP 所支持的所有时区的列表，可用于诸如 <span
 class="function">date\_default\_timezone\_set</span> 等函数。
 
+**Caution**
+
+这里没有列出的时区是未定义的。
+
 > **Note**: <span class="simpara">最新版的时区数据库可从 PECL 的
 > <a href="https://pecl.php.net/get/timezonedb" class="link external">» timezonedb</a>
 > 进行安装。</span>
@@ -199,7 +203,8 @@ class="function">date\_default\_timezone\_set</span> 等函数。
 
 **Warning**
 
-在此请不要使用任何时区列表（除 UTC 外），仅用于向后兼容。
+在此请不要使用任何时区列表（除 UTC
+外），仅用于向后兼容，可能会引起某些错误行为。
 
 **Warning**
 

@@ -27,5 +27,9 @@ class="function">unset</span>。
 
 ### 转换到 *NULL*
 
+**Warning**
+
+本特性已自 PHP 7.2.0 起*废弃*。强烈建议不要使用本特性。
+
 使用 *(unset) $var* 将一个变量转换为 <span class="type">null</span>
 将*不会*删除该变量或 unset 其值。仅是返回 **`NULL`** 值而已。

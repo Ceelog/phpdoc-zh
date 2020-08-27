@@ -69,8 +69,7 @@ character encoding）。
 
 `mbstring.internal_encoding` <span class="type">string</span>  
 **Warning**
-This feature has been *DEPRECATED* as of PHP 5.6.0. Relying on this
-feature is highly discouraged.
+本特性已自 PHP 5.6.0 起*废弃*。强烈建议不要使用本特性。
 
 定义内部字符的默认编码。
 
@@ -80,8 +79,7 @@ PHP 5.6 及更新版的用户应该将此选项留空，并设置
 
 `mbstring.http_input` <span class="type">string</span>  
 **Warning**
-This feature has been *DEPRECATED* as of PHP 5.6.0. Relying on this
-feature is highly discouraged.
+本特性已自 PHP 5.6.0 起*废弃*。强烈建议不要使用本特性。
 
 定义 HTTP 输入字符的默认编码。
 
@@ -91,8 +89,7 @@ PHP 5.6 及更新版的用户应该将此选项留空，并设置
 
 `mbstring.http_output` <span class="type">string</span>  
 **Warning**
-This feature has been *DEPRECATED* as of PHP 5.6.0. Relying on this
-feature is highly discouraged.
+本特性已自 PHP 5.6.0 起*废弃*。强烈建议不要使用本特性。
 
 定义 HTTP 输出字符的默认编码。
 
@@ -110,8 +107,7 @@ class="function">mb\_substitute\_character</span> ，查看支持的值。
 
 `mbstring.func_overload` <span class="type">string</span>  
 **Warning**
-This feature has been *DEPRECATED* as of PHP 7.2.0. Relying on this
-feature is highly discouraged.
+本特性已自 PHP 7.2.0 起*废弃*。强烈建议不要使用本特性。
 
 用 mbstring
 对应的函数覆盖单字节版本的函数集。更多信息参见<a href="/mbstring/overload.html" class="link">函数的覆盖</a>。

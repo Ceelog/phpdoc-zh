@@ -155,8 +155,8 @@ mcrypt\_decrypt
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0 and *REMOVED* as of
-PHP 7.2.0. Relying on this function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*并将自 PHP 7.2.0
+起*移除*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -253,8 +253,8 @@ mcrypt\_enc\_get\_algorithms\_name
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0 and *REMOVED* as of
-PHP 7.2.0. Relying on this function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*并将自 PHP 7.2.0
+起*移除*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -300,8 +300,8 @@ mcrypt\_enc\_get\_block\_size
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0 and *REMOVED* as of
-PHP 7.2.0. Relying on this function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*并将自 PHP 7.2.0
+起*移除*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -327,8 +327,7 @@ mcrypt\_enc\_get\_iv\_size
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -355,8 +354,7 @@ mcrypt\_enc\_get\_key\_size
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -382,8 +380,7 @@ mcrypt\_enc\_get\_modes\_name
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -429,8 +426,7 @@ mcrypt\_enc\_get\_supported\_key\_sizes
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -482,8 +478,7 @@ mcrypt\_enc\_is\_block\_algorithm\_mode
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -511,8 +506,7 @@ mcrypt\_enc\_is\_block\_algorithm
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -538,8 +532,7 @@ mcrypt\_enc\_is\_block\_mode
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -567,8 +560,7 @@ mcrypt\_enc\_self\_test
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -595,8 +587,7 @@ mcrypt\_encrypt
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -728,8 +719,7 @@ mcrypt\_generic\_deinit
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -797,8 +787,7 @@ mcrypt\_generic\_init
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -847,8 +836,7 @@ mcrypt\_generic
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -906,8 +894,7 @@ mcrypt\_get\_block\_size
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -972,8 +959,7 @@ mcrypt\_get\_cipher\_name
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1027,8 +1013,7 @@ mcrypt\_get\_iv\_size
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1087,8 +1072,7 @@ mcrypt\_get\_key\_size
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1156,8 +1140,7 @@ mcrypt\_list\_algorithms
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1222,8 +1205,7 @@ mcrypt\_list\_modes
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1269,8 +1251,7 @@ mcrypt\_module\_close
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1300,8 +1281,7 @@ mcrypt\_module\_get\_algo\_block\_size
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1332,8 +1312,7 @@ mcrypt\_module\_get\_algo\_key\_size
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1364,8 +1343,7 @@ mcrypt\_module\_get\_supported\_key\_sizes
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1405,8 +1383,7 @@ mcrypt\_module\_is\_block\_algorithm\_mode
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1439,8 +1416,7 @@ mcrypt\_module\_is\_block\_algorithm
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1471,8 +1447,7 @@ mcrypt\_module\_is\_block\_mode
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1509,8 +1484,7 @@ mcrypt\_module\_open
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1627,8 +1601,7 @@ mcrypt\_module\_self\_test
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -1714,8 +1687,7 @@ mdecrypt\_generic
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.1.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.1.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 

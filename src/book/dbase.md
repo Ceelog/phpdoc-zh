@@ -544,16 +544,14 @@ An associative array with the record. This will also include a key named
 is not possible to retrieve the value of a field named *deleted* with
 this function.
 
-Each field is converted to the appropriate PHP type, except:
+每个字段都会被转换为对应的 PHP 类型，除了以下场景：
 
--   <span class="simpara"> Dates are left as strings. </span>
--   <span class="simpara"> DateTime values are converted to strings.
-    </span>
--   <span class="simpara"> Integers outside the range
-    **`PHP_INT_MIN`**..**`PHP_INT_MAX`** are returned as strings.
-    </span>
--   <span class="simpara"> Before dbase 7.0.0, booleans (*L*) were
-    converted to *1* or *0*. </span>
+-   <span class="simpara"> 日期会被转换成字符串。 </span>
+-   <span class="simpara"> DateTime 会被转换成字符串。 </span>
+-   <span class="simpara"> 范围之外的整数
+    **`PHP_INT_MIN`**..**`PHP_INT_MAX`** 将返回字符串。 </span>
+-   <span class="simpara"> dbase 7.0.0 之前的版本， 布尔型 (*L*)
+    将被转换为 *1* 或 *0*。 </span>
 
 On error, <span class="function">dbase\_get\_record\_with\_names</span>
 will return **`FALSE`**.
@@ -622,16 +620,14 @@ associative key named *deleted* which is set to 1 if the record has been
 marked for deletion (see <span
 class="function">dbase\_delete\_record</span>).
 
-Each field is converted to the appropriate PHP type, except:
+每个字段都会被转换为对应的 PHP 类型，除了以下场景：
 
--   <span class="simpara"> Dates are left as strings. </span>
--   <span class="simpara"> DateTime values are converted to strings.
-    </span>
--   <span class="simpara"> Integers outside the range
-    **`PHP_INT_MIN`**..**`PHP_INT_MAX`** are returned as strings.
-    </span>
--   <span class="simpara"> Before dbase 7.0.0, booleans (*L*) were
-    converted to *1* or *0*. </span>
+-   <span class="simpara"> 日期会被转换成字符串。 </span>
+-   <span class="simpara"> DateTime 会被转换成字符串。 </span>
+-   <span class="simpara"> 范围之外的整数
+    **`PHP_INT_MIN`**..**`PHP_INT_MAX`** 将返回字符串。 </span>
+-   <span class="simpara"> dbase 7.0.0 之前的版本， 布尔型 (*L*)
+    将被转换为 *1* 或 *0*。 </span>
 
 On error, <span class="function">dbase\_get\_record</span> will return
 **`FALSE`**.

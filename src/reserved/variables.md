@@ -722,8 +722,7 @@ $php\_errormsg
 
 **Warning**
 
-This feature has been *DEPRECATED* as of PHP 7.2.0. Relying on this
-feature is highly discouraged.
+本特性已自 PHP 7.2.0 起*废弃*。强烈建议不要使用本特性。
 
 ### 说明
 

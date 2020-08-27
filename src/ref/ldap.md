@@ -505,8 +505,7 @@ Retrieve the LDAP pagination cookie
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.4.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -557,8 +556,7 @@ Send LDAP pagination control
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.4.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 
@@ -3246,8 +3244,7 @@ class="function">ldap\_search</span>.
 
 **Warning**
 
-This feature has been *DEPRECATED* as of PHP 7.0.0. Relying on this
-feature is highly discouraged.
+本特性已自 PHP 7.0.0 起*废弃*。强烈建议不要使用本特性。
 
 ### 参数
 

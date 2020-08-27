@@ -21,41 +21,24 @@ PHP 5.2.0 或更新版本
 安装
 ----
 
-PHP 4
------
-
-> **Note**:
->
-> PHP 4.1.0 之前是实验性的支持 ZIP。
-
-**Warning**
-
-因为 PHP4 zip 扩展无人维护，所以我们推荐使用 PECL 扩展来代替绑定的这个。
-
 Linux 系统
 ----------
 
-为了使用这些函数，必须在编译 PH P时用 **--with-zip\[=DIR\]**
-配置选项来提供 zip 支持，其中 \[DIR\]是 ZZIPlib 库安装路径。
+从 PHP 7.4.0 开始，必须在编译 PHP 时用 **--with-zip** 配置选项来提供 zip
+支持。之前的 PHP 版本，需要使用 **--enable-zip** 选项。
+
+从 PHP 5.6.0 开始，添加了一个选项 **--with-libzip=DIR** 用来指定系统的
+libzip 目录。要求 libzip 最低版本为 0.11，推荐使用 0.11.2 及以上版本。
+
+从 PHP 7.3.0 开始, 不鼓励使用捆绑的 libzip 进行构建，但通过在配置中添加
+**--without-libzip** 参数仍然可以实现。 从 PHP 7.4.0 开始，捆绑的 libzip
+被移除。
 
 Windows
 -------
 
-Windows 用户需要在 `php.ini` 里使 `php_zip.dll` 可用，以便使用这些函数。
-
-PHP 5.2.0 以及更新版本
-----------------------
-
-Linux 系统
-----------
-
-为了使用这些函数，必须在编译 PHP 时用 **--enable-zip** 配置选项来提供
-zip 支持。
-
-Windows
--------
-
-Windows 用户需要在 `php.ini` 里使 `php_zip.dll` 可用，以便使用这些函数。
+PHP 5.3 之后该扩展已经内置。之前的版本，Windows 用户需要在 `php.ini`
+里使 `php_zip.dll` 可用，以便使用这些函数。
 
 通过 PECL 安装
 --------------
@@ -64,11 +47,6 @@ Windows 用户需要在 `php.ini` 里使 `php_zip.dll` 可用，以便使用这�
 <a href="/install/pecl.html" class="link">PECL 扩展的安装</a>章节中找到。更多信息如新的发行版本、下载、源文件、
 维护人员信息及变更日志等，都在此处：
 <a href="https://pecl.php.net/package/zip" class="link external">» https://pecl.php.net/package/zip</a>.
-
-PECL 扩展的 DLL 当前不可用。参见
-<a href="/install/windows/legacy/index.html#install.windows.building" class="link">在 Windows 上构建</a>章节。
-
-在 PHP 4 中，此 DLL 位于 PHP Windows 二进制下载中的 `extensions/` 目录。
 
 运行时配置
 ----------

@@ -55,10 +55,10 @@ if ($show_separators) {
     **`FALSE`** 本身 </span>
 -   <span class="simpara">
     <a href="/language/types/integer.html" class="link">整型</a>值
-    0（零） </span>
+    0（零）及 -0 (零) </span>
 -   <span class="simpara">
     <a href="/language/types/float.html" class="link">浮点型</a>值
-    0.0（零） </span>
+    0.0（零）-0.0(零) </span>
 -   <span class="simpara">
     空<a href="/language/types/string.html" class="link">字符串</a>，以及<a href="/language/types/string.html" class="link">字符串</a>
     "0" </span>

@@ -1,7 +1,7 @@
-New Global Constants
---------------------
+新的全局常量
+------------
 
-### PHP Core
+### PHP 核心中预定义的常量
 
 -   <span class="simpara">**`PHP_WINDOWS_EVENT_CTRL_C`**</span>
 -   <span class="simpara">**`PHP_WINDOWS_EVENT_CTRL_BREAK`**</span>
@@ -12,7 +12,7 @@ New Global Constants
 
 ### Sockets
 
-Added the following FreeBSD-specific socket options:
+添加了 FreeBSD 系统中特有的选项：
 
 -   <span class="simpara">**`SO_LABEL`**</span>
 -   <span class="simpara">**`SO_PEERLABEL`**</span>

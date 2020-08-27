@@ -8,8 +8,8 @@
 3.  [编译一些可选的 PHP
     扩展库所需的库文件可以从哪里得到？](#faq.obtaining.optional)
 4.  [怎样使这些库起作用？](#faq.obtaining.how)
-5.  [我在 Windows 机器中从 SVN 里得到了最新版的 PHP
-    源代码，需要什么去编译它？](#faq.obtaining.compileNT)
+5.  [在我的 Windows 机器上通过 Git 仓库获取最新的 PHP
+    源码后，我应该如何去编译？](#faq.obtaining.compilent)
 6.  [哪里可以找到 browscap.ini 文件？](#faq.obtaining.browscap)
 
 **PHP 可以从哪里得到？**  
@@ -104,10 +104,9 @@ Linux 可执行文件，请访问你的 Linux 发布商的站点。
 
 <!-- -->
 
-**我在 Windows 机器中从 SVN 里得到了最新版的 PHP 源代码，需要什么去编译它？**  
-首先，需要 Microsoft Visual C++ v6（v5 也许也行，不过我们是用 v6
-编译的），此外还需要一些支持文件。参见手册中的
-<a href="/install/windows/legacy/index.html#install.windows.building" class="link">在 Windows 下编译 PHP 源代码</a>一节。
+**在我的 Windows 机器上通过 Git 仓库获取最新的 PHP 源码后，我应该如何去编译？**  
+参见 PHP Wiki 内的最新说明：
+<a href="https://wiki.php.net/internals/windows/stepbystepbuild" class="link external">» Step by Step Build Instructions</a>
 
 <!-- -->
 

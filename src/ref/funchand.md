@@ -830,7 +830,9 @@ After change : 'baz'
 
 > **Note**:
 >
-> 如果参数以引用方式传递，函数对该参数的任何改变将在函数返回后保留。
+> 如果参数以引用方式传递，函数对该参数的任何改变将在函数返回后保留。As
+> of PHP 7 the current values will also be returned if the arguments are
+> passed by value.
 
 > **Note**: <span class="simpara"> This function returns a copy of the
 > passed arguments only, and does not account for default (non-passed)
@@ -987,7 +989,9 @@ After change : array (
 
 > **Note**:
 >
-> 如果参数以引用方式传递，函数对该参数的任何改变将在函数返回后保留。
+> 如果参数以引用方式传递，函数对该参数的任何改变将在函数返回后保留。As
+> of PHP 7 the current values will also be returned if the arguments are
+> passed by value.
 
 > **Note**: <span class="simpara">
 > 该函数仅仅是返回传递参数的一个副本，并且不包含没有传入的默认参数。

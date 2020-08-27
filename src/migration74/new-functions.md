@@ -1,7 +1,7 @@
-New Functions
--------------
+新函数
+------
 
-### PHP Core
+### PHP 核心中新增的函数
 
 -   <span class="simpara"> <span
     class="function">get\_mangled\_object\_vars</span> </span>

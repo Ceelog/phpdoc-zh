@@ -45,8 +45,7 @@ C 语言标准函数库肯定支持 iconv。否则，你必须在系统上安装
 
 `iconv.input_encoding` <span class="type">string</span>  
 **Warning**
-This feature has been *DEPRECATED* as of PHP 5.6.0. Relying on this
-feature is highly discouraged.
+本特性已自 PHP 5.6.0 起*废弃*。强烈建议不要使用本特性。
 
 PHP 5.6 及以上的用户应该留空并以
 <a href="/ini/core.html#ini.default-charset" class="link"><code class="parameter">default_charset</code></a>
@@ -54,8 +53,7 @@ PHP 5.6 及以上的用户应该留空并以
 
 `iconv.output_encoding` <span class="type">string</span>  
 **Warning**
-This feature has been *DEPRECATED* as of PHP 5.6.0. Relying on this
-feature is highly discouraged.
+本特性已自 PHP 5.6.0 起*废弃*。强烈建议不要使用本特性。
 
 PHP 5.6 及以上的用户应该留空并以
 <a href="/ini/core.html#ini.default-charset" class="link"><code class="parameter">default_charset</code></a>
@@ -63,8 +61,7 @@ PHP 5.6 及以上的用户应该留空并以
 
 `iconv.internal_encoding` <span class="type">string</span>  
 **Warning**
-This feature has been *DEPRECATED* as of PHP 5.6.0. Relying on this
-feature is highly discouraged.
+本特性已自 PHP 5.6.0 起*废弃*。强烈建议不要使用本特性。
 
 PHP 5.6 及以上的用户应该留空并以
 <a href="/ini/core.html#ini.default-charset" class="link"><code class="parameter">default_charset</code></a>

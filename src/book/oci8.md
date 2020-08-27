@@ -2106,13 +2106,17 @@ oci\_bind\_by\_name
 
 <span class="type">bool</span> <span
 class="methodname">oci\_bind\_by\_name</span> ( <span
-class="methodparam"><span class="type">resource</span> `$stmt`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$ph_name`</span> , <span class="methodparam"><span
-class="type">mixed</span> `&$variable`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$maxlength`</span>
+class="methodparam"><span class="type">resource</span>
+`$statement`</span> , <span class="methodparam"><span
+class="type">string</span> `$bv_name`</span> , <span
+class="methodparam"><span class="type">mixed</span> `&$variable`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$type`</span> \]\] )
+`$maxlength`<span class="initializer"> = -1</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$type`<span
+class="initializer"> = SQLT\_CHR</span></span> \]\] )
+
+将 PHP 变量 `variable` 绑定到 Oracle 位置标志符 `bv_name`。绑定操作对
+Oracle 数据库性能很重要，同时也是避免 SQL 注入安全问题的一种方式。
 
 <span class="function">oci\_bind\_by\_name</span> 将 PHP 变量 `variable`
 绑定到 Oracle 的位置标志符
@@ -2354,6 +2358,9 @@ Possible values for `type` are:
 -   **`SQLT_RSET`** - for cursors created with <span
     class="function">oci\_new\_cursor</span>.
 
+-   **`SQLT_BOL`** or **`OCI_B_BOL`** - for PL/SQL BOOLEANs (Requires
+    OCI8 2.0.7 and Oracle Database 12c)
+
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
@@ -2466,16 +2473,21 @@ if (!$conn) {
     trigger_error(htmlentities($m['message']), E_USER_ERROR);
 }
 
-$sql = 'SELECT last_name FROM employees WHERE employee_id = :eidbv';
+$sql = 'SELECT last_name FROM employees WHERE department_id = :didbv ORDER BY last_name';
 $stid = oci_parse($conn, $sql);
-$myeid = 101;
-oci_bind_by_name($stid, ':eidbv', $myeid);
+$didbv = 60;
+oci_bind_by_name($stid, ':didbv', $didbv);
 oci_execute($stid);
-$row = oci_fetch_array($stid, OCI_ASSOC);
-echo $row['LAST_NAME'] ."<br>\n";
+while (($row = oci_fetch_array($stid, OCI_ASSOC)) != false) {
+    echo $row['LAST_NAME'] ."<br>\n";
+}
 
 // Output is
-//    Kochhar
+//    Austin
+//    Ernst
+//    Hunold
+//    Lorentz
+//    Pataballa
 
 oci_free_statement($stid);
 oci_close($conn);
@@ -2804,11 +2816,39 @@ oci_bind_by_name($stid, ":mykey", $mykey, 5);
 oci_execute($stid);
 
 print '<table border="1">';
-while ($row = oci_fetch_array($stid, OCI_ASSOC)) {
-  $result = $row['MYCLOB']->load();
-  print '<tr><td>'.$result.'</td></tr>';
+while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_LOBS)) {
+    print '<tr><td>'.$row['MYCLOB'].'</td></tr>';
+    // In a loop, freeing the large variable before the 2nd fetch reduces PHP's peak memory usage
+    unset($row);  
 }
 print '</table>';
+
+?>
+```
+
+**示例 \#16 Binding a PL/SQL BOOLEAN**
+
+``` php
+<?php
+
+$conn = oci_connect('hr', 'welcome', 'localhost/XE');
+if (!$conn) {
+    $e = oci_error();
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
+
+$plsql = 
+  "begin
+    :output1 := true;
+    :output2 := false;
+   end;";
+
+$s = oci_parse($c, $plsql);
+oci_bind_by_name($s, ':output1', $output1, -1, OCI_B_BOL);
+oci_bind_by_name($s, ':output2', $output2, -1, OCI_B_BOL);
+oci_execute($s);
+var_dump($output1);  // true
+var_dump($output2);  // false
 
 ?>
 ```
@@ -2859,12 +2899,6 @@ inserts data verbatim and does not remove quotes or escape characters.
 > }
 > ?>
 > ```
-
-> **Note**:
->
-> In PHP versions before 5.0.0 you must use <span
-> class="function">ocibindbyname</span> instead.
-> 在当前版本中，旧的函数名还可以被使用，但已经被废弃并不建议使用。
 
 ### 参见
 
@@ -3131,7 +3165,6 @@ print $r;  // displays the function return value "Finished"
 >
 > In PHP versions before 5.0.0 you must use <span
 > class="function">ocilogoff</span> instead.
-> 在当前版本中，旧的函数名还可以被使用，但已经被废弃并不建议使用。
 
 ### 参见
 
@@ -3280,7 +3313,6 @@ if (!r) {
 >
 > In PHP versions before 5.0.0 you must use <span
 > class="function">ocicommit</span> instead.
-> 在当前版本中，旧的函数名还可以被使用，但已经被废弃并不建议使用。
 
 ### 参见
 
@@ -3455,9 +3487,9 @@ The password for `username`.
 **`TWO_TASK`**（Linux 下）或 **`LOCAL`**（Windows 下）与
 **`ORACLE_SID`** 等。
 
-要使用 Easy Connect 命名方法，PHP 必须与 Oracle 10g
-或更高版本的客户端库进行链接。Oracle 10g 的 Easy Connect
-串格式：*\[//\]host\_name\[:port\]\[/service\_name\]*。Oracle 11g
+要使用 Easy Connect 命名方法，PHP 必须与 Oracle 10*g*
+或更高版本的客户端库进行链接。Oracle 10*g* 的 Easy Connect
+串格式：*\[//\]host\_name\[:port\]\[/service\_name\]*。Oracle 11*g*
 则为：*\[//\]host\_name\[:port\]\[/service\_name\]\[:server\_type\]\[/instance\_name\]*。服务名可在数据库服务器机器上运行
 Oracle 实用程序 *lsnrctl status* 找到。
 
@@ -3711,7 +3743,6 @@ echo "c2 is $c2<br>\n";
 >
 > In PHP versions before 5.0.0 use <span
 > class="function">ocilogon</span> instead.
-> 在当前版本中，旧的函数名还可以被使用，但已经被废弃并不建议使用。
 
 ### 参见
 
@@ -4048,7 +4079,6 @@ for ($i = 1; $i <= oci_num_fields($stid); ++$i) {
 >
 > In PHP versions before 5.0.0 use <span
 > class="function">ociexecute</span> instead.
-> 在当前版本中，旧的函数名还可以被使用，但已经被废弃并不建议使用。
 
 ### 参见
 
@@ -4365,7 +4395,6 @@ oci_close($conn);
 >
 > In PHP versions before 5.0.0 you must use <span
 > class="function">ocifetchstatement</span> instead.
-> 在当前版本中，旧的函数名还可以被使用，但已经被废弃并不建议使用。
 
 ### 参见
 
@@ -5372,7 +5401,6 @@ oci_close($conn);
 >
 > In PHP versions before 5.0.0 use <span
 > class="function">ocifetch</span> instead.
-> 在当前版本中，旧的函数名还可以被使用，但已经被废弃并不建议使用。
 
 ### 参见
 
@@ -6290,9 +6318,9 @@ The password for `username`.
 **`TWO_TASK`**（Linux 下）或 **`LOCAL`**（Windows 下）与
 **`ORACLE_SID`** 等。
 
-要使用 Easy Connect 命名方法，PHP 必须与 Oracle 10g
-或更高版本的客户端库进行链接。Oracle 10g 的 Easy Connect
-串格式：*\[//\]host\_name\[:port\]\[/service\_name\]*。Oracle 11g
+要使用 Easy Connect 命名方法，PHP 必须与 Oracle 10*g*
+或更高版本的客户端库进行链接。Oracle 10*g* 的 Easy Connect
+串格式：*\[//\]host\_name\[:port\]\[/service\_name\]*。Oracle 11*g*
 则为：*\[//\]host\_name\[:port\]\[/service\_name\]\[:server\_type\]\[/instance\_name\]*。服务名可在数据库服务器机器上运行
 Oracle 实用程序 *lsnrctl status* 找到。
 
@@ -6435,7 +6463,6 @@ echo "</pre></html>";
 >
 > In PHP versions before 5.0.0 you must use <span
 > class="function">ocinlogon</span> instead.
-> 在当前版本中，旧的函数名还可以被使用，但已经被废弃并不建议使用。
 
 ### 参见
 
@@ -6977,9 +7004,9 @@ The password for `username`.
 **`TWO_TASK`**（Linux 下）或 **`LOCAL`**（Windows 下）与
 **`ORACLE_SID`** 等。
 
-要使用 Easy Connect 命名方法，PHP 必须与 Oracle 10g
-或更高版本的客户端库进行链接。Oracle 10g 的 Easy Connect
-串格式：*\[//\]host\_name\[:port\]\[/service\_name\]*。Oracle 11g
+要使用 Easy Connect 命名方法，PHP 必须与 Oracle 10*g*
+或更高版本的客户端库进行链接。Oracle 10*g* 的 Easy Connect
+串格式：*\[//\]host\_name\[:port\]\[/service\_name\]*。Oracle 11*g*
 则为：*\[//\]host\_name\[:port\]\[/service\_name\]\[:server\_type\]\[/instance\_name\]*。服务名可在数据库服务器机器上运行
 Oracle 实用程序 *lsnrctl status* 找到。
 
@@ -7034,7 +7061,6 @@ Returns a connection identifier or **`FALSE`** on error.
 >
 > In PHP versions before 5.0.0 you must use <span
 > class="function">ociplogon</span> instead.
-> 在当前版本中，旧的函数名还可以被使用，但已经被废弃并不建议使用。
 
 ### 参见
 
@@ -7294,7 +7320,6 @@ oci_commit($conn);  // mytab now has id of 1111
 >
 > In PHP versions before 5.0.0 you must use <span
 > class="function">ocirollback</span> instead.
-> 在当前版本中，旧的函数名还可以被使用，但已经被废弃并不建议使用。
 
 ### 参见
 
@@ -7406,7 +7431,8 @@ sleep(30);
 
 > **Note**: **Oracle 版本需求**  
 >
-> 当 PHP 是与 Oracle 数据库 10g 及更新版本的 扩展库链接时，此函数可用。
+> 当 PHP 是与 Oracle 数据库 10*g* 及更新版本的
+> 扩展库链接时，此函数可用。
 
 **小贴士**
 
@@ -7417,7 +7443,7 @@ class="function">oci\_set\_client\_info</span> 较低效。
 **Caution**
 
 一些 OCI8 函数会导致 Roundtrips.
-对数据库来说当启用结果缓存时，查询可能不产生Roundtrips。
+对数据库来说当启用结果缓存时，查询可能不产生 Roundtrips。
 
 ### 参见
 
@@ -7564,7 +7590,7 @@ oci_execute($s);
 **Caution**
 
 一些 OCI8 函数会导致 Roundtrips.
-对数据库来说当启用结果缓存时，查询可能不产生Roundtrips。
+对数据库来说当启用结果缓存时，查询可能不产生 Roundtrips。
 
 ### 参见
 
@@ -7643,7 +7669,8 @@ sleep(30);
 
 > **Note**: **Oracle 版本需求**  
 >
-> 当 PHP 是与 Oracle 数据库 10g 及更新版本的 扩展库链接时，此函数可用。
+> 当 PHP 是与 Oracle 数据库 10*g* 及更新版本的
+> 扩展库链接时，此函数可用。
 
 **小贴士**
 
@@ -7654,7 +7681,7 @@ class="function">oci\_set\_client\_info</span> 较低效。
 **Caution**
 
 一些 OCI8 函数会导致 Roundtrips.
-对数据库来说当启用结果缓存时，查询可能不产生Roundtrips。
+对数据库来说当启用结果缓存时，查询可能不产生 Roundtrips。
 
 ### 参见
 
@@ -7736,7 +7763,7 @@ sleep(30);
 **Caution**
 
 一些 OCI8 函数会导致 Roundtrips.
-对数据库来说当启用结果缓存时，查询可能不产生Roundtrips。
+对数据库来说当启用结果缓存时，查询可能不产生 Roundtrips。
 
 ### 参见
 
@@ -7891,7 +7918,8 @@ User chosen <span class="type">string</span> up to 48 bytes long.
 
 > **Note**: **Oracle 版本需求**  
 >
-> 当 PHP 是与 Oracle 数据库 10g 及更新版本的 扩展库链接时，此函数可用。
+> 当 PHP 是与 Oracle 数据库 10*g* 及更新版本的
+> 扩展库链接时，此函数可用。
 
 **小贴士**
 
@@ -7902,7 +7930,7 @@ class="function">oci\_set\_client\_info</span> 较低效。
 **Caution**
 
 一些 OCI8 函数会导致 Roundtrips.
-对数据库来说当启用结果缓存时，查询可能不产生Roundtrips。
+对数据库来说当启用结果缓存时，查询可能不产生 Roundtrips。
 
 ### 范例
 
@@ -8105,7 +8133,6 @@ oci_execute($stid);
 >
 > In PHP versions before 5.0.0 use <span
 > class="function">ocisetprefetch</span> instead.
-> 在当前版本中，旧的函数名还可以被使用，但已经被废弃并不建议使用。
 
 ### 参见
 

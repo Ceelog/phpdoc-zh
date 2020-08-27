@@ -25,7 +25,7 @@
 <a href="https://pecl.php.net/package/taint" class="link external">» https://pecl.php.net/package/taint</a>.
 
 PECL 扩展的 DLL 当前不可用。参见
-<a href="/install/windows/legacy/index.html#install.windows.building" class="link">在 Windows 上构建</a>章节。
+<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">在 Windows 上构建</a>章节。
 
 运行时配置
 ----------

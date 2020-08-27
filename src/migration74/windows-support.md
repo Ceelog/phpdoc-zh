@@ -1,10 +1,9 @@
-Windows Support
----------------
+Windows 支持
+------------
 
 ### **configure** flags
 
-**configure** now regards additional *CFLAGS* and *LDFLAGS* set as
-environment variables.
+**configure** 命令现在支持 *CFLAGS* 和 *LDFLAGS* 环境变量。
 
 ### CTRL handling
 

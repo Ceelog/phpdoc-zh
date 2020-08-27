@@ -487,4 +487,4 @@ class="function">fann\_set\_weight\_array</span>
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。

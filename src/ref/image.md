@@ -699,9 +699,6 @@ alpha
 `blendmode` 为 **`TRUE`**，则启用混色模式，否则关闭。成功时返回
 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
-
 ### 参数
 
 `image`  
@@ -741,9 +738,6 @@ imagedestroy($im);
 ```
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
 
 imageantialias
 ==============
@@ -818,9 +812,6 @@ imagedestroy($normal);
 <img src="images/21009b70229598c6a80eef8b45bf282b-imageantialias.png" width="400" height="100" alt="Output of example : A comparison of two lines, one with anti-aliasing switched on" />
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数仅在与 GD 库捆绑编译的 PHP
-> 版本中可用。</span>
 
 ### 参见
 
@@ -912,8 +903,7 @@ not.
 
 **Caution**
 
-However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+如果 libgd 输出图像失败，函数会返回 **`TRUE`**。
 
 ### 范例
 
@@ -1137,9 +1127,6 @@ imagedestroy($image);
 ?>
 ```
 
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
-
 参见 <span class="function">imagecolorallocate</span> 和 <span
 class="function">imagecolordeallocate</span>。
 
@@ -1230,9 +1217,6 @@ imagedestroy($image);
 <img src="images/21009b70229598c6a80eef8b45bf282b-imagecolorallocatealpha.png" width="300" height="300" alt="Output of example : Example of using imagecolorallocatealpha()" />
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
 
 ### 参见
 
@@ -1382,9 +1366,6 @@ imagedestroy($im);
     #3: Search (255, 137, 92, 84); Closest match: (252, 150, 92, 0).
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
 
 ### 参见
 
@@ -1587,9 +1568,6 @@ imagedestroy($im);
 
 ### 注释
 
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
-
 ### 参见
 
 -   <span class="function">imagecolorclosestalpha</span>
@@ -1648,12 +1626,6 @@ imagedestroy($im2);
 ```
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数仅在与 GD 库捆绑编译的 PHP
-> 版本中可用。</span>
-
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
 
 ### 参见
 
@@ -1755,9 +1727,6 @@ imagedestroy($im);
     )
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
 
 ### 参见
 
@@ -1964,9 +1933,6 @@ imagepng($image, null, 9);
 
 ### 注释
 
-> **Note**: <span class="simpara">此函数仅在与 GD 库捆绑编译的 PHP
-> 版本中可用。</span>
-
 ### 参见
 
 -   <span class="function">imagefilter</span>
@@ -2100,10 +2066,10 @@ of `dst_image` of width `dst_w` and height `dst_h` at position
 ### 参数
 
 `dst_image`  
-目标图象连接资源。
+目标图象资源。
 
 `src_image`  
-源图象连接资源。
+源图象资源。
 
 `dst_x`  
 目标 X 坐标点。
@@ -2261,10 +2227,10 @@ at position (`src_x`,`src_y`) and place it in a rectangular area of
 ### 参数
 
 `dst_image`  
-目标图象连接资源。
+目标图象资源。
 
 `src_image`  
-源图象连接资源。
+源图象资源。
 
 `dst_x`  
 x-coordinate of destination point.
@@ -2483,15 +2449,6 @@ imagedestroy($im);
 
 ### 注释
 
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
-
-**Warning**
-
-Windows 版本的 PHP 在 4.3.0
-版之前不支持通过此函数访问远程文件，即使已经启用
-<a href="/filesystem/setup.html#" class="link">allow_url_fopen</a>.
-
 imagecreatefromgd2part
 ======================
 
@@ -2567,15 +2524,6 @@ imagedestroy($im);
 
 ### 注释
 
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
-
-**Warning**
-
-Windows 版本的 PHP 在 4.3.0
-版之前不支持通过此函数访问远程文件，即使已经启用
-<a href="/filesystem/setup.html#" class="link">allow_url_fopen</a>.
-
 imagecreatefromgd
 =================
 
@@ -2630,12 +2578,6 @@ imagedestroy($im);
 ```
 
 ### 注释
-
-**Warning**
-
-Windows 版本的 PHP 在 4.3.0
-版之前不支持通过此函数访问远程文件，即使已经启用
-<a href="/filesystem/setup.html#" class="link">allow_url_fopen</a>.
 
 imagecreatefromgif
 ==================
@@ -2716,12 +2658,6 @@ imagedestroy($img);
 > 自 GD 库 1.6 版起所有的 GIF 支持都移除了，又在 GD 库 2.0.28
 > 版起又加了回来。如果使用二者之间版本的 GD 库时本函数不可用。
 
-**Warning**
-
-Windows 版本的 PHP 在 4.3.0
-版之前不支持通过此函数访问远程文件，即使已经启用
-<a href="/filesystem/setup.html#" class="link">allow_url_fopen</a>.
-
 imagecreatefromjpeg
 ===================
 
@@ -2796,15 +2732,6 @@ imagedestroy($img);
 
 ### 注释
 
-> **Note**: <span class="simpara">JPEG 支持仅在 PHP 与 GD-1.8
-> 或更高版本一起编译时可用。</span>
-
-**Warning**
-
-Windows 版本的 PHP 在 4.3.0
-版之前不支持通过此函数访问远程文件，即使已经启用
-<a href="/filesystem/setup.html#" class="link">allow_url_fopen</a>.
-
 imagecreatefrompng
 ==================
 
@@ -2878,12 +2805,6 @@ imagedestroy($img);
 <img src="images/21009b70229598c6a80eef8b45bf282b-imagecreatefrompng.png" width="150" height="30" alt="imagecreatefrompng() 例子" />
 
 ### 注释
-
-**Warning**
-
-Windows 版本的 PHP 在 4.3.0
-版之前不支持通过此函数访问远程文件，即使已经启用
-<a href="/filesystem/setup.html#" class="link">allow_url_fopen</a>.
 
 imagecreatefromstring
 =====================
@@ -3016,15 +2937,6 @@ imagedestroy($img);
 
 ### 注释
 
-> **Note**: <span class="simpara">WBMP 支持仅在 PHP 与 GD-1.8
-> 或更高版本一起编译时可用。</span>
-
-**Warning**
-
-Windows 版本的 PHP 在 4.3.0
-版之前不支持通过此函数访问远程文件，即使已经启用
-<a href="/filesystem/setup.html#" class="link">allow_url_fopen</a>.
-
 imagecreatefromwebp
 ===================
 
@@ -3094,12 +3006,6 @@ URL 可作为文件名。关于如何指定文件名详见 <span
 class="function">fopen</span>。各种 wapper 的不同功能请参见
 <a href="/wrappers.html" class="xref">支持的协议和封装协议</a>，注意其用法及其可提供的预定义变量。
 
-**Warning**
-
-Windows 版本的 PHP 在 4.3.0
-版之前不支持通过此函数访问远程文件，即使已经启用
-<a href="/filesystem/setup.html#" class="link">allow_url_fopen</a>.
-
 ### 参数
 
 `filename`  
@@ -3127,12 +3033,6 @@ imagedestroy($xbm);
 
 ### 注释
 
-**Warning**
-
-Windows 版本的 PHP 在 4.3.0
-版之前不支持通过此函数访问远程文件，即使已经启用
-<a href="/filesystem/setup.html#" class="link">allow_url_fopen</a>.
-
 imagecreatefromxpm
 ==================
 
@@ -3147,9 +3047,6 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 
 <span class="function">imagecreatefromxpm</span>
 返回一图像标识符，代表了从给定的文件名取得的图像。
-
-> **Note**: <span class="simpara">此函数仅在与 GD 库捆绑编译的 PHP
-> 版本中可用。</span>
 
 **小贴士**
 
@@ -3196,9 +3093,6 @@ imagedestroy($xpm);
 ```
 
 ### 返回值
-
-> **Note**: <span class="simpara">此函数仅在与 GD 库捆绑编译的 PHP
-> 版本中可用。</span>
 
 > **Note**: <span class="simpara">此函数未在 Windows 平台下实现。</span>
 
@@ -3257,9 +3151,6 @@ imagedestroy($im);
 <img src="images/21009b70229598c6a80eef8b45bf282b-imagecreatetruecolor.png" width="120" height="20" alt="例子的输出： 新建一个新的 GD 图像流并输出图像" />
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
 
 ### 参见
 
@@ -3694,9 +3585,6 @@ imagedestroy($image);
 
 ### 注释
 
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
-
 imagefilledellipse
 ==================
 
@@ -3773,9 +3661,6 @@ imagepng($image);
 <img src="images/21009b70229598c6a80eef8b45bf282b-imagefilledellipse.png" width="400" height="300" alt="例子输出： imagefilledellipse()" />
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
 
 ### 参见
 
@@ -3922,9 +3807,6 @@ class="methodparam"><span class="type">int</span> `$arg3`</span> \]\]\]
     `IMG_FILTER_MEAN_REMOVAL`：用平均移除法来达到轮廓效果。 </span>
 -   <span class="simpara"> `IMG_FILTER_SMOOTH`：使图像更柔滑。用 `arg1`
     设定柔滑级别。 </span>
-
-> **Note**: <span class="simpara">此函数仅在与 GD 库捆绑编译的 PHP
-> 版本中可用。</span>
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
@@ -4202,9 +4084,6 @@ imagedestroy($output);
 
 ### 注释
 
-> **Note**: <span class="simpara">此函数仅在与 GD 库捆绑编译的 PHP
-> 版本中可用。</span>
-
 ### 参见
 
 -   <span class="function">imageconvolution</span>
@@ -4355,7 +4234,7 @@ FreeType text.
 ### 参数
 
 `size`  
-字体的尺寸。根据 GD 的版本，为像素尺寸（GD1）或点（磅）尺寸（GD2）。
+字体的尺寸，单位：点（磅）。
 
 `angle`  
 Angle in degrees in which `text` will be measured.
@@ -4429,9 +4308,6 @@ imagedestroy($im);
 ```
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
 
 > **Note**: <span class="simpara">此函数仅在 PHP 编译时加入 freetype
 > 支持时有效（**--with-freetype-dir=DIR**）。</span>
@@ -4574,9 +4450,6 @@ imagedestroy($im);
 
 ### 注释
 
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
-
 > **Note**: <span class="simpara">此函数仅在 PHP 编译时加入 freetype
 > 支持时有效（**--with-freetype-dir=DIR**）。</span>
 
@@ -4680,9 +4553,6 @@ imagedestroy($im);
 ```
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
 
 > **Note**:
 >
@@ -5143,9 +5013,6 @@ if(!imageistruecolor($im))
 
 ### 注释
 
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
-
 ### 参见
 
 -   <span class="function">imagecreatetruecolor</span>
@@ -5251,9 +5118,6 @@ imagedestroy($im);
 
 ### 注释
 
-> **Note**: <span class="simpara">JPEG 支持仅在 PHP 与 GD-1.8
-> 或更高版本一起编译时可用。</span>
-
 > **Note**:
 >
 > 如果想输出渐进式 JPEG，需要用 <span
@@ -5345,12 +5209,6 @@ imagedestroy($im);
 <img src="images/21009b70229598c6a80eef8b45bf282b-imagelayereffect.png" width="100" height="100" alt="Output of example : imagelayereffect()" />
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数仅在与 GD 库捆绑编译的 PHP
-> 版本中可用。</span>
-
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
 
 imageline
 =========
@@ -5492,8 +5350,7 @@ An array containing the polygon's vertices, e.g.:
 Total number of points (vertices), which must be at least 3.
 
 `color`  
-A color identifier created with <span
-class="function">imagecolorallocate</span>.
+颜色标识符使用 <span class="function">imagecolorallocate</span> 创建。
 
 ### 返回值
 
@@ -6403,9 +6260,6 @@ imagejpeg($rotate);
 
 ### 注释
 
-> **Note**: <span class="simpara">此函数仅在与 GD 库捆绑编译的 PHP
-> 版本中可用。</span>
-
 imagesavealpha
 ==============
 
@@ -6466,9 +6320,6 @@ imagedestroy($png);
 ```
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
 
 ### 参见
 
@@ -6821,9 +6672,6 @@ class="methodparam"><span class="type">resource</span> `$image`</span> ,
 把画矩形，多边形，椭圆等等时所用的线宽设为 `thickness`
 个像素。成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
-
 ### 参数
 
 `image`  
@@ -6870,9 +6718,6 @@ imagedestroy($im);
 <img src="images/21009b70229598c6a80eef8b45bf282b-imagesetthickness.png" width="200" height="100" alt="Output of example : imagesetthickness()" />
 
 ### 注释
-
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
 
 imagesettile
 ============
@@ -7084,9 +6929,6 @@ imagedestroy($im);
 
 ### 注释
 
-> **Note**: <span class="simpara">此函数需要 GD 2.0.1 或更高版本(推荐
-> 2.0.28 及更高版本)。</span>
-
 imagettfbbox
 ============
 
@@ -7167,7 +7009,7 @@ class="methodparam"><span class="type">string</span> `$fontfile`</span>
 class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 `size`  
-字体的尺寸。根据 GD 的版本，为像素尺寸（GD1）或点（磅）尺寸（GD2）。
+字体的尺寸，单位：点（磅）。
 
 `angle`  
 角度制表示的角度，0 度为从左向右读的文本。更高数值表示逆时针旋转。例如
@@ -7481,9 +7323,6 @@ imagedestroy($im);
 
 ### 注释
 
-> **Note**: <span class="simpara">此函数仅在与 GD 库捆绑编译的 PHP
-> 版本中可用。</span>
-
 iptcembed
 =========
 
@@ -7695,12 +7534,6 @@ jpeg2wbmp($path, './test.wbmp', $image[1], $image[0], 5);
 
 ### 注释
 
-> **Note**: <span class="simpara">WBMP 支持仅在 PHP 与 GD-1.8
-> 或更高版本一起编译时可用。</span>
-
-> **Note**: <span class="simpara">JPEG 支持仅在 PHP 与 GD-1.8
-> 或更高版本一起编译时可用。</span>
-
 ### 参见
 
 -   <span class="function">png2wbmp</span>
@@ -7763,9 +7596,6 @@ png2wbmp($path, './test.wbmp', $image[1], $image[0], 7);
 ```
 
 ### 注释
-
-> **Note**: <span class="simpara">WBMP 支持仅在 PHP 与 GD-1.8
-> 或更高版本一起编译时可用。</span>
 
 ### 参见
 

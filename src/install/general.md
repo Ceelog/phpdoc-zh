@@ -11,7 +11,7 @@
 在通常情况下，需要三样东西：PHP 自身、一个 web 服务器和一个 web
 浏览器。可能已经有了一个 web
 浏览器，并且根据操作系统的配置，也很可能已经有了一个 web 服务器（例如
-Linux 和 MacOS 下的 Apache；Windows 下的 IIS）。也许在某个公司租用了 web
+Linux 和 macOS 下的 Apache；Windows 下的 IIS）。也许在某个公司租用了 web
 空间，这样，自己无需设置任何东西，仅需要编写 PHP
 脚本，并上传到租用的空间中，然后在浏览器中查看结果。
 
@@ -39,5 +39,4 @@ PHP-GTK
 可执行程序。也将在下面几节中了解到有关命令行可执行程序安装的信息。
 
 PHP 源代码包和二进制包可以在
-<a href="https://www.php.net/downloads.php" class="link external">» https://www.php.net/downloads.php</a>
-找到。建议选择一个最近的<a href="https://www.php.net/mirrors.php" class="link external">» 镜象服务器</a>下载。
+<a href="https://www.php.net/downloads.php" class="link external">» https://www.php.net/downloads.php</a>。

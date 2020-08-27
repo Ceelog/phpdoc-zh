@@ -139,7 +139,7 @@ Since PHP 5.0 this extension was bundled with PHP. Beginning with PHP
 
 Windows users must enable `php_sqlite.dll` inside of `php.ini` in order
 to use these functions. PECL 扩展的 DLL 当前不可用。参见
-<a href="/install/windows/legacy/index.html#install.windows.building" class="link">在 Windows 上构建</a>章节。
+<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">在 Windows 上构建</a>章节。
 
 Windows builds must also enable PDO because as of PHP 5.1.0 it depends
 on it. So, `php.ini` will end up with something like this:

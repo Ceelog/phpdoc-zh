@@ -17,7 +17,9 @@ Integer 整型
 ### 语法
 
 整型值可以使用十进制，十六进制，八进制或二进制表示，前面可以加上可选的符号（-
-或者 +）。
+或者 +）。 可以用
+<a href="/language/operators/arithmetic.html" class="link">负运算符</a>
+来表示一个负的<span class="type">integer</span>。
 
 二进制表达的 <span class="type">integer</span> 自 PHP 5.4.0 起可用。
 
@@ -25,33 +27,37 @@ Integer 整型
 *0*（零）。要使用十六进制表达，数字前必须加上
 *0x*。要使用二进制表达，数字前必须加上 *0b*。
 
+从 PHP 7.4.0 开始，整型数值可能会包含下划线
+(*\_*)，为了更好的阅读体验，这些下划线在展示的时候，会被 PHP 过滤掉。
+
 **示例 \#1 整数文字表达**
 
 ``` php
 <?php
 $a = 1234; // 十进制数
-$a = -123; // 负数
 $a = 0123; // 八进制数 (等于十进制 83)
 $a = 0x1A; // 十六进制数 (等于十进制 26)
 $a = 0b11111111; // 二进制数字 (等于十进制 255)
+$a = 1_234_567; // 整型数值 (PHP 7.4.0 以后)
 ?>
 ```
 
-<span class="type">integer</span> 语法的结构形式是：
+<span class="type">integer</span> 语法的结构形式是（PHP 7.4.0
+之前不支持下划线）：
 
-    decimal     : [1-9][0-9]*
+    decimal     : [1-9][0-9]*(_[0-9]+)*
                 | 0
 
-    hexadecimal : 0[xX][0-9a-fA-F]+
+    hexadecimal : 0[xX][0-9a-fA-F]+(_[0-9a-fA-F]+)*
 
-    octal       : 0[0-7]+
+    octal       : 0[0-7]+(_[0-7]+)*
 
-    binary      : 0b[01]+
+    binary      : 0[bB][01]+(_[01]+)*
 
-    integer     : [+-]?decimal
-                | [+-]?hexadecimal
-                | [+-]?octal
-                | [+-]?binary
+    integer     : decimal
+                | hexadecimal
+                | octal
+                | binary
 
 整型数的字长和平台有关，尽管通常最大值是大约二十亿（32 位有符号）。64
 位平台下的最大值通常是大约 9E18，除了 Windows 下 PHP 7 以前的版本，总是
@@ -111,6 +117,9 @@ PHP 中没有整除的运算符。*1/2* 产生出 <span class="type">float</span
 class="type">integer</span>，或者使用 <span
 class="function">round</span> 函数可以更好地进行四舍五入。
 
+> **Note**: <span class="simpara"> 从 PHP 7.0.0 开始，函数 <span
+> class="function">intdiv</span> 可以用于整数除法。 </span>
+
 ``` php
 <?php
 var_dump(25/7);         // float(3.5714285714286) 
@@ -142,7 +151,7 @@ class="type">resource</span> 分配的唯一资源号。
 当从浮点数转换成整数时，将*向下*取整。
 
 如果浮点数超出了整数范围（32 位平台下通常为 *+/- 2.15e+9 = 2^31*，64
-位平台下，除了 Windows，通常为 *+/- 9.22e+18 =
+位平台下，除了 Windows 且版本低于 PHP 7，通常为 *+/- 9.22e+18 =
 2^63*），则结果为未定义，因为没有足够的精度给出一个确切的整数结果。在此情况下没有警告，甚至没有任何通知！
 
 > **Note**:
@@ -167,6 +176,10 @@ echo (int) ( (0.1+0.7) * 10 ); // 显示 7!
 #### 从字符串转换
 
 参见<a href="/language/types/string.html#language.types.string.conversion" class="link">字符串转换为数值</a>。
+
+#### 从 <span class="type">NULL</span> 转换
+
+**`NULL`** 会转换为零 (*0*)。
 
 #### 从其它类型转换
 

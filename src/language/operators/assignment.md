@@ -73,15 +73,15 @@ $o = &new C;
 ?>
 ```
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     Parse error: syntax error, unexpected 'new' (T_NEW) in …
 
-以上例程在PHP 5.3中的输出：
+以上例程在 PHP 5.3 中的输出：
 
     Deprecated: Assigning the return value of new by reference is deprecated in …
 
-Output of the above example in PHP 5:
+以上例程在 PHP 5 中的输出：
 
     Strict Standards: Assigning the return value of new by reference is deprecated in …
 

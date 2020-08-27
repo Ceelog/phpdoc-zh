@@ -8,10 +8,10 @@ DLL。加载预编译的扩展是更简单更被推荐的方式。
 小组定期自动编译（如何下载见下节）。
 
 要将一扩展编译入
-PHP，请参考<a href="/install/windows/legacy/index.html#install.windows.building" class="link">从源程序编译</a>一章。
+PHP，请参考<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">从源程序编译</a>一章。
 
 要编译一个独立的扩展（即 DLL
-文件），请参考<a href="/install/windows/legacy/index.html#install.windows.building" class="link">从源程序编译</a>一章。如果在
+文件），请参考<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">从源程序编译</a>一章。如果在
 PHP 发行包和 PCEL 中都没有某 DLL
 文件，那可能需要自己编译之后才能使用该扩展。
 

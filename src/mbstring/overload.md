@@ -3,8 +3,7 @@
 
 **Warning**
 
-This feature has been *DEPRECATED* as of PHP 7.2.0. Relying on this
-feature is highly discouraged.
+本特性已自 PHP 7.2.0 起*废弃*。强烈建议不要使用本特性。
 
 你也许常常会发现现存的 PHP 应用很难运行在多字节环境下。
 发生这种情况的原因是大多数那种 PHP 应用使用了标准的字符串函数，类似

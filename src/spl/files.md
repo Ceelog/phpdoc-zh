@@ -2349,8 +2349,7 @@ Gets line from file and strip HTML tags
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.3.0. Relying on this
-function is highly discouraged.
+本函数已自 PHP 7.3.0 起*废弃*。强烈建议不要使用本函数。
 
 ### 说明
 

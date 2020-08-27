@@ -6,5 +6,5 @@ JSON\_checker。 PHP 7 中是改进的全新解析器，专门为 PHP
 
 > **Note**:
 >
-> PHP implements a superset of JSON as specified in the original
+> PHP 实现了 JSON 的一个超集，参考
 > <a href="http://www.faqs.org/rfcs/rfc7159" class="link external">» RFC 7159</a>.

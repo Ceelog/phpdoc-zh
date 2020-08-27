@@ -211,10 +211,10 @@ extension=php_mongo.dll
 
 > **Note**: **为 Windows 用户添加额外的依赖 DLL**  
 >
-> 为了使此扩展生效， DLL 文件必须能在 Windows 系统的 *PATH*
+> 为了使此扩展生效， DLL 文件必须能在 Windows 系统的 `PATH`
 > 指示的路径下找到。如何操作的信息，请参见题为“<a href="/faq/installation.html#faq.installation.addtopath" class="link">如何在 Windows 中将 PHP 目录加到 PATH 中</a>”的FAQ。虽然将
 > DLL 文件从 PHP 文件夹复制到 Windows 系统目录也行，但不建议这样做。
-> *此扩展需要下列文件在 *PATH* 路径中：* `libsasl.dll`
+> *此扩展需要下列文件在 `PATH` 路径中：* `libsasl.dll`
 
 OS X
 ----
@@ -4978,11 +4978,7 @@ public function command($data) {
 
 -   *"timeout"*
 
-    Integer, defaults to *MongoCursor::$timeout*. If "safe" is set, this
-    sets how long (in milliseconds) for the client to wait for a
-    database response. If the database does not respond within the
-    timeout period, a <span
-    class="classname">MongoCursorTimeoutException</span> will be thrown.
+    Deprecated alias for *"socketTimeoutMS"*.
 
 ### 更新日志
 
@@ -7943,9 +7939,16 @@ available options include:
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. Forces the insert to be synced to
-    disk before returning success. If **`TRUE`**, an acknowledged insert
-    is implied and will override setting *w* to *0*.
+    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    exactly like *"j"*. If journaling is not enabled, the write
+    operation blocks until it is synced to database files on disk. If
+    **`TRUE`**, an acknowledged insert is implied and this option will
+    override setting *"w"* to *0*.
+
+    > **Note**: <span class="simpara">If journaling is enabled, users
+    > are strongly encouraged to use the *"j"* option instead of
+    > *"fsync"*. Do not use *"fsync"* and *"j"* simultaneously, as that
+    > will result in an error.</span>
 
 -   *"j"*
 
@@ -7972,7 +7975,7 @@ available options include:
 -   *"w"*
 
     See
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcerns</a>.
+    <a href="/book/mongo.html#Write%20Concerns" class="link">Write Concerns</a>.
     The default value for <span class="classname">MongoClient</span> is
     *1*.
 
@@ -7992,17 +7995,13 @@ The following options are deprecated and should no longer be used:
 
 -   *"safe"*
 
-    *Deprecated*. Please use the
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcern</a>
-    *w* option.
+    Deprecated. Please use the
+    <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
+    *"w"* option.
 
 -   *"timeout"*
 
-    Integer, defaults to *MongoCursor::$timeout*. If "safe" is set, this
-    sets how long (in milliseconds) for the client to wait for a
-    database response. If the database does not respond within the
-    timeout period, a <span
-    class="classname">MongoCursorTimeoutException</span> will be thrown.
+    Deprecated alias for *"socketTimeoutMS"*.
 
 -   *"wtimeout"*
 
@@ -8022,14 +8021,14 @@ documents are empty or if they contains zero-length keys. Attempting to
 insert an object with protected and private properties will cause a
 zero-length key error.
 
-Throws <span class="classname">MongoCursorException</span> if the "w"
+Throws <span class="classname">MongoCursorException</span> if the *"w"*
 option is set and the write fails.
 
 Throws <span class="classname">MongoCursorTimeoutException</span> if the
-"w" option is set to a value greater than one and the operation takes
+*"w"* option is set to a value greater than one and the operation takes
 longer than `MongoCursor::$timeout` milliseconds to complete. This does
 not kill the operation on the server, it is a client-side timeout. The
-operation in *MongoCollection::$wtimeout* is milliseconds.
+operation in `MongoCollection::$wtimeout` is milliseconds.
 
 ### 更新日志
 
@@ -8466,7 +8465,7 @@ The following options may be used with MongoDB versions before 2.6:
 -   *"w"*
 
     See
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcerns</a>.
+    <a href="/book/mongo.html#Write%20Concerns" class="link">Write Concerns</a>.
     The default value for <span class="classname">MongoClient</span> is
     *1*.
 
@@ -8486,17 +8485,13 @@ The following options are deprecated and should no longer be used:
 
 -   *"safe"*
 
-    *Deprecated*. Please use the
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcern</a>
-    *w* option.
+    Deprecated. Please use the
+    <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
+    *"w"* option.
 
 -   *"timeout"*
 
-    Integer, defaults to *MongoCursor::$timeout*. If "safe" is set, this
-    sets how long (in milliseconds) for the client to wait for a
-    database response. If the database does not respond within the
-    timeout period, a <span
-    class="classname">MongoCursorTimeoutException</span> will be thrown.
+    Deprecated alias for *"socketTimeoutMS"*.
 
 -   *"wtimeout"*
 
@@ -8531,14 +8526,14 @@ server could not create the unique index due to conflicting documents.
 Throws <span class="classname">MongoResultException</span> if the server
 could not create the index due to an error.
 
-Throws <span class="classname">MongoCursorException</span> if the "w"
+Throws <span class="classname">MongoCursorException</span> if the *"w"*
 option is set and the write fails.
 
 Throws <span class="classname">MongoCursorTimeoutException</span> if the
-"w" option is set to a value greater than one and the operation takes
+*"w"* option is set to a value greater than one and the operation takes
 longer than `MongoCursor::$timeout` milliseconds to complete. This does
 not kill the operation on the server, it is a client-side timeout. The
-operation in *MongoCollection::$wtimeout* is milliseconds.
+operation in `MongoCollection::$wtimeout` is milliseconds.
 
 ### 范例
 
@@ -9077,7 +9072,7 @@ The following options may be used with MongoDB versions before 2.6:
 -   *"w"*
 
     See
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcerns</a>.
+    <a href="/book/mongo.html#Write%20Concerns" class="link">Write Concerns</a>.
     The default value for <span class="classname">MongoClient</span> is
     *1*.
 
@@ -9097,17 +9092,13 @@ The following options are deprecated and should no longer be used:
 
 -   *"safe"*
 
-    *Deprecated*. Please use the
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcern</a>
-    *w* option.
+    Deprecated. Please use the
+    <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
+    *"w"* option.
 
 -   *"timeout"*
 
-    Integer, defaults to *MongoCursor::$timeout*. If "safe" is set, this
-    sets how long (in milliseconds) for the client to wait for a
-    database response. If the database does not respond within the
-    timeout period, a <span
-    class="classname">MongoCursorTimeoutException</span> will be thrown.
+    Deprecated alias for *"socketTimeoutMS"*.
 
 -   *"wtimeout"*
 
@@ -9195,14 +9186,14 @@ server could not create the unique index due to conflicting documents.
 Throws <span class="classname">MongoResultException</span> if the server
 could not create the index due to an error.
 
-Throws <span class="classname">MongoCursorException</span> if the "w"
+Throws <span class="classname">MongoCursorException</span> if the *"w"*
 option is set and the write fails.
 
 Throws <span class="classname">MongoCursorTimeoutException</span> if the
-"w" option is set to a value greater than one and the operation takes
+*"w"* option is set to a value greater than one and the operation takes
 longer than `MongoCursor::$timeout` milliseconds to complete. This does
 not kill the operation on the server, it is a client-side timeout. The
-operation in *MongoCollection::$wtimeout* is milliseconds.
+operation in `MongoCollection::$wtimeout` is milliseconds.
 
 ### 范例
 
@@ -10524,9 +10515,16 @@ class="classname">MongoBinData</span>。
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. Forces the insert to be synced to
-    disk before returning success. If **`TRUE`**, an acknowledged insert
-    is implied and will override setting *w* to *0*.
+    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    exactly like *"j"*. If journaling is not enabled, the write
+    operation blocks until it is synced to database files on disk. If
+    **`TRUE`**, an acknowledged insert is implied and this option will
+    override setting *"w"* to *0*.
+
+    > **Note**: <span class="simpara">If journaling is enabled, users
+    > are strongly encouraged to use the *"j"* option instead of
+    > *"fsync"*. Do not use *"fsync"* and *"j"* simultaneously, as that
+    > will result in an error.</span>
 
 -   *"j"*
 
@@ -10543,7 +10541,7 @@ class="classname">MongoBinData</span>。
 -   *"w"*
 
     See
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcerns</a>.
+    <a href="/book/mongo.html#Write%20Concerns" class="link">Write Concerns</a>.
     The default value for <span class="classname">MongoClient</span> is
     *1*.
 
@@ -10553,17 +10551,13 @@ class="classname">MongoBinData</span>。
 
 -   *"safe"*
 
-    *Deprecated*. Please use the
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcern</a>
-    *w* option.
+    Deprecated. Please use the
+    <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
+    *"w"* option.
 
 -   *"timeout"*
 
-    Integer, defaults to *MongoCursor::$timeout*. If "safe" is set, this
-    sets how long (in milliseconds) for the client to wait for a
-    database response. If the database does not respond within the
-    timeout period, a <span
-    class="classname">MongoCursorTimeoutException</span> will be thrown.
+    Deprecated alias for *"socketTimeoutMS"*.
 
 ### 返回值
 
@@ -10617,14 +10611,14 @@ upsert，无论是这个字段 还是 upserted 都会被保留（除非发生了
 class="classname">MongoException</span>。 尝试插入包含 protected 和
 private 属性的对象将会导致零长度键（zero-length key）的错误。
 
-Throws <span class="classname">MongoCursorException</span> if the "w"
+Throws <span class="classname">MongoCursorException</span> if the *"w"*
 option is set and the write fails.
 
 Throws <span class="classname">MongoCursorTimeoutException</span> if the
-"w" option is set to a value greater than one and the operation takes
+*"w"* option is set to a value greater than one and the operation takes
 longer than `MongoCursor::$timeout` milliseconds to complete. This does
 not kill the operation on the server, it is a client-side timeout. The
-operation in *MongoCollection::$wtimeout* is milliseconds.
+operation in `MongoCollection::$wtimeout` is milliseconds.
 
 ### 更新日志
 
@@ -10880,7 +10874,7 @@ class="initializer"> = array()</span></span> \]\] )
 -   *"w"*
 
     See
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcerns</a>.
+    <a href="/book/mongo.html#Write%20Concerns" class="link">Write Concerns</a>.
     The default value for <span class="classname">MongoClient</span> is
     *1*.
 
@@ -10890,9 +10884,16 @@ class="initializer"> = array()</span></span> \]\] )
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. Forces the insert to be synced to
-    disk before returning success. If **`TRUE`**, an acknowledged insert
-    is implied and will override setting *w* to *0*.
+    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    exactly like *"j"*. If journaling is not enabled, the write
+    operation blocks until it is synced to database files on disk. If
+    **`TRUE`**, an acknowledged insert is implied and this option will
+    override setting *"w"* to *0*.
+
+    > **Note**: <span class="simpara">If journaling is enabled, users
+    > are strongly encouraged to use the *"j"* option instead of
+    > *"fsync"*. Do not use *"fsync"* and *"j"* simultaneously, as that
+    > will result in an error.</span>
 
 -   *"j"*
 
@@ -10909,7 +10910,7 @@ class="initializer"> = array()</span></span> \]\] )
 -   *"w"*
 
     See
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcerns</a>.
+    <a href="/book/mongo.html#Write%20Concerns" class="link">Write Concerns</a>.
     The default value for <span class="classname">MongoClient</span> is
     *1*.
 
@@ -10919,17 +10920,13 @@ class="initializer"> = array()</span></span> \]\] )
 
 -   *"safe"*
 
-    *Deprecated*. Please use the
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcern</a>
-    *w* option.
+    Deprecated. Please use the
+    <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
+    *"w"* option.
 
 -   *"timeout"*
 
-    Integer, defaults to *MongoCursor::$timeout*. If "safe" is set, this
-    sets how long (in milliseconds) for the client to wait for a
-    database response. If the database does not respond within the
-    timeout period, a <span
-    class="classname">MongoCursorTimeoutException</span> will be thrown.
+    Deprecated alias for *"socketTimeoutMS"*.
 
 ### 返回值
 
@@ -10941,14 +10938,14 @@ class="function">MongoCollection::insert</span> 的文档。
 
 ### 错误／异常
 
-Throws <span class="classname">MongoCursorException</span> if the "w"
+Throws <span class="classname">MongoCursorException</span> if the *"w"*
 option is set and the write fails.
 
 Throws <span class="classname">MongoCursorTimeoutException</span> if the
-"w" option is set to a value greater than one and the operation takes
+*"w"* option is set to a value greater than one and the operation takes
 longer than `MongoCursor::$timeout` milliseconds to complete. This does
 not kill the operation on the server, it is a client-side timeout. The
-operation in *MongoCollection::$wtimeout* is milliseconds.
+operation in `MongoCollection::$wtimeout` is milliseconds.
 
 ### 更新日志
 
@@ -11058,9 +11055,16 @@ private 的属性。
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. Forces the insert to be synced to
-    disk before returning success. If **`TRUE`**, an acknowledged insert
-    is implied and will override setting *w* to *0*.
+    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    exactly like *"j"*. If journaling is not enabled, the write
+    operation blocks until it is synced to database files on disk. If
+    **`TRUE`**, an acknowledged insert is implied and this option will
+    override setting *"w"* to *0*.
+
+    > **Note**: <span class="simpara">If journaling is enabled, users
+    > are strongly encouraged to use the *"j"* option instead of
+    > *"fsync"*. Do not use *"fsync"* and *"j"* simultaneously, as that
+    > will result in an error.</span>
 
 -   *"j"*
 
@@ -11087,7 +11091,7 @@ private 的属性。
 -   *"w"*
 
     See
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcerns</a>.
+    <a href="/book/mongo.html#Write%20Concerns" class="link">Write Concerns</a>.
     The default value for <span class="classname">MongoClient</span> is
     *1*.
 
@@ -11109,17 +11113,13 @@ private 的属性。
 
 -   *"safe"*
 
-    *Deprecated*. Please use the
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcern</a>
-    *w* option.
+    Deprecated. Please use the
+    <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
+    *"w"* option.
 
 -   *"timeout"*
 
-    Integer, defaults to *MongoCursor::$timeout*. If "safe" is set, this
-    sets how long (in milliseconds) for the client to wait for a
-    database response. If the database does not respond within the
-    timeout period, a <span
-    class="classname">MongoCursorTimeoutException</span> will be thrown.
+    Deprecated alias for *"socketTimeoutMS"*.
 
 ### 返回值
 
@@ -11132,14 +11132,14 @@ boolean，表示数组是否为空（空数组不会被插入）。
 class="classname">MongoException</span>。 尝试插入包含 protected 和
 private 属性的对象将导致零长度键的错误。
 
-Throws <span class="classname">MongoCursorException</span> if the "w"
+Throws <span class="classname">MongoCursorException</span> if the *"w"*
 option is set and the write fails.
 
 Throws <span class="classname">MongoCursorTimeoutException</span> if the
-"w" option is set to a value greater than one and the operation takes
+*"w"* option is set to a value greater than one and the operation takes
 longer than `MongoCursor::$timeout` milliseconds to complete. This does
 not kill the operation on the server, it is a client-side timeout. The
-operation in *MongoCollection::$wtimeout* is milliseconds.
+operation in `MongoCollection::$wtimeout` is milliseconds.
 
 ### 更新日志
 
@@ -11536,9 +11536,16 @@ options include:
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. Forces the insert to be synced to
-    disk before returning success. If **`TRUE`**, an acknowledged insert
-    is implied and will override setting *w* to *0*.
+    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    exactly like *"j"*. If journaling is not enabled, the write
+    operation blocks until it is synced to database files on disk. If
+    **`TRUE`**, an acknowledged insert is implied and this option will
+    override setting *"w"* to *0*.
+
+    > **Note**: <span class="simpara">If journaling is enabled, users
+    > are strongly encouraged to use the *"j"* option instead of
+    > *"fsync"*. Do not use *"fsync"* and *"j"* simultaneously, as that
+    > will result in an error.</span>
 
 -   *"j"*
 
@@ -11565,7 +11572,7 @@ options include:
 -   *"w"*
 
     See
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcerns</a>.
+    <a href="/book/mongo.html#Write%20Concerns" class="link">Write Concerns</a>.
     The default value for <span class="classname">MongoClient</span> is
     *1*.
 
@@ -11585,17 +11592,13 @@ The following options are deprecated and should no longer be used:
 
 -   *"safe"*
 
-    *Deprecated*. Please use the
-    <a href="/book/mongo.html#Write%20Concerns" class="link">WriteConcern</a>
-    *w* option.
+    Deprecated. Please use the
+    <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
+    *"w"* option.
 
 -   *"timeout"*
 
-    Integer, defaults to *MongoCursor::$timeout*. If "safe" is set, this
-    sets how long (in milliseconds) for the client to wait for a
-    database response. If the database does not respond within the
-    timeout period, a <span
-    class="classname">MongoCursorTimeoutException</span> will be thrown.
+    Deprecated alias for *"socketTimeoutMS"*.
 
 -   *"wtimeout"*
 
@@ -11611,14 +11614,14 @@ class="function">MongoCollection::insert</span>.
 
 ### 错误／异常
 
-Throws <span class="classname">MongoCursorException</span> if the "w"
+Throws <span class="classname">MongoCursorException</span> if the *"w"*
 option is set and the write fails.
 
 Throws <span class="classname">MongoCursorTimeoutException</span> if the
-"w" option is set to a value greater than one and the operation takes
+*"w"* option is set to a value greater than one and the operation takes
 longer than `MongoCursor::$timeout` milliseconds to complete. This does
 not kill the operation on the server, it is a client-side timeout. The
-operation in *MongoCollection::$wtimeout* is milliseconds.
+operation in `MongoCollection::$wtimeout` is milliseconds.
 
 ### 更新日志
 
@@ -17808,14 +17811,14 @@ class="function">MongoCollection::insert</span>.
 
 ### 错误／异常
 
-Throws <span class="classname">MongoCursorException</span> if the "w"
+Throws <span class="classname">MongoCursorException</span> if the *"w"*
 option is set and the write fails.
 
 Throws <span class="classname">MongoCursorTimeoutException</span> if the
-"w" option is set to a value greater than one and the operation takes
+*"w"* option is set to a value greater than one and the operation takes
 longer than `MongoCursor::$timeout` milliseconds to complete. This does
 not kill the operation on the server, it is a client-side timeout. The
-operation in *MongoCollection::$wtimeout* is milliseconds.
+operation in `MongoCollection::$wtimeout` is milliseconds.
 
 MongoGridFS::drop
 =================
@@ -18011,7 +18014,7 @@ these these options.
 
 Returns the *\_id* of the saved file document. This will be a generated
 <span class="classname">MongoId</span> unless an *\_id* was explicitly
-specified in the `extra` parameter.
+specified in the `metadata` parameter.
 
 ### 错误／异常
 
@@ -18064,14 +18067,14 @@ class="function">MongoCollection::insert</span>.
 
 ### 错误／异常
 
-Throws <span class="classname">MongoCursorException</span> if the "w"
+Throws <span class="classname">MongoCursorException</span> if the *"w"*
 option is set and the write fails.
 
 Throws <span class="classname">MongoCursorTimeoutException</span> if the
-"w" option is set to a value greater than one and the operation takes
+*"w"* option is set to a value greater than one and the operation takes
 longer than `MongoCursor::$timeout` milliseconds to complete. This does
 not kill the operation on the server, it is a client-side timeout. The
-operation in *MongoCollection::$wtimeout* is milliseconds.
+operation in `MongoCollection::$wtimeout` is milliseconds.
 
 MongoGridFS::storeBytes
 =======================
@@ -18115,7 +18118,7 @@ these these options.
 
 Returns the *\_id* of the saved file document. This will be a generated
 <span class="classname">MongoId</span> unless an *\_id* was explicitly
-specified in the `extra` parameter.
+specified in the `metadata` parameter.
 
 ### 错误／异常
 
@@ -18207,7 +18210,7 @@ these these options.
 
 Returns the *\_id* of the saved file document. This will be a generated
 <span class="classname">MongoId</span> unless an *\_id* was explicitly
-specified in the `extra` parameter.
+specified in the `metadata` parameter.
 
 ### 错误／异常
 
@@ -18301,7 +18304,7 @@ Other metadata fields to include in the file document.
 
 Returns the *\_id* of the saved file document. This will be a generated
 <span class="classname">MongoId</span> unless an *\_id* was explicitly
-specified in the `extra` parameter.
+specified in the `metadata` parameter.
 
 > **Note**:
 >

@@ -192,7 +192,7 @@ class="surname family-name">Vrana</span> </span>
 <a href="/preface.html#contributors" class="link">其他贡献者</a> </span>
 </span>
 
-2020-08-26
+2020-08-28
 
 **Edited By**: <span class="personname fn"> <span
 class="firstname given-name">Peter</span> <span
@@ -200,31 +200,25 @@ class="surname family-name">Cowburn</span> </span>
 
 <span class="personname fn">中文翻译人员：</span>
 
-<span class="personname fn">肖盛文</span>
-
-<span class="personname fn">洪建家</span>
-
-<span class="personname fn">穆少磊</span>
-
-<span class="personname fn">宋琪</span>
-
-<span class="personname fn">黄啸宇</span>
-
-<span class="personname fn">王远之</span>
-
-<span class="personname fn">肖理达</span>
+<span class="personname fn">戴劼</span>
 
 <span class="personname fn">乔楚</span>
 
-<span class="personname fn">戴劼</span>
+<span class="personname fn">袁玉强</span>
 
-<span class="personname fn">褚兆玮</span>
+<span class="personname fn">王远之</span>
+
+<span class="personname fn">段小强</span>
 
 <span class="personname fn">周梦康</span>
 
-<span class="personname fn">袁玉强</span>
+<span class="personname fn">肖理达</span>
 
-<span class="personname fn">段小强</span>
+<span class="personname fn">陈伯乐</span>
+
+<span class="personname fn">肖盛文</span>
+
+<span class="personname fn">褚兆玮</span>
 
 © <span class="year">1997-2020</span> <span class="holder">PHP
 文档组</span>

@@ -184,7 +184,7 @@ $function();
     object(Test)#1 (0) {
     }
 
-以上例程在PHP 5.3中的输出：
+以上例程在 PHP 5.3 中的输出：
 
     Notice: Undefined variable: this in script.php on line 8
     NULL

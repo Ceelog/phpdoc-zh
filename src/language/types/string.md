@@ -550,7 +550,7 @@ var_dump(isset($str['1x']));
 ?>
 ```
 
-以上例程在PHP 5.3中的输出：
+以上例程在 PHP 5.3 中的输出：
 
     string(1) "b"
     bool(true)
@@ -561,7 +561,7 @@ var_dump(isset($str['1x']));
     string(1) "b"
     bool(true)
 
-以上例程在PHP 5.4中的输出：
+以上例程在 PHP 5.4 中的输出：
 
     string(1) "b"
     bool(true)

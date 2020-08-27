@@ -25,7 +25,7 @@
 <a href="https://pecl.php.net/package/apc" class="link external">» https://pecl.php.net/package/apc</a>.
 
 PECL 扩展的 DLL 当前不可用。参见
-<a href="/install/windows/legacy/index.html#install.windows.building" class="link">在 Windows 上构建</a>章节。
+<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">在 Windows 上构建</a>章节。
 
 > **Note**: <span class="simpara">
 > 在Windows上，APC需要一个临时目录，并且Web服务器对这个目录可写，APC会检测TMP,TEMP,USERPROFILE这些Windows的环境变量，如果这些都没有，会检查系统文件夹下的WINDOWS目录。

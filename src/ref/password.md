@@ -150,8 +150,8 @@ class="function">password\_hash</span>。
 一个用来在散列密码时指示算法的<a href="/password/constants.html" class="link">密码算法常量</a>。
 
 `options`  
-一个包含有选项的关联数组。目前支持两个选项：*salt*，在散列密码时加的盐（干扰字符串），以及*cost*，用来指明算法递归的层数。这两个值的例子可在
-<span class="function">crypt</span> 页面找到。
+一个包含有选项的关联数组。详细的参数说明，请参考文档
+<a href="/password/constants.html" class="link">密码算法常数</a>。
 
 省略后，将使用随机盐值与默认 cost。
 
@@ -338,8 +338,8 @@ class="methodparam"><span class="type">string</span> `$hash`</span> ,
 一个用来在散列密码时指示算法的<a href="/password/constants.html" class="link">密码算法常量</a>。
 
 `options`  
-一个包含有选项的关联数组。目前支持两个选项：*salt*，在散列密码时加的盐（干扰字符串），以及*cost*，用来指明算法递归的层数。这两个值的例子可在
-<span class="function">crypt</span> 页面找到。
+一个包含有选项的关联数组。详细的参数说明，请参考文档
+<a href="/password/constants.html" class="link">密码算法常数</a>。
 
 ### 范例
 

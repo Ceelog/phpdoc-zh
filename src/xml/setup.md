@@ -12,8 +12,8 @@
 ----
 
 此扩展需要 <a href="/book/libxml.html" class="link">libxml</a> PHP
-扩展。这表示需要使用 **--enable-libxml**，尽管这将隐式完成因为 libxml
-是缺省开启的。
+扩展。这表示需要使用 **--with-libxml**，或在 PHP 7.4 之前的版本中使用
+**--enable-libxml**， 尽管这将隐式完成因为 libxml 是缺省开启的。
 
 缺省情况下，此扩展使用<span class="productname">expat compat layer
 </span>。也可使用<span class="productname">expat</span>， 此库位于
@@ -34,7 +34,7 @@ expat 的源代码 RPM 安装包可在
 安装
 ----
 
-此扩展默认为启用,编译时可通过下列选项禁用： **--disable-xml**
+此扩展默认为启用，编译时可通过下列选项禁用： **--disable-xml**
 
 这些函数默认为有效的，使用了捆绑的 expat 库。您可以通过参数
 **--disable-xml** 来屏蔽 XML 的支持。如果您将 PHP 编译为 Apache 1.3.9

@@ -27,5 +27,5 @@ a list of prerequisites.
 维护人员信息及变更日志等，都在此处：
 <a href="https://pecl.php.net/package/ui" class="link external">» https://pecl.php.net/package/ui</a>.
 
-Windows binaries (DLL files) for this PECL extension are available from
-the PECL website.
+此扩展在 Windows 平台的二进制扩展 (DLL 文件) PECL 可以在 PECL
+官方网站上下载。

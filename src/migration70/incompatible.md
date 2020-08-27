@@ -129,7 +129,7 @@ var_dump($a);
 ?>
 ```
 
-Output of the above example in PHP 5:
+以上例程在 PHP 5 中的输出：
 
     array(3) {
       [0]=>
@@ -140,7 +140,7 @@ Output of the above example in PHP 5:
       int(1)
     }
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     array(3) {
       [0]=>
@@ -188,7 +188,7 @@ var_dump($array);
 ?>
 ```
 
-Output of the above example in PHP 5:
+以上例程在 PHP 5 中的输出：
 
     array(2) {
       ["b"]=>
@@ -197,7 +197,7 @@ Output of the above example in PHP 5:
       &int(1)
     }
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     array(2) {
       ["a"]=>
@@ -252,13 +252,13 @@ foreach ($array as &$val) {
 ?>
 ```
 
-Output of the above example in PHP 5:
+以上例程在 PHP 5 中的输出：
 
     int(1)
     int(2)
     bool(false)
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     int(0)
     int(0)
@@ -286,11 +286,11 @@ foreach ($array as &$val) {
 ?>
 ```
 
-Output of the above example in PHP 5:
+以上例程在 PHP 5 中的输出：
 
     int(0)
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     int(0)
     int(1)
@@ -319,11 +319,11 @@ var_dump(1 >> -1);
 ?>
 ```
 
-Output of the above example in PHP 5:
+以上例程在 PHP 5 中的输出：
 
     int(0)
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     Fatal error: Uncaught ArithmeticError: Bit shift by negative number in /tmp/test.php:2
     Stack trace:
@@ -351,14 +351,14 @@ var_dump(substr("foo", "0x1"));
 ?>
 ```
 
-Output of the above example in PHP 5:
+以上例程在 PHP 5 中的输出：
 
     bool(true)
     bool(true)
     int(15)
     string(2) "oo"
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     bool(false)
     bool(false)
@@ -512,11 +512,11 @@ $c =& new C;
 ?>
 ```
 
-Output of the above example in PHP 5:
+以上例程在 PHP 5 中的输出：
 
     Deprecated: Assigning the return value of new by reference is deprecated in /tmp/test.php on line 3
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     Parse error: syntax error, unexpected 'new' (T_NEW) in /tmp/test.php on line 3
 
@@ -573,13 +573,13 @@ class B {
 ?>
 ```
 
-Output of the above example in PHP 5.6:
+以上例程在 PHP 5.6 中的输出：
 
     Deprecated: Non-static method A::test() should not be called statically, assuming $this from incompatible context in /tmp/test.php on line 8
     object(B)#1 (0) {
     }
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     Deprecated: Non-static method A::test() should not be called statically in /tmp/test.php on line 8
 
@@ -658,11 +658,11 @@ function foo($x) {
 foo(1);?>
 ```
 
-Output of the above example in PHP 5:
+以上例程在 PHP 5 中的输出：
 
     1
 
-Output of the above example in PHP 7:
+以上例程在 PHP 7 中的输出：
 
     2
 

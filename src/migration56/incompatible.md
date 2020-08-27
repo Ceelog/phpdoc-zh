@@ -25,7 +25,7 @@ var_dump((new C)->array);
 ?>
 ```
 
-Output of the above example in PHP 5.5:
+以上例程在 PHP 5.5 中的输出：
 
     array(2) {
       [0]=>
@@ -34,7 +34,7 @@ Output of the above example in PHP 5.5:
       string(4) "quux"
     }
 
-Output of the above example in PHP 5.6:
+以上例程在 PHP 5.6 中的输出：
 
     array(3) {
       [1]=>

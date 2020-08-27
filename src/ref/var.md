@@ -281,7 +281,7 @@ var_dump(empty($expected_array_got_string['0 Mostel']));
 ?>
 ```
 
-以上例程在PHP 5.3中的输出：
+以上例程在 PHP 5.3 中的输出：
 
     bool(false)
     bool(false)
@@ -290,7 +290,7 @@ var_dump(empty($expected_array_got_string['0 Mostel']));
     bool(false)
     bool(false)
 
-以上例程在PHP 5.4中的输出：
+以上例程在 PHP 5.4 中的输出：
 
     bool(true)
     bool(false)
@@ -1251,7 +1251,7 @@ var_dump(isset($expected_array_got_string['0 Mostel']));
 ?>
 ```
 
-以上例程在PHP 5.3中的输出：
+以上例程在 PHP 5.3 中的输出：
 
     bool(true)
     bool(true)
@@ -1260,7 +1260,7 @@ var_dump(isset($expected_array_got_string['0 Mostel']));
     bool(true)
     bool(true)
 
-以上例程在PHP 5.4中的输出：
+以上例程在 PHP 5.4 中的输出：
 
     bool(false)
     bool(true)

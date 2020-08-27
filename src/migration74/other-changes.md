@@ -1,23 +1,22 @@
-Other Changes
--------------
+其他变更
+--------
 
-### Performance Improvements
+### 性能提升
 
-#### PHP Core
+#### PHP 核心
 
-A specialized VM opcode for the <span
-class="function">array\_key\_exists</span> function has been added,
-which improves performance of this function if it can be statically
-resolved. In namespaced code, this may require writing
-*\\array\_key\_exists()* or explicitly importing the function.
+为 <span class="function">array\_key\_exists</span> 函数添加了一个专门的
+VM opcache
+优化，如果该函数可以被静态解析，则可以提高该函数的性能。如果你在项目中使用了命名空间，可能会需要使用
+*\\array\_key\_exists()* 来显性的导入该函数。
 
-#### Regular Expressions (Perl-Compatible)
+#### 正则表达式 (Perl-Compatible)
 
 When <span class="function">preg\_match</span> in UTF-8 mode (*"u"*
 modifier) is repeatedly called on the same string (but possibly
 different offsets), it will only be checked for UTF-8 validity once.
 
-### Changes to INI File Handling
+### INI 配置文件处理的变化
 
 <a href="/ini/core.html#ini.zend.exception-ignore-args" class="link">zend.exception_ignore_args</a>
 is a new INI directive for including or excluding arguments from stack
@@ -28,100 +27,95 @@ a new INI directive for specifying the user account under which
 preloading code is execute if it would otherwise be run as root (which
 is not allowed for security reasons).
 
-### Migration to pkg-config
+### 迁移到 pkg-config
 
-A number of extensions have been migrated to exclusively use pkg-config
-for the detection of library dependencies. Generally, this means that
-instead of using **--with-foo-dir=DIR** or similar only **--with-foo**
-is used. Custom library paths can be specified either by adding
-additional directories to *PKG\_CONFIG\_PATH* or by explicitly
-specifying compilation options through *FOO\_CFLAGS* and *FOO\_LIBS*.
+一些扩展已经迁移到只使用 pkg-config
+来检测库的依赖性。一般来说，这意味着不再用 **--with-foo-dir=DIR**
+或类似的参数，而是使用 **--with-foo**。自定义库的路径可以通过向
+*PKG\_CONFIG\_PATH* 添加额外的目录，或通过 *FOO\_CFLAGS* 和 *FOO\_LIBS*
+来明确指定。
 
-The following extensions and SAPIs are affected:
+以下扩展和 SAPI 会受到影响：
 
 -   <span class="simpara">CURL:</span>
-    -   <span class="simpara"> **--with-curl** no longer accepts a
-        directory. </span>
+    -   <span class="simpara"> **--with-curl** 选项不再接受一个目录。
+        </span>
 -   <span class="simpara">Enchant:</span>
-    -   <span class="simpara"> **--with-enchant** no longer accepts a
-        directory. </span>
+    -   <span class="simpara"> **--with-enchant** 选项不再接受一个目录。
+        </span>
 -   <span class="simpara">FPM:</span>
     -   <span class="simpara"> **--with-fpm-systemd** now uses only
         pkg-config for libsystem checks. The libsystemd minimum required
         version is 209. </span>
 -   <span class="simpara">GD:</span>
-    -   <span class="simpara"> **--with-gd** becomes **--enable-gd**
-        (whether to enable the extension at all) and
+    -   <span class="simpara"> **--with-gd** 改变为 **--enable-gd**
+        (whether to enable the extension at all) 和
         **--with-external-gd** (to opt into using an external libgd,
         rather than the bundled one). </span>
-    -   <span class="simpara"> **--with-png-dir** has been removed.
-        libpng is required. </span>
-    -   <span class="simpara"> **--with-zlib-dir** has been removed.
-        zlib is required. </span>
-    -   <span class="simpara"> **--with-freetype-dir** becomes
+    -   <span class="simpara"> **--with-png-dir** 参数被移除。需要
+        libpng 支持。 </span>
+    -   <span class="simpara"> **--with-zlib-dir** 参数被移除。需要 zlib
+        支持。 </span>
+    -   <span class="simpara"> **--with-freetype-dir** 改变为
         **--with-freetype** </span>
-    -   <span class="simpara"> **--with-jpeg-dir** becomes
+    -   <span class="simpara"> **--with-jpeg-dir** 改变为
         **--with-jpeg** </span>
-    -   <span class="simpara"> **--with-webp-dir** becomes
+    -   <span class="simpara"> **--with-webp-dir** 改变为
         **--with-webp** </span>
-    -   <span class="simpara"> **--with-xpm-dir** becomes **--with-xpm**
+    -   <span class="simpara"> **--with-xpm-dir** 改变为 **--with-xpm**
         </span>
 -   <span class="simpara">IMAP:</span>
-    -   <span class="simpara"> **--with-kerberos-systemd** no longer
-        accepts a directory. </span>
+    -   <span class="simpara"> **--with-kerberos-systemd**
+        选项不再接受一个目录。 </span>
 -   <span class="simpara">Intl:</span>
-    -   <span class="simpara"> **--with-icu-dir** has been removed. If
-        **--enable-intl** is passed, then libicu is always required.
-        </span>
+    -   <span class="simpara"> **--with-icu-dir** 被移除。如果使用了
+        **--enable-intl** 参数，需要 libicu 支持。 </span>
 -   <span class="simpara">LDAP:</span>
-    -   <span class="simpara"> **--with-ldap-sasl** no longer accepts a
-        directory. </span>
+    -   <span class="simpara"> **--with-ldap-sasl**
+        选项不再接受一个目录。 </span>
 -   <span class="simpara">Libxml:</span>
-    -   <span class="simpara"> **--with-libxml-dir** has been removed.
-        </span>
-    -   <span class="simpara"> **--enable-libxml** becomes
-        **--with-libxml**. </span>
-    -   <span class="simpara"> **--with-libexpat-dir** has been renamed
-        to **--with-expat** and no longer accepts a directory. </span>
+    -   <span class="simpara"> **--with-libxml-dir** 被移除。 </span>
+    -   <span class="simpara"> **--enable-libxml** 改变为
+        **--with-libxml**。 </span>
+    -   <span class="simpara"> **--with-libexpat-dir** 被重命名为
+        **--with-expat** 并且该选项不再接受一个目录。 </span>
 -   <span class="simpara">Litespeed:</span>
-    -   <span class="simpara"> **--with-litespeed** becomes
-        **--enable-litespeed**. </span>
+    -   <span class="simpara"> **--with-litespeed** 改变为
+        **--enable-litespeed**。 </span>
 -   <span class="simpara">Mbstring:</span>
-    -   <span class="simpara"> **--with-onig** has been removed. Unless
-        **--disable-mbregex** has been passed, libonig is required.
-        </span>
+    -   <span class="simpara"> **--with-onig** 被移除。如果指定了
+        **--disable-mbregex** 参数，则需要 libonig 支持。 </span>
 -   <span class="simpara">ODBC:</span>
-    -   <span class="simpara"> **--with-iodbc** no longer accepts a
-        directory. </span>
+    -   <span class="simpara"> **--with-iodbc** 选项不再接受一个目录。
+        </span>
     -   <span class="simpara"> **--with-unixODBC** without a directory
         now uses pkg-config (preferred). Directory is still accepted for
         old versions without libodbc.pc. </span>
 -   <span class="simpara">OpenSSL:</span>
-    -   <span class="simpara"> **--with-openssl** no longer accepts a
-        directory. </span>
--   <span class="simpara">PCRE:</span>
-    -   <span class="simpara"> **--with-pcre-regex** has been removed.
-        Instead **--with-external-pcre** is provided to opt into using
-        an external PCRE library, rather than the bundled one. </span>
--   <span class="simpara">PDO\_SQLite:</span>
-    -   <span class="simpara"> **--with-pdo-sqlite** no longer accepts a
-        directory. </span>
--   <span class="simpara">Readline:</span>
-    -   <span class="simpara"> **--with-libedit** no longer accepts a
-        directory. </span>
--   <span class="simpara">Sodium:</span>
-    -   <span class="simpara"> **--with-sodium** no longer accepts a
-        directory. </span>
--   <span class="simpara">SQLite3:</span>
-    -   <span class="simpara"> **--with-sqlite3** no longer accepts a
-        directory. </span>
--   <span class="simpara">XSL:</span>
-    -   <span class="simpara"> **--with-xsl** no longer accepts a
-        directory. </span>
--   <span class="simpara">Zip:</span>
-    -   <span class="simpara"> **--with-libzip** has been removed.
+    -   <span class="simpara"> **--with-openssl** 选项不再接受一个目录。
         </span>
-    -   <span class="simpara"> **--enable-zip** becomes **--with-zip**.
+-   <span class="simpara">PCRE:</span>
+    -   <span class="simpara"> **--with-pcre-regex** 被移除。Instead
+        **--with-external-pcre** is provided to opt into using an
+        external PCRE library, rather than the bundled one. </span>
+-   <span class="simpara">PDO\_SQLite:</span>
+    -   <span class="simpara"> **--with-pdo-sqlite**
+        选项不再接受一个目录。 </span>
+-   <span class="simpara">Readline:</span>
+    -   <span class="simpara"> **--with-libedit** 选项不再接受一个目录。
+        </span>
+-   <span class="simpara">Sodium:</span>
+    -   <span class="simpara"> **--with-sodium** 选项不再接受一个目录。
+        </span>
+-   <span class="simpara">SQLite3:</span>
+    -   <span class="simpara"> **--with-sqlite3** 选项不再接受一个目录。
+        </span>
+-   <span class="simpara">XSL:</span>
+    -   <span class="simpara"> **--with-xsl** 选项不再接受一个目录。
+        </span>
+-   <span class="simpara">Zip:</span>
+    -   <span class="simpara"> **--with-libzip** 被移除。 </span>
+    -   <span class="simpara"> **--enable-zip** 改变为 **--with-zip**。
         </span>
 
 ### CSV escaping

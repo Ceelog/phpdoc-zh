@@ -12,15 +12,15 @@
 ----
 
 此扩展需要 <a href="/book/libxml.html" class="link">libxml</a> PHP
-扩展。这表示需要使用 **--enable-libxml**，尽管这将隐式完成因为 libxml
-是缺省开启的。
+扩展。这表示需要使用 **--with-libxml**，或在 PHP 7.4 之前的版本中使用
+**--enable-libxml**， 尽管这将隐式完成因为 libxml 是缺省开启的。
 
 The SimpleXML extension requires PHP 5.
 
 安装
 ----
 
-此扩展默认为启用,编译时可通过下列选项禁用： **--disable-simplexml**
+此扩展默认为启用，编译时可通过下列选项禁用： **--disable-simplexml**
 
 Note: Before PHP 5.1.2, **--enable-simplexml** is required to enable
 this extension.

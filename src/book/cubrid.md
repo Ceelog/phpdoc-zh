@@ -249,7 +249,7 @@ CUBRID
 <a href="https://pecl.php.net/package/cubrid" class="link external">» https://pecl.php.net/package/cubrid</a>.
 
 PECL 扩展的 DLL 当前不可用。参见
-<a href="/install/windows/legacy/index.html#install.windows.building" class="link">在 Windows 上构建</a>章节。
+<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">在 Windows 上构建</a>章节。
 
 关于在Linux和Windows系统上的安装手册信息，请阅读包含在包中的这个文件`build-guide.html`。
 

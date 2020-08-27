@@ -47,6 +47,14 @@ Torben Wilson, Jim Winstead, Jared Wyles 和 Jeroen van Wolffelaar.
 中文翻译外部支持团队
 --------------------
 
-PHP手册中文翻译工作是一项长期而又艰巨的工作，为了让这个工作得以持久进行下去，我们组织了
-<a href="http://code.google.com/p/phpdoc-zh/" class="link external">» PHP 手册中文翻译补完计划</a>。下列人员目前正在参与该计划：codingall.com（赵磊）、cuimuxi（崔玉松）、cztviztor、gaojian1226、HaoHappy（陈浩）、HonestQiao（乔楚）、kendotom、lgg860911、loosen.copen、miusun01（李鼎峰）、ping3608、r.anerg（罗翀）、suppersoft（paris.wang）
-、fising（王祥中）、wind.golden（陈金）。
+PHP 手册中文翻译工作是一项长期而又艰巨的工作。
+目前翻译小组工作基本停滞中，如果您有兴趣加入，可以发邮件到
+avenger(AT)php.net 了解如何参与。
+
+中文翻译贡献者名单
+
+感谢以下贡献者为 PHP 中文翻译工作做出的贡献：
+Jiania（洪建家）、verdana（穆少磊）、Gregory（宋琪）、黄啸宇、
+codingall.com（赵磊）、cuimuxi（崔玉松）、cztviztor、gaojian1226、HaoHappy（陈浩）、HonestQiao（乔楚）、
+kendotom、lgg860911、loosen.copen、miusun01（李鼎峰）、ping3608、r.anerg（罗翀）、suppersoft（paris.wang）
+、 fising（王祥中）、wind.golden（陈金）。

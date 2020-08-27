@@ -30,10 +30,10 @@ class="function">fann\_get\_cascade\_output\_stagnation\_epochs</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 `max_neurons`  
 被添加入神经网络中最大的神经元数。
@@ -48,7 +48,7 @@ class="function">fann\_set\_train\_stop\_function</span> 选择的停止函数
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -78,7 +78,7 @@ class="type">float</span> `$desired_error`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `filename`  
 添加在神经网络中神经元的最大数量。
@@ -97,7 +97,7 @@ class="function">fann\_set\_train\_stop\_function</span>
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -120,11 +120,11 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 fann\_copy
 ==========
@@ -142,7 +142,7 @@ class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -174,8 +174,8 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-Returns a neural network <span class="type">resource</span> on success,
-or **`FALSE`** on error.
+成功时返回神经网络 <span class="type">资源</span> ，发生错误返回
+**`FALSE`**。
 
 ### 参见
 
@@ -468,8 +468,8 @@ class="methodparam"><span class="type">callable</span>
 
 ### 返回值
 
-Returns a train data <span class="type">resource</span> on success, or
-**`FALSE`** on error.
+成功时返回训练数据 <span class="type">资源</span>，发生错误返回
+**`FALSE`**。
 
 ### 范例
 
@@ -531,8 +531,8 @@ class="type">int</span> `$num_output`</span> )
 
 ### 返回值
 
-Returns a train data <span class="type">resource</span> on success, or
-**`FALSE`** on error.
+成功时返回训练数据 <span class="type">资源</span>，发生错误返回
+**`FALSE`**。
 
 ### 参见
 
@@ -559,14 +559,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `input_vector`  
 将要被缩小的输入向量
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -591,14 +591,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `output_vector`  
 将被缩小的输出向量。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -623,14 +623,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `train_data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -654,11 +654,11 @@ class="methodparam"><span class="type">resource</span>
 ### 参数
 
 `train_data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 fann\_destroy
 =============
@@ -676,11 +676,11 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 fann\_duplicate\_train\_data
 ============================
@@ -698,12 +698,12 @@ class="methodparam"><span class="type">resource</span> `$data`</span> )
 ### 参数
 
 `data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 ### 返回值
 
-Returns a train data <span class="type">resource</span> on success, or
-**`FALSE`** on error.
+成功时返回训练数据 <span class="type">资源</span>，发生错误返回
+**`FALSE`**。
 
 fann\_get\_activation\_function
 ===============================
@@ -730,7 +730,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `layer`  
 层数。
@@ -782,7 +782,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `layer`  
 层数
@@ -821,7 +821,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -851,7 +851,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -885,7 +885,7 @@ class="function">fann\_train\_epoch</span>)
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -921,7 +921,7 @@ class="function">fann\_get\_cascade\_activation\_functions</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -958,7 +958,7 @@ class="methodname">fann\_get\_cascade\_activation\_functions</span> (
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -991,7 +991,7 @@ class="methodname">fann\_get\_cascade\_activation\_steepnesses\_count</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1026,7 +1026,7 @@ class="methodname">fann\_get\_cascade\_activation\_steepnesses</span> (
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1069,7 +1069,7 @@ class="function">fann\_get\_cascade\_candidate\_change\_fraction</span>的分数
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1104,7 +1104,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1138,7 +1138,7 @@ class="function">fann\_get\_cascade\_candidate\_change\_fraction</span>.
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1169,7 +1169,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1197,7 +1197,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1225,7 +1225,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1253,7 +1253,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1287,7 +1287,7 @@ class="methodname">fann\_get\_cascade\_num\_candidate\_groups</span> (
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1331,7 +1331,7 @@ class="function">fann\_get\_cascade\_activation\_steepnesses</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1380,7 +1380,7 @@ class="function">fann\_get\_cascade\_output\_change\_fraction</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1417,7 +1417,7 @@ class="function">fann\_get\_cascade\_output\_change\_fraction</span>。
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1448,7 +1448,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1474,7 +1474,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1496,7 +1496,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1578,7 +1578,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1604,11 +1604,11 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 正确，返回学习动量，错误则返回 **`FALSE`** .
 
@@ -1638,7 +1638,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1667,7 +1667,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1693,7 +1693,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1716,7 +1716,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1738,7 +1738,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1760,7 +1760,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1785,7 +1785,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1814,7 +1814,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1842,7 +1842,7 @@ The default decrease factor is 0.5.
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1870,7 +1870,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1899,7 +1899,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1927,7 +1927,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1957,7 +1957,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -1985,7 +1985,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2014,7 +2014,7 @@ sarprop 算法步值的误差阈值系数。
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2043,7 +2043,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2072,7 +2072,7 @@ sarprop 算法权重衰减变化值。
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2099,7 +2099,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2122,7 +2122,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2150,7 +2150,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2183,7 +2183,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2217,7 +2217,7 @@ class="function">fann\_cascadetrain\_on\_data</span>函数中也是可以使用�
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2255,14 +2255,14 @@ class="function">fann\_randomize\_weights</span>函数相似。
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `train_data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -2285,7 +2285,7 @@ class="methodparam"><span class="type">resource</span> `$data`</span> )
 ### 参数
 
 `data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2311,10 +2311,10 @@ class="type">resource</span>.
 ### 参数
 
 `data1`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 `data2`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2337,7 +2337,7 @@ class="methodparam"><span class="type">resource</span> `$data`</span> )
 ### 参数
 
 `data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2365,7 +2365,7 @@ class="type">resource</span>中每个训练模式输出的数量。
 ### 参数
 
 `data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -2397,7 +2397,7 @@ network trainining data <span class="type">resource</span>.
 
 ### 返回值
 
-No value is returned.
+无返回值。
 
 ### 参见
 
@@ -2424,7 +2424,7 @@ class="type">float</span> `$max_weight`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `min_weight`  
 最小权重值
@@ -2434,7 +2434,7 @@ Neural network <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -2474,8 +2474,8 @@ outputdata seperated by space
 
 ### 返回值
 
-Returns a train data <span class="type">resource</span> on success, or
-**`FALSE`** on error.
+成功时返回训练数据 <span class="type">资源</span>，发生错误返回
+**`FALSE`**。
 
 ### 范例
 
@@ -2533,7 +2533,7 @@ network trainining data <span class="type">resource</span>.
 
 ### 返回值
 
-No value is returned.
+无返回值。
 
 ### 参见
 
@@ -2562,7 +2562,7 @@ network trainining data <span class="type">resource</span>.
 
 ### 返回值
 
-No value is returned.
+无返回值。
 
 ### 参见
 
@@ -2587,11 +2587,11 @@ class="methodparam"><span class="type">string</span> `$ann`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -2616,7 +2616,7 @@ class="methodparam"><span class="type">array</span> `$input`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `input`  
 输入数组的值。
@@ -2644,14 +2644,14 @@ class="function">fann\_read\_train\_from\_file</span> 函数中指定的一样�
 ### 参数
 
 `data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 `file_name`  
 保存训练数据的文件名。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -2686,14 +2686,14 @@ class="function">fann\_get\_MSE</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `configuration_file`  
 配置文件的路径。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -2718,7 +2718,7 @@ class="methodparam"><span class="type">float</span> `$new_max`</span> )
 ### 参数
 
 `train_data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 `new_min`  
 训练数据中缩放输入后新的最小值。
@@ -2728,7 +2728,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -2753,14 +2753,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `input_vector`  
 将要被缩放的输入向量。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -2786,7 +2786,7 @@ class="methodparam"><span class="type">float</span> `$new_max`</span> )
 ### 参数
 
 `train_data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 `new_min`  
 训练数据中缩放输出后新的最小值。
@@ -2796,7 +2796,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -2821,14 +2821,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `output_vector`  
 将要被缩放的输出向量
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -2854,7 +2854,7 @@ class="methodparam"><span class="type">float</span> `$new_max`</span> )
 ### 参数
 
 `train_data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 `new_min`  
 在训练数据中缩放输入和输出后新的最小值。
@@ -2864,7 +2864,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -2889,14 +2889,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `train_data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -2921,7 +2921,7 @@ class="methodname">fann\_set\_activation\_function\_hidden</span> (
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `activation_function`  
 <a href="/fann/constants.html#Activation%20functions" class="link">激活函数</a>
@@ -2929,7 +2929,7 @@ Neural network <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -2960,7 +2960,7 @@ class="type">int</span> `$layer`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `activation_function`  
 <a href="/fann/constants.html#Activation%20functions" class="link">激活函数</a>
@@ -2971,7 +2971,7 @@ Neural network <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3000,7 +3000,7 @@ class="methodname">fann\_set\_activation\_function\_output</span> (
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `activation_function`  
 <a href="/fann/constants.html#Activation%20functions" class="link">激活函数</a>
@@ -3008,7 +3008,7 @@ Neural network <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3050,7 +3050,7 @@ class="methodparam"><span class="type">int</span> `$neuron`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `activation_function`  
 <a href="/fann/constants.html#Activation%20functions" class="link">激活函数</a>常量。
@@ -3063,7 +3063,7 @@ Neural network <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3093,14 +3093,14 @@ class="type">float</span> `$activation_steepness`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `activation_steepness`  
 激活陡度。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3133,7 +3133,7 @@ class="methodparam"><span class="type">int</span> `$layer`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `activation_steepness`  
 激活陡度。
@@ -3143,7 +3143,7 @@ Neural network <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3173,14 +3173,14 @@ class="type">float</span> `$activation_steepness`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `activation_steepness`  
 激活陡度。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3222,7 +3222,7 @@ class="methodparam"><span class="type">int</span> `$neuron`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `activation_steepness`  
 激活陡度。
@@ -3235,7 +3235,7 @@ Neural network <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3266,14 +3266,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `bit_fail_limit`  
 误差。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3299,7 +3299,7 @@ class="function">fann\_train\_on\_file</span>调用。
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `callback`  
 提供的回调函数接受以下参数：
@@ -3319,7 +3319,7 @@ Neural network <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3347,14 +3347,14 @@ class="function">fann\_get\_cascade\_num\_candidates</span> .
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_activation_functions`  
 级联候选激活函数数组。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3385,14 +3385,14 @@ class="function">fann\_get\_cascade\_num\_candidates</span> .
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_activation_steepnesses_count`  
 级联候选激活陡度数组。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3419,14 +3419,14 @@ class="type">float</span> `$cascade_candidate_change_fraction`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_candidate_change_fraction`  
 级联候选更改分数。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3451,14 +3451,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_candidate_limit`  
 候选限度。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3482,14 +3482,14 @@ class="methodname">fann\_set\_cascade\_candidate\_stagnation\_epochs</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_candidate_stagnation_epochs`  
 级联候选停止周期数。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3514,14 +3514,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_max_cand_epochs`  
 设置最大候选周期数。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3545,14 +3545,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_max_out_epochs`  
 最大输出周期。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3576,14 +3576,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_min_cand_epochs`  
 设置最小候选周期。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3607,14 +3607,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_min_out_epochs`  
 最小输出周期。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3638,14 +3638,14 @@ class="methodname">fann\_set\_cascade\_num\_candidate\_groups</span> (
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_num_candidate_groups`  
 候选组数量。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3670,14 +3670,14 @@ class="type">float</span> `$cascade_output_change_fraction`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_output_change_fraction`  
 级联输出改变分数。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3702,14 +3702,14 @@ class="methodname">fann\_set\_cascade\_output\_stagnation\_epochs</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_output_stagnation_epochs`  
 级联输出停滞周期的值
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3734,14 +3734,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `cascade_weight_multiplier`  
 权重因子。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3773,7 +3773,7 @@ network trainining data <span class="type">resource</span>.
 
 ### 返回值
 
-No value is returned.
+无返回值。
 
 fann\_set\_input\_scaling\_params
 =================================
@@ -3796,10 +3796,10 @@ class="methodparam"><span class="type">float</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `train_data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 `new_input_min`  
 缩放后输入数据的期望下限 (不严格遵循)
@@ -3809,7 +3809,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3836,14 +3836,14 @@ class="function">fann\_get\_learning\_momentum</span>.
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `learning_momentum`  
 学习动量。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3870,14 +3870,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `learning_rate`  
 学习速率。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3905,10 +3905,10 @@ class="methodparam"><span class="type">float</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `train_data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 `new_output_min`  
 缩放后输出数据的期望下限(不严格遵循)
@@ -3918,7 +3918,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3942,14 +3942,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `quickprop_decay`  
 quickprop算法衰减因子。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -3973,14 +3973,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `quickprop_mu`  
 放大因子。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4004,14 +4004,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `rprop_decrease_factor`  
 下降因子。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4035,14 +4035,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `rprop_delta_max`  
 最大步长。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4067,14 +4067,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `rprop_delta_min`  
 最小步长。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4098,14 +4098,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `rprop_delta_zero`  
 初始步长。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4131,14 +4131,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `rprop_increase_factor`  
 增长因子。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4162,14 +4162,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `sarprop_step_error_shift`  
 sarprop 算法的步误差偏移量.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4194,14 +4194,14 @@ class="type">float</span> `$sarprop_step_error_threshold_factor`</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `sarprop_step_error_threshold_factor`  
 sarprop 算法的步误差阈值因子。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4226,14 +4226,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `sarprop_temperature`  
 sarprop 算法的温度。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4257,14 +4257,14 @@ class="type">float</span> `$sarprop_weight_decay_shift`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `sarprop_weight_decay_shift`  
 sarprop 算法的权重衰减偏移值。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4295,10 +4295,10 @@ class="methodparam"><span class="type">float</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `train_data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 `new_input_min`  
 缩放后输入数据的期望下限 (不严格遵循)
@@ -4314,7 +4314,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4343,7 +4343,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `error_function`  
 <a href="/fann/constants.html#Error%20function%20used%20during%20training" class="link">error function</a>
@@ -4351,7 +4351,7 @@ Neural network <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4379,7 +4379,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `stop_function`  
 <a href="/fann/constants.html#Stop%20criteria%20used%20during%20training" class="link">stop function</a>
@@ -4387,7 +4387,7 @@ Neural network <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4414,7 +4414,7 @@ class="function">fann\_get\_training\_algorithm</span>.
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `training_algorithm`  
 <a href="/fann/constants.html#训练算法" class="link">Training algorithm</a>
@@ -4422,7 +4422,7 @@ Neural network <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4448,14 +4448,14 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `connections`  
 一个包含 <span class="classname">FANNConnection</span> 对象的数组。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 fann\_set\_weight
 =================
@@ -4477,7 +4477,7 @@ class="methodparam"><span class="type">float</span> `$weight`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `from_neuron`  
 连接开始处的神经元。
@@ -4490,7 +4490,7 @@ Neural network <span class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 fann\_shuffle\_train\_data
 ==========================
@@ -4510,11 +4510,11 @@ class="methodparam"><span class="type">resource</span>
 ### 参数
 
 `train_data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 fann\_subset\_train\_data
 =========================
@@ -4540,7 +4540,7 @@ class="function">fann\_duplicate\_train\_data</span>函数的效果是一样的�
 ### 参数
 
 `data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 `pos`  
 起始位置。
@@ -4550,8 +4550,8 @@ Neural network training data <span class="type">resource</span>.
 
 ### 返回值
 
-Returns a train data <span class="type">resource</span> on success, or
-**`FALSE`** on error.
+成功时返回训练数据 <span class="type">资源</span>，发生错误返回
+**`FALSE`**。
 
 ### 参见
 
@@ -4577,10 +4577,10 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -4614,7 +4614,7 @@ class="methodparam"><span class="type">array</span> `$input`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `input`  
 输入数组。 这个数组必须和 <span
@@ -4626,7 +4626,7 @@ class="function">fann\_get\_num\_output</span> 一样长.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4662,10 +4662,10 @@ class="function">fann\_set\_training\_algorithm</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 ### 返回值
 
@@ -4703,10 +4703,10 @@ class="methodparam"><span class="type">float</span>
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `data`  
-Neural network training data <span class="type">resource</span>.
+神经网络训练数据 <span class="type">资源</span>。
 
 `max_epochs`  
 训练应该继续的最大周期数。
@@ -4722,7 +4722,7 @@ class="function">fann\_set\_train\_stop\_function</span>
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4759,7 +4759,7 @@ class="type">float</span> `$desired_error`</span> )
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `filename`  
 包含训练数据的文件。
@@ -4778,7 +4778,7 @@ class="function">fann\_set\_train\_stop\_function</span>
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 
@@ -4810,7 +4810,7 @@ class="methodparam"><span class="type">array</span> `$input`</span> ,
 ### 参数
 
 `ann`  
-Neural network <span class="type">resource</span>.
+神经网络 <span class="type">资源</span>。
 
 `input`  
 输入数组，这个数组的长度应该恰好和 <span
@@ -4822,7 +4822,7 @@ class="function">fann\_get\_num\_output</span> 一样长。
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+成功时返回 **`TRUE`**，其它情况下返回 **`FALSE`**。
 
 ### 参见
 

@@ -346,28 +346,37 @@ ftp\_connect
 <span class="type">resource</span> <span
 class="methodname">ftp\_connect</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$port`</span> \[,
-<span class="methodparam"><span class="type">int</span>
-`$timeout`</span> \]\] )
+class="methodparam"><span class="type">int</span> `$port`<span
+class="initializer"> = 21</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$timeout`<span
+class="initializer"> = 90</span></span> \]\] )
 
-如果成功返回一个连接标识，失败则返回 **`FALSE`** 。
+<span class="function">ftp\_connect</span> 将会建立一个 FTP
+连接到指定的服务器 `host`。
 
-<span class="function">ftp\_connect</span> 打开一个 FTP 连接，参数
-`host` 为要连接的服务器。`host` 后面不应以斜线结尾，前面也不需要用
-*ftp://* 开头。可选参数`port` 为要连接到的 FTP
-器的端口号，如果没有设置或者为0，则会使用默认的端口 21 来连接。
+### 参数
 
-可选参数 `timeout`
+`host`  
+要连接的服务器地址。此参数后面不应以斜线结尾，前面也不需要用 *ftp://*
+开头。
+
+`port`  
+为要连接到的 FTP 器的端口号，如果没有设置或者为 0，则会使用默认的端口 21
+来连接。
+
+`timeout`  
 用来设置网络传输的超时时间限制。如果此选项留空，则默认的值为 90
 秒。超时时间可以在任何时候通过函数 <span
 class="function">ftp\_set\_option</span> 及 <span
 class="function">ftp\_get\_option</span> 来改变和获取。
 
-> **Note**:
->
-> 参数 `timeout` 仅适用于 PHP 4.2.0 及以上版本.
+### 返回值
 
-**示例 \#1 <span class="function">ftp\_connect</span> 例子**
+如果成功返回一个 FTP 连接资源句柄，发生错误则返回 **`FALSE`**。
+
+### 范例
+
+**示例 \#1 <span class="function">ftp\_connect</span> 示例**
 
 ``` php
 <?php
@@ -375,13 +384,15 @@ class="function">ftp\_get\_option</span> 来改变和获取。
 $ftp_server = "ftp.example.com";
 
 // set up a connection or die
-$conn_id = ftp_connect($ftp_server) or die("Couldn't connect to $ftp_server");
+$conn_id = ftp_connect($ftp_server) or die("Couldn't connect to $ftp_server"); 
 
 ?>
 ```
 
-参见 <span class="function">ftp\_close</span> 和 <span
-class="function">ftp\_ssl\_connect</span>。
+### 参见
+
+-   <span class="function">ftp\_close</span>
+-   <span class="function">ftp\_ssl\_connect</span>
 
 ftp\_delete
 ===========
@@ -439,7 +450,7 @@ ftp_close($conn_id);
 ftp\_exec
 =========
 
-请求运行一条 FTP 命令
+在 FTP 服务器运行指定的命令
 
 ### 说明
 
@@ -448,27 +459,53 @@ ftp\_exec
 `$ftp_stream`</span> , <span class="methodparam"><span
 class="type">string</span> `$command`</span> )
 
-发送一个 SITE EXEC `command` 请求到 FTP
-服务器。如果成功（服务器发送响应代码 *200*）则返回 **`TRUE`**，否则返回
+发送一个 SITE EXEC `command` 请求到 FTP 服务器。
+
+### 参数
+
+`ftp_stream`  
+FTP 连接资源句柄。
+
+`command`  
+要执行的命令。
+
+### 返回值
+
+如果执行成功（服务器发送响应代码 *200*）则返回 **`TRUE`**；否则返回
 **`FALSE`**。
 
-**示例 \#1 <span class="function">ftp\_exec</span> 例子**
+### 范例
+
+**示例 \#1 <span class="function">ftp\_exec</span> 示例**
 
 ``` php
 <?php
-$command = 'ls -al';
+
+// variable initialization
+$command = 'ls -al >files.txt';
+
+// set up basic connection
 $conn_id = ftp_connect($ftp_server);
+
+// login with username and password
 $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
-if($res = ftp_exec($conn_id, $command)) {
-    echo "$command executed successfully<br />\n";
-    echo nl2br($res);
+
+// execute command
+if (ftp_exec($conn_id, $command)) {
+    echo "$command executed successfully\n";
 } else {
-    echo 'could not execute ' . $command;
+    echo "could not execute $command\n";
 }
+
+// close the connection
+ftp_close($conn_id);
+
 ?>
 ```
 
-参见 <span class="function">ftp\_raw</span>。
+### 参见
+
+-   <span class="function">ftp\_raw</span>
 
 ftp\_fget
 =========
@@ -654,17 +691,29 @@ class="methodparam"><span class="type">resource</span>
 `$ftp_stream`</span> , <span class="methodparam"><span
 class="type">int</span> `$option`</span> )
 
-如果成功则返回选项的值，否则，如果给定的参数 `option`
-选项如果不被支持则返回 **`FALSE`** 同时会提示一条错误信息。
+此函数会返回连接句柄为 `ftp_stream`，指定键值 `option` 的值。
 
-此函数会返回连接句柄为 `ftp_stream`，指定键值 `option`
-的值，截止到目前，以下选项被支持:
+### 参数
 
-|                   |                                    |
-|-------------------|------------------------------------|
-| FTP\_TIMEOUT\_SEC | 返回当前设定的网络操作的超时时间。 |
+`ftp_stream`  
+FTP 连接资源句柄。
 
-**示例 \#1 <span class="function">ftp\_get\_option</span> 实例**
+`option`  
+截止到目前，支持的选项有：
+
+|                       |                                                     |
+|-----------------------|-----------------------------------------------------|
+| **`FTP_TIMEOUT_SEC`** | 返回当前设定的网络操作的超时时间。                  |
+| **`FTP_AUTOSEEK`**    | 此选项打开时返回 **`TRUE`**，否则返回 **`FALSE`**。 |
+
+### 返回值
+
+如果成功则返回选项的值，否则，如果给定的参数 `option` 选项不被支持则返回
+**`FALSE`**，同时会抛出一条警告（warning）信息。
+
+### 范例
+
+**示例 \#1 <span class="function">ftp\_get\_option</span> 示例**
 
 ``` php
 <?php
@@ -673,7 +722,9 @@ $timeout = ftp_get_option($conn_id, FTP_TIMEOUT_SEC);
 ?>
 ```
 
-参见 <span class="function">ftp\_set\_option</span>。
+### 参见
+
+-   <span class="function">ftp\_set\_option</span>
 
 ftp\_get
 ========
@@ -830,17 +881,42 @@ ftp\_mdtm
 `$ftp_stream`</span> , <span class="methodparam"><span
 class="type">string</span> `$remote_file`</span> )
 
-<span class="function">ftp\_mdtm</span> 检查指定文件的最后修改时间，并以
-UNIX 时间戳的方式返回。如果发生错误，或文件不存在则返回 -1。
+<span class="function">ftp\_mdtm</span> 获取远程文件的最后修改时间。
 
-**示例 \#1 <span class="function">ftp\_mdtm</span> 例子**
+> **Note**:
+>
+> 某些 FTP 服务器可能会不支持这个特性！
+
+> **Note**:
+>
+> <span class="function">ftp\_mdtm</span> 不适用于检查目录。
+
+### 参数
+
+`ftp_stream`  
+FTP 连接句柄。
+
+`remote_file`  
+要检查的远程文件。
+
+### 返回值
+
+返回指定文件的最后修改时间，以 UNIX
+时间戳的方式返回。如果发生错误，或文件不存在则返回 -1。
+
+### 范例
+
+**示例 \#1 <span class="function">ftp\_mdtm</span> 示例**
 
 ``` php
 <?php
+
 $file = 'somefile.txt';
 
-// connect to the server
+// set up basic connection
 $conn_id = ftp_connect($ftp_server);
+
+// login with username and password
 $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
 
 //  get the last modified time
@@ -848,25 +924,16 @@ $buff = ftp_mdtm($conn_id, $file);
 
 if ($buff != -1) {
     // somefile.txt was last modified on: March 26 2003 14:16:41.
-    echo "$file was last modified on : " . date ("F d Y H:i:s.", $buff);
+    echo "$file was last modified on : " . date("F d Y H:i:s.", $buff);
 } else {
     echo "Couldn't get mdtime";
 }
 
 // close the connection
 ftp_close($conn_id);
+
 ?>
 ```
-
-如果成功返回一个 UNIX 时间戳，否则返回 -1。
-
-> **Note**:
->
-> 某些 FTP 服务器可能会不支持这个特性。
-
-> **Note**:
->
-> <span class="function">ftp\_mdtm</span> 函数不适用于检查目录。
 
 ftp\_mkdir
 ==========
@@ -881,11 +948,50 @@ class="type">resource</span> `$ftp_stream`</span> , <span
 class="methodparam"><span class="type">string</span> `$directory`</span>
 )
 
-在 FTP 服务器上建立一个目录名为参数 `directory` 的新目录。
+在 FTP 服务器上，创建指定的目录 `directory`。
 
-如果成功返回新建的目录名，否则返回 **`FALSE`**。
+### 参数
 
-参见 <span class="function">ftp\_rmdir</span>。
+`ftp_stream`  
+FTP 连接句柄。
+
+`directory`  
+要创建的目录名。
+
+### 返回值
+
+如果成功返回新建的目录名，发生错误时返回 **`FALSE`**。
+
+### 范例
+
+**示例 \#1 <span class="function">ftp\_mkdir</span> example**
+
+``` php
+<?php
+
+$dir = 'www';
+
+// set up basic connection
+$conn_id = ftp_connect($ftp_server);
+
+// login with username and password
+$login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+
+// try to create the directory $dir
+if (ftp_mkdir($conn_id, $dir)) {
+ echo "successfully created $dir\n";
+} else {
+ echo "There was a problem while creating $dir\n";
+}
+
+// close the connection
+ftp_close($conn_id);
+?>
+```
+
+### 参见
+
+-   <span class="function">ftp\_rmdir</span>
 
 ftp\_mlsd
 =========
@@ -1043,7 +1149,7 @@ var_dump($contents);
 ftp\_nb\_continue
 =================
 
-连续获取／发送文件（non-blocking）
+连续获取／发送文件（以不分块的方式 non-blocking）
 
 ### 说明
 
@@ -1052,9 +1158,37 @@ class="methodname">ftp\_nb\_continue</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$ftp_stream`</span> )
 
-以不分块的方式连续获取／发送一个文件。
+以不分块的方式，连续获取/发送文件。
 
-返回常量 **`FTP_FAILED`** 或 **`FTP_FINISHED`** 或 **`FTP_MOREDATA`**。
+### 参数
+
+`ftp_stream`  
+FTP 连接句柄。
+
+### 返回值
+
+返回 **`FTP_FAILED`** 或 **`FTP_FINISHED`** 或 **`FTP_MOREDATA`**.
+
+### 范例
+
+**示例 \#1 <span class="function">ftp\_nb\_continue</span> 示例**
+
+``` php
+<?php
+
+// Initiate the download
+$ret = ftp_nb_get($my_connection, "test", "README", FTP_BINARY);
+while ($ret == FTP_MOREDATA) {
+
+   // Continue downloading...
+   $ret = ftp_nb_continue($my_connection);
+}
+if ($ret != FTP_FINISHED) {
+   echo "There was an error downloading the file...";
+   exit(1);
+}
+?>
+```
 
 ftp\_nb\_fget
 =============
@@ -1251,97 +1385,131 @@ ftp\_nb\_get
 
 ### 说明
 
-<span class="type">bool</span> <span
+<span class="type">int</span> <span
 class="methodname">ftp\_nb\_get</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ftp_stream`</span> , <span
 class="methodparam"><span class="type">string</span>
 `$local_file`</span> , <span class="methodparam"><span
-class="type">string</span> `$remote_file`</span> , <span
-class="methodparam"><span class="type">int</span> `$mode`</span> \[,
-<span class="methodparam"><span class="type">int</span>
-`$resumepos`</span> \] )
+class="type">string</span> `$remote_file`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$mode`<span
+class="initializer"> = **`FTP_BINARY`**</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$resumepos`<span
+class="initializer"> = 0</span></span> \]\] )
 
-<span class="function">ftp\_nb\_get</span> 函数用来获取参数
-`remote_file` 指定的的远程文件，并保存到由参数 `local_file`
-指定的本地文件。传输模式参数 `mode` 只能为 **`FTP_ASCII`** (文本模式) 或
-**`FTP_BINARY`** (二进制模式) 两种。与 <span
-class="function">ftp\_get</span>
-函数不同的是，此函数上传文件的时候采用的是异步传输模式，也就意味着在文件传送的过程中，你的程序可以继续干其它的事情。
+<span class="function">ftp\_nb\_get</span> 在 FTP
+服务器上获取指定的远程文件，并保存到本地。
 
-返回 **`FTP_FAILED`**，**`FTP_FINISHED`** 或 **`FTP_MOREDATA`**。
+和 <span class="function">ftp\_get</span>
+不同之处，在于此函数是通过异步的方式来获取文件，这意味着，你的程序可以在下载文件的同时，同步进行其它操作。
 
-**示例 \#1 <span class="function">ftp\_nb\_get</span> 实例**
+### 参数
+
+`ftp_stream`  
+FTP 连接句柄。
+
+`local_file`  
+保存到的本地文件路径（如果文件已存在会被覆盖）。
+
+`remote_file`  
+远程文件路径。
+
+`mode`  
+指定传输模式。必须是 **`FTP_ASCII`** 或 **`FTP_BINARY`**。
+
+`resumepos`  
+开始下载文件的起始位置。
+
+### 返回值
+
+返回 **`FTP_FAILED`** 或 **`FTP_FINISHED`** 或 **`FTP_MOREDATA`**。
+
+### 更新日志
+
+| 版本  | 说明                                  |
+|-------|---------------------------------------|
+| 7.3.0 | `mode` 参数变为可选，之前是强制性的。 |
+
+### 范例
+
+**示例 \#1 <span class="function">ftp\_nb\_get</span> 示例**
 
 ``` php
 <?php
-// 开始下载
+
+// 初始化
 $ret = ftp_nb_get($my_connection, "test", "README", FTP_BINARY);
 while ($ret == FTP_MOREDATA) {
-
-   // 这里可以插入其它代码
+   
+   // 可以同步干其它事
    echo ".";
 
    // 继续下载...
-   $ret = ftp_nb_continue ($my_connection);
+   $ret = ftp_nb_continue($my_connection);
 }
 if ($ret != FTP_FINISHED) {
-   echo "下载中出错...";
+   echo "下载文件出错...";
    exit(1);
 }
 ?>
 ```
 
-**示例 \#2 使用 <span class="function">ftp\_nb\_get</span>
-函数断线续传**
+**示例 \#2 通过 <span class="function">ftp\_nb\_get</span>
+恢复下载一个文件**
 
 ``` php
 <?php
-// 开始
-$ret = ftp_nb_get ($my_connection, "test", "README", FTP_BINARY,
+
+// 初始化 
+$ret = ftp_nb_get($my_connection, "test", "README", FTP_BINARY, 
                       filesize("test"));
-// 或: $ret = ftp_nb_get ($my_connection, "test", "README",
+// OR: $ret = ftp_nb_get($my_connection, "test", "README", 
 //                           FTP_BINARY, FTP_AUTORESUME);
 while ($ret == FTP_MOREDATA) {
-
-   // 可以插入其它代码
+   
+   // 做你爱做的事
    echo ".";
 
-   // 继续传送...
-   $ret = ftp_nb_continue ($my_connection);
+   // 继续下载Ing...
+   $ret = ftp_nb_continue($my_connection);
 }
 if ($ret != FTP_FINISHED) {
-   echo "下载出错...";
+   echo "下载文件出错...";
    exit(1);
 }
 ?>
 ```
 
-**示例 \#3 用 <span class="function">ftp\_nb\_get</span> 在 100
-的位置断线续传并存为 "newfile"**
+**示例 \#3 使用 <span class="function">ftp\_nb\_get</span>
+从指定位置恢复下载文件**
 
 ``` php
-// 禁止自动搜寻
-ftp_set_option ($my_connection, FTP_AUTOSEEK, FALSE);
+<?php
 
-// 开始
-$ret = ftp_nb_get ($my_connection, "newfile", "README", FTP_BINARY, 100);
+// 禁止 Autoseek
+ftp_set_option($my_connection, FTP_AUTOSEEK, false);
+
+// 初始化
+$ret = ftp_nb_get($my_connection, "newfile", "README", FTP_BINARY, 100);
 while ($ret == FTP_MOREDATA) {
 
-   ...
-
+   /* ... */
+   
    // 继续下载...
-   $ret = ftp_nb_continue ($my_connection);
+   $ret = ftp_nb_continue($my_connection);
 }
+?>
 ```
 
-在上边的例子中，`"newfile"` 文件比服务器上的文件 `"README"` 要小 100
-字节。这是因为我们是从文件的偏移量 100 处开始读取的，如果没有禁止
-**`FTP_AUTOSEEK`**，则 `"newfile"` 的前 100 字节将会是 *'\\0'*。
+在上面的示例中，`newfile` 会比 FTP 服务器上的 `README` 文件小 100
+bytes，因为开始下载的时候设置了偏移量为 100。如果我们不禁止
+**`FTP_AUTOSEEK`**，则 `newfile` 文件前面的 100 bytes 会变成 *'\\0'*。
 
-参见 <span class="function">ftp\_nb\_fget</span>，<span
-class="function">ftp\_nb\_continue</span>，<span
-class="function">ftp\_get</span> 和 <span
-class="function">ftp\_fget</span>。
+### 参见
+
+-   <span class="function">ftp\_nb\_fget</span>
+-   <span class="function">ftp\_nb\_continue</span>
+-   <span class="function">ftp\_fget</span>
+-   <span class="function">ftp\_get</span>
 
 ftp\_nb\_put
 ============
@@ -1485,6 +1653,7 @@ var_dump($contents);
 ### 参见
 
 -   <span class="function">ftp\_rawlist</span>
+-   <span class="function">ftp\_mlsd</span>
 
 ftp\_pasv
 =========
@@ -1842,6 +2011,8 @@ FTP 连接的标识符。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+失败时（比如试图重命名一个不存在的文件）将会抛出一个 *E\_WARNING*
+错误信息。
 
 ### 范例
 
@@ -1946,10 +2117,11 @@ FTP 连接的标识符。
 `option`  
 目前支持以下选项：
 
-|                       |                                                                                                                     |
-|-----------------------|---------------------------------------------------------------------------------------------------------------------|
-| **`FTP_TIMEOUT_SEC`** | 改变网络传输的超时时间。参数 `value` 必须为整数且大于 0。默认的超时时间为 90 秒。                                   |
-| **`FTP_AUTOSEEK`**    | 当此选项打开时，带 `resumepos` 或 `startpos` 参数的GET 或 PUT 请求 将先检索到文件中指定的位置。此选项默认是打开的。 |
+|                          |                                                                                                                                         |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| **`FTP_TIMEOUT_SEC`**    | 改变网络传输的超时时间。参数 `value` 必须为整数且大于 0。默认的超时时间为 90 秒。                                                       |
+| **`FTP_AUTOSEEK`**       | 当此选项打开时，带 `resumepos` 或 `startpos` 参数的GET 或 PUT 请求 将先检索到文件中指定的位置。此选项默认是打开的。                     |
+| **`FTP_USEPASVADDRESS`** | 当此选项禁用时，PHP 会忽略掉 FTP 服务器通过 PASV 命令返回的 IP 地址，直接使用在 ftp\_connect() 中指定的地址。`value` 参数必须是布尔型。 |
 
 `value`  
 本参数取决于要修改哪个 `option`。
@@ -2243,7 +2415,7 @@ if ($type = ftp_systype($ftp)) {
 -   [ftp\_connect](/ref/ftp.html#ftp_connect) — 建立一个新的 FTP 连接
 -   [ftp\_delete](/ref/ftp.html#ftp_delete) — 删除 FTP
     服务器上的一个文件
--   [ftp\_exec](/ref/ftp.html#ftp_exec) — 请求运行一条 FTP 命令
+-   [ftp\_exec](/ref/ftp.html#ftp_exec) — 在 FTP 服务器运行指定的命令
 -   [ftp\_fget](/ref/ftp.html#ftp_fget) — 从 FTP
     服务器上下载一个文件并保存到本地一个已经打开的文件中
 -   [ftp\_fput](/ref/ftp.html#ftp_fput) — 上传一个已经打开的文件到 FTP
@@ -2257,7 +2429,7 @@ if ($type = ftp_systype($ftp)) {
 -   [ftp\_mlsd](/ref/ftp.html#ftp_mlsd) — Returns a list of files in the
     given directory
 -   [ftp\_nb\_continue](/ref/ftp.html#ftp_nb_continue) —
-    连续获取／发送文件（non-blocking）
+    连续获取／发送文件（以不分块的方式 non-blocking）
 -   [ftp\_nb\_fget](/ref/ftp.html#ftp_nb_fget) — 从 FTP
     服务器获取文件并写入到一个打开的文件（非阻塞）
 -   [ftp\_nb\_fput](/ref/ftp.html#ftp_nb_fput) — 将文件存储到 FTP 服务器

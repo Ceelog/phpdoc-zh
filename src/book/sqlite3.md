@@ -124,14 +124,22 @@ Windows 用户必须启用 `php_sqlite3.dll` 方可使用该扩展。自 PHP 5.3
 
 这些函数的行为受 `php.ini` 中的设置影响。
 
-| 名字                                                                 | 默认 | 可修改范围       | 更新日志 |
-|----------------------------------------------------------------------|------|------------------|----------|
-| <a href="/book/sqlite3.html#" class="link">sqlite3.extension_dir</a> | NULL | PHP\_INI\_SYSTEM |          |
+| 名字                                                                 | 默认 | 可修改范围       | 更新日志                                         |
+|----------------------------------------------------------------------|------|------------------|--------------------------------------------------|
+| <a href="/book/sqlite3.html#" class="link">sqlite3.extension_dir</a> | ""   | PHP\_INI\_SYSTEM | PHP 5.3.11 起可用                                |
+| <a href="/book/sqlite3.html#" class="link">sqlite3.defensive</a>     | 1    | PHP\_INI\_SYSTEM | PHP 7.2.17 和 7.3.4 起可用，libsqlite ≥ 3.26.0。 |
 
 这是配置指令的简短说明。
 
 `sqlite3.extension_dir` <span class="type">string</span>  
-指向存放可加载的 SQLite 扩展的目录路径。
+Path to the directory where the loadable extensions for SQLite reside.
+
+`sqlite3.defensive` <span class="type">bool</span>  
+When the defensive flag is enabled, language features that allow
+ordinary SQL to deliberately corrupt the database file are disabled.
+This forbids writing directly to the schema, shadow tables (eg. FTS data
+tables), or the sqlite\_dbpage virtual table. This `php.ini` setting is
+only effective for libsqlite ≥ 3.26.0.
 
 资源类型
 --------

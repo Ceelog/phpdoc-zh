@@ -200,10 +200,10 @@ class="function">escapeshellcmd</span>
 
 > **Note**:
 >
-> On Windows <span class="function">exec</span> will first start cmd.exe
-> to launch the command. If you want to start an external program
-> without starting cmd.exe use <span class="function">proc\_open</span>
-> with the `bypass_shell` option set.
+> 在 Windows 下，<span class="function">exec</span> 函数会先启动 cmd.exe
+> 来执行指定的命令。如果你希望启动一个额外的应用而不用先启动 cmd.exe
+> 可使用 <span class="function">proc\_open</span> 函数加上
+> `bypass_shell` 参数。
 
 > **Note**: <span
 > class="simpara"><a href="/features/safe-mode.html" class="link">安全模式</a>
@@ -327,8 +327,7 @@ class="type">resource</span> 。
 
 > **Note**:
 >
-> If PHP has been compiled with --enable-sigchild, the return value of
-> this function is undefined.
+> 如果 PHP 是通过 --enable-sigchild 编译的，此函数将没有返回值。
 
 proc\_get\_status
 =================

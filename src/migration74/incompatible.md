@@ -1,33 +1,32 @@
-Backward Incompatible Changes
------------------------------
+不向后兼容的变更
+----------------
 
-### PHP Core
+### PHP 核心中不向后兼容的变更
 
-#### Array-style access of non-arrays
+#### 以数组形式访问非数组
 
-Trying to use values of type <span class="type">null</span>, <span
-class="type">bool</span>, <span class="type">int</span>, <span
-class="type">float</span> or <span class="type">resource</span> as an
-array (such as *$null\["key"\]*) will now generate a notice.
+尝试以数组方式访问 <span class="type">null</span>，<span
+class="type">bool</span>， <span class="type">int</span>，<span
+class="type">float</span> 或 <span class="type">resource</span> （例如
+*$null\["key"\]*）将会抛出 notice 通知。
 
-#### <span class="function">get\_declared\_classes</span> function
+#### <span class="function">get\_declared\_classes</span> 函数
 
-The <span class="function">get\_declared\_classes</span> function no
-longer returns anonymous classes that have not been instantiated yet.
+<span class="function">get\_declared\_classes</span>
+函数将不再返回匿名的类，假如它们没有被实例化的话。
 
-#### *fn* keyword
+#### *fn* 关键词
 
-*fn* is now a reserved keyword. In particular, it can no longer be used
-as a function or class name. It can still be used as a method or class
-constant name.
+*fn*
+成为了保留关键词。需要特别注意，它不能再做为函数名或类名使用，但是仍然可以做为方法名和常量名存在。
 
-#### *\<?php* tag at end of file
+#### 文件尾部的 *\<?php* 标签
 
-*\<?php* at the end of the file (without trailing newline) will now be
-interpreted as an opening PHP tag. Previously it was interpreted either
-as a short opening tag followed by literal *php* and resulted in a
-syntax error (with *short\_open\_tag=1*) or was interpreted as a literal
-*\<?php* string (with *short\_open\_tag=0*).
+文件尾部的 *\<?php* 标签（不包含空行）将会被解释成一个 PHP
+头标签。Previously it was interpreted either as a short opening tag
+followed by literal *php* and resulted in a syntax error (with
+*short\_open\_tag=1*) or was interpreted as a literal *\<?php* string
+(with *short\_open\_tag=0*).
 
 #### Stream wrappers
 
@@ -39,45 +38,44 @@ class="methodname">streamWrapper::stream\_set\_option</span> method to
 avoid a warning (always returning **`FALSE`** is a sufficient
 implementation).
 
-#### Serialization
+#### Serialization 序列化
 
-The *o* serialization format has been removed. As it is never produced
-by PHP, this may only break unserialization of manually crafted strings.
+序列化类型 *o* 被移除。因为它不是由 PHP
+生成的，这可能会影响到之前项目中手动生成的序列化字符串。
 
-#### Password algorithm constants
+#### 密码算法常量
 
-Password hashing algorithm identifiers are now nullable strings rather
-than integers.
+密码哈希算法标识符现在是可空字符串，而不再是整数。
 
--   <span class="simpara"> **`PASSWORD_DEFAULT`** was int 1; now is
+-   <span class="simpara"> **`PASSWORD_DEFAULT`** 之前是 int 1; 现在是
     **`NULL`** </span>
--   <span class="simpara"> **`PASSWORD_BCRYPT`** was int 1; now is
+-   <span class="simpara"> **`PASSWORD_BCRYPT`** 之前是 int 1; 现在是
     string '2y' </span>
--   <span class="simpara"> **`PASSWORD_ARGON2I`** was int 2; now is
+-   <span class="simpara"> **`PASSWORD_ARGON2I`** 之前是 int 2; 现在是
     string 'argon2i' </span>
--   <span class="simpara"> **`PASSWORD_ARGON2ID`** was int 3; now is
+-   <span class="simpara"> **`PASSWORD_ARGON2ID`** 之前是 int 3; 现在是
     string 'argon2id' </span>
 
-Applications correctly using the constants PASSWORD\_DEFAULT,
-PASSWORD\_BCRYPT, PASSWORD\_ARGON2I, and PASSWORD\_ARGON2ID will
-continue to function correctly.
+应用中如果正常使用了常量
+PASSWORD\_DEFAULT，PASSWORD\_BCRYPT，PASSWORD\_ARGON2I 和
+PASSWORD\_ARGON2ID 将不会受到影响。
 
-#### <span class="function">htmlentities</span> function
+#### <span class="function">htmlentities</span> 函数
 
 <span class="function">htmlentities</span> will now raise a notice
 (instead of a strict standards warning) if it is used with an encoding
 for which only basic entity substitution is supported, in which case it
 is equivalent to <span class="function">htmlspecialchars</span>.
 
-#### <span class="function">fread</span> and <span class="function">fwrite</span> function
+#### <span class="function">fread</span> and <span class="function">fwrite</span> 函数
 
-<span class="function">fread</span> and <span
-class="function">fwrite</span> will now return **`FALSE`** if the
-operation failed. Previously an empty string or 0 was returned.
-EAGAIN/EWOULDBLOCK are not considered failures.
+<span class="function">fread</span> 和 <span
+class="function">fwrite</span> 在操作失败的时候会返回
+**`FALSE`**。之前的版本中会返回空字符串或 0。EAGAIN/EWOULDBLOCK
+不视为故障。
 
-These functions now also raise a notice on failure, such as when trying
-to write to a read-only file resource.
+这些函数现在也会在失败时发出 NOTICE
+通知，例如当试图写入一个只读文件资源时。
 
 ### BCMath Arbitrary Precision Mathematics
 

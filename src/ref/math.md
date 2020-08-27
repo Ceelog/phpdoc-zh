@@ -1695,7 +1695,7 @@ mt\_srand
 用 `seed` 来给随机数发生器播种。 没有设定 `seed`
 参数时，会被设为随时数。
 
-> **Note**: <span class="simpara">自 PHP 4.2.0 起，不再需要用 <span
+> **Note**: <span class="simpara">不再需要用 <span
 > class="function">srand</span> 或 <span
 > class="function">mt\_srand</span> 给随机数发生器播种
 > ，因为现在是由系统自动完成的。</span>
@@ -2202,7 +2202,7 @@ srand
 
 用 `seed` 播下随机数发生器种子。`seed` 参数没有给出时，会被设为随时数。
 
-> **Note**: <span class="simpara">自 PHP 4.2.0 起，不再需要用 <span
+> **Note**: <span class="simpara">不再需要用 <span
 > class="function">srand</span> 或 <span
 > class="function">mt\_srand</span> 给随机数发生器播种
 > ，因为现在是由系统自动完成的。</span>

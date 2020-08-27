@@ -12,8 +12,8 @@
 ----
 
 此扩展需要 <a href="/book/libxml.html" class="link">libxml</a> PHP
-扩展。这表示需要使用 **--enable-libxml**，尽管这将隐式完成因为 libxml
-是缺省开启的。
+扩展。这表示需要使用 **--with-libxml**，或在 PHP 7.4 之前的版本中使用
+**--enable-libxml**， 尽管这将隐式完成因为 libxml 是缺省开启的。
 
 安装
 ----

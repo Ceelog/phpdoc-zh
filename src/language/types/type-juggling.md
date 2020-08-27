@@ -78,9 +78,13 @@ $bar = (boolean) $foo;   // $bar is a boolean
 -   <span class="simpara">(object) - 转换为对象 <span
     class="type">object</span></span>
 -   <span class="simpara">(unset) - 转换为 <span
-    class="type">NULL</span> (PHP 5)</span>
+    class="type">NULL</span></span>
 
-(binary) 转换和 b 前缀转换支持为 PHP 5.2.1 新增。
+(binary) 转换和 b 前缀转换支持为 PHP 5.2.1 新增。注意 (binary) 转换和
+(string) 基本相同，但是不应该依赖它。
+
+(unset) 转换在 PHP 7.2.0 中已被废弃。请注意 (unset) 转换等于将值赋予
+<span class="type">NULL</span>。(unset) 转换将在 PHP 8.0.0 中被移除。
 
 注意在括号内允许有空格和制表符，所以下面两个例子功能相同：
 

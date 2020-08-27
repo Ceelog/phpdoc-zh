@@ -12,8 +12,8 @@
 ----
 
 此扩展需要 <a href="/book/libxml.html" class="link">libxml</a> PHP
-扩展。这表示需要使用 **--enable-libxml**，尽管这将隐式完成因为 libxml
-是缺省开启的。
+扩展。这表示需要使用 **--with-libxml**，或在 PHP 7.4 之前的版本中使用
+**--enable-libxml**， 尽管这将隐式完成因为 libxml 是缺省开启的。
 
 安装
 ----
@@ -22,7 +22,7 @@ The XMLWriter extension was initially a PECL extension for PHP 5. It was
 later added to the PHP source (bundled) as of PHP 5.1.2. This extension
 is enabled by default.
 
-此扩展默认为启用,编译时可通过下列选项禁用： **--disable-xmlwriter**
+此扩展默认为启用，编译时可通过下列选项禁用： **--disable-xmlwriter**
 
 运行时配置
 ----------

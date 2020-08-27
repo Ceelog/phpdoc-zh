@@ -4,9 +4,8 @@ Alternative PHP Cache (APC) 是一个开放自由的 PHP opcode
 
 **Warning**
 
-This extension is considered unmaintained and dead. However, the source
-code for this extension is still available within PECL GIT here:
-https://git.php.net/?p=pecl/caching/apc.git.
+此扩展被认为已无人维护及已消亡。然而，此扩展的源代码还可在 PECL GIT
+找到： https://git.php.net/?p=pecl/caching/apc.git.
 
 > **Note**:
 >

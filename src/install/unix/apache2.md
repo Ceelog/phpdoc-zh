@@ -20,18 +20,17 @@ PHP 下载。本向导仅包含最基础的内容，只能让 Apache 2.x 和 PHP
 <a href="http://httpd.apache.org/docs/current/" class="link external">» Apache 文档</a>。这里省略所有的版本号，以保证本文的正确性。需要将本文的“NN”替换为相应的版本号。
 
 当前 Apache 2.x 有两个流行的版本 -
-2.0、2.2。虽然选择某个版本会有种种原因，但是如果可以考虑的话，我们还是建议使用最新的
-Apache 2.2 版本。当然，以下的介绍同样适合 Apache 2.0 和 2.2。
+2.4、2.2。虽然选择某个版本会有种种原因，但是如果可以考虑的话，我们还是建议使用最新的
+Apache 2.4 版本。当然，以下的介绍同样适合 Apache 2.4 和 2.2。请注意
+Apache 2.2 已经不再被官方支持，并且不再发布新功能和补丁更新。
 
 1.  从上面列出的地方获取 Apache 源码包，然后解压：
 
-        gzip -d httpd-2_x_NN.tar.gz
-        tar -xf httpd-2_x_NN.tar
+        tar -xzf httpd-2.x.NN.tar.gz
 
 2.  同样，获取 PHP 源码包并解压：
 
-        gunzip php-NN.tar.gz
-        tar -xf php-NN.tar
+        tar -xzf php-NN.tar.gz
 
 3.  编译并安装 Apache。请参考 Apache 安装文档了解编译 Apache
     的更多细节。
@@ -87,6 +86,14 @@ Apache 2.2 版本。当然，以下的介绍同样适合 Apache 2.0 和 2.2。
     达式右边的路径必须指向系统中的 PHP 模块。以上的 make install
     命令可能已经完成了这些，但务必要检查。
 
+    PHP 7 版本:
+
+    ``` apache-conf
+    LoadModule php7_module modules/libphp7.so
+    ```
+
+    PHP 5 版本:
+
     ``` apache-conf
     LoadModule php5_module modules/libphp5.so
     ```
@@ -136,7 +143,7 @@ Apache 2.2 版本。当然，以下的介绍同样适合 Apache 2.0 和 2.2。
 
         /usr/local/apache2/bin/apachectl start
 
-    或者
+    OR
 
         service httpd restart
 
@@ -147,8 +154,7 @@ Apache 和 PHP 都还有很多配置选项，可以在相应的源代码目录�
 假如要编译一个多线程版本的 Apache，可在编译时选择用 `worker` MPM
 来替换标准的 `prefork` MPM。只需在上面的第 3 步使用：
 
-  
---with-mpm=worker  
+    --with-mpm=worker
 
 如果不是很明确这样做的后果并且大概理解其含义的话，最好不要进行这一步。更多信息请参考
 Apache 文档中关于

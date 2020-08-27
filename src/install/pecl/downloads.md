@@ -24,5 +24,5 @@
 -   <span class="simpara"> Windows 下载： </span> <span class="simpara">
     目前 PHP 项目没有为 Windows 下 PECL 扩展编译二进制文件。要在 Windows
     下编译
-    PHP，请阅读<a href="/install/windows/legacy/index.html#install.windows.building" class="link">有关章节</a>。
+    PHP，请阅读<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">有关章节</a>。
     </span>
