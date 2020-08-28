@@ -4,22 +4,22 @@
 在 Windows 上有两种加载 PHP 扩展的方式：把扩展编译进 PHP，或者加载
 DLL。加载预编译的扩展是更简单更被推荐的方式。
 
-要加载某扩展，需要在系统中有其相对应的“.dll”文件。所有扩展都会由 PHP
+要加载某扩展，需要在系统中有其相对应的 “.dll” 文件。所有扩展都会由 PHP
 小组定期自动编译（如何下载见下节）。
 
-要将一扩展编译入
-PHP，请参考<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">从源程序编译</a>一章。
+要将一扩展编译入 PHP，请参考
+<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">从源程序编译</a>
+一章。
 
-要编译一个独立的扩展（即 DLL
-文件），请参考<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">从源程序编译</a>一章。如果在
-PHP 发行包和 PCEL 中都没有某 DLL
+要编译一个独立的扩展（即 DLL 文件），请参考
+<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">从源程序编译</a>
+一章。如果在 PHP 发行包和 PCEL 中都没有某 DLL
 文件，那可能需要自己编译之后才能使用该扩展。
 
 ### 去哪里找扩展库？
 
 PHP
-扩展库通常称为“php\_\*.dll”（其中星号代表具体某扩展的名字），位于“PHP\\ext”目录下（在
-PHP 4 中位于“PHP\\extensions”目录下）。
+扩展库通常称为“php\_\*.dll”（其中星号代表具体某扩展的名字），位于“PHP\\ext”目录下。
 
 PHP 发行包中包括了大多数开发者最常用到的扩展库。这些被称为“核心”扩展库。
 
@@ -29,7 +29,8 @@ PHP 扩展的储存室，提供了对于所有已知扩展的下载及开发途�
 
 如果用户开发了一个自己使用的扩展，可以考虑将其发布到 PECL
 中以便于其他有相同需求的用户使用。一个很好的副作用是可以得到其他用户的反馈，感谢，错误报告甚至修正／更新。不过在向
-PECL 发布扩展之前，请先阅读 https://pecl.php.net/package-new.php。
+PECL 发布扩展之前，请先阅读
+<a href="https://pecl.php.net/package-new.php" class="link external">» PECL 提交指南</a>。
 
 ### 下载哪个扩展？
 
@@ -61,9 +62,16 @@ phpinfo();
 最常见的方式是在 `php.ini` 配置文件里包含一个 PHP
 扩展。请注意很多扩展已经在 `php.ini` 里了，仅需要移除分号来激活它们。
 
+需要注意，从 PHP 7.2.0
+开始，可以直接用扩展的名称，来替代扩展的文件名。这样配置文件就跟操作系统解耦了，也更容易理解。我们推荐采用此方式加载扩展。为了与之前的版本保持兼容，直接写扩展名的方式会仍然支持。
+
     ;extension=php_extname.dll
 
     extension=php_extname.dll
+
+    ; PHP version 7.2 开始的推荐写法：
+    extension=extname
+    zend_extension=another_extension
 
 不过呢，有些 web 服务器会搞混，因为其并不一定使用和 PHP
 可执行文件处于同一目录下的 `php.ini` 文件。要搞清楚具体使用了哪一个

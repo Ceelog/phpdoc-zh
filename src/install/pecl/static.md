@@ -2,7 +2,7 @@
 ----------------------------
 
 有时可能需要将扩展库静态编译到 PHP 中。这需要将扩展库源程序放入
-`php-src/ext/` 目录中去并告诉 PHP 编译系统来生成其配置脚本。
+`/your/phpsrcdir/ext/` 目录中去并告诉 PHP 编译系统来生成其配置脚本。
 
     $ cd /your/phpsrcdir/ext
     $ pecl download extname

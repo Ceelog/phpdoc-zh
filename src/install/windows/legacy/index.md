@@ -1,28 +1,26 @@
-Installation on old Windows systems
------------------------------------
+旧版本 Windows 支持
+-------------------
 
-This section applies to Windows 98/Me and Windows NT/2000/XP/2003. PHP
-will not work on 16 bit platforms such as Windows 3.1 and sometimes we
-refer to the supported Windows platforms as Win32.
-
-> **Note**:
->
-> Windows XP/2003 are no longer supported as of PHP 5.5.0.
+本节适用于 Windows 98/Me 和 Windows NT/2000/XP/2003。PHP 不能在 16
+位平台上工作，如 Windows 3.1，有时我们将支持的 Windows 平台为 Win32。
 
 > **Note**:
 >
-> Windows 98/Me/NT4/2000 are no longer supported as of PHP 5.3.0.
+> 从 PHP 5.5.0 开始不再支持 Windows XP/2003。
 
 > **Note**:
 >
-> Windows 95 is no longer supported as of PHP 4.3.0.
+> 从 PHP 5.3.0 开始，不再支持 Windows 98/Me/NT4/2000。
 
-If you have a development environment such as Microsoft Visual Studio,
-you can also build PHP from the original source code.
+> **Note**:
+>
+> 从 PHP 4.3.0 开始不再支持 Windows 95。
 
-Once you have PHP installed on your Windows system, you may also want to
-<a href="/install/windows/legacy/index.html#install.windows.legacy.extensions" class="link">load various extensions</a>
-for added functionality.
+如果你有微软 Visual Studio 这样的开发环境，你也可以从原始源码中构建
+PHP。
+
+在 Windows 系统上安装 PHP 后，如果还想加载各种扩展来增加功能，请参考
+<a href="/install/windows/legacy/index.html#install.windows.legacy.extensions" class="link">这里</a>。
 
 ### 手工安装步骤
 

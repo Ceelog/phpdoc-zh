@@ -11,6 +11,7 @@
     -   [Unix 平台的 Lighttpd 1.4](/install/unix/lighttpd-14.html)
     -   [Sun Solaris 上的 Sun、iPlanet 和 Netscape
         服务器](/install/unix/sun.html)
+    -   [Unix系统下的LiteSpeed、OpenLiteSpeed服务](/install/unix/litespeed.html)
     -   [CGI 和命令行设置](/install/unix/commandline.html)
     -   [针对 HP-UX 平台的安装提示](/install/unix/hpux.html)
     -   [在 OpenBSD 系统下的安装](/install/unix/openbsd.html)
@@ -19,9 +20,9 @@
 -   [Mac OS X 系统下的安装](/install/macosx.html)
     -   [使用软件包](/install/macosx/packages.html)
     -   [使用内置的 PHP](/install/macosx/bundled.html)
-    -   [在 Mac OS X 下编译 PHP](/install/macosx/compile.html)
+    -   [在 macOS 下编译 PHP](/install/macosx/compile.html)
 -   [Windows 系统下的安装](/install/windows.html)
-    -   [Install Requirements](/install/windows/requirements.html)
+    -   [环境要求](/install/windows/requirements.html)
     -   [PECL](/install/windows/pecl.html)
     -   [Windows 下的 PHP 安装程序工具](/install/windows/tools.html)
     -   [Recommended Configuration on Windows
@@ -29,8 +30,7 @@
     -   [Manual PHP Installation on
         Windows](/install/windows/manual.html)
     -   [Windows 下 PHP 故障排除](/install/windows/troubleshooting.html)
-    -   [Installation on old Windows
-        systems](/install/windows/legacy/index.html)
+    -   [旧版本 Windows 支持](/install/windows/legacy/index.html)
 -   [云计算平台上的安装](/install/cloud.html)
     -   [Azure App Services](/install/cloud/azure.html)
     -   [Amazon EC2](/install/cloud/ec2.html)

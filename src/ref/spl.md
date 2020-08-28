@@ -398,7 +398,7 @@ var_dump(iterator_to_array($iterator, false));
 spl\_autoload\_call
 ===================
 
-尝试调用所有已注册的\_\_autoload()函数来装载请求类
+尝试调用所有已注册的 \_\_autoload() 函数来装载请求类
 
 ### 说明
 
@@ -407,7 +407,8 @@ class="methodname">spl\_autoload\_call</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$class_name`</span> )
 
-可以直接在程序中手动调用此函数来使用所有已注册的\_\_autoload函数装载类或接口。
+可以直接在程序中手动调用此函数来使用所有已注册的 \_\_autoload
+函数装载类或接口。
 
 ### 参数
 
@@ -421,7 +422,7 @@ class="methodparam"><span class="type">string</span>
 spl\_autoload\_extensions
 =========================
 
-注册并返回spl\_autoload函数使用的默认文件扩展名。
+注册并返回 spl\_autoload 函数使用的默认文件扩展名
 
 ### 说明
 
@@ -434,20 +435,35 @@ class="methodparam"><span class="type">string</span>
 函数内置的默认实现函数 <span class="function">spl\_autoload</span>
 所使用的扩展名。
 
+> **Note**: <span class="simpara"> 在定义的文件扩展名之间不应该有空格。
+> </span>
+
 ### 参数
 
 `file_extensions`  
-当不使用任何参数调用此函数时，它返回当前的文件扩展名的列表，不同的扩展名用逗号分隔。要修改文件扩展名列表，用一个逗号分隔的新的扩展名列表字符串来调用本函数即可。中文注：默认的spl\_autoload函数使用的扩展名是".inc,.php"。
+当不使用任何参数调用此函数时，它返回当前的文件扩展名的列表，不同的扩展名用逗号分隔。要修改文件扩展名列表，用一个逗号分隔的新的扩展名列表字符串来调用本函数即可。中文注：默认的
+spl\_autoload 函数使用的扩展名是 ".inc,.php"。
 
 ### 返回值
 
-逗号分隔的<span
-class="function">spl\_autoload</span>函数的默认文件扩展名。
+逗号分隔的 <span class="function">spl\_autoload</span>
+函数的默认文件扩展名。
+
+### 范例
+
+**示例 \#1 <span class="function">spl\_autoload\_extensions</span>
+示例**
+
+``` php
+<?php
+spl_autoload_extensions(".php,.inc");
+?>
+```
 
 spl\_autoload\_functions
 ========================
 
-返回所有已注册的\_\_autoload()函数。
+返回所有已注册的 \_\_autoload() 函数
 
 ### 说明
 
@@ -463,8 +479,9 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-包含所有已注册的\_\_autoload函数的数组（<span
-class="type">array</span>）。如果自动装载函数队列未激活，则返回**`FALSE`**。如果没有已注册的函数，则返回一个空数组。
+包含所有已注册的 \_\_autoload 函数的数组（<span
+class="type">array</span>）。如果自动装载函数队列未激活，则返回
+**`FALSE`**。如果没有已注册的函数，则返回一个空数组。
 
 spl\_autoload\_register
 =======================
@@ -582,7 +599,7 @@ new InexistentClass;
 spl\_autoload\_unregister
 =========================
 
-注销已注册的\_\_autoload()函数
+注销已注册的 \_\_autoload() 函数
 
 ### 说明
 
@@ -591,9 +608,11 @@ class="methodname">spl\_autoload\_unregister</span> ( <span
 class="methodparam"><span class="type">mixed</span>
 `$autoload_function`</span> )
 
-从spl提供的自动装载函数队列中注销某一函数。如果该函数队列处于激活状态，并且在给定函数注销后该队列变为空，则该函数队列将会变为无效。
+从 autoload
+自动装载函数队列中移除指定的函数。如果该函数队列处于激活状态，并且在给定函数注销后该队列变为空，则该函数队列将会变为无效。
 
-如果该函数注销后使得自动装载函数队列无效，即使存在有\_\_autoload函数它也不会自动激活。
+如果该函数注销后使得自动装载函数队列无效，即使存在有 \_\_autoload
+函数它也不会自动激活。
 
 ### 参数
 
@@ -784,15 +803,15 @@ $storage[$id] = $object;
 -   [iterator\_to\_array](/ref/spl.html#iterator_to_array) —
     将迭代器中的元素拷贝到数组
 -   [spl\_autoload\_call](/ref/spl.html#spl_autoload_call) —
-    尝试调用所有已注册的\_\_autoload()函数来装载请求类
+    尝试调用所有已注册的 \_\_autoload() 函数来装载请求类
 -   [spl\_autoload\_extensions](/ref/spl.html#spl_autoload_extensions) —
-    注册并返回spl\_autoload函数使用的默认文件扩展名。
+    注册并返回 spl\_autoload 函数使用的默认文件扩展名
 -   [spl\_autoload\_functions](/ref/spl.html#spl_autoload_functions) —
-    返回所有已注册的\_\_autoload()函数。
+    返回所有已注册的 \_\_autoload() 函数
 -   [spl\_autoload\_register](/ref/spl.html#spl_autoload_register) —
     注册给定的函数作为 \_\_autoload 的实现
 -   [spl\_autoload\_unregister](/ref/spl.html#spl_autoload_unregister) —
-    注销已注册的\_\_autoload()函数
+    注销已注册的 \_\_autoload() 函数
 -   [spl\_autoload](/ref/spl.html#spl_autoload) —
     \_\_autoload()函数的默认实现
 -   [spl\_classes](/ref/spl.html#spl_classes) — 返回所有可用的SPL类

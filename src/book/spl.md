@@ -127,15 +127,15 @@ PHP标准库 (SPL)
     -   [iterator\_to\_array](/ref/spl.html#iterator_to_array) —
         将迭代器中的元素拷贝到数组
     -   [spl\_autoload\_call](/ref/spl.html#spl_autoload_call) —
-        尝试调用所有已注册的\_\_autoload()函数来装载请求类
+        尝试调用所有已注册的 \_\_autoload() 函数来装载请求类
     -   [spl\_autoload\_extensions](/ref/spl.html#spl_autoload_extensions)
-        — 注册并返回spl\_autoload函数使用的默认文件扩展名。
+        — 注册并返回 spl\_autoload 函数使用的默认文件扩展名
     -   [spl\_autoload\_functions](/ref/spl.html#spl_autoload_functions)
-        — 返回所有已注册的\_\_autoload()函数。
+        — 返回所有已注册的 \_\_autoload() 函数
     -   [spl\_autoload\_register](/ref/spl.html#spl_autoload_register) —
         注册给定的函数作为 \_\_autoload 的实现
     -   [spl\_autoload\_unregister](/ref/spl.html#spl_autoload_unregister)
-        — 注销已注册的\_\_autoload()函数
+        — 注销已注册的 \_\_autoload() 函数
     -   [spl\_autoload](/ref/spl.html#spl_autoload) —
         \_\_autoload()函数的默认实现
     -   [spl\_classes](/ref/spl.html#spl_classes) — 返回所有可用的SPL类

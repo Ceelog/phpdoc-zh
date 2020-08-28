@@ -12,8 +12,8 @@
     </span>
 -   <span class="simpara"> *pecl download extname* </span> <span
     class="simpara"> PECL 网站中列出的 PECL 扩展库的发行版本可以用
-    <a href="https://pear.php.net/manual/en/guide.users.commandline.cli.php" class="link external">» pear 命令</a>来下载和安装。也可以指明具体的修正版。
-    </span>
+    <a href="https://pear.php.net/manual/en/guide.users.commandline.cli.php" class="link external">» pear 命令</a>
+    来下载和安装。也可以指明具体的修正版。 </span>
 -   <span class="simpara"> SVN </span> <span class="simpara"> 大多数
     PECL 扩展库也在 SVN 中。其 web 页面见 be seen at
     <a href="https://svn.php.net/viewvc/pecl/" class="link external">» https://svn.php.net/viewvc/pecl/</a>。要直接从
@@ -21,8 +21,6 @@
       
     $ svn checkout http://svn.php.net/repository/pecl/extname/trunk
     extname  
--   <span class="simpara"> Windows 下载： </span> <span class="simpara">
-    目前 PHP 项目没有为 Windows 下 PECL 扩展编译二进制文件。要在 Windows
-    下编译
-    PHP，请阅读<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">有关章节</a>。
-    </span>
+-   <span class="simpara"> Windows 下载 </span> <span class="simpara">
+    PHP 官方已为 Windows 预编译了大部分的 PECL 扩展（.dll
+    文件），可以直接从 PECL 官网下载。 </span>
