@@ -288,6 +288,12 @@ class="type">resource</span> `$ch`</span> )
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
 
+> **Note**:
+>
+> 注意：响应代码是错误码时（例如*404 Not
+> found*）也不会被当作失败。这种情况可以使用 <span
+> class="function">curl\_getinfo</span> 来检查。
+
 ### 范例
 
 **示例 \#1 获取网页**
@@ -2638,7 +2644,7 @@ class="initializer"> = CURLVERSION\_NOW</span></span> \] )
 
 返回关联数组，包含如下元素：
 
-| Indice               | 值描述                               |
+| 键                   | 值描述                               |
 |----------------------|--------------------------------------|
 | version\_number      | cURL 24 位版本号                     |
 | version              | cURL 版本号，字符串形式              |

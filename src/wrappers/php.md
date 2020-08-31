@@ -102,7 +102,6 @@ class="function">readfile</span>、 <span class="function">file</span> 和
 | 5.6.0 | `php://input` 可反复使用。            |
 | 5.3.6 | 增加 `php://fd`。                     |
 | 5.1.0 | 增加 `php://memory` 和 `php://temp`。 |
-| 5.0.0 | 增加 `php://filter`。                 |
 
 ### 范例
 

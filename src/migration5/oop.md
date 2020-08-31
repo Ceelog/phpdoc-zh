@@ -8,7 +8,12 @@ PHP，对象处理方式和原始类型（例如整型和字符串）相同。�
 很多 PHP 程序员根本没意识到旧的对象模型的这种拷贝怪癖，因此大多数 PHP
 应用程序拿来就能运行，或者只做很小的修改。
 
-新对象模型的文档见<a href="/language/oop5.html" class="link">语言参考</a>。
+新对象模型的文档见
+<a href="/language/oop5.html" class="link">语言参考</a>。
+
+在 PHP 5
+中，只有在同一个类中定义了类名的函数，才会作为构造函数被调用。在 PHP 4
+中，如果定义在父类中，它也会被调用。
 
 与 PHP 4 的兼容性参见
 <a href="/ini/core.html#ini.zend.ze1-compatibility-mode" class="link">zend.ze1_compatibility_mode</a>。

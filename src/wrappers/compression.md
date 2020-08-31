@@ -15,9 +15,8 @@ zip://
 
 `zlib:` 的功能类似 <span class="function">gzopen</span>，但是
 其数据流还能被 <span class="function">fread</span>
-和其他文件系统函数使用。 自 PHP 4.3.0
-后这个不建议被使用，因为会和其他带“:”字符的文件名混淆； 请使用
-`compress.zlib://` 作为替代。
+和其他文件系统函数使用。 不建议使用，因为会和其他带“:”字符的文件名混淆；
+请使用 `compress.zlib://` 替代。
 
 `compress.zlib://`、 `compress.bzip2://` 和 <span
 class="function">gzopen</span>、<span class="function">bzopen</span>

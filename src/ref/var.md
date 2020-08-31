@@ -602,6 +602,8 @@ echo intval(42, 8);                   // 42
 echo intval('42', 8);                 // 34
 echo intval(array());                 // 0
 echo intval(array('foo', 'bar'));     // 1
+echo intval(false);                   // 0
+echo intval(true);                    // 1
 ?>
 ```
 

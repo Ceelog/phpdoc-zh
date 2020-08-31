@@ -81,9 +81,9 @@ password\_hash
 <span class="type">string</span> <span
 class="methodname">password\_hash</span> ( <span
 class="methodparam"><span class="type">string</span> `$password`</span>
-, <span class="methodparam"><span class="type">int</span> `$algo`</span>
-\[, <span class="methodparam"><span class="type">array</span>
-`$options`</span> \] )
+, <span class="methodparam"><span class="type">mixed</span>
+`$algo`</span> \[, <span class="methodparam"><span
+class="type">array</span> `$options`</span> \] )
 
 <span class="function">password\_hash</span>
 使用足够强度的单向散列算法创建密码的散列（hash）。 <span
@@ -104,8 +104,12 @@ class="function">password\_hash</span>。
     **`CRYPT_BLOWFISH`** 算法创建散列。 这会产生兼容使用 "$2y$" 的 <span
     class="function">crypt</span>。 结果将会是 60 个字符的字符串，
     或者在失败时返回 **`FALSE`**。 </span>
--   <span class="simpara"> **`PASSWORD_ARGON2I`** - 使用 Argon2
-    散列算法创建散列。 </span>
+-   <span class="simpara"> **`PASSWORD_ARGON2I`** - 使用 Argon2i
+    散列算法创建散列。 只有在 PHP 编译时加入 Argon2
+    支持时才能使用该算法。 </span>
+-   <span class="simpara"> **`PASSWORD_ARGON2ID`** - 使用 Argon2id
+    散列算法创建散列。 只有在 PHP 编译时加入 Argon2
+    支持时才能使用该算法。 </span>
 
 **`PASSWORD_BCRYPT`** 支持的选项：
 
@@ -125,10 +129,10 @@ class="function">password\_hash</span>。
     省略时，默认值是 *10*。 这个 cost
     是个不错的底线，但也许可以根据自己硬件的情况，加大这个值。
 
-**`PASSWORD_ARGON2I`** 支持的选项：
+**`PASSWORD_ARGON2I`** 和 **`PASSWORD_ARGON2ID`** 支持的选项：
 
 -   *memory\_cost* (<span class="type">integer</span>) - 计算 Argon2
-    散列时的最大内存（单位：字节 byte）。默认值：
+    散列时的最大内存（单位：KB）。默认值：
     **`PASSWORD_ARGON2_DEFAULT_MEMORY_COST`**。
 
 -   *time\_cost* (<span class="type">integer</span>) - 计算 Argon2
@@ -163,6 +167,14 @@ class="function">password\_hash</span>。
 和盐值作为散列的一部分返回。所以验证散列值的所有信息都已经包含在内。
 这使 <span class="function">password\_verify</span>
 函数验证的时候，不需要额外储存盐值或者算法的信息。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                        |
+|-------|-----------------------------------------------------------------------------------------------------------------------------|
+| 7.4.0 | 现在 `algo` 参数可支持 <span class="type">string</span> 类型，但为了向后兼容也支持 <span class="type">integer</span> 类型。 |
+| 7.3.0 | 增加 **`PASSWORD_ARGON2ID`**，支持 Argon2id 密码算法。                                                                      |
+| 7.2.0 | 增加 **`PASSWORD_ARGON2I`**，支持 Argon2i 密码算法。                                                                        |
 
 ### 范例
 
@@ -205,30 +217,7 @@ echo password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
 
     $2y$12$QjSH496pcT5CEbzjD/vtVeH03tfHKFy36d4J0Ltp3lRtee9HDxY3K
 
-**示例 \#3 <span class="function">password\_hash</span>
-手动设置盐值的例子**
-
-``` php
-<?php
-/**
- * 注意，这里的盐值是随机产生的。
- * 永远都不要使用固定盐值，或者不是随机生成的盐值。
- *
- * 绝大多数情况下，可以让 password_hash generate 为你自动产生随机盐值
- */
-$options = [
-    'cost' => 11,
-    'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
-];
-echo password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options);
-?>
-```
-
-以上例程的输出类似于：
-
-    $2y$11$q5MkhSBtlsJcNEVsYh64a.aCluzHnGog7TQAKVmQwO9C8xb.t89F.
-
-**示例 \#4 寻找最佳 cost 的 <span class="function">password\_hash</span>
+**示例 \#3 寻找最佳 cost 的 <span class="function">password\_hash</span>
 例子**
 
 ``` php
@@ -258,18 +247,18 @@ echo "Appropriate Cost Found: " . $cost;
 
     Appropriate Cost Found: 10
 
-**示例 \#5 使用 Argon2 的<span
+**示例 \#4 使用 Argon2i 的<span
 class="function">password\_hash</span>例子**
 
 ``` php
 <?php
-echo 'Argon2 hash: ' . password_hash('rasmuslerdorf', PASSWORD_ARGON2I);
+echo 'Argon2i hash: ' . password_hash('rasmuslerdorf', PASSWORD_ARGON2I);
 ?>
 ```
 
 以上例程的输出类似于：
 
-    Argon2 hash: $argon2i$v=19$m=1024,t=2,p=2$YzJBSzV4TUhkMzc3d3laeg$zqU/1IN0/AogfP4cmSJI1vc8lpXRW9/S0sYY2i2jHT0
+    Argon2i hash: $argon2i$v=19$m=1024,t=2,p=2$YzJBSzV4TUhkMzc3d3laeg$zqU/1IN0/AogfP4cmSJI1vc8lpXRW9/S0sYY2i2jHT0
 
 ### 注释
 
@@ -300,17 +289,12 @@ echo 'Argon2 hash: ' . password_hash('rasmuslerdorf', PASSWORD_ARGON2I);
 >     7.3.0, 8.0.0，等等），不能是在修订版。
 >     唯一的例外是：在当前默认算法里发现了紧急的安全威胁。 </span>
 
-### 更新日志
-
-| 版本  | 说明                                                    |
-|-------|---------------------------------------------------------|
-| 7.2.0 | 添加 **`PASSWORD_ARGON2I`**，支持 Argon2 密码散列算法。 |
-
 ### 参见
 
 -   <span class="function">password\_verify</span>
 -   <span class="function">crypt</span>
 -   <a href="https://github.com/ircmaxell/password_compat" class="link external">» 用户的使用</a>
+-   <span class="function">sodium\_crypto\_pwhash\_str</span>
 
 password\_needs\_rehash
 =======================
@@ -322,7 +306,7 @@ password\_needs\_rehash
 <span class="type">bool</span> <span
 class="methodname">password\_needs\_rehash</span> ( <span
 class="methodparam"><span class="type">string</span> `$hash`</span> ,
-<span class="methodparam"><span class="type">int</span> `$algo`</span>
+<span class="methodparam"><span class="type">mixed</span> `$algo`</span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$options`</span> \] )
 
@@ -340,6 +324,17 @@ class="methodparam"><span class="type">string</span> `$hash`</span> ,
 `options`  
 一个包含有选项的关联数组。详细的参数说明，请参考文档
 <a href="/password/constants.html" class="link">密码算法常数</a>。
+
+### 返回值
+
+如果散列需要重新生成才能匹配指定的 `algo` 和 `options`， 则返回
+**`TRUE`**，否则返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------|
+| 7.4.0 | 现在 `algo` 参数可以支持 <span class="type">string</span> 类型，但为了向后兼容性，同时支持 <span class="type">integer</span> 类型。 |
 
 ### 范例
 
@@ -367,11 +362,6 @@ if (password_verify($password, $hash)) {
 }
 ?>
 ```
-
-### 返回值
-
-如果散列需要重新生成才能匹配指定的 `algo` 和 `options`， 则返回
-**`TRUE`**，否则返回 **`FALSE`**。
 
 password\_verify
 ================
@@ -431,6 +421,7 @@ if (password_verify('rasmuslerdorf', $hash)) {
 
 -   <span class="function">password\_hash</span>
 -   <a href="https://github.com/ircmaxell/password_compat" class="link external">» 用户使用</a>
+-   <span class="function">sodium\_crypto\_pwhash\_str\_verify</span>
 
 **目录**
 

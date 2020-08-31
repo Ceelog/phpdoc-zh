@@ -5,7 +5,7 @@ fastcgi\_finish\_request
 
 ### 说明
 
-<span class="type">boolean</span> <span
+<span class="type">bool</span> <span
 class="methodname">fastcgi\_finish\_request</span> ( <span
 class="methodparam">void</span> )
 

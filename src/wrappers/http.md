@@ -50,14 +50,6 @@ will be used for the *From:* header if set and not overwritten by the
 | 支持 <span class="function">mkdir</span>                                   | No   |
 | 支持 <span class="function">rmdir</span>                                   | No   |
 
-### 更新日志
-
-| 版本  | 说明                                                     |
-|-------|----------------------------------------------------------|
-| 4.3.7 | 检测 IIS 服务器避免 *"SSL: Fatal Protocol Error"* 错误。 |
-| 4.3.0 | 添加 *https://*。                                        |
-| 4.0.5 | 增加了对重定向的支持。                                   |
-
 ### 范例
 
 **示例 \#1 检测重定向后最终的 URL**

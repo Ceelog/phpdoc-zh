@@ -5232,6 +5232,7 @@ echo count($food); // output 2
 -   <span class="function">isset</span>
 -   <span class="function">empty</span>
 -   <span class="function">strlen</span>
+-   <span class="function">is\_countable</span>
 
 current
 =======
@@ -5997,11 +5998,6 @@ class="function">list</span> 中写的一样是从左到右的，但在 PHP 5
 
 通常而言，不建议依赖于操作的顺序，在未来可能会再次发生修改。
 
-**Warning**
-
-在 <span class="function">list</span> 执行过程中修改数组（比如使用
-*list($a, $b) = $b*）将会产生不可预知的结果。
-
 ### 参数
 
 `var1`  
@@ -6013,12 +6009,13 @@ class="function">list</span> 中写的一样是从左到右的，但在 PHP 5
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                        |
-|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0 | 现在可以指定 <span class="function">list</span> 中的键。 这就可以解构非数字键或者无顺序的数组。                                                                             |
-| 7.0.0 | <a href="/migration70/incompatible.html#migration70.incompatible.variable-handling.list.order" class="link">赋值操作的顺序发生了变化。</a>                                  |
-| 7.0.0 | <a href="/migration70/incompatible.html#migration70.incompatible.variable-handling.list.empty" class="link"><span class="function">list</span> 表达式不再可以完全为空。</a> |
-| 7.0.0 | <a href="/migration70/incompatible.html#migration70.incompatible.variable-handling.list.string" class="link">字符串无法再被拆包（unpack）。</a>                             |
+| 版本  | 说明                                                                                            |
+|-------|-------------------------------------------------------------------------------------------------|
+| 7.3.0 | 支持在数组解构时传引用。                                                                        |
+| 7.1.0 | 现在可以指定 <span class="function">list</span> 中的键。 这就可以解构非数字键或者无顺序的数组。 |
+| 7.0.0 | 赋值操作的顺序发生了变化。                                                                      |
+| 7.0.0 | <span class="function">list</span> 表达式不再可以完全为空。                                     |
+| 7.0.0 | 字符串无法再被拆包（unpack）。                                                                  |
 
 ### 范例
 

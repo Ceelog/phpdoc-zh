@@ -1,18 +1,18 @@
-未向下兼容的改变
+不向下兼容的改变
 ----------------
 
 尽管大部分 PHP 4
 的代码应该不用修改就能运行，还是应该留意以下不向下兼容的改变：
 
--   <span class="simpara">
-    有了一些<a href="/reserved/keywords.html" class="link">新关键字</a>。
+-   <span class="simpara"> 有了一些
+    <a href="/reserved/keywords.html" class="link">新关键字</a>。
     </span>
 -   <span class="simpara"> <span class="function">strrpos</span> 和
     <span class="function">strripos</span> 如今使用整个字符串作为
     needle。 </span>
 -   <span class="simpara"> 非法使用字符串偏移量会导致 **`E_ERROR`**
-    而不是 **`E_WARNING`**。一个非法使用的例子：*$str = 'abc';
-    unset($str\[0\]);*. </span>
+    而不是 **`E_WARNING`**。一个非法使用的例子： *$str = 'abc';
+    unset($str\[0\]);*。 </span>
 -   <span class="simpara"> <span class="function">array\_merge</span>
     被改成只接受数组。如果传递入非数组变量，对每个此类参数都会发出一条
     **`E_WARNING`** 信息。要小心因为你的代码有可能疯狂发出
@@ -41,7 +41,7 @@
     <a href="/ini/core.html#ini.variables-order" class="link">variables_order</a>
     怎么设定，在 CLI 版本中 argc 和 argv 总是可用的。本来 CLI
     版不是总会产生全局变量 $argc 和 $argv 的。 </span>
--   <span class="simpara"> 没有属性的对象不再被当成“empty”。 </span>
+-   <span class="simpara"> 没有属性的对象不再被当成 “empty”。 </span>
 -   <span class="simpara">
     有些情况下类必须在使用前被定义。这仅在使用了一些 PHP 5
     的新特性（例如
@@ -71,6 +71,13 @@
 -   <span class="simpara"> <span class="function">include\_once</span>
     和 <span class="function">require\_once</span> 在 Windows
     下先将路径规格化，因此包含 A.php 和 a.php 只会把文件包含一次。
+    </span>
+-   <span class="simpara">
+    将一个数组的值传递给一个函数，在函数内部访问数组时不再重置数组的内部指针。换句话说，在
+    PHP 4
+    中，当你把一个数组传给一个函数时，它在函数内部的指针会被重置，而在
+    PHP 5
+    中，当你把一个数组传给一个函数时，它在函数内部的数组指针会在传给函数时的位置。
     </span>
 
 **示例 \#1 <span class="function">strrpos</span> 和 <span

@@ -32,6 +32,6 @@
     class="function">shmop\_delete</span>. </span>
 -   <span class="simpara"> <span class="function">substr</span> 现在当
     start 的值与 string 的长度相同时将返回一个空字符串。 </span>
--   <span class="simpara"> 为了避免内存泄露，<span
-    class="function">xml\_set\_object</span>
-    现在在执行结束时需要手动清除 $parse。 </span>
+-   <span class="simpara"> <span
+    class="function">xml\_parser\_free</span>不再足以释放解析器资源，如果它引用了一个对象，而这个对象又引用了那个解析器资源。在这种情况下，需要额外地取消设置
+    $parser。 </span>

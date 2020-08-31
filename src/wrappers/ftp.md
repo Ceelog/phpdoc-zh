@@ -32,24 +32,18 @@ ftp 服务器上，如果尝试打开并写入文件的时候， 未指定上下
 
 ### 可选项
 
-| 属性                                                                       | PHP 4              | PHP 5                                                                                                                                                                                                                                                                                          |
-|----------------------------------------------------------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 受 <a href="/filesystem/setup.html#" class="link">allow_url_fopen</a> 影响 | Yes                | Yes                                                                                                                                                                                                                                                                                            |
-| 允许读取                                                                   | Yes                | Yes                                                                                                                                                                                                                                                                                            |
-| 允许写入                                                                   | Yes (仅支持新文件) | Yes (新文件/启用 `overwrite` 后已存在的文件)                                                                                                                                                                                                                                                   |
-| 允许添加                                                                   | No                 | Yes                                                                                                                                                                                                                                                                                            |
-| 允许同时读和写                                                             | No                 | No                                                                                                                                                                                                                                                                                             |
-| 支持 <span class="function">stat</span>                                    | No                 | 自 5.0.0 起：仅仅 <span class="function">filesize</span>、 <span class="function">filetype</span>、 <span class="function">file\_exists</span>、 <span class="function">is\_file</span> 和 <span class="function">is\_dir</span>。 自 PHP 5.1.0 起： <span class="function">filemtime</span>。 |
-| 支持 <span class="function">unlink</span>                                  | No                 | Yes                                                                                                                                                                                                                                                                                            |
-| 支持 <span class="function">rename</span>                                  | No                 | Yes                                                                                                                                                                                                                                                                                            |
-| 支持 <span class="function">mkdir</span>                                   | No                 | Yes                                                                                                                                                                                                                                                                                            |
-| 支持 <span class="function">rmdir</span>                                   | No                 | Yes                                                                                                                                                                                                                                                                                            |
-
-### 更新日志
-
-| 版本  | 说明            |
-|-------|-----------------|
-| 4.3.0 | 增加 *ftps://*. |
+| 属性                                                                       | 是否支持                                                                                                                                                                                                                                                                        |
+|----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 受 <a href="/filesystem/setup.html#" class="link">allow_url_fopen</a> 影响 | 是                                                                                                                                                                                                                                                                              |
+| 允许读取                                                                   | 是                                                                                                                                                                                                                                                                              |
+| 允许写入                                                                   | 是 (新文件/启用 `overwrite` 后已存在的文件)                                                                                                                                                                                                                                     |
+| 允许添加                                                                   | 是                                                                                                                                                                                                                                                                              |
+| 允许同时读和写                                                             | 否                                                                                                                                                                                                                                                                              |
+| 支持 <span class="function">stat</span>                                    | 仅 <span class="function">filesize</span>、 <span class="function">filetype</span>、 <span class="function">file\_exists</span>、 <span class="function">is\_file</span> 和 <span class="function">is\_dir</span>。 自 PHP 5.1.0 起： <span class="function">filemtime</span>。 |
+| 支持 <span class="function">unlink</span>                                  | 是                                                                                                                                                                                                                                                                              |
+| 支持 <span class="function">rename</span>                                  | 是                                                                                                                                                                                                                                                                              |
+| 支持 <span class="function">mkdir</span>                                   | 是                                                                                                                                                                                                                                                                              |
+| 支持 <span class="function">rmdir</span>                                   | 是                                                                                                                                                                                                                                                                              |
 
 ### 注释
 
@@ -62,9 +56,8 @@ ftp 服务器上，如果尝试打开并写入文件的时候， 未指定上下
 > back）到普通未加密的 ftp。 </span>
 
 > **Note**: **追加**  
-> <span class="simpara"> 自 PHP 5.0.0 起文件可以通过 *ftp://* URL
-> 封装器来追加（append）。 在之前的版本，尝试通过 *ftp://*
-> 来追加一个文件将会导致错误。 </span>
+> <span class="simpara"> 文件可以通过 *ftp://* URL
+> 封装器来追加（append）。 </span>
 
 ### 参见
 

@@ -3660,6 +3660,11 @@ Imagick::averageImages
 
 Average a set of images
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">Imagick</span> <span
@@ -4291,6 +4296,11 @@ Imagick::colorFloodfillImage
 ============================
 
 Changes the color value of any pixel that matches target
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -5884,6 +5894,11 @@ Imagick::filter
 
 Description
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -5943,6 +5958,11 @@ Imagick::flattenImages
 ======================
 
 Merges a sequence of images
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -6841,6 +6861,11 @@ Imagick::getImageAttribute
 
 Description
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -7065,6 +7090,11 @@ Imagick::getImageChannelExtrema
 
 Gets the extrema for one or more image channels
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">array</span> <span
@@ -7207,6 +7237,11 @@ Imagick::getImageClipMask
 =========================
 
 Gets image clip mask
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -7436,6 +7471,11 @@ Imagick::getImageExtrema
 ========================
 
 Gets the extrema for the image
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -7739,6 +7779,11 @@ Imagick::getImageIndex
 
 Gets the index of the current active image
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">int</span> <span
@@ -7871,6 +7916,11 @@ Imagick::getImageMatte
 
 Return if the image has a matte channel
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">bool</span> <span
@@ -7888,6 +7938,11 @@ Imagick::getImageMatteColor
 ===========================
 
 Returns the image matte color
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -8330,6 +8385,11 @@ Imagick::getImageSize
 =====================
 
 Returns the image length in bytes
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -9695,6 +9755,11 @@ Imagick::mapImage
 Replaces the colors of an image with the closest color from a reference
 image
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">bool</span> <span
@@ -9721,6 +9786,11 @@ Imagick::matteFloodfillImage
 ============================
 
 Changes the transparency value of a color
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -9776,6 +9846,11 @@ Imagick::medianFilterImage
 ==========================
 
 Applies a digital filter
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -10471,6 +10546,11 @@ Imagick::mosaicImages
 
 Forms a mosaic from images
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">Imagick</span> <span
@@ -10923,6 +11003,11 @@ Imagick::orderedPosterizeImage
 
 Performs an ordered dither
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">bool</span> <span
@@ -10990,6 +11075,11 @@ Imagick::paintFloodfillImage
 
 Changes the color value of any pixel that matches target
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">bool</span> <span
@@ -11044,6 +11134,11 @@ Imagick::paintOpaqueImage
 
 Change any pixel that matches color
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">bool</span> <span
@@ -11094,6 +11189,11 @@ Imagick::paintTransparentImage
 ==============================
 
 Changes any pixel that matches color with the color defined by fill
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -11700,6 +11800,11 @@ Imagick::radialBlurImage
 
 Radial blurs an image
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">bool</span> <span
@@ -11989,6 +12094,11 @@ Imagick::recolorImage
 
 Recolors image
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">bool</span> <span
@@ -12044,6 +12154,11 @@ Imagick::reduceNoiseImage
 =========================
 
 Smooths the contours of an image
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -12495,6 +12610,11 @@ Imagick::roundCorners
 =====================
 
 Rounds image corners
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -13276,6 +13396,11 @@ Imagick::setImageAttribute
 
 Description
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -13335,6 +13460,11 @@ Imagick::setImageBias
 
 Sets the image bias for any method that convolves an image
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">bool</span> <span
@@ -13388,6 +13518,11 @@ Imagick::setImageBiasQuantum
 ============================
 
 Description
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -13498,6 +13633,11 @@ Imagick::setImageClipMask
 =========================
 
 Sets image clip mask
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -13969,6 +14109,11 @@ Imagick::setImageIndex
 
 Set the iterator position
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">bool</span> <span
@@ -14116,6 +14261,11 @@ Imagick::setImageMatteColor
 
 Sets the image matte color
 
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
+
 ### 说明
 
 <span class="type">bool</span> <span
@@ -14146,6 +14296,11 @@ Imagick::setImageOpacity
 ========================
 
 Sets the image opacity level
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 
@@ -16464,6 +16619,11 @@ Imagick::transformImage
 =======================
 
 Convenience method for setting crop size and the image geometry
+
+**Warning**
+
+This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
+function is highly discouraged.
 
 ### 说明
 

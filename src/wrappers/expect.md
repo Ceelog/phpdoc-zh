@@ -14,7 +14,7 @@ expect://
 > <a href="https://pecl.php.net/package/expect" class="link external">» Expect</a>
 > 扩展。 </span>
 
-`expect://` PHP 4.3.0 and up (PECL)
+`expect://` (PECL)
 
 ### 用法
 

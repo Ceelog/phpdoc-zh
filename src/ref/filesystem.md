@@ -473,9 +473,10 @@ class="function">unset</span>
 
 ### 说明
 
-这是个虚构的手册条目来给那些本来是找 <span
-class="function">unlink</span> 或者 <span class="function">unset</span>
-的人提供一些有用的信息。
+在 PHP 语言里，没有 delete
+关键词或函数。在这里，你若要删除文件，可以使用 <span
+class="function">unlink</span>。在本地作用域删除变量可使用 <span
+class="function">unset</span>。
 
 ### 参见
 
@@ -5072,7 +5073,7 @@ readfile
 <span class="methodparam"><span class="type">string</span>
 `$filename`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$use_include_path`<span class="initializer"> =
-false</span></span> \[, <span class="methodparam"><span
+**`FALSE`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \]\] )
 
 读取文件并写入到输出缓冲。
@@ -5092,8 +5093,11 @@ Stream 上下文（context） <span class="type">resource</span>。
 
 ### 返回值
 
-返回从文件中读入的字节数。如果出错返回 **`FALSE`** 并且除非是以 @<span
-class="function">readfile</span> 形式调用，否则会显示错误信息。
+成功时返回从文件中读入的字节数， 或者在失败时返回 **`FALSE`**
+
+### 错误／异常
+
+失败时抛出**`E_WARNING`**警告。
 
 ### 范例
 

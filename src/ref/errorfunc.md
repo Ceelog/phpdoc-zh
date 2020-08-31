@@ -437,7 +437,6 @@ class="function">error\_reporting</span> 仅会返回当前的错误报告级别
 | 5.4.0 | **`E_STRICT`** 成为 **`E_ALL`** 的一部分             |
 | 5.3.0 | 引入 **`E_DEPRECATED`** 和 **`E_USER_DEPRECATED`**。 |
 | 5.2.0 | 引入 **`E_RECOVERABLE_ERROR`**。                     |
-| 5.0.0 | 引入 **`E_STRICT`** (但不包括在 **`E_ALL`** 之内)。  |
 
 ### 范例
 
@@ -634,9 +633,10 @@ class="function">error\_reporting</span>
 同时注意，在需要时你有责任使用 <span class="function">die</span>。
 如果错误处理程序返回了，脚本将会继续执行发生错误的后一行。
 
-以下级别的错误不能由用户定义的函数来处理： **`E_ERROR`**、
-**`E_PARSE`**、 **`E_CORE_ERROR`**、 **`E_CORE_WARNING`**、
-**`E_COMPILE_ERROR`**、 **`E_COMPILE_WARNING`**，和在 调用 <span
+以下级别的错误不能由用户定义的函数来处理，独立于发生错误的地方：
+**`E_ERROR`**、 **`E_PARSE`**、 **`E_CORE_ERROR`**、
+**`E_CORE_WARNING`**、 **`E_COMPILE_ERROR`**、
+**`E_COMPILE_WARNING`**，和在 调用 <span
 class="function">set\_error\_handler</span> 函数所在文件中产生的大多数
 **`E_STRICT`**。
 

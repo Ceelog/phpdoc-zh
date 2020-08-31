@@ -60,7 +60,7 @@
 **`FILE_USE_INCLUDE_PATH`** (<span class="type">integer</span>)  
 <span class="simpara"> 在
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>
-里搜索 `filename`。 (自 PHP 5 起)。 </span>
+里搜索 `filename`。 </span>
 
 **`FILE_NO_DEFAULT_CONTEXT`** (<span class="type">integer</span>)  
 <span class="simpara"> </span>
@@ -69,10 +69,10 @@
 <span class="simpara"> 为存在的文件添加内容。 </span>
 
 **`FILE_IGNORE_NEW_LINES`** (<span class="type">integer</span>)  
-<span class="simpara"> 过滤换行（EOL）字符（PHP 5 起）。 </span>
+<span class="simpara"> 过滤换行（EOL）字符。 </span>
 
 **`FILE_SKIP_EMPTY_LINES`** (<span class="type">integer</span>)  
-<span class="simpara"> 过滤空行（自 PHP 5 起）。 </span>
+<span class="simpara"> 过滤空行。 </span>
 
 **`FILE_BINARY`** (<span class="type">integer</span>)  
 二进制模式（自 PHP 5.2.7 起）。

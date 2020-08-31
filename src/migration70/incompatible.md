@@ -336,6 +336,43 @@ var_dump(1 >> -1);
 位宽的位移操作（无论哪个方向）将始终得到 0
 作为结果。在从前，这一操作是结构依赖的。
 
+#### 除以零的变化
+
+之前的版本中，当 0 被做为除数时，无论是除数 (/) 或取模 (%)
+操作，都会抛出一个 E\_WARNING 错误并返回 **`false`**。现在，除法运算符
+(/) 会返回一个由 IEEE 754 指定的浮点数：+INF, -INF 或 NAN。取模操作符
+(%) 则会抛出一个 <span class="classname">DivisionByZeroError</span>
+异常，并且不再产生 E\_WARNING 错误。
+
+``` php
+<?php
+var_dump(3/0);
+var_dump(0/0);
+var_dump(0%0);
+?>
+```
+
+以上例程在 PHP 5 中的输出：
+
+    Warning: Division by zero in %s on line %d
+    bool(false)
+
+    Warning: Division by zero in %s on line %d
+    bool(false)
+
+    Warning: Division by zero in %s on line %d
+    bool(false)
+
+以上例程在 PHP 7 中的输出：
+
+    Warning: Division by zero in %s on line %d
+    float(INF)
+
+    Warning: Division by zero in %s on line %d
+    float(NAN)
+
+    PHP Fatal error:  Uncaught DivisionByZeroError: Modulo by zero in %s line %d
+
 ### <span class="type">string</span>处理上的调整
 
 #### 十六进制字符串不再被认为是数字

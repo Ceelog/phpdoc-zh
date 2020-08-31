@@ -26,6 +26,11 @@
 -   <span class="simpara"> <span
     class="function">curl\_share\_strerror</span> </span>
 
+### <a href="/book/openssl.html" class="link">OpenSSL</a>
+
+-   <span class="simpara"> <span
+    class="function">openssl\_get\_curve\_names</span> </span>
+
 ### <a href="/book/session.html" class="link">Session</a>
 
 -   <span class="simpara"> <span

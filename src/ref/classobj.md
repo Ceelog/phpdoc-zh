@@ -97,9 +97,7 @@ class="methodname">call\_user\_method</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$method_name`</span> , <span class="methodparam"><span
 class="type">object</span> `&$obj`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$parameter`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \]\] )
+class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
 
 ### 参数
 
@@ -109,7 +107,7 @@ class="methodparam"><span class="type">mixed</span> `$parameter`</span>
 `obj`  
 要调用的 `method_name` 所在的对象 <span class="type">object</span>。
 
-`parameter ...`  
+`...`  
 可选参数
 
 ### 范例
@@ -771,6 +769,7 @@ class="methodparam">void</span> )
 ### 参见
 
 -   <span class="function">class\_uses</span>
+-   <span class="function">trait\_exists</span>
 
 get\_object\_vars
 =================

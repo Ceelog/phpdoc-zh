@@ -279,3 +279,9 @@ posix_kill(posix_getpid(), SIGHUP);
 函数与新的常量 **`CURLMOPT_PUSHFUNCTION`** 来进行调节。常量
 **`CURL_PUST_OK`** 和 **`CURL_PUSH_DENY`**
 也已经被添加进来，以便服务器推送的回调函数来表明自己会同意或拒绝处理。
+
+### 套接字上下文选项
+
+新增
+<a href="/context/socket.html#context.socket.tcp_nodelay" class="link">tcp_nodelay</a>
+选项。

@@ -6,7 +6,7 @@ Secure Shell 2
 ### 说明
 
 `ssh2.shell://` `ssh2.exec://` `ssh2.tunnel://` `ssh2.sftp://`
-`ssh2.scp://` PHP 4.3.0 and up (PECL)
+`ssh2.scp://` (PECL)
 
 > **Note**: **该封装器默认没有激活**  
 > <span class="simpara"> 为了使用 `ssh2.*://` 封装协议， 你必须安装来自

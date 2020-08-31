@@ -397,10 +397,13 @@ $result = $client->some_method("parameter");
 class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">call</span> ( <span class="methodparam"><span
 class="type">string</span> `$uri`</span> , <span
-class="methodparam"><span class="type">string</span> `$method`</span> ,
-<span class="methodparam"><span class="type">array</span>
+class="methodparam"><span class="type">string</span> `$method`</span>
+\[, <span class="methodparam"><span class="type">array</span>
 `$parameters`</span> \[, <span class="methodparam"><span
-class="type">callable</span> `$callback`</span> \] )
+class="type">callable</span> `$callback`</span> \[, <span
+class="methodparam"><span class="type">callable</span>
+`$error_callback`</span> \[, <span class="methodparam"><span
+class="type">array</span> `$options`</span> \]\]\]\] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">boolean</span> <span
@@ -437,10 +440,13 @@ class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">Yar\_Concurrent\_Client::call</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$method`</span> , <span class="methodparam"><span
+`$method`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$parameters`</span> \[, <span
 class="methodparam"><span class="type">callable</span>
-`$callback`</span> \] )
+`$callback`</span> \[, <span class="methodparam"><span
+class="type">callable</span> `$error_callback`</span> \[, <span
+class="methodparam"><span class="type">array</span> `$options`</span>
+\]\]\]\] )
 
 注册一个并行的(异步的)远程服务调用, 不过这个调用请求不会被立即发出,
 而是会在接下来调用 <span

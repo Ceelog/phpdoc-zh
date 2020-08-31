@@ -820,43 +820,10 @@ I have <?=$foo?> foo.
 <?php
 echo "Hello World";
 
-echo "This spans
-multiple lines. The newlines will be
-output as well";
-
-echo "This spans\nmultiple lines. The newlines will be\noutput as well.";
-
-echo "Escaping characters is done \"Like this\".";
-
-// You can use variables inside of an echo statement
-$foo = "foobar";
-$bar = "barbaz";
-
-echo "foo is $foo"; // foo is foobar
-
-// You can also use arrays
-$baz = array("value" => "foo");
-
-echo "this is {$baz['value']} !"; // this is foo !
-
-// Using single quotes will print the variable name, not the value
-echo 'foo is $foo'; // foo is $foo
-
-// If you are not using any other characters, you can just echo variables
-echo $foo;          // foobar
-echo $foo,$bar;     // foobarbarbaz
-
 // Strings can either be passed individually as multiple arguments or
 // concatenated together and passed as a single argument
 echo 'This ', 'string ', 'was ', 'made ', 'with multiple parameters.', chr(10);
 echo 'This ' . 'string ' . 'was ' . 'made ' . 'with concatenation.' . "\n";
-
-echo <<<END
-This uses the "here document" syntax to output
-multiple lines with $variable interpolation. Note
-that the here document terminator must appear on a
-line with just a semicolon. no extra whitespace!
-END;
 
 // Because echo does not behave like a function, the following code is invalid.
 ($some_var) ? echo 'true' : echo 'false';
@@ -888,7 +855,7 @@ echo "Sum: ", 1 + 2;
 echo "Hello ", isset($name) ? $name : "John Doe", "!";
 ```
 
-如果是拼接的，相对于加号和三目元算符，连接运算符（“.”）具有更高优先级。为了正确性，必须使用圆括号：
+如果拼接字符串，连接运算符（“.”）相对于加号优先级相同，比三元运算符优先级更高。为了正确，必须使用圆括号：
 
 ``` php
 <?php
@@ -1054,9 +1021,7 @@ fprintf
 <span class="methodparam"><span class="type">resource</span>
 `$handle`</span> , <span class="methodparam"><span
 class="type">string</span> `$format`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$args`</span> \[,
-<span class="methodparam"><span class="type">mixed</span> `$...`</span>
-\]\] )
+class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
 
 写入一个根据 `format` 格式化后的字符串到 由 `handle` 句柄打开的流中。
 
@@ -1067,9 +1032,145 @@ class="methodparam"><span class="type">mixed</span> `$args`</span> \[,
 <span class="type">resource</span>(资源)。
 
 `format`  
-参见 <span class="function">sprintf</span> 中对 `format` 的描述。
+The format string is composed of zero or more directives: ordinary
+characters (excluding *%*) that are copied directly to the result and
+*conversion specifications*, each of which results in fetching its own
+parameter.
 
-`args`  
+A conversion specification follows this prototype:
+*%\[argnum$\]\[flags\]\[width\]\[.precision\]specifier*.
+
+##### Argnum
+
+An integer followed by a dollar sign *$*, to specify which number
+argument to treat in the conversion.
+
+| Flag      | 说明                                                                                                   |
+|-----------|--------------------------------------------------------------------------------------------------------|
+| *-*       | Left-justify within the given field width; Right justification is the default                          |
+| *+*       | Prefix positive numbers with a plus sign *+*; Default only negative are prefixed with a negative sign. |
+|  (space)  | Pads the result with spaces. This is the default.                                                      |
+| *0*       | Only left-pads numbers with zeros. With *s* specifiers this can also right-pad with zeros.             |
+| *'*(char) | Pads the result with the character (char).                                                             |
+
+##### Width
+
+An integer that says how many characters (minimum) this conversion
+should result in.
+
+##### Precision
+
+A period *.* followed by an integer who's meaning depends on the
+specifier:
+
+-   <span class="simpara"> For *e*, *E*, *f* and *F* specifiers: this is
+    the number of digits to be printed after the decimal point (by
+    default, this is 6). </span>
+-   <span class="simpara"> For *g* and *G* specifiers: this is the
+    maximum number of significant digits to be printed. </span>
+-   <span class="simpara"> For *s* specifier: it acts as a cutoff point,
+    setting a maximum character limit to the string. </span>
+
+> **Note**: <span class="simpara"> If the period is specified without an
+> explicit value for precision, 0 is assumed. </span>
+
+> **Note**: <span class="simpara"> Attempting to use a position
+> specifier greater than **`PHP_INT_MAX`** will generate warnings.
+> </span>
+
+<table>
+<caption><strong>Specifiers</strong></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Specifier</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>%</em></td>
+<td>A literal percent character. No argument is required.</td>
+</tr>
+<tr class="even">
+<td><em>b</em></td>
+<td>The argument is treated as an integer and presented as a binary number.</td>
+</tr>
+<tr class="odd">
+<td><em>c</em></td>
+<td>The argument is treated as an integer and presented as the character with that ASCII.</td>
+</tr>
+<tr class="even">
+<td><em>d</em></td>
+<td>The argument is treated as an integer and presented as a (signed) decimal number.</td>
+</tr>
+<tr class="odd">
+<td><em>e</em></td>
+<td>The argument is treated as scientific notation (e.g. 1.2e+2). The precision specifier stands for the number of digits after the decimal point since PHP 5.2.1. In earlier versions, it was taken as number of significant digits (one less).</td>
+</tr>
+<tr class="even">
+<td><em>E</em></td>
+<td>Like the <em>e</em> specifier but uses uppercase letter (e.g. 1.2E+2).</td>
+</tr>
+<tr class="odd">
+<td><em>f</em></td>
+<td>The argument is treated as a float and presented as a floating-point number (locale aware).</td>
+</tr>
+<tr class="even">
+<td><em>F</em></td>
+<td>The argument is treated as a float and presented as a floating-point number (non-locale aware). Available as of PHP 5.0.3.</td>
+</tr>
+<tr class="odd">
+<td><em>g</em></td>
+<td><p>General format.</p>
+<p>Let P equal the precision if nonzero, 6 if the precision is omitted, or 1 if the precision is zero. Then, if a conversion with style E would have an exponent of X:</p>
+<p>If P &gt; X ≥ −4, the conversion is with style f and precision P − (X + 1). Otherwise, the conversion is with style e and precision P − 1.</p></td>
+</tr>
+<tr class="even">
+<td><em>G</em></td>
+<td>Like the <em>g</em> specifier but uses <em>E</em> and <em>f</em>.</td>
+</tr>
+<tr class="odd">
+<td><em>o</em></td>
+<td>The argument is treated as an integer and presented as an octal number.</td>
+</tr>
+<tr class="even">
+<td><em>s</em></td>
+<td>The argument is treated and presented as a string.</td>
+</tr>
+<tr class="odd">
+<td><em>u</em></td>
+<td>The argument is treated as an integer and presented as an unsigned decimal number.</td>
+</tr>
+<tr class="even">
+<td><em>x</em></td>
+<td>The argument is treated as an integer and presented as a hexadecimal number (with lowercase letters).</td>
+</tr>
+<tr class="odd">
+<td><em>X</em></td>
+<td>The argument is treated as an integer and presented as a hexadecimal number (with uppercase letters).</td>
+</tr>
+</tbody>
+</table>
+
+**Warning**
+The *c* type specifier ignores padding and width
+
+**Warning**
+Attempting to use a combination of the string and width specifiers with
+character sets that require more than one byte per character may result
+in unexpected results
+
+Variables will be co-erced to a suitable type for the specifier:
+
+| Type      | Specifiers                        |
+|-----------|-----------------------------------|
+| *string*  | *s*                               |
+| *integer* | *d*, *u*, *c*, *o*, *x*, *X*, *b* |
+| *double*  | *g*, *G*, *e*, *E*, *f*, *F*      |
 
 `...`  
 
@@ -1116,10 +1217,13 @@ echo "wrote $len bytes to currency.txt";
 
 -   <span class="function">printf</span>
 -   <span class="function">sprintf</span>
+-   <span class="function">vprintf</span>
+-   <span class="function">vsprintf</span>
+-   <span class="function">vfprintf</span>
 -   <span class="function">sscanf</span>
 -   <span class="function">fscanf</span>
--   <span class="function">vsprintf</span>
 -   <span class="function">number\_format</span>
+-   <span class="function">date</span>
 
 get\_html\_translation\_table
 =============================
@@ -1525,7 +1629,7 @@ class="initializer"> = ENT\_COMPAT \| ENT\_HTML401</span></span> \[,
 `$encoding`<span class="initializer"> =
 ini\_get("default\_charset")</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$double_encode`<span
-class="initializer"> = true</span></span> \]\]\] )
+class="initializer"> = **`TRUE`**</span></span> \]\]\] )
 
 本函数各方面都和 <span class="function">htmlspecialchars</span> 一样，
 除了 <span class="function">htmlentities</span> 会转换所有具有 HTML
@@ -1879,7 +1983,7 @@ echo $new; // &lt;a href=&#039;test&#039;&gt;Test&lt;/a&gt;
 >
 > -   <span class="simpara"> 当
 >     **`ENT_COMPAT`**、**`ENT_QUOTES`**、**`ENT_NOQUOTES`** 都没设置，
->     默认就是 **`ENT_COMPAT`**。 </span>
+>     默认就是 **`ENT_NOQUOTES`**。 </span>
 > -   <span class="simpara"> 如果设置不止一个 **`ENT_COMPAT`**、
 >     **`ENT_QUOTES`**、 **`ENT_NOQUOTES`** ，优先级最高的是
 >     **`ENT_QUOTES`**， 其次是 **`ENT_COMPAT`**。 </span>
@@ -1888,8 +1992,8 @@ echo $new; // &lt;a href=&#039;test&#039;&gt;Test&lt;/a&gt;
 >     **`ENT_HTML401`**。 </span>
 > -   <span class="simpara"> 如果设置不止一个 **`ENT_HTML401`**、
 >     **`ENT_HTML5`**、 **`ENT_XHTML`**、 **`ENT_XML1`**，
->     优先级最高的是 **`ENT_HTML5`** 其次是 **`ENT_XHTML`** 和
->     **`ENT_HTML401`**。 </span>
+>     优先级最高的是 **`ENT_HTML5`** 其次是
+>     **`ENT_XHTML`**、**`ENT_XML1`** 和 **`ENT_HTML401`**。 </span>
 > -   <span class="simpara"> 如果设置不止一个 **`ENT_DISALLOWED`**、
 >     **`ENT_IGNORE`**、 **`ENT_SUBSTITUTE`**，优先级最高的是
 >     **`ENT_IGNORE`**， 其次是 **`ENT_SUBSTITUTE`**。 </span>
@@ -1923,8 +2027,8 @@ class="type">array</span> `$pieces`</span> )
 > **Note**:
 >
 > 因为历史原因，<span class="function">implode</span>
-> 可以接收两种参数顺序，但是 <span class="function">explode</span>
-> 不行。不过按文档中的顺序可以避免混淆。
+> 可以接收两种参数顺序，但是为了和 <span class="function">explode</span>
+> 内的顺序保持一致，不按文档的方式已被*废弃*。
 
 ### 参数
 
@@ -1937,6 +2041,12 @@ class="type">array</span> `$pieces`</span> )
 ### 返回值
 
 返回一个字符串，其内容为由 glue 分割开的数组的值。
+
+### 更新日志
+
+| 版本  | 说明                                                                         |
+|-------|------------------------------------------------------------------------------|
+| 7.4.0 | 把参数 `glue` 放到 `pieces` 的后面已被废弃（就是不按文档中的顺序传递参数）。 |
 
 ### 范例
 
@@ -5837,7 +5947,12 @@ class="initializer"> = 0</span></span> \] )
 在该字符串中进行查找。
 
 `needle`  
-如果 `needle` 不是一个字符串，那么它将被转换为整型并被视为字符的顺序值。
+If `needle` is not a string, it is converted to an integer and applied
+as the ordinal value of a character. This behavior is deprecated as of
+PHP 7.3.0, and relying on it is highly discouraged. Depending on the
+intended behavior, the `needle` should either be explicitly cast to
+string, or an explicit call to <span class="function">chr</span> should
+be performed.
 
 `offset`  
 如果提供了此参数，搜索会从字符串该字符数的起始位置开始统计。

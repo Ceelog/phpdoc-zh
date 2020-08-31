@@ -19,15 +19,15 @@ session 的选项可以在
 | <a href="/ini/core.html#ini.short-open-tag" class="link">short_open_tag</a>                                 | "1"  | PHP\_INI\_PERDIR        |                                                                                                                                   |
 | <a href="/ini/core.html#ini.asp-tags" class="link">asp_tags</a>                                             | "0"  | PHP\_INI\_PERDIR        | PHP 7.0.0. 中移除。                                                                                                               |
 | <a href="/ini/core.html#ini.precision" class="link">precision</a>                                           | "14" | PHP\_INI\_ALL           |                                                                                                                                   |
-| <a href="/ini/core.html#ini.serialize-precision" class="link">serialize_precision</a>                       | "17" | PHP\_INI\_ALL           | 在 PHP 5.3.5以前，默认值为 100 在 PHP 7.1.0以前，默认值为 17                                                                      |
+| <a href="/ini/core.html#ini.serialize-precision" class="link">serialize_precision</a>                       | "-1" | PHP\_INI\_ALL           | 在 PHP 5.3.6 以前，默认值为 100。 在 PHP 7.1.0 以前，默认值为 17。                                                                |
 | <a href="/ini/core.html#ini.y2k-compliance" class="link">y2k_compliance</a>                                 | "1"  | PHP\_INI\_ALL           | 在 PHP 5.4.0 中移除该选项。                                                                                                       |
 | <a href="/ini/core.html#ini.allow-call-time-pass-reference" class="link">allow_call_time_pass_reference</a> | "1"  | PHP\_INI\_PERDIR        | 在 PHP 5.4.0 中移除该选项。                                                                                                       |
 | <a href="/ini/core.html#ini.disable-functions" class="link">disable_functions</a>                           | ""   | 仅仅为 PHP\_INI\_SYSTEM |                                                                                                                                   |
 | <a href="/ini/core.html#ini.disable-classes" class="link">disable_classes</a>                               | ""   | 仅仅为 `php.ini`        |                                                                                                                                   |
 | <a href="/ini/core.html#ini.exit-on-timeout" class="link">exit_on_timeout</a>                               | ""   | PHP\_INI\_ALL           | 从 PHP 5.3.0 起可用。                                                                                                             |
 | <a href="/ini/core.html#ini.expose-php" class="link">expose_php</a>                                         | "1"  | `php.ini` only          |                                                                                                                                   |
-| <a href="/ini/core.html#ini.hard-timeout" class="link">hard_timeout</a>                                     | "2"  | PHP\_INI\_SYSTEM        | PHP 7.1.0 起可用                                                                                                                  |
-| <a href="/ini/core.html#ini.zend.exception-ignore-args" class="link">zend.exception_ignore_args</a>         | "0"  | PHP\_INI\_ALL           | PHP 7.4.0 起可用                                                                                                                  |
+| <a href="/ini/core.html#ini.hard-timeout" class="link">hard_timeout</a>                                     | "2"  | PHP\_INI\_SYSTEM        | 从 PHP 7.1.0 起可用                                                                                                               |
+| <a href="/ini/core.html#ini.zend.exception-ignore-args" class="link">zend.exception_ignore_args</a>         | "0"  | PHP\_INI\_ALL           | 从 PHP 7.4.0 起可用                                                                                                               |
 | <a href="/ini/core.html#ini.zend.multibyte" class="link">zend.multibyte</a>                                 | "0"  | PHP\_INI\_ALL           | 从 PHP 5.4.0 起可用                                                                                                               |
 | <a href="/ini/core.html#ini.zend.script-encoding" class="link">zend.script_encoding</a>                     | NULL | PHP\_INI\_ALL           | 从 PHP 5.4.0 起可用                                                                                                               |
 | <a href="/ini/core.html#ini.zend.detect-unicode" class="link">zend.detect-unicode</a>                       | NULL | PHP\_INI\_ALL           | 从 PHP 5.4.0 起可用                                                                                                               |
@@ -91,22 +91,20 @@ PHP/Zend
 
 `expose_php` <span class="type">boolean</span>  
 决定是否暴露 PHP 被安装在服务器上（例如在 Web
-服务器的信息头中加上其签名：X-Powered-By: PHP/5.3.7)。 The PHP logo
-guids are also exposed, thus appending them to the URL of a PHP enabled
-site will display the appropriate logo (e.g.,
-<a href="https://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42" class="link external">» https://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42</a>).
-This also affects the output of <span class="function">phpinfo</span>,
-as when disabled, the PHP logo and credits information will not be
-displayed.
+服务器的信息头中加上其签名：X-Powered-By: PHP/5.3.7)。 在 PHP 5.5.0
+之前，PHP 徽标指南也是公开的，因此将它们追加到 PHP 脚本的 URL
+中就会显示相应的徽标（例如，
+<a href="https://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42" class="link external">» https://www.php.net/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42</a>）。这也影响了
+<span class="function">phpinfo</span> 的输出，因为当禁用时，PHP
+的标志和信用信息将无法显示。
 
 > **Note**:
 >
-> Since PHP 5.5.0 these guids and the <span
-> class="function">php\_logo\_guid</span> function have been removed
-> from PHP and the guids are replaced with data URIs instead. Thus
-> accessing the PHP logo via appending the guid to the URL no longer
-> works. Similarly, turning `expose_php` off will not affect seeing the
-> PHP logo in <span class="function">phpinfo</span>.
+> 从 PHP 5.5.0 开始，这些 guid 和 <span
+> class="function">php\_logo\_guid</span> 函数已从 PHP 中删除，guid
+> 被替换为数据 URI。 因此，通过在 URL 中添加 guid 来访问 PHP
+> 徽标不再有效。 同样，关闭 `expose_php` 参数不会影响到在 <span
+> class="function">phpinfo</span> 中看到 PHP 标志。
 
 See also <span class="function">php\_logo\_guid</span> and <span
 class="function">phpcredits</span>.
@@ -160,15 +158,14 @@ This feature has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
 `hard_timeout` <span class="type">integer</span>  
 
 `zend.exception_ignore_args` <span class="type">boolean</span>  
-Excludes arguments from stack traces generated from exceptions.
+从异常产生的堆栈中排除参数。
 
 `zend.multibyte` <span class="type">boolean</span>  
-Enables parsing of source files in multibyte encodings. Enabling
-zend.multibyte is required to use character encodings like SJIS, BIG5,
-etc that contain special characters in multibyte string data. ISO-8859-1
-compatible encodings like UTF-8, EUC, etc do not require this option.
+启用多字节编码的源文件解析功能。启用 zend.multibyte 是使用 SJIS、BIG5
+等在多字节字符串数据中包含特殊字符的字符编码所必需的。ISO-8859-1
+兼容的编码，如 UTF-8、EUC 等，则不需要这个选项。
 
-Enabling zend.multibyte requires the mbstring extension to be available.
+启用 zend.multibyte 需要 mbstring 扩展可用。
 
 `zend.script_encoding` <span class="type">string</span>  
 This value will be used unless a
@@ -191,105 +188,92 @@ Multibyte mode.
 To check for replaced signal handlers on shutdown.
 
 `exit_on_timeout` <span class="type">boolean</span>  
-This is an Apache1 mod\_php-only directive that forces an Apache child
-to exit if a PHP execution timeout occurred. Such a timeout causes an
-internal longjmp() call in Apache1 which can leave some extensions in an
-inconsistent state. By terminating the process any outstanding locks or
-memory will be cleaned up.
+这是一个用于 Apache 1 的 mod\_php-only 指令，如果 PHP 执行超时，会强制
+Apache 子程序退出.这样的超时会导致 Apache 1 内部的 longjmp()
+调用，从而使一些扩展处于不一致的状态。通过终止进程，任何未完成的锁或内存将被清理。
 
-Resource Limits
----------------
+资源限制
+--------
 
-| 名字                                                                    | 默认   | 可修改范围    | 更新日志                                  |
-|-------------------------------------------------------------------------|--------|---------------|-------------------------------------------|
-| <a href="/ini/core.html#ini.memory-limit" class="link">memory_limit</a> | "128M" | PHP\_INI\_ALL | "8M" before PHP 5.2.0, "16M" in PHP 5.2.0 |
+| 名字                                                                    | 默认   | 可修改范围    | 更新日志                                    |
+|-------------------------------------------------------------------------|--------|---------------|---------------------------------------------|
+| <a href="/ini/core.html#ini.memory-limit" class="link">memory_limit</a> | "128M" | PHP\_INI\_ALL | PHP 5.2.0 之前默认为 "8M"，之后默认为 "16M" |
 
 这是配置指令的简短说明。
 
 `memory_limit` <span class="type">integer</span>  
-This sets the maximum amount of memory in bytes that a script is allowed
-to allocate. This helps prevent poorly written scripts for eating up all
-available memory on a server. Note that to have no memory limit, set
-this directive to *-1*.
+设置了一个脚本允许分配的最大内存量，以字节（bytes）为单位。这有助于防止写得不好的脚本吃掉服务器上所有可用的内存。请注意，如果不需要内存限制，请将此指令设置为
+*-1*。
 
-Prior to PHP 5.2.1, in order to use this directive it had to be enabled
-at compile time by using **--enable-memory-limit** in the configure
-line. This compile-time flag was also required to define the functions
-<span class="function">memory\_get\_usage</span> and <span
-class="function">memory\_get\_peak\_usage</span> prior to 5.2.1.
+在 PHP 5.2.1 之前的版本，如果要使用这个指令，必须在编译时使用
+**--enable-memory-limit** 参数。在 PHP 5.2.1 之前，如果想要使用函数
+<span class="function">memory\_get\_usage</span> 和 <span
+class="function">memory\_get\_peak\_usage</span>，也会需要这个编译参数。
 
 <span class="simpara">当使用 <span class="type">integer</span> 时,
 其值以字节来衡量。还可以使用在<a href="/faq/using.html#faq.using.shorthandbytes" class="link">FAQ</a>中描述的速记符。</span>
 
-See also:
-<a href="/info/setup.html#" class="link">max_execution_time</a>.
+请参阅：<a href="/info/setup.html#" class="link">max_execution_time</a>。
 
-Performance Tuning
-------------------
+性能调整
+--------
 
-| 名字                                                                                  | 默认  | 可修改范围       | 更新日志                                                                          |
-|---------------------------------------------------------------------------------------|-------|------------------|-----------------------------------------------------------------------------------|
-| <a href="/ini/core.html#ini.realpath-cache-size" class="link">realpath_cache_size</a> | "4M"  | PHP\_INI\_SYSTEM | Available since PHP 5.1.0. Prior to PHP 7.0.16 and 7.1.2, the default was *"16K"* |
-| <a href="/ini/core.html#ini.realpath-cache-ttl" class="link">realpath_cache_ttl</a>   | "120" | PHP\_INI\_SYSTEM | Available since PHP 5.1.0.                                                        |
+| 名字                                                                                  | 默认  | 可修改范围       | 更新日志                                                     |
+|---------------------------------------------------------------------------------------|-------|------------------|--------------------------------------------------------------|
+| <a href="/ini/core.html#ini.realpath-cache-size" class="link">realpath_cache_size</a> | "4M"  | PHP\_INI\_SYSTEM | PHP 5.1.0 起加入，PHP 7.0.16 和 7.1.2 之前，默认值为 *"16K"* |
+| <a href="/ini/core.html#ini.realpath-cache-ttl" class="link">realpath_cache_ttl</a>   | "120" | PHP\_INI\_SYSTEM | 从 PHP 5.1.0 起可用。                                        |
 
 > **Note**:
 >
-> Using
+> 启用
 > <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
-> will *disable* the realpath cache.
+> 将会 *禁用* realpath cache。
 
 这是配置指令的简短说明。
 
 `realpath_cache_size` <span class="type">integer</span>  
-Determines the size of the realpath cache to be used by PHP. This value
-should be increased on systems where PHP opens many files, to reflect
-the quantity of the file operations performed.
+设定 PHP 使用的 realpath 缓存的大小。在 PHP
+打开很多文件的系统中，这个值应该增加，以优化文件操作的数量。
 
-The size represents the total number of bytes in the path strings
-stored, plus the size of the data associated with the cache entry. This
-means that in order to store longer paths in the cache, the cache size
-must be larger. This value does not directly control the number of
-distinct paths that can be cached.
+这里的大小表示存储的路径字符串的总字节数，加上与缓存条目相关的数据大小。这意味着，为了在缓存中存储更长的路径，缓存大小必须更大。这个值不直接控制可以缓存的不同路径的数量。
 
-The size required for the cache entry data is system dependent.
+缓存输入数据所需的大小取决于操作系统。
 
 `realpath_cache_ttl` <span class="type">integer</span>  
-Duration of time (in seconds) for which to cache realpath information
-for a given file or directory. For systems with rarely changing files,
-consider increasing the value.
+缓存给定文件或目录的真实路径信息的持续时间（以秒为单位）。对于很少改变文件的系统，可以考虑增加该值。
 
-Data Handling
--------------
+数据处理
+--------
 
-| 名字                                                                                                      | 默认        | 可修改范围       | 更新日志                                                         |
-|-----------------------------------------------------------------------------------------------------------|-------------|------------------|------------------------------------------------------------------|
-| <a href="/ini/core.html#ini.arg-separator.output" class="link">arg_separator.output</a>                   | "&"         | PHP\_INI\_ALL    |                                                                  |
-| <a href="/ini/core.html#ini.arg-separator.input" class="link">arg_separator.input</a>                     | "&"         | PHP\_INI\_PERDIR |                                                                  |
-| <a href="/ini/core.html#ini.variables-order" class="link">variables_order</a>                             | "EGPCS"     | PHP\_INI\_PERDIR | PHP\_INI\_ALL in PHP \<= 5.0.5.                                  |
-| <a href="/ini/core.html#ini.request-order" class="link">request_order</a>                                 | ""          | PHP\_INI\_PERDIR | Available since PHP 5.3.0                                        |
-| <a href="/ini/core.html#ini.auto-globals-jit" class="link">auto_globals_jit</a>                           | "1"         | PHP\_INI\_PERDIR | Available since PHP 5.0.0.                                       |
-| <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>                           | "0"         | PHP\_INI\_PERDIR | Removed in PHP 5.4.0.                                            |
-| <a href="/ini/core.html#ini.register-argc-argv" class="link">register_argc_argv</a>                       | "1"         | PHP\_INI\_PERDIR |                                                                  |
-| <a href="/ini/core.html#ini.register-long-arrays" class="link">register_long_arrays</a>                   | "1"         | PHP\_INI\_PERDIR | Deprecated in PHP 5.3.0. Removed in PHP 5.4.0.                   |
-| <a href="/ini/core.html#ini.enable-post-data-reading" class="link">enable_post_data_reading</a>           | "1"         | PHP\_INI\_PERDIR | Available since PHP 5.4.0                                        |
-| <a href="/ini/core.html#ini.post-max-size" class="link">post_max_size</a>                                 | "8M"        | PHP\_INI\_PERDIR |                                                                  |
-| <a href="/ini/core.html#ini.auto-prepend-file" class="link">auto_prepend_file</a>                         | NULL        | PHP\_INI\_PERDIR |                                                                  |
-| <a href="/ini/core.html#ini.auto-append-file" class="link">auto_append_file</a>                           | NULL        | PHP\_INI\_PERDIR |                                                                  |
-| <a href="/ini/core.html#ini.default-mimetype" class="link">default_mimetype</a>                           | "text/html" | PHP\_INI\_ALL    |                                                                  |
-| <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a>                             | "UTF-8"     | PHP\_INI\_ALL    | Defaults to "UTF-8" since PHP \>= 5.6.0; empty for PHP \< 5.6.0. |
-| <a href="/ini/core.html#ini.always-populate-raw-post-data" class="link">always_populate_raw_post_data</a> | "0"         | PHP\_INI\_PERDIR | Removed in PHP 7.0.0.                                            |
+| 名字                                                                                                      | 默认        | 可修改范围       | 更新日志                                              |
+|-----------------------------------------------------------------------------------------------------------|-------------|------------------|-------------------------------------------------------|
+| <a href="/ini/core.html#ini.arg-separator.output" class="link">arg_separator.output</a>                   | "&"         | PHP\_INI\_ALL    |                                                       |
+| <a href="/ini/core.html#ini.arg-separator.input" class="link">arg_separator.input</a>                     | "&"         | PHP\_INI\_PERDIR |                                                       |
+| <a href="/ini/core.html#ini.variables-order" class="link">variables_order</a>                             | "EGPCS"     | PHP\_INI\_PERDIR | PHP \<= 5.0.5 可用。                                  |
+| <a href="/ini/core.html#ini.request-order" class="link">request_order</a>                                 | ""          | PHP\_INI\_PERDIR | 从 PHP 5.3.0 起可用。                                 |
+| <a href="/ini/core.html#ini.auto-globals-jit" class="link">auto_globals_jit</a>                           | "1"         | PHP\_INI\_PERDIR | 从 PHP 5.0.0 起可用。                                 |
+| <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>                           | "0"         | PHP\_INI\_PERDIR | PHP 5.4.0 版本被移除。                                |
+| <a href="/ini/core.html#ini.register-argc-argv" class="link">register_argc_argv</a>                       | "1"         | PHP\_INI\_PERDIR |                                                       |
+| <a href="/ini/core.html#ini.register-long-arrays" class="link">register_long_arrays</a>                   | "1"         | PHP\_INI\_PERDIR | PHP 5.3.0 中被废弃，PHP 5.4.0 中被移除。              |
+| <a href="/ini/core.html#ini.enable-post-data-reading" class="link">enable_post_data_reading</a>           | "1"         | PHP\_INI\_PERDIR | 从 PHP 5.4.0 起可用。                                 |
+| <a href="/ini/core.html#ini.post-max-size" class="link">post_max_size</a>                                 | "8M"        | PHP\_INI\_PERDIR |                                                       |
+| <a href="/ini/core.html#ini.auto-prepend-file" class="link">auto_prepend_file</a>                         | NULL        | PHP\_INI\_PERDIR |                                                       |
+| <a href="/ini/core.html#ini.auto-append-file" class="link">auto_append_file</a>                           | NULL        | PHP\_INI\_PERDIR |                                                       |
+| <a href="/ini/core.html#ini.default-mimetype" class="link">default_mimetype</a>                           | "text/html" | PHP\_INI\_ALL    |                                                       |
+| <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a>                             | "UTF-8"     | PHP\_INI\_ALL    | PHP \>= 5.6.0 开始默认为 "UTF-8"；PHP \< 5.6.0 为空。 |
+| <a href="/ini/core.html#ini.always-populate-raw-post-data" class="link">always_populate_raw_post_data</a> | "0"         | PHP\_INI\_PERDIR | PHP 7.0.0 中被移除。                                  |
 
 这是配置指令的简短说明。
 
 `arg_separator.output` <span class="type">string</span>  
-The separator used in PHP generated URLs to separate arguments.
+在 PHP 生成的 URL 中用来分隔参数的分隔符。
 
 `arg_separator.input` <span class="type">string</span>  
-List of separator(s) used by PHP to parse input URLs into variables.
+PHP 用于将输入的 URL 解析为变量的分隔符列表。
 
 > **Note**:
 >
-> Every character in this directive is considered as separator!
+> 本指令中的每一个字符都被视为分隔符！
 
 `variables_order` <span class="type">string</span>  
 Sets the order of the EGPCS (*E*nvironment, *G*et, *P*ost, *C*ookie, and

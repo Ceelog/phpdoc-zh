@@ -14,7 +14,7 @@ class="function">stream\_get\_meta\_data</span> 用于一个打开读取的
 `bitrate_lower`、`bitrate_upper`、 `bitrate_nominal` 和 `bitrate_window`
 描述的可变比特率范围。
 
-`ogg://` PHP 4.3.0 及以上（PECL）
+`ogg://` （PECL）
 
 > **Note**: **该封装器默认未激活**  
 > <span class="simpara"> 要使用 `ogg://` 封装器，您必须安装

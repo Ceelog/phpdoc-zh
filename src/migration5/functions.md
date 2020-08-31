@@ -45,10 +45,10 @@ PHP 5 有了些新函数。下面是列表：
     </span>
 -   <span class="simpara"> <span class="function">ibase\_db\_info</span>
     - 请求有关数据库的统计信息 </span>
--   <span class="simpara"> <span class="function">ibase\_drop\_db</span>
-    - 删除一个数据库 </span>
--   <span class="simpara"> <span class="function">ibase\_errcode</span>
-    - 返回一个错误代码 </span>
+-   <span class="simpara"> <span
+    class="function">ibase\_drop\_db</span> - 删除一个数据库 </span>
+-   <span class="simpara"> <span
+    class="function">ibase\_errcode</span> - 返回一个错误代码 </span>
 -   <span class="simpara"> <span
     class="function">ibase\_free\_event\_handler</span> -
     取消一个已注册的事件句柄 </span>

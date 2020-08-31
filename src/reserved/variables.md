@@ -27,12 +27,6 @@ PHP
 -   `$_REQUEST`
 -   `$_ENV`
 
-### 更新日志
-
-| 版本  | 说明                    |
-|-------|-------------------------|
-| 4.1.0 | 超全局变量被引入到 PHP. |
-
 ### 注释
 
 > **Note**: **变量可用性**  
@@ -352,7 +346,6 @@ string）之前的路径信息，如果存在的话。例如，如果当前脚�
 |-------|------------------------------------------------------------------------------------------------------------------------------------|
 | 5.4.0 | 因为移除了 long array register 功能，`$HTTP_SERVER_VARS` 不再有效。                                                                |
 | 5.3.0 | 废弃了使 `$HTTP_SERVER_VARS` 生效的 <a href="/ini/core.html#ini.register-long-arrays" class="link">register_long_arrays</a> 指令。 |
-| 4.1.0 | 引入 `$_SERVER`，弃用 `$HTTP_SERVER_VARS`。                                                                                        |
 
 ### 范例
 
@@ -389,17 +382,13 @@ HTTP GET 变量
 
 ### 说明
 
-通过 URL 参数传递给当前脚本的变量的数组。
+通过 URL 参数（又叫 query string）传递给当前脚本的变量的数组。
+注意：该数组不仅仅对 method 为 GET 的请求生效，而是会针对所有带 query
+string 的请求。
 
 `$HTTP_GET_VARS` 包含相同的信息，
 但它不是一个<a href="/language/variables/superglobals.html" class="link">超全局变量</a>。
 (注意 `$HTTP_GET_VARS` 和 `$_GET` 是不同的变量，PHP 处理它们的方式不同)
-
-### 更新日志
-
-| 版本  | 说明                                  |
-|-------|---------------------------------------|
-| 4.1.0 | 引入 `$_GET`，弃用 `$HTTP_GET_VARS`。 |
 
 ### 范例
 
@@ -451,12 +440,6 @@ HTTP POST 变量
 (注意 `$HTTP_POST_VARS` 和 `$_POST` 是不同的变量，PHP
 处理它们的方式不同)
 
-### 更新日志
-
-| 版本  | 说明                                    |
-|-------|-----------------------------------------|
-| 4.1.0 | 引入 `$_POST`，弃用 `$HTTP_POST_VARS`。 |
-
 ### 范例
 
 **示例 \#4 `$_POST` 范例**
@@ -505,12 +488,6 @@ class="type">数组</span>。 此数组的概况在
 (注意 `$HTTP_POST_FILES` 和 `$_FILES` 是不同的变量，PHP
 处理它们的方式不同)
 
-### 更新日志
-
-| 版本  | 说明                                      |
-|-------|-------------------------------------------|
-| 4.1.0 | 引入 `$_FILES`，弃用 `$HTTP_POST_FILES`。 |
-
 ### 注释
 
 > **Note**:
@@ -538,8 +515,6 @@ class="type">数组</span>。
 | 版本  | 说明                                                                                                              |
 |-------|-------------------------------------------------------------------------------------------------------------------|
 | 5.3.0 | 引入 <a href="/ini/core.html#ini.request-order" class="link">request_order</a>。该指令会影响 `$_REQUEST` 的内容。 |
-| 4.3.0 | `$_FILES` 信息被从 `$_REQUEST` 中移除。                                                                           |
-| 4.1.0 | 引入 `$_REQUEST`。                                                                                                |
 
 ### 注释
 
@@ -587,12 +562,6 @@ Session 变量
 (注意 `$HTTP_SESSION_VARS` 和 `$_SESSION` 是不同的变量，PHP
 处理它们的方式不同)
 
-### 更新日志
-
-| 版本  | 说明                                          |
-|-------|-----------------------------------------------|
-| 4.1.0 | 引入 `$_SESSION`，弃用 `$HTTP_SESSION_VARS`。 |
-
 ### 注释
 
 > **Note**:
@@ -627,12 +596,6 @@ Shell，所以不可能有一份确定的列表。请查看你的 Shell
 `$HTTP_ENV_VARS`
 包含相同的信息，但它不是一个<a href="/language/variables/superglobals.html" class="link">超全局变量</a>。
 (注意 `$HTTP_ENV_VARS` 和 `$_ENV` 是不同的变量，PHP 处理它们的方式不同)
-
-### 更新日志
-
-| 版本  | 说明                                  |
-|-------|---------------------------------------|
-| 4.1.0 | 引入 `$_ENV`，弃用 `$HTTP_ENV_VARS`。 |
 
 ### 范例
 
@@ -680,12 +643,6 @@ class="type">数组</span>。
 (注意 `$HTTP_COOKIE_VARS` 和 `$_COOKIE` 是不同的变量，PHP
 处理它们的方式不同)
 
-### 更新日志
-
-| 版本  | 说明                                        |
-|-------|---------------------------------------------|
-| 4.1.0 | 引入 `$_COOKIE`，弃用 `$HTTP_COOKIE_VARS`。 |
-
 ### 范例
 
 **示例 \#6 `$_COOKIE` 范例**
@@ -724,6 +681,8 @@ $php\_errormsg
 
 本特性已自 PHP 7.2.0 起*废弃*。强烈建议不要使用本特性。
 
+用 <span class="function">error\_get\_last</span> 函数代替。
+
 ### 说明
 
 `$php_errormsg` 变量包含由 PHP
@@ -751,6 +710,10 @@ echo $php_errormsg;
 以上例程的输出类似于：
 
     Wrong parameter count for strpos()
+
+### 参见
+
+-   <span class="function">error\_get\_last</span>
 
 $HTTP\_RAW\_POST\_DATA
 ======================

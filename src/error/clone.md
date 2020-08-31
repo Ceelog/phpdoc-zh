@@ -10,7 +10,7 @@ class="modifier">private</span> <span class="type">void</span> <span
 class="methodname">Error::\_\_clone</span> ( <span
 class="methodparam">void</span> )
 
-Error 无法被克隆，错误此方法的结果是 fatal error。
+Error 无法被克隆，调用该方法会导致 fatal error。
 
 ### 参数
 
@@ -22,4 +22,4 @@ Error 无法被克隆，错误此方法的结果是 fatal error。
 
 ### 错误／异常
 
-Error *无法*克隆。
+Error *无法*被克隆。

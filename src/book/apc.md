@@ -115,7 +115,7 @@ class="methodparam">void</span> )
 <span class="methodname">key</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">void</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">next</span> ( <span
 class="methodparam">void</span> )
 
@@ -123,7 +123,7 @@ class="methodparam">void</span> )
 <span class="methodname">rewind</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">void</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">valid</span> ( <span
 class="methodparam">void</span> )
 
@@ -349,7 +349,7 @@ APCIterator::next
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">void</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">APCIterator::next</span> ( <span
 class="methodparam">void</span> )
 
@@ -402,7 +402,7 @@ APCIterator::valid
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">void</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">APCIterator::valid</span> ( <span
 class="methodparam">void</span> )
 

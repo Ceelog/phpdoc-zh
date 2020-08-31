@@ -836,7 +836,7 @@ get\_cfg\_var
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type">mixed</span> <span
 class="methodname">get\_cfg\_var</span> ( <span
 class="methodparam"><span class="type">string</span> `$option`</span> )
 
@@ -916,7 +916,7 @@ get\_defined\_constants
 <span class="type">array</span> <span
 class="methodname">get\_defined\_constants</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$categorize`<span
-class="initializer"> = false</span></span> \] )
+class="initializer"> = **`FALSE`**</span></span> \] )
 
 返回当前所有已定义的常量名和值。 这包含 <span
 class="function">define</span> 函数所创建的，也包含了所有扩展所创建的。
@@ -1920,10 +1920,22 @@ class="type">int</span> `$who`<span class="initializer"> =
 ``` php
 <?php
 $dat = getrusage();
+echo $dat["ru_oublock"];       // number of block output operations
+echo $dat["ru_inblock"];       // number of block input operations
+echo $dat["ru_msgsnd"];        // number of IPC messages sent
+echo $dat["ru_msgrcv"];        // number of IPC messages received
+echo $dat["ru_maxrss"];        // maximum resident set size
+echo $dat["ru_ixrss"];         // integral shared memory size
+echo $dat["ru_idrss"];         // integral unshared data size
+echo $dat["ru_minflt"];        // number of page reclaims (soft page faults)
+echo $dat["ru_majflt"];        // number of page faults (hard page faults)
+echo $dat["ru_nsignals"];      // number of signals received
+echo $dat["ru_nvcsw"];         // number of voluntary context switches
+echo $dat["ru_nivcsw"];        // number of involuntary context switches
 echo $dat["ru_nswap"];         // number of swaps
-echo $dat["ru_majflt"];        // number of page faults
-echo $dat["ru_utime.tv_sec"];  // user time used (seconds)
 echo $dat["ru_utime.tv_usec"]; // user time used (microseconds)
+echo $dat["ru_utime.tv_sec"];  // user time used (seconds)
+echo $dat["ru_stime.tv_usec"]; // system time used (microseconds)
 ?>
 ```
 
@@ -1985,7 +1997,7 @@ ini\_get\_all
 class="methodname">ini\_get\_all</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$extension`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$details`<span class="initializer"> = true</span></span> \]\] )
+`$details`<span class="initializer"> = **`TRUE`**</span></span> \]\] )
 
 获取所有已注册的配置选项
 
@@ -2000,7 +2012,8 @@ class="methodparam"><span class="type">string</span> `$extension`</span>
 
 ### 返回值
 
-返回一个关联数组，指令名称是数组的键。
+返回一个关联数组，指令名称是数组的键。 如果 `extension` 不存在，返回
+**`FALSE`** 并产生 **`E_WARNING`** 级错误。
 
 当 `details` 为 **`TRUE`**（默认），数组会包含
 *global\_value*（`php.ini` 中的设置）、*local\_value*（可能是 <span
@@ -2881,9 +2894,8 @@ EGPCS(Environment, GET, POST, Cookie, Server) 数据的调试工具。
 
 `what`  
 可以用以下的一个或多个 *constants* 用位运算传递给可选的 `what`
-参数来定制输出的信息。 该参数可以把常量相加或者用
-<a href="/language/operators/bitwise.html" class="link">or</a>
-操作符按位运算。
+参数来定制输出的信息。
+该参数可以把常量相加或者用<a href="/language/operators/bitwise.html" class="link">按位或</a>操作符按位运算。
 
 | Name (constant)     | Value | Description                                                                                                                                |
 |---------------------|-------|--------------------------------------------------------------------------------------------------------------------------------------------|

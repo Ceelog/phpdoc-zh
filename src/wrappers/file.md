@@ -39,9 +39,3 @@ class="function">file\_get\_contents</span>， *include\_path*
 | 支持 <span class="function">rename</span>                                  | Yes  |
 | 支持 <span class="function">mkdir</span>                                   | Yes  |
 | 支持 <span class="function">rmdir</span>                                   | Yes  |
-
-### 更新日志
-
-| 版本  | 说明              |
-|-------|-------------------|
-| 5.0.0 | 添加了 *file://*. |
