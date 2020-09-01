@@ -115,17 +115,19 @@
 默认禁用短形式的开始标签 \<? 。
 
 **--enable-zend-multibyte**  
-在词法与语法分析时允许多字节编码被执行。如果在编译PHP时使用了这个选项，就能够在
+在词法与语法分析时允许多字节编码被执行。如果在编译 PHP
+时使用了这个选项，就能够在
 <a href="/control-structures/declare.html" class="link">declare</a>
 结构中使用
-<a href="/control-structures/declare.html#control-structures.declare.encoding" class="link">encoding</a>指令。
+<a href="/control-structures/declare.html#control-structures.declare.encoding" class="link">encoding</a>
+指令。
 
 **Warning**
 本特性已自 PHP 5.3.0 起*废弃*并将自 PHP 5.4.0 起*移除*。
 
 **--with-libdir**  
 指定Uxin系统库文件目录用于构建 PHP。 对于64位系统, 需要指定 *lib64*
-目录,比如*--with-libdir=lib64*
+目录,比如 *--with-libdir=lib64*。
 
 #### SAPI 选项
 

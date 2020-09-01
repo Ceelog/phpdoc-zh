@@ -100,7 +100,7 @@ class="type">string</span> `$type_name` </span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 This method is used inside an SCA component that needs to create an SDO
 to return. The parameters are the desired SDO's namespace URI and type
@@ -142,7 +142,7 @@ class="methodparam"> <span class="type">string</span> `$binding` </span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Examine the target and initialize and return a proxy of the appropriate
 sort. If the target is for a local PHP component the returned proxy will
@@ -211,7 +211,7 @@ class="type">string</span> `$type_name` </span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 This method is used inside either an ordinary PHP script or an SCA
 component that needs to create an SDO to pass to a local service. The
@@ -256,7 +256,7 @@ class="type">string</span> `$type_name` </span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 This method is used inside either an ordinary PHP script or an SCA
 component that needs to create an SDO to pass to a web service. The

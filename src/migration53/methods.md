@@ -6,21 +6,21 @@
 <a href="/book/datetime.html" class="link">日期/时间</a>:
 
 -   <span class="simpara"> <span class="function">DateTime::add</span> -
-    向一个 <span class="classname">DateTime</span> 对象加上若干天, 月,
-    年, 小时, 分钟和秒. </span>
+    向一个 <span class="classname">DateTime</span>
+    对象加上若干天，月，年，小时，分钟和秒. </span>
 -   <span class="simpara"> <span
-    class="function">DateTime::createFromFormat</span> - 根据给定的格式,
-    返回一个新的格式化的<span class="classname">DateTime</span>对象.
-    </span>
+    class="function">DateTime::createFromFormat</span> -
+    根据给定的格式，返回一个新的格式化的<span
+    class="classname">DateTime</span>对象. </span>
 -   <span class="simpara"> <span
     class="function">DateTime::diff</span> - 返回两个 <span
     class="classname">DateTime</span> 对象的不同之处. </span>
 -   <span class="simpara"> <span
     class="function">DateTime::getLastErrors</span> -
-    返回最后的日期/时间处理中的警告和错误. </span>
+    返回最后的日期/时间处理中的警告和错误。 </span>
 -   <span class="simpara"> <span class="function">DateTime::sub</span> -
-    从 <span class="classname">DateTime</span> 对象中减去若干天, 月, 年,
-    小时, 分钟和秒. </span>
+    从 <span class="classname">DateTime</span>
+    对象中减去若干天，月，年，小时，分钟和秒. </span>
 
 <span class="classname">异常(Exception)</span>:
 

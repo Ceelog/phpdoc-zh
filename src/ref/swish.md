@@ -13,7 +13,7 @@ class="methodparam"><span class="type">string</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -72,7 +72,7 @@ class="methodparam"><span class="type">string</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -132,7 +132,7 @@ class="methodparam"><span class="type">string</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -192,7 +192,7 @@ class="methodparam"><span class="type">string</span> `$query`</span> \]
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Prepare and return a search object, which you can later use for
 unlimited number of queries.
@@ -254,7 +254,7 @@ class="type">string</span> `$query`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 A quick method to execute a search with default parameters.
 
@@ -310,7 +310,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 返回值
 
@@ -332,7 +332,7 @@ class="methodparam"><span class="type">string</span> `$word`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Stems the word based on the fuzzy mode used during indexing. Each result
 object is linked with its index, so the results are based on this index.
@@ -401,7 +401,7 @@ class="methodparam"><span class="type">string</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -475,7 +475,7 @@ class="methodparam"><span class="type">string</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -501,7 +501,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 返回值
 
@@ -547,7 +547,7 @@ class="methodparam"><span class="type">int</span> `$position`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -607,7 +607,7 @@ class="methodparam"><span class="type">string</span> `$query`</span> \]
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Searches the index file(s) based on the parameters set in the search
 object.
@@ -673,7 +673,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Reset the search limits previous set by
 <a href="/ref/swish.html#SwishSearch::setLimit" class="xref"></a>.
@@ -736,7 +736,7 @@ class="type">string</span> `$high`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -820,7 +820,7 @@ class="methodparam"><span class="type">string</span> `$delimiter`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -891,7 +891,7 @@ class="methodparam"><span class="type">string</span> `$sort`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -971,7 +971,7 @@ class="methodparam"><span class="type">int</span> `$structure`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 

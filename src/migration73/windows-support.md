@@ -1,9 +1,9 @@
-Windows Support
----------------
+Windows 支持
+------------
 
-### PHP Core
+### PHP 核心
 
-#### More POSIX Conforming File Deletion
+#### 更符合 POSIX 标准的文件删除方法
 
 File descriptors are opened in shared read/write/delete mode by default.
 This effectively maps the POSIX semantics and allows to delete files

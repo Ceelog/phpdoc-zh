@@ -43,7 +43,7 @@ Default is **`FALSE`**
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 
@@ -102,7 +102,7 @@ if parameter does not exist.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -146,7 +146,7 @@ parameter.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 
@@ -265,7 +265,7 @@ and **`FALSE`** on failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 
@@ -333,7 +333,7 @@ Any combination of **`SVN_NON_RECURSIVE`** and
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 
@@ -395,7 +395,7 @@ String path to local working directory to cleanup
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 
@@ -440,7 +440,7 @@ String version number, usually in form of x.y.z.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 
@@ -516,7 +516,7 @@ array(
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 
@@ -587,7 +587,7 @@ Default is **`FALSE`**
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -657,7 +657,7 @@ may be used depending on Subversion's configuration.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 
@@ -798,7 +798,7 @@ Abort a transaction, returns true if everything is okay, false otherwise
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_apply\_text
 ====================
@@ -824,7 +824,7 @@ Creates and returns a stream that will be used to replace
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_begin\_txn2
 ====================
@@ -849,7 +849,7 @@ Create a new transaction
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_change\_node\_prop
 ===========================
@@ -877,7 +877,7 @@ Return true if everything is ok, false otherwise
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_check\_path
 ====================
@@ -903,7 +903,7 @@ Determines what kind of item lives at path in a given repository fsroot
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_contents\_changed
 ==========================
@@ -931,7 +931,7 @@ Return true if content is different, false otherwise
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_copy
 =============
@@ -960,7 +960,7 @@ Copies a file or a directory, returns true if all is ok, false otherwise
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_delete
 ===============
@@ -986,7 +986,7 @@ Deletes a file or a directory, return true if all is ok, false otherwise
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_dir\_entries
 =====================
@@ -1014,7 +1014,7 @@ to file type
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_file\_contents
 =======================
@@ -1042,7 +1042,7 @@ of the fs
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_file\_length
 =====================
@@ -1068,7 +1068,7 @@ Returns the length of a file from a given version of the fs
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_is\_dir
 ================
@@ -1094,7 +1094,7 @@ Return true if the path points to a directory, false otherwise
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_is\_file
 =================
@@ -1120,7 +1120,7 @@ Return true if the path points to a file, false otherwise
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_make\_dir
 ==================
@@ -1148,7 +1148,7 @@ otherwise
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_make\_file
 ===================
@@ -1174,7 +1174,7 @@ Creates a new empty file, returns true if all is ok, false otherwise
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_node\_created\_rev
 ===========================
@@ -1200,7 +1200,7 @@ Returns the revision in which path under fsroot was created
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_node\_prop
 ===================
@@ -1227,7 +1227,7 @@ Returns the value of a property for a node
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_props\_changed
 =======================
@@ -1255,7 +1255,7 @@ Return true if props are different, false otherwise
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_revision\_prop
 =======================
@@ -1282,7 +1282,7 @@ Fetches the value of a named property
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_revision\_root
 =======================
@@ -1308,7 +1308,7 @@ Get a handle on a specific version of the repository root
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_txn\_root
 ==================
@@ -1332,7 +1332,7 @@ Creates and returns a transaction root
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_fs\_youngest\_rev
 ======================
@@ -1356,7 +1356,7 @@ Returns the number of the youngest revision in the filesystem
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_import
 ===========
@@ -1401,7 +1401,7 @@ Whether or not to refrain from recursively processing directories.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 
@@ -1515,7 +1515,7 @@ If no changes were made to the item, an empty array is returned.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 
@@ -1618,7 +1618,7 @@ of:
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 
@@ -1714,7 +1714,7 @@ Create a new subversion repository at path
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_repos\_fs\_begin\_txn\_for\_commit
 =======================================
@@ -1742,7 +1742,7 @@ Create a new transaction
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_repos\_fs\_commit\_txn
 ===========================
@@ -1766,7 +1766,7 @@ Commits a transaction and returns the new revision
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_repos\_fs
 ==============
@@ -1790,7 +1790,7 @@ Gets a handle on the filesystem for a repository
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_repos\_hotcopy
 ===================
@@ -1817,7 +1817,7 @@ Make a hot-copy of the repos at repospath; copy it to destpath
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_repos\_open
 ================
@@ -1841,7 +1841,7 @@ Open a shared lock on a repository.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_repos\_recover
 ===================
@@ -1865,7 +1865,7 @@ Run recovery procedures on the repository located at path.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 svn\_revert
 ===========
@@ -2061,7 +2061,7 @@ for text </span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 
@@ -2147,7 +2147,7 @@ Returns new revision number on success, returns **`FALSE`** on failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 范例
 

@@ -12,7 +12,7 @@ class="methodparam"><span class="type">int</span> `$ch`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -37,7 +37,7 @@ class="methodparam"><span class="type">int</span> `$n`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -63,7 +63,7 @@ class="methodparam"><span class="type">string</span> `$s`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -88,7 +88,7 @@ class="methodparam"><span class="type">int</span> `$n`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -114,7 +114,7 @@ class="methodparam"><span class="type">string</span> `$text`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -139,7 +139,7 @@ class="methodparam"><span class="type">int</span> `$bg`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -165,7 +165,7 @@ class="methodparam"><span class="type">int</span> `$attributes`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -189,7 +189,7 @@ class="methodparam"><span class="type">int</span> `$attributes`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -213,7 +213,7 @@ class="methodparam"><span class="type">int</span> `$attributes`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -237,7 +237,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -257,7 +257,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">ncurses\_beep</span> sends an audible alert
 (bell) and if its not possible flashes the screen.
@@ -280,7 +280,7 @@ class="methodparam"><span class="type">int</span> `$attrchar`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -304,7 +304,7 @@ class="methodparam"><span class="type">int</span> `$attrchar`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -337,7 +337,7 @@ class="methodparam"><span class="type">int</span> `$bl_corner`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Draws the specified lines and corners around the main window.
 
@@ -437,7 +437,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Disables line buffering and character processing (interrupt and flow
 control characters are unaffected), making characters typed by the user
@@ -465,7 +465,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Clears the screen completely without setting blanks.
 
@@ -496,7 +496,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Erases all lines from cursor to end of screen and creates blanks. Blanks
 created by <span class="function">ncurses\_clrtobot</span> have the
@@ -525,7 +525,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Erases the current line from cursor position to the end. Blanks created
 by <span class="function">ncurses\_clrtoeol</span> have the current
@@ -661,7 +661,7 @@ class="methodparam"><span class="type">int</span> `$visibility`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -685,7 +685,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Saves the current terminal modes for program (in curses) for use by
 <span class="function">ncurses\_reset\_prog\_mode</span>.
@@ -712,7 +712,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Saves the current terminal modes for shell (not in curses) for use by
 <span class="function">ncurses\_reset\_shell\_mode</span>.
@@ -741,7 +741,7 @@ class="type">int</span> `$keycode`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -788,7 +788,7 @@ class="methodparam"><span class="type">int</span> `$milliseconds`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -812,7 +812,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Deletes the character under the cursor. All characters to the right of
 the cursor on the same line are moved to the left one position and the
@@ -841,7 +841,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Deletes the current line under cursor position. All lines below the
 current line are moved up one line. The bottom line of window is
@@ -870,7 +870,7 @@ class="methodparam"><span class="type">resource</span> `$window`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -894,7 +894,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Compares the virtual screen to the physical screen and updates the
 physical screen. This way is more effective than using multiple refresh
@@ -918,7 +918,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Enables echo mode. All characters typed by user are echoed by <span
 class="function">ncurses\_getch</span>.
@@ -945,7 +945,7 @@ class="methodparam"><span class="type">int</span> `$character`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -969,7 +969,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -989,7 +989,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Fills the terminal screen with blanks.
 
@@ -1019,7 +1019,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the current erase character.
 
@@ -1045,7 +1045,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -1065,7 +1065,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Flashes the screen, and if its not possible, sends an audible alert
 (bell).
@@ -1092,7 +1092,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Throws away any typeahead that has been typed and has not yet been read
 by your program.
@@ -1115,7 +1115,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -1137,7 +1137,7 @@ class="methodparam"><span class="type">resource</span> `$window`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Gets the horizontal and vertical size of the given `window` into the
 given variables.
@@ -1174,7 +1174,7 @@ class="methodparam"><span class="type">array</span> `&$mevent`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">ncurses\_getmouse</span> reads mouse event out of
 queue.
@@ -1267,7 +1267,7 @@ class="methodparam"><span class="type">int</span> `$tenth`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -1346,7 +1346,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Checks whether the terminal has insert and delete capabilities.
 
@@ -1373,7 +1373,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Checks whether the terminal has insert- and delete-line-capabilities.
 
@@ -1400,7 +1400,7 @@ class="methodparam"><span class="type">int</span> `$keycode`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -1445,7 +1445,7 @@ class="methodparam"><span class="type">int</span> `$charattr`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -1471,7 +1471,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the character from the current position.
 
@@ -1657,7 +1657,7 @@ class="methodparam"><span class="type">int</span> `$character`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -1682,7 +1682,7 @@ class="methodparam"><span class="type">int</span> `$count`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -1706,7 +1706,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Inserts a new line above the current line. The bottom line will be lost.
 
@@ -1724,7 +1724,7 @@ class="methodparam"><span class="type">string</span> `$text`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -1748,7 +1748,7 @@ class="methodparam"><span class="type">string</span> `&$buffer`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Reads a string from the terminal screen and returns the number of
 characters read from the current character position until end of line.
@@ -1776,7 +1776,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Checks if ncurses is in endwin mode.
 
@@ -1807,7 +1807,7 @@ class="methodparam"><span class="type">int</span> `$keycode`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -1856,7 +1856,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the current line kill character.
 
@@ -1882,7 +1882,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns a verbose description of the terminal.
 
@@ -1958,7 +1958,7 @@ class="methodparam"><span class="type">int</span> `$milliseconds`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -1984,7 +1984,7 @@ class="methodparam"><span class="type">int</span> `$newmask`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Sets mouse events to be reported. By default no mouse events will be
 reported.
@@ -2121,7 +2121,7 @@ class="methodparam"><span class="type">int</span> `$x`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2149,7 +2149,7 @@ class="methodparam"><span class="type">int</span> `$c`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2180,7 +2180,7 @@ class="methodparam"><span class="type">int</span> `$n`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2212,7 +2212,7 @@ class="methodparam"><span class="type">string</span> `$s`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2243,7 +2243,7 @@ class="methodparam"><span class="type">int</span> `$n`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2275,7 +2275,7 @@ class="methodparam"><span class="type">string</span> `$s`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2307,7 +2307,7 @@ class="type">int</span> `$new_x`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2338,7 +2338,7 @@ class="methodparam"><span class="type">int</span> `$x`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2365,7 +2365,7 @@ class="methodparam"><span class="type">int</span> `$x`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2395,7 +2395,7 @@ class="methodparam"><span class="type">int</span> `$attrchar`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2426,7 +2426,7 @@ class="methodparam"><span class="type">int</span> `$x`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2456,7 +2456,7 @@ class="methodparam"><span class="type">int</span> `$attrchar`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2490,7 +2490,7 @@ class="methodparam"><span class="type">resource</span> `$window`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2521,7 +2521,7 @@ class="methodparam"><span class="type">int</span> `$milliseconds`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2590,7 +2590,7 @@ class="methodparam"><span class="type">int</span> `$x`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Creates a new window to draw elements in.
 
@@ -2630,7 +2630,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2650,7 +2650,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns terminal to normal (cooked) mode. Initially the terminal may or
 may not be in cbreak mode as the mode is inherited. Therefore a program
@@ -2679,7 +2679,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Prevents echoing of user typed characters.
 
@@ -2706,7 +2706,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2726,7 +2726,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2746,7 +2746,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Switches the terminal out of raw mode. Raw mode is similar to cbreak
 mode, in that characters typed are immediately passed through to the
@@ -2970,7 +2970,7 @@ class="methodparam"><span class="type">string</span> `$text`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -2994,7 +2994,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3014,7 +3014,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Places the terminal in raw mode. Raw mode is similar to cbreak mode, in
 that characters typed are immediately passed through to the user
@@ -3046,7 +3046,7 @@ class="methodparam"><span class="type">int</span> `$ch`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3123,7 +3123,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Restores the terminal state, which was previously saved by calling <span
 class="function">ncurses\_savetty</span>.
@@ -3150,7 +3150,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Saves the current terminal state. The saved terminal state can be
 restored with <span class="function">ncurses\_resetty</span>.
@@ -3178,7 +3178,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3203,7 +3203,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3228,7 +3228,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3253,7 +3253,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3277,7 +3277,7 @@ class="methodparam"><span class="type">int</span> `$count`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3320,7 +3320,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the current soft label key attribute.
 
@@ -3342,7 +3342,7 @@ class="methodparam"><span class="type">int</span> `$intarg`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3366,7 +3366,7 @@ class="methodparam"><span class="type">int</span> `$intarg`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3390,7 +3390,7 @@ class="methodparam"><span class="type">int</span> `$intarg`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3414,7 +3414,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 The function <span class="function">ncurses\_slk\_clear</span> clears
 soft label keys from screen.
@@ -3437,7 +3437,7 @@ class="methodparam"><span class="type">int</span> `$intarg`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3461,7 +3461,7 @@ class="methodparam"><span class="type">int</span> `$format`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Initializes soft label key functions
 
@@ -3498,7 +3498,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3518,7 +3518,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Copies soft label keys from virtual screen to physical screen.
 
@@ -3536,7 +3536,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Restores the soft label keys after <span
 class="function">ncurses\_slk\_clear</span> has been performed.
@@ -3581,7 +3581,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Forces all the soft labels to be output the next time a <span
 class="function">ncurses\_slk\_noutrefresh</span> is performed.
@@ -3600,7 +3600,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3620,7 +3620,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3696,7 +3696,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3716,7 +3716,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns terminals shortname.
 
@@ -3743,7 +3743,7 @@ class="methodparam"><span class="type">int</span> `$millisec`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3786,7 +3786,7 @@ class="methodparam"><span class="type">int</span> `$fd`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3810,7 +3810,7 @@ class="methodparam"><span class="type">int</span> `$keycode`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3834,7 +3834,7 @@ class="methodparam"><span class="type">array</span> `$mevent`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Pushes a KEY\_MOUSE event onto the input queue and associates with this
 event the given state data and screen-relative character cell
@@ -3893,7 +3893,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3913,7 +3913,7 @@ class="methodparam"><span class="type">bool</span> `$flag`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3937,7 +3937,7 @@ class="methodparam"><span class="type">bool</span> `$flag`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3961,7 +3961,7 @@ class="methodparam"><span class="type">int</span> `$intarg`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -3987,7 +3987,7 @@ class="methodparam"><span class="type">int</span> `$charattr`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -4140,7 +4140,7 @@ class="methodparam"><span class="type">int</span> `$br_corner`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Draws the specified lines and corners around the passed `window`.
 
@@ -4377,7 +4377,7 @@ class="methodparam"><span class="type">resource</span> `$window`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 

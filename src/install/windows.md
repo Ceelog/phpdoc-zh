@@ -6,9 +6,8 @@ Windows 系统下的安装
 -   [环境要求](/install/windows/requirements.html)
 -   [PECL](/install/windows/pecl.html)
 -   [Windows 下的 PHP 安装程序工具](/install/windows/tools.html)
--   [Recommended Configuration on Windows
-    systems](/install/windows/recommended.html)
--   [Manual PHP Installation on Windows](/install/windows/manual.html)
+-   [Windows 系统下的推荐配置](/install/windows/recommended.html)
+-   [在 Windows 上手动安装 PHP](/install/windows/manual.html)
 -   [Windows 下 PHP 故障排除](/install/windows/troubleshooting.html)
 -   [旧版本 Windows 支持](/install/windows/legacy/index.html)
 

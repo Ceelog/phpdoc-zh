@@ -16,7 +16,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -95,7 +95,7 @@ class="initializer"> = CLASSKIT\_ACC\_PUBLIC</span></span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -184,7 +184,7 @@ class="methodparam"><span class="type">string</span> `$sMethod`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -264,7 +264,7 @@ class="initializer"> = CLASSKIT\_ACC\_PUBLIC</span></span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -357,7 +357,7 @@ class="methodparam"><span class="type">string</span> `$classname`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -430,7 +430,7 @@ class="type">string</span> `$newname`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 

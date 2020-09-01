@@ -66,6 +66,10 @@ default doctype being added when one is not found. </span>
 **`LIBXML_NOENT`** (<span class="type">integer</span>)  
 <span class="simpara"> Substitute entities </span>
 
+**Caution**
+Enabling entity substitution may facilitate XML External Entity (XXE)
+attacks.
+
 **`LIBXML_NOERROR`** (<span class="type">integer</span>)  
 <span class="simpara"> Suppress error reports </span>
 

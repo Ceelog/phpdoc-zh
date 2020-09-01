@@ -3677,7 +3677,7 @@ class="methodparam"><span class="type">int</span> `$column`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 检索一个在结果集中以0开始索引的列的元数据作为一个关联数组。
 
@@ -6475,7 +6475,7 @@ class="type">int</span> `$num_args`</span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 This method is similar to
 <a href="/book/pdo.html#PDO::sqliteCreateFunction" class="xref"></a>
@@ -6660,7 +6660,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参数
 
@@ -6747,7 +6747,7 @@ class="initializer"> = 0</span></span> \]\] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 This method allows you to register a PHP function with SQLite as an UDF
 (User Defined Function), so that it can be called from within your SQL
@@ -6869,7 +6869,7 @@ override SQLite native SQL functions.
 
 此扩展是*实验性* 的。
 此扩展的表象，包括其函数名称以及其他此扩展的相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本扩展风险自担 。
+发布版本中未通知就被修改。使用本扩展风险自担。
 
 PDO\_4D is a driver that implements the
 <a href="/book/pdo.html#简介" class="link">PHP Data Objects (PDO)</a>

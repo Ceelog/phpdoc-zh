@@ -2,13 +2,13 @@ PHP 5.3.x 中弃用的功能
 ----------------------
 
 PHP 5.3.0 新增了两个错误等级: **`E_DEPRECATED`** 和
-**`E_USER_DEPRECATED`**. 错误等级 **`E_DEPRECATED`**
-被用来说明一个函数或者功能已经被弃用. **`E_USER_DEPRECATED`**
-等级目的在于表明用户代码中的弃用功能, 类似于 **`E_USER_ERROR`** 和
-**`E_USER_WARNING`** 等级.
+**`E_USER_DEPRECATED`**。错误等级 **`E_DEPRECATED`**
+被用来说明一个函数或者功能已经被弃用。**`E_USER_DEPRECATED`**
+等级目的在于表明用户代码中的弃用功能，类似于 **`E_USER_ERROR`** 和
+**`E_USER_WARNING`** 等级。
 
-下面是被弃用的 INI 指令列表. 使用下面任何指令都将导致 **`E_DEPRECATED`**
-错误.
+下面是被弃用的 INI 指令列表。使用下面任何指令都将导致 **`E_DEPRECATED`**
+错误。
 
 -   <span class="simpara">
     <a href="/network/setup.html#" class="link">define_syslog_variables</a>
@@ -83,14 +83,14 @@ PHP 5.3.0 新增了两个错误等级: **`E_DEPRECATED`** 和
 -   <span class="simpara"> <span
     class="function">mysql\_escape\_string</span> (使用 <span
     class="function">mysql\_real\_escape\_string</span> 替代) </span>
--   <span class="simpara"> 废弃以字符串传递区域设置名称. 使用 LC\_\*
-    系列常量替代. </span>
+-   <span class="simpara"> 废弃以字符串传递区域设置名称。使用 LC\_\*
+    系列常量替代。 </span>
 -   <span class="simpara"> <span class="function">mktime</span> 的
-    `is_dst` 参数. 使用新的时区处理函数替代. </span>
+    `is_dst` 参数。使用新的时区处理函数替代。 </span>
 
 弃用的功能:
 
 -   <span class="simpara"> 弃用通过引用分配
     <a href="/language/oop5/basic.html#language.oop5.basic.new" class="link">new</a>
-    的返回值. </span>
--   <span class="simpara"> 调用时传递引用被弃用. </span>
+    的返回值。 </span>
+-   <span class="simpara"> 调用时传递引用被弃用。 </span>

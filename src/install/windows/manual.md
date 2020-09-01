@@ -1,17 +1,16 @@
-Manual PHP Installation on Windows
-----------------------------------
+在 Windows 上手动安装 PHP
+-------------------------
 
-### Choose Web Server
+### 选择一个 Web 服务器
 
--   IIS is builtin to Windows. On Windows Server, use Server Manager to
-    add the IIS role. Be sure to include the CGI Role Feature. On
-    Windows Desktop, use Control Panel's Add/Remove Programs to add IIS.
-    See:
-    <a href="https://msdn.microsoft.com/en-us/library/ms181052%28v=vs.80%29.aspx?f=255&amp;MSPPError=-2147217396" class="link external">» https://msdn.microsoft.com/en-us/library/ms181052%28v=vs.80%29.aspx?f=255&amp;MSPPError=-2147217396</a>
-    For desktop web apps and web-development, you can also use
-    IIS/Express or PHP Desktop
+-   IIS 是 Windows 内置的服务。在 Windows
+    服务器版本上，请使用服务器管理（Server Manager）来添加 IIS
+    规则。同时需要设置 CGI 角色规则。在 Windows
+    桌面版本上，需要使用控制面板中的 "添加/删除程序" 功能来添加
+    IIS。请参阅：<a href="https://msdn.microsoft.com/en-us/library/ms181052%28v=vs.80%29.aspx?f=255&amp;MSPPError=-2147217396" class="link external">» https://msdn.microsoft.com/en-us/library/ms181052%28v=vs.80%29.aspx?f=255&amp;MSPPError=-2147217396</a>
+    对于桌面 app 开发者，你也可以选择 IIS/Express 或 PHP Desktop。
 
-    **示例 \#1 Command line to configure IIS and PHP**
+    **示例 \#1 命令行下配置 IIS 和 PHP**
 
 
             @echo off
@@ -36,7 +35,7 @@ Manual PHP Installation on Windows
         %windir%\system32\inetsrv\appcmd.exe set config -section:system.webServer/fastCgi /+"[fullPath='%phpdir%\%phppath%\php-cgi.exe'].environmentVariables.[name='PHP_FCGI_MAX_REQUESTS',value='10000']"
         %windir%\system32\inetsrv\appcmd.exe set config -section:system.webServer/fastCgi /+"[fullPath='%phpdir%\%phppath%\php-cgi.exe'].environmentVariables.[name='PHPRC',value='%phpdir%\%phppath%\php.ini']"
 
-    <a href="/install/windows/legacy/index.html#install.windows.legacy.iis7" class="link">How to manually configure IIS</a>
+    <a href="/install/windows/legacy/index.html#install.windows.legacy.iis7" class="link">如何手动配置 IIS</a>
 
 -   There are several builds of Apache2 for Windows. We support
     ApacheLounge, but other options include XAMPP, WampServer and
@@ -44,12 +43,12 @@ Manual PHP Installation on Windows
     mod\_php or mod\_fastcgi to load PHP on Apache. If you use mod\_php,
     you MUST use a TS build of Apache built with same version of Visual
     C and same CPU (x86 or x64).
-    <a href="/install/windows/legacy/index.html#install.windows.legacy.apache2" class="link">How to manually configure Apache2</a>
+    <a href="/install/windows/legacy/index.html#install.windows.legacy.apache2" class="link">如何手动配置 Apache2</a>
 
-### Choose Build
+### 选择编译版本
 
-Download PHP production releases from
-<a href="http://windows.php.net/download/" class="link external">» http://windows.php.net/download/</a>.
+从 Windows 专用站点下载适合产品环境使用的 PHP 预编译版本：
+<a href="http://windows.php.net/download/" class="link external">» http://windows.php.net/download/</a>。
 A lot of testing and optimization is already done on the snapshot and qa
 releases, but you are welcome to help us do more. There are 4 types of
 PHP builds:

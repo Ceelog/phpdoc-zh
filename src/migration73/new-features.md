@@ -1,14 +1,12 @@
-New Features
-------------
+新特性
+------
 
-### PHP Core
+### PHP 核心
 
-#### More Flexible Heredoc and Nowdoc Syntax
+#### 更灵活的 Heredoc 和 Nowdoc 语法
 
-The closing marker for doc strings is no longer required to be followed
-by a semicolon or newline. Additionally the closing marker may be
-indented, in which case the indentation will be stripped from all lines
-in the doc string.
+Heredoc 和 Nowdoc
+语法变的更灵活。现在支持闭合标记符的缩进，并且不再强制闭合标记符的换行。请参阅：<a href="https://learnku.com/laravel/t/10857/php-73-we-will-have-flexible-heredoc-and-nowdoc-syntactic-structures" class="link external">» 第三方网站上的说明</a>
 
 #### Array Destructuring supports Reference Assignments
 

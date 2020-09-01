@@ -2,7 +2,7 @@
 
 此扩展是*实验性* 的。
 此扩展的表象，包括其函数名称以及其他此扩展的相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本扩展风险自担 。
+发布版本中未通知就被修改。使用本扩展风险自担。
 
 SCA for PHP makes it possible for a PHP programmer to write reusable
 components, which can be called in a variety of ways, with an identical

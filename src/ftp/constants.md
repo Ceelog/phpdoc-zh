@@ -22,10 +22,12 @@
 异步传输是活动状态的
 
 **`FTP_TEXT`** (<span class="type">integer</span>)  
+**`FTP_ASCII`** 的别名。
 
 **`FTP_BINARY`** (<span class="type">integer</span>)  
 
 **`FTP_IMAGE`** (<span class="type">integer</span>)  
+**`FTP_BINARY`** 的别名。
 
 **`FTP_TIMEOUT_SEC`** (<span class="type">integer</span>)  
 更多设置参考函数 <span class="function">ftp\_set\_option</span>。

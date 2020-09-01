@@ -2000,6 +2000,10 @@ Throws <span class="classname">DOMException</span> on errors. Default to
 *Proprietary*. Whether or not to substitute entities. This attribute is
 not part of the DOM specification and is specific to libxml.
 
+**Caution**
+Enabling entity substitution may facilitate XML External Entity (XXE)
+attacks.
+
 `validateOnParse`  
 Loads and validates against the DTD. Default to **`FALSE`**.
 

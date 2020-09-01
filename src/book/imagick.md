@@ -3662,8 +3662,7 @@ Average a set of images
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -4299,8 +4298,7 @@ Changes the color value of any pixel that matches target
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -5896,8 +5894,7 @@ Description
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -5961,8 +5958,7 @@ Merges a sequence of images
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -6863,8 +6859,7 @@ Description
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -7092,8 +7087,7 @@ Gets the extrema for one or more image channels
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -7240,8 +7234,7 @@ Gets image clip mask
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -7474,8 +7467,7 @@ Gets the extrema for the image
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -7781,8 +7773,7 @@ Gets the index of the current active image
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -7918,8 +7909,7 @@ Return if the image has a matte channel
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -7941,8 +7931,7 @@ Returns the image matte color
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -8388,8 +8377,7 @@ Returns the image length in bytes
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -9757,8 +9745,7 @@ image
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -9789,8 +9776,7 @@ Changes the transparency value of a color
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -9849,8 +9835,7 @@ Applies a digital filter
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -10548,8 +10533,7 @@ Forms a mosaic from images
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -11005,8 +10989,7 @@ Performs an ordered dither
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -11077,8 +11060,7 @@ Changes the color value of any pixel that matches target
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -11136,8 +11118,7 @@ Change any pixel that matches color
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -11192,8 +11173,7 @@ Changes any pixel that matches color with the color defined by fill
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -11802,8 +11782,7 @@ Radial blurs an image
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -12096,8 +12075,7 @@ Recolors image
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -12157,8 +12135,7 @@ Smooths the contours of an image
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -12613,8 +12590,7 @@ Rounds image corners
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -13398,8 +13374,7 @@ Description
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -13462,8 +13437,7 @@ Sets the image bias for any method that convolves an image
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -13521,8 +13495,7 @@ Description
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -13636,8 +13609,7 @@ Sets image clip mask
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -14111,8 +14083,7 @@ Set the iterator position
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -14263,8 +14234,7 @@ Sets the image matte color
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -14299,8 +14269,7 @@ Sets the image opacity level
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 
@@ -16622,8 +16591,7 @@ Convenience method for setting crop size and the image geometry
 
 **Warning**
 
-This function has been *DEPRECATED* as of Imagick 3.4.4. Relying on this
-function is highly discouraged.
+此函数在 Imagick 3.4.4 中被 *废弃*，强烈建议不要应用此函数。
 
 ### 说明
 

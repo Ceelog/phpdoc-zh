@@ -14,7 +14,7 @@ class="methodparam"><span class="type">string</span> `$olddomain`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -36,7 +36,7 @@ class="methodparam"><span class="type">string</span> `$domain`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -62,7 +62,7 @@ class="methodparam"><span class="type">string</span> `$bounce`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -86,7 +86,7 @@ class="methodparam"><span class="type">string</span> `$domain`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -112,7 +112,7 @@ class="methodparam"><span class="type">string</span> `$gecos`</span> \[,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -135,7 +135,7 @@ class="type">string</span> `$alias`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -155,7 +155,7 @@ class="methodparam"><span class="type">string</span> `$domain`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -177,7 +177,7 @@ class="methodparam"><span class="type">string</span> `$user`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -197,7 +197,7 @@ class="methodparam"><span class="type">string</span> `$domain`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -219,7 +219,7 @@ class="methodparam"><span class="type">string</span> `$alias`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -243,7 +243,7 @@ class="methodparam"><span class="type">string</span> `$apop`</span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -263,7 +263,7 @@ class="methodparam"><span class="type">string</span> `$domain`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -283,7 +283,7 @@ class="methodparam"><span class="type">string</span> `$domain`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -305,7 +305,7 @@ class="methodparam"><span class="type">string</span> `$user`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -325,7 +325,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -349,7 +349,7 @@ class="methodparam"><span class="type">bool</span> `$apop`</span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 
@@ -372,7 +372,7 @@ class="type">string</span> `$quota`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **Warning**
 

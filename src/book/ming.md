@@ -539,7 +539,7 @@ class="methodparam"><span class="type">string</span> `$script`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Creates a new SWFAction and compiles the given `script` in it.
 
@@ -593,7 +593,7 @@ class="methodparam"><span class="type">mixed</span> `$file`</span> \[,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Creates the new <span class="classname">SWFBitmap</span> object from the
 given `file`.
@@ -704,7 +704,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the bitmap's height.
 
@@ -730,7 +730,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the bitmap's width.
 
@@ -815,7 +815,7 @@ class="methodparam"><span class="type">SWFAction</span> `$action`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Adds the given `action` to the button for the given conditions.
 
@@ -873,7 +873,7 @@ class="methodparam"><span class="type">SWFShape</span> `$shape`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Adds the given `shape` to the button.
 
@@ -907,7 +907,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Creates a new Button.
 
@@ -1062,7 +1062,7 @@ class="methodparam"><span class="type">SWFAction</span> `$action`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Sets the action to be performed when the button is clicked.
 
@@ -1099,7 +1099,7 @@ class="methodparam"><span class="type">SWFShape</span> `$shape`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfbutton::setdown</span> alias for
 addShape(shape, SWFBUTTON\_DOWN).
@@ -1127,7 +1127,7 @@ class="methodparam"><span class="type">SWFShape</span> `$shape`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfbutton::sethit</span> alias for
 addShape(shape, SWFBUTTON\_HIT).
@@ -1180,7 +1180,7 @@ class="methodparam"><span class="type">SWFShape</span> `$shape`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfbutton::setover</span> alias for
 addShape(shape, SWFBUTTON\_OVER).
@@ -1208,7 +1208,7 @@ class="methodparam"><span class="type">SWFShape</span> `$shape`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfbutton::setup</span> alias for addShape(shape,
 SWFBUTTON\_UP).
@@ -1404,7 +1404,7 @@ class="methodparam"><span class="type">int</span> `$green`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::addcolor</span> adds the color to
 this item's color transform. The color is given in its RGB form.
@@ -1572,7 +1572,7 @@ class="methodparam"><span class="type">float</span> `$dy`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::move</span> moves the current
 object by (`dx`,`dy`) from its current position.
@@ -1606,7 +1606,7 @@ class="methodparam"><span class="type">float</span> `$y`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::moveto</span> moves the current
 object to (`x`,`y`) in global coordinates.
@@ -1643,7 +1643,7 @@ class="methodparam"><span class="type">float</span> `$a`</span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::multcolor</span> multiplies the
 item's color transform by the given values.
@@ -1724,7 +1724,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::remove</span> removes this object
 from the movie's display list.
@@ -1757,7 +1757,7 @@ class="methodparam"><span class="type">float</span> `$angle`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::rotate</span> rotates the current
 object by `angle` degrees from its current rotation.
@@ -1790,7 +1790,7 @@ class="methodparam"><span class="type">float</span> `$angle`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::rotateto</span> set the current
 object rotation to `angle` degrees in global coordinates.
@@ -1909,7 +1909,7 @@ class="methodparam"><span class="type">float</span> `$dy`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::scale</span> scales the current
 object by (`dx`,`dy`) from its current size.
@@ -1944,7 +1944,7 @@ class="methodparam"><span class="type">float</span> `$x`</span> \[,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::scaleto</span> scales the current
 object to (`x`,`y`) in global coordinates.
@@ -1977,7 +1977,7 @@ class="methodparam"><span class="type">int</span> `$depth`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::setdepth</span> sets the object's
 z-order to `depth`. Depth defaults to the order in which instances are
@@ -2052,7 +2052,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::setname</span> sets the object's
 name to `name`, for targetting with action script. Only useful on
@@ -2082,7 +2082,7 @@ class="methodparam"><span class="type">float</span> `$ratio`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::setratio</span> sets the object's
 ratio to `ratio`. Obviously only useful for morphs.
@@ -2177,7 +2177,7 @@ class="methodparam"><span class="type">float</span> `$ddegrees`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::skewx</span> adds `ddegrees` to
 current x-skew.
@@ -2212,7 +2212,7 @@ class="methodparam"><span class="type">float</span> `$degrees`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::skewxto</span> sets the x-skew to
 `degrees`. For `degrees` is 1.0, it means a 45-degree forward slant.
@@ -2248,7 +2248,7 @@ class="methodparam"><span class="type">float</span> `$ddegrees`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::skewy</span> adds `ddegrees` to
 current y-skew.
@@ -2283,7 +2283,7 @@ class="methodparam"><span class="type">float</span> `$degrees`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfdisplayitem::skewyto</span> sets the y-skew to
 `degrees`. For `degrees` is 1.0, it means a 45-degree forward slant.
@@ -2359,7 +2359,7 @@ class="methodparam"><span class="type">float</span> `$y`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Moves the fill origin to the given global coordinates.
 
@@ -2389,7 +2389,7 @@ class="methodparam"><span class="type">float</span> `$angle`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Sets the fill rotation to the given `angle`.
 
@@ -2418,7 +2418,7 @@ class="methodparam"><span class="type">float</span> `$x`</span> \[,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Sets the fill scale to the given coordinates.
 
@@ -2448,7 +2448,7 @@ class="methodparam"><span class="type">float</span> `$x`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Sets the fill x-skew to `x`.
 
@@ -2480,7 +2480,7 @@ class="methodparam"><span class="type">float</span> `$y`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Sets the fill y-skew to `y`.
 
@@ -2559,7 +2559,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 If `filename` is the name of an FDB file (i.e., it ends in ".fdb"), load
 the font definition found in said file. Otherwise, create a
@@ -2686,7 +2686,7 @@ class="methodparam"><span class="type">string</span> `$string`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swffont::getwidth</span> returns the string
 `string`'s width, using font's default scaling. You'll probably want to
@@ -2814,7 +2814,7 @@ class="methodparam"><span class="type">float</span> `$ratio`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfgradient::addentry</span> adds an entry to the
 gradient list. `ratio` is a number between 0 and 1 indicating where in
@@ -2840,7 +2840,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfgradient</span> creates a new SWFGradient
 object.
@@ -2949,7 +2949,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Creates a new <span class="classname">SWFMorph</span> object.
 
@@ -3020,7 +3020,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Gets the morph's starting shape.
 
@@ -3047,7 +3047,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Gets the morph's ending shape.
 
@@ -3181,7 +3181,7 @@ class="methodparam"><span class="type">object</span> `$instance`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Adds an SWF object `instance` to the current movie.
 
@@ -3254,7 +3254,7 @@ class="methodparam"><span class="type">int</span> `$version`</span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Creates a new movie object, representing an SWF movie.
 
@@ -3334,7 +3334,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Moves to the next frame of the animation.
 
@@ -3357,7 +3357,7 @@ class="methodparam"><span class="type">int</span> `$compression`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Dumps the <span class="classname">SWFMovie</span>.
 
@@ -3407,7 +3407,7 @@ class="methodparam"><span class="type">object</span> `$instance`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Removes the given object `instance` from the display list.
 
@@ -3435,7 +3435,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Saves the SWF movie to the specified `filename`.
 
@@ -3509,7 +3509,7 @@ class="methodparam"><span class="type">int</span> `$green`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Sets the background color.
 
@@ -3553,7 +3553,7 @@ class="methodparam"><span class="type">float</span> `$width`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Sets the movie's dimension to the specified `width` and `height`.
 
@@ -3583,7 +3583,7 @@ class="methodparam"><span class="type">int</span> `$number`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Sets the total number of frames in the animation to the given `number`.
 
@@ -3610,7 +3610,7 @@ class="methodparam"><span class="type">float</span> `$rate`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Sets the frame rate to the specified `rate`.
 
@@ -3681,7 +3681,7 @@ class="methodparam"><span class="type">mixed</span> `$mp3file`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Streams the given MP3 file `mp3file`.
 
@@ -3921,7 +3921,7 @@ class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">SWFShape::addFill</span> adds a solid fill to the
 shape's list of fill styles. <span
@@ -4025,7 +4025,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Created a new <span class="classname">SWFShape</span> object.
 
@@ -4174,7 +4174,7 @@ class="type">float</span> `$targetdy`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfshape::drawcurve</span> draws a quadratic
 curve (using the current line style,set by <span
@@ -4212,7 +4212,7 @@ class="type">float</span> `$targety`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfshape::drawcurveto</span> draws a quadratic
 curve (using the current line style, set by <span
@@ -4267,7 +4267,7 @@ class="methodparam"><span class="type">float</span> `$dy`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfshape::drawline</span> draws a line (using the
 current line style set by <span
@@ -4297,7 +4297,7 @@ class="methodparam"><span class="type">float</span> `$y`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfshape::setrightfill</span> draws a line (using
 the current line style, set by <span
@@ -4327,7 +4327,7 @@ class="methodparam"><span class="type">float</span> `$dy`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfshape::setrightfill</span> move the shape's
 pen from coordinates (current x,current y) to (current x + `dx`, current
@@ -4356,7 +4356,7 @@ class="methodparam"><span class="type">float</span> `$y`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfshape::setrightfill</span> move the shape's
 pen to (`x`,`y`) in the shape's coordinate space.
@@ -4391,7 +4391,7 @@ class="methodparam"><span class="type">int</span> `$blue`</span> \[,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 What this nonsense is about is, every edge segment borders at most two
 fills. When rasterizing the object, it's pretty handy to know what those
@@ -4440,7 +4440,7 @@ class="methodparam"><span class="type">int</span> `$a`</span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfshape::setline</span> sets the shape's line
 style. `width` is the line's width. If `width` is 0, the line's style is
@@ -4540,7 +4540,7 @@ class="methodparam"><span class="type">int</span> `$blue`</span> \[,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Shortcut for *$swfshape-\>setrightfill($s-\>addfill($r, $g, $b \[,
 $a\]));*.
@@ -4778,7 +4778,7 @@ class="methodparam"><span class="type">object</span> `$object`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfsprite::add</span> adds a <span
 class="function">swfshape</span>, a <span
@@ -4810,7 +4810,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Creates a new <span class="classname">SWFSprite</span> object.
 
@@ -4847,7 +4847,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfsprite::setframes</span> moves to the next
 frame of the animation.
@@ -4870,7 +4870,7 @@ class="methodparam"><span class="type">object</span> `$object`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfsprite::remove</span> remove a <span
 class="function">swfshape</span>, a <span
@@ -4897,7 +4897,7 @@ class="methodparam"><span class="type">int</span> `$number`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swfsprite::setframes</span> sets the total number
 of frames in the animation to `numberofframes`.
@@ -5029,7 +5029,7 @@ class="methodparam"><span class="type">string</span> `$string`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftext::addstring</span> draws the string
 `string` at the current pen (cursor) location. Pen is at the baseline of
@@ -5080,7 +5080,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Creates a new <span class="classname">SWFText</span> object, fresh for
 manipulating.
@@ -5202,7 +5202,7 @@ class="methodparam"><span class="type">string</span> `$string`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the rendered width of the `string` at the text object's current
 font, scale, and spacing settings.
@@ -5226,7 +5226,7 @@ class="methodparam"><span class="type">float</span> `$y`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftext::moveto</span> moves the pen (or cursor,
 if that makes more sense) to (`x`,`y`) in text object's coordinate
@@ -5255,7 +5255,7 @@ class="initializer"> = 255</span></span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Changes the current text color.
 
@@ -5294,7 +5294,7 @@ class="methodparam"><span class="type">SWFFont</span> `$font`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftext::setfont</span> sets the current font to
 `font`.
@@ -5317,7 +5317,7 @@ class="methodparam"><span class="type">float</span> `$height`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftext::setheight</span> sets the current font
 height to `height`. Default is 240.
@@ -5340,7 +5340,7 @@ class="methodparam"><span class="type">float</span> `$spacing`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftext::setspacing</span> sets the current font
 spacing to `spacing`. Default is 1.0. 0 is all of the letters written at
@@ -5472,7 +5472,7 @@ class="methodparam"><span class="type">string</span> `$string`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield::setname</span> concatenates the
 string `string` to the text field.
@@ -5495,7 +5495,7 @@ class="methodparam"><span class="type">int</span> `$alignement`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield::align</span> sets the text field
 alignment to `alignement`. Valid values for `alignement` are :
@@ -5519,7 +5519,7 @@ class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield</span> creates a new text field
 object. Text Fields are less flexible than <span
@@ -5588,7 +5588,7 @@ class="methodparam"><span class="type">float</span> `$width`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield::setbounds</span> sets the text
 field width to `width` and height to `height`. If you don't set the
@@ -5616,7 +5616,7 @@ class="initializer"> = 255</span></span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield::setcolor</span> sets the color of
 the text field. Default is fully opaque black. Color is represented
@@ -5657,7 +5657,7 @@ class="methodparam"><span class="type">SWFFont</span> `$font`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield::setfont</span> sets the text field
 font to the \[browser-defined?\] `font` font.
@@ -5680,7 +5680,7 @@ class="methodparam"><span class="type">float</span> `$height`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield::setheight</span> sets the font
 height of this text field font to the given height `height`. Default is
@@ -5704,7 +5704,7 @@ class="methodparam"><span class="type">float</span> `$width`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield::setindentation</span> sets the
 indentation of the first line in the text field, to `width`.
@@ -5727,7 +5727,7 @@ class="methodparam"><span class="type">float</span> `$width`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield::setleftmargin</span> sets the left
 margin width of the text field to `width`. Default is 0.
@@ -5750,7 +5750,7 @@ class="methodparam"><span class="type">float</span> `$height`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield::setlinespacing</span> sets the line
 spacing of the text field to the height of `height`. Default is 40.
@@ -5775,7 +5775,7 @@ class="methodparam"><span class="type">float</span> `$left`</span> ,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield::setmargins</span> set both margins
 at once, for the man on the go.
@@ -5798,7 +5798,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield::setname</span> sets the variable
 name of this text field to `name`, for form posting and action scripting
@@ -5841,7 +5841,7 @@ class="methodparam"><span class="type">float</span> `$width`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 <span class="function">swftextfield::setrightmargin</span> sets the
 right margin width of the text field to `width`. Default is 0.

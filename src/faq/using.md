@@ -299,7 +299,7 @@ class="function">ini\_set</span>来更改这项设置。不管
 
 <!-- -->
 
-**我试着在用户自定义函数中访问一个标准的 CGI 变量（例如 $DOCUMENT\_ROOT 或 $HTTP\_REFERER），但是找不到，哪里出了错？**  
+**我试着在用户自定义函数中访问一个标准的 CGI 变量（例如 `$DOCUMENT_ROOT` 或 `$HTTP_REFERER`），但是找不到，哪里出了错？**  
 首先非常重要的一点是 PHP 设置项
 <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>
 同样会对服务器端和环境变量产生影响。当 register\_globals = off （从 PHP

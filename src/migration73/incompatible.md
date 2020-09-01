@@ -1,7 +1,7 @@
-Backward Incompatible Changes
------------------------------
+不向下兼容的变更
+----------------
 
-### PHP Core
+### PHP 核心
 
 #### Heredoc/Nowdoc Ending Label Interpretation
 

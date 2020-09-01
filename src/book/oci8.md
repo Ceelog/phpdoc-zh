@@ -7436,7 +7436,7 @@ sleep(30);
 
 **小贴士**
 
-使用旧版的 OCI8 或 ORACLE 数据库 ，可使用 Oracle
+使用旧版的 OCI8 或 ORACLE 数据库，可使用 Oracle
 *DBMS\_APPLICATION\_INFO* 包来设置客户端信息。这比使用 <span
 class="function">oci\_set\_client\_info</span> 较低效。
 
@@ -7674,7 +7674,7 @@ sleep(30);
 
 **小贴士**
 
-使用旧版的 OCI8 或 ORACLE 数据库 ，可使用 Oracle
+使用旧版的 OCI8 或 ORACLE 数据库，可使用 Oracle
 *DBMS\_APPLICATION\_INFO* 包来设置客户端信息。这比使用 <span
 class="function">oci\_set\_client\_info</span> 较低效。
 
@@ -7923,7 +7923,7 @@ User chosen <span class="type">string</span> up to 48 bytes long.
 
 **小贴士**
 
-使用旧版的 OCI8 或 ORACLE 数据库 ，可使用 Oracle
+使用旧版的 OCI8 或 ORACLE 数据库，可使用 Oracle
 *DBMS\_APPLICATION\_INFO* 包来设置客户端信息。这比使用 <span
 class="function">oci\_set\_client\_info</span> 较低效。
 
@@ -9293,7 +9293,7 @@ ocibindbyname
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicancel
 =========
@@ -9306,7 +9306,7 @@ ocicancel
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicloselob
 ===========
@@ -9319,7 +9319,7 @@ ocicloselob
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicollappend
 =============
@@ -9332,7 +9332,7 @@ ocicollappend
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicollassign
 =============
@@ -9345,7 +9345,7 @@ ocicollassign
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicollassignelem
 =================
@@ -9358,7 +9358,7 @@ ocicollassignelem
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicollgetelem
 ==============
@@ -9371,7 +9371,7 @@ ocicollgetelem
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicollmax
 ==========
@@ -9384,7 +9384,7 @@ ocicollmax
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicollsize
 ===========
@@ -9397,7 +9397,7 @@ ocicollsize
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicolltrim
 ===========
@@ -9410,7 +9410,7 @@ ocicolltrim
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicolumnisnull
 ===============
@@ -9423,7 +9423,7 @@ ocicolumnisnull
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicolumnname
 =============
@@ -9436,7 +9436,7 @@ ocicolumnname
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicolumnprecision
 ==================
@@ -9449,7 +9449,7 @@ ocicolumnprecision
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicolumnscale
 ==============
@@ -9462,7 +9462,7 @@ ocicolumnscale
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicolumnsize
 =============
@@ -9475,7 +9475,7 @@ ocicolumnsize
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicolumntype
 =============
@@ -9488,7 +9488,7 @@ ocicolumntype
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicolumntyperaw
 ================
@@ -9501,7 +9501,7 @@ ocicolumntyperaw
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocicommit
 =========
@@ -9514,7 +9514,7 @@ ocicommit
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocidefinebyname
 ===============
@@ -9527,7 +9527,7 @@ ocidefinebyname
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocierror
 ========
@@ -9540,7 +9540,7 @@ ocierror
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ociexecute
 ==========
@@ -9553,7 +9553,7 @@ ociexecute
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocifetch
 ========
@@ -9566,7 +9566,7 @@ ocifetch
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocifetchinto
 ============
@@ -9585,7 +9585,7 @@ class="function">oci\_fetch\_row</span>
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocifetchstatement
 =================
@@ -9598,7 +9598,7 @@ ocifetchstatement
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocifreecollection
 =================
@@ -9611,7 +9611,7 @@ ocifreecollection
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocifreecursor
 =============
@@ -9624,7 +9624,7 @@ ocifreecursor
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocifreedesc
 ===========
@@ -9637,7 +9637,7 @@ ocifreedesc
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocifreestatement
 ================
@@ -9650,7 +9650,7 @@ ocifreestatement
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ociinternaldebug
 ================
@@ -9663,7 +9663,7 @@ ociinternaldebug
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ociloadlob
 ==========
@@ -9676,7 +9676,7 @@ ociloadlob
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocilogoff
 =========
@@ -9689,7 +9689,7 @@ ocilogoff
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocilogon
 ========
@@ -9702,7 +9702,7 @@ ocilogon
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocinewcollection
 ================
@@ -9715,7 +9715,7 @@ ocinewcollection
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocinewcursor
 ============
@@ -9728,7 +9728,7 @@ ocinewcursor
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocinewdescriptor
 ================
@@ -9741,7 +9741,7 @@ ocinewdescriptor
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocinlogon
 =========
@@ -9754,7 +9754,7 @@ ocinlogon
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocinumcols
 ==========
@@ -9767,7 +9767,7 @@ ocinumcols
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ociparse
 ========
@@ -9780,7 +9780,7 @@ ociparse
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ociplogon
 =========
@@ -9793,7 +9793,7 @@ ociplogon
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ociresult
 =========
@@ -9806,7 +9806,7 @@ ociresult
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocirollback
 ===========
@@ -9819,7 +9819,7 @@ ocirollback
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocirowcount
 ===========
@@ -9832,7 +9832,7 @@ ocirowcount
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocisavelob
 ==========
@@ -9845,7 +9845,7 @@ ocisavelob
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocisavelobfile
 ==============
@@ -9858,7 +9858,7 @@ ocisavelobfile
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ociserverversion
 ================
@@ -9871,7 +9871,7 @@ ociserverversion
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocisetprefetch
 ==============
@@ -9884,7 +9884,7 @@ ocisetprefetch
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ocistatementtype
 ================
@@ -9897,7 +9897,7 @@ ocistatementtype
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ociwritelobtofile
 =================
@@ -9910,7 +9910,7 @@ ociwritelobtofile
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 ociwritetemporarylob
 ====================
@@ -9923,7 +9923,7 @@ ociwritetemporarylob
 
 **Warning**
 
-自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名 。
+自 PHP 5.4.0 起，已经*废弃*此别名。强烈建议不要应用此别名。
 
 **目录**
 

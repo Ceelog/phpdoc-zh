@@ -1697,8 +1697,8 @@ mt\_srand
 
 > **Note**: <span class="simpara">不再需要用 <span
 > class="function">srand</span> 或 <span
-> class="function">mt\_srand</span> 给随机数发生器播种
-> ，因为现在是由系统自动完成的。</span>
+> class="function">mt\_srand</span>
+> 给随机数发生器播种，因为现在是由系统自动完成的。</span>
 
 ### 参数
 
@@ -2204,8 +2204,8 @@ srand
 
 > **Note**: <span class="simpara">不再需要用 <span
 > class="function">srand</span> 或 <span
-> class="function">mt\_srand</span> 给随机数发生器播种
-> ，因为现在是由系统自动完成的。</span>
+> class="function">mt\_srand</span>
+> 给随机数发生器播种，因为现在是由系统自动完成的。</span>
 
 ### 参数
 

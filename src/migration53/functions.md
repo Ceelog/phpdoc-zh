@@ -18,7 +18,7 @@ PHP 核心:
     从一个方法环境调用一个用户函数. </span>
 -   <span class="simpara"> <span
     class="function">forward\_static\_call\_array</span> -
-    从一个方法环境调用一个用户函数, 使用数组中的元素作为参数. </span>
+    从一个方法环境调用一个用户函数，使用数组中的元素作为参数. </span>
 -   <span class="simpara"> <span
     class="function">gc\_collect\_cycles</span> -
     强制收集任何存在的废物循环. </span>
@@ -64,23 +64,24 @@ PHP 核心:
 <a href="/book/datetime.html" class="link">Date/Time</a>:
 
 -   <span class="simpara"> <span class="function">date\_add</span> - 向
-    <span class="classname">DateTime</span> 对象增加一定数量的天, 月,
-    年, 小时, 分钟和秒数. </span>
+    <span class="classname">DateTime</span>
+    对象增加一定数量的天，月，年，小时，分钟和秒数. </span>
 -   <span class="simpara"> <span
-    class="function">date\_create\_from\_format</span> - 根据给定的格式,
-    返回一个 <span class="classname">DateTime</span> 对象. </span>
+    class="function">date\_create\_from\_format</span> -
+    根据给定的格式，返回一个 <span class="classname">DateTime</span>
+    对象. </span>
 -   <span class="simpara"> <span class="function">date\_diff</span> -
     返回两个 <span class="classname">DateTime</span> 对象的不同之处.
     </span>
 -   <span class="simpara"> <span
     class="function">date\_get\_last\_errors</span> -
-    返回最后的日期/时间操作中产生的警告和错误. </span>
+    返回最后的日期/时间操作中产生的警告和错误。 </span>
 -   <span class="simpara"> <span
     class="function">date\_parse\_from\_format</span> -
     获取一个日期的信息. </span>
 -   <span class="simpara"> <span class="function">date\_sub</span> - 从
-    <span class="classname">DateTime</span> 对象减去一定数量的天, 月,
-    年, 时和秒数. </span>
+    <span class="classname">DateTime</span>
+    对象减去一定数量的天，月，年，时和秒数. </span>
 -   <span class="simpara"> <span
     class="function">timezone\_version\_get</span> -
     返回时区数据库的版本. </span>
@@ -110,7 +111,7 @@ PHP 核心:
 
 -   <span class="simpara"> <span
     class="function">json\_last\_error</span> - 返回最后发生的 JSON
-    错误. </span>
+    错误。 </span>
 
 <a href="/set/mysqlinfo.html#Mysqli" class="link">MySQL 改进</a>:
 
@@ -141,15 +142,15 @@ PHP 核心:
     class="function">pcntl\_sigprocmask</span> - 设置和获取阻塞信号.
     </span>
 -   <span class="simpara"> <span
-    class="function">pcntl\_sigtimedwait</span> - 等待信号,
-    但是有超时时间. </span>
+    class="function">pcntl\_sigtimedwait</span> -
+    等待信号，但是有超时时间. </span>
 -   <span class="simpara"> <span
     class="function">pcntl\_sigwaitinfo</span> - 等待信号. </span>
 
 <a href="/book/pcre.html" class="link">PCRE</a>:
 
 -   <span class="simpara"> <span class="function">preg\_filter</span> -
-    执行正则查找和替换, 仅仅返回匹配正则的结果. </span>
+    执行正则查找和替换，仅仅返回匹配正则的结果. </span>
 
 <a href="/book/sem.html" class="link">信号</a>:
 
@@ -157,9 +158,9 @@ PHP 核心:
     class="function">msg\_queue\_exists</span> - 检查消息队列是否存在.
     </span>
 -   <span class="simpara"> <span class="function">shm\_has\_var</span> -
-    检查在一个共享内存段中, 是否存在指定的键(key). </span>
+    检查在一个共享内存段中，是否存在指定的键(key). </span>
 
-以下函数被原生支持, 因此它们在所有运行 PHP 的操作系统上均可用.
+以下函数被原生支持，因此它们在所有运行 PHP 的操作系统上均可用。
 
 -   <span class="simpara"> <span class="function">acosh</span> </span>
 -   <span class="simpara"> <span class="function">asinh</span> </span>

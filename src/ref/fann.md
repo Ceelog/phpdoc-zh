@@ -174,7 +174,7 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-成功时返回神经网络 <span class="type">资源</span> ，发生错误返回
+成功时返回神经网络 <span class="type">资源</span>，发生错误返回
 **`FALSE`**。
 
 ### 参见
@@ -4560,7 +4560,7 @@ class="function">fann\_duplicate\_train\_data</span>函数的效果是一样的�
 fann\_test\_data
 ================
 
-使用训练数据来测试并且计算出 MSE .
+使用训练数据来测试并且计算出 MSE
 
 ### 说明
 
@@ -4570,7 +4570,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 <span class="methodparam"><span class="type">resource</span>
 `$data`</span> )
 
-使用训练数据来测试并且计算出 MSE .
+使用训练数据来测试并且计算出 MSE。
 
 该函数将会更新 MSE 和 误差的值。
 
@@ -4584,7 +4584,7 @@ class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 
 ### 返回值
 
-成功，则更新 MSE, 错误则返回 **`FALSE`** .
+成功，则更新 MSE, 错误则返回 **`FALSE`**。
 
 ### 参见
 
@@ -5104,7 +5104,7 @@ class="function">fann\_get\_num\_output</span> 一样长。
 -   [fann\_subset\_train\_data](/ref/fann.html#fann_subset_train_data) —
     返回一个训练数据子集的副本。
 -   [fann\_test\_data](/ref/fann.html#fann_test_data) —
-    使用训练数据来测试并且计算出 MSE .
+    使用训练数据来测试并且计算出 MSE
 -   [fann\_test](/ref/fann.html#fann_test) —
     使用一组输入和一组期望的输出来测试。
 -   [fann\_train\_epoch](/ref/fann.html#fann_train_epoch) —

@@ -33,7 +33,11 @@ class="methodname">libxml\_disable\_entity\_loader</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$disable`<span
 class="initializer"> = **`TRUE`**</span></span> \] )
 
-Disable/enable the ability to load external entities.
+Disable/enable the ability to load external entities. Note that
+disabling the loading of external entities may cause general issues with
+loading XML documents. However, as of libxml 2.9.0 entity substitution
+is disabled by default, so there is no need to disable the loading of
+external entities.
 
 ### 参数
 

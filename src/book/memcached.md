@@ -2376,23 +2376,29 @@ class="methodparam"><span class="type">string</span> `$key`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 1</span></span> \] )
 
-<span
-class="function">Memcached::increment</span>将一个数值元素增加参数`offset`指定的大小。
-如果元素的值不是数值类型，将其作为0处理。如果元素不存在<span
-class="function">Memcached::increment</span>失败。
+<span class="function">Memcached::increment</span>
+将一个数值元素增加参数 `offset`
+指定的大小。如果元素的值不是数值类型，将返回错误。如果元素不存在， <span
+class="function">Memcached::increment</span> 会将元素设置成
+`initial_value` 指定的值。
 
 ### 参数
 
 `key`  
-要增加值的元素的key。
+要增加值的元素的 key。
 
 `offset`  
 要将元素的值增加的大小。
 
+`initial_value`  
+如果元素不存在，要设置的默认值。
+
+`expiry`  
+设置元素值的过期时间。
+
 ### 返回值
 
-成功时返回元素的新值 或者在失败时返回 **`FALSE`**。 如果key不存在 <span
-class="methodname">Memcached::getResultCode</span>方法返回**`Memcached::RES_NOTFOUND`**。
+成功时返回元素的新值 或者在失败时返回 **`FALSE`**。
 
 ### 范例
 
@@ -2405,22 +2411,26 @@ $m->addServer('localhost', 11211);
 
 $m->set('counter', 0);
 $m->increment('counter');
-$m->increment('counter', 10);
-var_dump($m->get('counter'));
+$n = $m->increment('counter', 10);
+var_dump($n);
 
-$m->set('key', 'abc');
-$m->increment('counter');
+$m->set('counter', 'abc');
+$n = $m->increment('counter');
+// ^ will fail due to item value not being numeric
+var_dump($n);
 ?>
 ```
 
 以上例程会输出：
 
     int(11)
-    string(1) "1"
+    bool(false)
 
 ### 参见
 
 -   <span class="methodname">Memcached::decrement</span>
+-   <span class="methodname">Memcached::decrementByKey</span>
+-   <span class="methodname">Memcached::incrementByKey</span>
 
 Memcached::incrementByKey
 =========================

@@ -368,7 +368,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Begin logging changes made to the SDO\_DataObject.
 
@@ -394,7 +394,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 End logging changes made to an SDO\_DataObject.
 
@@ -421,7 +421,7 @@ class="methodparam"><span class="type">SDO\_DataObject</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get the type of change which has been made to the supplied
 SDO\_DataObject.
@@ -458,7 +458,7 @@ class="methodname">SDO\_DAS\_ChangeSummary::getChangedDataObjects</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get an SDO\_List of the SDO\_DataObjects which have been changed. These
 data objects can then be used to identify the types of change made to
@@ -487,7 +487,7 @@ class="methodname">SDO\_DAS\_ChangeSummary::getOldContainer</span> (
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get the old container (SDO\_DataObject) for a deleted SDO\_DataObject.
 
@@ -516,7 +516,7 @@ class="methodparam"><span class="type">SDO\_DataObject</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get a list of the old values for a given changed SDO\_DataObject.
 Returns a list of SDO\_DAS\_Settings describing the old values for the
@@ -547,7 +547,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Test to see whether change logging is switched on.
 
@@ -582,7 +582,7 @@ class="methodparam"><span class="type">string</span> `$type_name`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Adds a property to a type. The type must already be known to the
 SDO\_DAS\_DataFactory (i.e. have been added using addType()). The
@@ -678,7 +678,7 @@ class="methodparam"><span class="type">array</span> `$options`</span> \]
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Add a new type to the SDO\_DAS\_DataFactory, defined by its namespace
 and type name. The type becomes part of the model of data objects that
@@ -748,7 +748,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Static method to get an instance of an SDO\_DAS\_DataFactory. This
 instance is initially only configured with the basic SDO types. A Data
@@ -780,7 +780,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get the SDO\_DAS\_ChangeSummary for an SDO\_DAS\_DataObject, or NULL if
 it does not have one.
@@ -808,7 +808,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get the list index for a modification made to an element of a
 many-valued property. For example, if we modified the third element of a
@@ -840,7 +840,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the property index for the changed property. This index
 identifies the property which was modified in data object.
@@ -867,7 +867,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the property name for the changed property. This name identifies
 the property which was modified in data object.
@@ -894,7 +894,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the old value for the changed property. This can be used by a
 Data Access Service when writing updates to a data source. The DAS uses
@@ -925,7 +925,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Test whether a property was set prior to being modified. If it was set
 prior to being modified then the SDO\_DAS\_Setting will also contain the
@@ -956,7 +956,7 @@ class="type">string</span> `$type_name`</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Create a new SDO\_DataObject given the data object's namespace URI and
 type name.
@@ -993,7 +993,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Clear an SDO\_DataObject's properties. Read-only properties are
 unaffected. Subsequent calls to isset() for the data object will return
@@ -1022,7 +1022,7 @@ class="methodparam"><span class="type">mixed</span> `$identifier`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Create a child SDO\_DataObject of the default type for the property
 identified. The data object is automatically inserted into the tree and
@@ -1059,7 +1059,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get the data object which contains this data object.
 
@@ -1087,7 +1087,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Return the SDO\_Sequence for this SDO\_DataObject. Accessing the
 SDO\_DataObject through the SDO\_Sequence interface acts on the same
@@ -1116,7 +1116,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Return the name of the type for a data object. A convenience method
 corresponding to SDO\_Model\_ReflectionDataObject::getType().getName().
@@ -1143,7 +1143,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Return the namespace URI of the type for a data object. A convenience
 method corresponding to
@@ -1171,7 +1171,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the cause of this exception or NULL if the cause is nonexistent
 or unknown. Typically the cause will be an SDO\_CPPException object,
@@ -1202,7 +1202,7 @@ class="methodparam"><span class="type">mixed</span> `$value`</span> \[,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Insert a new element at a specified position in the list. All subsequent
 list items are moved up.
@@ -1245,7 +1245,7 @@ class="methodname">SDO\_Model\_Property::getContainingType</span> (
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the SDO\_Model\_Type which contains this property.
 
@@ -1271,7 +1271,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the default value for the property. Only primitive data type
 properties can have default values.
@@ -1298,7 +1298,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the name of the SDO\_Model\_Property.
 
@@ -1324,7 +1324,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get the SDO\_Model\_Type of the property. The SDO\_Model\_Type describes
 the type information for the property, such as its type name, namespace
@@ -1352,7 +1352,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Test to see if the property corresponds to a containment relationship.
 Returns **`TRUE`** if the property defines a containment relationship,
@@ -1381,7 +1381,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Test to see if the property is many-valued. Returns **`TRUE`** if this
 is a many-valued property, otherwise returns **`FALSE`**.
@@ -1410,7 +1410,7 @@ class="methodname">SDO\_Model\_ReflectionDataObject::\_\_construct</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Construct an SDO\_Model\_ReflectionDataObject to reflect on an
 SDO\_DataObject. Reflecting on an SDO\_DataObject gives access to
@@ -1446,7 +1446,7 @@ class="type">SDO\_Model\_ReflectionDataObject</span> `$rdo`</span> \[,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get a string describing the SDO\_DataObject. The default behaviour is to
 print the output, but if **`TRUE`** is specified for return, it is
@@ -1479,7 +1479,7 @@ class="methodname">SDO\_Model\_ReflectionDataObject::getContainmentProperty</spa
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get the SDO\_Model\_Property that contains the SDO\_DataObject. This
 method is used to navigate up to the parent's property which contains
@@ -1508,7 +1508,7 @@ class="methodname">SDO\_Model\_ReflectionDataObject::getInstanceProperties</span
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get the instance properties for the SDO\_DataObject. The instance
 properties consist of all the properties defined on the data object's
@@ -1537,7 +1537,7 @@ class="methodname">SDO\_Model\_ReflectionDataObject::getType</span> (
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the SDO\_Model\_Type for the SDO\_DataObject. The
 SDO\_Model\_Type holds all the information about the data object's type,
@@ -1566,7 +1566,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get the base type for this type. Returns the SDO\_Model\_Type for the
 base type if this type inherits from another, otherwise returns
@@ -1602,7 +1602,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the name of the type. The combination of type name and namespace
 URI is used to uniquely identify the type.
@@ -1629,7 +1629,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the namespace URI of the type. The combination of namespace URI
 and type name is used to uniquely identify the type.
@@ -1656,7 +1656,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get an array of SDO\_Model\_Property objects describing the properties
 defined for the SDO\_Model\_Type. Each SDO\_Model\_Property holds
@@ -1685,7 +1685,7 @@ class="methodparam"><span class="type">mixed</span> `$identifier`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Get an SDO\_Model\_Property of the type, identified by its property
 index or property name.
@@ -1713,7 +1713,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Test to see if this SDO\_Model\_Type is an abstract data type. Returns
 **`TRUE`** if this type is abstract, that is, no SDO\_DataObject of this
@@ -1742,7 +1742,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Test to see if this SDO\_Model\_Type is a primitive data type. Returns
 **`TRUE`** if this type is a primitive data type, otherwise returns
@@ -1772,7 +1772,7 @@ class="methodparam"><span class="type">SDO\_DataObject</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Test for an SDO\_DataObject being an instance of this SDO\_Model\_Type.
 Returns **`TRUE`** if the SDO\_DataObject provided is an instance of
@@ -1802,7 +1802,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Test to see if this type is open. Returns **`TRUE`** if this type is
 open, otherwise returns **`FALSE`**. An SDO\_DataObject whose type is
@@ -1838,7 +1838,7 @@ class="methodparam">void</span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Test to see if this is a sequenced type. Returns **`TRUE`** if this type
 is sequence, otherwise returns **`FALSE`**. Sequenced types can have the
@@ -1870,7 +1870,7 @@ class="methodparam"><span class="type">int</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Return the property for the specified sequence index.
 
@@ -1908,7 +1908,7 @@ class="type">mixed</span> `$propertyIdentifier`</span> \]\] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Insert a new element at a specified position in the sequence. All
 subsequent sequence items are moved up.
@@ -1959,7 +1959,7 @@ class="methodparam"> <span class="type">int</span> `$toIndex`</span>,
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Modify the position of the item in the sequence, without altering the
 value of the property in the SDO\_DataObject.

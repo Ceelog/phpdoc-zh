@@ -66,7 +66,7 @@ class="type">SDODataObject</span> `$root_data_object` </span> )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Given a PDO database handle and the special root object of a data graph,
 examine the change summary in the datagraph and applies the changes to
@@ -148,7 +148,7 @@ class="methodparam"> <span class="type">array</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Constructs an instance of a Relational Data Access Service from the
 passed metadata.
@@ -213,7 +213,7 @@ class="methodname">SDO\_DAS\_Relational::createRootDataObject</span> (
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Returns the special root object at the top of an otherwise empty data
 graph. This call is used when the application wants to create a data
@@ -268,7 +268,7 @@ class="methodparam"> <span class="type">array</span> `$value_list`
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Executes a given query against the relational database, using the
 supplied PDO database handle. Differs from the simpler <span
@@ -431,7 +431,7 @@ class="type">array</span> `$column_specifier` </span> \] )
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 Executes a given query against the relational database, using the
 supplied PDO database handle. Uses the model that it built from the

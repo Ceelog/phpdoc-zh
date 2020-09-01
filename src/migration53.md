@@ -24,6 +24,10 @@
 -   [INI 文件处理改变](/migration53/ini.html)
 -   [其他改变](/migration53/other.html)
 
-参见 PHP 版本迁移指南 <a href="/migration5.html" class="link">5.0.x</a>,
-<a href="/migration51.html" class="link">5.1.x</a> 和
-<a href="/migration52.html" class="link">5.2.x</a>.
+参见 PHP 版本迁移指南
+<a href="/migration5.html" class="link">5.0.x</a>，
+<a href="/migration51.html" class="link">5.1.x</a>,
+<a href="/migration52.html" class="link">5.2.x</a>,
+<a href="/migration54.html" class="link">5.4.x</a>,
+<a href="/migration55.html" class="link">5.5.x</a> 和
+<a href="/migration56.html" class="link">5.6.x</a>。

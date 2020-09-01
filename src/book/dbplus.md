@@ -126,7 +126,7 @@ its internal stored procedure language.
 
 此扩展是*实验性* 的。
 此扩展的表象，包括其函数名称以及其他此扩展的相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本扩展风险自担 。
+发布版本中未通知就被修改。使用本扩展风险自担。
 
 安装／配置
 ==========
@@ -280,7 +280,7 @@ error code on failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -324,7 +324,7 @@ functions will not work on a result relation.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_chdir
 =============
@@ -356,7 +356,7 @@ Returns the absolute path of the current directory.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_close
 =============
@@ -387,7 +387,7 @@ Returns **`TRUE`** on success or **`DBPLUS_ERR_UNKNOWN`** on failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_curr
 ============
@@ -421,7 +421,7 @@ or a db++ error code on failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -459,7 +459,7 @@ Returns the error message.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_errno
 =============
@@ -483,7 +483,7 @@ Returns the error code, as an integer.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -535,7 +535,7 @@ or 'BOR' for bitwise operations.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -574,7 +574,7 @@ failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -613,7 +613,7 @@ failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -639,7 +639,7 @@ Frees all tuple locks held by this client.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -677,7 +677,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -711,7 +711,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -751,7 +751,7 @@ Returns zero on success or a non-zero error code, especially
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -792,7 +792,7 @@ failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_info
 ============
@@ -826,7 +826,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_last
 ============
@@ -860,7 +860,7 @@ failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -898,7 +898,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_next
 ============
@@ -932,7 +932,7 @@ failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -973,7 +973,7 @@ calling <span class="function">dbplus\_errno</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_prev
 ============
@@ -1008,7 +1008,7 @@ failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -1053,7 +1053,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_rcreate
 ===============
@@ -1102,7 +1102,7 @@ specifiers and their meanings.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_rcrtexact
 =================
@@ -1143,7 +1143,7 @@ Returns resource on success or **`DBPLUS_ERR_UNKNOWN`** on failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_rcrtlike
 ================
@@ -1185,7 +1185,7 @@ Returns resource on success or **`DBPLUS_ERR_UNKNOWN`** on failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_resolve
 ===============
@@ -1218,7 +1218,7 @@ and *host\_path* or **`FALSE`** on error.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -1255,7 +1255,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_rkeys
 =============
@@ -1292,7 +1292,7 @@ Returns resource on success or **`DBPLUS_ERR_UNKNOWN`** on failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_ropen
 =============
@@ -1322,7 +1322,7 @@ returned relation.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_rquery
 ==============
@@ -1355,7 +1355,7 @@ class="function">dbplus\_aql</span> but will work on local data only.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_rrename
 ===============
@@ -1387,7 +1387,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_rsecindex
 =================
@@ -1427,7 +1427,7 @@ Returns resource on success or **`DBPLUS_ERR_UNKNOWN`** on failure.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_runlink
 ===============
@@ -1456,7 +1456,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_rzap
 ============
@@ -1484,7 +1484,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_savepos
 ===============
@@ -1514,7 +1514,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_setindex
 ================
@@ -1547,7 +1547,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_setindexbynumber
 ========================
@@ -1580,7 +1580,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_sql
 ===========
@@ -1615,7 +1615,7 @@ class="methodparam"><span class="type">string</span> `$server`</span>
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_tcl
 ===========
@@ -1654,7 +1654,7 @@ message if the TCL code fails.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -1696,7 +1696,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_undo
 ============
@@ -1725,7 +1725,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_undoprepare
 ===================
@@ -1755,7 +1755,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_unlockrel
 =================
@@ -1784,7 +1784,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_unselect
 ================
@@ -1814,7 +1814,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_update
 ==============
@@ -1852,7 +1852,7 @@ The new tuple.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 dbplus\_xlockrel
 ================
@@ -1881,7 +1881,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 ### 参见
 
@@ -1914,7 +1914,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 **Warning**
 
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本函数风险自担 。
+发布版本中未通知就被修改。使用本函数风险自担。
 
 **目录**
 

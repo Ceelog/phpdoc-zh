@@ -287,7 +287,7 @@ FANN (快速人工神经网络)
     -   [fann\_subset\_train\_data](/ref/fann.html#fann_subset_train_data)
         — 返回一个训练数据子集的副本。
     -   [fann\_test\_data](/ref/fann.html#fann_test_data) —
-        使用训练数据来测试并且计算出 MSE .
+        使用训练数据来测试并且计算出 MSE
     -   [fann\_test](/ref/fann.html#fann_test) —
         使用一组输入和一组期望的输出来测试。
     -   [fann\_train\_epoch](/ref/fann.html#fann_train_epoch) —

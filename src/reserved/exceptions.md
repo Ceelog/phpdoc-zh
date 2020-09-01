@@ -368,8 +368,8 @@ class="methodparam">void</span> )
 简介
 ----
 
-<span class="ooclass">**ArgumentCountError**</span> is thrown when too
-few arguments are passed to a user-defined function or method.
+<span class="ooclass">**ArgumentCountError**</span>
+当传递给用户定义的函数或方法的参数太少时被抛出。
 
 类摘要
 ------
@@ -445,12 +445,11 @@ class="methodparam">void</span> )
 简介
 ----
 
-<span class="ooclass">**ArithmeticError**</span> is thrown when an error
-occurs while performing mathematical operations. In PHP 7.0, these
-errors include attempting to perform a bitshift by a negative amount,
-and any call to <span class="function">intdiv</span> that would result
-in a value outside the possible bounds of an <span
-class="type">integer</span>.
+<span class="ooclass">**ArithmeticError**</span>
+当执行数学运算时发生错误时被抛出。PHP 7.0 these errors include
+attempting to perform a bitshift by a negative amount, and any call to
+<span class="function">intdiv</span> that would result in a value
+outside the possible bounds of an <span class="type">integer</span>.
 
 类摘要
 ------
@@ -526,8 +525,8 @@ class="methodparam">void</span> )
 简介
 ----
 
-<span class="ooclass">**AssertionError**</span> is thrown when an
-assertion made via <span class="function">assert</span> fails.
+<span class="ooclass">**AssertionError**</span> 在函数 <span
+class="function">assert</span> 断言失败时被抛出。
 
 类摘要
 ------
@@ -603,8 +602,8 @@ class="methodparam">void</span> )
 简介
 ----
 
-<span class="ooclass">**DivisionByZeroError**</span> is thrown when an
-attempt is made to divide a number by zero.
+<span class="ooclass">**DivisionByZeroError**</span>
+当除数为零时被抛出。
 
 类摘要
 ------
@@ -680,8 +679,8 @@ class="methodparam">void</span> )
 简介
 ----
 
-<span class="ooclass">**CompileError**</span> is thrown for some
-compilation errors, which formerly issued a fatal error.
+<span class="ooclass">**CompileError**</span>
+是针对一些编译错误抛出的，之前是会发出致命错误。
 
 类摘要
 ------
@@ -757,14 +756,14 @@ class="methodparam">void</span> )
 简介
 ----
 
-<span class="ooclass">**ParseError**</span> is thrown when an error
-occurs while parsing PHP code, such as when <span
-class="function">eval</span> is called.
+<span class="ooclass">**ParseError**</span> 当解析 PHP
+代码时发生错误时抛出，比如当 <span
+class="function">eval</span>被调用出错时。
 
-> **Note**: <span class="simpara"> <span
-> class="classname">ParseError</span> extends <span
-> class="classname">CompileError</span> as of PHP 7.3.0. Formerly, it
-> extended <span class="classname">Error</span>. </span>
+> **Note**: <span class="simpara"> 从 PHP 7.3.0 开始，<span
+> class="classname">ParseError</span> 继承自 <span
+> class="classname">CompileError</span>。之前的版本，则继承自 <span
+> class="classname">Error</span>。 </span>
 
 类摘要
 ------
@@ -840,13 +839,9 @@ class="methodparam">void</span> )
 简介
 ----
 
-There are three scenarios where a <span
-class="ooclass">**TypeError**</span> may be thrown. The first is where
-the argument type being passed to a function does not match its
-corresponding declared parameter type. The second is where a value being
-returned from a function does not match the declared function return
-type. The third is where an invalid number of arguments are passed to a
-built-in PHP function (strict mode only).
+有三种情况会抛出 <span
+class="ooclass">**TypeError**</span>。第一种，传递给函数的参数类型与函数预期声明的参数类型不匹配；第二种，函数返回的值与声明的函数返回类型不匹配；第三种，调用
+PHP 内置函数时，传递了非法的数字参数（仅限在严格模式下 / strict mode）。
 
 类摘要
 ------

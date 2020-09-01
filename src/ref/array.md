@@ -2336,32 +2336,35 @@ array\_merge
 ### 说明
 
 <span class="type">array</span> <span
-class="methodname">array\_merge</span> ( <span class="methodparam"><span
-class="type">array</span> `$array1`</span> \[, <span
+class="methodname">array\_merge</span> (\[ <span
 class="methodparam"><span class="type">array</span> `$...`</span> \] )
 
-<span class="function">array\_merge</span>
 将一个或多个数组的单元合并起来，一个数组中的值附加在前一个数组的后面。返回作为结果的数组。
 
-如果输入的数组中有相同的字符串键名，则该键名后面的值将覆盖前一个值。然而，如果数组包含数字键名，后面的值将*不会*覆盖原来的值，而是附加到后面。
+如果输入的数组中有相同的字符串键名，则该键名后面的值将覆盖前一个值。然而，如果数组包含数字键名，后面的值将
+*不会* 覆盖原来的值，而是附加到后面。
 
-如果只给了一个数组并且该数组是数字索引的，则键名会以连续方式重新索引。
+如果输入的数组存在以数字作为索引的内容，则这项内容的键名会以连续方式重新索引。
 
 ### 参数
 
-`array1`  
-要合并的第一个数组。
-
 `...`  
-要合并的数组列表。
+要合并的数组。
 
 ### 返回值
 
-返回结果数组。
+返回合并后的结果数组。如果参数为空，则返回空 <span
+class="type">array</span>。
+
+### 更新日志
+
+| 版本  | 说明                                         |
+|-------|----------------------------------------------|
+| 7.4.0 | 允许不带参数调用，之前版本至少需要一个参数。 |
 
 ### 范例
 
-**示例 \#1 <span class="function">array\_merge</span> 例子**
+**示例 \#1 <span class="function">array\_merge</span> 示例**
 
 ``` php
 <?php
@@ -2385,7 +2388,7 @@ print_r($result);
         [4] => 4
     )
 
-**示例 \#2 Simple <span class="function">array\_merge</span> 例子**
+**示例 \#2 Simple <span class="function">array\_merge</span> 示例**
 
 ``` php
 <?php
@@ -2402,7 +2405,7 @@ $result = array_merge($array1, $array2);
         [0] => data
     )
 
-如果你想完全保留原有数组并只想新的数组附加到后面，用 *+* 运算符：
+如果你想完全保留原有数组并只想新的数组附加到后面，可以使用 *+* 运算符：
 
 ``` php
 <?php
@@ -2413,7 +2416,7 @@ var_dump($result);
 ?>
 ```
 
-第一个数组的键名将会被保留。在两个数组中存在相同的键名时，第一个数组中的同键名的元素将会被保留，第二个数组中的元素将会被忽略
+第一个数组的键名将会被保留。在两个数组中存在相同的键名时，第一个数组中的同键名的元素将会被保留，第二个数组中的元素将会被忽略。
 
     array(5) {
       [0]=>
@@ -2452,7 +2455,7 @@ print_r($result);
 -   <span class="function">array\_merge\_recursive</span>
 -   <span class="function">array\_replace</span>
 -   <span class="function">array\_combine</span>
--   <a href="/language/operators/array.html" class="link">array operators</a>
+-   <a href="/language/operators/array.html" class="link">数组操作符</a>
 
 array\_multisort
 ================

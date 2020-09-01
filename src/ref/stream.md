@@ -1893,8 +1893,8 @@ stream\_set\_blocking
 <span class="type">bool</span> <span
 class="methodname">stream\_set\_blocking</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stream`</span>
-, <span class="methodparam"><span class="type">int</span> `$mode`</span>
-)
+, <span class="methodparam"><span class="type">bool</span>
+`$mode`</span> )
 
 为 `stream` 设置阻塞或者阻塞模。
 
@@ -1906,22 +1906,16 @@ class="methodparam"><span class="type">resource</span> `$stream`</span>
 资源流。
 
 `mode`  
-如果 `mode`
-为0，资源流将会被转换为非阻塞模式；如果是1，资源流将会被转换为阻塞模式。
-该参数的设置将会影响到像 <span class="function">fgets</span> 和 <span
-class="function">fread</span> 这样的函数从资源流里读取数据。
-在非阻塞模式下，调用 <span class="function">fgets</span>
+如果 `mode` 为 **`FALSE`**，资源流将会被转换为非阻塞模式；如果是
+**`TRUE`**，资源流将会被转换为阻塞模式。 该参数的设置将会影响到像 <span
+class="function">fgets</span> 和 <span class="function">fread</span>
+这样的函数从资源流里读取数据。 在非阻塞模式下，调用 <span
+class="function">fgets</span>
 总是会立即返回；而在阻塞模式下，将会一直等到从资源流里面获取到数据才能返回。
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
-
-### 更新日志
-
-| 版本  | 说明                                        |
-|-------|---------------------------------------------|
-| 4.3.0 | 在PHP 4.3.0之前，该函数只支持套接字资源流。 |
 
 ### 注释
 
@@ -1930,6 +1924,11 @@ class="function">fread</span> 这样的函数从资源流里读取数据。
 > 该函数之前叫作 <span class="function">set\_socket\_blocking</span>
 > 后来又叫做 <span class="function">socket\_set\_blocking</span>
 > ，但是这种用法都已经被废弃。
+
+> **Note**:
+>
+> 在 Windows 系统上，这对本地文件没有影响。Windows
+> 不支持本地文件的非阻塞 IO。
 
 ### 参见
 
