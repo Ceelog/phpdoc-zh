@@ -8,5 +8,5 @@
 -   [新的全局常量](/migration73/constants.html)
 -   [不向下兼容的变更](/migration73/incompatible.html)
 -   [PHP 7.3.x 中废弃的功能](/migration73/deprecated.html)
--   [Other Changes](/migration73/other-changes.html)
+-   [其它变更](/migration73/other-changes.html)
 -   [Windows 支持](/migration73/windows-support.html)

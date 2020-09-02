@@ -1,7 +1,7 @@
 chdb\_create
 ============
 
-Creates a chdb file
+新建一个 chdb 文件
 
 ### 说明
 
@@ -10,29 +10,27 @@ class="methodname">chdb\_create</span> ( <span class="methodparam"><span
 class="type">string</span> `$pathname`</span> , <span
 class="methodparam"><span class="type">array</span> `$data`</span> )
 
-<span class="function">chdb\_create</span> creates a chdb file
-containing the specified key-value pairs.
+<span class="function">chdb\_create</span> 创建一个内容包含指定键值对的
+chdb 文件。
 
 > **Note**:
 >
-> chdb files are not portable across little-endian and big-endian
-> environments. Except for that, they are portable across different
-> architectures. Also compatibility across different versions of chdb is
-> not guaranteed.
+> chdb
+> 文件在小字节序（little-endian）和大字节序（big-endian）环境中是不可移植的。除此以外，它们在不同的架构下是可以移植的。而且不同版本的
+> chdb 的兼容性也不能保证。
 
 ### 参数
 
 `pathname`  
-The name of the file to create.
+要创建文件的路径。
 
-If a file with the same name already exists, it is overwritten.
+如果文件已存在，则会被覆盖。
 
 `data`  
-An array containing the key-value pairs to store in the chdb file.
+指定键值对的数组。
 
-Keys and values are converted to strings before being written to the
-file, as chdb only support the string type. Note that binary strings are
-supported as well, both as keys and values.
+键值在写入到文件前，会被转换成字符串，因为 chdb
+文件仅支持字符串类型。需要注意，二进制字符串同样被支持。
 
 ### 返回值
 
@@ -40,12 +38,11 @@ supported as well, both as keys and values.
 
 ### 错误／异常
 
-Throws an exception in case the chdb file hasn't been successfully
-created.
+创建不成功将抛出一个错误。
 
 ### 范例
 
-**示例 \#1 <span class="function">chdb\_create</span> example**
+**示例 \#1 <span class="function">chdb\_create</span> 示例**
 
 ``` php
 <?php
@@ -60,9 +57,8 @@ chdb_create('data.chdb', $data);
 ?>
 ```
 
-The above example will generate a chdb file named *data.chdb* and
-containing the key-value pairs defined in `$data`.
+上例将会生成一个包含 `$data` 数据的文件，文件名为 *data.chdb*。
 
 **目录**
 
--   [chdb\_create](/ref/chdb.html#chdb_create) — Creates a chdb file
+-   [chdb\_create](/ref/chdb.html#chdb_create) — 新建一个 chdb 文件

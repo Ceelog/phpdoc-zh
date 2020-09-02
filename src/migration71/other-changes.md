@@ -1,7 +1,7 @@
-Other changes
--------------
+其它改动
+--------
 
-### Notices and warnings on arithmetic with invalid strings
+### 无效字符串计算的通知和警告
 
 New **`E_WARNING`** and **`E_NOTICE`** errors have been introduced when
 invalid strings are coerced using operators expecting numbers (*+* *-*
@@ -21,7 +21,7 @@ value.
     Notice: A non well formed numeric value encountered in %s on line %d
     Warning: A non-numeric value encountered in %s on line %d
 
-### Warn on octal escape sequence overflow
+### 八进制转义序列溢出时发出警告
 
 Previously, 3-octet octal string escape sequences would overflow
 silently. Now, they will still overflow, but **`E_WARNING`** will be
@@ -37,34 +37,32 @@ var_dump("\500");
     Warning: Octal escape sequence overflow \500 is greater than \377 in %s on line %d
     string(1) "@"
 
-### Inconsistency fixes to *$this*
+### *$this* 不一致的修正
 
 Whilst *$this* is considered a special variable in PHP, it lacked proper
 checks to ensure it wasn't used as a variable name or reassigned. This
 has now been rectified to ensure that *$this* cannot be a user-defined
 variable, reassigned to a different value, or be globalised.
 
-### Session ID generation without hashing
+### 无需散列即可生成 Session ID
 
-Session IDs will no longer be hashed upon generation. With this change
-brings about the removal of the following four ini settings:
+Session ID 将不再在生成时进行哈希。这一变化，会导致以下四个 ini
+设置不再使用：
 
 -   <span class="simpara"> `session.entropy_file` </span>
 -   <span class="simpara"> `session.entropy_length` </span>
 -   <span class="simpara"> `session.hash_function` </span>
 -   <span class="simpara"> `session.hash_bits_per_character` </span>
 
-And the addition of the following two ini settings:
+并增加以下两个 ini 设置：
 
--   <span class="simpara"> `session.sid_length` - defines the length of
-    the session ID, defaulting to 32 characters for backwards
-    compatibility) </span>
--   <span class="simpara"> `session.sid_bits_per_character` - defines
-    the number of bits to be stored per character (i.e. increases the
-    range of characters that can be used in the session ID), defaulting
-    to 4 for backwards compatibility </span>
+-   <span class="simpara"> `session.sid_length` - 定义会话 ID
+    的长度（为了向后兼容，默认为 32 个字符） </span>
+-   <span class="simpara"> `session.sid_bits_per_character` -
+    定义了每个字符的存储位数（即增加了会话 ID
+    中可使用的字符范围），为了向后兼容，默认为 4 </span>
 
-### Changes to INI file handling
+### INI 文件处理的变化
 
 `precision`  
 If the value is set to -1, then the dtoa mode 0 is used. The default

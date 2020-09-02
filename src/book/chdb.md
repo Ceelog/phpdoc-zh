@@ -14,10 +14,9 @@ Constant hash database
 -   [chdb](/class/chdb.html) — The chdb class
     -   [chdb::\_\_construct](/class/chdb.html#chdb::__construct) —
         Creates a chdb instance
-    -   [chdb::get](/class/chdb.html#chdb::get) — Gets the value
-        associated with a key
+    -   [chdb::get](/class/chdb.html#chdb::get) — 获取与键相关联的值
 -   [chdb 函数](/ref/chdb.html)
-    -   [chdb\_create](/ref/chdb.html#chdb_create) — Creates a chdb file
+    -   [chdb\_create](/ref/chdb.html#chdb_create) — 新建一个 chdb 文件
 
 简介
 ----
@@ -90,7 +89,7 @@ loaded.
 chdb::get
 =========
 
-Gets the value associated with a key
+获取与键相关联的值
 
 ### 说明
 
@@ -98,21 +97,20 @@ Gets the value associated with a key
 <span class="methodname">chdb::get</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> )
 
-Gets the value associated with a key from a chdb database.
+从 chdb 数据库中获取与键相关联的值。
 
 ### 参数
 
 `key`  
-The key for which to get the value.
+要获取值的键。
 
 ### 返回值
 
-Returns a string containing the value associated with the given `key`,
-or **`NULL`** if not found.
+返回 `key` 对应的值，如果找不到则返回 **`NULL`**。
 
 ### 范例
 
-**示例 \#1 <span class="function">chdb::get</span> example**
+**示例 \#1 <span class="function">chdb::get</span> 示例：**
 
 ``` php
 <?php

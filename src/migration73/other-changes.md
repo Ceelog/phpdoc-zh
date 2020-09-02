@@ -1,9 +1,9 @@
-Other Changes
--------------
+其它变更
+--------
 
-### PHP Core
+### PHP 核心
 
-#### Set(raw)cookie accepts $option Argument
+#### Set(raw)cookie 函数接受 $option 数组参数
 
 <span class="function">setcookie</span> and <span
 class="function">setrawcookie</span> now also support the following
@@ -21,7 +21,7 @@ where *$options* is an associative array which may have any of the keys
 *"expires"*, *"path"*, *"domain"*, *"secure"*, *"httponly"* and
 *"samesite"*.
 
-#### New Syslog ini Directives
+#### 新的 Syslog ini 配置
 
 The following ini Directives have been added to customize logging, if
 <a href="/errorfunc/setup.html#" class="link">error_log</a> is set to
@@ -40,14 +40,14 @@ messages. There are three supported filter types - *all*, *no-ctrl* and
 <span class="simpara"> Specifies the ident string which is prepended to
 every message. </span>
 
-#### Garbage Collection
+#### 垃圾回收机制
 
 The
 <a href="/features/gc/collecting-cycles.html" class="link">cyclic GC</a>
 has been enhanced, which may result in considerable performance
 improvements.
 
-#### Miscellaneous
+#### 其它
 
 <span class="function">var\_export</span> now exports <span
 class="classname">stdClass</span> objects as an array cast to an object
@@ -68,10 +68,9 @@ operator.
 The unused constants **`PHPDBG_FILE`**, **`PHPDBG_METHOD`**,
 **`PHPDBG_LINENO`** and **`PHPDBG_FUNC`** have been removed.
 
-### FastCGI Process Manager
+### FastCGI 进程管理器
 
-The <span class="function">getallheaders</span> function is now also
-available.
+<span class="function">getallheaders</span> 函数现已可用。
 
 ### Client URL Library
 
@@ -91,7 +90,7 @@ defines the set of allowed thousand separator chars. The default
 
 The default transfer mode has been changed to *binary*.
 
-### Internationalization Functions
+### 国际化相关函数
 
 **`Normalizer::NONE`** is deprecated, when PHP is linked with ICU ≥ 56.
 
