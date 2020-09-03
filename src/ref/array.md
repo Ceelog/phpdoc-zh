@@ -1813,7 +1813,7 @@ array_key_exists('first', $search_array);
 array\_key\_first
 =================
 
-Gets the first key of an array
+获取指定数组的第一个键值
 
 ### 说明
 
@@ -1821,22 +1821,20 @@ Gets the first key of an array
 class="methodname">array\_key\_first</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> )
 
-Get the first key of the given `array` without affecting the internal
-array pointer.
+取得指定数组的 `array` 第一个键值，不影响到原数组的内部指针。
 
 ### 参数
 
 `array`  
-An array.
+要操作的数组。
 
 ### 返回值
 
-Returns the first key of `array` if the array is not empty; **`NULL`**
-otherwise.
+返回 `array` 的第一个键值（如果不为空），否则返回 **`NULL`**。
 
 ### 范例
 
-**示例 \#1 Basic <span class="function">array\_key\_first</span> Usage**
+**示例 \#1 <span class="function">array\_key\_first</span> 基本用法**
 
 ``` php
 <?php
@@ -1856,13 +1854,10 @@ var_dump($firstKey);
 
 **小贴士**
 
-There are several ways to provide this functionality for versions prior
-to PHP 7.3.0. It is possible to use <span
-class="function">array\_keys</span>, but that may be rather inefficient.
-It is also possible to use <span class="function">reset</span> and <span
-class="function">key</span>, but that may change the internal array
-pointer. An efficient solution, which does not change the internal array
-pointer, written as polyfill:
+在 PHP 7.3.0 之前，有几种方式可以实现该功能。可以使用 <span
+class="function">array\_keys</span> 函数，但是性能会比较低。也可以使用
+<span class="function">reset</span> 和 <span class="function">key</span>
+函数，但这可能会影响内部数组指针。一个用旧函数实现该功能的方式如下:
 
 ``` php
 <?php
@@ -1885,7 +1880,7 @@ if (!function_exists('array_key_first')) {
 array\_key\_last
 ================
 
-Gets the last key of an array
+获取一个数组的最后一个键值
 
 ### 说明
 
@@ -1893,18 +1888,16 @@ Gets the last key of an array
 class="methodname">array\_key\_last</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> )
 
-Get the last key of the given `array` without affecting the internal
-array pointer.
+取得指定数组的 `array` 最后一个键值，不会影响到原数组的内部指针。
 
 ### 参数
 
 `array`  
-An array.
+要操作的数组。
 
 ### 返回值
 
-Returns the last key of `array` if the array is not empty; **`NULL`**
-otherwise.
+返回 `array` 的最后一个键值（如果不为空），否则返回 **`NULL`**。
 
 ### 参见
 
@@ -7328,10 +7321,10 @@ foreach ($array as $item) {
 -   [array\_intersect](/ref/array.html#array_intersect) — 计算数组的交集
 -   [array\_key\_exists](/ref/array.html#array_key_exists) —
     检查数组里是否有指定的键名或索引
--   [array\_key\_first](/ref/array.html#array_key_first) — Gets the
-    first key of an array
--   [array\_key\_last](/ref/array.html#array_key_last) — Gets the last
-    key of an array
+-   [array\_key\_first](/ref/array.html#array_key_first) —
+    获取指定数组的第一个键值
+-   [array\_key\_last](/ref/array.html#array_key_last) —
+    获取一个数组的最后一个键值
 -   [array\_keys](/ref/array.html#array_keys) —
     返回数组中部分的或所有的键名
 -   [array\_map](/ref/array.html#array_map) —

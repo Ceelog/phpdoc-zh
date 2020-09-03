@@ -49,10 +49,10 @@
         计算数组的交集
     -   [array\_key\_exists](/ref/array.html#array_key_exists) —
         检查数组里是否有指定的键名或索引
-    -   [array\_key\_first](/ref/array.html#array_key_first) — Gets the
-        first key of an array
-    -   [array\_key\_last](/ref/array.html#array_key_last) — Gets the
-        last key of an array
+    -   [array\_key\_first](/ref/array.html#array_key_first) —
+        获取指定数组的第一个键值
+    -   [array\_key\_last](/ref/array.html#array_key_last) —
+        获取一个数组的最后一个键值
     -   [array\_keys](/ref/array.html#array_keys) —
         返回数组中部分的或所有的键名
     -   [array\_map](/ref/array.html#array_map) —

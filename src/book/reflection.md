@@ -3752,6 +3752,10 @@ ReflectionClassConstant::export
 
 Export
 
+**Warning**
+
+本函数已自 PHP 7.4.0 起*废弃*。强烈建议不要使用本函数。
+
 ### 说明
 
 <span class="modifier">public</span> <span
@@ -4115,6 +4119,10 @@ ReflectionZendExtension::export
 
 Export
 
+**Warning**
+
+本函数已自 PHP 7.4.0 起*废弃*。强烈建议不要使用本函数。
+
 ### 说明
 
 <span class="modifier">public</span> <span
@@ -4135,6 +4143,11 @@ class="methodparam"><span class="type">string</span> `$name`</span> \[,
 `return`  
 
 ### 返回值
+
+### 参见
+
+-   <span
+    class="methodname">ReflectionClassConstant::\_\_toString</span>
 
 ReflectionZendExtension::getAuthor
 ==================================
@@ -5381,6 +5394,10 @@ ReflectionFunction::export
 
 Exports function
 
+**Warning**
+
+本函数已自 PHP 7.4.0 起*废弃*。强烈建议不要使用本函数。
+
 ### 说明
 
 <span class="modifier">public</span> <span
@@ -5408,6 +5425,7 @@ class="type">string</span> 返回，否则返回 **`NULL`**。
 ### 参见
 
 -   <span class="methodname">ReflectionFunction::invoke</span>
+-   <span class="methodname">ReflectionFunction::\_\_toString</span>
 
 ReflectionFunction::getClosure
 ==============================
@@ -8491,6 +8509,10 @@ ReflectionParameter::export
 
 Exports
 
+**Warning**
+
+本函数已自 PHP 7.4.0 起*废弃*。强烈建议不要使用本函数。
+
 ### 说明
 
 <span class="modifier">public</span> <span
@@ -8524,7 +8546,7 @@ The exported reflection.
 
 ### 参见
 
--   <span class="methodname">ReflectionParameter::toString</span>
+-   <span class="methodname">ReflectionParameter::\_\_toString</span>
 
 ReflectionParameter::getClass
 =============================
@@ -9565,7 +9587,7 @@ The property name.
 
 ### 参见
 
--   <span class="methodname">ReflectionProperty::toString</span>
+-   <span class="methodname">ReflectionProperty::\_\_toString</span>
 
 ReflectionProperty::getDeclaringClass
 =====================================

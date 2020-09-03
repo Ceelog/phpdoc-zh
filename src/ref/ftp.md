@@ -1523,70 +1523,102 @@ class="methodname">ftp\_nb\_put</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ftp_stream`</span> , <span
 class="methodparam"><span class="type">string</span>
 `$remote_file`</span> , <span class="methodparam"><span
-class="type">string</span> `$local_file`</span> , <span
-class="methodparam"><span class="type">int</span> `$mode`</span> \[,
-<span class="methodparam"><span class="type">int</span>
-`$startpos`</span> \] )
+class="type">string</span> `$local_file`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$mode`<span
+class="initializer"> = **`FTP_BINARY`**</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$startpos`<span
+class="initializer"> = 0</span></span> \]\] )
 
 <span class="function">ftp\_nb\_put</span> 函数用来把本地文件
-`local_file` 存储到 FTP 服务器上由 `remote_file`
-参数指定的路径。传输模式参数 `mode` 只能为 **`FTP_ASCII`** (文本模式) 或
-**`FTP_BINARY`** (二进制模式) 两种。与函数 <span
-class="function">ftp\_put</span>
+`local_file` 存储到 FTP 服务器上由 `remote_file` 参数指定的路径。
+
+与函数 <span class="function">ftp\_put</span>
 不同的是，此函数上传文件的时候采用的是异步传输模式，也就意味着在文件传送的过程中，你的程序可以继续干其它的事情。
 
-返回 **`FTP_FAILED`**，**`FTP_FINISHED`** 或 **`FTP_MOREDATA`**。
+### 参数
 
-**示例 \#1 <span class="function">ftp\_nb\_put</span> 实例**
+`ftp_stream`  
+FTP 连接的链接标识符。
+
+`remote_file`  
+远程文件路径。
+
+`local_file`  
+本地文件路径。
+
+`mode`  
+传输模式选择，可选参数为 **`FTP_ASCII`**（文本模式）或
+**`FTP_BINARY`**（二进制模式）。
+
+`startpos`  
+指定传输开始的位置，用来续传支持。
+
+### 返回值
+
+返回 **`FTP_FAILED`** 或 **`FTP_FINISHED`** 或 **`FTP_MOREDATA`**。
+
+### 更新日志
+
+| 版本  | 说明                                  |
+|-------|---------------------------------------|
+| 7.3.0 | `mode` 参数为可选，之前版本中为必填。 |
+
+### 范例
+
+**示例 \#1 <span class="function">ftp\_nb\_put</span> 示例**
 
 ``` php
 <?php
-// 开始上传
+
+// 初始化
 $ret = ftp_nb_put($my_connection, "test.remote", "test.local", FTP_BINARY);
 while ($ret == FTP_MOREDATA) {
-
-   // 在这里可以加入其它代码
+   
+   // 可以同时干其它事
    echo ".";
 
-   // 继续传送...
-   $ret = ftp_nb_continue ($my_connection);
+   // 继续上传...
+   $ret = ftp_nb_continue($my_connection);
 }
 if ($ret != FTP_FINISHED) {
-   echo "上传文件中发生错误...";
+   echo "上传过程中发生错误...";
    exit(1);
 }
 ?>
 ```
 
-**示例 \#2 使用 <span class="function">ftp\_nb\_put</span> 来断线续传**
+**示例 \#2 使用 <span class="function">ftp\_nb\_put</span> 来续传文件**
 
 ``` php
 <?php
-// 开始
-$ret = ftp_nb_put ($my_connection, "test.remote", "test.local",
+
+// 初始化
+$ret = ftp_nb_put($my_connection, "test.remote", "test.local", 
                       FTP_BINARY, ftp_size("test.remote"));
-// 或: $ret = ftp_nb_put ($my_connection, "test.remote", "test.local",
+// 另一种写法: $ret = ftp_nb_put($my_connection, "test.remote", "test.local", 
 //                           FTP_BINARY, FTP_AUTORESUME);
 
 while ($ret == FTP_MOREDATA) {
-
-   // 加入其它要执行的代码
+   
+   // 可以同时干其它事情
    echo ".";
 
-   // 继续传送...
-   $ret = ftp_nb_continue ($my_connection);
+   // 继续上传...
+   $ret = ftp_nb_continue($my_connection);
 }
 if ($ret != FTP_FINISHED) {
-   echo "上传文件中发生错误...";
+   echo "上传过程中发生错误...";
    exit(1);
 }
 ?>
 ```
 
-参见 <span class="function">ftp\_nb\_fput</span>，<span
-class="function">ftp\_nb\_continue</span>，<span
-class="function">ftp\_put</span> 和 <span
-class="function">ftp\_fput</span>。
+### 参见
+
+-   <span class="function">ftp\_nb\_fput</span>
+-   <span class="function">ftp\_nb\_continue</span>
+-   <span class="function">ftp\_put</span>
+-   <span class="function">ftp\_fput</span>
 
 ftp\_nlist
 ==========
@@ -1727,14 +1759,14 @@ ftp\_put
 `$ftp_stream`</span> , <span class="methodparam"><span
 class="type">string</span> `$remote_file`</span> , <span
 class="methodparam"><span class="type">string</span>
-`$local_file`</span> , <span class="methodparam"><span
-class="type">int</span> `$mode`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$startpos`</span> \]
-)
+`$local_file`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$mode`<span class="initializer"> =
+**`FTP_BINARY`**</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$startpos`<span class="initializer"> =
+0</span></span> \]\] )
 
-<span class="function">ftp\_put</span> 函数用来上传由 `local_file`
-参数指定的文件到 FTP 服务器，上传后的位置由 `remote_file`
-指定。传输模式参数
+<span class="function">ftp\_put</span> 函数用来上传指定的本地文件到 FTP
+服务器。
 
 ### 参数
 
@@ -1752,10 +1784,17 @@ FTP 连接资源。
 **`FTP_BINARY`**（二进制模式）。
 
 `startpos`  
+指定开始上传的位置，一般用来文件续传。
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                  |
+|-------|---------------------------------------|
+| 7.3.0 | `mode` 参数为可选，之前版本中为必选。 |
 
 ### 范例
 
@@ -1783,12 +1822,6 @@ if (ftp_put($conn_id, $remote_file, $file, FTP_ASCII)) {
 ftp_close($conn_id);
 ?>
 ```
-
-### 更新日志
-
-| 版本  | 说明                   |
-|-------|------------------------|
-| 4.3.0 | 增加 `startpos` 参数。 |
 
 ### 参见
 
@@ -1913,7 +1946,8 @@ ftp\_rawlist
 class="methodname">ftp\_rawlist</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ftp_stream`</span> , <span
 class="methodparam"><span class="type">string</span> `$directory`</span>
-)
+\[, <span class="methodparam"><span class="type">bool</span>
+`$recursive`<span class="initializer"> = **`FALSE`**</span></span> \] )
 
 <span class="function">ftp\_rawlist</span> 函数将执行 FTP **LIST**
 命令，并把结果做为一个数组返回。
@@ -1924,7 +1958,7 @@ class="methodparam"><span class="type">string</span> `$directory`</span>
 FTP 连接资源。
 
 `directory`  
-目录路径。
+要操作的目录路径，可以包括 **LIST** 参数。
 
 `recursive`  
 如果此参数为 **`TRUE`**，实际执行的命令将会为 **LIST -R**。
@@ -1935,26 +1969,30 @@ FTP 连接资源。
 <span class="function">ftp\_systype</span> 可以用来判断 FTP
 服务器的类型，从而可以用来判断返回列表的类型。
 
+The output is not parsed in any way. The system type identifier returned
+by <span class="function">ftp\_systype</span> can be used to determine
+how the results should be interpreted.
+
 ### 范例
 
-**示例 \#1 <span class="function">ftp\_rawlist</span> 例子**
+**示例 \#1 <span class="function">ftp\_rawlist</span> 示例**
 
 ``` php
 <?php
 
-// set up basic connection
+// 初始化连接
 $conn_id = ftp_connect($ftp_server);
 
-// login with username and password
+// 使用用户名和密码登录
 $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
 
-// get the file list for /
+// 获取 / 路径下的文件列表
 $buff = ftp_rawlist($conn_id, '/');
 
-// close the connection
+// 关闭连接
 ftp_close($conn_id);
 
-// output the buffer
+// 输出
 var_dump($buff);
 ?>
 ```
@@ -1970,15 +2008,10 @@ var_dump($buff);
       string(73) "lrwxrwxrwx   1 vincent  vincent        11 Jul 12 12:16 www -> public_html"
     }
 
-### 更新日志
-
-| 版本  | 说明                    |
-|-------|-------------------------|
-| 4.3.0 | 增加 `recursive` 参数。 |
-
 ### 参见
 
 -   <span class="function">ftp\_nlist</span>
+-   <span class="function">ftp\_mlsd</span>
 
 ftp\_rename
 ===========
@@ -2157,10 +2190,10 @@ ftp\_site
 <span class="type">bool</span> <span class="methodname">ftp\_site</span>
 ( <span class="methodparam"><span class="type">resource</span>
 `$ftp_stream`</span> , <span class="methodparam"><span
-class="type">string</span> `$cmd`</span> )
+class="type">string</span> `$command`</span> )
 
-<span class="function">ftp\_site</span> 函数向 FTP 服务器发送由参数
-`cmd` 指定的命令。
+<span class="function">ftp\_site</span> 函数向 FTP
+服务器发送指定的命令。
 
 *SITE*
 命令是非标准化的，不同的服务器不尽相同。主要用于处理文件权限以及组成员等事情。
@@ -2184,18 +2217,18 @@ SITE
 
 ``` php
 <?php
-/* Connect to FTP server */
+// 连接 FTP 服务器
 $conn = ftp_connect('ftp.example.com');
-if (!$conn) die('Unable to connect to ftp.example.com');
+if (!$conn) die('无法连接到 ftp.example.com');
 
-/* Login as "user" with password "pass" */
-if (!ftp_login($conn, 'user', 'pass')) die('Error logging into ftp.example.com');
+// 使用用户 user 和密码 pass 登录服务器
+if (!ftp_login($conn, 'user', 'pass')) die('登录失败到 ftp.example.com');
 
-/* Issue: "SITE CHMOD 0600 /home/user/privatefile" command to ftp server */
+// Issue: "SITE CHMOD 0600 /home/user/privatefile" command to ftp server
 if (ftp_site($conn, 'CHMOD 0600 /home/user/privatefile')) {
-   echo "Command executed successfully.\n";
+   echo "命令执行成功。\n";
 } else {
-   die('Command failed.');
+   die('命令执行失败。');
 }
 ?>
 ```
@@ -2369,7 +2402,7 @@ ftp\_systype
 class="methodname">ftp\_systype</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ftp_stream`</span> )
 
-返回远程服务器的系统类型，发生错误则返回 **`FALSE`**。
+返回远程 FTP 服务器的操作系统类型。
 
 ### 参数
 
@@ -2378,30 +2411,30 @@ FTP 连接资源。
 
 ### 返回值
 
-返回远程服务器类型，失败返回 **`FALSE`**。
+返回远程服务器类型，发生错误则返回 **`FALSE`**。
 
 ### 范例
 
-**示例 \#1 <span class="function">ftp\_systype</span> 例子**
+**示例 \#1 <span class="function">ftp\_systype</span> 示例**
 
 ``` php
 <?php
-// ftp connection
+// 建立 ftp 连接
 $ftp = ftp_connect('ftp.example.com');
 ftp_login($ftp, 'user', 'password');
 
-// get the system type
+// 获取操作系统类型
 if ($type = ftp_systype($ftp)) {
-    echo "Example.com is powered by $type\n";
+    echo "Example.com 的操作系统为 $type\n";
 } else {
-    echo "Couldn't get the systype";
+    echo "无法获取操作系统类型";
 }
 ?>
 ```
 
 以上例程的输出类似于：
 
-    Example.com is powerd by UNIX
+    Example.com 的操作系统为 UNIX
 
 **目录**
 
