@@ -8702,8 +8702,8 @@ Gets default parameter value
 <span class="methodname">ReflectionParameter::getDefaultValue</span> (
 <span class="methodparam">void</span> )
 
-Gets the default value of the parameter for a user-defined function or
-method. If the parameter is not optional a <span
+Gets the default value of the parameter for any user-defined or internal
+function or method. If the parameter is not optional a <span
 class="classname">ReflectionException</span> will be thrown.
 
 ### 参数
@@ -8713,6 +8713,12 @@ class="classname">ReflectionException</span> will be thrown.
 ### 返回值
 
 The parameters default value.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                          |
+|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | This method now allows getting the default value of parameters of built-in functions and built-in class methods. Previously, a <span class="classname">ReflectionException</span> was thrown. |
 
 ### 范例
 
@@ -8744,15 +8750,6 @@ foreach ($function->getParameters() as $param) {
     Name: bar
     Default value: baz
 
-### 注释
-
-> **Note**:
->
-> Due to implementation details, it is not possible to get the default
-> value of built-in functions or methods of built-in classes. Trying to
-> do this will result a <span
-> class="classname">ReflectionException</span> being thrown.
-
 ### 参见
 
 -   <span class="methodname">ReflectionParameter::isOptional</span>
@@ -8776,9 +8773,9 @@ or null
 class="methodname">ReflectionParameter::getDefaultValueConstantName</span>
 ( <span class="methodparam">void</span> )
 
-Returns the default value's constant name of the parameter of a
-user-defined function or method, if default value is constant or null.
-If the parameter is not optional a <span
+Returns the default value's constant name of the parameter of any
+user-defined or internal function or method, if default value is
+constant or null. If the parameter is not optional a <span
 class="classname">ReflectionException</span> will be thrown.
 
 ### 参数
@@ -8788,6 +8785,12 @@ class="classname">ReflectionException</span> will be thrown.
 ### 返回值
 
 Returns string on success or **`NULL`** on failure.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                             |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | This method now allows getting the default values' constant names of built-in functions and built-in class methods. Previously, a <span class="classname">ReflectionException</span> was thrown. |
 
 ### 范例
 
@@ -8819,15 +8822,6 @@ foreach ($function->getParameters() as $param) {
 
     Name: bar
     Default value: PHP_INT_MIN
-
-### 注释
-
-> **Note**:
->
-> Due to implementation details, it is not possible to get the default
-> value of built-in functions or methods of built-in classes. Trying to
-> do this will result a <span
-> class="classname">ReflectionException</span> being thrown.
 
 ### 参见
 

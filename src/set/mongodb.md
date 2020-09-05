@@ -291,7 +291,7 @@ Installing the MongoDB PHP Driver on macOS with Homebrew
 
 <a href="https://brew.sh/2018/01/19/homebrew-1.5.0/" class="link external">» Homebrew 1.5.0</a>
 deprecated the
-<a href="https://github.com/Homebrew/homebrew-php" class="link external">» Homebrew/php tap</a>
+<a href="https://github.com/Homebrew/brew" class="link external">» Homebrew/php tap</a>
 and removed formulae for individual PHP extensions. Going forward, macOS
 users are advised to install the
 <a href="https://formulae.brew.sh/formula/php" class="link external">» php</a>

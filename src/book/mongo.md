@@ -226,7 +226,7 @@ $ sudo pecl install mongo
 ```
 
 如果用的是
-<a href="https://github.com/Homebrew/homebrew-php" class="link external">» Homebrew</a>，PHP
+<a href="https://github.com/Homebrew/brew" class="link external">» Homebrew</a>，PHP
 包含了驱动安装的方案。比如，安装 PHP 5.6 的驱动，可以使用以下命令：
 
 ``` shell
