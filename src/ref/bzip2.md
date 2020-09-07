@@ -5,7 +5,7 @@ bzclose
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">bzclose</span> (
+<span class="type">bool</span> <span class="methodname">bzclose</span> (
 <span class="methodparam"><span class="type">resource</span>
 `$bz`</span> )
 

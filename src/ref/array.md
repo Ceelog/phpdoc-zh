@@ -909,7 +909,8 @@ array 里的值。
 ### 返回值
 
 返回一个数组，该数组包括了所有在 `array1`
-中但是不在任何其它参数数组中的值。注意键名保留不变。
+中但是不在任何其它参数数组中的值。注意键名保留不变。 保留数组 `array1`
+里的键。
 
 ### 范例
 
@@ -932,12 +933,44 @@ print_r($result);
         [1] => blue
     )
 
-### 注释
+**示例 \#2 <span class="function">array\_diff</span> example with
+non-matching types**
 
-> **Note**:
->
-> 两个单元仅在 *(string) $elem1 === (string) $elem2*
-> 时被认为是相同的。也就是说，当字符串的表达是一样的时候。
+两个元素只有在 *(string) $elem1 === (string) $elem2* 相等时视为一致。
+也就是<a href="/language/types/string.html#language.types.string.casting" class="link">字符串转换表达</a>相同。
+
+``` php
+<?php
+// 数组无法转换成字符串时会产生 Notice 警告
+$source = [1, 2, 3, 4];
+$filter = [3, 4, [5], 6];
+$result = array_diff($source, $filter);
+
+// 而这个就可以，因为对象可以转换成字符串
+class S {
+  private $v;
+
+  public function __construct(string $v) {
+    $this->v = $v;
+  }
+
+  public function __toString() {
+    return $this->v;
+  }
+}
+
+$source = [new S('a'), new S('b'), new S('c')];
+$filter = [new S('b'), new S('c'), new S('d')];
+
+$result = array_diff($source, $filter);
+
+// $result 包含了一个 S('a'); 实例
+?>
+```
+
+想要使用函数来比较，可使用 <span class="function">array\_udiff</span>。
+
+### 注释
 
 > **Note**:
 >
@@ -947,6 +980,7 @@ print_r($result);
 ### 参见
 
 -   <span class="function">array\_diff\_assoc</span>
+-   <span class="function">array\_udiff</span>
 -   <span class="function">array\_intersect</span>
 -   <span class="function">array\_intersect\_assoc</span>
 

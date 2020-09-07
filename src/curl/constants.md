@@ -3,10 +3,9 @@
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-Descriptions and uses for these constants are described within the <span
-class="function">curl\_setopt</span>, <span
-class="function">curl\_multi\_setopt</span> and <span
-class="function">curl\_getinfo</span> documentation.
+<span class="function">curl\_setopt</span>、<span
+class="function">curl\_multi\_setopt</span>、 <span
+class="function">curl\_getinfo</span> 文档中常量的描述和使用。
 
 **`CURLOPT_AUTOREFERER`** (<span class="type">integer</span>)  
 <span class="simpara"> Available since PHP 5.1.0 </span>
@@ -167,6 +166,9 @@ are enabled. </span>
 
 **`CURLOPT_COOKIE`** (<span class="type">integer</span>)  
 <span class="simpara"> </span>
+
+**`CURLOPT_COOKIELIST`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 5.5.0 and cURL 7.14.1 </span>
 
 **`CURLOPT_SSLCERT`** (<span class="type">integer</span>)  
 <span class="simpara"> </span>
@@ -416,7 +418,11 @@ are enabled. </span>
 <span class="simpara"> </span>
 
 **`CURLINFO_HTTP_CODE`** (<span class="type">integer</span>)  
-<span class="simpara"> </span>
+<span class="simpara"> As of PHP 5.5.0 and cURL 7.10.8, this is a legacy
+alias of **`CURLINFO_RESPONSE_CODE`** </span>
+
+**`CURLINFO_RESPONSE_CODE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 5.5.0 and cURL 7.10.8 </span>
 
 **`CURLINFO_HEADER_OUT`** (<span class="type">integer</span>)  
 <span class="simpara"> Available since PHP 5.1.3 </span>
@@ -517,6 +523,43 @@ are enabled. </span>
 **`CURL_TIMECOND_LASTMOD`** (<span class="type">integer</span>)  
 <span class="simpara"> </span>
 
+**`CURL_VERSION_ALTSVC`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.6 and cURL 7.64.1 </span>
+
+**`CURL_VERSION_ASYNCHDNS`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.10.7 </span>
+
+**`CURL_VERSION_BROTLI`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.57.0 </span>
+
+**`CURL_VERSION_CONV`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.15.4 </span>
+
+**`CURL_VERSION_CURLDEBUG`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.6 and cURL 7.19.6 </span>
+
+**`CURL_VERSION_DEBUG`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.10.6 </span>
+
+**`CURL_VERSION_GSSAPI`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.38.0 </span>
+
+**`CURL_VERSION_GSSNEGOTIATE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.10.6
+(deprecated since 7.38.0) </span>
+
+**`CURL_VERSION_IDN`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.12.0 </span>
+
+**`CURL_VERSION_MULTI_SSL`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.56.0 </span>
+
+**`CURL_VERSION_NTLM`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.10.6 </span>
+
+**`CURL_VERSION_NTLM_WB`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.22.0 </span>
+
 **`CURL_VERSION_IPV6`** (<span class="type">integer</span>)  
 <span class="simpara"> </span>
 
@@ -531,10 +574,19 @@ are enabled. </span>
 7.33.0 </span>
 
 **`CURL_VERSION_PSL`** (<span class="type">integer</span>)  
-<span class="simpara"> Available since PHP 7.0.7 and cURL 7.47.0 </span>
+<span class="simpara"> Available since PHP 7.3.6 and cURL 7.47.0 </span>
+
+**`CURL_VERSION_SPNEGO`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.10.8 </span>
+
+**`CURL_VERSION_SSPI`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.13.2 </span>
 
 **`CURL_VERSION_SSL`** (<span class="type">integer</span>)  
 <span class="simpara"> </span>
+
+**`CURL_VERSION_TLSAUTH_SRP`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.21.4 </span>
 
 **`CURL_VERSION_UNIX_SOCKETS`** (<span class="type">integer</span>)  
 <span class="simpara"> Available since PHP 7.0.7 and cURL 7.40.0 </span>
@@ -786,6 +838,10 @@ are enabled. </span>
 **`CURL_HTTP_VERSION_2`** (<span class="type">integer</span>)  
 <span class="simpara"> Available since PHP 7.0.7 and cURL 7.43.0 </span>
 
+**`CURL_HTTP_VERSION_2_0`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 5.5.24 and 5.6.8 and cURL
+7.33.0 </span>
+
 **`CURL_HTTP_VERSION_2TLS`** (<span class="type">integer</span>)  
 <span class="simpara"> Available since PHP 7.0.7 and cURL 7.47.0 </span>
 
@@ -906,6 +962,15 @@ are enabled. </span>
 **`CURLOPT_TCP_FASTOPEN`** (<span class="type">integer</span>)  
 <span class="simpara"> Available since PHP 7.0.7 and cURL 7.49.0 </span>
 
+**`CURLOPT_TCP_KEEPALIVE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 5.5.0 and cURL 7.25.0 </span>
+
+**`CURLOPT_TCP_KEEPIDLE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 5.5.0 and cURL 7.25.0 </span>
+
+**`CURLOPT_TCP_KEEPINTVL`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 5.5.0 and cURL 7.25.0 </span>
+
 **`CURLMOPT_PIPELINING`** (<span class="type">integer</span>)  
 <span class="simpara"> Available since PHP 5.5.0 and cURL 7.16.0.
 </span>
@@ -1019,3 +1084,204 @@ are enabled. </span>
 **`CURLPROTO_SMBS`** (<span class="type">integer</span>)  
 <span class="simpara"> Available since PHP 7.0.7 and cURL 7.40.0.
 </span>
+
+**`CURLOPT_REQUEST_TARGET`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.55.0.
+</span>
+
+**`CURLAUTH_GSSAPI`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.54.1 </span>
+
+**`CURLE_WEIRD_SERVER_REPLY`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.51.0 </span>
+
+**`CURLINFO_CONTENT_LENGTH_DOWNLOAD_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.55.0 </span>
+
+**`CURLINFO_CONTENT_LENGTH_UPLOAD_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.55.0 </span>
+
+**`CURLINFO_HTTP_VERSION`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.50.0 </span>
+
+**`CURLINFO_PROTOCOL`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLINFO_PROXY_SSL_VERIFYRESULT`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLINFO_SCHEME`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLINFO_SIZE_DOWNLOAD_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.50.0 </span>
+
+**`CURLINFO_SIZE_UPLOAD_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.50.0 </span>
+
+**`CURLINFO_SPEED_DOWNLOAD_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.50.0 </span>
+
+**`CURLINFO_SPEED_UPLOAD_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.50.0 </span>
+
+**`CURL_MAX_READ_SIZE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.53.0 </span>
+
+**`CURLOPT_ABSTRACT_UNIX_SOCKET`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.53.0 </span>
+
+**`CURLOPT_KEEP_SENDING_ON_ERROR`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.51.0 </span>
+
+**`CURLOPT_PRE_PROXY`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_CAINFO`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_CAPATH`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_CRLFILE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_KEYPASSWD`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_PINNEDPUBLICKEY`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_SSLCERT`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_SSLCERTTYPE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_SSL_CIPHER_LIST`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_SSLKEY`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_SSLKEYTYPE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_SSL_OPTIONS`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_SSL_VERIFYHOST`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_SSL_VERIFYPEER`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_SSLVERSION`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_TLSAUTH_PASSWORD`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_TLSAUTH_TYPE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_PROXY_TLSAUTH_USERNAME`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLOPT_SOCKS5_AUTH`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.55.0 </span>
+
+**`CURLOPT_SUPPRESS_CONNECT_HEADERS`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.54.0 </span>
+
+**`CURLPROXY_HTTPS`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURL_SSLVERSION_MAX_DEFAULT`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.54.0 </span>
+
+**`CURL_SSLVERSION_MAX_NONE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.54.0 </span>
+
+**`CURL_SSLVERSION_MAX_TLSv1_0`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.54.0 </span>
+
+**`CURL_SSLVERSION_MAX_TLSv1_1`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.54.0 </span>
+
+**`CURL_SSLVERSION_MAX_TLSv1_2`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.54.0 </span>
+
+**`CURL_SSLVERSION_MAX_TLSv1_3`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.54.0 </span>
+
+**`CURL_SSLVERSION_TLSv1_3`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURL_VERSION_HTTPS_PROXY`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.52.0 </span>
+
+**`CURLAUTH_BEARER`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.61.0.
+</span>
+
+**`CURLINFO_APPCONNECT_TIME_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.61.0 </span>
+
+**`CURLINFO_CONNECT_TIME_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.61.0 </span>
+
+**`CURLINFO_FILETIME_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.59.0 </span>
+
+**`CURLINFO_NAMELOOKUP_TIME_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.61.0 </span>
+
+**`CURLINFO_PRETRANSFER_TIME_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.61.0 </span>
+
+**`CURLINFO_REDIRECT_TIME_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.61.0 </span>
+
+**`CURLINFO_STARTTRANSFER_TIME_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.61.0 </span>
+
+**`CURLINFO_TOTAL_TIME_T`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.61.0 </span>
+
+**`CURL_LOCK_DATA_CONNECT`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.10.0 </span>
+
+**`CURL_LOCK_DATA_PSL`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.61.0 </span>
+
+**`CURLOPT_DISALLOW_USERNAME_IN_URL`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.61.0 </span>
+
+**`CURLOPT_DNS_SHUFFLE_ADDRESSES`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.60.0 </span>
+
+**`CURLOPT_HAPPY_EYEBALLS_TIMEOUT_MS`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.59.0 </span>
+
+**`CURLOPT_HAPROXYPROTOCOL`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.60.0 </span>
+
+**`CURLOPT_PROXY_TLS13_CIPHERS`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.61.0 </span>
+
+**`CURLOPT_SSH_COMPRESSION`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.56.0 </span>
+
+**`CURLOPT_TIMEVALUE_LARGE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.59.0 </span>
+
+**`CURLOPT_TLS13_CIPHERS`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.61.0 </span>
+
+**`CURLSSH_AUTH_GSSAPI`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.0 and cURL 7.58.0 </span>
+
+**`CURLOPT_HTTP09_ALLOWED `** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 7.3.15 and 7.4.3,
+respectively, and cURL 7.64.0 </span>
