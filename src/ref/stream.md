@@ -1869,15 +1869,14 @@ if (false === ($num_changed_streams = stream_select($read, $write, $except, 0)))
 >
 > Some streams (like *zlib*) cannot be selected by this function.
 
-> **Note**:
->
-> Windows compatibility: <span class="function">stream\_select</span>
-> used on a pipe returned from <span class="function">proc\_open</span>
-> may cause data loss under Windows 98.
+> **Note**: **Windows compatibility**  
 >
 > Use of <span class="function">stream\_select</span> on file
 > descriptors returned by <span class="function">proc\_open</span> will
 > fail and return **`FALSE`** under Windows.
+>
+> **`STDIN`** from a console changes status as soon as *any* input
+> events are available, but reading from the stream may still block.
 
 ### 参见
 

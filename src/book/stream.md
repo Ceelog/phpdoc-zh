@@ -1365,6 +1365,10 @@ Possible values:
 -   **`SEEK_CUR`** - Set position to current location plus `offset`.
 -   **`SEEK_END`** - Set position to end-of-file plus `offset`.
 
+> **Note**: <span class="simpara"> The current implementation never sets
+> `whence` to **`SEEK_CUR`**; instead such seeks are internally
+> converted to **`SEEK_SET`** seeks. </span>
+
 ### 返回值
 
 Return **`TRUE`** if the position was updated, **`FALSE`** otherwise.
