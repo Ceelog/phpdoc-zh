@@ -2033,23 +2033,35 @@ class="methodparam"><span class="type">array</span> `$array1`</span> \[,
 \] )
 
 <span class="function">array\_map</span>：返回数组，是为 `array1`
-每个元素应用 `callback`函数之后的数组。 `callback` 函数形参的数量和传给
-<span class="function">array\_map</span> 数组数量，两者必须一样。
+每个元素应用 `callback`函数之后的数组。 <span
+class="function">array\_map</span> 返回一个 <span
+class="type">array</span>，数组内容为 `array1`
+的元素按索引顺序为参数调用 `callback` 后的结果（有更多数组时，还会传入
+`...` 的元素）。 `callback` 函数形参的数量必须匹配 <span
+class="function">array\_map</span> 实参中数组的数量。
 
 ### 参数
 
 `callback`  
-回调函数，应用到每个数组里的每个元素。
+回调函数 <span
+class="type">callable</span>，应用到每个数组里的每个元素。
+
+多个数组操作合并时，`callback` 可以设置为 **`NULL`**。 如果只提供了
+`array1` 一个数组， <span class="methodname">array\_map</span>
+会返回输入的数组。
 
 `array1`  
 数组，遍历运行 `callback` 函数。
 
 `...`  
-数组列表，每个都遍历运行 `callback` 函数。
+额外的数组列表，每个都遍历运行 `callback` 函数。
 
 ### 返回值
 
 返回数组，包含 `callback` 函数处理之后 `array1` 的所有元素。
+
+当仅仅传入一个数组时，返回的数组会保留传入参数的键（key）。
+传入多个数组时，返回的数组键是按顺序的 integer。
 
 ### 范例
 
@@ -2059,11 +2071,11 @@ class="methodparam"><span class="type">array</span> `$array1`</span> \[,
 <?php
 function cube($n)
 {
-    return($n * $n * $n);
+    return ($n * $n * $n);
 }
 
-$a = array(1, 2, 3, 4, 5);
-$b = array_map("cube", $a);
+$a = [1, 2, 3, 4, 5];
+$b = array_map('cube', $a);
 print_r($b);
 ?>
 ```
@@ -2107,21 +2119,21 @@ print_r(array_map($func, range(1, 5)));
 <?php
 function show_Spanish($n, $m)
 {
-    return("The number $n is called $m in Spanish");
+    return "The number {$n} is called {$m} in Spanish";
 }
 
 function map_Spanish($n, $m)
 {
-    return(array($n => $m));
+    return [$n => $m];
 }
 
-$a = array(1, 2, 3, 4, 5);
-$b = array("uno", "dos", "tres", "cuatro", "cinco");
+$a = [1, 2, 3, 4, 5];
+$b = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
 
-$c = array_map("show_Spanish", $a, $b);
+$c = array_map('show_Spanish', $a, $b);
 print_r($c);
 
-$d = array_map("map_Spanish", $a , $b);
+$d = array_map('map_Spanish', $a , $b);
 print_r($d);
 ?>
 ```
@@ -2174,13 +2186,13 @@ print_r($d);
 此函数有个有趣的用法：传入 **`NULL`**
 作为回调函数的名称，将创建多维数组（一个数组，内部包含数组。）
 
-**示例 \#4 多维数组：创建数组，内部包含数组**
+**示例 \#4 多个数组的合并操作**
 
 ``` php
 <?php
-$a = array(1, 2, 3, 4, 5);
-$b = array("one", "two", "three", "four", "five");
-$c = array("uno", "dos", "tres", "cuatro", "cinco");
+$a = [1, 2, 3, 4, 5];
+$b = ['one', 'two', 'three', 'four', 'five'];
+$c = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
 
 $d = array_map(null, $a, $b, $c);
 print_r($d);
@@ -2228,21 +2240,39 @@ print_r($d);
 
     )
 
-如果仅传入一个数组，键（key）会保留；传入多个数组，键（key）是整型数字的序列。
+**示例 \#5 仅有 `array1` 时，`callback` 设置为 **`NULL`****
 
-**示例 \#5 <span class="function">array\_map</span> 键（key）是 string**
+``` php
+<?php
+$array = [1, 2, 3];
+var_dump(array_map(null, $array));
+?>
+```
+
+以上例程会输出：
+
+    array(3) {
+      [0]=>
+      int(1)
+      [1]=>
+      int(2)
+      [2]=>
+      int(3)
+    }
+
+**示例 \#6 <span class="function">array\_map</span> 键（key）是 string**
 
 ``` php
 <?php
 $arr = array("stringkey" => "value");
 function cb1($a) {
-    return array ($a);
+    return [$a];
 }
 function cb2($a, $b) {
-    return array ($a, $b);
+    return [$a, $b];
 }
-var_dump(array_map("cb1", $arr));
-var_dump(array_map("cb2", $arr, $arr));
+var_dump(array_map('cb1', $arr));
+var_dump(array_map('cb2', $arr, $arr));
 var_dump(array_map(null,  $arr));
 var_dump(array_map(null, $arr, $arr));
 ?>
