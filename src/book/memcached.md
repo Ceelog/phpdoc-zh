@@ -103,7 +103,7 @@ Memcached
     -   [Memcached::set](/class/memcached.html#Memcached::set) —
         存储一个元素
     -   [Memcached::setByKey](/class/memcached.html#Memcached::setByKey)
-        — Store an item on a specific server
+        — 将元素存储到指定的服务器上
     -   [Memcached::setMulti](/class/memcached.html#Memcached::setMulti)
         — 存储多个元素
     -   [Memcached::setMultiByKey](/class/memcached.html#Memcached::setMultiByKey)
@@ -2868,7 +2868,7 @@ var_dump($m->get('object'));
 Memcached::setByKey
 ===================
 
-Store an item on a specific server
+将元素存储到指定的服务器上
 
 ### 说明
 
