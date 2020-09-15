@@ -5202,6 +5202,13 @@ Enable *LOAD LOCAL INFILE*.
 Note, this constant can only be used in the `driver_options` array when
 constructing a new database handle.
 
+**`PDO::MYSQL_ATTR_LOCAL_INFILE_DIRECTORY`** (<span class="type">string</span>)  
+Allows restricting LOCAL DATA loading to files located in this
+designated directory.
+
+Note, this constant can only be used in the `driver_options` array when
+constructing a new database handle.
+
 **`PDO::MYSQL_ATTR_INIT_COMMAND`** (<span class="type">integer</span>)  
 Command to execute when connecting to the MySQL server. Will
 automatically be re-executed when reconnecting.

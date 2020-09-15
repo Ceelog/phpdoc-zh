@@ -407,8 +407,7 @@ JavaScript 或者 URL 链接过来的并发请求的时候，
 为了避免这种情况的发生，你需要在 $\_SESSION 中设置一个时间戳，
 在这个时间戳之后的对于会话的访问都将被拒绝。
 或者，确保你的应用中不存在并发请求。 这个规则同样适用于 <span
-class="function">session\_regenerate\_id</span>。 <span
-class="function">session\_regenerate\_id</span> also.
+class="function">session\_regenerate\_id</span>。
 
 ### 返回值
 
