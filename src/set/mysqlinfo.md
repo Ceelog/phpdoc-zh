@@ -17039,6 +17039,19 @@ URI format:
 
         This option was added in version 8.0.20.
 
+    -   The optional *compression-algorithms* attribute defines the
+        desired compression algorithms (and their preferred usage
+        order): *zstd\_stream* (alias: zstd), *lz4\_message* (alias:
+        lz4), or *deflate\_stream* (aliases: deflate or zlib). By
+        default, the order used (depending on system availability) is
+        lz4\_message, zstd\_stream, then deflate\_stream. For example,
+        passing in compression-algorithms=\[lz4,zstd\_stream\] uses lz4
+        if it's available, otherwise zstd\_stream is used. If both are
+        unavailable then behavior depends on the compression value e.g.,
+        if compression=required then it'll fail with an error.
+
+        This option was added in version 8.0.22.
+
 **示例 \#1 URI examples**
 
 ``` php
@@ -17055,6 +17068,7 @@ mysqlx://foobar?ssl-ca=(/path/to/ca.pem)&ssl-crl=(/path/to/crl.pem)
 mysqlx://foo:bar@[localhost:33060, 127.0.0.1:33061]?ssl-mode=disabled
 mysqlx://foo:bar@localhost:33160/?connect-timeout=0
 mysqlx://foo:bar@localhost:33160/?connect-timeout=10&compression=required
+mysqlx://foo:bar@localhost:33160/?connect-timeout=10&compression=required&compression-algorithms=[lz4,zstd_stream]
 ```
 
 For related information, see MySQL Shell's

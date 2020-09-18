@@ -15693,7 +15693,8 @@ Transliterator provides transliteration of strings.
 
 /\* 方法 \*/
 
-<span class="methodname">\_\_construct</span> ( <span
+<span class="modifier">private</span> <span
+class="methodname">\_\_construct</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
@@ -15756,7 +15757,8 @@ Private constructor to deny instantiation
 
 ### 说明
 
-<span class="methodname">Transliterator::\_\_construct</span> ( <span
+<span class="modifier">private</span> <span
+class="methodname">Transliterator::\_\_construct</span> ( <span
 class="methodparam">void</span> )
 
 This method should not be called. Its only purpose is to deny
@@ -15809,7 +15811,7 @@ class="methodparam"><span class="type">string</span> `$id`</span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$direction`</span> \] )
 
-Opens a Transliterator by id.
+Opens a Transliterator by ID.
 
 **Warning**
 
@@ -15818,11 +15820,12 @@ Opens a Transliterator by id.
 ### 参数
 
 `id`  
-The id.
+The ID. A list of all registered transliterator IDs can be retrieved by
+using <span class="methodname">Transliterator::listIDs</span>.
 
 `direction`  
 The direction, defaults to
-<a href="/class/transliterator.html#" class="link">&gt;Transliterator::FORWARD</a>.
+<a href="/class/transliterator.html#" class="link">Transliterator::FORWARD</a>.
 May also be set to
 <a href="/class/transliterator.html#" class="link">Transliterator::REVERSE</a>.
 
@@ -16044,10 +16047,6 @@ class="methodparam">void</span> )
 
 Returns an array with the registered transliterator IDs.
 
-**Warning**
-
-本函数还未编写文档，仅有参数列表。
-
 ### 参数
 
 此函数没有参数。
@@ -16056,6 +16055,33 @@ Returns an array with the registered transliterator IDs.
 
 An <span class="type">array</span> of registered transliterator IDs on
 success, 或者在失败时返回 **`FALSE`**.
+
+### 范例
+
+**示例 \#1 Retrieving the registered transliterator IDs**
+
+``` php
+<?php
+print_r(Transliterator::listIDs());
+?>
+```
+
+以上例程的输出类似于：
+
+    Array
+    (
+        [0] => ASCII-Latin
+        [1] => Accents-Any
+        [2] => Amharic-Latin/BGN
+        [3] => Any-Accents
+        [4] => Any-Publishing
+    ...
+        [650] => Any-ps_Latn/BGN
+        [651] => Any-tk/BGN
+        [652] => Any-ch_FONIPA
+        [653] => Any-cs_FONIPA
+        [654] => Any-cy_FONIPA
+    )
 
 ### 参见
 
