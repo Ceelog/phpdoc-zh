@@ -585,6 +585,27 @@ The URI of the resource for the output.
 for later use with the xmlwriter functions on success, **`FALSE`** on
 error.
 
+### 范例
+
+**示例 \#1 Direct output of XML**
+
+It is possible to directly output XML by using the
+<a href="/wrappers/php.html#wrappers.php.output" class="link">php://output stream wrapper</a>.
+
+``` php
+<?php
+$out =new XMLWriter();
+$out->openURI('php://output');
+?>
+```
+
+### 注释
+
+> **Note**:
+>
+> On Windows, files opened with this function are locked until the
+> writer is released.
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::openMemory</span>
@@ -679,6 +700,28 @@ The indentation string.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 注释
+
+> **Note**:
+>
+> The indent is reset when an xmlwriter is opened.
+
+> **Note**: <span
+> class="simpara">因为是一个语言构造器而不是一个函数，不能被
+> <a href="/functions/variable-functions.html" class="link">可变函数</a>
+> 调用。 </span>
+
+**Warning**
+
+此函数（还）不能安全地适用于二进制对象！
+
+> **Note**: **register\_globals 重要说明：**  
+>
+> 自 PHP 4.2.0 起，PHP 指令
+> <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>
+> 的默认值为 *off*。PHP 社区鼓励开发者不要依赖于此指令,
+> 用其他手段替代，例如<a href="/language/variables/predefined.html" class="link">superglobals</a>。
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::setIndent</span>
@@ -723,6 +766,28 @@ Whether indentation is enabled.
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 注释
+
+> **Note**:
+>
+> The indent is reset when an xmlwriter is opened.
+
+> **Note**: <span
+> class="simpara">因为是一个语言构造器而不是一个函数，不能被
+> <a href="/functions/variable-functions.html" class="link">可变函数</a>
+> 调用。 </span>
+
+**Warning**
+
+此函数（还）不能安全地适用于二进制对象！
+
+> **Note**: **register\_globals 重要说明：**  
+>
+> 自 PHP 4.2.0 起，PHP 指令
+> <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>
+> 的默认值为 *off*。PHP 社区鼓励开发者不要依赖于此指令,
+> 用其他手段替代，例如<a href="/language/variables/predefined.html" class="link">superglobals</a>。
 
 ### 参见
 
@@ -828,6 +893,29 @@ The attribute name.
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 范例
+
+**示例 \#1 Basic <span
+class="methodname">XMLWriter::startAttribute</span> Usage**
+
+``` php
+<?php
+$writer = new XMLWriter;
+$writer->openURI('php://output');
+$writer->startDocument('1.0', 'UTF-8');?>
+$writer->startElement('element');
+$writer->startAttribute('attribute');
+$writer->text('value');
+$writer->endAttribute();
+$writer->endElement();
+$writer->endDocument();
+```
+
+以上例程的输出类似于：
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <element attribute="value"/>
 
 ### 参见
 
@@ -1368,7 +1456,12 @@ class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
 `content`  
-The contents of the text.
+The contents of the text. The characters *\<*, *\>*, *&* and *"* are
+written as entity references (i.e. *&lt;*, *&gt;*, *&amp;* and *&quot;*,
+respectively). All other characters including *'* are written literally.
+To write the special XML characters literally, or to write literal
+entity references, <span class="function">xmlwriter\_write\_raw</span>
+has to be used.
 
 ### 返回值
 
