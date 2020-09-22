@@ -1579,6 +1579,33 @@ The value of the attribute.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 范例
+
+**示例 \#1 Intermixing Sub-elements and Attributes**
+
+If writing sub-elements and attributes is intermixed, any attempt to
+write attributes after the first sub-element will fail and return false.
+
+``` php
+<?php
+$xml = new XMLWriter();
+$xml->openMemory();
+
+$xml->startElement('element');
+$xml->writeAttribute('attr1', '0');
+$xml->writeElement('subelem', '0');
+var_dump($xml->writeAttribute('attr2', '0'));
+$xml->endElement();
+
+echo $xml->flush();
+?>
+```
+
+以上例程会输出：
+
+    bool(false)
+    <element attr1="0"><subelem>0</subelem></element>
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::writeAttributeNs</span>
@@ -1626,6 +1653,41 @@ The contents of the CDATA.
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 范例
+
+**示例 \#1 Basic <span class="function">xmlwriter\_write\_cdata</span>
+Usage**
+
+``` php
+<?php
+// set up the document
+$xml = new XmlWriter();
+$xml->openMemory();
+$xml->setIndent(true);
+$xml->startDocument('1.0', 'UTF-8');
+$xml->startElement('mydoc');
+$xml->startElement('myele');
+
+// CData output
+$xml->startElement('mycdataelement');
+$xml->writeCData("text for inclusion as CData");
+$xml->endElement();
+
+// end the document and output
+$xml->endElement();
+$xml->endElement();
+echo $xml->outputMemory(true);
+?>
+```
+
+以上例程会输出：
+
+    <mydoc>
+     <myele>
+      <mycdataelement><![CDATA[text for inclusion as CData]​]></mycdataelement>
+     </myele>
+    </mydoc>
 
 ### 参见
 
