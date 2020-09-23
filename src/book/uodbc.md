@@ -29,7 +29,7 @@ ODBC (Unified)
         datasource
     -   [odbc\_cursor](/book/uodbc.html#odbc_cursor) — Get cursorname
     -   [odbc\_data\_source](/book/uodbc.html#odbc_data_source) —
-        Returns information about a current connection
+        Returns information about available DSNs
     -   [odbc\_do](/book/uodbc.html#odbc_do) — 别名 odbc\_exec
     -   [odbc\_error](/book/uodbc.html#odbc_error) — Get the last error
         code
@@ -621,8 +621,8 @@ Lists columns and associated privileges for the given table
 class="methodname">odbc\_columnprivileges</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$owner`</span> ,
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$table_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$column_name`</span> )
@@ -634,10 +634,10 @@ Lists columns and associated privileges for the given table.
 `connection_id`  
 ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 
-`qualifier`  
+`catalog`  
 The qualifier.
 
-`owner`  
+`schema`  
 The owner.
 
 `table_name`  
@@ -646,8 +646,9 @@ The table name.
 `column_name`  
 The column name.
 
-The `owner`, `table_name`, and `column_name` accept search patterns ('%'
-to match zero or more characters and '\_' to match a single character).
+The `schema`, `table_name`, and `column_name` accept search patterns
+('%' to match zero or more characters and '\_' to match a single
+character).
 
 ### 返回值
 
@@ -679,7 +680,7 @@ Lists the column names in specified tables
 class="methodname">odbc\_columns</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> \[, <span
+class="type">string</span> `$catalog`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$schema`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$table_name`</span> \[, <span class="methodparam"><span
@@ -692,7 +693,7 @@ Lists all columns in the requested range.
 `connection_id`  
 ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 
-`qualifier`  
+`catalog`  
 The qualifier.
 
 `schema`  
@@ -862,7 +863,7 @@ Returns the cursor name, as a string.
 odbc\_data\_source
 ==================
 
-Returns information about a current connection
+Returns information about available DSNs
 
 ### 说明
 
@@ -888,7 +889,36 @@ the first time this function is called, thereafter use the
 
 ### 返回值
 
-Returns **`FALSE`** on error, and an array upon success.
+Returns **`FALSE`** on error, an <span class="type">array</span> upon
+success, and **`NULL`** after fetching the last available DSN.
+
+### 范例
+
+**示例 \#1 List available DSNs**
+
+``` php
+<?php
+$conn = odbc_connect('dsn', 'user', 'pass');
+$dsn_info = odbc_data_source($conn, SQL_FETCH_FIRST);
+while ($dsn_info) {
+    print_r($dsn_info);
+    $dsn_info = odbc_data_source($conn, SQL_FETCH_NEXT);
+}
+?>
+```
+
+以上例程的输出类似于：
+
+    Array
+    (
+        [server] => dsn
+        [description] => ODBC Driver 17 for SQL Server
+    )
+    Array
+    (
+        [server] => other_dsn
+        [description] => Microsoft Access Driver (*.mdb, *.accdb)
+    )
 
 odbc\_do
 ========
@@ -1879,8 +1909,8 @@ Gets the primary keys for a table
 class="methodname">odbc\_primarykeys</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$owner`</span> ,
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$table`</span> )
 
@@ -1892,9 +1922,9 @@ that comprise the primary key for a table.
 `connection_id`  
 ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 
-`qualifier`  
+`catalog`  
 
-`owner`  
+`schema`  
 
 `table`  
 
@@ -1927,8 +1957,8 @@ class="methodparam"><span class="type">resource</span>
 class="methodname">odbc\_procedurecolumns</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$owner`</span> ,
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$proc`</span> , <span class="methodparam"><span
 class="type">string</span> `$column`</span> )
@@ -1940,10 +1970,10 @@ Retrieve information about parameters to procedures.
 `connection_id`  
 ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 
-`qualifier`  
+`catalog`  
 The qualifier.
 
-`owner`  
+`schema`  
 The owner. 此参数接受下列查询模式："%" 来匹配零到多个字符，"\_"
 来匹配单个字符。
 
@@ -1996,8 +2026,8 @@ class="methodparam"><span class="type">resource</span>
 class="methodname">odbc\_procedures</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$owner`</span> ,
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> )
 
@@ -2008,10 +2038,10 @@ Lists all procedures in the requested range.
 `connection_id`  
 ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 
-`qualifier`  
+`catalog`  
 The qualifier.
 
-`owner`  
+`schema`  
 The owner. 此参数接受下列查询模式："%" 来匹配零到多个字符，"\_"
 来匹配单个字符。
 
@@ -2229,7 +2259,7 @@ class="methodname">odbc\_specialcolumns</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
 class="type">int</span> `$type`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
+class="type">string</span> `$catalog`</span> , <span
 class="methodparam"><span class="type">string</span> `$table`</span> ,
 <span class="methodparam"><span class="type">int</span> `$scope`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -2254,7 +2284,7 @@ columns in the specified table, if any, that are automatically updated
 by the data source when any value in the row is updated by any
 transaction. </span>
 
-`qualifier`  
+`catalog`  
 The qualifier.
 
 `table`  
@@ -2292,8 +2322,8 @@ Retrieve statistics about a table
 class="methodname">odbc\_statistics</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$owner`</span> ,
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$table_name`</span> , <span class="methodparam"><span
 class="type">int</span> `$unique`</span> , <span
@@ -2306,10 +2336,10 @@ Get statistics about a table and its indexes.
 `connection_id`  
 ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 
-`qualifier`  
+`catalog`  
 The qualifier.
 
-`owner`  
+`schema`  
 The owner.
 
 `table_name`  
@@ -2355,8 +2385,8 @@ Lists tables and the privileges associated with each table
 class="methodname">odbc\_tableprivileges</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$owner`</span> ,
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> )
 
@@ -2368,10 +2398,10 @@ each table.
 `connection_id`  
 ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 
-`qualifier`  
+`catalog`  
 The qualifier.
 
-`owner`  
+`schema`  
 The owner. Accepts the following search patterns: ('%' to match zero or
 more characters and '\_' to match a single character)
 
@@ -2406,9 +2436,9 @@ Get the list of table names stored in a specific data source
 <span class="type">resource</span> <span
 class="methodname">odbc\_tables</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection_id`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$qualifier`</span>
+class="methodparam"><span class="type">string</span> `$catalog`</span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$owner`</span> \[, <span class="methodparam"><span
+`$schema`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$name`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$types`</span>
 \]\]\]\] )
@@ -2416,19 +2446,19 @@ class="methodparam"><span class="type">string</span> `$types`</span>
 Lists all tables in the requested range.
 
 To support enumeration of qualifiers, owners, and table types, the
-following special semantics for the `qualifier`, `owner`, `name`, and
+following special semantics for the `catalog`, `schema`, `name`, and
 `table_type` are available:
 
--   <span class="simpara"> If `qualifier` is a single percent character
-    (%) and `owner` and `name` are empty strings, then the result set
+-   <span class="simpara"> If `catalog` is a single percent character
+    (%) and `schema` and `name` are empty strings, then the result set
     contains a list of valid qualifiers for the data source. (All
     columns except the TABLE\_QUALIFIER column contain NULLs.) </span>
--   <span class="simpara"> If `owner` is a single percent character (%)
-    and `qualifier` and `name` are empty strings, then the result set
+-   <span class="simpara"> If `schema` is a single percent character (%)
+    and `catalog` and `name` are empty strings, then the result set
     contains a list of valid owners for the data source. (All columns
     except the TABLE\_OWNER column contain NULLs.) </span>
 -   <span class="simpara"> If `table_type` is a single percent character
-    (%) and `qualifier`, `owner` and `name` are empty strings, then the
+    (%) and `catalog`, `schema` and `name` are empty strings, then the
     result set contains a list of valid table types for the data source.
     (All columns except the TABLE\_TYPE column contain NULLs.) </span>
 
@@ -2437,10 +2467,10 @@ following special semantics for the `qualifier`, `owner`, `name`, and
 `connection_id`  
 ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 
-`qualifier`  
+`catalog`  
 The qualifier.
 
-`owner`  
+`schema`  
 The owner. Accepts search patterns ('%' to match zero or more characters
 and '\_' to match a single character).
 
@@ -2496,7 +2526,7 @@ and TABLE\_NAME.
     datasource
 -   [odbc\_cursor](/book/uodbc.html#odbc_cursor) — Get cursorname
 -   [odbc\_data\_source](/book/uodbc.html#odbc_data_source) — Returns
-    information about a current connection
+    information about available DSNs
 -   [odbc\_do](/book/uodbc.html#odbc_do) — 别名 odbc\_exec
 -   [odbc\_error](/book/uodbc.html#odbc_error) — Get the last error code
 -   [odbc\_errormsg](/book/uodbc.html#odbc_errormsg) — Get the last

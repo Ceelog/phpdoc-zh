@@ -154,7 +154,7 @@ class="methodparam"><span class="type">string</span> `$dirname`</span>
 <span class="methodname">addFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$localname`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$entryname`<span class="initializer"> = **`NULL`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$start`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$length`<span
@@ -165,8 +165,8 @@ class="initializer"> = ZipArchive::FL\_OVERWRITE</span></span> \]\]\]\]
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">addFromString</span> ( <span
-class="methodparam"><span class="type">string</span> `$localname`</span>
-, <span class="methodparam"><span class="type">string</span>
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">string</span>
 `$contents`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`<span class="initializer"> =
 ZipArchive::FL\_OVERWRITE</span></span> \] )
@@ -521,7 +521,7 @@ Adds a file to a ZIP archive from the given path
 <span class="methodname">ZipArchive::addFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$localname`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$entryname`<span class="initializer"> = **`NULL`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$start`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$length`<span
@@ -540,7 +540,7 @@ Adds a file to a ZIP archive from a given path.
 `filename`  
 The path to the file to add.
 
-`localname`  
+`entryname`  
 If supplied, this is the local name inside the ZIP archive that will
 override the `filename`.
 
@@ -613,8 +613,8 @@ Add a file to a ZIP archive using its contents
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">ZipArchive::addFromString</span> ( <span
-class="methodparam"><span class="type">string</span> `$localname`</span>
-, <span class="methodparam"><span class="type">string</span>
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">string</span>
 `$contents`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`<span class="initializer"> =
 ZipArchive::FL\_OVERWRITE</span></span> \] )
@@ -626,7 +626,7 @@ Add a file to a ZIP archive using its contents.
 
 ### 参数
 
-`localname`  
+`name`  
 The name of the entry to create.
 
 `contents`  
