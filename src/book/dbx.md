@@ -63,18 +63,12 @@ supported, but others will follow:
     <a href="/book/fbsql.html#FrontBase%20函数" class="link">FrontBase</a>
     </span>
 -   <span class="simpara">
-    <a href="/book/mssql.html#Mssql%20函数" class="link">Microsoft SQL Server</a>
-    </span>
--   <span class="simpara">
     <a href="/set/mysqlinfo.html#MySQL%20函数" class="link">MySQL</a>
     </span>
 -   <span class="simpara">
     <a href="/book/uodbc.html#ODBC%20函数" class="link">ODBC</a> </span>
 -   <span class="simpara">
     <a href="/book/pgsql.html#PostgreSQL%20函数" class="link">PostgreSQL</a>
-    </span>
--   <span class="simpara">
-    <a href="/book/sybase.html#Sybase%20函数" class="link">Sybase-CT</a>
     </span>
 -   <span class="simpara">
     <a href="/book/oci8.html#OCI8%20函数" class="link">Oracle (oci8)</a>

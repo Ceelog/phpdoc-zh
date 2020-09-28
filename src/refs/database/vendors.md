@@ -94,11 +94,6 @@
     -   [预定义常量](/book/msql.html#预定义常量)
     -   [范例](/book/msql.html#范例)
     -   [mSQL 函数](/book/msql.html#mSQL%20函数)
--   [Mssql](/book/mssql.html) — Microsoft SQL Server
-    -   [简介](/book/mssql.html#简介)
-    -   [安装／配置](/book/mssql.html#安装／配置)
-    -   [预定义常量](/book/mssql.html#预定义常量)
-    -   [Mssql 函数](/book/mssql.html#Mssql%20函数)
 -   [MySQL](/set/mysqlinfo.html) — MySQL Drivers and Plugins
     -   [Overview of the MySQL PHP
         drivers](/set/mysqlinfo.html#Overview%20of%20the%20MySQL%20PHP%20drivers)
@@ -167,11 +162,6 @@
     -   [安装／配置](/book/sqlsrv.html#安装／配置)
     -   [预定义常量](/book/sqlsrv.html#预定义常量)
     -   [SQLSRV 函数](/book/sqlsrv.html#SQLSRV%20函数)
--   [Sybase](/book/sybase.html)
-    -   [简介](/book/sybase.html#简介)
-    -   [安装／配置](/book/sybase.html#安装／配置)
-    -   [预定义常量](/book/sybase.html#预定义常量)
-    -   [Sybase 函数](/book/sybase.html#Sybase%20函数)
 -   [tokyo\_tyrant](/book/tokyo-tyrant.html) — tokyo\_tyrant
     -   [简介](/book/tokyo-tyrant.html#简介)
     -   [安装／配置](/book/tokyo-tyrant.html#安装／配置)

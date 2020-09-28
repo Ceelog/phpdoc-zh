@@ -465,9 +465,12 @@ class="function">mcrypt\_decrypt</span>进行代替。
 
 #### 所有 ext/mssql 函数
 
-所有 <a href="/book/mssql.html" class="link">ext/mssql</a>
-函数已被删掉了。 替代品的列表，参见
-<a href="/book/mssql.html#简介" class="link">MSSQL 介绍</a>。
+所有 <a href="" class="link">ext/mssql</a> 函数已被移除。
+
+-   <a href="/book/pdo.html#MS%20SQL%20Server%20(PDO)" class="link">PDO_SQLSRV</a>
+-   <a href="/book/pdo.html#ODBC%20and%20DB2%20(PDO)" class="link">PDO_ODBC</a>
+-   <a href="/book/sqlsrv.html" class="link">SQLSRV</a>
+-   <a href="/book/uodbc.html" class="link">Unified ODBC API</a>
 
 #### <a href="/book/intl.html" class="link">intl</a> 别名
 

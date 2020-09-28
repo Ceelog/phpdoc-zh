@@ -22,8 +22,6 @@ Variable handling
     -   [get\_resource\_type](/ref/var.html#get_resource_type) —
         返回资源（resource）类型
     -   [gettype](/ref/var.html#gettype) — 获取变量的类型
-    -   [import\_request\_variables](/ref/var.html#import_request_variables)
-        — 将 GET／POST／Cookie 变量导入到全局作用域中
     -   [intval](/ref/var.html#intval) — 获取变量的整数值
     -   [is\_array](/ref/var.html#is_array) — 检测变量是否是数组
     -   [is\_bool](/ref/var.html#is_bool) — 检测变量是否是布尔型

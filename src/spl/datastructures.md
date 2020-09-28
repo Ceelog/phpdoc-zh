@@ -3667,12 +3667,6 @@ var_dump($s[$o2]);
     NULL
     string(5) "hello"
 
-### 更新日志
-
-| 版本  | 说明                        |
-|-------|-----------------------------|
-| 5.3.0 | Added the `data` parameter. |
-
 ### 参见
 
 -   <span class="methodname">SplObjectStorage::detach</span>

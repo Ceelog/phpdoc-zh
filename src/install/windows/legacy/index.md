@@ -1072,26 +1072,33 @@ class="function">dl</span>来动态加载。
 
 PHP 扩展库的 DLL 文件都具有 *php\_* 前缀。
 
-很多扩展库都*内置于* Windows 版的 PHP
+很多扩展库都 *内置于* Windows 版的 PHP
 之中。这意味着要加载这些扩展库，额外的 DLL 文件和
 <a href="/ini/core.html#ini.extension" class="link">extension</a>
-配置指令都*不需要*。Windows 下的
-<a href="/install/windows/legacy/index.html#install.windows.legacy.extensions.overview" class="link">PHP 扩展库</a>列表列出了需要或曾经需要额外
-PHP DLL 文件的扩展库。下面是内置的扩展库列表：
+配置指令都 *不需要*。Windows 下的
+<a href="/install/windows/legacy/index.html#install.windows.legacy.extensions.overview" class="link">PHP 扩展库</a>
+列表列出了需要或曾经需要额外 PHP DLL
+文件的扩展库。下面是内置的扩展库列表（截止到 PHP 5.0.4）：
+<a href="/book/bc.html" class="link">BCMath</a>,
+<a href="/book/calendar.html" class="link">Calendar</a>,
+<a href="/book/com.html" class="link">COM</a>,
+<a href="/book/ctype.html" class="link">Ctype</a>,
+<a href="/book/dom.html" class="link">DOM</a>,
+<a href="/book/ftp.html" class="link">FTP</a>,
+<a href="/book/libxml.html" class="link">LibXML</a>,
+<a href="/book/iconv.html" class="link">Iconv</a>,
+<a href="/book/uodbc.html" class="link">ODBC</a>,
+<a href="/book/pcre.html" class="link">PCRE</a>,
+<a href="/book/session.html" class="link">Session</a>,
+<a href="/book/simplexml.html" class="link">SimpleXML</a>,
+<a href="/book/spl.html" class="link">SPL</a>,
+<a href="/book/sqlite.html" class="link">SQLite</a>,
+<a href="/book/wddx.html" class="link">WDDX</a>,
+<a href="/book/xml.html" class="link">XML</a> 和
+<a href="/book/zlib.html" class="link">Zlib</a>.
 
-PHP 4 中（截止到 PHP
-4.3.11）：<a href="/book/bc.html" class="link">BCMath</a>，<a href="/book/calendar.html" class="link">Caledar</a>，<a href="/book/com.html" class="link">COM</a>，<a href="/book/ctype.html" class="link">Ctype</a>，<a href="/book/ftp.html" class="link">FTP</a>，<a href="/set/mysqlinfo.html#Mysql（原始）" class="link">MySQL</a>，<a href="/book/uodbc.html" class="link">ODBC</a>，Overload，<a href="/book/pcre.html" class="link">PCRE</a>，<a href="/book/session.html" class="link">Session</a>，<a href="/book/tokenizer.html" class="link">Tokenizer</a>，<a href="/book/wddx.html" class="link">WDDX</a>，<a href="/book/xml.html" class="link">XML</a>
-和 <a href="/book/zlib.html" class="link">Zlib</a>。
-
-PHP 5 中（截止到
-5.0.4）有以下修改。新增内置：<a href="/book/dom.html" class="link">DOM</a>，<a href="/book/libxml.html" class="link">LibXML</a>，<a href="/book/iconv.html" class="link">Iconv</a>，<a href="/book/simplexml.html" class="link">SimpleXML</a>，<a href="/book/spl.html" class="link">SPL</a>
-和
-<a href="/book/sqlite.html" class="link">SQLite</a>。以下不再内置：<a href="/set/mysqlinfo.html#Mysql（原始）" class="link">MySQL</a>
-和 Overload。
-
-PHP 搜索扩展库的默认位置在 PHP 4 中是 `C:\php4\extensions`，在 PHP 5
-中是 `C:\php5`。要修改此项以符合用户自己的 PHP 设置，需要编辑 `php.ini`
-文件：
+PHP 搜索扩展库的默认位置在 `C:\php5`。要修改此项以符合用户自己的 PHP
+设置，需要编辑 `php.ini` 文件：
 
 -   需要修改
     <a href="/ini/core.html#ini.extension-dir" class="link">extension_dir</a>
@@ -1102,11 +1109,12 @@ PHP 搜索扩展库的默认位置在 PHP 4 中是 `C:\php4\extensions`，在 PH
     extension_dir = C:\php\extensions
     ```
 
--   要在 `php.ini` 中启用某扩展库，需要去掉该行 *extension=php\_\*.dll*
+-   要在 `php.ini` 中启用某扩展库，需要去掉 `php.ini` 文件中该行
+    *extension=php\_\*.dll*
     前的注释符号，将想要加载的扩展库前的分号（;）删除即可。
 
-    **示例 \#23 启用
-    <a href="/book/bzip2.html" class="link">Bzip2</a>扩展库**
+    **示例 \#23 在 Windows 下启用
+    <a href="/book/bzip2.html" class="link">Bzip2</a> 扩展库**
 
     ``` ini
     // 将这一行
@@ -1116,18 +1124,17 @@ PHP 搜索扩展库的默认位置在 PHP 4 中是 `C:\php4\extensions`，在 PH
     extension=php_bz2.dll
     ```
 
--   有些扩展库需要额外的 DLL 才能工作。其中一部分包括在发行包里，PHP 4
-    中在 `C:\php\dlls\` 目录下，PHP 5 中在主目录下，但还有一些，例如
-    Oracle（`php_oci8.dll`）所需要的 DLL 没有绑定在发行包里。如果安装
-    PHP 4，将绑定的 DLL 从 `C:\php\dlls` 拷贝到主目录 `C:\php`
-    中。别忘了将 `C:\php` 放到系统路径 `PATH` 中去（此过程在另外的
+-   有些扩展库需要额外的 DLL
+    才能工作。其中一部分包括在发行包里，在主目录下可以找到。但还有一些，例如
+    Oracle（`php_oci8.dll`）所需要的 DLL 没有绑定在发行包里。别忘了将
+    `C:\php` 放到系统路径 `PATH` 中去（此过程在另外的
     <a href="/faq/installation.html#faq.installation.addtopath" class="link">FAQ 条目</a>中有说明）。
 
 -   某些 DLL 没有绑定在 PHP 发行包中，详情见每个扩展库的文档页。此外有关
     PECL 的说明见手册页
     <a href="/install/pecl.html" class="link">PECL 扩展库安装</a>。在
-    PECL 中有日益增加数目巨大的 PHP
-    扩展库，这些扩展库需要<a href="/install/pecl/downloads.html" class="link">单独下载</a>。
+    PECL 中有日益增加数目巨大的 PHP 扩展库，这些扩展库需要
+    <a href="/install/pecl/downloads.html" class="link">单独下载</a>。
 
 > **Note**: <span class="simpara"> 如果运行服务器模块版的 PHP，在修改了
 > `php.ini` 之后别忘了重新启动 web 服务器以使其改动生效。 </span>
@@ -1137,59 +1144,50 @@ PHP 搜索扩展库的默认位置在 PHP 4 中是 `C:\php4\extensions`，在 PH
 | 扩展库               | 说明                                                                              | 注解                                                                                                                                           |
 |----------------------|-----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | php\_bz2.dll         | <a href="/book/bzip2.html" class="link">bzip2</a> 压缩函数                        | 无                                                                                                                                             |
-| php\_calendar.dll    | <a href="/book/calendar.html" class="link">Calendar</a> 日历转换函数              | 自 PHP 4.0.3 起内置                                                                                                                            |
-| php\_crack.dll       | <a href="/book/crack.html" class="link">Crack</a> 密码破解函数                    | 无                                                                                                                                             |
-| php\_ctype.dll       | <a href="/book/ctype.html" class="link">ctype</a> 家族函数                        | 自 PHP 4.3.0 起内置                                                                                                                            |
-| php\_curl.dll        | <a href="/book/curl.html" class="link">CURL</a>，客户端 URL 库函数                | 需要：`libeay32.dll`，`ssleay32.dll`（已附带）                                                                                                 |
+| php\_calendar.dll    | <a href="/book/calendar.html" class="link">Calendar</a> 日历转换函数              | 无                                                                                                                                             |
+| php\_ctype.dll       | <a href="/book/ctype.html" class="link">ctype</a> 家族函数                        | 无                                                                                                                                             |
+| php\_curl.dll        | <a href="/book/curl.html" class="link">CURL</a>，客户端 URL 库函数                | 需要：`libeay32.dll`，`ssleay32.dll`（已附带），在 OpenSSL 1.1 版本里需要：`libcrypto-*.dll` and `libssl-*.dll` (已附带)                       |
 | php\_dba.dll         | <a href="/book/dba.html" class="link">DBA</a>：数据库（dbm 风格）抽象层函数       | 无                                                                                                                                             |
 | php\_dbase.dll       | <a href="/book/dbase.html" class="link">dBase</a> 函数                            | 无                                                                                                                                             |
 | php\_dbx.dll         | <a href="/book/dbx.html" class="link">dbx</a> 函数                                | 无                                                                                                                                             |
-| php\_domxml.dll      | PHP 4 DOM XML 函数                                                                | PHP \<= 4.2.0 需要：`libxml2.dll`（已附带），PHP \>= 4.3.0 需要：`iconv.dll`（已附带）                                                         |
-| php\_dotnet.dll      | .NET 函数                                                                         | PHP \<= 4.1.1                                                                                                                                  |
 | php\_exif.dll        | <a href="/book/exif.html" class="link">EXIF</a> 函数                              | 需要 <a href="/book/mbstring.html" class="link">php_mbstring.dll</a>。并且在 `php.ini` 中，`php_exif.dll` 必须在 `php_mbstring.dll` *之后*加载 |
-| php\_fbsql.dll       | <a href="/book/fbsql.html" class="link">FrontBase</a> 函数                        | PHP \<= 4.2.0                                                                                                                                  |
+| php\_fbsql.dll       | <a href="/book/fbsql.html" class="link">FrontBase</a> 函数                        | 无                                                                                                                                             |
 | php\_fdf.dll         | <a href="/book/fdf.html" class="link">FDF</a>：表单数据格式化函数                 | 需要：`fdftk.dll`（已附带）                                                                                                                    |
 | php\_filepro.dll     | <a href="/book/filepro.html" class="link">filePro</a> 函数                        | 只读访问                                                                                                                                       |
-| php\_ftp.dll         | <a href="/book/ftp.html" class="link">FTP</a> 函数                                | 自 PHP 4.0.3 起内置                                                                                                                            |
-| php\_gd.dll          | <a href="/book/image.html" class="link">GD</a> 库图像函数                         | 在 PHP 4.3.2 中移除。此外注意在 GD1 中不能用真彩色函数，用 `php_gd2.dll`替代。                                                                 |
+| php\_ftp.dll         | <a href="/book/ftp.html" class="link">FTP</a> 函数                                | 无                                                                                                                                             |
 | php\_gd2.dll         | <a href="/book/image.html" class="link">GD</a> 库图像函数                         | GD2                                                                                                                                            |
 | php\_gettext.dll     | <a href="/book/gettext.html" class="link">Gettext</a> 函数                        | PHP \<= 4.2.0 需要 `gnu_gettext.dll`（已附带），PHP \>= 4.2.3 需要 `libintl-1.dll`， `iconv.dll`（已附带）                                     |
 | php\_hyperwave.dll   | HyperWave 函数                                                                    | 无                                                                                                                                             |
-| php\_iconv.dll       | <a href="/book/iconv.html" class="link">ICONV</a> 字符集转换                      | 需要：`iconv-1.3.dll`（已附带），PHP \>=4.2.1 需要 `iconv.dll`                                                                                 |
+| php\_iconv.dll       | <a href="/book/iconv.html" class="link">ICONV</a> 字符集转换                      | 需要：`iconv-1.3.dll`（已附带），`iconv.dll`                                                                                                   |
 | php\_ifx.dll         | <a href="/book/ifx.html" class="link">Informix</a> 函数                           | 需要：Informix 库                                                                                                                              |
 | php\_iisfunc.dll     | IIS 管理函数库                                                                    | 无                                                                                                                                             |
 | php\_imap.dll        | <a href="/book/imap.html" class="link">IMAP</a>，POP3 和 NNTP 函数                | 无                                                                                                                                             |
 | php\_ingres.dll      | <a href="/book/ingres.html" class="link">Ingres II</a> 函数                       | 需要：Ingres II 库                                                                                                                             |
 | php\_interbase.dll   | <a href="/book/ibase.html" class="link">InterBase</a> 函数                        | 需要：`gds32.dll`（已附带）                                                                                                                    |
-| php\_java.dll        | Java 函数                                                                         | PHP \<= 4.0.6 需要：`jvm.dll`（已附带）                                                                                                        |
-| php\_ldap.dll        | <a href="/book/ldap.html" class="link">LDAP</a> 函数                              | PHP \<= 4.2.0 需要 `libsasl.dll`（已附带），PHP \>= 4.3.0 需要 `libeay32.dll`，`ssleay32.dll`（已附带）                                        |
+| php\_ldap.dll        | <a href="/book/ldap.html" class="link">LDAP</a> 函数                              | 需要 ： `libeay32.dll`，`ssleay32.dll`（已附带）。在 OpenSSL 1.1 里需要： `libcrypto-*.dll` 和 `libssl-*.dll` (已附带)                         |
 | php\_mbstring.dll    | <a href="/book/mbstring.html" class="link">Multi-Byte String</a> 多字节字符串函数 | 无                                                                                                                                             |
 | php\_mcrypt.dll      | <a href="/book/mcrypt.html" class="link">Mcrypt 加密</a>函数                      | 需要：`libmcrypt.dll`                                                                                                                          |
-| php\_mhash.dll       | <a href="/book/mhash.html" class="link">Mhash</a> 函数                            | PHP \>= 4.3.0 需要：`libmhash.dll`（已附带）                                                                                                   |
+| php\_mhash.dll       | <a href="/book/mhash.html" class="link">Mhash</a> 函数                            | 需要：`libmhash.dll`（已附带）                                                                                                                 |
 | php\_mime\_magic.dll | <a href="/book/mime-magic.html" class="link">Mimetype</a> 函数                    | 需要：`magic.mime`（已附带）                                                                                                                   |
-| php\_ming.dll        | <a href="/book/ming.html" class="link">Ming</a> 函数（Flash）                     | 无                                                                                                                                             |
 | php\_msql.dll        | <a href="/book/msql.html" class="link">mSQL</a> 函数                              | 需要：`msql.dll`（已附带）                                                                                                                     |
-| php\_mssql.dll       | <a href="/book/mssql.html" class="link">MSSQL</a> 函数                            | 需要：`ntwdblib.dll`（已附带）                                                                                                                 |
-| php\_mysql.dll       | <a href="/set/mysqlinfo.html#Mysql（原始）" class="link">MySQL</a> 函数           | PHP \>= 5.0.0 需要 `libmysql.dll`（已附带）                                                                                                    |
-| php\_mysqli.dll      | <a href="/set/mysqlinfo.html#Mysqli" class="link">MySQLi</a> 函数                 | PHP \>= 5.0.0 需要 `libmysql.dll`（PHP \<= 5.0.2 中是 `libmysqli.dll`）（已附带）                                                              |
+| php\_mysql.dll       | <a href="/set/mysqlinfo.html#Mysql（原始）" class="link">MySQL</a> 函数           | 需要：`libmysql.dll`（已附带）                                                                                                                 |
+| php\_mysqli.dll      | <a href="/set/mysqlinfo.html#Mysqli" class="link">MySQLi</a> 函数                 | 需要：`libmysql.dll`（PHP \<= 5.0.2 中是 `libmysqli.dll`）（已附带）                                                                           |
 | php\_oci8.dll        | <a href="/book/oci8.html" class="link">Oracle 8</a> 函数                          | 需要：Oracle 8.1+ 客户端库                                                                                                                     |
 | php\_openssl.dll     | <a href="/book/openssl.html" class="link">OpenSSL</a> 函数                        | 需要：`libeay32.dll`（已附带）                                                                                                                 |
-| php\_overload.dll    | PHP 4 对象过载函数                                                                | 自 PHP 4.3.0 起内置，自 PHP 5.0.0 起移除                                                                                                       |
 | php\_pdf.dll         | <a href="/book/pdf.html" class="link">PDF</a> 函数                                | 无                                                                                                                                             |
 | php\_pgsql.dll       | <a href="/book/pgsql.html" class="link">PostgreSQL</a> 函数                       | 无                                                                                                                                             |
 | php\_shmop.dll       | <a href="/book/shmop.html" class="link">Shared Memory</a> 共享内存函数            | 无                                                                                                                                             |
 | php\_snmp.dll        | <a href="/book/snmp.html" class="link">SNMP</a> 函数                              | 仅用于 Windows NT！                                                                                                                            |
-| php\_soap.dll        | <a href="/book/soap.html" class="link">SOAP</a> 函数                              | PHP \>= 5.0.0                                                                                                                                  |
+| php\_soap.dll        | <a href="/book/soap.html" class="link">SOAP</a> 函数                              | 无                                                                                                                                             |
 | php\_sockets.dll     | <a href="/book/sockets.html" class="link">Socket</a> 函数                         | 无                                                                                                                                             |
-| php\_sybase\_ct.dll  | <a href="/book/sybase.html" class="link">Sybase</a> 函数                          | 需要：Sybase 客户端库                                                                                                                          |
-| php\_tidy.dll        | <a href="/book/tidy.html" class="link">Tidy</a> 函数                              | PHP \>= 5.0.0                                                                                                                                  |
-| php\_tokenizer.dll   | <a href="/book/tokenizer.html" class="link">Tokenizer</a> 函数                    | 自 PHP 4.3.0 起内置                                                                                                                            |
+| php\_tidy.dll        | <a href="/book/tidy.html" class="link">Tidy</a> 函数                              | 无                                                                                                                                             |
+| php\_tokenizer.dll   | <a href="/book/tokenizer.html" class="link">Tokenizer</a> 函数                    | 无                                                                                                                                             |
 | php\_w32api.dll      | W32api 函数                                                                       | 无                                                                                                                                             |
-| php\_xmlrpc.dll      | <a href="/book/xmlrpc.html" class="link">XML-RPC</a> 函数                         | PHP \>= 4.2.1 需要 `iconv.dll`（已附带）                                                                                                       |
-| php\_xslt.dll        | XSLT 函数                                                                         | PHP \<= 4.2.0 需要 `sablot.dll`，`expat.dll`（已附带）。PHP \>= 4.2.1 需要 `sablot.dll`，`expat.dll`，`iconv.dll`（已附带）。                  |
+| php\_xmlrpc.dll      | <a href="/book/xmlrpc.html" class="link">XML-RPC</a> 函数                         | 需要：`iconv.dll`（已附带）                                                                                                                    |
+| php\_xslt.dll        | XSLT 函数                                                                         | 需要：`sablot.dll`，`expat.dll`， `iconv.dll`（已附带）。                                                                                      |
 | php\_yaz.dll         | <a href="/book/yaz.html" class="link">YAZ</a> 函数                                | 需要：`yaz.dll`（已附带）                                                                                                                      |
 | php\_zip.dll         | <a href="/book/zip.html" class="link">Zip 文件</a>函数                            | 只读访问                                                                                                                                       |
-| php\_zlib.dll        | <a href="/book/zlib.html" class="link">ZLib</a> 压缩函数                          | 自 PHP 4.3.0 起内置                                                                                                                            |
+| php\_zlib.dll        | <a href="/book/zlib.html" class="link">ZLib</a> 压缩函数                          | 无                                                                                                                                             |
 
 ### PHP 在 Microsoft Windows 下的命令行方式
 

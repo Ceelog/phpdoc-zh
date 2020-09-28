@@ -208,12 +208,6 @@ echo $compressed;
 ?>
 ```
 
-### 更新日志
-
-| 版本  | 说明                        |
-|-------|-----------------------------|
-| 5.4.0 | Added `encoding` parameter. |
-
 ### 参见
 
 -   <span class="function">gzdeflate</span>
@@ -301,12 +295,6 @@ echo $compressed;
 ?>
 ```
 
-### 更新日志
-
-| 版本  | 说明                        |
-|-------|-----------------------------|
-| 5.4.0 | Added `encoding` parameter. |
-
 ### 参见
 
 -   <span class="function">gzinflate</span>
@@ -361,12 +349,6 @@ checksum.
 ### 返回值
 
 The encoded string, or **`FALSE`** if an error occurred.
-
-### 更新日志
-
-| 版本  | 说明                                                         |
-|-------|--------------------------------------------------------------|
-| 5.4.0 | **`FORCE_DEFLATE`** now generates RFC 1950 compliant output. |
 
 ### 范例
 

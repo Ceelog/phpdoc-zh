@@ -4,19 +4,11 @@
 -   <span
     class="simpara"><a href="/book/apache.html" class="xref">Apache</a></span>
 -   <span
-    class="simpara"><a href="/book/apc.html" class="xref">APC</a></span>
--   <span
     class="simpara"><a href="/book/apcu.html" class="xref">APCu</a></span>
--   <span
-    class="simpara"><a href="/book/apd.html" class="xref">APD</a></span>
 -   <span
     class="simpara"><a href="/book/array.html" class="xref">数组</a></span>
 -   <span
-    class="simpara"><a href="/book/bbcode.html" class="xref">BBCode</a></span>
--   <span
     class="simpara"><a href="/book/bc.html" class="xref">BC Math</a></span>
--   <span
-    class="simpara"><a href="/book/bcompiler.html" class="xref">bcompiler</a></span>
 -   <span
     class="simpara"><a href="/book/blenc.html" class="xref">BLENC</a></span>
 -   <span
@@ -24,19 +16,13 @@
 -   <span
     class="simpara"><a href="/book/bzip2.html" class="xref">Bzip2</a></span>
 -   <span
-    class="simpara"><a href="/book/cairo.html" class="xref">Cairo</a></span>
--   <span
     class="simpara"><a href="/book/calendar.html" class="xref">Calendar</a></span>
--   <span
-    class="simpara"><a href="/book/chdb.html" class="xref">chdb</a></span>
 -   <span
     class="simpara"><a href="/book/classkit.html" class="xref">Classkit</a></span>
 -   <span
     class="simpara"><a href="/book/classobj.html" class="xref">类/对象</a></span>
 -   <span
     class="simpara"><a href="/book/com.html" class="xref">COM</a></span>
--   <span
-    class="simpara"><a href="/book/crack.html" class="xref">Crack</a></span>
 -   <span
     class="simpara"><a href="/book/csprng.html" class="xref">CSPRNG</a></span>
 -   <span
@@ -45,8 +31,6 @@
     class="simpara"><a href="/book/cubrid.html" class="xref">CUBRID</a></span>
 -   <span
     class="simpara"><a href="/book/curl.html" class="xref">cURL</a></span>
--   <span
-    class="simpara"><a href="/book/cyrus.html" class="xref">Cyrus</a></span>
 -   <span
     class="simpara"><a href="/book/datetime.html" class="xref">日期/时间</a></span>
 -   <span
@@ -82,8 +66,6 @@
 -   <span
     class="simpara"><a href="/book/expect.html" class="xref">Expect</a></span>
 -   <span
-    class="simpara"><a href="/book/fam.html" class="xref">FAM</a></span>
--   <span
     class="simpara"><a href="/book/fann.html" class="xref">FANN</a></span>
 -   <span
     class="simpara"><a href="/book/fann.html" class="xref">FANN</a></span>
@@ -101,8 +83,6 @@
     class="simpara"><a href="/book/filter.html" class="xref">Filter</a></span>
 -   <span
     class="simpara"><a href="/book/fpm.html" class="xref">FastCGI 进程管理器</a></span>
--   <span
-    class="simpara"><a href="/book/fribidi.html" class="xref">FriBiDi</a></span>
 -   <span
     class="simpara"><a href="/book/ftp.html" class="xref">FTP</a></span>
 -   <span
@@ -122,25 +102,15 @@
 -   <span
     class="simpara"><a href="/book/gnupg.html" class="xref">GnuPG</a></span>
 -   <span
-    class="simpara"><a href="/book/gupnp.html" class="xref">Gupnp</a></span>
--   <span
-    class="simpara"><a href="/book/haru.html" class="xref">haru</a></span>
--   <span
     class="simpara"><a href="/book/hash.html" class="xref">Hash</a></span>
 -   <span
     class="simpara"><a href="/book/hrtime.html" class="xref">HRTime</a></span>
--   <span
-    class="simpara"><a href="/book/htscanner.html" class="xref">htscanner</a></span>
--   <span
-    class="simpara"><a href="/book/hwapi.html" class="xref">Hyperwave API</a></span>
 -   <span
     class="simpara"><a href="/book/ibase.html" class="xref">Firebird/InterBase</a></span>
 -   <span
     class="simpara"><a href="/book/ibm-db2.html" class="xref">IBM DB2</a></span>
 -   <span
     class="simpara"><a href="/book/iconv.html" class="xref">iconv</a></span>
--   <span
-    class="simpara"><a href="/book/id3.html" class="xref">ID3</a></span>
 -   <span
     class="simpara"><a href="/book/ifx.html" class="xref">Informix</a></span>
 -   <span
@@ -151,8 +121,6 @@
     class="simpara"><a href="/book/imagick.html" class="xref">ImageMagick</a></span>
 -   <span
     class="simpara"><a href="/book/imap.html" class="xref">IMAP</a></span>
--   <span
-    class="simpara"><a href="/book/inclued.html" class="xref">inclued</a></span>
 -   <span
     class="simpara"><a href="/book/info.html" class="xref">PHP 选项/信息</a></span>
 -   <span
@@ -166,15 +134,7 @@
 -   <span
     class="simpara"><a href="/book/judy.html" class="xref">Judy</a></span>
 -   <span
-    class="simpara"><a href="/book/kadm5.html" class="xref">KADM5</a></span>
--   <span
-    class="simpara"><a href="/book/ktaglib.html" class="xref">KTaglib</a></span>
--   <span
-    class="simpara"><a href="/book/lapack.html" class="xref">Lapack</a></span>
--   <span
     class="simpara"><a href="/book/ldap.html" class="xref">LDAP</a></span>
--   <span
-    class="simpara"><a href="/book/libevent.html" class="xref">Libevent</a></span>
 -   <span
     class="simpara"><a href="/book/libxml.html" class="xref">libxml</a></span>
 -   <span
@@ -194,8 +154,6 @@
 -   <span
     class="simpara"><a href="/book/mcrypt.html" class="xref">Mcrypt</a></span>
 -   <span
-    class="simpara"><a href="/book/mcve.html" class="xref">MCVE</a></span>
--   <span
     class="simpara"><a href="/book/memcache.html" class="xref">Memcache</a></span>
 -   <span
     class="simpara"><a href="/book/memcached.html" class="xref">Memcached</a></span>
@@ -206,11 +164,7 @@
 -   <span
     class="simpara"><a href="/book/mime-magic.html" class="xref">Mimetype</a></span>
 -   <span
-    class="simpara"><a href="/book/ming.html" class="xref">Ming</a></span>
--   <span
     class="simpara"><a href="/book/misc.html" class="xref">Misc.</a></span>
--   <span
-    class="simpara"><a href="/book/mnogosearch.html" class="xref">mnoGoSearch</a></span>
 -   <span
     class="simpara"><a href="/book/mongo.html" class="xref">Mongo</a></span>
 -   <span
@@ -220,11 +174,7 @@
 -   <span
     class="simpara"><a href="/book/mqseries.html" class="xref">mqseries</a></span>
 -   <span
-    class="simpara"><a href="/book/msession.html" class="xref">Msession</a></span>
--   <span
     class="simpara"><a href="/book/msql.html" class="xref">mSQL</a></span>
--   <span
-    class="simpara"><a href="/book/mssql.html" class="xref">Mssql</a></span>
 -   <span
     class="simpara"><a href="/set/mysqlinfo.html#Mysql（原始）" class="xref"></a></span>
 -   <span
@@ -244,21 +194,13 @@
 -   <span
     class="simpara"><a href="/book/ncurses.html" class="xref">Ncurses</a></span>
 -   <span
-    class="simpara"><a href="/book/net-gopher.html" class="xref">Gopher</a></span>
--   <span
     class="simpara"><a href="/book/network.html" class="xref">网络</a></span>
--   <span
-    class="simpara"><a href="/book/newt.html" class="xref">Newt</a></span>
--   <span
-    class="simpara"><a href="/book/nis.html" class="xref">YP/NIS</a></span>
 -   <span
     class="simpara"><a href="/book/nsapi.html" class="xref">NSAPI</a></span>
 -   <span
     class="simpara"><a href="/book/oauth.html" class="xref">OAuth</a></span>
 -   <span
     class="simpara"><a href="/book/oci8.html" class="xref">OCI8</a></span>
--   <span
-    class="simpara"><a href="/book/oggvorbis.html" class="xref">oggvorbis</a></span>
 -   <span
     class="simpara"><a href="/book/opcache.html" class="xref">OPcache</a></span>
 -   <span
@@ -271,8 +213,6 @@
     class="simpara"><a href="/book/paradox.html" class="xref">Paradox</a></span>
 -   <span
     class="simpara"><a href="/book/parle.html" class="xref">Parle</a></span>
--   <span
-    class="simpara"><a href="/book/parsekit.html" class="xref">Parsekit</a></span>
 -   <span
     class="simpara"><a href="/book/password.html" class="xref">密码散列算法</a></span>
 -   <span
@@ -312,8 +252,6 @@
 -   <span
     class="simpara"><a href="/book/phar.html" class="xref">Phar</a></span>
 -   <span
-    class="simpara"><a href="/book/phdfs.html" class="xref">Phdfs</a></span>
--   <span
     class="simpara"><a href="/book/posix.html" class="xref">POSIX</a></span>
 -   <span
     class="simpara"><a href="/book/proctitle.html" class="xref">Proctitle</a></span>
@@ -338,19 +276,9 @@
 -   <span
     class="simpara"><a href="/book/regex.html" class="xref">POSIX Regex</a></span>
 -   <span
-    class="simpara"><a href="/book/rpmreader.html" class="xref">RPM Reader</a></span>
--   <span
     class="simpara"><a href="/book/rrd.html" class="xref">RRD</a></span>
 -   <span
-    class="simpara"><a href="/book/runkit.html" class="xref">runkit</a></span>
--   <span
-    class="simpara"><a href="/book/sam.html" class="xref">SAM</a></span>
--   <span
-    class="simpara"><a href="/book/sca.html" class="xref">SCA</a></span>
--   <span
     class="simpara"><a href="/book/scoutapm.html" class="xref">ScoutAPM</a></span>
--   <span
-    class="simpara"><a href="/book/scream.html" class="xref">scream</a></span>
 -   <span
     class="simpara"><a href="/book/sdo.html" class="xref">SDO</a></span>
 -   <span
@@ -363,8 +291,6 @@
     class="simpara"><a href="/book/sem.html" class="xref">Semaphore</a></span>
 -   <span
     class="simpara"><a href="/book/session.html" class="xref">Sessions</a></span>
--   <span
-    class="simpara"><a href="/book/session-pgsql.html" class="xref">Session PgSQL</a></span>
 -   <span
     class="simpara"><a href="/book/shmop.html" class="xref">Shared Memory</a></span>
 -   <span
@@ -396,8 +322,6 @@
 -   <span
     class="simpara"><a href="/book/ssh2.html" class="xref">SSH2</a></span>
 -   <span
-    class="simpara"><a href="/book/stats.html" class="xref">Statistics</a></span>
--   <span
     class="simpara"><a href="/book/stomp.html" class="xref">Stomp</a></span>
 -   <span
     class="simpara"><a href="/book/stream.html" class="xref">Streams</a></span>
@@ -408,11 +332,7 @@
 -   <span
     class="simpara"><a href="/book/svn.html" class="xref">SVN</a></span>
 -   <span
-    class="simpara"><a href="/book/swish.html" class="xref">Swish</a></span>
--   <span
     class="simpara"><a href="/book/swoole.html" class="xref">Swoole</a></span>
--   <span
-    class="simpara"><a href="/book/sybase.html" class="xref">Sybase</a></span>
 -   <span
     class="simpara"><a href="/book/sync.html" class="xref">Sync</a></span>
 -   <span
@@ -442,13 +362,9 @@
 -   <span
     class="simpara"><a href="/book/varnish.html" class="xref">Varnish</a></span>
 -   <span
-    class="simpara"><a href="/book/vpopmail.html" class="xref">vpopmail</a></span>
--   <span
     class="simpara"><a href="/book/wddx.html" class="xref">WDDX</a></span>
 -   <span
     class="simpara"><a href="/book/weakref.html" class="xref">Weakref</a></span>
--   <span
-    class="simpara"><a href="/book/win32ps.html" class="xref">win32ps</a></span>
 -   <span
     class="simpara"><a href="/book/win32service.html" class="xref">win32service</a></span>
 -   <span

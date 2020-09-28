@@ -3,11 +3,6 @@
 
 **目录**
 
--   [BBCode](/book/bbcode.html) — Bulletin Board Code
-    -   [简介](/intro/bbcode.html)
-    -   [安装／配置](/bbcode/setup.html)
-    -   [预定义常量](/bbcode/constants.html)
-    -   [BBCode 函数](/ref/bbcode.html)
 -   [CommonMark](/book/cmark.html) — CommonMark
     -   [简介](/intro/cmark.html)
     -   [安装／配置](/cmark/setup.html)

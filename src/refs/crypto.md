@@ -3,12 +3,6 @@
 
 **目录**
 
--   [Crack](/book/crack.html) — Cracklib
-    -   [简介](/intro/crack.html)
-    -   [安装／配置](/crack/setup.html)
-    -   [预定义常量](/crack/constants.html)
-    -   [范例](/crack/examples.html)
-    -   [Crack 函数](/ref/crack.html)
 -   [CSPRNG](/book/csprng.html)
     -   [简介](/intro/csprng.html)
     -   [安装／配置](/csprng/setup.html)

@@ -111,8 +111,8 @@ class="function">mysqli\_real\_escape\_string</span>，PostgreSQL 是
 DBMS 没有一个转义函数，并且使用 *\\*
 来转义特殊字符，你可以使用这个函数。
 仅仅是为了获取插入数据库的数据，额外的 *\\* 并不会插入。 当 PHP 指令
-<a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>
-被设置成 *on* 时，意味着插入 *'* 时将使用 *'* 进行转义。
+magic\_quotes\_sybase 被设置成 *on* 时，意味着插入 *'* 时将使用 *'*
+进行转义。
 
 PHP 5.4 之前 PHP 指令
 <a href="/info/setup.html#" class="link">magic_quotes_gpc</a> 默认是
@@ -1569,14 +1569,6 @@ configuration option may be set incorrectly for the given input.
 ### 返回值
 
 Returns the decoded string.
-
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                                                  |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.6.0 | The default value for the `encoding` parameter was changed to be the value of the <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a> configuration option. |
-| 5.4.0 | Default encoding changed from ISO-8859-1 to UTF-8.                                                                                                                                    |
-| 5.4.0 | The constants **`ENT_HTML401`**, **`ENT_XML1`**, **`ENT_XHTML`** and **`ENT_HTML5`** were added.                                                                                      |
 
 ### 范例
 
@@ -3745,7 +3737,8 @@ class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$raw_output`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
 
-利用<a href="http://www.faqs.org/rfcs/rfc3174" class="link external">» 美国安全散列算法 1</a>，计算并返回由
+利用
+<a href="http://www.faqs.org/rfcs/rfc3174" class="link external">» 美国安全散列算法 1</a>，计算并返回由
 `filename` 指定的文件的 sha1 散列值。该散列值是一个 40
 字符长度的十六进制数字。
 
@@ -3778,12 +3771,6 @@ foreach(glob('/home/Kalle/myproject/*.php') as $ent)
 }
 ?>
 ```
-
-### 更新日志
-
-| 版本  | 说明                                                                                       |
-|-------|--------------------------------------------------------------------------------------------|
-| 5.1.0 | 改变函数以使用流 API。这意味着可以使用包装器，比如 *sha1\_file('http://example.com/..')*。 |
 
 ### 参见
 
@@ -4916,12 +4903,6 @@ class="methodparam"><span class="type">string</span> `$charlist`</span>
 
 返回一个数组或整型数，这取决于 `format` 参数的选择。
 
-### 更新日志
-
-| 版本  | 说明                   |
-|-------|------------------------|
-| 5.1.0 | 新增 `charlist` 参数。 |
-
 ### 范例
 
 **示例 \#1 <span class="function">str\_word\_count</span> 范例**
@@ -5443,7 +5424,7 @@ class="type">string</span> `$str`</span> )
 
 > **Note**:
 >
-> 如果 <a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>
+> 如果 magic\_quotes\_sybase
 > 项开启，反斜线将被去除，但是两个反斜线将会被替换成一个。
 
 一个使用范例是使用 PHP 检测
@@ -6823,10 +6804,9 @@ class="methodparam"><span class="type">bool</span>
 
 ### 更新日志
 
-| 版本   | 说明                           |
-|--------|--------------------------------|
-| 5.5.11 | `length` 可以是 *0*。          |
-| 5.1.0  | 允许使用负数的 `offset` 参数。 |
+| 版本          | 说明                               |
+|---------------|------------------------------------|
+| 7.2.18, 7.3.5 | `offset` 现在可能等于 `main_str`。 |
 
 ### 范例
 
@@ -6864,12 +6844,12 @@ class="type">int</span> `$offset`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$length`</span> \]\] )
 
-<span class="function">substr\_count</span> 返回子字符串`needle`
+<span class="function">substr\_count</span> 返回子字符串 `needle`
 在字符串 `haystack` 中出现的次数。注意 `needle` 区分大小写。
 
 > **Note**:
 >
-> 该函数不会计算重叠字符串。参见下面的例子。
+> 该函数不会计算重叠字符串！参见下面的例子。
 
 ### 参数
 
@@ -6889,14 +6869,13 @@ class="type">int</span> `$length`</span> \]\] )
 
 ### 返回值
 
-该函数返回<span class="type">整型</span>。
+该函数返回 <span class="type">整型</span>。
 
 ### 更新日志
 
 | 版本  | 说明                                  |
 |-------|---------------------------------------|
 | 7.1.0 | 开始支持负数的 `offset` 和 `length`。 |
-| 5.1.0 | 新增 `offset` 和 `length` 参数。      |
 
 ### 范例
 

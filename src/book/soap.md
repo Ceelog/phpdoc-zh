@@ -269,12 +269,6 @@ response is not expected.
 
 The XML SOAP response.
 
-### 更新日志
-
-| 版本  | 说明                               |
-|-------|------------------------------------|
-| 5.1.3 | The `one_way` parameter was added. |
-
 ### 范例
 
 **示例 \#1 <span class="function">SoapClient::\_\_doRequest</span>
@@ -1031,13 +1025,6 @@ in non-WSDL mode.
 A <span class="classname">SoapFault</span> exception will be thrown if
 the `wsdl` URI cannot be loaded.
 
-### 更新日志
-
-| 版本  | 说明                      |
-|-------|---------------------------|
-| 5.5.0 | New *ssl\_method* option. |
-| 5.4.0 | New *keep\_alive* option. |
-
 ### 范例
 
 **示例 \#1 <span class="function">SoapClient::SoapClient</span>
@@ -1651,12 +1638,6 @@ $server = new SoapServer("books.wsdl", array('classmap' => array('book' => "MyBo
 
 ?>
 ```
-
-### 更新日志
-
-| 版本  | 说明                        |
-|-------|-----------------------------|
-| 5.2.0 | Added the *typemap* option. |
 
 ### 参见
 

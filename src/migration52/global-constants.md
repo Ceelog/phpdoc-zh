@@ -44,7 +44,7 @@ PHP Core:
 -   <span class="simpara"> **`GMP_VERSION`** </span> <span
     class="simpara"> Added in PHP 5.2.2. </span>
 
-<a href="/ref/ming.html" class="link">ming</a>:
+ming:
 
 -   <span class="simpara"> **`SWFTEXTFIELD_USEFONT`** </span>
 -   <span class="simpara"> **`SWFTEXTFIELD_AUTOSIZE`** </span>

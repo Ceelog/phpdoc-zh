@@ -24,9 +24,8 @@ class="function">addslashes</span> 作用完全相同。
     PHP 中的默认值为 *off*。 </span> <span class="simpara"> 参见 <span
     class="function">set\_magic\_quotes\_runtime</span> 和 <span
     class="function">get\_magic\_quotes\_runtime</span>。 </span>
--   <span class="simpara">
-    <a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>
-    </span> <span class="simpara">
+-   <span class="simpara"> magic\_quotes\_sybase </span> <span
+    class="simpara">
     如果打开的话，将会使用单引号对单引号进行转义而非反斜线。此选项会完全覆盖
     <a href="/info/setup.html#" class="link">magic_quotes_gpc</a>。如果同时打开两个选项的话，单引号将会被转义成
     *''*。而双引号、反斜线 和 NULL 字符将不会进行转义。 </span> <span

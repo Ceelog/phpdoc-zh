@@ -11,9 +11,7 @@ INI 文件处理的变化
 -   <span class="simpara">
     <a href="/info/setup.html#" class="link">magic_quotes_gpc</a> 、
     <a href="/info/setup.html#" class="link">magic_quotes_runtime</a>
-    以及
-    <a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>
-    </span>
+    以及 magic\_quotes\_sybase </span>
 -   <span class="simpara">
     <a href="/ini/core.html#ini.allow-call-time-pass-reference" class="link">allow_call_time_pass_reference</a>
     </span>

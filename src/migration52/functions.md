@@ -76,7 +76,7 @@ PHP Core:
 -   <span class="simpara"> <span class="function">mb\_strstr</span> -
     Finds first occurrence of a string within another </span>
 
-<a href="/ref/ming.html" class="link">ming</a> (As of PHP 5.2.1):
+ming (As of PHP 5.2.1):
 
 -   <span class="simpara"> void ming\_setSWFCompression(int num) - Sets
     output compression </span>

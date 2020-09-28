@@ -4024,12 +4024,6 @@ try {
     string(5) "World"
     string(83) "<?php var_dump("Second"); Phar::mapPhar("brandnewphar.phar"); __HALT_COMPILER(); ?>"
 
-### 更新日志
-
-| 版本  | 说明                   |
-|-------|------------------------|
-| 5.4.0 | Added `len` parameter. |
-
 ### 参见
 
 -   <span class="function">Phar::getStub</span>
@@ -6581,12 +6575,6 @@ phar archive. This parameter is ignored.
 ### 错误／异常
 
 Throws <span class="classname">PharException</span> on all method calls
-
-### 更新日志
-
-| 版本  | 说明                   |
-|-------|------------------------|
-| 5.4.0 | Added `len` parameter. |
 
 ### 参见
 

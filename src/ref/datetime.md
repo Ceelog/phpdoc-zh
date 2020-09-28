@@ -609,12 +609,6 @@ The values of the array elements are either UNIX timestamps, **`FALSE`**
 if the sun is below the respective zenith for the whole day, or
 **`TRUE`** if the sun is above the respective zenith for the whole day.
 
-### 更新日志
-
-| 版本  | 说明                                                      |
-|-------|-----------------------------------------------------------|
-| 5.2.2 | The order of `latitude` and `longitude` has been swapped. |
-
 ### 范例
 
 **示例 \#1 A <span class="function">date\_sun\_info</span> example**
@@ -2468,13 +2462,19 @@ strtotime
 
 <span class="type">int</span> <span class="methodname">strtotime</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$time`</span> \[, <span class="methodparam"><span
+`$datetime`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$now`<span class="initializer"> =
 time()</span></span> \] )
 
 本函数预期接受一个包含美国英语日期格式的字符串并尝试将其解析为 Unix
-时间戳（自 January 1 1970 00:00:00 GMT 起的秒数），其值相对于 `now`
-参数给出的时间，如果没有提供此参数则用系统当前时间。
+时间戳（自 January 1 1970 00:00:00 UTC 起的秒数），其值相对于 `now`
+参数给出的时间，如果没有提供 `now` 参数则用系统当前时间。
+
+**Warning**
+
+本函数返回的 Unix 时间戳不包含时区信息，为了实现对 "日期/时间"
+进行计算，推荐使用功能更强大的 <span
+class="classname">DateTimeImmutable</span> 类。
 
 本函数将使用 `TZ` 环境变量（如果有的话）来计算时间戳。自 PHP 5.1.0
 起有更容易的方法来定义时区用于所有的日期／时间函数。此过程在 <span
@@ -2482,7 +2482,7 @@ class="function">date\_default\_timezone\_get</span> 函数页面中有说明。
 
 ### 参数
 
-`time`  
+`datetime`  
 日期/时间字符串。正确格式的说明详见
 <a href="/datetime/formats.html" class="link">日期与时间格式</a>。
 
@@ -2500,18 +2500,6 @@ class="function">date\_default\_timezone\_get</span> 函数页面中有说明。
 错误，如果使用系统设定值或 `TZ` 环境变量，则会引发 **`E_STRICT`** 或
 **`E_WARNING`** 消息。参见 <span
 class="function">date\_default\_timezone\_set</span>。
-
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                                                                                                                                                                                       |
-|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0 | Prior to PHP 5.3.0, relative time formats supplied to the `time` argument of <span class="function">strtotime</span> such as *this week*, *previous week*, *last week*, and *next week* were interpreted to mean a 7 day period relative to the current date/time, rather than a week period of *Monday* through *Sunday*. |
-| 5.3.0 | 在 PHP 5.3.0 之前， *24:00* 不是一个有效的格式，并且 <span class="function">strtotime</span> 会返回 **`FALSE`**。                                                                                                                                                                                                          |
-| 5.2.7 | In PHP 5 prior to 5.2.7, requesting a given occurrence of a given weekday in a month where that weekday was the first day of the month would incorrectly add one week to the returned timestamp. This has been corrected in 5.2.7 and later versions.                                                                      |
-| 5.1.0 | 失败时返回 **`FALSE`**，不再是 *-1*。                                                                                                                                                                                                                                                                                      |
-| 5.1.0 | 现在发布 **`E_STRICT`** 和 **`E_NOTICE`** 时区错误。                                                                                                                                                                                                                                                                       |
-| 5.0.2 | 在 PHP 5 中到 5.0.2 之前，*"now"* 和其它相对时间从今天午夜起错误计算了。这和正确从当前时间起计算的其它版本不同。                                                                                                                                                                                                           |
-| 5.0.0 | Microseconds began to be allowed, but they are ignored.                                                                                                                                                                                                                                                                    |
 
 ### 范例
 
@@ -2535,7 +2523,7 @@ echo strtotime("last Monday"), "\n";
 <?php
 $str = 'Not Good';
 
-// previous to PHP 5.1.0 you would compare with -1, instead of false
+// PHP 5.1.0 之前的版本中和应该改成和 -1 进行比较
 if (($timestamp = strtotime($str)) === false) {
     echo "The string ($str) is bogus";
 } else {
@@ -2554,42 +2542,38 @@ if (($timestamp = strtotime($str)) === false) {
 
 > **Note**:
 >
-> 有效的时间戳通常从 Fri, 13 Dec 1901 20:45:54 GMT 到 Tue, 19 Jan 2038
-> 03:14:07 GMT（对应于 32 位有符号整数的最小值和最大值）。
+> 有效的时间戳通常从 Fri, 13 Dec 1901 20:45:54 UTC 到 Tue, 19 Jan 2038
+> 03:14:07 UTC（对应于 32 位有符号整数的最小值和最大值）。
 >
 > PHP 5.1.0
 > 之前，不是所有的平台都支持负的时间戳，那么日记范围就被限制为不能早于
 > Unix 纪元。这意味着在 1970 年 1 月 1 日之前的日期将不能用在
 > Windows，一些 Linux 版本，以及几个其它的操作系统中。
 >
-> For 64-bit versions of PHP, the valid range of a timestamp is
-> effectively infinite, as 64 bits can represent approximately 293
-> billion years in either direction.
+> 在 64 位的 PHP 版本中，时间戳的有效范围实际上是无限的，因为 64
+> 位可以覆盖最多 2930 亿年的范围。
 
 > **Note**:
 >
-> Dates in the *m/d/y* or *d-m-y* formats are disambiguated by looking
-> at the separator between the various components: if the separator is a
-> slash (*/*), then the American *m/d/y* is assumed; whereas if the
-> separator is a dash (*-*) or a dot (*.*), then the European *d-m-y*
-> format is assumed. If, however, the year is given in a two digit
-> format and the separator is a dash (*-*, the date string is parsed as
-> *y-m-d*.
+> 不同的分隔符，比如 *m/d/y* 或 *d-m-y* 会影响到解析结果：若以反斜线
+> (*/*) 为分隔，将会做为美洲日期 *m/d/y* 来解析；而当分隔符为短横线
+> (*-*) 或点 (*.*) 时，则将做为欧洲日期 *d-m-y*
+> 格式来解析。当年份只有两位数字，且分隔符为短横线
+> (*-*时，日期字符串将被解析为 *y-m-d* 格式。
 >
-> To avoid potential ambiguity, it's best to use ISO 8601 (*YYYY-MM-DD*)
-> dates or <span class="methodname">DateTime::createFromFormat</span>
-> when possible.
+> 为了避免潜在的歧义，最好使用 ISO 8601 标准格式 (*YYYY-MM-DD*) 或 <span
+> class="methodname">DateTime::createFromFormat</span> 来表达。
 
 > **Note**:
 >
-> Using this function for mathematical operations is not advisable. It
-> is better to use <span class="methodname">DateTime::add</span> and
-> <span class="methodname">DateTime::sub</span> in PHP 5.3 and later, or
-> <span class="methodname">DateTime::modify</span> in PHP 5.2.
+> 不建议使用此函数对日期进行数学运算。在 PHP 5.3 及以后版本中，推荐使用
+> <span class="methodname">DateTime::add</span> 和 <span
+> class="methodname">DateTime::sub</span> 函数，PHP 5.2 中可以使用 <span
+> class="methodname">DateTime::modify</span>。
 
 ### 参见
 
--   <a href="/datetime/formats.html" class="link">Date and Time Formats</a>
+-   <a href="/datetime/formats.html" class="link">日期时间格式</a>
 -   <span class="methodname">DateTime::createFromFormat</span>
 -   <span class="function">checkdate</span>
 -   <span class="function">strptime</span>

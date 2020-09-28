@@ -48,8 +48,8 @@ Torben Wilson, Jim Winstead, Jared Wyles 和 Jeroen van Wolffelaar.
 --------------------
 
 PHP 手册中文翻译工作是一项长期而又艰巨的工作。
-目前翻译小组工作基本停滞中，如果您有兴趣加入，可以发邮件到
-avenger(AT)php.net 了解如何参与。
+目前翻译小组工作基本停滞中，如果您有兴趣加入，请参阅
+<a href="https://github.com/bolechen/phpdoc-zh" class="link external">» 中文手册翻译指南</a>。
 
 中文翻译贡献者名单
 

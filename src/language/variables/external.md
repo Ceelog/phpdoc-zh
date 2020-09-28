@@ -71,8 +71,7 @@
 > 会自动转换成 (It\\'s
 > \\"PHP!\\")。十多年前对数据库的插入需要如此转义，如今已经过时了，应该关闭。参见
 > <span class="function">addslashes</span>，<span
-> class="function">stripslashes</span> 和
-> <a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>。
+> class="function">stripslashes</span> 和 magic\_quotes\_sybase。
 
 PHP
 也懂得表单变量上下文中的数组（参见<a href="/faq/html.html" class="link">相关常见问题</a>）。例如可以将相关的变量编成组，或者用此特性从多选输入框中取得值。例如，将一个表单

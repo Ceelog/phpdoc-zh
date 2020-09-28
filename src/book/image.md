@@ -176,20 +176,6 @@
     -   [imagepng](/ref/image.html#imagepng) — 以 PNG
         格式将图像输出到浏览器或文件
     -   [imagepolygon](/ref/image.html#imagepolygon) — 画一个多边形
-    -   [imagepsbbox](/ref/image.html#imagepsbbox) — 给出一个使用
-        PostScript Type1 字体的文本方框
-    -   [imagepsencodefont](/ref/image.html#imagepsencodefont) —
-        改变字体中的字符编码矢量
-    -   [imagepsextendfont](/ref/image.html#imagepsextendfont) —
-        扩充或精简字体
-    -   [imagepsfreefont](/ref/image.html#imagepsfreefont) — 释放一个
-        PostScript Type 1 字体所占用的内存
-    -   [imagepsloadfont](/ref/image.html#imagepsloadfont) —
-        从文件中加载一个 PostScript Type 1 字体
-    -   [imagepsslantfont](/ref/image.html#imagepsslantfont) —
-        倾斜某字体
-    -   [imagepstext](/ref/image.html#imagepstext) — 用 PostScript Type1
-        字体把文本字符串画在图像上
     -   [imagerectangle](/ref/image.html#imagerectangle) — 画一个矩形
     -   [imageresolution](/ref/image.html#imageresolution) — Get or set
         the resolution of the image

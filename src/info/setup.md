@@ -127,8 +127,7 @@ $\_GET、$\_POST 和 $\_COOKIE 超全局变量）
 
 > **Note**:
 >
-> 如果 <a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>
-> 也是 ON，它会完全覆盖 magic\_quotes\_gpc。
+> 如果 magic\_quotes\_sybase 也是 ON，它会完全覆盖 magic\_quotes\_gpc。
 > 两个指令都启用意味着只有单引号被转义为 *''*。 双引号、反斜杠和 NUL's
 > 不会被转义。
 
@@ -140,8 +139,7 @@ See also <span class="function">get\_magic\_quotes\_gpc</span>
 
 如果启用了
 `magic_quotes_runtime`，大多数返回任何形式外部数据的函数，包括数据库和文本段将会用反斜线转义引号。
-如果启用了
-<a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>，单引号会被单引号转义而不是反斜线。
+如果启用了 magic\_quotes\_sybase，单引号会被单引号转义而不是反斜线。
 
 受 `magic_quotes_runtime` 影响的函数（不包括 PECL 里的函数）：
 

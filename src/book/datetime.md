@@ -3445,12 +3445,6 @@ End timestamp.
 Returns numerically indexed array containing associative array with all
 transitions on success 或者在失败时返回 **`FALSE`**.
 
-### 更新日志
-
-| 版本  | 说明                                                         |
-|-------|--------------------------------------------------------------|
-| 5.3.0 | The optional `timestampBegin` and `timestampEnd` were added. |
-
 ### 范例
 
 **示例 \#1 A <span class="function">timezone\_transitions\_get</span>

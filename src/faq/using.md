@@ -294,9 +294,6 @@ class="function">ini\_set</span>来更改这项设置。不管
 <a href="http://www.fpdf.org/" class="link external">» FPDF</a> 和
 <a href="http://www.tcpdf.org/" class="link external">» TCPDF</a> 模块。
 
-这里还有一个使用了免费的 libHaru 库的
-<a href="/book/haru.html" class="link">Haru</a> 扩展。
-
 <!-- -->
 
 **我试着在用户自定义函数中访问一个标准的 CGI 变量（例如 `$DOCUMENT_ROOT` 或 `$HTTP_REFERER`），但是找不到，哪里出了错？**  

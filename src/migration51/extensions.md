@@ -19,16 +19,16 @@ Extension Community Library (PECL), at
 | ext/cpdf                                                                 | <a href="/ref/pdf.html" class="link">pecl/pdflib</a>                                                                                    |
 | <a href="/book/dbx.html#dbx%20函数" class="link">ext/dbx</a>             | pecl/dbx                                                                                                                                |
 | <a href="/ref/dio.html" class="link">ext/dio</a>                         | pecl/dio                                                                                                                                |
-| <a href="/ref/fam.html" class="link">ext/fam</a>                         | Not actively maintained                                                                                                                 |
+| ext/fam                                                                  | Not actively maintained                                                                                                                 |
 | <a href="/book/ingres.html#Ingres%20函数" class="link">ext/ingres_ii</a> | pecl/ingres                                                                                                                             |
 | ext/ircg                                                                 | Not actively maintained                                                                                                                 |
-| <a href="/ref/mcve.html" class="link">ext/mcve</a>                       | pecl/mcve                                                                                                                               |
-| <a href="/ref/mnogosearch.html" class="link">ext/mnogosearch</a>         | Not actively maintained                                                                                                                 |
+| ext/mcve                                                                 | pecl/mcve                                                                                                                               |
+| ext/mnogosearch                                                          | Not actively maintained                                                                                                                 |
 | ext/oracle                                                               | <a href="/book/oci8.html#OCI8%20函数" class="link">ext/oci8</a> or <a href="/book/pdo.html#Oracle%20(PDO)" class="link">ext/pdo_oci</a> |
 | ext/ovrimos                                                              | Not actively maintained                                                                                                                 |
 | ext/pfpro                                                                | Not actively maintained                                                                                                                 |
 | ext/w32api                                                               | <a href="https://pecl.php.net/package/ffi" class="link external">» pecl/ffi</a>                                                         |
-| <a href="/ref/nis.html" class="link">ext/yp</a>                          | Not actively maintained                                                                                                                 |
+| ext/yp                                                                   | Not actively maintained                                                                                                                 |
 | ext/activescript                                                         | <a href="https://pecl.php.net/package/activescript" class="link external">» pecl/activescript</a>                                       |
 
 Modules in PECL that are not actively maintained (i.e. have not been

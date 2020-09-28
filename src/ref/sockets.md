@@ -541,12 +541,6 @@ inserted.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
-### 更新日志
-
-| 版本  | 说明                                                 |
-|-------|------------------------------------------------------|
-| 5.3.0 | This function is now available on Windows platforms. |
-
 ### 范例
 
 **示例 \#1 <span class="function">socket\_create\_pair</span> example**

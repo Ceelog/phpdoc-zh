@@ -24,7 +24,6 @@
     -   [Mongo](/book/mongo.html) — MongoDB 驱动（旧版）
     -   [MongoDB](/set/mongodb.html) — MongoDB driver
     -   [mSQL](/book/msql.html)
-    -   [Mssql](/book/mssql.html) — Microsoft SQL Server
     -   [MySQL](/set/mysqlinfo.html) — MySQL Drivers and Plugins
     -   [OCI8](/book/oci8.html) — Oracle OCI8
     -   [Paradox](/book/paradox.html) — Paradox File Access
@@ -33,5 +32,4 @@
     -   [SQLite3](/book/sqlite3.html) — SQLite3
     -   [SQLSRV](/book/sqlsrv.html) — Microsoft SQL Server Driver for
         PHP
-    -   [Sybase](/book/sybase.html)
     -   [tokyo\_tyrant](/book/tokyo-tyrant.html) — tokyo\_tyrant

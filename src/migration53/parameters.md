@@ -42,7 +42,7 @@ PHP 核心:
     class="function">stream\_set\_write\_buffer</span>
     使用用户空间流包裹器. </span>
 
-<a href="/book/sybase.html" class="link">sybase_ct</a>:
+sybase\_ct:
 
 -   <span class="simpara"> <span
     class="function">sybase\_connect</span> - 新增 `new` 参数. </span>

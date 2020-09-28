@@ -599,12 +599,6 @@ If `is_prefix` is **`TRUE`**, `ns` will be regarded as a prefix. If
 Returns a <span class="classname">SimpleXMLElement</span> element,
 whether the node has children or not.
 
-### 更新日志
-
-| 版本  | 说明                                          |
-|-------|-----------------------------------------------|
-| 5.2.0 | The optional parameter `is_prefix` was added. |
-
 ### 范例
 
 **示例 \#1 Traversing a *children()* pseudo-array**
@@ -962,12 +956,6 @@ var_dump($namespaces);
       ["a"]=>
       string(23) "http://example.org/addr"
     }
-
-### 更新日志
-
-| 版本  | 说明                         |
-|-------|------------------------------|
-| 5.4.0 | Added `from_root` parameter. |
 
 ### 参见
 

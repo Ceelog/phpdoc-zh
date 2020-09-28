@@ -3101,12 +3101,6 @@ echo $doc->saveHTML();
 ?>
 ```
 
-### 更新日志
-
-| 版本  | 说明                       |
-|-------|----------------------------|
-| 5.4.0 | Added `options` parameter. |
-
 ### 参见
 
 -   <span class="methodname">DOMDocument::loadHTMLFile</span>
@@ -3169,12 +3163,6 @@ $doc->loadHTMLFile("filename.html");
 echo $doc->saveHTML();
 ?>
 ```
-
-### 更新日志
-
-| 版本  | 说明                       |
-|-------|----------------------------|
-| 5.4.0 | Added `options` parameter. |
 
 ### 参见
 
@@ -3304,12 +3292,6 @@ registered class extending `baseclass` will be removed.
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
-
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                     |
-|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.2.2 | Prior to 5.2.2, a previously registered `extendedclass` had to be unregistered before being able to register a new class extending the same `baseclass`. |
 
 ### 范例
 
@@ -3509,12 +3491,6 @@ supported.
 
 Returns the number of bytes written or **`FALSE`** if an error occurred.
 
-### 更新日志
-
-| 版本  | 说明                          |
-|-------|-------------------------------|
-| 5.1.0 | Added the `options` parameter |
-
 ### 范例
 
 **示例 \#1 Saving a DOM tree into a file**
@@ -3570,12 +3546,6 @@ Optional parameter to output a subset of the document.
 ### 返回值
 
 Returns the HTML, or **`FALSE`** if an error occurred.
-
-### 更新日志
-
-| 版本  | 说明                            |
-|-------|---------------------------------|
-| 5.3.6 | The `node` parameter was added. |
 
 ### 范例
 
@@ -3704,12 +3674,6 @@ Returns the XML, or **`FALSE`** if an error occurred.
 
 **`DOM_WRONG_DOCUMENT_ERR`**  
 Raised if `node` is from another document.
-
-### 更新日志
-
-| 版本  | 说明                          |
-|-------|-------------------------------|
-| 5.1.0 | Added the `options` parameter |
 
 ### 范例
 
@@ -8418,12 +8382,6 @@ given XPath `expression`.
 If the `expression` is malformed or the `contextnode` is invalid, <span
 class="methodname">DOMXPath::evaluate</span> returns **`FALSE`**.
 
-### 更新日志
-
-| 版本  | 说明                                      |
-|-------|-------------------------------------------|
-| 5.3.3 | The `registerNodeNS` parameter was added. |
-
 ### 范例
 
 **示例 \#1 Getting the count of all the english books**
@@ -8497,12 +8455,6 @@ class="classname">DOMNodeList</span>.
 
 If the `expression` is malformed or the `contextnode` is invalid, <span
 class="methodname">DOMXPath::query</span> returns **`FALSE`**.
-
-### 更新日志
-
-| 版本  | 说明                                      |
-|-------|-------------------------------------------|
-| 5.3.3 | The `registerNodeNS` parameter was added. |
 
 ### 范例
 

@@ -3112,14 +3112,6 @@ Throws an <span class="classname">UnexpectedValueException</span> if the
 Throws a <span class="classname">RuntimeException</span> if the `path`
 is an empty string.
 
-### 更新日志
-
-| 版本  | 说明                                                                                                                         |
-|-------|------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0 | Throws <span class="classname">UnexpectedValueException</span> if the `path` cannot be opened.                               |
-| 5.1.3 | Throws <span class="classname">RuntimeException</span> if the `path` is an empty string.                                     |
-| 5.1.0 | Throws <span class="classname">RuntimeException</span> on error. Previously, threw <span class="classname">Exception</span>. |
-
 ### 范例
 
 **示例 \#1 A <span

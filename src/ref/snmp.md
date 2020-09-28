@@ -178,12 +178,6 @@ class="methodparam"><span class="type">int</span> `$oid_format`</span> )
 此函数是该函数的别名： <span
 class="function">snmp\_set\_oid\_output\_format</span>.
 
-### 更新日志
-
-| 版本  | 说明                                                                                           |
-|-------|------------------------------------------------------------------------------------------------|
-| 5.2.0 | This function is now an alias of <span class="function">snmp\_set\_oid\_output\_format</span>. |
-
 ### 参见
 
 -   <span class="function">snmp\_set\_oid\_output\_format</span>
@@ -371,28 +365,6 @@ class="function">snmp\_set\_valueretrieval</span>**
 
 ?>
 ```
-
-### 更新日志
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>版本</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>5.4.0</td>
-<td><p>Constants <strong><code>SNMP_VALUE_PLAIN</code></strong> or <strong><code>SNMP_VALUE_LIBRARY</code></strong> may be combined with <strong><code>SNMP_VALUE_OBJECT</code></strong> resulting different way of representing contents of <code class="parameter">value</code> array element in return value of GET-function. If no <strong><code>SNMP_VALUE_{PLAIN,LIBRARY}</code></strong> constant is accompanying <strong><code>SNMP_VALUE_OBJECT</code></strong>, <strong><code>SNMP_VALUE_LIBRARY</code></strong> is used.</p>
-<p>Prior to 5.4.0 <strong><code>SNMP_VALUE_OBJECT</code></strong> effecively meant <strong><code>SNMP_VALUE_OBJECT</code></strong>|<strong><code>SNMP_VALUE_PLAIN</code></strong>.</p></td>
-</tr>
-</tbody>
-</table>
 
 ### 参见
 

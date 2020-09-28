@@ -50,11 +50,10 @@ The domain name encoded in ASCII-compatible form, 或者在失败时返回
 
 ### 更新日志
 
-| 版本               | 说明                                                                                                                        |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| 7.4.0              | The default value of `variant` is now **`INTL_IDNA_VARIANT_UTS46`** instead of the deprecated **`INTL_IDNA_VARIANT_2003`**. |
-| 7.2.0              | **`INTL_IDNA_VARIANT_2003`** has been deprecated; use **`INTL_IDNA_VARIANT_UTS46`** instead.                                |
-| 5.4.0/PECL 2.0.0b1 | Added the parameters `variant` and `idna_info`; UTS \#46 support (requires ICU ≥ 4.6).                                      |
+| 版本  | 说明                                                                                                                        |
+|-------|-----------------------------------------------------------------------------------------------------------------------------|
+| 7.4.0 | The default value of `variant` is now **`INTL_IDNA_VARIANT_UTS46`** instead of the deprecated **`INTL_IDNA_VARIANT_2003`**. |
+| 7.2.0 | **`INTL_IDNA_VARIANT_2003`** has been deprecated; use **`INTL_IDNA_VARIANT_UTS46`** instead.                                |
 
 ### 范例
 
@@ -128,11 +127,10 @@ The domain name in Unicode, encoded in UTF-8, 或者在失败时返回
 
 ### 更新日志
 
-| 版本               | 说明                                                                                                                        |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| 7.4.0              | The default value of `variant` is now **`INTL_IDNA_VARIANT_UTS46`** instead of the deprecated **`INTL_IDNA_VARIANT_2003`**. |
-| 7.2.0              | **`INTL_IDNA_VARIANT_2003`** has been deprecated; use **`INTL_IDNA_VARIANT_UTS46`** instead.                                |
-| 5.4.0/PECL 2.0.0b1 | Added the parameters `variant` and `idna_info`; UTS \#46 support (requires ICU ≥ 4.6).                                      |
+| 版本  | 说明                                                                                                                        |
+|-------|-----------------------------------------------------------------------------------------------------------------------------|
+| 7.4.0 | The default value of `variant` is now **`INTL_IDNA_VARIANT_UTS46`** instead of the deprecated **`INTL_IDNA_VARIANT_2003`**. |
+| 7.2.0 | **`INTL_IDNA_VARIANT_2003`** has been deprecated; use **`INTL_IDNA_VARIANT_UTS46`** instead.                                |
 
 ### 范例
 

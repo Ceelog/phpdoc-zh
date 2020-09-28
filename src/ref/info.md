@@ -1329,9 +1329,7 @@ $sql = "INSERT INTO lastnames (lastname) VALUES ('$lastname')";
 
 > **Note**:
 >
-> 如果指令
-> <a href="/book/sybase.html#" class="link">magic_quotes_sybase</a> 为
-> ON，它会完全覆盖
+> 如果指令 magic\_quotes\_sybase 为 ON，它会完全覆盖
 > <a href="/info/setup.html#" class="link">magic_quotes_gpc</a>。
 > 所以即使 <span class="function">get\_magic\_quotes\_gpc</span> 返回
 > **`TRUE`**，双引号、反斜杠或 NUL 都不会被转义。 只有单引号会被转义。
@@ -2337,20 +2335,6 @@ echo ini_get('display_errors');
 -   <span class="function">ini\_restore</span>
 -   <a href="/configuration/changes.html" class="link">如何改变配置选项</a>
 
-magic\_quotes\_runtime
-======================
-
-别名 <span class="function">set\_magic\_quotes\_runtime</span>
-
-**Warning**
-
-This alias was *DEPRECATED* in PHP 5.3.0, and *REMOVED* as of PHP 7.0.0.
-
-### 说明
-
-此函数是该函数的别名： <span
-class="function">set\_magic\_quotes\_runtime</span>
-
 main
 ====
 
@@ -2580,55 +2564,6 @@ if ($filelist = php_ini_scanned_files()) {
 -   <span class="function">ini\_set</span>
 -   <span class="function">phpinfo</span>
 -   <span class="function">php\_ini\_loaded\_file</span>
-
-php\_logo\_guid
-===============
-
-获取 logo 的 guid
-
-### 说明
-
-<span class="type">string</span> <span
-class="methodname">php\_logo\_guid</span> ( <span
-class="methodparam">void</span> )
-
-此函数能够返回用于显示 PHP logo 内置图像的 ID。 图像仅在
-<a href="/ini/core.html#ini.expose-php" class="link">expose_php</a>
-启用时显示。
-
-**Warning**
-
-自 PHP 5.5.0 起，已经*废弃*并*移除*此函数。
-
-### 返回值
-
-返回 *PHPE9568F34-D428-11d2-A769-00AA001ACF42*.
-
-### 更新日志
-
-| 版本  | 说明                                                          |
-|-------|---------------------------------------------------------------|
-| 5.5.0 | <span class="function">php\_logo\_guid</span> 从 PHP 中移除。 |
-
-### 范例
-
-**示例 \#1 <span class="function">php\_logo\_guid</span> 例子**
-
-``` php
-<?php
-
-echo '<img src="' . $_SERVER['PHP_SELF'] .
-     '?=' . php_logo_guid() . '" alt="PHP Logo !" />';
-
-?>
-```
-
-### 参见
-
--   <span class="function">phpinfo</span>
--   <span class="function">phpversion</span>
--   <span class="function">phpcredits</span>
--   <span class="function">zend\_logo\_guid</span>
 
 php\_sapi\_name
 ===============
@@ -3224,82 +3159,6 @@ set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 -   <span class="function">restore\_include\_path</span>
 -   <span class="function">include</span>
 
-set\_magic\_quotes\_runtime
-===========================
-
-设置当前 magic\_quotes\_runtime 配置选项的激活状态
-
-**Warning**
-
-This function was *DEPRECATED* in PHP 5.3.0, and *REMOVED* as of PHP
-7.0.0.
-
-### 说明
-
-<span class="type">bool</span> <span
-class="methodname">set\_magic\_quotes\_runtime</span> ( <span
-class="methodparam"><span class="type">bool</span> `$new_setting`</span>
-)
-
-设置当前
-<a href="/info/setup.html#" class="link">magic_quotes_runtime</a>
-配置选项的激活状态。
-
-### 错误／异常
-
-自 PHP 5.3 起，该函数已经被弃用，执行它的时候会抛出 E\_DEPRECATED 异常。
-自 PHP 5.4 起，尝试开启 magic quotes 时该函数会产生一个 E\_CORE\_ERROR
-错误。
-
-### 参数
-
-`new_setting`  
-关闭是 **`FALSE`**，开启是 **`TRUE`**。
-
-### 返回值
-
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
-
-### 范例
-
-**示例 \#1 <span class="function">set\_magic\_quotes\_runtime</span>
-例子**
-
-``` php
-<?php
-// 创建临时文件指针
-$fp = tmpfile();
-
-// 写入一些数据
-fwrite($fp, '\'PHP\' is a Recursive acronym');
-
-// 没有 magic_quotes_runtime
-rewind($fp);
-set_magic_quotes_runtime(false);
-
-echo 'Without magic_quotes_runtime: ' . fread($fp, 64), PHP_EOL;
-
-// 有 magic_quotes_runtime
-rewind($fp);
-set_magic_quotes_runtime(true);
-
-echo 'With magic_quotes_runtime: ' . fread($fp, 64), PHP_EOL;
-
-// 清理
-fclose($fp);
-?>
-```
-
-以上例程会输出：
-
-    Without magic_quotes_runtime: 'PHP' is a Recursive acronym
-    With magic_quotes_runtime: \'PHP\' is a Recursive acronym
-
-### 参见
-
--   <span class="function">get\_magic\_quotes\_gpc</span>
--   <span class="function">get\_magic\_quotes\_runtime</span>
-
 set\_time\_limit
 ================
 
@@ -3482,50 +3341,6 @@ if (version_compare(PHP_VERSION, '5.0.0', '<')) {
 -   <span class="function">php\_uname</span>
 -   <span class="function">function\_exists</span>
 
-zend\_logo\_guid
-================
-
-获取 Zend guid
-
-### 说明
-
-<span class="type">string</span> <span
-class="methodname">zend\_logo\_guid</span> ( <span
-class="methodparam">void</span> )
-
-该函数返回了一个 ID，能够使用内置的图像来显示 Zend logo。
-
-**Warning**
-
-自 PHP 5.5.0 起，已经*废弃*并*移除*此函数。
-
-### 返回值
-
-返回 *PHPE9568F35-D428-11d2-A769-00AA001ACF42*.
-
-### 更新日志
-
-| 版本  | 说明                                                             |
-|-------|------------------------------------------------------------------|
-| 5.5.0 | <span class="function">zend\_logo\_guid</span> 从 PHP 中移除了。 |
-
-### 范例
-
-**示例 \#1 <span class="function">zend\_logo\_guid</span> 例子**
-
-``` php
-<?php
-
-echo '<img src="' . $_SERVER['PHP_SELF'] .
-     '?=' . zend_logo_guid() . '" alt="Zend Logo !" />';
-
-?>
-```
-
-### 参见
-
--   <span class="function">php\_logo\_guid</span>
-
 zend\_thread\_id
 ================
 
@@ -3660,8 +3475,6 @@ echo "Zend engine version: " . zend_version();
 -   [ini\_get](/ref/info.html#ini_get) — 获取一个配置选项的值
 -   [ini\_restore](/ref/info.html#ini_restore) — 恢复配置选项的值
 -   [ini\_set](/ref/info.html#ini_set) — 为一个配置选项设置值
--   [magic\_quotes\_runtime](/ref/info.html#magic_quotes_runtime) — 别名
-    set\_magic\_quotes\_runtime
 -   [main](/ref/info.html#main) — 虚拟的main
 -   [memory\_get\_peak\_usage](/ref/info.html#memory_get_peak_usage) —
     返回分配给 PHP 内存的峰值
@@ -3671,7 +3484,6 @@ echo "Zend engine version: " . zend_version();
     取得已加载的 php.ini 文件的路径
 -   [php\_ini\_scanned\_files](/ref/info.html#php_ini_scanned_files) —
     返回从额外 ini 目录里解析的 .ini 文件列表
--   [php\_logo\_guid](/ref/info.html#php_logo_guid) — 获取 logo 的 guid
 -   [php\_sapi\_name](/ref/info.html#php_sapi_name) — 返回 web 服务器和
     PHP 之间的接口类型
 -   [php\_uname](/ref/info.html#php_uname) — 返回运行 PHP
@@ -3684,15 +3496,12 @@ echo "Zend engine version: " . zend_version();
     include\_path 配置选项的值
 -   [set\_include\_path](/ref/info.html#set_include_path) — 设置
     include\_path 配置选项
--   [set\_magic\_quotes\_runtime](/ref/info.html#set_magic_quotes_runtime)
-    — 设置当前 magic\_quotes\_runtime 配置选项的激活状态
 -   [set\_time\_limit](/ref/info.html#set_time_limit) —
     设置脚本最大执行时间
 -   [sys\_get\_temp\_dir](/ref/info.html#sys_get_temp_dir) —
     返回用于临时文件的目录
 -   [version\_compare](/ref/info.html#version_compare) — 对比两个「PHP
     规范化」的版本数字字符串
--   [zend\_logo\_guid](/ref/info.html#zend_logo_guid) — 获取 Zend guid
 -   [zend\_thread\_id](/ref/info.html#zend_thread_id) —
     返回当前线程的唯一识别符
 -   [zend\_version](/ref/info.html#zend_version) — 获取当前 Zend

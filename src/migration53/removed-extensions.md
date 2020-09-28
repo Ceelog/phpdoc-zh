@@ -12,16 +12,13 @@
     </span>
 -   <span class="simpara">
     <a href="/book/fdf.html" class="link">fdf</a> - 被保持 </span>
--   <span class="simpara">
-    <a href="/book/ming.html" class="link">ming</a> - 被保持 </span>
+-   <span class="simpara"> ming - 被保持 </span>
 -   <span class="simpara">
     <a href="/book/msql.html" class="link">msql</a> - 不再被保持 </span>
 -   <span class="simpara">
     <a href="/book/ncurses.html" class="link">ncurses</a> - 被保存
     </span>
--   <span class="simpara">
-    <a href="/book/sybase.html" class="link">sybase</a> - 停用; 使用
-    <a href="/book/sybase.html" class="link">sybase_ct</a> 扩展代替.
+-   <span class="simpara"> sybase - 停用; 使用 sybase\_ct 扩展代替。
     </span>
 -   <span class="simpara">
     <a href="/book/mhash.html" class="link">mhash</a> - 停用; 使用

@@ -511,7 +511,7 @@ Regardless of the setting, `$HTTP_RAW_POST_DATA` is not available with
 
 See also: <a href="/info/setup.html#" class="link">magic_quotes_gpc</a>,
 <a href="/info/setup.html#" class="link">magic_quotes_runtime</a>, and
-<a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>.
+magic\_quotes\_sybase.
 
 Paths and Directories
 ---------------------
@@ -675,9 +675,8 @@ See also: <a href="/info/setup.html#" class="link">enable_dl</a>, and
 Which dynamically loadable extensions to load when PHP starts up.
 
 `zend_extension` <span class="type">string</span>  
-Name of dynamically loadable Zend extension (for example
-<a href="/book/apd.html" class="link">APD</a>) to load when PHP starts
-up.
+Name of dynamically loadable Zend extension (for example XDebug) to load
+when PHP starts up.
 
 `zend_extension_debug` <span class="type">string</span>  
 Variant of

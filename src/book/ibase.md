@@ -2846,12 +2846,6 @@ sets" (this occurs when you try use some character with accents) when
 using this and after <span class="function">ibase\_query</span> you must
 set the character set (i.e. ISO8859\_1 or your current character set).
 
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                 |
-|-------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.1 | On success the function now returns **`TRUE`** if there were no affected rows, where it previously returned *0* (a zero followed by an empty space). |
-
 ### 范例
 
 **示例 \#1 <span class="function">ibase\_query</span> example**

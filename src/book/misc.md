@@ -34,8 +34,6 @@
     -   [ignore\_user\_abort](/ref/misc.html#ignore_user_abort) —
         设置客户端断开连接时是否中断脚本的执行
     -   [pack](/ref/misc.html#pack) — 将数据打包成二进制字符串
-    -   [php\_check\_syntax](/ref/misc.html#php_check_syntax) —
-        检查PHP的语法（并执行）指定的文件
     -   [php\_strip\_whitespace](/ref/misc.html#php_strip_whitespace) —
         返回删除注释和空格后的PHP源码
     -   [sapi\_windows\_cp\_conv](/ref/misc.html#sapi_windows_cp_conv) —

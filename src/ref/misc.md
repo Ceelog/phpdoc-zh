@@ -986,73 +986,6 @@ values with the same byte representation as the desired unsigned value.
 
 -   <span class="function">unpack</span>
 
-php\_check\_syntax
-==================
-
-检查PHP的语法（并执行）指定的文件
-
-### 说明
-
-<span class="type">bool</span> <span
-class="methodname">php\_check\_syntax</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`&$error_message`</span> \] )
-
-对指定的 `filename` 进行语法检查，检测脚本的错误。
-
-此函数除了会执行（但不会输出）`filename`，其他与
-<a href="/features/commandline.html" class="link">命令行</a>中使用**php
--l** 相似。
-
-例如，如果函数在文件 `filename` 中被定义了，则该函数在执行<span
-class="function">php\_check\_syntax</span>后可用。但是`filename`输出内容不会被输出。
-
-> **Note**:
->
-> 因为某些技术原因，该函数已被弃用，并且从PHP中移除了。请以<a href="/features/commandline.html" class="link">commandline</a>使用
-> *php -l somefile.php*取而代之。
-
-### 参数
-
-`filename`  
-需要被检测的文件。
-
-`error_message`  
-如果使用了参数 `error_message`，它会包含语法检测出的错误信息。
-`error_message` 以
-<a href="/language/references.html" class="link">引用</a>方式传递。
-
-### 返回值
-
-如果语法检测通过返回 **`TRUE`**，未通过或者文件无法打开则返回
-**`FALSE`**。
-
-### 更新日志
-
-| 版本  | 说明                                                                                                           |
-|-------|----------------------------------------------------------------------------------------------------------------|
-| 5.0.5 | 函数从PHP中移除。                                                                                              |
-| 5.0.3 | <span class="function">php\_check\_syntax</span>之后调用 <span class="function">exit</span> 会导致一个段错误。 |
-| 5.0.1 | `error_message` 通过引用传递                                                                                   |
-
-### 范例
-
-``` examples
-php -l somefile.php
-```
-
-以上例程的输出类似于：
-
-``` examples
-PHP Parse error: unexpected T_STRING in /tmp/somefile.php on line 81
-```
-
-### 参见
-
--   <span class="function">include</span>
--   <span class="function">is\_readable</span>
-
 php\_strip\_whitespace
 ======================
 
@@ -2046,8 +1979,6 @@ echo date('h:i:s') . "\n";
 -   [ignore\_user\_abort](/ref/misc.html#ignore_user_abort) —
     设置客户端断开连接时是否中断脚本的执行
 -   [pack](/ref/misc.html#pack) — 将数据打包成二进制字符串
--   [php\_check\_syntax](/ref/misc.html#php_check_syntax) —
-    检查PHP的语法（并执行）指定的文件
 -   [php\_strip\_whitespace](/ref/misc.html#php_strip_whitespace) —
     返回删除注释和空格后的PHP源码
 -   [sapi\_windows\_cp\_conv](/ref/misc.html#sapi_windows_cp_conv) —

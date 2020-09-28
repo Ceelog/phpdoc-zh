@@ -68,8 +68,6 @@ PHP 选项和信息
     -   [ini\_get](/ref/info.html#ini_get) — 获取一个配置选项的值
     -   [ini\_restore](/ref/info.html#ini_restore) — 恢复配置选项的值
     -   [ini\_set](/ref/info.html#ini_set) — 为一个配置选项设置值
-    -   [magic\_quotes\_runtime](/ref/info.html#magic_quotes_runtime) —
-        别名 set\_magic\_quotes\_runtime
     -   [main](/ref/info.html#main) — 虚拟的main
     -   [memory\_get\_peak\_usage](/ref/info.html#memory_get_peak_usage)
         — 返回分配给 PHP 内存的峰值
@@ -79,8 +77,6 @@ PHP 选项和信息
         取得已加载的 php.ini 文件的路径
     -   [php\_ini\_scanned\_files](/ref/info.html#php_ini_scanned_files)
         — 返回从额外 ini 目录里解析的 .ini 文件列表
-    -   [php\_logo\_guid](/ref/info.html#php_logo_guid) — 获取 logo 的
-        guid
     -   [php\_sapi\_name](/ref/info.html#php_sapi_name) — 返回 web
         服务器和 PHP 之间的接口类型
     -   [php\_uname](/ref/info.html#php_uname) — 返回运行 PHP
@@ -93,16 +89,12 @@ PHP 选项和信息
         还原 include\_path 配置选项的值
     -   [set\_include\_path](/ref/info.html#set_include_path) — 设置
         include\_path 配置选项
-    -   [set\_magic\_quotes\_runtime](/ref/info.html#set_magic_quotes_runtime)
-        — 设置当前 magic\_quotes\_runtime 配置选项的激活状态
     -   [set\_time\_limit](/ref/info.html#set_time_limit) —
         设置脚本最大执行时间
     -   [sys\_get\_temp\_dir](/ref/info.html#sys_get_temp_dir) —
         返回用于临时文件的目录
     -   [version\_compare](/ref/info.html#version_compare) —
         对比两个「PHP 规范化」的版本数字字符串
-    -   [zend\_logo\_guid](/ref/info.html#zend_logo_guid) — 获取 Zend
-        guid
     -   [zend\_thread\_id](/ref/info.html#zend_thread_id) —
         返回当前线程的唯一识别符
     -   [zend\_version](/ref/info.html#zend_version) — 获取当前 Zend

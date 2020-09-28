@@ -1,5 +1,4 @@
-APCu is <a href="/book/apc.html" class="link">APC</a> stripped of opcode
-caching.
+APCu is APC stripped of opcode caching.
 
 The first APCu codebase was versioned 4.0.0, it was forked from the head
 of the APC master branch at the time.

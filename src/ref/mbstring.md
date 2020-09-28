@@ -737,12 +737,6 @@ Whether the returned entity reference should be in hexadecimal notation
 
 The converted <span class="type">string</span>.
 
-### 更新日志
-
-| 版本  | 说明                      |
-|-------|---------------------------|
-| 5.4.0 | Added `is_hex` parameter. |
-
 ### 范例
 
 **示例 \#1 `convmap` example**

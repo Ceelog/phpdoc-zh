@@ -3,11 +3,6 @@
 
 **目录**
 
--   [mnoGoSearch](/book/mnogosearch.html)
-    -   [简介](/intro/mnogosearch.html)
-    -   [安装／配置](/mnogosearch/setup.html)
-    -   [预定义常量](/mnogosearch/constants.html)
-    -   [mnoGoSearch 函数](/ref/mnogosearch.html)
 -   [Solr](/book/solr.html) — Apache Solr
     -   [简介](/intro/solr.html)
     -   [安装／配置](/solr/setup.html)
@@ -59,9 +54,3 @@
     -   [预定义常量](/sphinx/constants.html)
     -   [范例](/sphinx/examples.html)
     -   [SphinxClient](/class/sphinxclient.html) — SphinxClient 类
--   [Swish](/book/swish.html) — Swish Indexing
-    -   [简介](/intro/swish.html)
-    -   [安装／配置](/swish/setup.html)
-    -   [预定义常量](/swish/constants.html)
-    -   [范例](/swish/examples.html)
-    -   [Swish 函数](/ref/swish.html)

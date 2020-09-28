@@ -4306,7 +4306,7 @@ Features
 <tr class="even">
 <td>LOBs</td>
 <td>PDO_CUBRID supports BLOB/CLOB data type. The LOB in PDO is represented as a stream, so you can insert LOBs by binding a stream, and get LOBs by reading a stream returned by CUBRID PDO. For example:
-<div id="example-1078" class="example">
+<div id="example-984" class="example">
 <p><strong>示例 #1 Insert LOBs in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4322,7 +4322,7 @@ Features
 </div>
 </div>
 </div>
-<div id="example-1079" class="example">
+<div id="example-985" class="example">
 <p><strong>示例 #2 Fetch LOBs in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4363,7 +4363,7 @@ Features
 <tr class="even">
 <td>Collection Data Type</td>
 <td>PDO_CUBRID supports SET/MULTISET/SEQUENCE data type. If you don't specify data type, the default data type is char,for example:
-<div id="example-1080" class="example">
+<div id="example-986" class="example">
 <p><strong>示例 #3 Insert set in CUBRID PDO with default data type.</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4384,7 +4384,7 @@ Features
 </div>
 </div>
 </div>
-<div id="example-1081" class="example">
+<div id="example-987" class="example">
 <p><strong>示例 #4 Specify data type when insert set in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -5369,12 +5369,6 @@ $options = array(
 $dbh = new PDO($dsn, $username, $password, $options);
 ?>
 ```
-
-### 更新日志
-
-| 版本  | 说明                                           |
-|-------|------------------------------------------------|
-| 5.3.6 | Prior to version 5.3.6, *charset* was ignored. |
 
 ### 范例
 

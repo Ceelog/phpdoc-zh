@@ -18,21 +18,13 @@
 以下扩展库的行为――包括其函数的名称和所记载的有关此扩展库的其它任何东西――可能没有任何通知就在
 PHP 的未来版本中进行变更。使用这些扩展时风险自担。
 
--   <a href="/book/bcompiler.html" class="xref">bcompiler</a>
-
 -   <a href="/book/dbplus.html" class="xref">DB++</a>
-
--   <a href="/book/haru.html" class="xref">haru</a>
 
 -   <a href="/book/hash.html" class="xref">Hash</a>
 
 -   <a href="/book/imagick.html" class="xref">ImageMagick</a>
 
--   <a href="/book/ming.html" class="xref">Ming</a>
-
 -   <a href="/book/ncurses.html" class="xref">Ncurses</a>
-
--   <a href="/book/newt.html" class="xref">Newt</a>
 
 -   <a href="/book/paradox.html" class="xref">Paradox</a>
 
@@ -44,12 +36,6 @@ PHP 的未来版本中进行变更。使用这些扩展时风险自担。
 
 -   <a href="/book/ps.html" class="xref">PS</a>
 
--   <a href="/book/sca.html" class="xref">SCA</a>
-
 -   <a href="/book/sdodasrel.html" class="xref">SDO-DAS-Relational</a>
-
--   <a href="/book/swish.html" class="xref">Swish</a>
-
--   <a href="/book/vpopmail.html" class="xref">vpopmail</a>
 
 -   <a href="/book/xmlrpc.html" class="xref">XML-RPC</a>

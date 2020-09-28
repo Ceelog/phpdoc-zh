@@ -939,12 +939,6 @@ first character is "0", octal is assumed, otherwise decimal is assumed.
 PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
 之后，返回 <span class="classname">GMP</span> 对象。
 
-### 更新日志
-
-| 版本  | 说明                                                            |
-|-------|-----------------------------------------------------------------|
-| 5.3.2 | The `base` was extended from 2 to 36, to 2 to 62 and -2 to -36. |
-
 ### 注释
 
 > **Note**:
@@ -2413,12 +2407,6 @@ for the base are from 2 to 62 and -2 to -36.
 ### 返回值
 
 The number, as a <span class="type">string</span>.
-
-### 更新日志
-
-| 版本  | 说明                                                            |
-|-------|-----------------------------------------------------------------|
-| 5.3.2 | The `base` was extended from 2 to 36, to 2 to 62 and -2 to -36. |
 
 ### 注释
 

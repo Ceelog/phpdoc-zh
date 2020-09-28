@@ -5289,12 +5289,6 @@ The name of the function to reflect or a
 A <span class="classname">ReflectionException</span> if the `name`
 parameter does not contain a valid function.
 
-### 更新日志
-
-| 版本  | 说明                                                                              |
-|-------|-----------------------------------------------------------------------------------|
-| 5.3.0 | `name` can now be a <a href="/functions/anonymous.html" class="link">closure</a>. |
-
 ### 范例
 
 **示例 \#1 <span
@@ -10463,6 +10457,12 @@ echo $reflectionParam->getType();
 以上例程的输出类似于：
 
     string
+
+### 更新日志
+
+| 版本  | 说明                                                                              |
+|-------|-----------------------------------------------------------------------------------|
+| 7.1.0 | <span class="methodname">ReflectionType::\_\_toString</span> has been deprecated. |
 
 ### 参见
 

@@ -925,8 +925,8 @@ class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `&$count`</span> \]\]
 )
 
-这个函数的行为除了 可以指定一个 `callback` 替代 `replacement` 进行替换
-字符串的计算，其他方面等同于 <span
+这个函数的行为除了可以指定一个 `callback` 替代 `replacement`
+进行替换字符串的计算，其他方面等同于 <span
 class="function">preg\_replace</span>。
 
 ### 参数
@@ -935,19 +935,20 @@ class="function">preg\_replace</span>。
 要搜索的模式，可以是字符串或一个字符串数组。
 
 `callback`  
-一个回调函数，在每次需要替换时调用，调用时函数得到的参数是从`subject`
+一个回调函数，在每次需要替换时调用，调用时函数得到的参数是从 `subject`
 中匹配到的结果。回调函数返回真正参与替换的字符串。这是该回调函数的签名：
 
 <span class="type">string</span> <span class="methodname"><span
 class="replaceable">handler</span></span> ( <span
 class="methodparam"><span class="type">array</span> `$matches`</span> )
 
-你可能经常会需要`callback`函数而 仅用于<span
-class="function">preg\_replace\_callback</span>一个地方的调用。在这种情况下，你可以
-使用<a href="/functions/anonymous.html" class="link">匿名函数</a>来定义一个匿名函数作
-为<span class="function">preg\_replace\_callback</span>调用时的回调。
-这样做你可以保留所有
-调用信息在同一个位置并且不会因为一个不在任何其他地方使用的回调函数名称而污染函数名称空间。
+经常会需要 `callback` 函数而仅用于 <span
+class="function">preg\_replace\_callback</span>
+一个地方的调用。在这种情况下，你可以使用
+<a href="/functions/anonymous.html" class="link">匿名函数</a>
+来定义一个匿名函数作为 <span
+class="function">preg\_replace\_callback</span> 调用时的回调。
+这样做你可以保留所有调用信息在同一个位置并且不会因为一个不在任何其他地方使用的回调函数名称而污染函数名称空间。
 
 **示例 \#1 <span class="function">preg\_replace\_callback</span> 和
 匿名函数**
@@ -975,26 +976,26 @@ fclose($fp);
 要搜索替换的目标字符串或字符串数组。
 
 `limit`  
-对于每个模式用于每个 `subject` 字符串的最大可替换次数。
-默认是*-1*（无限制）。
+对于每个模式用于每个 `subject` 字符串的最大可替换次数。 默认是
+*-1*（无限制）。
 
 `count`  
 如果指定，这个变量将被填充为替换执行的次数。
 
 ### 返回值
 
-如果`subject`是一个数组， <span
-class="function">preg\_replace\_callback</span>返回一个数组，其他情况返回字符串。
-错误发生时返回 **`NULL`**。
+如果 `subject` 是一个数组， <span
+class="function">preg\_replace\_callback</span>
+返回一个数组，其他情况返回字符串。错误发生时返回 **`NULL`**。
 
-如果查找到了匹配，返回替换后的目标字符串（或字符串数组），
-其他情况`subject` 将会无变化返回。
+如果查找到了匹配，返回替换后的目标字符串（或字符串数组），其他情况
+`subject` 将会无变化返回。
 
 ### 更新日志
 
 | 版本  | 说明                |
 |-------|---------------------|
-| 5.1.0 | 增加了参数`count`。 |
+| 7.4.0 | 新增 `flags` 参数。 |
 
 ### 范例
 
@@ -1026,8 +1027,8 @@ echo preg_replace_callback(
     April fools day is 04/01/2003
     Last christmas was 12/24/2002
 
-**示例 \#3 <span
-class="function">preg\_replace\_callback</span>使用递归构造处理BB码的封装**
+**示例 \#3 <span class="function">preg\_replace\_callback</span>
+使用递归构造处理 BB 码的封装**
 
 ``` php
 <?php
@@ -1090,67 +1091,68 @@ class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `&$count`</span> \]\]
 )
 
-搜索`subject`中匹配`pattern`的部分， 以`replacement`进行替换。
+搜索 `subject` 中匹配 `pattern` 的部分，以 `replacement` 进行替换。
 
 ### 参数
 
 `pattern`  
 要搜索的模式。可以使一个字符串或字符串数组。
 
-可以使用一些<a href="/pcre/pattern.html#正则表达式模式中可用的模式修饰符" class="link">PCRE修饰符</a>。
+可以使用一些
+<a href="/pcre/pattern.html#正则表达式模式中可用的模式修饰符" class="link">PCRE 修饰符</a>。
 
 `replacement`  
-用于替换的字符串或字符串数组。如果这个参数是一个字符串，并且`pattern`
-是一个数组，那么所有的模式都使用这个字符串进行替换。如果`pattern`和`replacement`
-都是数组，每个`pattern`使用`replacement`中对应的
-元素进行替换。如果`replacement`中的元素比`pattern`中的少，
-多出来的`pattern`使用空字符串进行替换。
+用于替换的字符串或字符串数组。如果这个参数是一个字符串，并且 `pattern`
+是一个数组，那么所有的模式都使用这个字符串进行替换。如果 `pattern` 和
+`replacement` 都是数组，每个 `pattern` 使用 `replacement`
+中对应的元素进行替换。如果 `replacement` 中的元素比 `pattern`
+中的少，多出来的 `pattern` 使用空字符串进行替换。
 
-`replacement`中可以包含后向引用*\\\\<span class="replaceable">n</span>*
-或*$<span class="replaceable">n</span>*，语法上首选后者。 每个
-这样的引用将被匹配到的第<span
-class="replaceable">n</span>个捕获子组捕获到的文本替换。 <span
-class="replaceable">n</span>
-可以是0-99，*\\\\0*和*$0*代表完整的模式匹配文本。
-捕获子组的序号计数方式为：代表捕获子组的左括号从左到右，
-从1开始数。如果要在`replacement`
-中使用反斜线，必须使用4个(*"\\\\\\\\"*，译注：因为这首先是php的字符串，经过转义后，是两个，再经过
-正则表达式引擎后才被认为是一个原文反斜线)。
+`replacement` 中可以包含后向引用 *\\\\<span
+class="replaceable">n</span>* 或 *$<span
+class="replaceable">n</span>*，语法上首选后者。
+每个这样的引用将被匹配到的第 <span class="replaceable">n</span>
+个捕获子组捕获到的文本替换。 <span class="replaceable">n</span>
+可以是0-99，*\\\\0* 和 *$0*
+代表完整的模式匹配文本。捕获子组的序号计数方式为：代表捕获子组的左括号从左到右，
+从1开始数。如果要在 `replacement` 中使用反斜线，必须使用 4
+个(*"\\\\\\\\"*，译注：因为这首先是 PHP
+的字符串，经过转义后，是两个，再经过正则表达式引擎后才被认为是一个原文反斜线)。
 
-当在替换模式下工作并且后向引用后面紧跟着需要是另外一个数字(比如：在一个匹配模式后紧接着增加一个原文数字)，
-不能使用*\\\\1*这样的语法来描述后向引用。比如， *\\\\11*将会使<span
-class="function">preg\_replace</span>
-不能理解你希望的是一个*\\\\1*后向引用紧跟一个原文*1*，还是
-一个*\\\\11*后向引用后面不跟任何东西。 这种情况下解决方案是使用*${1}1*。
-这创建了一个独立的*$1*后向引用, 一个独立的原文*1*。
+当在替换模式下工作并且后向引用后面紧跟着需要是另外一个数字
+(比如：在一个匹配模式后紧接着增加一个原文数字)，不能使用 *\\\\1*
+这样的语法来描述后向引用。比如，*\\\\11*将会使<span
+class="function">preg\_replace</span> 不能理解你希望的是一个 *\\\\1*
+后向引用紧跟一个原文 *1*，还是一个 *\\\\11* 后向引用后面不跟任何东西。
+这种情况下解决方案是使用 *${1}1*。这创建了一个独立的 *$1* 后向引用,
+一个独立的原文 *1*。
 
-当使用被弃用的 *e* 修饰符时, 这个函数会转义一些字符(即：*'*、*"*、 *\\*
+当使用被弃用的 *e* 修饰符时, 这个函数会转义一些字符 (即：*'*、*"*、 *\\*
 和 NULL)
-然后进行后向引用替换。当这些完成后请确保后向引用解析完后没有单引号或
-双引号引起的语法错误(比如：
-*'strlen(\\'$1\\')+strlen("$2")'*)。确保符合PHP的
-<a href="/language/types/string.html" class="link">字符串语法</a>，并且符合eval语法。因为在完成替换后，
-引擎会将结果字符串作为php代码使用eval方式进行评估并将返回值作为最终参与替换的字符串。
+然后进行后向引用替换。当这些完成后请确保后向引用解析完后没有单引号或双引号引起的语法错误
+(比如： *'strlen(\\'$1\\')+strlen("$2")'*)。确保符合 PHP 的
+<a href="/language/types/string.html" class="link">字符串语法</a>，并且符合
+eval 语法。因为在完成替换后，引擎会将结果字符串作为 PHP 代码使用 eval
+方式进行评估并将返回值作为最终参与替换的字符串。
 
 `subject`  
 要进行搜索和替换的字符串或字符串数组。
 
-如果`subject`是一个数组，搜索和替换回在`subject` 的每一个元素上进行,
+如果 `subject` 是一个数组，搜索和替换回在 `subject` 的每一个元素上进行,
 并且返回值也会是一个数组。
 
 `limit`  
-每个模式在每个`subject`上进行替换的最大次数。默认是 *-1*(无限)。
+每个模式在每个 `subject` 上进行替换的最大次数。默认是 *-1*(无限)。
 
 `count`  
 如果指定，将会被填充为完成的替换次数。
 
 ### 返回值
 
-如果`subject`是一个数组， <span
-class="function">preg\_replace</span>返回一个数组，
-其他情况下返回一个字符串。
+如果 `subject` 是一个数组，<span class="function">preg\_replace</span>
+返回一个数组，其他情况下返回一个字符串。
 
-如果匹配被查找到，替换后的`subject`被返回，其他情况下 返回没有改变的
+如果匹配被查找到，替换后的 `subject` 被返回，其他情况下返回没有改变的
 `subject`。如果发生错误，返回 **`NULL`** 。
 
 ### 错误／异常
@@ -1158,14 +1160,6 @@ class="function">preg\_replace</span>返回一个数组，
 PHP 5.5.0 起， 传入 "\\e" 修饰符的时候，会产生一个 **`E_DEPRECATED`**
 错误； PHP 7.0.0 起，会产生 **`E_WARNING`** 错误，同时 "\\e"
 也无法起效。
-
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                                                           |
-|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0 | 不再支持 */e*修饰符。 请用 <span class="function">preg\_replace\_callback</span> 代替。                                                                                                        |
-| 5.5.0 | */e* 修饰符已经被弃用了。使用 <span class="function">preg\_replace\_callback</span> 代替。参见文档中 <a href="/pcre/pattern.html#" class="link">PREG_REPLACE_EVAL</a> 关于安全风险的更多信息。 |
-| 5.1.0 | 增加参数`count`.                                                                                                                                                                               |
 
 ### 范例
 
@@ -1184,8 +1178,8 @@ echo preg_replace($pattern, $replacement, $string);
 
     April1,2003
 
-**示例 \#2 <span
-class="function">preg\_replace</span>中使用基于索引的数组**
+**示例 \#2 <span class="function">preg\_replace</span>
+中使用基于索引的数组**
 
 ``` php
 <?php
@@ -1206,7 +1200,7 @@ echo preg_replace($patterns, $replacements, $string);
 
     The bear black slow jumps over the lazy dog.
 
-对模式和替换内容按key进行排序我们可以得到期望的结果。
+对模式和替换内容按 key 进行排序我们可以得到期望的结果。
 
 ``` php
 <?php
@@ -1248,7 +1242,7 @@ echo $str;
 ?>
 ```
 
-**示例 \#5 使用参数`count`**
+**示例 \#5 使用参数 `count`**
 
 ``` php
 <?php

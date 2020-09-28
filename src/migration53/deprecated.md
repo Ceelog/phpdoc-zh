@@ -28,9 +28,7 @@ PHP 5.3.0 新增了两个错误等级: **`E_DEPRECATED`** 和
 -   <span class="simpara">
     <a href="/info/setup.html#" class="link">magic_quotes_runtime</a>
     </span>
--   <span class="simpara">
-    <a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>
-    </span>
+-   <span class="simpara"> magic\_quotes\_sybase </span>
 -   <span class="simpara"> 弃用 INI 文件中以 '\#' 开头的注释. </span>
 
 弃用函数:

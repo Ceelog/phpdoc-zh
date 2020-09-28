@@ -3,12 +3,6 @@
 
 **目录**
 
--   [APC](/book/apc.html) — Alternative PHP Cache (可选 PHP 缓存)
-    -   [简介](/intro/apc.html)
-    -   [安装／配置](/apc/setup.html)
-    -   [预定义常量](/apc/constants.html)
-    -   [APC 函数](/ref/apc.html)
-    -   [APCIterator](/class/apciterator.html) — APCIterator 类
 -   [APCu](/book/apcu.html) — APC User Cache
     -   [简介](/intro/apcu.html)
     -   [安装／配置](/apcu/setup.html)
@@ -16,17 +10,6 @@
     -   [APCu 函数](/ref/apcu.html)
     -   [APCUIterator](/class/apcuiterator.html) — The APCUIterator
         class
--   [APD](/book/apd.html) — Advanced PHP debugger
-    -   [简介](/intro/apd.html)
-    -   [安装／配置](/apd/setup.html)
-    -   [预定义常量](/apd/constants.html)
-    -   [范例](/apd/examples.html)
-    -   [APD 函数](/ref/apd.html)
--   [bcompiler](/book/bcompiler.html) — PHP 字节码编译器
-    -   [简介](/intro/bcompiler.html)
-    -   [安装／配置](/bcompiler/setup.html)
-    -   [预定义常量](/bcompiler/constants.html)
-    -   [bcompiler 函数](/ref/bcompiler.html)
 -   [BLENC](/book/blenc.html) — Blenc - BLowfish ENCoder for PHP source
     scripts
     -   [简介](/intro/blenc.html)
@@ -64,16 +47,6 @@
     -   [FFI\\Exception](/class/ffi-exception.html) — FFI Exceptions
     -   [FFI\\ParserException](/class/ffi-parserexception.html) — FFI
         Parser Exceptions
--   [htscanner](/book/htscanner.html) — htaccess-like support for all
-    SAPIs
-    -   [简介](/intro/htscanner.html)
-    -   [安装／配置](/htscanner/setup.html)
--   [inclued](/book/inclued.html) — Inclusion hierarchy viewer
-    -   [简介](/intro/inclued.html)
-    -   [安装／配置](/inclued/setup.html)
-    -   [预定义常量](/inclued/constants.html)
-    -   [范例](/inclued/examples.html)
-    -   [inclued 函数](/ref/inclued.html)
 -   [Memtrack](/book/memtrack.html) — Memtrack
     -   [简介](/intro/memtrack.html)
     -   [安装／配置](/memtrack/setup.html)
@@ -100,20 +73,11 @@
     -   [安装／配置](/phpdbg/setup.html)
     -   [预定义常量](/phpdbg/constants.html)
     -   [phpdbg 函数](/ref/phpdbg.html)
--   [runkit](/book/runkit.html)
-    -   [简介](/intro/runkit.html)
-    -   [预定义常量](/runkit/constants.html)
-    -   [安装／配置](/runkit/setup.html)
-    -   [runkit 函数](/ref/runkit.html)
 -   [runkit7](/book/runkit7.html) — runkit7
     -   [简介](/intro/runkit7.html)
     -   [安装／配置](/runkit7/setup.html)
     -   [预定义常量](/runkit7/constants.html)
     -   [runkit7 函数](/ref/runkit7.html)
--   [scream](/book/scream.html) — Break the silence operator
-    -   [简介](/intro/scream.html)
-    -   [安装／配置](/scream/setup.html)
-    -   [范例](/scream/examples.html)
 -   [uopz](/book/uopz.html) — User Operations for Zend
     -   [简介](/intro/uopz.html)
     -   [安装／配置](/uopz/setup.html)

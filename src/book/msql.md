@@ -590,12 +590,6 @@ msql_free_result($result);
 ?>
 ```
 
-### 更新日志
-
-| 版本  | 说明                                                                                                                                   |
-|-------|----------------------------------------------------------------------------------------------------------------------------------------|
-| 5.0.4 | A bug was fixed when retrieving data from columns containing **`NULL`** values. Such columns were not placed into the resulting array. |
-
 ### 参见
 
 -   <span class="function">msql\_fetch\_row</span>
@@ -714,12 +708,6 @@ msql_free_result($result);
 ?>
 ```
 
-### 更新日志
-
-| 版本  | 说明                                                                                                                                   |
-|-------|----------------------------------------------------------------------------------------------------------------------------------------|
-| 5.0.4 | A bug was fixed when retrieving data from columns containing **`NULL`** values. Such columns were not placed into the resulting array. |
-
 ### 参见
 
 -   <span class="function">msql\_fetch\_array</span>
@@ -786,12 +774,6 @@ while ($row = msql_fetch_row($result)) {
 msql_free_result($result);
 ?>
 ```
-
-### 更新日志
-
-| 版本  | 说明                                                                                                                                   |
-|-------|----------------------------------------------------------------------------------------------------------------------------------------|
-| 5.0.4 | A bug was fixed when retrieving data from columns containing **`NULL`** values. Such columns were not placed into the resulting array. |
 
 ### 参见
 

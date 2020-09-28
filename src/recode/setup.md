@@ -57,8 +57,8 @@ their own *hash\_insert* function.
 
 **Warning**
 
-<a href="/book/imap.html" class="link">IMAP</a>，<a href="/book/recode.html" class="link">recode</a>，<a href="/book/yaz.html" class="link">YAZ</a>
-和 <a href="/book/cyrus.html" class="link">Cyrus</a>
+<a href="/book/imap.html" class="link">IMAP</a>，<a href="/book/recode.html" class="link">recode</a>，和
+<a href="/book/yaz.html" class="link">YAZ</a>
 扩展不能同时使用，因为它们共享了相同 的内部符号。注意：Yaz 2.0
 及以上版本不存在此问题。
 

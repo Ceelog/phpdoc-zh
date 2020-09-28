@@ -864,13 +864,6 @@ class="function">session\_regenerate\_id</span>
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
-### 更新日志
-
-| 版本  | 说明                                                                                         |
-|-------|----------------------------------------------------------------------------------------------|
-| 7.0.0 | <span class="function">session\_regenerate\_id</span> 函数在关闭过期会话之前保存其中的数据。 |
-| 5.1.0 | 新加 `delete_old_session` 参数。                                                             |
-
 ### 范例
 
 **示例 \#1 A <span class="function">session\_regenerate\_id</span>

@@ -490,12 +490,6 @@ class="classname">DOMDocument</span> for the created DOM object.
 The resulting <span class="classname">DOMNode</span> or **`FALSE`** on
 error.
 
-### 更新日志
-
-| 版本  | 说明                                |
-|-------|-------------------------------------|
-| 5.3.0 | The parameter `basenode` was added. |
-
 XMLReader::getAttribute
 =======================
 
@@ -519,12 +513,6 @@ The name of the attribute.
 
 The value of the attribute, or **`NULL`** if no attribute with the given
 `name` is found or not positioned on an element node.
-
-### 更新日志
-
-| 版本  | 说明                                                                           |
-|-------|--------------------------------------------------------------------------------|
-| 5.1.3 | Return **`NULL`** if no attribute found. Previously, returned an empty string. |
 
 ### 参见
 
@@ -939,12 +927,6 @@ statically, returns an <span class="classname">XMLReader</span>
 
 此方法*可以*被静态调用,但会抛出一个 **`E_STRICT`** 错误。
 
-### 更新日志
-
-| 版本  | 说明                                 |
-|-------|--------------------------------------|
-| 5.2.0 | `encoding` and `options` were added. |
-
 ### 参见
 
 -   <span class="methodname">XMLReader::xml</span>
@@ -1246,12 +1228,6 @@ statically, returns an <span class="classname">XMLReader</span>
 ### 错误／异常
 
 此方法*可以*被静态调用,但会抛出一个 **`E_STRICT`** 错误。
-
-### 更新日志
-
-| 版本  | 说明                                 |
-|-------|--------------------------------------|
-| 5.2.0 | `encoding` and `options` were added. |
 
 ### 参见
 

@@ -230,12 +230,6 @@ true</span></span> \] )
 如果由 `class_name` 所指的类已经定义，此函数返回 **`TRUE`**，否则返回
 **`FALSE`**。
 
-### 更新日志
-
-| 版本  | 说明                                                                                               |
-|-------|----------------------------------------------------------------------------------------------------|
-| 5.0.2 | 不再为已定义的 interface 返回 **`TRUE`**。请使用 <span class="function">interface\_exists</span>。 |
-
 ### 范例
 
 **示例 \#1 <span class="function">class\_exists</span> 例子**
@@ -426,14 +420,6 @@ Returns an associative array of declared properties visible from the
 current scope, with their default value. The resulting array elements
 are in the form of *varname =\> value*. In case of an error, it returns
 **`FALSE`**.
-
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                                                                  |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.0.3 | <span class="function">get\_class\_vars</span> will only return the properties that can be accessed from the current scope.                                                                           |
-| 5.0.2 | Calling <span class="function">get\_class\_vars</span> will now expose all the properties as an array, unlike previous behaviour where protected and private properties were prefixed with nul bytes. |
-| 5.0.1 | Calling <span class="function">get\_class\_vars</span> will expose all properties, as when converting an object to a class.                                                                           |
 
 ### 范例
 
@@ -1133,14 +1119,6 @@ doesn't exist.
 Returns **`TRUE`** if the object is of this class or has this class as
 one of its parents, **`FALSE`** otherwise.
 
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                                                           |
-|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.9 | Added `allow_string` parameter                                                                                                                                                                 |
-| 5.3.0 | This function is no longer deprecated, and will therefore no longer throw **`E_STRICT`** warnings.                                                                                             |
-| 5.0.0 | This function became deprecated in favour of the <a href="/language/operators/type.html" class="link">instanceof</a> operator. Calling this function will result in an **`E_STRICT`** warning. |
-
 ### 范例
 
 **示例 \#1 <span class="function">is\_a</span> 例子**
@@ -1266,13 +1244,6 @@ exist.
 
 This function returns **`TRUE`** if the object `object`, belongs to a
 class which is a subclass of `class_name`, **`FALSE`** otherwise.
-
-### 更新日志
-
-| 版本  | 说明                                                                            |
-|-------|---------------------------------------------------------------------------------|
-| 5.3.9 | Added `allow_string` parameter                                                  |
-| 5.0.3 | You may also specify the `object` parameter as a string (the name of the class) |
 
 ### 范例
 

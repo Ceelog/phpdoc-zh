@@ -1,17 +1,3 @@
-set\_socket\_blocking
-=====================
-
-别名 <span class="function">stream\_set\_blocking</span>
-
-**Warning**
-
-This alias was *DEPRECATED* in PHP 5.3.0, and *REMOVED* as of PHP 7.0.0.
-
-### 说明
-
-此函数是该函数的别名： <span
-class="function">stream\_set\_blocking</span>
-
 stream\_bucket\_append
 ======================
 
@@ -573,12 +559,6 @@ The offset where to start to copy data
 
 Returns the total count of bytes copied, 或者在失败时返回 **`FALSE`**.
 
-### 更新日志
-
-| 版本  | 说明                         |
-|-------|------------------------------|
-| 5.1.0 | Added the `offset` parameter |
-
 ### 范例
 
 **示例 \#1 A <span class="function">stream\_copy\_to\_stream</span>
@@ -649,12 +629,6 @@ class="function">stream\_filter\_remove</span>.
 
 **`FALSE`** is returned if `stream` is not a resource or if `filtername`
 cannot be located.
-
-### 更新日志
-
-| 版本  | 说明                                                                                          |
-|-------|-----------------------------------------------------------------------------------------------|
-| 5.1.0 | Prior to PHP 5.1.0, this function returns **`TRUE`** on success 或者在失败时返回 **`FALSE`**. |
 
 ### 范例
 
@@ -772,12 +746,6 @@ class="function">stream\_filter\_remove</span>.
 
 **`FALSE`** is returned if `stream` is not a resource or if `filtername`
 cannot be located.
-
-### 更新日志
-
-| 版本  | 说明                                                                                          |
-|-------|-----------------------------------------------------------------------------------------------|
-| 5.1.0 | Prior to PHP 5.1.0, this function returns **`TRUE`** on success 或者在失败时返回 **`FALSE`**. |
 
 ### 注释
 
@@ -3141,8 +3109,6 @@ class="function">stream\_wrapper\_restore</span>.
 
 **目录**
 
--   [set\_socket\_blocking](/ref/stream.html#set_socket_blocking) — 别名
-    stream\_set\_blocking
 -   [stream\_bucket\_append](/ref/stream.html#stream_bucket_append) —
     Append bucket to brigade
 -   [stream\_bucket\_make\_writeable](/ref/stream.html#stream_bucket_make_writeable)

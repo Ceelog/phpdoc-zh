@@ -477,58 +477,6 @@ class="function">is\_resource</span>、<span
 class="function">is\_scalar</span> 和 <span
 class="function">is\_string</span>。
 
-import\_request\_variables
-==========================
-
-将 GET／POST／Cookie 变量导入到全局作用域中
-
-### 描述
-
-<span class="type">bool</span> <span
-class="methodname">import\_request\_variables</span> ( <span
-class="methodparam"><span class="type">string</span> `$types`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$prefix`</span> \] )
-
-将 GET／POST／Cookie 变量导入到全局作用域中。如果你禁止了
-<a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>，但又想用到一些全局变量，那么此函数就很有用。
-
-你可以使用 `types`
-参数指定需要导入的变量。可以用字母‘G’、‘P’和‘C’分别表示 GET、POST 和
-Cookie。这些字母不区分大小写，所以你可以使用‘g’、‘p’和‘c’的任何组合。POST
-包含了通过 POST
-方法上传的文件信息。注意这些字母的顺序，当使用“gp”时，POST
-变量将使用相同的名字覆盖 GET 变量。任何 GPC 以外的字母都将被忽略。
-
-`prefix`
-参数作为变量名的前缀，置于所有被导入到全局作用域的变量之前。所以如果你有个名为“userid”的
-GET 变量，同时提供了“pref\_”作为前缀，那么你将获得一个名为 $pref\_userid
-的全局变量。
-
-如果你对导入其它全局变量（例如 SERVER 变量）感兴趣，请考虑使用 <span
-class="function">extract</span>。
-
-> **Note**:
->
-> 虽然 `prefix`
-> 参数是可选的，但如果不指定前缀，或者指定一个空字符串作为前缀，你将获得一个
-> <a href="" class="link">E_NOTICE</a>
-> 级别的错误。使用默认<a href="/errorfunc/setup.html#PHP外的PHP常量" class="link">错误报告</a>级别是不显示注意（Notice）级别的错误的。
-
-``` php
-<?php
-// 此处将导入 GET 和 POST 变量
-// 使用“rvar_”作为前缀
-import_request_variables("gP", "rvar_");
-
-echo $rvar_foo;
-?>
-```
-
-参见
-<a href="/reserved/variables/request.html" class="link">$_REQUEST</a>、<a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>、<a href="/language/variables/predefined.html" class="link">预定义变量</a>
-和 <span class="function">extract</span>。
-
 intval
 ======
 
@@ -1910,51 +1858,193 @@ var\_export
 
 输出或返回一个变量的字符串表示
 
-### 描述
+### 说明
 
 <span class="type">mixed</span> <span
 class="methodname">var\_export</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$expression`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$return`</span> \] )
+class="methodparam"><span class="type">bool</span> `$return`<span
+class="initializer"> = **`FALSE`**</span></span> \] )
 
-此函数返回关于传递给该函数的变量的结构信息，它和 <span
-class="function">var\_dump</span> 类似，不同的是其返回的表示是合法的 PHP
-代码。
+<span class="function">var\_export</span>
+函数返回关于传递给该函数的变量的结构信息，它和 <span
+class="function">var\_dump</span> 函数类似，不同的是其返回的表示是合法的
+PHP 代码。
 
-您可以通过将函数的第二个参数设置为 **`TRUE`**，从而返回变量的表示。
+### 参数
 
-比较 <span class="function">var\_export</span> 和 <span
-class="function">var\_dump</span>.
+`expression`  
+想要输出的变量名。
+
+`return`  
+此参数为 **`TRUE`** 时，<span class="function">var\_export</span>
+将返回一个变量，而不是输出它。
+
+### 返回值
+
+参数 `return` 为 **`TRUE`** 时返回变量，否则返回 **`NULL`**。
+
+### 注释
+
+> **Note**:
+>
+> 当使用了`return` 参数时，本函数使用其内部输出缓冲，因此不能在 <span
+> class="function">ob\_start</span> 回调函数的内部使用。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                                                                                                                                                                                                            |
+|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.3.0 | Now exports <span class="classname">stdClass</span> objects as an array cast to an object (`(object) array( ... )`), rather than using the nonexistent method <span class="methodname">stdClass::\_\_setState</span>. The practical effect is that now <span class="classname">stdClass</span> is exportable, and the resulting code will even work on earlier versions of PHP. |
+
+### 范例
+
+**示例 \#1 <span class="function">var\_export</span> 示例**
 
 ``` php
-<pre>
 <?php
 $a = array (1, 2, array ("a", "b", "c"));
-var_export ($a);
+var_export($a);
+?>
+```
 
-/* 输出：
-array (
-  0 => 1,
-  1 => 2,
-  2 => 
-  array (
-    0 => 'a',
-    1 => 'b',
-    2 => 'c',
-  ),
-)
-*/
+以上例程会输出：
+
+    array (
+      0 => 1,
+      1 => 2,
+      2 => 
+      array (
+        0 => 'a',
+        1 => 'b',
+        2 => 'c',
+      ),
+    )
+
+``` php
+<?php
 
 $b = 3.1;
-$v = var_export($b, TRUE);
+$v = var_export($b, true);
 echo $v;
 
-/* 输出：
-3.1
-*/
 ?>
-</pre>
 ```
+
+以上例程会输出：
+
+    3.1
+
+**示例 \#2 输出类 stdClass (自 PHP 7.3.0 起)**
+
+``` php
+<?php
+$person = new stdClass;
+$person->name = 'ElePHPant ElePHPantsdotter';
+$person->website = 'https://php.net/elephpant.php';
+
+var_export($person);
+```
+
+以上例程会输出：
+
+    (object) array(
+       'name' => 'ElePHPant ElePHPantsdotter',
+       'website' => 'https://php.net/elephpant.php',
+    )
+
+**示例 \#3 输出对象 (自 PHP 5.1.0 起)**
+
+``` php
+<?php
+class A { public $var; }
+$a = new A;
+$a->var = 5;
+var_export($a);
+?>
+```
+
+以上例程会输出：
+
+    A::__set_state(array(
+       'var' => 5,
+    ))
+
+**示例 \#4 使用
+<a href="/language/oop5/magic.html#object.set-state" class="link">__set_state()</a>
+(自 PHP 5.1.0 起)**
+
+``` php
+<?php
+class A
+{
+    public $var1;
+    public $var2;
+
+    public static function __set_state($an_array)
+    {
+        $obj = new A;
+        $obj->var1 = $an_array['var1'];
+        $obj->var2 = $an_array['var2'];
+        return $obj;
+    }
+}
+
+$a = new A;
+$a->var1 = 5;
+$a->var2 = 'foo';
+
+eval('$b = ' . var_export($a, true) . ';'); // $b = A::__set_state(array(
+                                            //    'var1' => 5,
+                                            //    'var2' => 'foo',
+                                            // ));
+var_dump($b);
+?>
+```
+
+以上例程会输出：
+
+    object(A)#2 (2) {
+      ["var1"]=>
+      int(5)
+      ["var2"]=>
+      string(3) "foo"
+    }
+
+### 注释
+
+> **Note**:
+>
+> 类型为 <span class="type">resource</span> 的变量无法通过此函数输出。
+
+> **Note**:
+>
+> <span class="function">var\_export</span> does not handle circular
+> references as it would be close to impossible to generate parsable PHP
+> code for that. If you want to do something with the full
+> representation of an array or object, use <span
+> class="function">serialize</span>.
+
+**Warning**
+
+When <span class="function">var\_export</span> exports objects, the
+leading backslash is not included in the class name of namespaced
+classes for maximum compatibility.
+
+> **Note**:
+>
+> To be able to evaluate the PHP generated by <span
+> class="function">var\_export</span>, all processed objects must
+> implement the magic
+> <a href="/language/oop5/magic.html#object.set-state" class="link">__set_state</a>
+> method. The only exception is <span class="classname">stdClass</span>,
+> which is exported using an array cast to an object.
+
+### 参见
+
+-   <span class="function">print\_r</span>
+-   <span class="function">serialize</span>
+-   <span class="function">var\_dump</span>
 
 **目录**
 
@@ -1969,8 +2059,6 @@ echo $v;
 -   [get\_resource\_type](/ref/var.html#get_resource_type) —
     返回资源（resource）类型
 -   [gettype](/ref/var.html#gettype) — 获取变量的类型
--   [import\_request\_variables](/ref/var.html#import_request_variables)
-    — 将 GET／POST／Cookie 变量导入到全局作用域中
 -   [intval](/ref/var.html#intval) — 获取变量的整数值
 -   [is\_array](/ref/var.html#is_array) — 检测变量是否是数组
 -   [is\_bool](/ref/var.html#is_bool) — 检测变量是否是布尔型

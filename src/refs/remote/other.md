@@ -3,13 +3,6 @@
 
 **目录**
 
--   [chdb](/book/chdb.html) — Constant hash database
-    -   [简介](/intro/chdb.html)
-    -   [安装／配置](/chdb/setup.html)
-    -   [预定义常量](/chdb/constants.html)
-    -   [范例](/chdb/examples.html)
-    -   [chdb](/class/chdb.html) — The chdb class
-    -   [chdb 函数](/ref/chdb.html)
 -   [cURL](/book/curl.html) — Client URL 库
     -   [简介](/intro/curl.html)
     -   [安装／配置](/curl/setup.html)
@@ -46,11 +39,6 @@
     -   [EventSslContext](/class/eventsslcontext.html) — The
         EventSslContext class
     -   [EventUtil](/class/eventutil.html) — The EventUtil class
--   [FAM](/book/fam.html) — File Alteration Monitor
-    -   [简介](/intro/fam.html)
-    -   [安装／配置](/fam/setup.html)
-    -   [预定义常量](/fam/constants.html)
-    -   [FAM 函数](/ref/fam.html)
 -   [FTP](/book/ftp.html)
     -   [简介](/intro/ftp.html)
     -   [安装／配置](/ftp/setup.html)
@@ -70,24 +58,6 @@
         class
     -   [GearmanException](/class/gearmanexception.html) — The
         GearmanException class
--   [Gopher](/book/net-gopher.html) — Net Gopher
-    -   [简介](/intro/net-gopher.html)
-    -   [安装／配置](/net-gopher/setup.html)
-    -   [预定义常量](/net-gopher/constants.html)
-    -   [范例](/net-gopher/examples.html)
-    -   [Gopher 函数](/ref/net-gopher.html)
--   [Gupnp](/book/gupnp.html) — Gupnp
-    -   [简介](/intro/gupnp.html)
-    -   [安装／配置](/gupnp/setup.html)
-    -   [预定义常量](/gupnp/constants.html)
-    -   [范例](/gupnp/examples.html)
-    -   [Gupnp 函数](/ref/gupnp.html)
--   [Hyperwave API](/book/hwapi.html)
-    -   [简介](/intro/hwapi.html)
-    -   [安装／配置](/hwapi/setup.html)
-    -   [预定义常量](/hwapi/constants.html)
-    -   [Integration with Apache](/hwapi/apache-integration.html)
-    -   [Hyperwave API 函数](/ref/hwapi.html)
 -   [LDAP](/book/ldap.html) — Lightweight Directory Access Protocol
     -   [简介](/intro/ldap.html)
     -   [安装／配置](/ldap/setup.html)
@@ -130,12 +100,6 @@
     -   [RRDCreator](/class/rrdcreator.html) — The RRDCreator class
     -   [RRDGraph](/class/rrdgraph.html) — The RRDGraph class
     -   [RRDUpdater](/class/rrdupdater.html) — The RRDUpdater class
--   [SAM](/book/sam.html) — Simple Asynchronous Messaging
-    -   [简介](/intro/sam.html)
-    -   [安装／配置](/sam/setup.html)
-    -   [预定义常量](/sam/constants.html)
-    -   [范例](/sam/examples.html)
-    -   [SAM 函数](/ref/sam.html)
 -   [ScoutAPM](/book/scoutapm.html) — ScoutAPM
     -   [简介](/intro/scoutapm.html)
     -   [安装／配置](/scoutapm/setup.html)
@@ -201,11 +165,6 @@
     -   [预定义常量](/yaz/constants.html)
     -   [范例](/yaz/examples.html)
     -   [YAZ 函数](/ref/yaz.html)
--   [YP/NIS](/book/nis.html)
-    -   [简介](/intro/nis.html)
-    -   [安装／配置](/nis/setup.html)
-    -   [预定义常量](/nis/constants.html)
-    -   [YP/NIS 函数](/ref/nis.html)
 -   [0MQ消息系统](/book/zmq.html) — ZMQ
     -   [简介](/intro/zmq.html)
     -   [安装／配置](/zmq/setup.html)

@@ -615,12 +615,6 @@ The optional permission bits. Default to 0666.
 
 Returns a shared memory segment identifier.
 
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                                               |
-|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0 | This function now returns a <a href="/language/types/resource.html" class="link">资源(resource)</a> instead of an <a href="/language/types/integer.html" class="link">integer</a>. |
-
 ### 注释
 
 > **Note**:

@@ -5406,12 +5406,6 @@ Specifies the socket or named pipe that should be used.
 Returns an object which represents the connection to a MySQL Server,
 或者在失败时返回 **`FALSE`**.
 
-### 更新日志
-
-| 版本  | 说明                                         |
-|-------|----------------------------------------------|
-| 5.3.0 | Added the ability of persistent connections. |
-
 ### 范例
 
 **示例 \#1 <span class="methodname">mysqli::\_\_construct</span>
@@ -15214,13 +15208,6 @@ calls or queries that don't use an index (or use a bad index).
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
-
-### 更新日志
-
-| 版本   | 说明                                                                        |
-|--------|-----------------------------------------------------------------------------|
-| 5.3.4  | Changing the reporting mode is now be per-request, rather than per-process. |
-| 5.2.15 | Changing the reporting mode is now be per-request, rather than per-process. |
 
 ### 范例
 
@@ -28314,7 +28301,7 @@ class="function">mysql\_xdevapi\\Warning::\_\_construct</span> example**
     -   [mysql\_escape\_string](/set/mysqlinfo.html#mysql_escape_string)
         — 转义一个字符串用于 mysql\_query
     -   [mysql\_fetch\_array](/set/mysqlinfo.html#mysql_fetch_array) —
-        从结果集中取得一行作为关联数组，或数字数组，或二者兼有
+        从结果集中取得一行作为关联数组
     -   [mysql\_fetch\_assoc](/set/mysqlinfo.html#mysql_fetch_assoc) —
         从结果集中取得一行作为关联数组
     -   [mysql\_fetch\_field](/set/mysqlinfo.html#mysql_fetch_field) —
@@ -28322,7 +28309,7 @@ class="function">mysql\_xdevapi\\Warning::\_\_construct</span> example**
     -   [mysql\_fetch\_lengths](/set/mysqlinfo.html#mysql_fetch_lengths)
         — 取得结果集中每个输出的长度
     -   [mysql\_fetch\_object](/set/mysqlinfo.html#mysql_fetch_object) —
-        从结果集中取得一行作为对象
+        从结果集中取得一行作为对象返回
     -   [mysql\_fetch\_row](/set/mysqlinfo.html#mysql_fetch_row) —
         从结果集中取得一行作为枚举数组
     -   [mysql\_field\_flags](/set/mysqlinfo.html#mysql_field_flags) —
@@ -29708,7 +29695,7 @@ class="function">addslashes</span> 和
 mysql\_fetch\_array
 ===================
 
-从结果集中取得一行作为关联数组，或数字数组，或二者兼有
+从结果集中取得一行作为关联数组
 
 ### 说明
 
@@ -29716,211 +29703,68 @@ mysql\_fetch\_array
 class="methodname">mysql\_fetch\_array</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$         result_type        `</span> \] )
-
-返回根据从结果集取得的行生成的数组，如果没有更多行则返回 **`FALSE`**。
+`$result_type`</span> \] )
 
 <span class="function">mysql\_fetch\_array</span> 是 <span
 class="function">mysql\_fetch\_row</span>
 的扩展版本。除了将数据以数字索引方式储存在数组中之外，还可以将数据作为关联索引储存，用字段名作为键名。
 
-如果结果中的两个或以上的列具有相同字段名，最后一列将优先。要访问同名的其它列，必须用该列的数字索引或给该列起个别名。对有别名的列，不能再用原来的列名访问其内容（本例中的
-*'field'*）。
-
-**示例 \#1 相同字段名的查询**
-
-``` sql
-select table1.field as foo, table2.field as bar from table1, table2
-```
-
 有一点很重要必须指出，用 <span
 class="function">mysql\_fetch\_array</span> 并*不明显* 比用 <span
 class="function">mysql\_fetch\_row</span> 慢，而且还提供了明显更多的值。
-
-<span class="function">mysql\_fetch\_array</span> 中可选的第二个参数
-`result_type` 是一个常量，可以接受以下值：MYSQL\_ASSOC，MYSQL\_NUM 和
-MYSQL\_BOTH。本特性是 PHP 3.0.7 起新加的。本参数的默认值是 MYSQL\_BOTH。
-
-如果用了 MYSQL\_BOTH，将得到一个同时包含关联和数字索引的数组。用
-MYSQL\_ASSOC 只得到关联索引（如同 <span
-class="function">mysql\_fetch\_assoc</span> 那样），用 MYSQL\_NUM
-只得到数字索引（如同 <span class="function">mysql\_fetch\_row</span>
-那样）。
-
-> **Note**: <span
-> class="simpara">此函数返回的字段名*大小写敏感*。</span>
-
-**示例 \#2 mysql\_fetch\_array 使用 MYSQL\_NUM**
-
-``` php
-<?php
-    mysql_connect("localhost", "mysql_user", "mysql_password") or
-        die("Could not connect: " . mysql_error());
-    mysql_select_db("mydb");
-
-    $result = mysql_query("SELECT id, name FROM mytable");
-
-    while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
-        printf ("ID: %s  Name: %s", $row[0], $row[1]);
-    }
-
-    mysql_free_result($result);
-?>
-```
-
-**示例 \#3 mysql\_fetch\_array 使用 MYSQL\_ASSOC**
-
-``` php
-<?php
-    mysql_connect("localhost", "mysql_user", "mysql_password") or
-        die("Could not connect: " . mysql_error());
-    mysql_select_db("mydb");
-
-    $result = mysql_query("SELECT id, name FROM mytable");
-
-    while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-        printf ("ID: %s  Name: %s", $row["id"], $row["name"]);
-    }
-
-    mysql_free_result($result);
-?>
-```
-
-**示例 \#4 mysql\_fetch\_array 使用 MYSQL\_BOTH**
-
-``` php
-<?php
-    mysql_connect("localhost", "mysql_user", "mysql_password") or
-        die("Could not connect: " . mysql_error());
-    mysql_select_db("mydb");
-
-    $result = mysql_query("SELECT id, name FROM mytable");
-
-    while ($row = mysql_fetch_array($result, MYSQL_BOTH)) {
-        printf ("ID: %s  Name: %s", $row[0], $row["name"]);
-    }
-
-    mysql_free_result($result);
-?>
-```
-
-参见 <span class="function">mysql\_fetch\_row</span> 和 <span
-class="function">mysql\_fetch\_assoc</span>。
 
 ### 参数
 
 ` result`  
 <span class="type">resource</span> 型的结果集。此结果集来自对 <span
-class="function">mysql\_query</span> 的调用。
+class="function">msql\_query</span> 的调用。
 
 `result_type`  
-The type of array that is to be fetched. It's a constant and can take
-the following values: **`MYSQL_ASSOC`**, **`MYSQL_NUM`**, and
-**`MYSQL_BOTH`**.
+接受以下常量值： **`MSQL_ASSOC`**，**`MSQL_NUM`** 和
+**`MSQL_BOTH`**，默认为 **`MSQL_BOTH`**。如果用了
+MYSQL\_BOTH，将得到一个同时包含关联和数字索引的数组。用 MYSQL\_ASSOC
+只得到关联索引（如同 <span class="function">mysql\_fetch\_assoc</span>
+那样），用 MYSQL\_NUM 只得到数字索引（如同 <span
+class="function">mysql\_fetch\_row</span> 那样）。
 
 ### 返回值
 
-Returns an array of strings that corresponds to the fetched row, or
-**`FALSE`** if there are no more rows. The type of returned array
-depends on how `result_type` is defined. By using **`MYSQL_BOTH`**
-(default), you'll get an array with both associative and number indices.
-Using **`MYSQL_ASSOC`**, you only get associative indices (as <span
-class="function">mysql\_fetch\_assoc</span> works), using
-**`MYSQL_NUM`**, you only get number indices (as <span
-class="function">mysql\_fetch\_row</span> works).
-
-If two or more columns of the result have the same field names, the last
-column will take precedence. To access the other column(s) of the same
-name, you must use the numeric index of the column or make an alias for
-the column. For aliased columns, you cannot access the contents with the
-original column name.
+返回根据从结果集取得的行生成的数组，如果没有更多行则返回 **`FALSE`**。
 
 ### 范例
 
-**示例 \#5 Query with aliased duplicate field names**
-
-``` sql
-SELECT table1.field AS foo, table2.field AS bar FROM table1, table2
-```
-
-**示例 \#6 <span class="function">mysql\_fetch\_array</span> with
-**`MYSQL_NUM`****
+**示例 \#1 <span class="function">msql\_fetch\_array</span> 示例**
 
 ``` php
 <?php
-mysql_connect("localhost", "mysql_user", "mysql_password") or
-    die("Could not connect: " . mysql_error());
-mysql_select_db("mydb");
-
-$result = mysql_query("SELECT id, name FROM mytable");
-
-while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
-    printf("ID: %s  Name: %s", $row[0], $row[1]);  
+$con = msql_connect();
+if (!$con) {
+    die('Server connection problem: ' . msql_error());
 }
 
-mysql_free_result($result);
-?>
-```
-
-**示例 \#7 <span class="function">mysql\_fetch\_array</span> with
-**`MYSQL_ASSOC`****
-
-``` php
-<?php
-mysql_connect("localhost", "mysql_user", "mysql_password") or
-    die("Could not connect: " . mysql_error());
-mysql_select_db("mydb");
-
-$result = mysql_query("SELECT id, name FROM mytable");
-
-while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-    printf("ID: %s  Name: %s", $row["id"], $row["name"]);
+if (!msql_select_db('test', $con)) {
+    die('Database connection problem: ' . msql_error());
 }
 
-mysql_free_result($result);
-?>
-```
-
-**示例 \#8 <span class="function">mysql\_fetch\_array</span> with
-**`MYSQL_BOTH`****
-
-``` php
-<?php
-mysql_connect("localhost", "mysql_user", "mysql_password") or
-    die("Could not connect: " . mysql_error());
-mysql_select_db("mydb");
-
-$result = mysql_query("SELECT id, name FROM mytable");
-
-while ($row = mysql_fetch_array($result, MYSQL_BOTH)) {
-    printf ("ID: %s  Name: %s", $row[0], $row["name"]);
+$result = msql_query('SELECT id, name FROM people', $con);
+if (!$result) {
+    die('Query execution problem: ' . msql_error());
 }
 
-mysql_free_result($result);
+while ($row = msql_fetch_array($result, MSQL_ASSOC)) {
+    echo $row['id'] . ': ' . $row['name'] . "\n";
+}
+
+msql_free_result($result);
 ?>
 ```
-
-### 注释
-
-> **Note**: **Performance**  
->
-> An important thing to note is that using <span
-> class="function">mysql\_fetch\_array</span> is *not significantly*
-> slower than using <span class="function">mysql\_fetch\_row</span>,
-> while it provides a significant added value.
-
-> **Note**: <span
-> class="simpara">此函数返回的字段名*大小写敏感*。</span>
-
-> **Note**: <span class="simpara">此函数将 NULL 字段设置为 PHP
-> **`NULL`** 值。</span>
 
 ### 参见
 
--   <span class="function">mysql\_fetch\_row</span>
--   <span class="function">mysql\_fetch\_assoc</span>
--   <span class="function">mysql\_data\_seek</span>
--   <span class="function">mysql\_query</span>
+-   <span class="function">msql\_fetch\_row</span>
+-   <span class="function">msql\_fetch\_object</span>
+-   <span class="function">msql\_data\_seek</span>
+-   <span class="function">msql\_result</span>
 
 mysql\_fetch\_assoc
 ===================
@@ -30236,57 +30080,31 @@ class="function">mysql\_fetch\_object</span>
 mysql\_fetch\_object
 ====================
 
-从结果集中取得一行作为对象
+从结果集中取得一行作为对象返回
+
+**Warning**
+
+本扩展自 PHP 5.5.0 起已废弃，并在自 PHP 7.0.0 开始被移除。应使用
+<a href="/set/mysqlinfo.html#Mysqli" class="link">MySQLi</a> 或
+<a href="/book/pdo.html#MySQL%20(PDO)" class="link">PDO_MySQL</a>
+扩展来替换之。参见
+<a href="/set/mysqlinfo.html#Choosing%20an%20API" class="link">MySQL：选择 API</a>
+指南以及<a href="/faq/databases.html#faq.databases.mysql.deprecated" class="link">相关 FAQ</a>
+来获取更多信息。用以替代本函数的有：
+
+-   <span class="function">mysqli\_fetch\_object</span>
+-   <span class="methodname">PDOStatement::fetch</span>
 
 ### 说明
 
 <span class="type">object</span> <span
 class="methodname">mysql\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
-)
+\[, <span class="methodparam"><span class="type">string</span>
+`$class_name`</span> \[, <span class="methodparam"><span
+class="type">array</span> `$params`</span> \]\] )
 
-返回根据所取得的行生成的对象，如果没有更多行则返回 **`FALSE`**。
-
-<span class="function">mysql\_fetch\_object</span> 和 <span
-class="function">mysql\_fetch\_array</span> 类似，只有一点区别 -
-返回一个对象而不是数组。间接地也意味着只能通过字段名来访问数组，而不是偏移量（数字是合法的属性名）。
-
-> **Note**: <span
-> class="simpara">此函数返回的字段名*大小写敏感*。</span>
-
-``` php
-<?php
-
-/* this is valid */
-echo $row->field;
-/* this is invalid */
-echo $row->0;
-
-?>
-```
-
-速度上，本函数和 <span class="function">mysql\_fetch\_array</span>
-一样，也几乎和 <span class="function">mysql\_fetch\_row</span>
-一样快（差别很不明显）。
-
-**示例 \#1 <span class="function">mysql\_fetch\_object</span> 例子**
-
-``` php
-<?php
-mysql_connect("hostname", "user", "password");
-mysql_select_db("mydb");
-$result = mysql_query("select * from mytable");
-while ($row = mysql_fetch_object($result)) {
-    echo $row->user_id;
-    echo $row->fullname;
-}
-mysql_free_result($result);
-?>
-```
-
-参见 <span class="function">mysql\_fetch\_array</span>，<span
-class="function">mysql\_fetch\_assoc</span> 和 <span
-class="function">mysql\_fetch\_row</span>。
+返回一个对象，其属性与获取的行相对应，并将内部数据指针向前移动。
 
 ### 参数
 
@@ -30295,28 +30113,21 @@ class="function">mysql\_fetch\_row</span>。
 class="function">mysql\_query</span> 的调用。
 
 `class_name`  
-The name of the class to instantiate, set the properties of and return.
-If not specified, a <span class="classname">stdClass</span> object is
-returned.
+要实例化、设置属性并返回的类的名称，如果不指定，默认返回 <span
+class="classname">stdClass</span> 对象。
 
 `params`  
-An optional <span class="type">array</span> of parameters to pass to the
-constructor for `class_name` objects.
+可选 <span class="type">array</span> 数组参数，会传递给 `class_name`
+类的构造函数。
 
 ### 返回值
 
-Returns an <span class="type">object</span> with string properties that
-correspond to the fetched row, or **`FALSE`** if there are no more rows.
-
-### 更新日志
-
-| 版本  | 说明                                               |
-|-------|----------------------------------------------------|
-| 5.0.0 | Added the ability to return as a different object. |
+返回根据所取得的行生成的对象 <span
+class="type">object</span>，如果没有更多行则返回 **`FALSE`**。
 
 ### 范例
 
-**示例 \#2 <span class="function">mysql\_fetch\_object</span> example**
+**示例 \#1 <span class="function">mysql\_fetch\_object</span> example**
 
 ``` php
 <?php
@@ -30331,7 +30142,7 @@ mysql_free_result($result);
 ?>
 ```
 
-**示例 \#3 <span class="function">mysql\_fetch\_object</span> example**
+**示例 \#2 <span class="function">mysql\_fetch\_object</span> example**
 
 ``` php
 <?php
@@ -30352,18 +30163,15 @@ var_dump($obj);
 
 > **Note**: **Performance**  
 >
-> Speed-wise, the function is identical to <span
-> class="function">mysql\_fetch\_array</span>, and almost as quick as
-> <span class="function">mysql\_fetch\_row</span> (the difference is
-> insignificant).
+> 速度上，本函数和 <span class="function">mysql\_fetch\_array</span>
+> 一样，也几乎和 <span class="function">mysql\_fetch\_row</span>
+> 一样快（差别很不明显）。
 
 > **Note**:
 >
-> <span class="function">mysql\_fetch\_object</span> is similar to <span
-> class="function">mysql\_fetch\_array</span>, with one difference - an
-> object is returned, instead of an array. Indirectly, that means that
-> you can only access the data by the field names, and not by their
-> offsets (numbers are illegal property names).
+> <span class="function">mysql\_fetch\_object</span> 和 <span
+> class="function">mysql\_fetch\_array</span> 类似，只有一点区别 -
+> 返回一个对象而不是数组。间接地也意味着只能通过字段名来访问数组，而不是偏移量（数字是合法的属性名）。
 
 > **Note**: <span
 > class="simpara">此函数返回的字段名*大小写敏感*。</span>
@@ -32111,7 +31919,7 @@ SQL 语句都执行完毕。当使用多个数据库连接时，必须指定可�
 -   [mysql\_escape\_string](/set/mysqlinfo.html#mysql_escape_string) —
     转义一个字符串用于 mysql\_query
 -   [mysql\_fetch\_array](/set/mysqlinfo.html#mysql_fetch_array) —
-    从结果集中取得一行作为关联数组，或数字数组，或二者兼有
+    从结果集中取得一行作为关联数组
 -   [mysql\_fetch\_assoc](/set/mysqlinfo.html#mysql_fetch_assoc) —
     从结果集中取得一行作为关联数组
 -   [mysql\_fetch\_field](/set/mysqlinfo.html#mysql_fetch_field) —
@@ -32119,7 +31927,7 @@ SQL 语句都执行完毕。当使用多个数据库连接时，必须指定可�
 -   [mysql\_fetch\_lengths](/set/mysqlinfo.html#mysql_fetch_lengths) —
     取得结果集中每个输出的长度
 -   [mysql\_fetch\_object](/set/mysqlinfo.html#mysql_fetch_object) —
-    从结果集中取得一行作为对象
+    从结果集中取得一行作为对象返回
 -   [mysql\_fetch\_row](/set/mysqlinfo.html#mysql_fetch_row) —
     从结果集中取得一行作为枚举数组
 -   [mysql\_field\_flags](/set/mysqlinfo.html#mysql_field_flags) —
@@ -39332,7 +39140,7 @@ candidates down to one for statement execution.
 <td><p>One or more node groups must be defined. A node group can have an arbitrary user defined name. The name is used in combination with a SQL hint to restrict query execution to the nodes listed for the node group. To run a query on any of the servers of a node group, the query must begin with the SQL hint <em>/*user defined node group name*/</em>. Please note, no white space is allowed around <em>user defined node group name</em>. Because <em>user defined node group name</em> is used as-is as part of a SQL hint, you should choose the name that is compliant with the SQL language.</p>
 <p>Each node group entry must contain a list of <em>master</em> servers. Additional <em>slave</em> servers are allowed. Failing to provide a list of <em>master</em> for a node group <em>name_of_group</em> may cause an error of type <strong><code>E_RECOVERABLE_ERROR</code></strong> like <em>(mysqlnd_ms) No masters configured in node group 'name_of_group' for 'node_groups' filter</em>.</p>
 <p>The list of master and slave servers must reference corresponding entries in the <a href="/set/mysqlinfo.html#" class="link">global master</a> respectively <a href="/set/mysqlinfo.html#" class="link">slave</a> server list. Referencing an unknown server in either of the both server lists may cause an <strong><code>E_RECOVERABLE_ERROR</code></strong> error like <em>(mysqlnd_ms) Unknown master 'server_alias_name' (section 'name_of_group') in 'node_groups' filter configuration</em>.</p>
-<div id="example-2283" class="example">
+<div id="example-2149" class="example">
 <p><strong>示例 #23 Manual partitioning</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -39421,7 +39229,7 @@ file is the combination of eventual consistency and maximum slave lag.
 <td><p>Request eventual consistency. Allows the use of all master and slave servers. Data returned may or may not be current.</p>
 <p>Eventual consistency accepts an optional <em>age</em> parameter. If <em>age</em> is given the plugin considers only slaves for reading for which MySQL replication reports a slave lag less or equal to <em>age</em>. The replication lag is measure using <em>SHOW SLAVE STATUS</em>. If the plugin fails to fetch the replication lag, the slave tested is skipped. Implementation details and tips are given in the <a href="/set/mysqlinfo.html#Service%20level%20and%20consistency" class="link">quality of service concepts section</a>.</p>
 <p>Please note, if a filter chain generates an empty slave list and the PHP configuration directive <em>mysqlnd_ms.multi_master=0</em> is used, the plugin may emit a warning.</p>
-<div id="example-2284" class="example">
+<div id="example-2150" class="example">
 <p><strong>示例 #24 Global limit on slave lag</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -43073,7 +42881,7 @@ Key Features
 
     -   Default (Hash, process memory)
 
-    -   <a href="/ref/apc.html" class="link">APC</a>
+    -   APC
 
     -   MEMCACHE
 
@@ -44664,15 +44472,6 @@ To use you this plugin with a PHP MySQL extension, the extension
 <a href="/book/pdo.html#MySQL%20(PDO)" class="link">PDO_MYSQL</a>) must
 enable the mysqlnd library.
 
-For using the <a href="/ref/apc.html" class="link">APC</a> storage
-handler with PECL/mysqlnd\_qc 1.0 *APC 3.1.3p1-beta* or newer.
-PECL/mysqlnd\_qc 1.2 has been tested with *APC 3.1.13-beta*. The APC
-storage handler cannot be used with a shared build. You cannot use the
-PHP configuration directive *extension* to load the APC and
-PECL/mysqlnd\_qc extensions if PECL/mysqlnd\_qc will use APC as a
-storage handler. For using the APC storage handler, you have to
-statically compile PHP with APC and PECL/mysqlnd\_qc support into PHP.
-
 For using *MEMCACHE* storage handler: Use *libmemcache 0.38* or newer.
 PECL/mysqlnd\_qc 1.2 has been tested with *libmemcache 1.4.0*.
 
@@ -44745,10 +44544,8 @@ of their result set, for example, *SELECT SLEEP(1)*, *SELECT NOW()*,
 
 `mysqlnd_qc.use_request_time` <span class="type">integer</span>  
 Use PHP global request time to avoid *gettimeofday()* system calls? If
-using *<a href="/ref/apc.html" class="link">APC</a>* storage handler it
-should be set to the value of
-*<a href="/apc/setup.html#运行时配置" class="link">apc.use_request_time</a>*
-, if not warnings will be generated.
+using *APC* storage handler it should be set to the value of
+*apc.use\_request\_time*, if not warnings will be generated.
 
 `mysqlnd_qc.time_statistics` <span class="type">integer</span>  
 Collect run time and store time statistics using *gettimeofday()* system
@@ -44787,13 +44584,11 @@ Since 1.1.0.
 
 `mysqlnd_qc.slam_defense` <span class="type">integer</span>  
 Activates handler based slam defense (cache stampeding protection) if
-available. Supported by *Default* and
-*<a href="/ref/apc.html" class="link">APC</a>* storage handler
+available. Supported by *Default* and *APC* storage handler
 
 `mysqlnd_qc.slam_defense_ttl` <span class="type">integer</span>  
 *TTL* for stale cache entries which are served while another client
-updates the entries. Supported by
-*<a href="/ref/apc.html" class="link">APC</a>* storage handler.
+updates the entries. Supported by *APC* storage handler.
 
 `mysqlnd_qc.collect_normalized_query_trace` <span class="type">integer</span>  
 Collect aggregated normalized query traces? The setting has no effect by
@@ -44805,9 +44600,8 @@ Default storage handler: copy cached wire data? EXPERIMENTAL – use
 default setting!
 
 `mysqlnd_qc.apc_prefix` <span class="type">string</span>  
-The *<a href="/ref/apc.html" class="link">APC</a>* storage handler
-stores data in the *APC* user cache. The setting sets a prefix to be
-used for cache entries.
+The *APC* storage handler stores data in the *APC* user cache. The
+setting sets a prefix to be used for cache entries.
 
 `mysqlnd_qc.memc_server` <span class="type">string</span>  
 *MEMCACHE* storage handler: memcache server host.

@@ -72,7 +72,6 @@ PHP 手册
     -   [身份认证服务](/refs/remote/auth.html)
     -   [针对命令行的扩展](/refs/utilspec/cmdline.html)
     -   [压缩与归档扩展](/refs/compression.html)
-    -   [信用卡处理](/refs/creditcard.html)
     -   [加密扩展](/refs/crypto.html)
     -   [数据库扩展](/refs/database.html)
     -   [日期与时间相关扩展](/refs/calendar.html)
@@ -192,7 +191,7 @@ class="surname family-name">Vrana</span> </span>
 <a href="/preface.html#contributors" class="link">其他贡献者</a> </span>
 </span>
 
-2020-09-24
+2020-09-29
 
 **Edited By**: <span class="personname fn"> <span
 class="firstname given-name">Peter</span> <span

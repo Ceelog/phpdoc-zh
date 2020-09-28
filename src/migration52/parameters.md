@@ -55,7 +55,7 @@ PHP Core:
     this backward compatibility mode is not recommended because it will
     be removed in a future release of PHP.
 
-<a href="/ref/ming.html" class="link">ming</a>:
+ming:
 
 -   <span class="simpara"> <span
     class="function">SWFMovie::streamMP3</span> - added `skip` in PHP
