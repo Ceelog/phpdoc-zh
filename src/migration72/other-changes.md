@@ -8,6 +8,13 @@ class="function">utf8\_decode</span>
 现在已经作为字符串处理函数移到标准扩展中， 在此之前需要启用
 <a href="/book/xml.html" class="link">XML</a> 扩展才能使用。
 
+### <span class="function">mail</span> 和 <span class="function">mb\_sendmail</span> 的变更
+
+<span class="function">mail</span> 和 <span
+class="function">mb\_sendmail</span> 函数中的 $additional\_headers
+参数变更为 <span class="type">array</span>，此前为 <span
+class="type">string</span>。
+
 ### 支持 LMDB
 
 <a href="/book/dba.html" class="link">DBA</a> 扩展现在已经支持 LMDB。
@@ -35,5 +42,12 @@ class="function">utf8\_decode</span>
 
 <a href="/book/mcrypt.html" class="link">MCrypt</a> 扩展从内核移动到
 PECL。 考虑到 mcrypt 库自 2007 年以来未见任何更新，不再建议使用。
-代替品即可以用 <a href="/book/openssl.html" class="link">OpenSSL</a>
-也可以用<a href="/book/sodium.html" class="link">Sodium</a>。
+代替品即可以用
+<a href="/book/openssl.html" class="link">OpenSSL</a>，也可以用
+<a href="/book/sodium.html" class="link">Sodium</a>。
+
+### <span class="function">session\_module\_name</span>
+
+传递给 <span class="function">session\_module\_name</span>
+函数的模块名不允许为 *"user"*，将会抛出一个
+**`E_RECOVERABLE_ERROR`**，之前版本会忽略这个问题。

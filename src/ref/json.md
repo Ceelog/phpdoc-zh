@@ -265,7 +265,8 @@ class="initializer"> = 512</span></span> \]\] )
 ### 参数
 
 `value`  
-待编码的 `value` ，除了<span class="type">resource</span>
+待编码的 `value` ，除了
+<a href="/language/types/resource.html" class="link">资源(resource)</a>
 类型之外，可以为任何数据类型。
 
 所有字符串数据的编码必须是 UTF-8。
@@ -276,13 +277,15 @@ class="initializer"> = 512</span></span> \]\] )
 > <a href="http://www.faqs.org/rfcs/rfc7159" class="link external">» RFC 7159</a>.
 
 `options`  
-由以下常量组成的二进制掩码： **`JSON_HEX_QUOT`**, **`JSON_HEX_TAG`**,
-**`JSON_HEX_AMP`**, **`JSON_HEX_APOS`**, **`JSON_NUMERIC_CHECK`**,
-**`JSON_PRETTY_PRINT`**, **`JSON_UNESCAPED_SLASHES`**,
-**`JSON_FORCE_OBJECT`**, **`JSON_PRESERVE_ZERO_FRACTION`**,
-**`JSON_UNESCAPED_UNICODE`**, **`JSON_PARTIAL_OUTPUT_ON_ERROR`**。 关于
-JSON
-常量详情参考<a href="/json/constants.html" class="link">JSON 常量</a>页面。
+由以下常量组成的二进制掩码： **`JSON_FORCE_OBJECT`**,
+**`JSON_HEX_QUOT`**, **`JSON_HEX_TAG`**, **`JSON_HEX_AMP`**,
+**`JSON_HEX_APOS`**, **`JSON_INVALID_UTF8_IGNORE`**,
+**`JSON_INVALID_UTF8_SUBSTITUTE`**, **`JSON_NUMERIC_CHECK`**,
+**`JSON_PARTIAL_OUTPUT_ON_ERROR`**, **`JSON_PRESERVE_ZERO_FRACTION`**,
+**`JSON_PRETTY_PRINT`**, **`JSON_UNESCAPED_LINE_TERMINATORS`**,
+**`JSON_UNESCAPED_SLASHES`**, **`JSON_UNESCAPED_UNICODE`**,
+**`JSON_THROW_ON_ERROR`**。 关于 JSON 常量详情参考
+<a href="/json/constants.html" class="link">JSON 常量</a>页面。
 
 `depth`  
 设置最大深度。 必须大于0。
@@ -296,14 +299,10 @@ JSON
 
 | 版本  | 说明                                                                                                                                                                                          |
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.3.0 | `options` 参数新增 **`JSON_THROW_ON_ERROR`** 常量。                                                                                                                                           |
+| 7.2.0 | `options` 参数新增 **`JSON_INVALID_UTF8_IGNORE`** 和 **`JSON_INVALID_UTF8_SUBSTITUTE`** 常量。                                                                                                |
+| 7.1.0 | `options` 参数新增 **`JSON_UNESCAPED_LINE_TERMINATORS`** 常量。                                                                                                                               |
 | 7.1.0 | 对 Double 的值进行编码时，使用 <a href="/ini/core.html#ini.serialize-precision" class="link">serialize_precision</a> 代替 <a href="/ini/core.html#ini.precision" class="link">precision</a>。 |
-| 5.6.6 | `options` 参数增加常量： **`JSON_PRESERVE_ZERO_FRACTION`**                                                                                                                                    |
-| 5.5.0 | 增加 `depth` 参数。                                                                                                                                                                           |
-| 5.5.0 | 增加了 **`JSON_PARTIAL_OUTPUT_ON_ERROR`** 选项。                                                                                                                                              |
-| 5.5.0 | 失败时返回的值从 *null* 字符串改成 **`FALSE`**。                                                                                                                                              |
-| 5.4.0 | `options` 参数增加常量： **`JSON_PRETTY_PRINT`**, **`JSON_UNESCAPED_SLASHES`**, 和 **`JSON_UNESCAPED_UNICODE`**。                                                                             |
-| 5.3.3 | `options` 参数增加常量：**`JSON_NUMERIC_CHECK`**。                                                                                                                                            |
-| 5.3.0 | 增加 `options` 参数.                                                                                                                                                                          |
 
 ### 范例
 

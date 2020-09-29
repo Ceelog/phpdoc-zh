@@ -10,6 +10,7 @@ JavaScript对象符号（JSON）
     -   [运行时配置](/json/setup.html#运行时配置)
     -   [资源类型](/json/setup.html#资源类型)
 -   [预定义常量](/json/constants.html)
+-   [JsonException](/class/jsonexception.html) — The JsonException class
 -   [JsonSerializable](/class/jsonserializable.html) — JSON 序列化接口
     -   [JsonSerializable::jsonSerialize](/class/jsonserializable.html#JsonSerializable::jsonSerialize)
         — 指定需要被序列化成 JSON 的数据
@@ -23,6 +24,85 @@ JavaScript对象符号（JSON）
         json\_decode() call
     -   [json\_last\_error](/ref/json.html#json_last_error) —
         返回最后发生的错误
+
+简介
+----
+
+Exception thrown if **`JSON_THROW_ON_ERROR`** option is set for <span
+class="function">json\_encode</span> or <span
+class="function">json\_decode</span>. `code` contains the error type,
+for possible values see <span class="function">json\_last\_error</span>.
+
+类摘要
+------
+
+**JsonException**
+
+<span class="ooclass"> class **JsonException** </span> <span
+class="ooclass"> <span class="modifier">extends</span> **Exception**
+</span> {
+
+/\* 继承的属性 \*/
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
+
+/\* 继承的方法 \*/
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Exception::getMessage</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">Throwable</span> <span
+class="methodname">Exception::getPrevious</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Exception::getCode</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Exception::getFile</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Exception::getLine</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">array</span> <span
+class="methodname">Exception::getTrace</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Exception::getTraceAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Exception::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span
+class="modifier">private</span> <span class="type">void</span> <span
+class="methodname">Exception::\_\_clone</span> ( <span
+class="methodparam">void</span> )
+
+}
 
 简介
 ----

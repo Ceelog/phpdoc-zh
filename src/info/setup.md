@@ -23,22 +23,22 @@
 
 这些函数的行为受 `php.ini` 中的设置影响。
 
-| 名字                                                                 | 默认 | 可修改范围       | 更新日志                                                   |
-|----------------------------------------------------------------------|------|------------------|------------------------------------------------------------|
-| <a href="/info/setup.html#" class="link">assert.active</a>           | "1"  | PHP\_INI\_ALL    |                                                            |
-| <a href="/info/setup.html#" class="link">assert.bail</a>             | "0"  | PHP\_INI\_ALL    |                                                            |
-| <a href="/info/setup.html#" class="link">assert.warning</a>          | "1"  | PHP\_INI\_ALL    |                                                            |
-| <a href="/info/setup.html#" class="link">assert.callback</a>         | NULL | PHP\_INI\_ALL    |                                                            |
-| <a href="/info/setup.html#" class="link">assert.quiet_eval</a>       | "0"  | PHP\_INI\_ALL    |                                                            |
-| <a href="/info/setup.html#" class="link">assert.exception</a>        | "0"  | PHP\_INI\_ALL    | Available since PHP 7.0.0.                                 |
-| <a href="/info/setup.html#" class="link">enable_dl</a>               | "1"  | PHP\_INI\_SYSTEM | 本过时特性*将*肯定会在未来被*移除*。                       |
-| <a href="/info/setup.html#" class="link">max_execution_time</a>      | "30" | PHP\_INI\_ALL    |                                                            |
-| <a href="/info/setup.html#" class="link">max_input_time</a>          | "-1" | PHP\_INI\_PERDIR | 自 PHP 4.3.0 起有效。                                      |
-| <a href="/info/setup.html#" class="link">max_input_nesting_level</a> | "64" | PHP\_INI\_PERDIR | 自 PHP 4.4.8 and PHP 5.2.3 起有效。                        |
-| <a href="/info/setup.html#" class="link">max_input_vars</a>          | 1000 | PHP\_INI\_PERDIR | 自 PHP 5.3.9 起有效。                                      |
-| <a href="/info/setup.html#" class="link">magic_quotes_gpc</a>        | "1"  | PHP\_INI\_PERDIR | 在 PHP \<= 4.2.3 是 PHP\_INI\_ALL，在 PHP 5.4.0 中被移除。 |
-| <a href="/info/setup.html#" class="link">magic_quotes_runtime</a>    | "0"  | PHP\_INI\_ALL    | 在 PHP 5.4.0 中移除                                        |
-| <a href="/info/setup.html#" class="link">zend.enable_gc</a>          | "1"  | PHP\_INI\_ALL    | 自 PHP 5.3.0 起有效。                                      |
+| 名字                                                                 | 默认 | 可修改范围       | 更新日志                             |
+|----------------------------------------------------------------------|------|------------------|--------------------------------------|
+| <a href="/info/setup.html#" class="link">assert.active</a>           | "1"  | PHP\_INI\_ALL    |                                      |
+| <a href="/info/setup.html#" class="link">assert.bail</a>             | "0"  | PHP\_INI\_ALL    |                                      |
+| <a href="/info/setup.html#" class="link">assert.warning</a>          | "1"  | PHP\_INI\_ALL    |                                      |
+| <a href="/info/setup.html#" class="link">assert.callback</a>         | NULL | PHP\_INI\_ALL    |                                      |
+| <a href="/info/setup.html#" class="link">assert.quiet_eval</a>       | "0"  | PHP\_INI\_ALL    |                                      |
+| <a href="/info/setup.html#" class="link">assert.exception</a>        | "0"  | PHP\_INI\_ALL    | 自 PHP 7.0.0 起有效。                |
+| <a href="/info/setup.html#" class="link">enable_dl</a>               | "1"  | PHP\_INI\_SYSTEM | 本过时特性*将*肯定会在未来被*移除*。 |
+| <a href="/info/setup.html#" class="link">max_execution_time</a>      | "30" | PHP\_INI\_ALL    |                                      |
+| <a href="/info/setup.html#" class="link">max_input_time</a>          | "-1" | PHP\_INI\_PERDIR |                                      |
+| <a href="/info/setup.html#" class="link">max_input_nesting_level</a> | "64" | PHP\_INI\_PERDIR | 自 PHP 5.2.3 起有效。                |
+| <a href="/info/setup.html#" class="link">max_input_vars</a>          | 1000 | PHP\_INI\_PERDIR | 自 PHP 5.3.9 起有效。                |
+| <a href="/info/setup.html#" class="link">magic_quotes_gpc</a>        | "1"  | PHP\_INI\_PERDIR | 在 PHP 5.4.0 中被移除。              |
+| <a href="/info/setup.html#" class="link">magic_quotes_runtime</a>    | "0"  | PHP\_INI\_ALL    | 在 PHP 5.4.0 中移除                  |
+| <a href="/info/setup.html#" class="link">zend.enable_gc</a>          | "1"  | PHP\_INI\_ALL    | 自 PHP 5.3.0 起有效。                |
 
 有关 PHP\_INI\_\* 样式的更多详情与定义，见
 <a href="/configuration/changes/modes.html" class="xref">配置可被设定范围</a>。
@@ -52,10 +52,10 @@
 失败的断言将中止脚本。
 
 `assert.warning` <span class="type">boolean</span>  
-为每个失败的断言产生一条 PHP 警告信息
+为每个失败的断言产生一条 PHP 警告信息。
 
 `assert.callback` <span class="type">string</span>  
-失败的断言将调用用户的函数
+断言失败后要调用的回调函数。
 
 `assert.quiet_eval` <span class="type">boolean</span>  
 在 断言表达式执行时 <span class="function">error\_reporting</span>
@@ -81,8 +81,8 @@ class="function">dl</span> 动态加载 PHP 模块。
 
 `max_execution_time` <span class="type">integer</span>  
 这设置了脚本被解析器中止之前允许的最大执行时间，单位秒。
-这有助于防止写得不好的脚本占尽服务器资源。 默认设置为 *30*。
-从<a href="/features/commandline.html" class="link">命令行</a>运行 PHP
+这有助于防止写得不好的脚本占尽服务器资源。 默认设置为 *30*。 从
+<a href="/features/commandline.html" class="link">命令行</a> 运行 PHP
 时，默认设置为 *0*。
 
 最大执行时间不会影响系统调用和系统操作等。更多细节参见 <span
@@ -99,11 +99,14 @@ class="function">set\_time\_limit</span>。
 
 `max_input_time` <span class="type">integer</span>  
 脚本解析输入数据（类似 POST 和 GET）允许的最大时间，单位是秒。
-它从接收所有数据到开始执行脚本进行测量的。
+它从接收所有数据到开始执行脚本进行测量的。默认设置为 *-1*，意味着使用
+<a href="/info/setup.html#" class="link">max_execution_time</a>
+的值做为默认值，如果不想限制，请设置为 *0*。
 
 `max_input_nesting_level` <span class="type">integer</span>  
-设置<a href="/language/variables/external.html" class="link">输入变量</a>的嵌套深度
-(例如 `$_GET`，`$_POST`……)
+设置
+<a href="/language/variables/external.html" class="link">输入变量</a>
+的最大允许嵌套的深度 (例如 `$_GET`，`$_POST`)
 
 `max_input_vars` <span class="type">integer</span>  
 接受多少
@@ -121,17 +124,7 @@ $\_GET、$\_POST 和 $\_COOKIE 超全局变量）
 为 on，所有的 ' (单引号)、" (双引号)、\\（反斜杠）和 NUL's
 被一个反斜杠自动转义。
 
-> **Note**:
->
-> 在 PHP 4，`$_ENV`也会被转义。
-
-> **Note**:
->
-> 如果 magic\_quotes\_sybase 也是 ON，它会完全覆盖 magic\_quotes\_gpc。
-> 两个指令都启用意味着只有单引号被转义为 *''*。 双引号、反斜杠和 NUL's
-> 不会被转义。
-
-See also <span class="function">get\_magic\_quotes\_gpc</span>
+参见 <span class="function">get\_magic\_quotes\_gpc</span>。
 
 `magic_quotes_runtime` <span class="type">boolean</span>  
 **Warning**
@@ -139,7 +132,6 @@ See also <span class="function">get\_magic\_quotes\_gpc</span>
 
 如果启用了
 `magic_quotes_runtime`，大多数返回任何形式外部数据的函数，包括数据库和文本段将会用反斜线转义引号。
-如果启用了 magic\_quotes\_sybase，单引号会被单引号转义而不是反斜线。
 
 受 `magic_quotes_runtime` 影响的函数（不包括 PECL 里的函数）：
 

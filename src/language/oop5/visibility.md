@@ -1,7 +1,7 @@
 访问控制（可见性）
 ------------------
 
-对属性或方法的访问控制，是通过在前面添加关键字
+对属性或方法的访问控制（PHP 7.1.0 以后支持常量），是通过在前面添加关键字
 *public*（公有），*protected*（受保护）或
 *private*（私有）来实现的。被定义为公有的类成员可以在任何地方被访问。被定义为受保护的类成员则可以被其自身以及其子类和父类访问。被定义为私有的类成员则只能被其定义所在的类访问。
 
@@ -44,6 +44,7 @@ $obj->printHello(); // 输出 Public、Protected 和 Private
 class MyClass2 extends MyClass
 {
     // 可以对 public 和 protected 进行重定义，但 private 而不能
+    public $public = 'Public2';
     protected $protected = 'Protected2';
 
     function printHello()
@@ -56,8 +57,8 @@ class MyClass2 extends MyClass
 
 $obj2 = new MyClass2();
 echo $obj2->public; // 这行能被正常执行
-echo $obj2->private; // 未定义 private
 echo $obj2->protected; // 这行会产生一个致命错误
+echo $obj2->private; // 未定义 private
 $obj2->printHello(); // 输出 Public、Protected2 和 Undefined
 
 ?>
@@ -160,11 +161,69 @@ $myFoo->test(); // Bar::testPrivate
 ?>
 ```
 
+### 常量的控制访问
+
+PHP 7.1.0
+开始，类的常量可以定义为公有、私有或受保护。如果没有设置这些关键字，则该常量默认为公有。
+
+**示例 \#3 PHP 7.1.0 中的常量声明**
+
+``` php
+<?php
+/**
+ * Define MyClass
+ */
+class MyClass
+{
+    // 公有常量
+    public const MY_PUBLIC = 'public';
+
+    // 受保护的常量
+    protected const MY_PROTECTED = 'protected';
+
+    // 私有常量
+    private const MY_PRIVATE = 'private';
+
+    public function foo()
+    {
+        echo self::MY_PUBLIC;
+        echo self::MY_PROTECTED;
+        echo self::MY_PRIVATE;
+    }
+}
+
+$myclass = new MyClass();
+MyClass::MY_PUBLIC; // 这行可以正常执行
+MyClass::MY_PROTECTED; // 这行会产生一个致命错误 
+MyClass::MY_PRIVATE; // 这行会产生一个致命错误
+$myclass->foo(); // 将会输出：Public Protected Private
+
+
+/**
+ * Define MyClass2
+ */
+class MyClass2 extends MyClass
+{
+    // This is public
+    function foo2()
+    {
+        echo self::MY_PUBLIC;
+        echo self::MY_PROTECTED;
+        echo self::MY_PRIVATE; // 这行会产生一个致命错误
+    }
+}
+
+$myclass2 = new MyClass2;
+echo MyClass2::MY_PUBLIC; // 这行可以正常执行
+$myclass2->foo2(); // 将会输出：Public Protected，MY_PRIVATE 是私有常量，无法输出
+?>
+```
+
 ### 其它对象的访问控制
 
 同一个类的对象即使不是同一个实例也可以互相访问对方的私有与受保护成员。这是由于在这些对象的内部具体实现的细节都是已知的。
 
-**示例 \#3 访问同一个对象类型的私有成员**
+**示例 \#4 访问同一个对象类型的私有成员**
 
 ``` php
 <?php

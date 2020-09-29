@@ -131,10 +131,7 @@
 
 #### SAPI 选项
 
-下面的列表包含 PHP 可用的SAPI（*服务器应用编程接口*）。
-
-**--with-aolserver=DIR**  
-指定 AOLserver 的安装路径。
+下面的列表包含 PHP 可用的 SAPI（*服务器应用编程接口*）。
 
 **--with-apxs\[=FILE\]**  
 编译共享的 Apache 模块。FILE 是可选的 Apache apxs 工具的路径，默认指向
@@ -152,14 +149,10 @@ apxs。请确认指定的 apxs 已经安装在服务器中，并且它不是 Apa
 编译共享的 Apache 2.0 模块。FILE 是可选的 Apache apxs
 工具的路径，默认指向 apxs。
 
-**--with-caudium=DIR**  
-为使用 Caudium 编译 PHP 为一个 Pike 模块。DIR 是 Caudium
-服务器目录，默认为 `/usr/local/caudium/server`。
-
 **--disable-cli**  
 禁止编译 PHP 的 CLI 版本（使用它将同时强制使用
 <a href="/configure/about.html#configure.without-pear" class="link">--without-pear</a>
-选项）。更多信息请查考
+选项）。更多信息请参阅
 <a href="/features/commandline.html" class="link">PHP 的命令行模式</a>。
 
 **--enable-phpdbg**  
@@ -167,71 +160,47 @@ apxs。请确认指定的 apxs 已经安装在服务器中，并且它不是 Apa
 
 **--enable-embed\[=TYPE\]**  
 启用编译嵌入的 SAPI 库。TYPE 或者为 *shared* 或者为 *static*，默认为
-*shared*。PHP 4.3.0 之后的版本有效。
-
-**--with-isapi=DIR**  
-为 Zeus 服务器以 ISAPI 模块方式编译 PHP。
+*shared*。
 
 **--with-nsapi=DIR**  
 指定 Netscape/iPlanet/SunONE 的安装目录。
-
-**--with-phttpd=DIR**  
-还没有信息。
-
-**--with-pi3web=DIR**  
-为 Pi3Web 服务器编译 PHP 模块。
-
-**--with-roxen=DIR**  
-以 Pike 模块方式编译 PHP。DIR 是 Roxen 的根目录，默认为
-`/usr/local/roxen/server`。
-
-**--enable-roxen-zts**  
-使用 Zend 线程安全（ZTS）编译 Roxen 模块。
 
 **--with-servlet\[=DIR\]**  
 包含 servlet 支持。DIR 是 JSDK 的安装目录。此 SAPI 要求 java
 扩展必须作为共享模块编译到 PHP 中。
 
-**--with-thttpd=SRCDIR**  
-编译 PHP 为 thttpd 模块。
-
-**--with-tux=MODULEDIR**  
-编译 PHP 为 TUX 模块（仅在 Linux 下有效）。
-
-**--with-webjames=SRCDIR**  
-编译 PHP 为 WebJames 模块（仅在 RISC 操作系统中有效）。
-
 **--disable-cgi**  
 禁止编译 CGI 版本的 PHP。
 
-PHP5.3.0起，这个选项会启用FastCGI，而在以前，必须使用*--enable-fastcgi*启用FastCGI。
+PHP 5.3.0 起，这个选项会启用 FastCGI，而在以前，必须使用
+*--enable-fastcgi* 启用 FastCGI。
 
 **--enable-force-cgi-redirect**  
 启用内部服务器重定向的安全检测。如果在 Apache 下使用 CGI 版本的
 PHP，请启用该选项。
 
-PHP
-5.3.0起，默认有效并不再存在。要禁用此功能,设置<a href="/ini/core.html#ini.cgi.force-redirect" class="link">cgi.force_redirect</a>
-ini指令为 *0*.
+PHP 5.3.0 起，默认有效并不再存在。要禁用此功能，需要在 INI 配置文件中将
+<a href="/ini/core.html#ini.cgi.force-redirect" class="link">cgi.force_redirect</a>
+设为 *0*。
 
 **--enable-discard-path**  
 如果启用该选项，PHP CGI 目录可以安全的放在 web
 目录树的外面，人们无法避开 `.htaccess` 的安全限制。
 
-PHP 5.3.0起，默认禁用并不在存在。要启用此功能，设置 cgi-redirect
-ini指令为*1*。
+PHP 5.3.0 起，默认禁用并不在存在。要启用此功能，需要设置 cgi-redirect
+INI 指令为 *1*。
 
 **--enable-fastcgi**  
-如果启用，CGI 模块将被编译为支持 FastCGI。PHP 4.3.0 之后的版本有效。
+如果启用，CGI 模块将被编译为支持 FastCGI。
 
-PHP 5.3.0起，此参数不再存在，并使用 *--enable-cgi*替代。
+PHP 5.3.0 起，此参数不再存在，并使用 *--enable-cgi* 替代。
 
 **--disable-path-info-check**  
-如果该选项被禁用，例如 `/info.php/test?a=b` 形式的路径将不能工作。PHP
-4.3.0 之后的版本有效。更多信息请参考
+如果该选项被禁用，例如 `/info.php/test?a=b`
+形式的路径将不能工作。更多信息请参考
 <a href="http://httpd.apache.org/docs/current/mod/core.html#acceptpathinfo" class="link external">» Apache 手册</a>。
 
 从 PHP 5.3.0 起，此选项默认开启并且不再使用。如果想禁用此特性，需要在
-INI
-配置中将<a href="/ini/core.html#ini.cgi.fix-pathinfo" class="link">cgi.fix_pathinfo</a>
+INI 配置中将
+<a href="/ini/core.html#ini.cgi.fix-pathinfo" class="link">cgi.fix_pathinfo</a>
 设置成 *0*。

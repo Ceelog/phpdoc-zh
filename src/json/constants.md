@@ -3,8 +3,9 @@
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-以下常量表示了 <span class="function">json\_last\_error</span>
-所返回的错误类型。
+以下常量表示了 <span class="function">json\_last\_error</span> 函数，或
+<span class="classname">JsonException</span> 类中的 `code`
+变量所返回的错误类型。
 
 **`JSON_ERROR_NONE`** (<span class="type">integer</span>)  
 <span class="simpara"> 没有错误发生。自 PHP 5.3.0 起生效。 </span>
@@ -21,35 +22,35 @@
 起生效。 </span>
 
 **`JSON_ERROR_SYNTAX`** (<span class="type">integer</span>)  
-<span class="simpara"> 语法错误。 自 PHP 5.3.0 起生效。 </span>
+<span class="simpara"> 语法错误。自 PHP 5.3.0 起生效。 </span>
 
 **`JSON_ERROR_UTF8`** (<span class="type">integer</span>)  
-<span class="simpara"> 异常的 UTF-8 字符，也许是因为不正确的编码。 自
-PHP 5.3.3 起生效。 </span>
+<span class="simpara"> 异常的 UTF-8 字符，也许是因为不正确的编码。自 PHP
+5.3.3 起生效。 </span>
 
 **`JSON_ERROR_RECURSION`** (<span class="type">integer</span>)  
-<span class="simpara"> The object or array passed to <span
-class="function">json\_encode</span> include recursive references and
-cannot be encoded. If the **`JSON_PARTIAL_OUTPUT_ON_ERROR`** option was
-given, **`NULL`** will be encoded in the place of the recursive
-reference. Available since PHP 5.5.0. </span>
+<span class="simpara"> 传递给 <span class="function">json\_encode</span>
+函数的对象或数组包含了递归引用，导致无法被编码。如果打开了
+**`JSON_PARTIAL_OUTPUT_ON_ERROR`** 选项，则牵涉到递归引用的数据会转换成
+**`NULL`** 后返回。自 PHP 5.5.0 起生效。 </span>
 
 **`JSON_ERROR_INF_OR_NAN`** (<span class="type">integer</span>)  
-<span class="simpara"> The value passed to <span
-class="function">json\_encode</span> includes either
+<span class="simpara"> 传递给 <span class="function">json\_encode</span>
+函数的参数中包含了
 <a href="/language/types/float.html#language.types.float.nan" class="link"><strong><code>NAN</code></strong></a>
-or
-<a href="/ref/math.html#is_infinite" class="link"><strong><code>INF</code></strong></a>.
-If the **`JSON_PARTIAL_OUTPUT_ON_ERROR`** option was given, *0* will be
-encoded in the place of these special numbers. Available since PHP
-5.5.0. </span>
+或
+<a href="/ref/math.html#is_infinite" class="link"><strong><code>INF</code></strong></a>，导致编码出错。如果打开了
+**`JSON_PARTIAL_OUTPUT_ON_ERROR`**
+选项，则牵涉到对应不可编码的数字，会转换成数字 *0* 后返回。自 PHP 5.5.0
+起生效。 </span>
 
 **`JSON_ERROR_UNSUPPORTED_TYPE`** (<span class="type">integer</span>)  
-<span class="simpara"> A value of an unsupported type was given to <span
-class="function">json\_encode</span>, such as a <span
-class="type">resource</span>. If the **`JSON_PARTIAL_OUTPUT_ON_ERROR`**
-option was given, **`NULL`** will be encoded in the place of the
-unsupported value. Available since PHP 5.5.0. </span>
+<span class="simpara"> 传递了不支持的数据类型给 <span
+class="function">json\_encode</span> 函数，比如
+<a href="/language/types/resource.html" class="link">资源(resource)</a>。如果打开了
+**`JSON_PARTIAL_OUTPUT_ON_ERROR`**
+选项，则对于不支持的数据类型，会转换成 **`NULL`** 后返回。自 PHP 5.5.0
+起生效。 </span>
 
 **`JSON_ERROR_INVALID_PROPERTY_NAME`** (<span class="type">integer</span>)  
 <span class="simpara"> A key starting with \\u0000 character was in the
@@ -128,3 +129,24 @@ values are always encoded as a float value. Available since PHP 5.6.6.
 **`JSON_UNESCAPED_UNICODE`** is supplied. It uses the same behaviour as
 it was before PHP 7.1 without this constant. Available since PHP 7.1.0.
 </span>
+
+下面的常量可以和 <span class="function">json\_decode</span> 及 <span
+class="function">json\_encode</span> 的 form 选项结合使用。
+
+**`JSON_INVALID_UTF8_IGNORE`** (<span class="type">integer</span>)  
+<span class="simpara"> Ignore invalid UTF-8 characters. Available as of
+PHP 7.2.0. </span>
+
+**`JSON_INVALID_UTF8_SUBSTITUTE`** (<span class="type">integer</span>)  
+<span class="simpara"> Convert invalid UTF-8 characters to \\0xfffd
+(Unicode Character 'REPLACEMENT CHARACTER') Available as of PHP 7.2.0.
+</span>
+
+**`JSON_THROW_ON_ERROR`** (<span class="type">integer</span>)  
+<span class="simpara"> Throws <span
+class="classname">JsonException</span> if an error occurs instead of
+setting the global error state that is retrieved with <span
+class="function">json\_last\_error</span> and <span
+class="function">json\_last\_error\_msg</span>.
+**`JSON_PARTIAL_OUTPUT_ON_ERROR`** takes precedence over
+**`JSON_THROW_ON_ERROR`**. Available as of PHP 7.3.0. </span>

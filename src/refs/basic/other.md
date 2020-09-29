@@ -19,6 +19,8 @@
     -   [简介](/intro/json.html)
     -   [安装／配置](/json/setup.html)
     -   [预定义常量](/json/constants.html)
+    -   [JsonException](/class/jsonexception.html) — The JsonException
+        class
     -   [JsonSerializable](/class/jsonserializable.html) — JSON
         序列化接口
     -   [JSON 函数](/ref/json.html)
