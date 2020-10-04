@@ -107,7 +107,6 @@ PHP 数据对象
         PostgreSQL Functions (PDO\_PGSQL)
     -   [SQLite (PDO)](/book/pdo.html#SQLite%20(PDO)) — SQLite Functions
         (PDO\_SQLITE)
-    -   [4D (PDO)](/book/pdo.html#4D%20(PDO)) — 4D Functions (PDO\_4D)
 
 *PHP 数据对象* （PDO）
 扩展为PHP访问数据库定义了一个轻量级的一致接口。实现 PDO
@@ -4203,18 +4202,6 @@ PDO 驱动
         function in SQL statements
     -   [PDO::sqliteCreateFunction](/book/pdo.html#PDO::sqliteCreateFunction)
         — Registers a User Defined Function for use in SQL statements
--   [4D (PDO)](/book/pdo.html#4D%20(PDO)) — 4D Functions (PDO\_4D)
-    -   [PDO\_4D DSN](/book/pdo.html#PDO_4D%20DSN) — Connecting to 4D
-        SQL server
-    -   [Constants for PDO\_4D](/book/pdo.html#Constants%20for%20PDO_4D)
-        — Constants for PDO\_4D
-    -   [SQL types with PDO\_4D and
-        PHP](/book/pdo.html#SQL%20types%20with%20PDO_4D%20and%20PHP) —
-        SQL types with PDO\_4D and PHP
-    -   [SQL acceptable by
-        4D](/book/pdo.html#SQL%20acceptable%20by%204D) — PDO and SQL 4D
-    -   [Examples with PDO\_4D](/book/pdo.html#Examples%20with%20PDO_4D)
-        — Examples PDO\_4D
 
 下列驱动目前实现了 PDO 接口：
 
@@ -4222,7 +4209,7 @@ PDO 驱动
 |--------------------------------------------------------------------------------|--------------------------------------------|
 | <a href="/book/pdo.html#CUBRID%20(PDO)" class="link">PDO_CUBRID</a>            | Cubrid                                     |
 | <a href="/book/pdo.html#MS%20SQL%20Server%20(PDO)" class="link">PDO_DBLIB</a>  | FreeTDS / Microsoft SQL Server / Sybase    |
-| <a href="/book/pdo.html#Firebird%20(PDO)" class="link">PDO_FIREBIRD</a>        | Firebird/Interbase 6                       |
+| <a href="/book/pdo.html#Firebird%20(PDO)" class="link">PDO_FIREBIRD</a>        | Firebird                                   |
 | <a href="/book/pdo.html#IBM%20(PDO)" class="link">PDO_IBM</a>                  | IBM DB2                                    |
 | <a href="/book/pdo.html#Informix%20(PDO)" class="link">PDO_INFORMIX</a>        | IBM Informix Dynamic Server                |
 | <a href="/book/pdo.html#MySQL%20(PDO)" class="link">PDO_MYSQL</a>              | MySQL 3.x/4.x/5.x                          |
@@ -4231,7 +4218,6 @@ PDO 驱动
 | <a href="/book/pdo.html#PostgreSQL%20(PDO)" class="link">PDO_PGSQL</a>         | PostgreSQL                                 |
 | <a href="/book/pdo.html#SQLite%20(PDO)" class="link">PDO_SQLITE</a>            | SQLite 3 及 SQLite 2                       |
 | <a href="/book/pdo.html#MS%20SQL%20Server%20(PDO)" class="link">PDO_SQLSRV</a> | Microsoft SQL Server / SQL Azure           |
-| <a href="/book/pdo.html#4D%20(PDO)" class="link">PDO_4D</a>                    | 4D                                         |
 
 简介
 ----
@@ -4306,7 +4292,7 @@ Features
 <tr class="even">
 <td>LOBs</td>
 <td>PDO_CUBRID supports BLOB/CLOB data type. The LOB in PDO is represented as a stream, so you can insert LOBs by binding a stream, and get LOBs by reading a stream returned by CUBRID PDO. For example:
-<div id="example-985" class="example">
+<div id="example-986" class="example">
 <p><strong>示例 #1 Insert LOBs in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4322,7 +4308,7 @@ Features
 </div>
 </div>
 </div>
-<div id="example-986" class="example">
+<div id="example-987" class="example">
 <p><strong>示例 #2 Fetch LOBs in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4363,7 +4349,7 @@ Features
 <tr class="even">
 <td>Collection Data Type</td>
 <td>PDO_CUBRID supports SET/MULTISET/SEQUENCE data type. If you don't specify data type, the default data type is char,for example:
-<div id="example-987" class="example">
+<div id="example-988" class="example">
 <p><strong>示例 #3 Insert set in CUBRID PDO with default data type.</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4384,7 +4370,7 @@ Features
 </div>
 </div>
 </div>
-<div id="example-988" class="example">
+<div id="example-989" class="example">
 <p><strong>示例 #4 Specify data type when insert set in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -5761,6 +5747,33 @@ recommended driver for connecting to Microsoft SQL Server databases.
     generic  
         ./configure --with-pdo-odbc=generic,/usr/local,libname,ldflags,cflags
 
+预定义常量
+----------
+
+下列常量由此驱动定义，且仅在扩展编译入 PHP
+或在运行时动态载入时可用。另外，使用此驱动时，仅会使用这些驱动特定的常量。使用其他驱动的驱动特定的常量可能会导致不可预见的情况。如果代码可运行于多个驱动，<span
+class="function">PDO::getAttribute</span> 可被用于获取
+**`PDO_ATTR_DRIVER_NAME`** 属性以检查驱动。
+
+**`PDO::ODBC_ATTR_USE_CURSOR_LIBRARY`** (<span class="type">integer</span>)  
+This option controls whether the ODBC cursor library is used. The ODBC
+cursor library supports some advanced ODBC features (e.g. block
+scrollable cursors), which may not be implemented by the driver. The
+following values are supported:
+
+-   **`PDO::ODBC_SQL_USE_IF_NEEDED`** (the default): use the ODBC cursor
+    library when needed.
+
+-   **`PDO::ODBC_SQL_USE_DRIVER`**: never use the ODBC cursor library.
+
+-   **`PDO::ODBC_SQL_USE_ODBC`**: always use the ODBC cursor library.
+
+**`PDO::ODBC_ATTR_ASSUME_UTF8`** (<span class="type">boolean</span>)  
+Windows only. If **`TRUE`**, UTF-16 encoded character data (*CHAR*,
+*VARCHAR* and *LONGVARCHAR*) is converted to UTF-8 when reading from or
+writing data to the database. If **`FALSE`** (the default), no character
+encoding conversion is done.
+
 运行时配置
 ----------
 
@@ -6862,340 +6875,3 @@ override SQLite native SQL functions.
     in SQL statements
 -   [PDO::sqliteCreateFunction](/book/pdo.html#PDO::sqliteCreateFunction)
     — Registers a User Defined Function for use in SQL statements
-
-简介
-----
-
-**Warning**
-
-此扩展是*实验性* 的。
-此扩展的表象，包括其函数名称以及其他此扩展的相关文档都可能在未来的 PHP
-发布版本中未通知就被修改。使用本扩展风险自担。
-
-PDO\_4D is a driver that implements the
-<a href="/book/pdo.html#简介" class="link">PHP Data Objects (PDO)</a>
-interface to enable access from PHP to 4D databases.
-
-4D is an integrated platform that speeds and simplifies the development
-and deployment of business applications, used in over 70 countries, by a
-community of thousands of developers and vertical solution providers,
-with millions of end-users worldwide.
-
-By offering a suite of integrated tools such as an ANSI SQL relational
-and transactional database, a graphical development environment, a
-fourth-generation language with over 1000 high-level commands, a
-built-in HTTP server, application server, etc., 4D facilitates the
-creation and maintenance of applications from one to hundreds of
-simultaneous users, whether on Windows, Mac or from any Web client.
-
-4D is also an open platform, offering a complete API for plug-in
-creation, including various connectors that allow it to act as a
-back-end or front-end for many environments (Oracle via OCI, SOAP client
-or server, Flex data source, all ODBC databases, XML over HTTP, etc.)
-
-In addition to the ability to interact with 4D applications across Web
-Services, 4D databases can now be directly accessed using the PDO\_4D
-driver.
-
-More details about the 4D development environment on
-<a href="http://www.4d.com/" class="link external">» http://www.4d.com/</a>.
-
-PDO\_4D is known to work with 4D versions 12 beta and up, for macOS and
-Windows. Older plat-forms may work, but are unsupported.
-
-PDO\_4D DSN
-===========
-
-Connecting to 4D SQL server
-
-### 说明
-
-The PDO\_4D DSN consists of:
-
-DSN prefix  
-The DSN prefix is **`4D:`**.
-
-*host*  
-The host on which the 4D SQL server is.
-
-*port*  
-The port number for the server. This is optional.
-
-*user*  
-The login name when connecting to the database.
-
-*password*  
-The password for the above login.
-
-*dbname*  
-The name of the database. This parameter is optional, and it is not
-used.
-
-*charset*  
-The 4D character set.
-
-### 范例
-
-**示例 \#1 DSN examples for PDO\_4D**
-
-The following examples has two DSN for PDO\_4D, that connects to a 4D
-database :
-
-    4D:host=localhost;charset=UTF-8
-
-Other possible values :
-
-    4D:host=localhost
-    4D:
-
-Constants for PDO\_4D
-=====================
-
-Constants for PDO\_4D
-
-### 预定义常量
-
-下列常量由此驱动定义，且仅在扩展编译入 PHP
-或在运行时动态载入时可用。另外，使用此驱动时，仅会使用这些驱动特定的常量。使用其他驱动的驱动特定的常量可能会导致不可预见的情况。如果代码可运行于多个驱动，<span
-class="function">PDO::getAttribute</span> 可被用于获取
-**`PDO_ATTR_DRIVER_NAME`** 属性以检查驱动。
-
-**`PDO::FOURD_ATTR_CHARSET`** (<span class="type">integer</span>)  
-Change the charset in which 4D returns data. (Default is UTF-8).
-
-**`PDO::FOURD_ATTR_PREFERRED_IMAGE_TYPES`** (<span class="type">integer</span>)  
-The requested format of the image, when selecting a row with a column
-type PICTURE. It may be any type that 4D supports.
-
-SQL types with PDO\_4D and PHP
-==============================
-
-SQL types with PDO\_4D and PHP
-
-| Type SQL 4D      | Equivalent 4D | Note                                                    |
-|------------------|---------------|---------------------------------------------------------|
-| ALPHA\_NUMERIC   | TEXT          |                                                         |
-| VARCHAR          | TEXT          |                                                         |
-| TEXT             | TEXT          |                                                         |
-| TIMESTAMP        | DATE          |                                                         |
-| INTERVAL         | HOUR          |                                                         |
-| DURATION         | HOUR          |                                                         |
-| BOOLEAN          | BOOLEAN       |                                                         |
-| BIT              | BOOLEAN       |                                                         |
-| BYTE             | INT32         |                                                         |
-| INT16            | SMALLINT      |                                                         |
-| SMALLINT         | SMALLINT      |                                                         |
-| INT32            | INT32         |                                                         |
-| INT              | INT32         |                                                         |
-| INT64            | INT64         |                                                         |
-| NUMERIC          | INT64         |                                                         |
-| REAL             | REAL          | Unsupported (use VARCHAR conversion)                    |
-| FLOAT            | FLOAT         | Unsupported (use VARCHAR conversion)                    |
-| DOUBLE PRECISION | FLOAT         |                                                         |
-| BLOB             | BLOB          | Must use a prepared statement, and **`PDO::PARAM_LOB`** |
-| BIT VARYING      | BLOB          | Must use a prepared statement, and **`PDO::PARAM_LOB`** |
-| CLOB             | TEXT          |                                                         |
-| PICTURE          | PICTURE       | Must use a prepared statement, and **`PDO::PARAM_LOB`** |
-
-SQL acceptable by 4D
-====================
-
-PDO and SQL 4D
-
-### 说明
-
-4D implements strictly the ANSI 89 standard, and have it enforced. It is
-highly recommended to read the 4D SQL documentation to learn about the
-available commands. The URL of the manual is:
-<a href="http://doc.4d.com/" class="link external">» http://doc.4d.com/</a>.
-Below is a list of 4D SQL characteristics: it is not exhaustive, but may
-serve as an introduction.
-
-| Characteristics                                                                                                     | Alternative                                                                                                                                    | Note                                                                                                                                                                                                                         |
-|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| INTEGER                                                                                                             | Modify the SQL to use INT.                                                                                                                     | INT is the supported integer type in 4Dv12.0.                                                                                                                                                                                |
-| CHAR                                                                                                                | Use VARCHAR instead.                                                                                                                           | Unsupported in 4Dv12.0                                                                                                                                                                                                       |
-| UNION                                                                                                               | Unsupported. Make separate queries.                                                                                                            | Unsupported in 4Dv12.0                                                                                                                                                                                                       |
-| SELECT 1 + 1;                                                                                                       | SELECT 1 + 1 FROM \_USER\_SCHEMAS;                                                                                                             | FROM is required                                                                                                                                                                                                             |
-| FLOAT                                                                                                               | Cast the FLOAT value into a FLOAT or STRING, with an SQL 4D function (CAST, ROUND, TRUNC or TRUNCATE)                                          | Unsupported in current versions of the PDO\_4D driver                                                                                                                                                                        |
-| Strong typing                                                                                                       | Take care your SQL query, or your PHP code provides data with the expected type                                                                | One must provide the right type that 4D expect. One can't insert '1' (as a string) in an INTEGER column.                                                                                                                     |
-| <span class="function">PDO::execute($row)</span> : only works if all the table's column are of type TEXT or VARCHAR | Use the prepared statements, and use the right types.                                                                                          | The PDO extension cast all values through execute() as string, and expect the SQL database to parse the values.                                                                                                              |
-| SELECT NULL FROM TABLE                                                                                              | Do not use NULL constants. Extract them from the table                                                                                         | It is not allowed to use the NULL constant in the select list                                                                                                                                                                |
-| SELECT \* FROM TABLE WHERE 1                                                                                        | Use WHERE 1 = 1                                                                                                                                | A constant can't be used in a WHERE clause                                                                                                                                                                                   |
-| SHOW TABLES                                                                                                         | Use system tables                                                                                                                              | The list of tables, schemas, index, etc. are in these system tables : *\_USER\_TABLES*, *\_USER\_COLUMNS*, *\_USER\_INDEXES*, *\_USER\_CONSTRAINTS*, *\_USER\_IND\_COLUMNS*, *\_USER\_CONS\_COLUMNS*, and *\_USER\_SCHEMAS*. |
-| SQL structure delimiter                                                                                             | Use the following function to protect SQL elements: function sqlEscapeElement(elem) { return '\[' . str\_replace('\]','\]\]', $elem) . '\]'; } | To escape SQL elements names (tables, fields, users, groups, schema, primary key, etc.), the whole identifier must be between square brackets, and the closing brackets '\]' must be doubled.                                |
-
-Examples with PDO\_4D
-=====================
-
-Examples PDO\_4D
-
-This basic example show how to connect, execute a query, read data and
-disconnect from a 4D SQL server.
-
-**示例 \#1 Basic example with PDO\_4D**
-
-``` php
-<?php
-$dsn = '4D:host=localhost;charset=UTF-8';
-$user = 'test';
-$pass = 'test';
-
-// Connection to the 4D SQL server
-$db = new PDO($dsn, $user, $pass);
-
-try {
-    $db->exec('CREATE TABLE test(id varCHAR(1) NOT NULL, val VARCHAR(10))');
-} catch (PDOException $e) {
-    die("Erreur 4D : " . $e->getMessage());
-}
-        
-$db->exec("INSERT INTO test VALUES('A', 'B')");
-$db->exec("INSERT INTO test VALUES('C', 'D')");
-$db->exec("INSERT INTO test VALUES('E', 'F')");
-
-$stmt = $db->prepare('SELECT id, val from test');
-
-$stmt->execute();
-print_r($stmt->fetchAll());
-
-unset($stmt);
-unset($db);
-?>
-```
-
-以上例程会输出：
-
-        Array
-    (
-        [0] => Array
-            (
-                [ID] => A
-                [0] => A
-                [VAL] => B
-                [1] => B
-            )
-
-        [1] => Array
-            (
-                [ID] => C
-                [0] => C
-                [VAL] => D
-                [1] => D
-            )
-
-        [2] => Array
-            (
-                [ID] => E
-                [0] => E
-                [VAL] => F
-                [1] => F
-            )
-
-    )
-
-This example shows how to execute a query in 4D language, and how to
-read the result through PDO\_4D.
-
-**示例 \#2 Accessing 4D language from pdo\_4d**
-
-Set up a 4D method, called *method*. Make sure in the method properties
-that the option *Available via SQL* is checked. The 4D code is the
-following.
-
-``` 4d
-C_TEXT($0)
-$0:=Application Version(*)
-```
-
-The PHP code to use the above 4D method is :
-
-``` php
-<?php
-$dsn = '4D:host=localhost;charset=UTF-8';
-$user = 'test';
-$pass = 'test';
-
-// Connection to the 4D server
-$db = new PDO($dsn, $user, $pass);
-
-$stmt = $db->prepare('SELECT {FN method() AS VARCHAR } FROM _USER_SCHEMAS LIMIT 1');
-
-$stmt->execute();
-print_r($stmt->fetchAll());
-
-unset($stmt);
-unset($db);
-?>
-```
-
-以上例程会输出：
-
-    (
-        [0] => Array
-            (
-                [<expression>] => F0011140
-                [0] => F0011140
-            )
-
-    )
-
-**示例 \#3 Escaping 4D table names**
-
-This examples illustrates how to escape characters in a 4D SQL query.
-
-``` php
-<?php
-$dsn = '4D:host=localhost;charset=UTF-8';
-$user = 'test';
-$pass = 'test';
-
-// Connection to 4D server 4D
-$db = new PDO($dsn, $user, $pass);
-
-$objects = array('[',']','[]','][','[[',']]','[[[',']]]','TBL ]]32[23');
-
-foreach($objects as $id => $object) {
-    $object = str_replace(']',']]', $object);
-    print "$object\n";
-    
-    $db->exec('CREATE TABLE IF NOT EXISTS ['.$object.'](['.$object.'] FLOAT)');
-
-    $req = "INSERT INTO [$object] ([$object]) VALUES ($id);";
-    $db->query($req);
-
-    $q = $db->prepare("SELECT [$object] FROM [$object]");
-    $q->execute();
-    $x[] = $q->fetch(PDO::FETCH_NUM);
-
-    $db->exec('DROP TABLE ['.$object.'];');
-}
-
-?>
-```
-
-以上例程会输出：
-
-    [
-    ]]
-    []]
-    ]][
-    [[
-    ]]]]
-    [[[
-    ]]]]]]
-    TBL ]]]]32[23
-
-**目录**
-
--   [PDO\_4D DSN](/book/pdo.html#PDO_4D%20DSN) — Connecting to 4D SQL
-    server
--   [Constants for PDO\_4D](/book/pdo.html#Constants%20for%20PDO_4D) —
-    Constants for PDO\_4D
--   [SQL types with PDO\_4D and
-    PHP](/book/pdo.html#SQL%20types%20with%20PDO_4D%20and%20PHP) — SQL
-    types with PDO\_4D and PHP
--   [SQL acceptable by 4D](/book/pdo.html#SQL%20acceptable%20by%204D) —
-    PDO and SQL 4D
--   [Examples with PDO\_4D](/book/pdo.html#Examples%20with%20PDO_4D) —
-    Examples PDO\_4D

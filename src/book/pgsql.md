@@ -3464,7 +3464,7 @@ last connection made by <span class="function">pg\_connect</span> or
 Possible `param_name` values include *server\_version*,
 *server\_encoding*, *client\_encoding*, *is\_superuser*,
 *session\_authorization*, *DateStyle*, *TimeZone*, and
-*integer\_datetimes*.
+*integer\_datetimes*. Note that this value is case-sensitive.
 
 ### 返回值
 

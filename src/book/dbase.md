@@ -843,11 +843,6 @@ if ($db) {
 ?>
 ```
 
-### 返回值
-
-Returns a database resource if the database is successfully opened, or
-**`FALSE`** if an error occurred.
-
 ### 参见
 
 -   <span class="function">dbase\_create</span>

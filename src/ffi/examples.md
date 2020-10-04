@@ -37,6 +37,11 @@ $ffi->printf("Hello %s!\n", "world");
 
     Hello world!
 
+> **Note**:
+>
+> Note that some C functions need specific calling conventions, e.g.
+> *\_\_fastcall*, *\_\_stdcall* or *,\_\_vectorcall*.
+
 **示例 \#2 Calling a function, returning a structure through an
 argument**
 
@@ -150,6 +155,29 @@ var_dump(FFI::sizeof($a));
     int(523776)
     int(1024)
     int(8192)
+
+**示例 \#6 Working with C enums**
+
+``` php
+<?php
+$a = FFI::cdef('typedef enum _zend_ffi_symbol_kind {
+    ZEND_FFI_SYM_TYPE,
+    ZEND_FFI_SYM_CONST = 2,
+    ZEND_FFI_SYM_VAR,
+    ZEND_FFI_SYM_FUNC
+} zend_ffi_symbol_kind;
+');
+var_dump($a->ZEND_FFI_SYM_TYPE);
+var_dump($a->ZEND_FFI_SYM_CONST);
+var_dump($a->ZEND_FFI_SYM_VAR);
+?>
+```
+
+以上例程会输出：
+
+    int(0)
+    int(2)
+    int(3)
 
 PHP Callbacks
 -------------

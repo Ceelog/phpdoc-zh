@@ -224,8 +224,6 @@
 -   <span
     class="simpara"><a href="/book/pdo.html" class="xref">PDO</a></span>
 -   <span
-    class="simpara"><a href="/book/pdo.html#4D%20(PDO)" class="xref"></a></span>
--   <span
     class="simpara"><a href="/book/pdo.html#CUBRID%20(PDO)" class="xref"></a></span>
 -   <span
     class="simpara"><a href="/book/pdo.html#MS%20SQL%20Server%20(PDO)" class="xref"></a></span>

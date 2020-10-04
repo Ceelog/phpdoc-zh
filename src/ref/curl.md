@@ -2516,19 +2516,19 @@ class="methodparam"><span class="type">int</span> `$errornum`</span> )
 
 ``` php
 <?php
-// Create a curl handle with a mispelled protocol in URL
+// 以错拼的 URL 协议创建 curl 句柄
 $ch = curl_init("htp://example.com/");
 
-// Send request
+// 发送请求
 curl_exec($ch);
 
-// Check for errors and display the error message
+// 检测错误，显示错误信息
 if($errno = curl_errno($ch)) {
     $error_message = curl_strerror($errno);
     echo "cURL error ({$errno}):\n {$error_message}";
 }
 
-// Close the handle
+// 关闭句柄
 curl_close($ch);
 ?>
 ```

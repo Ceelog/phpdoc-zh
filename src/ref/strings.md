@@ -7564,14 +7564,152 @@ class="methodparam"><span class="type">array</span> `$args`</span> )
 ### 参数
 
 `format`  
-关于 `format` 的描述，参见 <span class="function">sprintf</span>。
+The format string is composed of zero or more directives: ordinary
+characters (excluding *%*) that are copied directly to the result and
+*conversion specifications*, each of which results in fetching its own
+parameter.
+
+A conversion specification follows this prototype:
+*%\[argnum$\]\[flags\]\[width\]\[.precision\]specifier*.
+
+##### Argnum
+
+An integer followed by a dollar sign *$*, to specify which number
+argument to treat in the conversion.
+
+| Flag      | 说明                                                                                                   |
+|-----------|--------------------------------------------------------------------------------------------------------|
+| *-*       | Left-justify within the given field width; Right justification is the default                          |
+| *+*       | Prefix positive numbers with a plus sign *+*; Default only negative are prefixed with a negative sign. |
+|  (space)  | Pads the result with spaces. This is the default.                                                      |
+| *0*       | Only left-pads numbers with zeros. With *s* specifiers this can also right-pad with zeros.             |
+| *'*(char) | Pads the result with the character (char).                                                             |
+
+##### Width
+
+An integer that says how many characters (minimum) this conversion
+should result in.
+
+##### Precision
+
+A period *.* followed by an integer who's meaning depends on the
+specifier:
+
+-   <span class="simpara"> For *e*, *E*, *f* and *F* specifiers: this is
+    the number of digits to be printed after the decimal point (by
+    default, this is 6). </span>
+-   <span class="simpara"> For *g* and *G* specifiers: this is the
+    maximum number of significant digits to be printed. </span>
+-   <span class="simpara"> For *s* specifier: it acts as a cutoff point,
+    setting a maximum character limit to the string. </span>
+
+> **Note**: <span class="simpara"> If the period is specified without an
+> explicit value for precision, 0 is assumed. </span>
+
+> **Note**: <span class="simpara"> Attempting to use a position
+> specifier greater than **`PHP_INT_MAX`** will generate warnings.
+> </span>
+
+<table>
+<caption><strong>Specifiers</strong></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Specifier</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>%</em></td>
+<td>A literal percent character. No argument is required.</td>
+</tr>
+<tr class="even">
+<td><em>b</em></td>
+<td>The argument is treated as an integer and presented as a binary number.</td>
+</tr>
+<tr class="odd">
+<td><em>c</em></td>
+<td>The argument is treated as an integer and presented as the character with that ASCII.</td>
+</tr>
+<tr class="even">
+<td><em>d</em></td>
+<td>The argument is treated as an integer and presented as a (signed) decimal number.</td>
+</tr>
+<tr class="odd">
+<td><em>e</em></td>
+<td>The argument is treated as scientific notation (e.g. 1.2e+2). The precision specifier stands for the number of digits after the decimal point since PHP 5.2.1. In earlier versions, it was taken as number of significant digits (one less).</td>
+</tr>
+<tr class="even">
+<td><em>E</em></td>
+<td>Like the <em>e</em> specifier but uses uppercase letter (e.g. 1.2E+2).</td>
+</tr>
+<tr class="odd">
+<td><em>f</em></td>
+<td>The argument is treated as a float and presented as a floating-point number (locale aware).</td>
+</tr>
+<tr class="even">
+<td><em>F</em></td>
+<td>The argument is treated as a float and presented as a floating-point number (non-locale aware). Available as of PHP 5.0.3.</td>
+</tr>
+<tr class="odd">
+<td><em>g</em></td>
+<td><p>General format.</p>
+<p>Let P equal the precision if nonzero, 6 if the precision is omitted, or 1 if the precision is zero. Then, if a conversion with style E would have an exponent of X:</p>
+<p>If P &gt; X ≥ −4, the conversion is with style f and precision P − (X + 1). Otherwise, the conversion is with style e and precision P − 1.</p></td>
+</tr>
+<tr class="even">
+<td><em>G</em></td>
+<td>Like the <em>g</em> specifier but uses <em>E</em> and <em>f</em>.</td>
+</tr>
+<tr class="odd">
+<td><em>o</em></td>
+<td>The argument is treated as an integer and presented as an octal number.</td>
+</tr>
+<tr class="even">
+<td><em>s</em></td>
+<td>The argument is treated and presented as a string.</td>
+</tr>
+<tr class="odd">
+<td><em>u</em></td>
+<td>The argument is treated as an integer and presented as an unsigned decimal number.</td>
+</tr>
+<tr class="even">
+<td><em>x</em></td>
+<td>The argument is treated as an integer and presented as a hexadecimal number (with lowercase letters).</td>
+</tr>
+<tr class="odd">
+<td><em>X</em></td>
+<td>The argument is treated as an integer and presented as a hexadecimal number (with uppercase letters).</td>
+</tr>
+</tbody>
+</table>
+
+**Warning**
+The *c* type specifier ignores padding and width
+
+**Warning**
+Attempting to use a combination of the string and width specifiers with
+character sets that require more than one byte per character may result
+in unexpected results
+
+Variables will be co-erced to a suitable type for the specifier:
+
+| Type      | Specifiers                        |
+|-----------|-----------------------------------|
+| *string*  | *s*                               |
+| *integer* | *d*, *u*, *c*, *o*, *x*, *X*, *b* |
+| *double*  | *g*, *G*, *e*, *E*, *f*, *F*      |
 
 `args`  
 
 ### 返回值
 
-根据 `format` （<span class="function">sprintf</span>
-函数文档中有相关描述）参数指定的格式，在一个字符串中返回一系列值。
+根据 `format` 参数指定的格式，在一个字符串中返回一系列值，
+或者在失败时返回 **`FALSE`**。
 
 ### 范例
 
@@ -7579,14 +7717,25 @@ class="methodparam"><span class="type">array</span> `$args`</span> )
 
 ``` php
 <?php
-print vsprintf("%04d-%02d-%02d", explode('-', '1988-8-1')); // 1988-08-01
+print vsprintf("%04d-%02d-%02d", explode('-', '1988-8-1'));
 ?>
 ```
 
+以上例程会输出：
+
+    1988-08-01
+
 ### 参见
 
+-   <span class="function">printf</span>
 -   <span class="function">sprintf</span>
+-   <span class="function">fprintf</span>
 -   <span class="function">vprintf</span>
+-   <span class="function">vfprintf</span>
+-   <span class="function">sscanf</span>
+-   <span class="function">fscanf</span>
+-   <span class="function">number\_format</span>
+-   <span class="function">date</span>
 
 wordwrap
 ========
