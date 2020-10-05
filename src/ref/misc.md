@@ -1787,7 +1787,7 @@ The offset to begin unpacking from.
 ### 返回值
 
 Returns an associative array containing unpacked elements of binary
-string.
+string, 或者在失败时返回 **`FALSE`**.
 
 ### 更新日志
 

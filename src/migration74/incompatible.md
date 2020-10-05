@@ -201,3 +201,8 @@ by older versions.
 <span class="function">token\_get\_all</span> will now emit a
 **`T_BAD_CHARACTER`** token for unexpected characters instead of leaving
 behind holes in the token stream.
+
+### 接收到的 Cookies
+
+从 PHP 7.4.11 开始，为了安全考虑，接受到的 Cookie 中的 *names*
+参数不再被 URL 编码。
