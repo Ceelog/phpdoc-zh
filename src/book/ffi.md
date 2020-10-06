@@ -814,7 +814,7 @@ number of ways as a regular PHP data:
     class="function">count</span>. </span>
 -   <span class="simpara"> C pointers can be dereferenced as arrays,
     e.g. `$cdata[0]` </span>
--   <span class="simpara"> C pointers can be compared using regualar
+-   <span class="simpara"> C pointers can be compared using regular
     comparison operators (`<`, `<=`, `==`, `!=`, `>=`, `>`). </span>
 -   <span class="simpara"> C pointers can be incremented and decremented
     using regular `+`/`-`/ `++`/`–-` operations, e.g. `$cdata += 5`
@@ -830,7 +830,7 @@ number of ways as a regular PHP data:
     class="function">var\_dump</span>, <span
     class="function">print\_r</span>, etc. </span>
 
-> **Note**: <span class="simpara"> Noteable limitations are that <span
+> **Note**: <span class="simpara"> Notable limitations are that <span
 > class="classname">FFI\\CData</span> instances do not support <span
 > class="function">isset</span>, <span class="function">empty</span> and
 > <span class="function">unset</span>, and that wrapped C structs and

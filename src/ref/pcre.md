@@ -875,7 +875,8 @@ are executed on a per-pattern basis.
 ### 参数
 
 `patterns_and_callbacks`  
-An associative array mapping patterns (keys) to callbacks (values).
+An associative array mapping patterns (keys) to <span
+class="type">callable</span>s (values).
 
 `subject`  
 The string or an array with strings to search and replace.
@@ -945,8 +946,6 @@ preg_replace_callback_array(
 -   <span class="function">preg\_replace</span>
 -   <span class="function">preg\_last\_error</span>
 -   <a href="/functions/anonymous.html" class="link">Anonymous functions</a>
--   <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    类型的信息
 
 preg\_replace\_callback
 =======================

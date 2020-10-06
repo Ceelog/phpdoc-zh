@@ -53026,7 +53026,7 @@ class="methodparam"><span class="type">mixed</span>
 `$mysql_connection`</span> \[, <span class="methodparam"><span
 class="type">Memcached</span> `$memcache_connection`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$pattern`</span>
-\[, <span class="methodparam"><span class="type">callback</span>
+\[, <span class="methodparam"><span class="type">callable</span>
 `$callback`</span> \]\]\] )
 
 Associate `mysql_connection` with `memcache_connection` using `pattern`

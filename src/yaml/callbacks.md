@@ -9,7 +9,7 @@ Callbacks
 Parse callbacks
 ---------------
 
-Parse <span class="type">callbacks</span> are invoked by <span
+Parse <span class="type">callable</span>s are invoked by <span
 class="function">yaml\_parse</span>, <span
 class="function">yaml\_parse\_file</span> or <span
 class="function">yaml\_parse\_url</span> functions when a registered

@@ -506,30 +506,36 @@ class="methodparam"><span class="type">resource</span>
 `$result_id`</span> , <span class="methodparam"><span
 class="type">int</span> `$mode`</span> )
 
-Enables handling of binary column data. ODBC SQL types affected are
+Controls handling of binary column data. ODBC SQL types affected are
 *BINARY*, *VARBINARY*, and *LONGVARBINARY*. The default mode can be set
 using the
 <a href="/book/uodbc.html#" class="link">uodbc.defaultbinmode</a>
 `php.ini` directive.
 
-When binary SQL data is converted to character C data, each byte (8
-bits) of source data is represented as two ASCII characters. These
-characters are the ASCII character representation of the number in its
-hexadecimal form. For example, a binary *00000001* is converted to
-*"01"* and a binary *11111111* is converted to *"FF"*.
+When binary SQL data is converted to character C data
+(**`ODBC_BINMODE_CONVERT`**), each byte (8 bits) of source data is
+represented as two ASCII characters. These characters are the ASCII
+character representation of the number in its hexadecimal form. For
+example, a binary *00000001* is converted to *"01"* and a binary
+*11111111* is converted to *"FF"*.
+
+While the handling of *BINARY* and *VARBINARY* columns only depend on
+the binmode, the handling of *LONGVARBINARY* columns also depends on the
+longreadlen as well:
 
 | binmode                     | longreadlen | result         |
 |-----------------------------|-------------|----------------|
 | **`ODBC_BINMODE_PASSTHRU`** | 0           | passthru       |
 | **`ODBC_BINMODE_RETURN`**   | 0           | passthru       |
 | **`ODBC_BINMODE_CONVERT`**  | 0           | passthru       |
-| **`ODBC_BINMODE_PASSTHRU`** | 0           | passthru       |
 | **`ODBC_BINMODE_PASSTHRU`** | \>0         | passthru       |
 | **`ODBC_BINMODE_RETURN`**   | \>0         | return as is   |
 | **`ODBC_BINMODE_CONVERT`**  | \>0         | return as char |
 
 If <span class="function">odbc\_fetch\_into</span> is used, passthru
-means that an empty string is returned for these columns.
+means that an empty string is returned for these columns. If <span
+class="function">odbc\_result</span> is used, passthru means that the
+data are sent directly to the client (i.e. printed).
 
 ### 参数
 
@@ -537,11 +543,6 @@ means that an empty string is returned for these columns.
 The result identifier.
 
 If `result_id` is *0*, the settings apply as default for new results.
-
-> **Note**: <span class="simpara"> Default for *longreadlen* is *4096*
-> and `mode` defaults to *ODBC\_BINMODE\_RETURN*. Handling of binary
-> long columns is also affected by <span
-> class="function">odbc\_longreadlen</span>. </span>
 
 `mode`  
 Possible values for `mode` are:
@@ -552,6 +553,10 @@ Possible values for `mode` are:
     </span>
 -   <span class="simpara"> **`ODBC_BINMODE_CONVERT`**: Convert to char
     and return </span>
+
+> **Note**: <span class="simpara"> Handling of binary long columns is
+> also affected by <span class="function">odbc\_longreadlen</span>.
+> </span>
 
 ### 返回值
 
@@ -1710,8 +1715,8 @@ class="methodparam"><span class="type">resource</span>
 `$result_id`</span> , <span class="methodparam"><span
 class="type">int</span> `$length`</span> )
 
-Enables handling of LONG and LONGVARBINARY columns. The default length
-can be set using the
+Controls handling of *LONG*, *LONGVARCHAR* and *LONGVARBINARY* columns.
+The default length can be set using the
 <a href="/book/uodbc.html#" class="link">uodbc.defaultlrl</a> `php.ini`
 directive.
 
@@ -1722,8 +1727,9 @@ The result identifier.
 
 `length`  
 The number of bytes returned to PHP is controlled by the parameter
-length. If it is set to 0, Long column data is passed through to the
-client.
+length. If it is set to *0*, long column data is passed through to the
+client (i.e. printed) when retrieved with <span
+class="function">odbc\_result</span>.
 
 ### 返回值
 
@@ -1733,7 +1739,7 @@ client.
 
 > **Note**:
 >
-> Handling of LONGVARBINARY columns is also affected by <span
+> Handling of *LONGVARBINARY* columns is also affected by <span
 > class="function">odbc\_binmode</span>.
 
 odbc\_next\_result
@@ -2303,7 +2309,11 @@ class="type">string</span> `$format`</span> \] )
 
 Prints all rows from a result identifier produced by <span
 class="function">odbc\_exec</span>. The result is printed in HTML table
-format.
+format. The data is *not* escaped.
+
+This function is not supposed to be used in production environments; it
+is merely meant for development purposes, to get a result set quickly
+rendered.
 
 ### 参数
 

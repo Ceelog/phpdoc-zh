@@ -556,7 +556,7 @@ class="type">string</span> `$key`</span> )
 class="methodparam"><span class="type">int</span> `$type`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$persistent_id`<span class="initializer"> = **`NULL`**</span></span>
-\[, <span class="methodparam"><span class="type">callback</span>
+\[, <span class="methodparam"><span class="type">callable</span>
 `$on_new_socket`<span class="initializer"> = **`NULL`**</span></span>
 \]\] )
 
@@ -663,7 +663,7 @@ Create a new socket
 class="methodparam"><span class="type">int</span> `$type`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$persistent_id`<span class="initializer"> = **`NULL`**</span></span>
-\[, <span class="methodparam"><span class="type">callback</span>
+\[, <span class="methodparam"><span class="type">callable</span>
 `$on_new_socket`<span class="initializer"> = **`NULL`**</span></span>
 \]\] )
 
@@ -801,7 +801,7 @@ class="methodparam"><span class="type">ZMQContext</span>
 class="type">int</span> `$type`</span> \[, <span
 class="methodparam"><span class="type">string</span>
 `$persistent_id`<span class="initializer"> = **`NULL`**</span></span>
-\[, <span class="methodparam"><span class="type">callback</span>
+\[, <span class="methodparam"><span class="type">callable</span>
 `$on_new_socket`<span class="initializer"> = **`NULL`**</span></span>
 \]\] )
 
@@ -968,7 +968,7 @@ class="methodparam"><span class="type">ZMQContext</span>
 class="type">int</span> `$type`</span> \[, <span
 class="methodparam"><span class="type">string</span>
 `$persistent_id`<span class="initializer"> = **`NULL`**</span></span>
-\[, <span class="methodparam"><span class="type">callback</span>
+\[, <span class="methodparam"><span class="type">callable</span>
 `$on_new_socket`<span class="initializer"> = **`NULL`**</span></span>
 \]\] )
 

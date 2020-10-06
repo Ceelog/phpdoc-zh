@@ -1892,7 +1892,7 @@ $iterator = $arrayobject->getIterator();
 $iterator->next();
 echo $iterator->key(); //1
 
-$iterator->rewind(); //rewinding to the begining
+$iterator->rewind(); //rewinding to the beginning
 echo $iterator->key(); //0
 ?>
 ```
