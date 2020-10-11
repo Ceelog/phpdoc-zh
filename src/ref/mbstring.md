@@ -2153,8 +2153,14 @@ there can only be set one mode but multiple options.
 
 ### 返回值
 
-The <span class="type">string</span> that describes the current options
-is returned.
+The previous options. If `options` is omitted, it returns the <span
+class="type">string</span> that describes the current options.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                          |
+|-------|-------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | If the parameter `options` is given, the *previous* options are returned. Formerly, the *current* options have been returned. |
 
 ### 参见
 

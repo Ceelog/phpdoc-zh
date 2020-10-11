@@ -5852,10 +5852,6 @@ The width to scale the image to.
 The height to scale the image to. If omitted or negative, the aspect
 ratio will be preserved.
 
-**Caution**
-You should always provide the height if using PHP 5.5.18 or earlier, or
-PHP 5.6.2 or earlier, as the aspect ratio calculation was incorrect.
-
 `mode`  
 One of **`IMG_NEAREST_NEIGHBOUR`**, **`IMG_BILINEAR_FIXED`**,
 **`IMG_BICUBIC`**, **`IMG_BICUBIC_FIXED`** or anything else (will use
@@ -5869,16 +5865,10 @@ two pass).
 Return the scaled image resource on success 或者在失败时返回
 **`FALSE`**.
 
-### 更新日志
-
-| 版本         | 说明                                                                                                                                                     |
-|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.19/5.6.3 | The calculation of the height if `new_height` was negative or omitted was fixed; prior to these versions, the aspect ratio was not maintained correctly. |
-
 ### 参见
 
-<span class="function">imagecopyresized</span> <span
-class="function">imagecopyresampled</span>
+-   <span class="function">imagecopyresized</span>
+-   <span class="function">imagecopyresampled</span>
 
 imagesetbrush
 =============

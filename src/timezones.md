@@ -26,7 +26,7 @@ class="function">date\_default\_timezone\_set</span> 等函数。
 > <a href="https://pecl.php.net/get/timezonedb" class="link external">» timezonedb</a>
 > 进行安装。</span>
 
-> **Note**: <span class="simpara"> 基于时区数据库版本的列表 2020.1.
+> **Note**: <span class="simpara"> 基于时区数据库版本的列表 2020.2.
 > </span>
 
 非洲
@@ -264,5 +264,5 @@ the above examples.
 | Universal             | US/Alaska           | US/Aleutian                      | US/Arizona            |
 | US/Central            | US/East-Indiana     | US/Eastern                       | US/Hawaii             |
 | US/Indiana-Starke     | US/Michigan         | US/Mountain                      | US/Pacific            |
-| US/Pacific-New        | US/Samoa            | UTC                              | W-SU                  |
-| WET                   | Zulu                |                                  |                       |
+| US/Samoa              | UTC                 | W-SU                             | WET                   |
+| Zulu                  |                     |                                  |                       |

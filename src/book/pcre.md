@@ -23,6 +23,8 @@
     -   [preg\_filter](/ref/pcre.html#preg_filter) —
         执行一个正则表达式搜索和替换
     -   [preg\_grep](/ref/pcre.html#preg_grep) — 返回匹配模式的数组条目
+    -   [preg\_last\_error\_msg](/ref/pcre.html#preg_last_error_msg) —
+        Returns the error message of the last PCRE regex execution
     -   [preg\_last\_error](/ref/pcre.html#preg_last_error) —
         返回最后一个PCRE正则执行产生的错误代码
     -   [preg\_match\_all](/ref/pcre.html#preg_match_all) —

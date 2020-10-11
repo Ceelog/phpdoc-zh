@@ -3442,8 +3442,16 @@ End timestamp.
 
 ### 返回值
 
-Returns numerically indexed array containing associative array with all
-transitions on success 或者在失败时返回 **`FALSE`**.
+Returns a numerically indexed array of transition arrays on success,
+或者在失败时返回 **`FALSE`**.
+
+| Key      | Type                             | Description                                  |
+|----------|----------------------------------|----------------------------------------------|
+| *ts*     | <span class="type">int</span>    | Unix timestamp                               |
+| *time*   | <span class="type">string</span> | **`DateTimeInterface::ISO8601`** time string |
+| *offset* | <span class="type">int</span>    | Offset to UTC in seconds                     |
+| *isdst*  | <span class="type">bool</span>   | Whether daylight saving time is active       |
+| *abbr*   | <span class="type">string</span> | Timezone abbreviation                        |
 
 ### 范例
 

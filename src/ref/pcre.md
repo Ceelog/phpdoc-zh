@@ -136,6 +136,53 @@ $fl_array = preg_grep("/^(\d+)?\.\d+$/", $array);
 -   <span class="function">preg\_filter</span>
 -   <span class="function">preg\_last\_error</span>
 
+preg\_last\_error\_msg
+======================
+
+Returns the error message of the last PCRE regex execution
+
+### 说明
+
+<span class="type">string</span> <span
+class="methodname">preg\_last\_error\_msg</span> ( <span
+class="methodparam">void</span> )
+
+Returns the error message of the last PCRE regex execution.
+
+### 参数
+
+此函数没有参数。
+
+### 返回值
+
+Returns the error message on success, or *"No error"* if no error has
+occurred.
+
+### 范例
+
+**示例 \#1 <span class="function">preg\_last\_error\_msg</span>
+example**
+
+``` php
+<?php
+
+preg_match('/(?:\D+|<\d+>)*[!?]/', 'foobar foobar foobar');
+
+if (preg_last_error() !== PREG_NO_ERROR) {
+    echo preg_last_error_msg();
+}
+
+?>
+```
+
+以上例程会输出：
+
+    Backtrack limit exhausted
+
+### 参见
+
+-   <span class="function">preg\_last\_error</span>
+
 preg\_last\_error
 =================
 
@@ -1476,6 +1523,8 @@ class="function">str\_split</span>。
 -   [preg\_filter](/ref/pcre.html#preg_filter) —
     执行一个正则表达式搜索和替换
 -   [preg\_grep](/ref/pcre.html#preg_grep) — 返回匹配模式的数组条目
+-   [preg\_last\_error\_msg](/ref/pcre.html#preg_last_error_msg) —
+    Returns the error message of the last PCRE regex execution
 -   [preg\_last\_error](/ref/pcre.html#preg_last_error) —
     返回最后一个PCRE正则执行产生的错误代码
 -   [preg\_match\_all](/ref/pcre.html#preg_match_all) —
