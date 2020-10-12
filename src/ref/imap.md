@@ -1903,23 +1903,39 @@ Create a MIME message based on the given `envelope` and `body` sections.
 ### 参数
 
 `envelope`  
-An associative array of headers fields. Valid keys are: *"remail"*,
+An associative array of header fields. Valid keys are: *"remail"*,
 *"return\_path"*, *"date"*, *"from"*, *"reply\_to"*, *"in\_reply\_to"*,
-*"subject"*, *"to"*, *"cc"*, *"bcc"*, *"message\_id"* and
-*"custom\_headers"* (which contains an array of other headers, e.g.
-`["User-Agent: My Mail Client"]`).
+*"subject"*, *"to"*, *"cc"*, *"bcc"* and *"message\_id"*, which set the
+respective message headers to the given <span
+class="type">string</span>. To set additional headers, the key
+*"custom\_headers"* is supported, which expects an array of those
+headers, e.g. `["User-Agent: My Mail Client"]`.
 
 `body`  
-An indexed array of bodies
+An indexed array of bodies. The first body is the main body of the
+message; only if it has a type of **`TYPEMULTIPART`**, further bodies
+are processed; these bodies constitute the bodies of the parts.
 
-A body is an associative array which can consist of the following keys:
-*"type"*, *"encoding"*, *"charset"*, *"type.parameters"*, *"subtype"*,
-*"id"*, *"description"*, *"disposition.type"*, *"disposition"*,
-*"contents.data"*, *"lines"*, *"bytes"* and *"md5"*.
+| Key                | Type                             | Description                                                                                                                                                                          |
+|--------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *type*             | <span class="type">int</span>    | The MIME type. One of **`TYPETEXT`** (default), **`TYPEMULTIPART`**, **`TYPEMESSAGE`**, **`TYPEAPPLICATION`**, **`TYPEAUDIO`**, **`TYPEIMAGE`**, **`TYPEMODEL`** or **`TYPEOTHER`**. |
+| *encoding*         | <span class="type">int</span>    | The *Content-Transfer-Encoding*. One of **`ENC7BIT`** (default), **`ENC8BIT`**, **`ENCBINARY`**, **`ENCBASE64`**, **`ENCQUOTEDPRINTABLE`** or **`ENCOTHER`**.                        |
+| *charset*          | <span class="type">string</span> | The charset parameter of the MIME type.                                                                                                                                              |
+| *type.parameters*  | <span class="type">array</span>  | An associative <span class="type">array</span> of *Content-Type* parameter names and their values.                                                                                   |
+| *subtype*          | <span class="type">string</span> | The MIME subtype, e.g. *'jpeg'* for **`TYPEIMAGE`**.                                                                                                                                 |
+| *id*               | <span class="type">string</span> | The *Content-ID*.                                                                                                                                                                    |
+| *description*      | <span class="type">string</span> | The *Content-Description*.                                                                                                                                                           |
+| *disposition.type* | <span class="type">string</span> | The *Content-Disposition*, e.g. *'attachment'*.                                                                                                                                      |
+| *disposition*      | <span class="type">array</span>  | An associative <span class="type">array</span> of *Content-Disposition* parameter names and values.                                                                                  |
+| *contents.data*    | <span class="type">string</span> | The payload.                                                                                                                                                                         |
+| *lines*            | <span class="type">int</span>    | The size of the payload in lines.                                                                                                                                                    |
+| *bytes*            | <span class="type">int</span>    | The size of the payload in bytes.                                                                                                                                                    |
+| *md5*              | <span class="type">string</span> | The MD5 checksum of the payload.                                                                                                                                                     |
 
 ### 返回值
 
-Returns the MIME message.
+Returns the MIME message as <span class="type">string</span>,
+或者在失败时返回 **`FALSE`**.
 
 ### 范例
 

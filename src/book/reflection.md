@@ -283,7 +283,7 @@
         —
         返回一个动态建立的方法调用接口，译者注：可以使用这个返回值直接调用非公开方法。
     -   [ReflectionMethod::getDeclaringClass](/class/reflectionmethod.html#ReflectionMethod::getDeclaringClass)
-        — 获取反射函数调用参数的类表达
+        — 获取被的反射的方法所在的类的反射实例
     -   [ReflectionMethod::getModifiers](/class/reflectionmethod.html#ReflectionMethod::getModifiers)
         — 获取方法的修饰符
     -   [ReflectionMethod::getPrototype](/class/reflectionmethod.html#ReflectionMethod::getPrototype)
@@ -7198,7 +7198,7 @@ class="methodparam"><span class="type">object</span> `$object`</span> )
 ReflectionMethod::getDeclaringClass
 ===================================
 
-获取反射函数调用参数的类表达
+获取被的反射的方法所在的类的反射实例
 
 ### 说明
 
@@ -7207,9 +7207,7 @@ class="type">ReflectionClass</span> <span
 class="methodname">ReflectionMethod::getDeclaringClass</span> ( <span
 class="methodparam">void</span> )
 
-获取反射函数参数的一个表达类。
-译者注：应该是将这个方法作为一个类返回，他的参数将成为类属性，
-执行内容变成什么不知道，下面的范例能够说明一些问题
+获取被反射的方法所在的类的反射实例。
 
 ### 参数
 
@@ -7217,8 +7215,8 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-返回 <span class="classname">ReflectionClass</span>
-对象，其中包含这个方法。
+返回一个类的 <span class="classname">ReflectionClass</span>
+反射对象，被反射的方法是这个类的一部分。
 
 ### 范例
 
