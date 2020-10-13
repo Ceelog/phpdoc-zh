@@ -283,7 +283,7 @@
         —
         返回一个动态建立的方法调用接口，译者注：可以使用这个返回值直接调用非公开方法。
     -   [ReflectionMethod::getDeclaringClass](/class/reflectionmethod.html#ReflectionMethod::getDeclaringClass)
-        — 获取被的反射的方法所在的类的反射实例
+        — 获取被反射的方法所在类的反射实例
     -   [ReflectionMethod::getModifiers](/class/reflectionmethod.html#ReflectionMethod::getModifiers)
         — 获取方法的修饰符
     -   [ReflectionMethod::getPrototype](/class/reflectionmethod.html#ReflectionMethod::getPrototype)
@@ -7198,7 +7198,7 @@ class="methodparam"><span class="type">object</span> `$object`</span> )
 ReflectionMethod::getDeclaringClass
 ===================================
 
-获取被的反射的方法所在的类的反射实例
+获取被反射的方法所在类的反射实例
 
 ### 说明
 
