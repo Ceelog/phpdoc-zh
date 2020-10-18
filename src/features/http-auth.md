@@ -104,11 +104,6 @@ dbm 文件中检索。
 浏览器本身有问题。它对标头的顺序显得似乎有点吹毛求疵。目前看来在发送
 *HTTP/1.0 401* 之前先发送 *WWW-Authenticate* 标头似乎可以解决此问题。
 
-为了防止有人通过编写脚本来从用传统外部机制认证的页面上获取密码，当外部认证对特定页面有效，并且<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>被开启时，PHP\_AUTH
-变量将不会被设置。但无论如何，`REMOTE_USER`
-可以被用来辨认外部认证的用户，因此可以用 `$_SERVER['REMOTE_USER']`
-变量。
-
 > **Note**: **配置说明**  
 >
 > PHP 用是否有 *AuthType* 指令来判断外部认证机制是否有效。
@@ -158,8 +153,3 @@ IIS的设置“*目录安全*”。点击“*编辑*”并且只选择“*匿名
 > <span class="simpara"> 要 HTTP 认证能够在 IIS 下工作，PHP 配置选项
 > <a href="/ini/core.html#ini.cgi.rfc2616-headers" class="link">cgi.rfc2616_headers</a>
 > 必须设置成 *0*（默认值）。 </span>
-
-> **Note**:
->
-> 如果<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>被激活，脚本的
-> UID 会被加到 *WWW-Authenticate* 标头的 *realm* 部分。

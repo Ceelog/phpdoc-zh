@@ -2738,19 +2738,20 @@ Native Driver。 这就是说你不需要担心关于访问`libmysql.dll`的配�
 
 这些函数的行为受 `php.ini` 中的设置影响。
 
-| 名字                                                                            | 默认   | 可修改范围       | 更新日志              |
-|---------------------------------------------------------------------------------|--------|------------------|-----------------------|
-| <a href="/set/mysqlinfo.html#" class="link">mysqli.allow_local_infile</a>       | "1"    | PHP\_INI\_SYSTEM | 自PHP 5.2.4起可用。   |
-| <a href="/set/mysqlinfo.html#" class="link">mysqli.allow_persistent</a>         | "1"    | PHP\_INI\_SYSTEM | 自PHP 5.3.0起可用。   |
-| <a href="/set/mysqlinfo.html#" class="link">mysqli.max_persistent</a>           | "-1"   | PHP\_INI\_SYSTEM | 自PHP 5.3.0起可用。   |
-| <a href="/set/mysqlinfo.html#" class="link">mysqli.max_links</a>                | "-1"   | PHP\_INI\_SYSTEM | 自PHP 5.0.0起可用。   |
-| <a href="/set/mysqlinfo.html#" class="link">mysqli.default_port</a>             | "3306" | PHP\_INI\_ALL    | 自PHP 5.0.0起可用。   |
-| <a href="/set/mysqlinfo.html#" class="link">mysqli.default_socket</a>           | NULL   | PHP\_INI\_ALL    | 自PHP 5.0.0起可用。   |
-| <a href="/set/mysqlinfo.html#" class="link">mysqli.default_host</a>             | NULL   | PHP\_INI\_ALL    | 自PHP 5.0.0起可用。   |
-| <a href="/set/mysqlinfo.html#" class="link">mysqli.default_user</a>             | NULL   | PHP\_INI\_ALL    | 自PHP 5.0.0起可用。   |
-| <a href="/set/mysqlinfo.html#" class="link">mysqli.default_pw</a>               | NULL   | PHP\_INI\_ALL    | 自PHP 5.0.0起可用。   |
-| <a href="/set/mysqlinfo.html#" class="link">mysqli.reconnect</a>                | "0"    | PHP\_INI\_SYSTEM | 自PHP 4.3.5起可用。   |
-| <a href="/set/mysqlinfo.html#" class="link">mysqli.rollback_on_cached_plink</a> | TRUE   | PHP\_INI\_SYSTEM | 自 PHP 5.6.0 起可用。 |
+| 名字                                                                            | 默认   | 可修改范围       | 更新日志                                                     |
+|---------------------------------------------------------------------------------|--------|------------------|--------------------------------------------------------------|
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.allow_local_infile</a>       | "0"    | PHP\_INI\_SYSTEM | 自PHP 5.2.4起可用。在 PHP 7.2.16 和 7.3.3 之前，默认值为 "1" |
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.local_infile_directory</a>   |        | PHP\_INI\_SYSTEM |                                                              |
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.allow_persistent</a>         | "1"    | PHP\_INI\_SYSTEM | 自PHP 5.3.0起可用。                                          |
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.max_persistent</a>           | "-1"   | PHP\_INI\_SYSTEM | 自PHP 5.3.0起可用。                                          |
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.max_links</a>                | "-1"   | PHP\_INI\_SYSTEM |                                                              |
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.default_port</a>             | "3306" | PHP\_INI\_ALL    |                                                              |
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.default_socket</a>           | NULL   | PHP\_INI\_ALL    |                                                              |
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.default_host</a>             | NULL   | PHP\_INI\_ALL    |                                                              |
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.default_user</a>             | NULL   | PHP\_INI\_ALL    | 自PHP 5.0.0起可用。                                          |
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.default_pw</a>               | NULL   | PHP\_INI\_ALL    |                                                              |
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.reconnect</a>                | "0"    | PHP\_INI\_SYSTEM |                                                              |
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.rollback_on_cached_plink</a> | TRUE   | PHP\_INI\_SYSTEM | 自 PHP 5.6.0 起可用。                                        |
 
 关于前面出现的PHP\_INI\_\*系列常量的详细定义，请参阅<a href="/configuration/changes.html" class="link">配置的修改</a>一章。
 
@@ -2758,6 +2759,9 @@ Native Driver。 这就是说你不需要担心关于访问`libmysql.dll`的配�
 
 `mysqli.allow_local_infile` <span class="type">integer</span>  
 允许Mysql的Load Data语句访问PHP角度看的本地文件。
+
+`mysqli.local_infile_directory` <span class="type">string</span>  
+限制加载 LOCAL DATA 文件为指定的目录。
 
 `mysqli.allow_persistent` <span class="type">integer</span>  
 开启使用<span
@@ -2780,22 +2784,19 @@ Win32仅使用*MYSQL\_PORT*常量。
 
 `mysqli.default_host` <span class="type">string</span>  
 当连接到数据库服务器时，
-如果没有指定其他主机地址，使用的默认服务器主机。不要在
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>下使用。
+如果没有指定其他主机地址，使用的默认服务器主机。
 
 `mysqli.default_user` <span class="type">string</span>  
-当连接到数据库服务器时，如果没有指定其他用户名，使用的默认用户名。不要在
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>下使用。
+当连接到数据库服务器时，如果没有指定其他用户名，使用的默认用户名。
 
 `mysqli.default_pw` <span class="type">string</span>  
-当连接到数据库服务器时，如果没有指定其他密码，使用的默认密码。不要在
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>下使用。
+当连接到数据库服务器时，如果没有指定其他密码，使用的默认密码。
 
 `mysqli.reconnect` <span class="type">integer</span>  
 连接丢失时是否自动重新连接。
 
-> **Note**: <span class="simpara">This `php.ini` setting is ignored by
-> the mysqlnd driver.</span>
+> **Note**: <span class="simpara">mysqlnd 驱动会此忽略 `php.ini`
+> 设置。</span>
 
 `mysqli.rollback_on_cached_plink` <span class="type">bool</span>  
 If this option is enabled, closing a persistent connection will rollback
@@ -2805,7 +2806,7 @@ rolled back only when the connection is reused, or when it is actually
 closed.
 
 用户不能通过API调用或运行时配置来设置*MYSQL\_OPT\_READ\_TIMEOUT*。
-注意，如果可能这样做那么*libmysql*和流对*MYSQL\_OPT\_READ\_TIMEOUT*
+注意，如果可能这样做那么*libmysqlclient*和流对*MYSQL\_OPT\_READ\_TIMEOUT*
 的值将会有不同的解释。
 
 资源类型

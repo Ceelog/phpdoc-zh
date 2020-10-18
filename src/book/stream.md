@@ -597,9 +597,6 @@ class="function">opendir</span>.
 > class="function">parse\_url</span>.
 
 `options`  
-Whether or not to enforce
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe_mode</a>
-(0x04).
 
 ### 返回值
 
@@ -1644,9 +1641,6 @@ class="methodparam"><span class="type">string</span> `$path`</span> ,
 This method is called in response to all <span
 class="function">stat</span> related functions, such as:
 
--   <span class="function">chmod</span> (only when
-    <a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe_mode</a>
-    is enabled)
 -   <span class="function">copy</span>
 -   <span class="function">fileperms</span>
 -   <span class="function">fileinode</span>

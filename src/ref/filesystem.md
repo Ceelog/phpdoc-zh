@@ -129,10 +129,8 @@ printf($format, $filename, date('r'), filegroup($filename));
 > **Note**: <span
 > class="simpara">此函数不能作用于<a href="/features/remote-files.html" class="link">远程文件</a>，被检查的文件必须是可通过服务器的文件系统访问的。</span>
 
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会检查被操作的文件或目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
+> **Note**: <span class="simpara"> On Windows, this function fails
+> silently when applied on a regular file. </span>
 
 ### 参见
 
@@ -205,12 +203,6 @@ chmod("/somedir/somefile", 0750);
 
 > **Note**: <span
 > class="simpara">此函数不能作用于<a href="/features/remote-files.html" class="link">远程文件</a>，被检查的文件必须是可通过服务器的文件系统访问的。</span>
-
-> **Note**:
->
-> 当<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>打开的时候，PHP
-> 会检查所操作的文件是否和正在执行的脚本具有相同的 UID
-> （所有者）。要注意的是，不能修改 SUID，SGID 和 sticky bits。
 
 ### 参见
 
@@ -286,14 +278,13 @@ print_r(posix_getpwuid($stat['uid']));
 > **Note**: <span
 > class="simpara">此函数不能作用于<a href="/features/remote-files.html" class="link">远程文件</a>，被检查的文件必须是可通过服务器的文件系统访问的。</span>
 
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会检查被操作的文件或目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
+> **Note**: <span class="simpara"> 在 Windows
+> 上对普通文件使用此函数会静默失败。 </span>
 
 ### 参见
 
 -   <span class="function">chmod</span>
+-   <span class="function">chgrp</span>
 
 clearstatcache
 ==============
@@ -1228,15 +1219,6 @@ class="type">string</span> `$filename`</span> )
 > This function will return **`FALSE`** for symlinks pointing to
 > non-existing files.
 
-**Warning**
-
-如果因为<a href="/features/safe-mode.html" class="link">安全模式</a>的限制而导致不能访问文件的话，该函数会返回
-**`FALSE`**。然而，可以使用
-<a href="/function/include.html" class="link">include</a>
-来包含，如果文件在
-<a href="/ini/sect/safe-mode.html#ini.safe-mode-include-dir" class="link">safe_mode_include_dir</a>
-所指定的目录里。
-
 > **Note**:
 >
 > The check is done using the real UID/GID instead of the effective one.
@@ -1904,7 +1886,6 @@ print_r(posix_getgrgid(filegroup($filename)));
 
 -   <span class="function">fileowner</span>
 -   <span class="function">posix\_getgrgid</span>
--   <a href="/ini/sect/safe-mode.html#ini.safe-mode-gid" class="link">safe_mode_gid</a>
 
 fileinode
 =========
@@ -2590,7 +2571,7 @@ class="methodparam"><span class="type">bool</span>
 
 如果 PHP 认为 `filename`
 指定的是一个本地文件，将尝试在该文件上打开一个流。该文件必须是 PHP
-可以访问的，因此需要确认文件访问权限允许该访问。如果激活了<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>或者
+可以访问的，因此需要确认文件访问权限允许该访问。如果激活了
 <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
 则会应用进一步的限制。
 
@@ -2717,11 +2698,6 @@ $handle = fopen("ftp://user:password@example.com/somefile.txt", "w");
 包装器打开流时检测出有问题的 IIS 服务器软件 并抑制警告。在使用 <span
 class="function">fsockopen</span> 创建 *ssl://* 套接字时,
 开发者需检测并抑制此警告。
-
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会在执行脚本时检查被脚本操作的目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
 
 > **Note**:
 >
@@ -3646,10 +3622,8 @@ is\_dir
 `filename`  
 如果文件名存在并且为目录则返回 **`TRUE`**。如果 `filename`
 是一个相对路径，则按照当前工作目录检查其相对路径。 If `filename` is a
-symbolic or hard link then the link will be resolved and checked. If you
+symbolic or hard link then the link will be resolved and checked.If you
 have enabled
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>,
-or
 <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
 further restrictions may apply.
 
@@ -4133,11 +4107,6 @@ lchgrp($link, 8);
 > **Note**: <span
 > class="simpara">此函数不能作用于<a href="/features/remote-files.html" class="link">远程文件</a>，被检查的文件必须是可通过服务器的文件系统访问的。</span>
 
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会检查被操作的文件或目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
-
 > **Note**: <span class="simpara">此函数未在 Windows 平台下实现。</span>
 
 ### 参见
@@ -4193,11 +4162,6 @@ lchown($link, 8);
 
 > **Note**: <span
 > class="simpara">此函数不能作用于<a href="/features/remote-files.html" class="link">远程文件</a>，被检查的文件必须是可通过服务器的文件系统访问的。</span>
-
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会检查被操作的文件或目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
 
 > **Note**: <span class="simpara">此函数未在 Windows 平台下实现。</span>
 
@@ -4405,7 +4369,7 @@ mkdir
 class="type">int</span> `$mode`<span class="initializer"> =
 0777</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$recursive`<span class="initializer"> =
-false</span></span> \[, <span class="methodparam"><span
+**`FALSE`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \]\]\] )
 
 尝试新建一个由 pathname 指定的目录。
@@ -4438,14 +4402,6 @@ umask 修改，可以用 <span class="function">umask</span> 来改变。
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                                                                       |
-|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.0.0 | 添加 `recursive` 参数。                                                                                                                                                                                    |
-| 5.0.0 | <span class="function">mkdir</span> 也可用于*某些* URL 封装协议。参见<a href="/wrappers.html" class="xref">支持的协议和封装协议</a> 的列表看看 <span class="function">mkdir</span> 支持哪些 URL 封装协议。 |
-| 4.2.0 | `mode` 成为可选项。                                                                                                                                                                                        |
-
 ### 范例
 
 **示例 \#1 <span class="function">mkdir</span> 例子**
@@ -4467,7 +4423,7 @@ $structure = './depth1/depth2/depth3/';
 // To create the nested structure, the $recursive parameter 
 // to mkdir() must be specified.
 
-if (!mkdir($structure, 0, true)) {
+if (!mkdir($structure, 0777, true)) {
     die('Failed to create folders...');
 }
 
@@ -4475,12 +4431,11 @@ if (!mkdir($structure, 0, true)) {
 ?>
 ```
 
-### 注释
+### 错误／异常
 
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会在执行脚本时检查被脚本操作的目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
+目录已存在时，产生 **`E_WARNING`**错误。
+
+如果因为权限问题无法创建目录，导致 **`E_WARNING`**错误。
 
 ### 参见
 
@@ -4547,10 +4502,9 @@ foreach ($_FILES["pictures"]["error"] as $key => $error) {
 
 > **Note**:
 >
-> <span class="function">move\_uploaded\_file</span>
-> 对<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>和
+> <span class="function">move\_uploaded\_file</span> 对
 > <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
-> 都是敏感的。不过，限制只针对 `destination`
+> 是敏感的。不过，限制只针对 `destination`
 > 路径，因为允许移动上传的文件名 `filename`
 > 可能会与这些限制产生冲突。<span
 > class="function">move\_uploaded\_file</span> 仅作用于通过 PHP
@@ -4606,16 +4560,6 @@ values will not be parsed.
 
 成功时以关联数组 <span class="type">array</span> 返回设置，失败时返回
 **`FALSE`**。
-
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                                                                  |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0 | Added optional `scanner_mode` parameter. Single quotes may now be used around variable assignments. Hash marks (*\#*) may no longer be used as comments and will throw a deprecation warning if used. |
-| 5.2.7 | On syntax error this function will return **`FALSE`** rather than an empty array.                                                                                                                     |
-| 5.2.4 | 由数字组成的键名和小节名会被 PHP 当作<a href="/language/types/integer.html" class="link">整数</a>来处理，因此以 0 开头的数字会被当作八进制而以 0x 开头的会被当作十六进制。                            |
-| 5.0.0 | 该函数也开始处理选项值内的新行。                                                                                                                                                                      |
-| 4.2.1 | 本函数也开始受到<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>和 <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a> 的影响。                         |
 
 ### 范例
 
@@ -5043,18 +4987,6 @@ pclose($handle);
 > **Note**:
 >
 > 如果需要双向支持，使用 <span class="function">proc\_open</span>。
-
-> **Note**: <span
-> class="simpara"><a href="/features/safe-mode.html" class="link">安全模式</a>
-> 启用时，可仅可用
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>
-> 执行文件。实际上，现在不允许在到可执行的路径中存在 *..* 组件。</span>
-
-**Warning**
-
-<a href="/features/safe-mode.html" class="link">安全模式</a>
-启用时，命令字符串会被 <span class="function">escapeshellcmd</span>
-转换。因此，*echo y \| echo x* 会变成 *echo y \\\| echo x*。
 
 ### 参见
 
@@ -5531,12 +5463,6 @@ class="type">resource</span> `$context`</span> \] )
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                                                                                       |
-|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.0.0 | 自 PHP 5.0.0 起 <span class="function">rmdir</span> 也可用于*某些* URL 封装协议。参见<a href="/wrappers.html" class="xref">支持的协议和封装协议</a> 的列表看看 <span class="function">rmdir</span> 支持哪些 URL 封装协议。 |
-
 ### 范例
 
 **示例 \#1 <span class="function">rmdir</span> 例子**
@@ -5550,13 +5476,6 @@ if (!is_dir('examples')) {
 rmdir('examples');
 ?>
 ```
-
-### 注释
-
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会在执行脚本时检查被脚本操作的目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
 
 ### 参见
 

@@ -427,12 +427,6 @@ class="function">apache\_reset\_timeout</span>，Apache理论上可永远运行
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
-### 注释
-
-> **Note**: <span class="simpara">当 PHP 运行在
-> <a href="/features/safe-mode.html" class="link">安全模式</a>
-> 时，不能使用此函数。</span>
-
 ### 参见
 
 -   <span class="function">set\_time\_limit</span>

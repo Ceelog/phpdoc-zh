@@ -54,10 +54,16 @@ echo getcwd() . "\n";
 
 ### 注释
 
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会在执行脚本时检查被脚本操作的目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
+**Caution**
+
+If the PHP interpreter has been built with ZTS (Zend Thread Safety)
+enabled, any changes to the current directory made through <span
+class="function">chdir</span> will be invisible to the operating system.
+All built-in PHP functions will still respect the change in current
+directory; but external library functions called using
+<a href="/book/ffi.html" class="link">FFI</a> will not. You can tell
+whether your copy of PHP was built with ZTS enabled using **php -i** or
+the built-in constant **`PHP_ZTS`**.
 
 ### 参见
 

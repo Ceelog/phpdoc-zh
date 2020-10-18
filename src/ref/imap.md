@@ -3413,7 +3413,8 @@ MIME character set to use when sorting strings.
 
 ### 返回值
 
-Returns an array of message numbers sorted by the given parameters.
+Returns an array of message numbers sorted by the given parameters,
+或者在失败时返回 **`FALSE`**.
 
 imap\_status
 ============

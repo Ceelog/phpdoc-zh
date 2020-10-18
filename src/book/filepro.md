@@ -188,11 +188,6 @@ class="methodparam"><span class="type">int</span> `$row_number`</span> ,
 
 Returns the data from the specified location in the database.
 
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会检查被操作的文件或目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
-
 ### 参数
 
 `row_number`  
@@ -221,11 +216,6 @@ class="methodparam">void</span> )
 
 Returns the number of rows in the opened filePro database.
 
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会检查被操作的文件或目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
-
 ### 返回值
 
 Returns the number of rows in the opened filePro database, or
@@ -250,11 +240,6 @@ This reads and verifies the map file, storing the field count and info.
 
 No locking is done, so you should avoid modifying your filePro database
 while it may be opened in PHP.
-
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会检查被操作的文件或目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
 
 ### 参数
 

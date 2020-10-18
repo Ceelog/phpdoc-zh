@@ -264,20 +264,17 @@ persistent connections.
 `ifx.default_host` <span class="type">string</span>  
 The default host to connect to when no host is specified in <span
 class="function">ifx\_connect</span> or <span
-class="function">ifx\_pconnect</span>. Doesn't apply in
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>.
+class="function">ifx\_pconnect</span>.
 
 `ifx.default_user` <span class="type">string</span>  
 The default user id to use when none is specified in <span
 class="function">ifx\_connect</span> or <span
-class="function">ifx\_pconnect</span>. Doesn't apply in
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>.
+class="function">ifx\_pconnect</span>.
 
 `ifx.default_password` <span class="type">string</span>  
 The default password to use when none is specified in <span
 class="function">ifx\_connect</span> or <span
-class="function">ifx\_pconnect</span>. Doesn't apply in
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>.
+class="function">ifx\_pconnect</span>.
 
 `ifx.blobinfile` <span class="type">boolean</span>  
 Set to **`TRUE`** if you want to return blob columns in a file,

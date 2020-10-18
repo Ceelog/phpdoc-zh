@@ -649,12 +649,10 @@ The default is to allow all files to be opened.
 > to *0* and thus *disable* the realpath cache.
 
 `doc_root` <span class="type">string</span>  
-PHP's "root directory" on the server. Only used if non-empty. If PHP is
-configured with
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>,
-no files outside this directory are served. If PHP was not compiled with
-FORCE\_REDIRECT, you *should* set doc\_root if you are running PHP as a
-CGI under any web server (other than IIS). The alternative is to use the
+PHP's "root directory" on the server. Only used if non-empty. If PHP was
+not compiled with FORCE\_REDIRECT, you *should* set doc\_root if you are
+running PHP as a CGI under any web server (other than IIS). The
+alternative is to use the
 <a href="/ini/core.html#ini.cgi.force-redirect" class="link">cgi.force_redirect</a>
 configuration below.
 

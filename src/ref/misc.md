@@ -620,7 +620,7 @@ highlight\_file
 class="methodname">highlight\_file</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$return`<span class="initializer"> = false</span></span> \] )
+`$return`<span class="initializer"> = **`FALSE`**</span></span> \] )
 
 使用PHP内置的语法高亮器所定义的颜色，打印输出或者返回 `filename`
 文件中语法高亮版本的代码。
@@ -645,12 +645,6 @@ AddType application/x-httpd-php-source .phps
 如果 `return` 设置为
 **`TRUE`**，高亮后的代码不会被打印输出，而是以字符串的形式返回。
 高亮成功返回 **`TRUE`**，否则返回 **`FALSE`**。
-
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                                                 |
-|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 4.2.1 | 该函数现在也受 <a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe_mode</a> 和 <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a> 的限制和影响。 |
 
 ### 注释
 

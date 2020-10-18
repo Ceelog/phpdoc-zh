@@ -502,10 +502,8 @@ Unix - 如果没有在 `php.ini` 里明确设置，默认的扩展目录依赖�
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
-如果加载模块的功能是无效或者禁用的（既可以通过设置关闭
-<a href="/info/setup.html#" class="link">enable_dl</a>
-设置，也可以通过启用 `php.ini` 里的
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>）将导致一个
+如果加载模块的功能是无效或者禁用的（可以关闭
+<a href="/info/setup.html#" class="link">enable_dl</a> 设置）将导致一个
 **`E_ERROR`** 并中断执行。 如果因为指定的库无法加载而导致 <span
 class="function">dl</span> 失败，除了返回 **`FALSE`**，还会产生一个
 **`E_WARNING`** 的消息。
@@ -533,14 +531,6 @@ if (!extension_loaded('sqlite')) {
 ?>
 ```
 
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                                                                                        |
-|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0 | PHP-FPM 模式下已禁用 <span class="function">dl</span>。                                                                                                                                                                     |
-| 5.3.9 | 尽管不推荐，但 PHP-FPM 模式下启用了 <span class="function">dl</span>。                                                                                                                                                      |
-| 5.3.0 | 由于稳定性，<span class="function">dl</span> 在某些 SAPI 中被禁用。仅仅允许 <span class="function">dl</span> 的 SAPI 为 CLI 和 Embed。 使用 <a href="/ini/core.html#ini.extension" class="link">扩展加载指令</a> 作为替代。 |
-
 ### 注释
 
 > **Note**:
@@ -553,10 +543,6 @@ if (!extension_loaded('sqlite')) {
 > **Note**:
 >
 > 在某些 Unix 平台上，<span class="function">dl</span> 是大小写敏感的。
-
-> **Note**: <span class="simpara">当 PHP 运行在
-> <a href="/features/safe-mode.html" class="link">安全模式</a>
-> 时，不能使用此函数。</span>
 
 ### 参见
 
@@ -3005,17 +2991,6 @@ putenv
 添加 `setting` 到服务器环境变量。 环境变量仅存活于当前请求期间。
 在请求结束时环境会恢复到初始状态。
 
-设置特定的环境变量也有可能是一个潜在的安全漏洞。
-*safe\_mode\_allowed\_env\_vars* 包含了一个以逗号分隔的前缀列表。
-在安全模式下，用户可以仅能修改用该指令设定的前缀名称的指令。
-默认情况下，用户仅能够修改以 *PHP\_* 开头的环境变量（例如
-*PHP\_FOO=BAR*）。 注意：如果此指令是空的，PHP允许用户设定任意环境变量！
-
-*safe\_mode\_protected\_env\_vars*
-指令包含了逗号分隔的环境变量列表，使用户最终无法通过 <span
-class="function">putenv</span> 修改。 即使
-*safe\_mode\_allowed\_env\_vars* 设置允许修改，这些变量也会被保护。
-
 ### 参数
 
 `setting`  
@@ -3034,14 +3009,6 @@ class="function">putenv</span> 修改。 即使
 putenv("UNIQID=$uniqid");
 ?>
 ```
-
-### 注释
-
-**Warning**
-
-The *safe\_mode\_allowed\_env\_vars* 和
-*safe\_mode\_protected\_env\_vars*
-指令仅仅在启用<a href="/features/safe-mode.html" class="link">安全模式</a>时有效。
 
 ### 参见
 
@@ -3186,10 +3153,6 @@ class="function">set\_time\_limit</span>会从零开始重新启动超时计数�
 成功时返回 **`TRUE`**，失败时返回 **`FALSE`** 。
 
 ### 注释
-
-**Warning**
-
-当php运行于<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>时，此功能不能生效。除了关闭安全模式或改变`php.ini`中的时间限制，没有别的办法。
 
 > **Note**:
 >

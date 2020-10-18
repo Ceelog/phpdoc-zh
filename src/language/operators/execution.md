@@ -15,8 +15,8 @@ echo "<pre>$output</pre>";
 
 > **Note**:
 >
-> 反引号运算符在激活了<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>或者关闭了
-> <span class="function">shell\_exec</span> 时是无效的。
+> 关闭了 <span class="function">shell\_exec</span>
+> 时反引号运算符是无效的。
 
 > **Note**:
 >

@@ -62,11 +62,6 @@ if (posix_access($file, POSIX_R_OK | POSIX_W_OK)) {
 
 ### 注释
 
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会检查被操作的文件或目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
-
 ### 参见
 
 -   <span class="function">posix\_get\_last\_error</span>
@@ -398,7 +393,6 @@ print_r($groupinfo);
 -   <span class="function">posix\_getgrnam</span>
 -   <span class="function">filegroup</span>
 -   <span class="function">stat</span>
--   <a href="/ini/sect/safe-mode.html#ini.safe-mode-gid" class="link">safe_mode_gid</a>
 -   POSIX man page GETGRNAM(3)
 
 posix\_getgrnam
@@ -465,7 +459,6 @@ print_r($groupinfo);
 -   <span class="function">posix\_getgrgid</span>
 -   <span class="function">filegroup</span>
 -   <span class="function">stat</span>
--   <a href="/ini/sect/safe-mode.html#ini.safe-mode-gid" class="link">safe_mode_gid</a>
 -   POSIX man page GETGRNAM(3)
 
 posix\_getgroups
@@ -1109,13 +1102,6 @@ permissions of the created file are (mode & \~umask).
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
-
-### 注释
-
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会检查被操作的文件或目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
 
 posix\_mknod
 ============

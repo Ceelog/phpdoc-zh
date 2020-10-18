@@ -2193,9 +2193,8 @@ succeeds, the locking behaviour may be undefined.
 > with the *ATTACH DATABASE* SQL statement to load other databases and
 > move and query data between them. </span>
 
-> **Note**: <span class="simpara"> SQLite is
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>
-> and open\_basedir aware. </span>
+> **Note**: <span class="simpara"> SQLite is open\_basedir aware.
+> </span>
 
 ### 参见
 

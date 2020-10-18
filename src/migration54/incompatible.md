@@ -4,9 +4,9 @@
 尽管大部分现有的 PHP 5
 代码不需要任何改变就可以正常运行，但请注意一些不向后兼容的变更：
 
--   <span class="simpara"> 不再支持
-    <a href="/features/safe-mode.html" class="link">安全模式</a>
-    。任何依赖安全模式的应用在安全方面都需要进行调整。 </span>
+-   <span class="simpara">
+    不再支持安全模式。任何依赖安全模式的应用在安全方面都需要进行调整。
+    </span>
 -   <span class="simpara"> 移除
     <a href="/security/magicquotes.html" class="link">魔术引号</a>
     。为避免出现安全问题，依赖此特性的应用可能需要升级。 </span> <span

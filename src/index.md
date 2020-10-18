@@ -62,7 +62,6 @@ PHP 手册
     -   [使用远程文件](/features/remote-files.html)
     -   [连接处理](/features/connection-handling.html)
     -   [数据库持久连接](/features/persistent-connections.html)
-    -   [安全模式](/features/safe-mode.html)
     -   [PHP 的命令行模式](/features/commandline.html)
     -   [垃圾回收机制](/features/gc.html)
     -   [DTrace 动态跟踪](/features/dtrace.html)
@@ -191,7 +190,7 @@ class="surname family-name">Vrana</span> </span>
 <a href="/preface.html#contributors" class="link">其他贡献者</a> </span>
 </span>
 
-2020-10-14
+2020-10-19
 
 **Edited By**: <span class="personname fn"> <span
 class="firstname given-name">Peter</span> <span

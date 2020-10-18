@@ -327,7 +327,7 @@ Building the MongoDB PHP Driver from source
 
 For driver developers and people interested in the latest bugfixes, you
 can compile the driver from the latest source code on
-<a href="https://github.com/mongodb/mongo-php-driver-legacy" class="link external">» Github</a>.
+<a href="https://github.com/mongodb/mongo-php-driver" class="link external">» Github</a>.
 Run the following commands to clone and build the project:
 
 ``` shell

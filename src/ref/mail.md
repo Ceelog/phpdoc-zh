@@ -135,11 +135,9 @@ destination.
 
 ### 更新日志
 
-| 版本                 | 说明                                                                                                                                                                                                                                                              |
-|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 4.3.0 (Windows only) | All custom headers (like From, Cc, Bcc and Date) are supported, and are not case-sensitive. (As custom headers are not interpreted by the MTA in the first place, but are parsed by PHP, PHP \< 4.3 only supported the Cc header element and was case-sensitive). |
-| 4.2.3                | The `additional_parameters` parameter is disabled in <a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe_mode</a> and the <span class="function">mail</span> function will expose a warning message and return **`FALSE`** when used.              |
-| 4.0.5                | The `additional_parameters` parameter was added.                                                                                                                                                                                                                  |
+| 版本  | 说明                                                                     |
+|-------|--------------------------------------------------------------------------|
+| 7.2.0 | 现在 `additional_headers` 参数开始支持 <span class="type">array</span>。 |
 
 ### 范例
 

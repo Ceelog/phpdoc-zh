@@ -28,18 +28,9 @@ INI 文件处理的变化
 -   <span class="simpara">
     <a href="/ini/core.html#ini.y2k-compliance" class="link">y2k_compliance</a>
     </span>
--   <span class="simpara">
-    <a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe_mode</a>
-    、
-    <a href="/ini/sect/safe-mode.html#ini.safe-mode-gid" class="link">safe_mode_gid</a>
-    、
-    <a href="/ini/sect/safe-mode.html#ini.safe-mode-include-dir" class="link">safe_mode_include_dir</a>
-    、
-    <a href="/ini/sect/safe-mode.html#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>
-    、
-    <a href="/ini/sect/safe-mode.html#ini.safe-mode-allowed-env-vars" class="link">safe_mode_allowed_env_vars</a>
-    以及
-    <a href="/ini/sect/safe-mode.html#ini.safe-mode-protected-env-vars" class="link">safe_mode_protected_env_vars</a>
+-   <span class="simpara"> safe\_mode、 safe\_mode\_gid、
+    safe\_mode\_include\_dir、 safe\_mode\_exec\_dir、
+    safe\_mode\_allowed\_env\_vars、 safe\_mode\_protected\_env\_vars
     </span>
 
 新增下列 `php.ini` 指令：

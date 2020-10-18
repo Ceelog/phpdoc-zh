@@ -1261,10 +1261,6 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 > 在IE 4.01和IE
 > 5.5里有bug，要解决就升级浏览器吧，想必也没人用那么远古的神器了吧。
 
-> **Note**: <span
-> class="simpara">如果安全模式（<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>）被激活，那么脚本的uid将会被添加到*WWW-Authenticate*的*realm*部分，前提是你设置了这个头信息的情况下（使用
-> HTTP 认证）。 </span>
-
 > **Note**:
 >
 > HTTP/1.1需要一个绝对的网络资源地址（URI）来作为一个参数供<a href="http://tools.ietf.org/html/rfc7231-sec14.html#sec14.30" class="link external">» Location:</a>使用，在其中必须包含了协议，主机地址还有完整的路径，但是一些客户端可以接受相对的网络资源地址。你可以在一个相对的网路资源地址的基础上使用`$_SERVER['HTTP_HOST']`，`$_SERVER['PHP_SELF']`和<span

@@ -2910,11 +2910,6 @@ in the database using a file on the filesystem as its data source.
 
 要使用大型对象（lo）接口，需要将其放置在事务块中。
 
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会检查被操作的文件或目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
-
 > **Note**:
 >
 > 本函数以前的名字为 <span class="function">pg\_loimport</span>。
@@ -2939,34 +2934,6 @@ first appeared in PostgreSQL 8.1.
 ### 返回值
 
 导入成功则返回新建的大型对象的 `OID`，如果出错则返回 **`FALSE`**。
-
-### 更新日志
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>版本</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>5.3.0</td>
-<td><p>The optional <code class="parameter">object_id</code> was added.</p></td>
-</tr>
-<tr class="even">
-<td>4.2.0</td>
-<td><p>在 PHP 4.2.0 版本之前，本函数语法不一样，见如下定义：</p>
-<div class="methodsynopsis dc-description">
-<span class="type">int</span> <span class="methodname">pg_lo_import</span> ( <span class="methodparam"><span class="type">string</span> <code class="parameter">$pathname</code></span> [, <span class="methodparam"><span class="type">resource</span> <code class="parameter">$connection</code></span> ] )
-</div></td>
-</tr>
-</tbody>
-</table>
 
 ### 范例
 

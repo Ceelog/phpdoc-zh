@@ -11,11 +11,7 @@
 
 这些函数和
 <a href="/language/operators/execution.html" class="link">执行运算符</a>
-是紧密关联的。 因此，当运行在
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>
-是，你必须考虑
-<a href="/ini/sect/safe-mode.html#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>
-指示。
+是紧密关联的。
 
 escapeshellarg
 ==============
@@ -205,18 +201,6 @@ class="function">escapeshellcmd</span>
 > 可使用 <span class="function">proc\_open</span> 函数加上
 > `bypass_shell` 参数。
 
-> **Note**: <span
-> class="simpara"><a href="/features/safe-mode.html" class="link">安全模式</a>
-> 启用时，可仅可用
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>
-> 执行文件。实际上，现在不允许在到可执行的路径中存在 *..* 组件。</span>
-
-**Warning**
-
-<a href="/features/safe-mode.html" class="link">安全模式</a>
-启用时，命令字符串会被 <span class="function">escapeshellcmd</span>
-转换。因此，*echo y \| echo x* 会变成 *echo y \\\| echo x*。
-
 ### 参见
 
 -   <span class="function">system</span>
@@ -272,18 +256,6 @@ class="function">escapeshellcmd</span>
 >
 > 如何程序使用此函数启动，为了能保持在后台运行，此程序必须将输出重定向到文件或其它输出流。否则会导致
 > PHP 挂起，直至程序执行结束。
-
-> **Note**: <span
-> class="simpara"><a href="/features/safe-mode.html" class="link">安全模式</a>
-> 启用时，可仅可用
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>
-> 执行文件。实际上，现在不允许在到可执行的路径中存在 *..* 组件。</span>
-
-**Warning**
-
-<a href="/features/safe-mode.html" class="link">安全模式</a>
-启用时，命令字符串会被 <span class="function">escapeshellcmd</span>
-转换。因此，*echo y \| echo x* 会变成 *echo y \\\| echo x*。
 
 ### 参见
 
@@ -659,6 +631,12 @@ class="type">string</span> `$cmd`</span> )
 本函数同
 <a href="/language/operators/execution.html" class="link">执行操作符</a>。
 
+> **Note**:
+>
+> On Windows, the underlying pipe is opened in text mode which can cause
+> the function to fail for binary output. Consider to use <span
+> class="function">popen</span> instead for such cases.
+
 ### 参数
 
 `cmd`  
@@ -686,14 +664,6 @@ $output = shell_exec('ls -lart');
 echo "<pre>$output</pre>";
 ?>
 ```
-
-### 注释
-
-> **Note**:
->
-> 当 PHP 运行在
-> <a href="/features/safe-mode.html" class="link">安全模式</a>
-> 时，不能使用此函数。
 
 ### 参见
 
@@ -768,18 +738,6 @@ class="function">escapeshellcmd</span>
 >
 > 如何程序使用此函数启动，为了能保持在后台运行，此程序必须将输出重定向到文件或其它输出流。否则会导致
 > PHP 挂起，直至程序执行结束。
-
-> **Note**: <span
-> class="simpara"><a href="/features/safe-mode.html" class="link">安全模式</a>
-> 启用时，可仅可用
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>
-> 执行文件。实际上，现在不允许在到可执行的路径中存在 *..* 组件。</span>
-
-**Warning**
-
-<a href="/features/safe-mode.html" class="link">安全模式</a>
-启用时，命令字符串会被 <span class="function">escapeshellcmd</span>
-转换。因此，*echo y \| echo x* 会变成 *echo y \\\| echo x*。
 
 ### 参见
 

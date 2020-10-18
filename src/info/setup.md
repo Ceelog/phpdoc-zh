@@ -74,10 +74,7 @@ class="function">dl</span> 动态加载 PHP 模块。
 
 关闭动态加载的主要原因是为了安全。通过动态加载，有可能忽略所有
 <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
-限制。 默认允许动态加载，除了使用
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>。在
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>，总是无法使用
-<span class="function">dl</span>。
+限制。 默认允许动态加载。
 
 `max_execution_time` <span class="type">integer</span>  
 这设置了脚本被解析器中止之前允许的最大执行时间，单位秒。
@@ -87,11 +84,6 @@ class="function">dl</span> 动态加载 PHP 模块。
 
 最大执行时间不会影响系统调用和系统操作等。更多细节参见 <span
 class="function">set\_time\_limit</span>。
-
-在
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">安全模式</a>
-下你不能通过 <span class="function">ini\_set</span> 来修改此设置。
-唯一的解决方法是关闭安全模式或者在 `php.ini` 中修改时间限制。
 
 你的 web 服务器也可以有其他超时设置，也有可能中断 PHP 的执行。 Apache
 有一个 *Timeout* 指令，IIS 有一个 CGI 超时功能。 他们默认都是 300

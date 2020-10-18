@@ -306,11 +306,6 @@ with the given definition. If the file already exists, it is not
 truncated. <span class="function">dbase\_pack</span> can be called to
 force truncation.
 
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会检查被操作的文件或目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
-
 > **Note**:
 >
 > 此函数受
@@ -782,11 +777,6 @@ class="methodparam"><span class="type">int</span> `$mode`</span> )
 
 <span class="function">dbase\_open</span> opens a dBase database with
 the given access mode.
-
-> **Note**: <span class="simpara">当启用
-> <a href="/features/safe-mode.html" class="link">安全模式</a>时， PHP
-> 会检查被操作的文件或目录是否与被执行的脚本有相同的
-> UID（所有者）。</span>
 
 > **Note**:
 >
