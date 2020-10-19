@@ -276,6 +276,10 @@ H:i:s O"</span> ;
 H:i:s O"</span> ;
 
 <span class="modifier">const</span> <span class="type">string</span>
+`DateTimeInterface::RFC7231` <span class="initializer"> = "D, d M Y
+H:i:s \\G\\M\\T"</span> ;
+
+<span class="modifier">const</span> <span class="type">string</span>
 `DateTimeInterface::RFC2822` <span class="initializer"> = "D, d M Y
 H:i:s O"</span> ;
 
@@ -1862,6 +1866,10 @@ H:i:s O"</span> ;
 H:i:s O"</span> ;
 
 <span class="modifier">const</span> <span class="type">string</span>
+`DateTimeInterface::RFC7231` <span class="initializer"> = "D, d M Y
+H:i:s \\G\\M\\T"</span> ;
+
+<span class="modifier">const</span> <span class="type">string</span>
 `DateTimeInterface::RFC2822` <span class="initializer"> = "D, d M Y
 H:i:s O"</span> ;
 
@@ -2323,6 +2331,10 @@ H:i:s O"</span> ;
 H:i:s O"</span> ;
 
 <span class="modifier">const</span> <span class="type">string</span>
+`DateTimeInterface::RFC7231` <span class="initializer"> = "D, d M Y
+H:i:s \\G\\M\\T"</span> ;
+
+<span class="modifier">const</span> <span class="type">string</span>
 `DateTimeInterface::RFC2822` <span class="initializer"> = "D, d M Y
 H:i:s O"</span> ;
 
@@ -2416,6 +2428,11 @@ UTC） </span>
 **`DATE_RFC1123`**  
 <span class="simpara"> RFC 1123 格式（示例：Mon, 15 Aug 2005 15:52:01
 +0000） </span>
+
+**`DateTimeInterface::RFC7231`**  
+**`DATE_RFC7231`**  
+<span class="simpara"> RFC 7231 格式 (自 PHP 7.0.19 和 7.1.5 可用)
+(示例：Sat, 30 Apr 2016 17:52:13 GMT) </span>
 
 **`DateTimeInterface::RFC2822`**  
 **`DATE_RFC2822`**  

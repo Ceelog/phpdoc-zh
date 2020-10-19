@@ -1157,8 +1157,6 @@ echo $output;
 -   <span class="function">preg\_replace</span>
 -   <span class="function">preg\_last\_error</span>
 -   <a href="/functions/anonymous.html" class="link">匿名函数</a>
--   <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    类型的信息
 
 preg\_replace
 =============

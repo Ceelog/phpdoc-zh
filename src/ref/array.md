@@ -2315,8 +2315,6 @@ var_dump(array_map(null, $arr, $arr));
 -   <span class="function">array\_filter</span>
 -   <span class="function">array\_reduce</span>
 -   <span class="function">array\_walk</span>
--   <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    类型的信息
 
 array\_merge\_recursive
 =======================
@@ -2326,10 +2324,8 @@ array\_merge\_recursive
 ### 说明
 
 <span class="type">array</span> <span
-class="methodname">array\_merge\_recursive</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> \[,
-<span class="methodparam"><span class="type">array</span> `$...`</span>
-\] )
+class="methodname">array\_merge\_recursive</span> (\[ <span
+class="methodparam"><span class="type">array</span> `$...`</span> \] )
 
 <span class="function">array\_merge\_recursive</span>
 将一个或多个数组的单元合并起来，一个数组中的值附加在前一个数组的后面。返回作为结果的数组。
@@ -2338,15 +2334,19 @@ class="methodparam"><span class="type">array</span> `$array1`</span> \[,
 
 ### 参数
 
-`array1`  
-要合并的初始数组。
-
 `...`  
 数组变量列表，进行递归合并。
 
 ### 返回值
 
-一个结果数组，其中的值合并自附加的参数。
+一个结果数组，其中的值合并自附加的参数。如果未传递参数调用，则会返回一个空
+<span class="type">array</span>。
+
+### 更新日志
+
+| 版本  | 说明                                               |
+|-------|----------------------------------------------------|
+| 7.4.0 | 允许不传递参数调用，之前的版本中至少需要一个参数。 |
 
 ### 范例
 
@@ -3100,12 +3100,6 @@ class="methodparam"><span class="type">mixed</span> `$carry`</span> ,
 
 `initial` 参数，<span class="function">array\_reduce</span> 返回
 **`NULL`**。
-
-### 更新日志
-
-| 版本  | 说明                                                                                                          |
-|-------|---------------------------------------------------------------------------------------------------------------|
-| 5.3.0 | 修改 `initial` 类型，允许传入 <span class="type">mixed</span>，之前只能是 <span class="type">integer</span>。 |
 
 ### 范例
 
@@ -4774,8 +4768,6 @@ class="type">array</span> 的键都不会被传递到回调函数中去。
 ### 参见
 
 -   <span class="function">array\_walk</span>
--   <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    类型的信息
 
 array\_walk
 ===========
@@ -4887,8 +4879,6 @@ array_walk($fruits, 'test_print');
 -   <span class="function">each</span>
 -   <span class="function">call\_user\_func\_array</span>
 -   <span class="function">array\_map</span>
--   <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    类型的信息
 -   <a href="/control-structures/foreach.html" class="link">foreach</a>
 
 array
@@ -5190,7 +5180,7 @@ $event = "SIGGRAPH";
 
 $location_vars = array("city", "state");
 
-$result = compact("event", "nothing_here", $location_vars);
+$result = compact("event", $location_vars);
 print_r($result);
 ?>
 ```

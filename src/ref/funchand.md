@@ -155,8 +155,6 @@ echo "global \$bar=$bar\n";
 ### 参见
 
 -   <span class="function">call\_user\_func</span>
--   <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    类型的信息
 -   <span class="methodname">ReflectionFunction::invokeArgs</span>
 -   <span class="methodname">ReflectionMethod::invokeArgs</span>
 
@@ -324,8 +322,6 @@ call_user_func(function($arg) { print "[$arg]\n"; }, 'test'); /* As of PHP 5.3.0
 
 -   <span class="function">call\_user\_func\_array</span>
 -   <span class="function">is\_callable</span>
--   <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    类型的信息
 -   <span class="methodname">ReflectionFunction::invoke</span>
 -   <span class="methodname">ReflectionMethod::invoke</span>
 
@@ -613,8 +609,6 @@ function test() {
 -   <span class="function">call\_user\_func</span>
 -   <span class="function">call\_user\_func\_array</span>
 -   <span class="function">is\_callable</span>
--   <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    类型的信息
 
 forward\_static\_call
 =====================
@@ -698,8 +692,6 @@ function test() {
 -   <span class="function">call\_user\_func\_array</span>
 -   <span class="function">call\_user\_func</span>
 -   <span class="function">is\_callable</span>
--   <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    类型的信息
 
 func\_get\_arg
 ==============

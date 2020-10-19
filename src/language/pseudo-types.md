@@ -17,11 +17,6 @@
 *number* 说明一个参数可以是 <span class="type">integer</span> 或者 <span
 class="type">float</span>。
 
-### callback
-
-本文档中在 PHP 5.4 引入 <span class="type">callable</span> 类型之前使用
-了 <span class="type">callback</span> 伪类型。二者含义完全相同。
-
 ### array\|object
 
 *array\|object* 意思是参数既可以是 <span class="type">array</span>

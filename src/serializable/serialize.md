@@ -28,3 +28,4 @@ class="classname">Exception</span>。
 ### 参见
 
 -   <a href="/language/oop5/magic.html#object.sleep" class="link">__sleep()</a>
+-   <a href="/language/oop5/magic.html#object.serialize" class="link">__serialize()</a>

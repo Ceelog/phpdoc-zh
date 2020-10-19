@@ -2,7 +2,8 @@
 --------
 
 匿名函数（Anonymous functions），也叫闭包函数（*closures*），允许
-临时创建一个没有指定名称的函数。最经常用作回调函数（<a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>）参数的值。当然，也有其它应用的情况。
+临时创建一个没有指定名称的函数。最经常用作回调函数 <span
+class="type">callable</span>参数的值。当然，也有其它应用的情况。
 
 匿名函数目前是通过
 <a href="/class/closure.html" class="link"><span class="classname">Closure</span></a>

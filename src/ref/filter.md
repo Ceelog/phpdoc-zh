@@ -522,8 +522,6 @@ var_dump(filter_var('http://example.com', FILTER_VALIDATE_URL, FILTER_FLAG_PATH_
 -   <span class="function">filter\_input</span>
 -   <span class="function">filter\_input\_array</span>
 -   <a href="/filter/filters.html" class="xref">Types of filters</a>
--   <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    类型的信息
 
 **目录**
 

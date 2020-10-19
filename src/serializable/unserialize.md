@@ -30,3 +30,4 @@ class="methodparam"><span class="type">string</span>
 ### 参见
 
 -   <a href="/language/oop5/magic.html#object.wakeup" class="link">__wakeup()</a>
+-   <a href="/language/oop5/magic.html#object.unserialize" class="link">__unserialize()</a>

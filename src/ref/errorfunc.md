@@ -707,8 +707,6 @@ array)。
 | 版本  | 说明                                                               |
 |-------|--------------------------------------------------------------------|
 | 7.2.0 | `errcontext` 被废弃。 使用此参数时会导致 **`E_DEPRECATED`** 提醒。 |
-| 5.5.0 | `error_handler` 可接收 **`NULL`**。                                |
-| 5.2.0 | 错误处理器必须返回 **`FALSE`** 来显示 `$php_errormsg`。            |
 
 ### 范例
 
@@ -849,8 +847,6 @@ var_dump($d); // Never reached
 -   <span class="function">restore\_error\_handler</span>
 -   <span class="function">trigger\_error</span>
 -   <a href="/errorfunc/constants.html" class="link">error level constants</a>
--   <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    类型的信息
 
 set\_exception\_handler
 =======================
@@ -928,8 +924,6 @@ echo "Not Executed\n";
 -   <span class="function">restore\_exception\_handler</span>
 -   <span class="function">restore\_error\_handler</span>
 -   <span class="function">error\_reporting</span>
--   <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    类型的信息
 -   <a href="/language/exceptions.html" class="link">PHP 5 异常</a>
 
 trigger\_error

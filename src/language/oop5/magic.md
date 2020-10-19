@@ -11,6 +11,8 @@
 <a href="/language/oop5/overloading.html#object.unset" class="link">__unset()</a>，
 <a href="/language/oop5/magic.html#object.sleep" class="link">__sleep()</a>，
 <a href="/language/oop5/magic.html#object.wakeup" class="link">__wakeup()</a>，
+<a href="/language/oop5/magic.html#object.serialize" class="link">__serialize()</a>,
+<a href="/language/oop5/magic.html#object.unserialize" class="link">__unserialize()</a>,
 <a href="/language/oop5/magic.html#object.tostring" class="link">__toString()</a>，
 <a href="/language/oop5/magic.html#object.invoke" class="link">__invoke()</a>，
 <a href="/language/oop5/magic.html#object.set-state" class="link">__set_state()</a>，
@@ -19,6 +21,9 @@
 <a href="/language/oop5/magic.html#object.debuginfo" class="link">__debugInfo()</a>
 等方法在 PHP 中被称为“魔术方法”（Magic
 methods）。在命名自己的类方法时不能使用这些方法名，除非是想使用其魔术功能。
+
+> **Note**: <span class="simpara"> 所有的魔术方法 *必须* 声明为 *public*
+> </span>
 
 **Caution**
 
@@ -32,8 +37,8 @@ PHP 将所有以
 <span class="methodname">\_\_sleep</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">void</span> <span
-class="methodname">\_\_wakeup</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">\_\_wakeup</span> ( <span
 class="methodparam">void</span> )
 
 <span class="function">serialize</span>
@@ -95,6 +100,110 @@ class Connection
 ?>
 ```
 
+### <a href="/language/oop5/magic.html#object.serialize" class="link">__serialize()</a> 和 <a href="/language/oop5/magic.html#object.unserialize" class="link">__unserialize()</a>
+
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">\_\_serialize</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">\_\_unserialize</span> ( <span
+class="methodparam"><span class="type">array</span> `$data`</span> )
+
+<span class="function">serialize</span>
+函数会检查类中是否存在一个魔术方法
+<a href="/language/oop5/magic.html#object.serialize" class="link">__serialize()</a>。如果存在，该方法将在任何序列化之前优先执行。它必须以一个代表对象序列化形式的
+键/值 成对的关联数组形式来返回，如果没有返回数组，将会抛出一个 <span
+class="classname">TypeError</span> 错误。
+
+> **Note**:
+>
+> 如果类中同时定义了
+> <a href="/language/oop5/magic.html#object.serialize" class="link">__serialize()</a>
+> 和
+> <a href="/language/oop5/magic.html#object.sleep" class="link">__sleep()</a>
+> 两个魔术方法，则只有
+> <a href="/language/oop5/magic.html#object.serialize" class="link">__serialize()</a>
+> 方法会被调用。
+> <a href="/language/oop5/magic.html#object.sleep" class="link">__sleep()</a>
+> 方法会被忽略掉。如果对象实现了
+> <a href="/class/serializable.html" class="link">Serializable</a>
+> 接口，接口的 *serialize()* 方法会被忽略，做为代替类中的
+> <a href="/language/oop5/magic.html#object.serialize" class="link">__serialize()</a>
+> 方法会被调用。
+
+The intended use of
+<a href="/language/oop5/magic.html#object.serialize" class="link">__serialize()</a>
+is to define a serialization-friendly arbitrary representation of the
+object. Elements of the array may correspond to properties of the object
+but that is not required.
+
+Conversely, <span class="function">unserialize</span> checks for the
+presence of a function with the magic name
+<a href="/language/oop5/magic.html#object.unserialize" class="link">__unserialize()</a>.
+If present, this function will be passed the restored array that was
+returned from
+<a href="/language/oop5/magic.html#object.serialize" class="link">__serialize()</a>.
+It may then restore the properties of the object from that array as
+appropriate.
+
+> **Note**:
+>
+> 如果类中同时定义了
+> <a href="/language/oop5/magic.html#object.unserialize" class="link">__unserialize()</a>
+> 和
+> <a href="/language/oop5/magic.html#object.wakeup" class="link">__wakeup()</a>
+> 两个魔术方法，则只有
+> <a href="/language/oop5/magic.html#object.unserialize" class="link">__unserialize()</a>
+> 方法会生效，<a href="/language/oop5/magic.html#object.wakeup" class="link">__wakeup()</a>
+> 方法会被忽略。
+
+> **Note**:
+>
+> 此特性自 PHP 7.4.0 起可用。
+
+**示例 \#2 序列化和反序列化**
+
+``` php
+<?php
+class Connection
+{
+    protected $link;
+    private $dsn, $username, $password;
+
+    public function __construct($dsn, $username, $password)
+    {
+        $this->dsn = $dsn;
+        $this->username = $username;
+        $this->password = $password;
+        $this->connect();
+    }
+
+    private function connect()
+    {
+        $this->link = new PDO($this->dsn, $this->username, $this->password);
+    }
+
+    public function __serialize(): array
+    {
+        return [
+          'dsn' => $this->dsn,
+          'user' => $this->username,
+          'pass' => $this->password,
+        ];
+    }
+
+    public function __unserialize(array $data): void
+    {
+        $this->dsn = $data['dsn'];
+        $this->username = $data['user'];
+        $this->password = $data['pass'];
+
+        $this->connect();
+    }
+}?>
+```
+
 ### <a href="/language/oop5/magic.html#object.tostring" class="link">__toString()</a>
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -112,7 +221,7 @@ class="methodparam">void</span> )
 <a href="/language/oop5/magic.html#object.tostring" class="link">__toString()</a>
 方法中抛出异常。这么做会导致致命错误。
 
-**示例 \#2 简单示例**
+**示例 \#3 简单示例**
 
 ``` php
 <?php
@@ -164,7 +273,7 @@ class="methodname">\_\_invoke</span> (\[ <span class="methodparam">
 >
 > 本特性只在 PHP 5.3.0 及以上版本有效。
 
-**示例 \#3 使用
+**示例 \#4 使用
 <a href="/language/oop5/magic.html#object.invoke" class="link">__invoke()</a>**
 
 ``` php
@@ -200,7 +309,7 @@ class="methodparam"><span class="type">array</span> `$properties`</span>
 本方法的唯一参数是一个数组，其中包含按 *array('property' =\> value,
 ...)* 格式排列的类属性。
 
-**示例 \#4 使用
+**示例 \#5 使用
 <a href="/language/oop5/magic.html#object.set-state" class="link">__set_state()</a>\>（PHP
 5.1.0 起）**
 
@@ -256,7 +365,7 @@ private properties will be shown.
 
 This feature was added in PHP 5.6.0.
 
-**示例 \#5 Using
+**示例 \#6 Using
 <a href="/language/oop5/magic.html#object.debuginfo" class="link">__debugInfo()</a>**
 
 ``` php
