@@ -190,12 +190,12 @@ The location of a bootstrap file, generally an autoloader.
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Runtime\\Error</span> if
-thread could not be created
+Shall throw <span class="type">parallel\\Runtime\\Error</span> if thread
+could not be created
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Runtime\\Bootstrap</span> if
+Shall throw <span class="type">parallel\\Runtime\\Bootstrap</span> if
 bootstrapping failed
 
 parallel\\Runtime::run
@@ -294,38 +294,38 @@ value safely, and so may not be shared.
 
 **Warning**
 
-The return <span class="type">\\parallel\\Future</span> must not be
+The return <span class="type">parallel\\Future</span> must not be
 ignored when the task contains a return or throw statement.
 
 ### Exceptions
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Runtime\\Error\\Closed</span>
-if <span class="type">\\parallel\\Runtime</span> was closed.
+Shall throw <span class="type">parallel\\Runtime\\Error\\Closed</span>
+if <span class="type">parallel\\Runtime</span> was closed.
 
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Runtime\\Error\\IllegalFunction</span> if
-`task` is a closure created from an internal function.
+class="type">parallel\\Runtime\\Error\\IllegalFunction</span> if `task`
+is a closure created from an internal function.
 
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Runtime\\Error\\IllegalInstruction</span> if
+class="type">parallel\\Runtime\\Error\\IllegalInstruction</span> if
 `task` contains illegal instructions.
 
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Runtime\\Error\\IllegalParameter</span> if
-`task` accepts or `argv` contains illegal variables.
+class="type">parallel\\Runtime\\Error\\IllegalParameter</span> if `task`
+accepts or `argv` contains illegal variables.
 
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Runtime\\Error\\IllegalReturn</span> if `task`
+class="type">parallel\\Runtime\\Error\\IllegalReturn</span> if `task`
 returns illegally.
 
 parallel\\Runtime::close
@@ -350,7 +350,7 @@ Shall request that the runtime shutsdown.
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Runtime\\Error\\Closed</span>
+Shall throw <span class="type">parallel\\Runtime\\Error\\Closed</span>
 if <span class="type">Runtime</span> was already closed.
 
 parallel\\Runtime::kill
@@ -379,7 +379,7 @@ Internal function calls in progress cannot be interrupted.
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Runtime\\Error\\Closed</span>
+Shall throw <span class="type">parallel\\Runtime\\Error\\Closed</span>
 if <span class="type">Runtime</span> was closed.
 
 Futures
@@ -490,15 +490,13 @@ Internal function calls in progress cannot be interrupted.
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Future\\Error\\Killed</span>
-if <span class="type">\\parallel\\Runtime</span> executing task was
-killed.
+Shall throw <span class="type">parallel\\Future\\Error\\Killed</span> if
+<span class="type">parallel\\Runtime</span> executing task was killed.
 
 **Warning**
 
-Shall throw <span
-class="type">\\parallel\\Future\\Error\\Cancelled</span> if task was
-already cancelled.
+Shall throw <span class="type">parallel\\Future\\Error\\Cancelled</span>
+if task was already cancelled.
 
 parallel\\Future::cancelled
 ===========================
@@ -543,29 +541,27 @@ Shall return (and if necessary wait for) return from task
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Future\\Error</span> if
-waiting failed (internal error).
+Shall throw <span class="type">parallel\\Future\\Error</span> if waiting
+failed (internal error).
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Future\\Error\\Killed</span>
-if <span class="type">\\parallel\\Runtime</span> executing task was
-killed.
+Shall throw <span class="type">parallel\\Future\\Error\\Killed</span> if
+<span class="type">parallel\\Runtime</span> executing task was killed.
 
 **Warning**
 
-Shall throw <span
-class="type">\\parallel\\Future\\Error\\Cancelled</span> if task was
-cancelled.
+Shall throw <span class="type">parallel\\Future\\Error\\Cancelled</span>
+if task was cancelled.
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Future\\Error\\Foreign</span>
+Shall throw <span class="type">parallel\\Future\\Error\\Foreign</span>
 if task raised an unrecognized uncaught exception.
 
 **Warning**
 
-Shall rethrow <span class="type">\\Throwable</span> uncaught in task
+Shall rethrow <span class="type">Throwable</span> uncaught in task
 
 Unbuffered Channels
 -------------------
@@ -724,7 +720,7 @@ May be <span class="type">Channel::Infinite</span> or a positive integer
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Channel\\Error\\Existence</span> if channel
+class="type">parallel\\Channel\\Error\\Existence</span> if channel
 already exists.
 
 parallel\\Channel::open
@@ -745,8 +741,8 @@ Shall open the channel with the given name
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Channel\\Error\\Existence</span> if channel
-does not exist.
+class="type">parallel\\Channel\\Error\\Existence</span> if channel does
+not exist.
 
 parallel\\Channel::recv
 =======================
@@ -765,7 +761,7 @@ Shall recv a value from this channel
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Channel\\Error\\Closed</span>
+Shall throw <span class="type">parallel\\Channel\\Error\\Closed</span>
 if channel is closed.
 
 parallel\\Channel::send
@@ -785,13 +781,13 @@ Shall send the given value on this channel
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Channel\\Error\\Closed</span>
+Shall throw <span class="type">parallel\\Channel\\Error\\Closed</span>
 if channel is closed.
 
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Channel\\Error\\IllegalValue</span> if value is
+class="type">parallel\\Channel\\Error\\IllegalValue</span> if value is
 illegal.
 
 parallel\\Channel::close
@@ -811,7 +807,7 @@ Shall close this channel
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Channel\\Error\\Closed</span>
+Shall throw <span class="type">parallel\\Channel\\Error\\Closed</span>
 if channel is closed.
 
 The Event Loop
@@ -909,7 +905,7 @@ Shall set blocking mode
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Events\\Error</span> if loop
+Shall throw <span class="type">parallel\\Events\\Error</span> if loop
 has timeout set.
 
 parallel\\Events::setTimeout
@@ -937,8 +933,8 @@ Shall set the timeout in microseconds
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Events\\Error</span> if loop
-is non-blocking.
+Shall throw <span class="type">parallel\\Events\\Error</span> if loop is
+non-blocking.
 
 parallel\\Events::setInput
 ==========================
@@ -971,9 +967,8 @@ Shall watch for events on the given `channel`
 
 **Warning**
 
-Shall throw <span
-class="type">\\parallel\\Events\\Error\\Existence</span> if channel was
-already added.
+Shall throw <span class="type">parallel\\Events\\Error\\Existence</span>
+if channel was already added.
 
 parallel\\Events::addFuture
 ===========================
@@ -994,9 +989,8 @@ Shall watch for events on the given `future`
 
 **Warning**
 
-Shall throw <span
-class="type">\\parallel\\Events\\Error\\Existence</span> if target with
-the given name was already added.
+Shall throw <span class="type">parallel\\Events\\Error\\Existence</span>
+if target with the given name was already added.
 
 parallel\\Events::remove
 ========================
@@ -1015,9 +1009,8 @@ Shall remove the given `target`
 
 **Warning**
 
-Shall throw <span
-class="type">\\parallel\\Events\\Error\\Existence</span> if target with
-the given name was not found.
+Shall throw <span class="type">parallel\\Events\\Error\\Existence</span>
+if target with the given name was not found.
 
 parallel\\Events::poll
 ======================
@@ -1046,7 +1039,7 @@ returned describes the event.
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Events\\Error\\Timeout</span>
+Shall throw <span class="type">parallel\\Events\\Error\\Timeout</span>
 if timeout is used and reached.
 
 Events Input
@@ -1108,13 +1101,13 @@ Shall set input for the given target
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Events\\Input\\Error\\Existence</span> if input
+class="type">parallel\\Events\\Input\\Error\\Existence</span> if input
 for target already exists.
 
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Events\\Input\\Error\\IllegalValue</span> if
+class="type">parallel\\Events\\Input\\Error\\IllegalValue</span> if
 value is illegal (object, null).
 
 parallel\\Events\\Input::clear
@@ -1148,7 +1141,7 @@ Shall remove input for the given target
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Events\\Input\\Error\\Existence</span> if input
+class="type">parallel\\Events\\Input\\Error\\Existence</span> if input
 for target does not exist.
 
 Event Objects
@@ -1302,7 +1295,7 @@ value
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Sync\\Error\\IllegalValue</span> if `value` is
+class="type">parallel\\Sync\\Error\\IllegalValue</span> if `value` is
 non-scalar.
 
 parallel\\Sync::get
@@ -1336,7 +1329,7 @@ Shall atomically set the value of the synchronization object
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Sync\\Error\\IllegalValue</span> if `value` is
+class="type">parallel\\Sync\\Error\\IllegalValue</span> if `value` is
 non-scalar.
 
 parallel\\Sync::wait

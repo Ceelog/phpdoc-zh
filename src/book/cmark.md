@@ -3137,7 +3137,7 @@ class="methodparam"><span class="type">string</span> `$query`</span> )
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_invoke</span> ( <span class="methodparam"><span
-class="type">\\CommonMark\\Node</span> `$root`</span> , <span
+class="type">CommonMark\\Node</span> `$root`</span> , <span
 class="methodparam"><span class="type">callable</span> `$handler`</span>
 )
 
@@ -3168,13 +3168,12 @@ CQL Execution
 
 <span class="modifier">public</span> <span
 class="methodname">CommonMark\\CQL::\_\_invoke</span> ( <span
-class="methodparam"><span class="type">\\CommonMark\\Node</span>
+class="methodparam"><span class="type">CommonMark\\Node</span>
 `$root`</span> , <span class="methodparam"><span
 class="type">callable</span> `$handler`</span> )
 
 Shall invoke the current CQL function on the given `root`, executing the
-given `handler` on entry to a <span
-class="type">\\CommonMark\\Node</span>
+given `handler` on entry to a <span class="type">CommonMark\\Node</span>
 
 ### 参数
 
@@ -3185,9 +3184,9 @@ the root node of a tree
 should have the prototype:
 
 <span class="type">?bool</span> <span class="methodname">handler</span>
-( <span class="methodparam"><span class="type">\\CommonMark\\Node</span>
+( <span class="methodparam"><span class="type">CommonMark\\Node</span>
 `$root`</span> , <span class="methodparam"><span
-class="type">\\CommonMark\\Node</span> `$entering`</span> )
+class="type">CommonMark\\Node</span> `$entering`</span> )
 
 -   Should `handler` fail to return (void), or return <span
     class="type">null</span>, CQL will continue executing

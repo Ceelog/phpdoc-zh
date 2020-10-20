@@ -34,14 +34,14 @@ automatic scheduling via <span class="function">parallel\\run</span>.
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Runtime\\Error\\Bootstrap</span> if previously
+class="type">parallel\\Runtime\\Error\\Bootstrap</span> if previously
 called for this process.
 
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Runtime\\Error\\Bootstrap</span> if called
-after <span class="function">parallel\\run</span>.
+class="type">parallel\\Runtime\\Error\\Bootstrap</span> if called after
+<span class="function">parallel\\run</span>.
 
 ### 参见
 
@@ -157,38 +157,38 @@ value safely, and so may not be shared.
 
 **Warning**
 
-The return <span class="type">\\parallel\\Future</span> must not be
+The return <span class="type">parallel\\Future</span> must not be
 ignored when the task contains a return or throw statement.
 
 ### Exceptions
 
 **Warning**
 
-Shall throw <span class="type">\\parallel\\Runtime\\Error\\Closed</span>
-if <span class="type">\\parallel\\Runtime</span> was closed.
+Shall throw <span class="type">parallel\\Runtime\\Error\\Closed</span>
+if <span class="type">parallel\\Runtime</span> was closed.
 
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Runtime\\Error\\IllegalFunction</span> if
-`task` is a closure created from an internal function.
+class="type">parallel\\Runtime\\Error\\IllegalFunction</span> if `task`
+is a closure created from an internal function.
 
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Runtime\\Error\\IllegalInstruction</span> if
+class="type">parallel\\Runtime\\Error\\IllegalInstruction</span> if
 `task` contains illegal instructions.
 
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Runtime\\Error\\IllegalParameter</span> if
-`task` accepts or `argv` contains illegal variables.
+class="type">parallel\\Runtime\\Error\\IllegalParameter</span> if `task`
+accepts or `argv` contains illegal variables.
 
 **Warning**
 
 Shall throw <span
-class="type">\\parallel\\Runtime\\Error\\IllegalReturn</span> if `task`
+class="type">parallel\\Runtime\\Error\\IllegalReturn</span> if `task`
 returns illegally.
 
 ### 参见

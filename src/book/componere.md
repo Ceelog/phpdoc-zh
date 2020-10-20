@@ -111,7 +111,7 @@ class="type">string</span> `$interface`</span> )
 class="type">Definition</span> <span class="methodname">addMethod</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$name`</span> , <span class="methodparam"><span
-class="type">\\Componere\\Method</span> `$method`</span> )
+class="type">Componere\\Method</span> `$method`</span> )
 
 <span class="modifier">public</span> <span
 class="type">Definition</span> <span class="methodname">addTrait</span>
@@ -119,7 +119,7 @@ class="type">Definition</span> <span class="methodname">addTrait</span>
 `$trait`</span> )
 
 <span class="modifier">public</span> <span
-class="type">\\ReflectionClass</span> <span
+class="type">ReflectionClass</span> <span
 class="methodname">getReflector</span> ( <span
 class="methodparam">void</span> )
 
@@ -168,7 +168,7 @@ class="type">Definition</span> <span
 class="methodname">Componere\\Abstract\\Definition::addMethod</span> (
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> , <span class="methodparam"><span
-class="type">\\Componere\\Method</span> `$method`</span> )
+class="type">Componere\\Method</span> `$method`</span> )
 
 Shall create or override a method on the current definition.
 
@@ -178,7 +178,7 @@ Shall create or override a method on the current definition.
 The case insensitive name for method
 
 `method`  
-<span class="type">\\Componere\\Method</span> not previously added to
+<span class="type">Componere\\Method</span> not previously added to
 another <span class="type">Definition</span>
 
 ### 返回值
@@ -236,7 +236,7 @@ Reflection
 ### 说明
 
 <span class="modifier">public</span> <span
-class="type">\\ReflectionClass</span> <span
+class="type">ReflectionClass</span> <span
 class="methodname">Componere\\Abstract\\Definition::getReflector</span>
 ( <span class="methodparam">void</span> )
 
@@ -296,14 +296,14 @@ class="type">array</span> `$interfaces`</span> )
 class="type">Definition</span> <span
 class="methodname">addConstant</span> ( <span class="methodparam"><span
 class="type">string</span> `$name`</span> , <span
-class="methodparam"><span class="type">\\Componere\\Value</span>
+class="methodparam"><span class="type">Componere\\Value</span>
 `$value`</span> )
 
 <span class="modifier">public</span> <span
 class="type">Definition</span> <span
 class="methodname">addProperty</span> ( <span class="methodparam"><span
 class="type">string</span> `$name`</span> , <span
-class="methodparam"><span class="type">\\Componere\\Value</span>
+class="methodparam"><span class="type">Componere\\Value</span>
 `$value`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
@@ -314,7 +314,7 @@ class="methodparam">void</span> )
 <span class="methodname">isRegistered</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">\\Closure</span>
+<span class="modifier">public</span> <span class="type">Closure</span>
 <span class="methodname">getClosure</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
@@ -335,7 +335,7 @@ class="type">Definition</span> <span
 class="methodname">Componere\\Abstract\\Definition::addMethod</span> (
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> , <span class="methodparam"><span
-class="type">\\Componere\\Method</span> `$method`</span> )
+class="type">Componere\\Method</span> `$method`</span> )
 
 <span class="modifier">public</span> <span
 class="type">Definition</span> <span
@@ -344,7 +344,7 @@ class="methodname">Componere\\Abstract\\Definition::addTrait</span> (
 `$trait`</span> )
 
 <span class="modifier">public</span> <span
-class="type">\\ReflectionClass</span> <span
+class="type">ReflectionClass</span> <span
 class="methodname">Componere\\Abstract\\Definition::getReflector</span>
 ( <span class="methodparam">void</span> )
 
@@ -429,7 +429,7 @@ Add Constant
 class="type">Definition</span> <span
 class="methodname">Componere\\Definition::addConstant</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">\\Componere\\Value</span>
+<span class="methodparam"><span class="type">Componere\\Value</span>
 `$value`</span> )
 
 Shall declare a class constant on the current Definition
@@ -479,7 +479,7 @@ Add Property
 class="type">Definition</span> <span
 class="methodname">Componere\\Definition::addProperty</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">\\Componere\\Value</span>
+<span class="methodparam"><span class="type">Componere\\Value</span>
 `$value`</span> )
 
 Shall declare a class property on the current Definition
@@ -552,7 +552,7 @@ Get Closure
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">\\Closure</span>
+<span class="modifier">public</span> <span class="type">Closure</span>
 <span class="methodname">Componere\\Definition::getClosure</span> (
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> )
@@ -656,7 +656,7 @@ class="methodparam">void</span> )
 <span class="methodname">derive</span> ( <span class="methodparam"><span
 class="type">object</span> `$instance`</span> )
 
-<span class="modifier">public</span> <span class="type">\\Closure</span>
+<span class="modifier">public</span> <span class="type">Closure</span>
 <span class="methodname">getClosure</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
@@ -677,7 +677,7 @@ class="type">Definition</span> <span
 class="methodname">Componere\\Abstract\\Definition::addMethod</span> (
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> , <span class="methodparam"><span
-class="type">\\Componere\\Method</span> `$method`</span> )
+class="type">Componere\\Method</span> `$method`</span> )
 
 <span class="modifier">public</span> <span
 class="type">Definition</span> <span
@@ -686,7 +686,7 @@ class="methodname">Componere\\Abstract\\Definition::addTrait</span> (
 `$trait`</span> )
 
 <span class="modifier">public</span> <span
-class="type">\\ReflectionClass</span> <span
+class="type">ReflectionClass</span> <span
 class="methodname">Componere\\Abstract\\Definition::getReflector</span>
 ( <span class="methodparam">void</span> )
 
@@ -805,7 +805,7 @@ Get Closure
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">\\Closure</span>
+<span class="modifier">public</span> <span class="type">Closure</span>
 <span class="methodname">Componere\\Patch::getClosure</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
@@ -862,8 +862,8 @@ A Method represents a function with modifiable accessibility flags
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> ( <span
-class="methodparam"><span class="type">\\Closure</span>
-`$closure`</span> )
+class="methodparam"><span class="type">Closure</span> `$closure`</span>
+)
 
 /\* 方法 \*/
 
@@ -880,7 +880,7 @@ class="methodparam">void</span> )
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="type">\\ReflectionMethod</span> <span
+class="type">ReflectionMethod</span> <span
 class="methodname">getReflector</span> ( <span
 class="methodparam">void</span> )
 
@@ -895,8 +895,8 @@ Method Construction
 
 <span class="modifier">public</span> <span
 class="methodname">Componere\\Method::\_\_construct</span> ( <span
-class="methodparam"><span class="type">\\Closure</span>
-`$closure`</span> )
+class="methodparam"><span class="type">Closure</span> `$closure`</span>
+)
 
 ### 参数
 
@@ -969,7 +969,7 @@ Reflection
 ### 说明
 
 <span class="modifier">public</span> <span
-class="type">\\ReflectionMethod</span> <span
+class="type">ReflectionMethod</span> <span
 class="methodname">Componere\\Method::getReflector</span> ( <span
 class="methodparam">void</span> )
 
