@@ -26,7 +26,7 @@ class="function">date\_default\_timezone\_set</span> 等函数。
 > <a href="https://pecl.php.net/get/timezonedb" class="link external">» timezonedb</a>
 > 进行安装。</span>
 
-> **Note**: <span class="simpara"> 基于时区数据库版本的列表 2020.3.
+> **Note**: <span class="simpara"> 基于时区数据库版本的列表 2020.4.
 > </span>
 
 非洲

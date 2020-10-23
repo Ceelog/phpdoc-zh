@@ -93,7 +93,8 @@ Document Object Model
     -   [DOMDocument::saveXML](/class/domdocument.html#DOMDocument::saveXML)
         — Dumps the internal XML tree back into a string
     -   [DOMDocument::schemaValidate](/class/domdocument.html#DOMDocument::schemaValidate)
-        — Validates a document based on a schema
+        — Validates a document based on a schema. Only XML Schema 1.0 is
+        supported.
     -   [DOMDocument::schemaValidateSource](/class/domdocument.html#DOMDocument::schemaValidateSource)
         — Validates a document based on a schema
     -   [DOMDocument::validate](/class/domdocument.html#DOMDocument::validate)
@@ -3724,7 +3725,8 @@ echo $doc->saveXML($title);
 DOMDocument::schemaValidate
 ===========================
 
-Validates a document based on a schema
+Validates a document based on a schema. Only XML Schema 1.0 is
+supported.
 
 ### 说明
 
