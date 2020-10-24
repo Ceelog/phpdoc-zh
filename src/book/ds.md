@@ -876,7 +876,9 @@ Use cases:
 
 <span class="ooclass"> class **Ds\\Sequence**</span> <span
 class="oointerface">implements <span
-class="interfacename">Ds\\Collection</span></span> {
+class="interfacename">Ds\\Collection</span></span> <span
+class="oointerface">, <span
+class="interfacename">ArrayAccess</span></span> {
 
 /\* 方法 \*/
 
@@ -1021,6 +1023,13 @@ class="methodname">unshift</span> (\[ <span class="methodparam"><span
 class="type">mixed</span> `$values`</span> \] )
 
 }
+
+更新日志
+--------
+
+| 版本          | 说明                                                                  |
+|---------------|-----------------------------------------------------------------------|
+| PECL ds 1.3.0 | The interface now extends <span class="classname">ArrayAccess</span>. |
 
 Ds\\Sequence::allocate
 ======================
@@ -2710,7 +2719,9 @@ Weaknesses
 
 <span class="ooclass"> class **Ds\\Vector**</span> <span
 class="oointerface">implements <span
-class="interfacename">Ds\\Sequence</span></span> {
+class="interfacename">Ds\\Sequence</span></span> <span
+class="oointerface">, <span
+class="interfacename">ArrayAccess</span></span> {
 
 /\* Constants \*/
 
@@ -2862,6 +2873,13 @@ class="methodparam"><span class="type">mixed</span> `$values`</span> \]
 ----------
 
 **`Ds\Vector::MIN_CAPACITY`**  
+
+更新日志
+--------
+
+| 版本          | 说明                                                                 |
+|---------------|----------------------------------------------------------------------|
+| PECL ds 1.3.0 | The class now implements <span class="classname">ArrayAccess</span>. |
 
 Ds\\Vector::allocate
 ====================
@@ -4794,7 +4812,9 @@ Weaknesses
 
 <span class="ooclass"> class **Ds\\Deque** </span> <span
 class="oointerface">implements <span
-class="interfacename">Ds\\Sequence</span> </span> {
+class="interfacename">Ds\\Sequence</span> </span> <span
+class="oointerface">, <span class="interfacename">ArrayAccess</span>
+</span> {
 
 /\* Constants \*/
 
@@ -4943,6 +4963,13 @@ class="methodparam"><span class="type">mixed</span> `$values`</span> \]
 ----------
 
 **`Ds\Deque::MIN_CAPACITY`**  
+
+更新日志
+--------
+
+| 版本          | 说明                                                                 |
+|---------------|----------------------------------------------------------------------|
+| PECL ds 1.3.0 | The class now implements <span class="classname">ArrayAccess</span>. |
 
 Ds\\Deque::allocate
 ===================
@@ -6850,7 +6877,9 @@ Weaknesses
 
 <span class="ooclass"> class **Ds\\Map** </span> <span
 class="oointerface">implements <span
-class="interfacename">Ds\\Collection</span> </span> {
+class="interfacename">Ds\\Collection</span> </span> <span
+class="oointerface">, <span class="interfacename">ArrayAccess</span>
+</span> {
 
 /\* Constants \*/
 
@@ -7017,6 +7046,13 @@ class="type">Ds\\Map</span> `$map`</span> )
 ----------
 
 **`Ds\Map::MIN_CAPACITY`**  
+
+更新日志
+--------
+
+| 版本          | 说明                                                                 |
+|---------------|----------------------------------------------------------------------|
+| PECL ds 1.3.0 | The class now implements <span class="classname">ArrayAccess</span>. |
 
 Ds\\Map::allocate
 =================
@@ -9946,7 +9982,9 @@ Weaknesses
 
 <span class="ooclass"> class **Ds\\Set** </span> <span
 class="oointerface">implements <span
-class="interfacename">Ds\\Collection</span> </span> {
+class="interfacename">Ds\\Collection</span> </span> <span
+class="oointerface">, <span class="interfacename">ArrayAccess</span>
+</span> {
 
 /\* Constants \*/
 
@@ -10072,6 +10110,13 @@ class="type">Ds\\Set</span> `$set`</span> )
 ----------
 
 **`Ds\Set::MIN_CAPACITY`**  
+
+更新日志
+--------
+
+| 版本          | 说明                                                                 |
+|---------------|----------------------------------------------------------------------|
+| PECL ds 1.3.0 | The class now implements <span class="classname">ArrayAccess</span>. |
 
 Ds\\Set::add
 ============
@@ -11775,7 +11820,9 @@ Uses a <span class="classname">Ds\\Vector</span> internally.
 
 <span class="ooclass"> class **Ds\\Stack** </span> <span
 class="oointerface">implements <span
-class="interfacename">Ds\\Collection</span> </span> {
+class="interfacename">Ds\\Collection</span> </span> <span
+class="oointerface">, <span class="interfacename">ArrayAccess</span>
+</span> {
 
 /\* 方法 \*/
 
@@ -11816,6 +11863,13 @@ class="type">mixed</span> `$...values`</span> \] )
 class="methodparam">void</span> )
 
 }
+
+更新日志
+--------
+
+| 版本          | 说明                                                                 |
+|---------------|----------------------------------------------------------------------|
+| PECL ds 1.3.0 | The class now implements <span class="classname">ArrayAccess</span>. |
 
 Ds\\Stack::allocate
 ===================
@@ -12283,7 +12337,9 @@ order, destructively.
 
 <span class="ooclass"> class **Ds\\Queue** </span> <span
 class="oointerface">implements <span
-class="interfacename">Ds\\Collection</span> </span> {
+class="interfacename">Ds\\Collection</span> </span> <span
+class="oointerface">, <span class="interfacename">ArrayAccess</span>
+</span> {
 
 /\* Constants \*/
 
@@ -12334,6 +12390,13 @@ class="methodparam">void</span> )
 ----------
 
 **`Ds\Queue::MIN_CAPACITY`**  
+
+更新日志
+--------
+
+| 版本          | 说明                                                                 |
+|---------------|----------------------------------------------------------------------|
+| PECL ds 1.3.0 | The class now implements <span class="classname">ArrayAccess</span>. |
 
 Ds\\Queue::allocate
 ===================
