@@ -30,9 +30,9 @@ Optional machine name. If omitted, the local machine is used.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                              |
-|-------|---------------------------------------------------------------------------------------------------|
-| 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
+| 版本                    | 说明                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
 
 ### 参见
 
@@ -260,9 +260,9 @@ debug_zval_dump($x);
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                                                       |
-|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0.4.0 | The `dependencies`, `recovery_delay`, `recovery_action_1`, `recovery_action_2`, `recovery_action_3`, `recovery_reset_period`, `recovery_enabled`, `recovery_reboot_msg` and `recovery_command` parameters have been added. |
+| 版本                    | 说明                                                                                                                                                                                                                       |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 0.4.0 | The `dependencies`, `recovery_delay`, `recovery_action_1`, `recovery_action_2`, `recovery_action_3`, `recovery_reset_period`, `recovery_enabled`, `recovery_reboot_msg` and `recovery_command` parameters have been added. |
 
 ### 参见
 
@@ -362,9 +362,9 @@ error.
 
 ### 更新日志
 
-| 版本  | 说明                                          |
-|-------|-----------------------------------------------|
-| 0.2.0 | This function works only in the *"cli"* SAPI. |
+| 版本                    | 说明                                          |
+|-------------------------|-----------------------------------------------|
+| PECL win32service 0.2.0 | This function works only in the *"cli"* SAPI. |
 
 ### 参见
 
@@ -407,9 +407,9 @@ Optional machine name. If omitted, the local machine is used.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                              |
-|-------|---------------------------------------------------------------------------------------------------|
-| 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
+| 版本                    | 说明                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
 
 ### 参见
 
@@ -683,9 +683,9 @@ error.
 
 ### 更新日志
 
-| 版本  | 说明                                          |
-|-------|-----------------------------------------------|
-| 0.2.0 | This function works only in the *"cli"* SAPI. |
+| 版本                    | 说明                                          |
+|-------------------------|-----------------------------------------------|
+| PECL win32service 0.2.0 | This function works only in the *"cli"* SAPI. |
 
 ### 参见
 
@@ -784,10 +784,10 @@ while (WIN32_SERVICE_CONTROL_STOP != win32_get_last_control_message()) {
 
 ### 更新日志
 
-| 版本  | 说明                                          |
-|-------|-----------------------------------------------|
-| 0.4.0 | The parameter `gracefulMode` has been added.  |
-| 0.2.0 | This function works only in the *"cli"* SAPI. |
+| 版本                    | 说明                                          |
+|-------------------------|-----------------------------------------------|
+| PECL win32service 0.4.0 | The parameter `gracefulMode` has been added.  |
+| PECL win32service 0.2.0 | This function works only in the *"cli"* SAPI. |
 
 ### 参见
 
@@ -829,9 +829,9 @@ Optional machine name. If omitted, the local machine is used.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                              |
-|-------|---------------------------------------------------------------------------------------------------|
-| 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
+| 版本                    | 说明                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
 
 ### 参见
 
@@ -873,9 +873,9 @@ Optional machine name. If omitted, the local machine is used.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                              |
-|-------|---------------------------------------------------------------------------------------------------|
-| 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
+| 版本                    | 说明                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
 
 ### 参见
 

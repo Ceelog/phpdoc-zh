@@ -173,9 +173,9 @@ class="function">rar\_open</span>.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                                                                                                                  |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2.0.0 | The RAR entries returned by <span class="methodname">RarArchive::getEntry</span> and <span class="methodname">RarArchive::getEntries</span> are now invalidated when calling this method. This means that all instance methods called for such entries and not guaranteed to succeed. |
+| 版本           | 说明                                                                                                                                                                                                                                                                                  |
+|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL rar 2.0.0 | The RAR entries returned by <span class="methodname">RarArchive::getEntry</span> and <span class="methodname">RarArchive::getEntries</span> are now invalidated when calling this method. This means that all instance methods called for such entries and not guaranteed to succeed. |
 
 ### 范例
 
@@ -323,9 +323,9 @@ class="type">RarEntry</span> objects 或者在失败时返回 **`FALSE`**.
 
 ### 更新日志
 
-| 版本  | 说明                                                                       |
-|-------|----------------------------------------------------------------------------|
-| 3.0.0 | Support for RAR archives with repeated entry names is no longer defective. |
+| 版本           | 说明                                                                       |
+|----------------|----------------------------------------------------------------------------|
+| PECL rar 3.0.0 | Support for RAR archives with repeated entry names is no longer defective. |
 
 ### 范例
 
@@ -695,9 +695,9 @@ Returns the requested <span class="type">RarArchive</span> instance
 
 ### 更新日志
 
-| 版本  | 说明                         |
-|-------|------------------------------|
-| 3.0.0 | `volume_callback` was added. |
+| 版本           | 说明                         |
+|----------------|------------------------------|
+| PECL rar 3.0.0 | `volume_callback` was added. |
 
 ### 范例
 
@@ -1466,10 +1466,10 @@ correctly. Use <span class="function">realpath</span> as a workaround.
 
 ### 更新日志
 
-| 版本  | 说明                                                                       |
-|-------|----------------------------------------------------------------------------|
-| 3.0.0 | `extended_data` was added.                                                 |
-| 3.0.0 | Support for RAR archives with repeated entry names is no longer defective. |
+| 版本           | 说明                                                                       |
+|----------------|----------------------------------------------------------------------------|
+| PECL rar 3.0.0 | `extended_data` was added.                                                 |
+| PECL rar 3.0.0 | Support for RAR archives with repeated entry names is no longer defective. |
 
 ### 范例
 
@@ -1623,9 +1623,9 @@ Returns the CRC of the archive entry or **`FALSE`** on error.
 
 ### 更新日志
 
-| 版本  | 说明                                                                 |
-|-------|----------------------------------------------------------------------|
-| 2.0.0 | This method now returns correct values for multiple volume archives. |
+| 版本           | 说明                                                                 |
+|----------------|----------------------------------------------------------------------|
+| PECL rar 2.0.0 | This method now returns correct values for multiple volume archives. |
 
 RarEntry::getFileTime
 =====================
@@ -1805,9 +1805,9 @@ Returns the entry name as a string, or **`FALSE`** on error.
 
 ### 更新日志
 
-| 版本  | 说明                                                                  |
-|-------|-----------------------------------------------------------------------|
-| 2.0.0 | As of version 2.0.0, the returned string is encoded in Unicode/UTF-8. |
+| 版本           | 说明                                                                  |
+|----------------|-----------------------------------------------------------------------|
+| PECL rar 2.0.0 | As of version 2.0.0, the returned string is encoded in Unicode/UTF-8. |
 
 ### 范例
 
@@ -1865,9 +1865,9 @@ Returns the packed size, or **`FALSE`** on error.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                       |
-|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2.0.0 | This method now returns correct values of packed sizes bigger than 2 GiB on platforms with 64-bit <span class="type">integer</span>s and never returns negative values on other platforms. |
+| 版本           | 说明                                                                                                                                                                                       |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL rar 2.0.0 | This method now returns correct values of packed sizes bigger than 2 GiB on platforms with 64-bit <span class="type">integer</span>s and never returns negative values on other platforms. |
 
 ### 范例
 
@@ -1930,9 +1930,9 @@ The file handler 或者在失败时返回 **`FALSE`**.
 
 ### 更新日志
 
-| 版本  | 说明                                                                       |
-|-------|----------------------------------------------------------------------------|
-| 3.0.0 | Support for RAR archives with repeated entry names is no longer defective. |
+| 版本           | 说明                                                                       |
+|----------------|----------------------------------------------------------------------------|
+| PECL rar 3.0.0 | Support for RAR archives with repeated entry names is no longer defective. |
 
 ### 范例
 
@@ -2002,9 +2002,9 @@ Returns the unpacked size, or **`FALSE`** on error.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                         |
-|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2.0.0 | This method now returns correct values of unpacked sizes bigger than 2 GiB on platforms with 64-bit <span class="type">integer</span>s and never returns negative values on other platforms. |
+| 版本           | 说明                                                                                                                                                                                         |
+|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL rar 2.0.0 | This method now returns correct values of unpacked sizes bigger than 2 GiB on platforms with 64-bit <span class="type">integer</span>s and never returns negative values on other platforms. |
 
 ### 返回值
 

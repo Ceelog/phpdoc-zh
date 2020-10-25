@@ -50,9 +50,9 @@ or
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                        |
-|-------|-------------------------------------------------------------------------------------------------------------|
-| 0.2.1 | Prior to version 0.2.1, in `match` parameter a match string was returned, not an array of match substrings. |
+| 版本              | 说明                                                                                                        |
+|-------------------|-------------------------------------------------------------------------------------------------------------|
+| PECL expect 0.2.1 | Prior to version 0.2.1, in `match` parameter a match string was returned, not an array of match substrings. |
 
 ### 范例
 

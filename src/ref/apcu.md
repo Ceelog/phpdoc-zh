@@ -115,10 +115,10 @@ Array of cached data (and meta-data) 或者在失败时返回 **`FALSE`**
 
 ### 更新日志
 
-| 版本   | 说明                                                                   |
-|--------|------------------------------------------------------------------------|
-| 3.0.11 | The `limited` parameter was introduced.                                |
-| 3.0.16 | The "*filehits*" option for the `cache_type` parameter was introduced. |
+| 版本             | 说明                                                                   |
+|------------------|------------------------------------------------------------------------|
+| PECL apcu 3.0.11 | The `limited` parameter was introduced.                                |
+| PECL apcu 3.0.16 | The "*filehits*" option for the `cache_type` parameter was introduced. |
 
 ### 范例
 
@@ -658,9 +658,9 @@ var_dump(apcu_fetch('foo'));
 
 ### 更新日志
 
-| 版本   | 说明                               |
-|--------|------------------------------------|
-| 3.0.17 | The `success` parameter was added. |
+| 版本             | 说明                               |
+|------------------|------------------------------------|
+| PECL apcu 3.0.17 | The `success` parameter was added. |
 
 ### 参见
 

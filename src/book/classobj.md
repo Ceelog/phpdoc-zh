@@ -14,10 +14,6 @@
 -   [类/对象 函数](/ref/classobj.html)
     -   [\_\_autoload](/ref/classobj.html#__autoload) —
         尝试加载未定义的类
-    -   [call\_user\_method\_array](/ref/classobj.html#call_user_method_array)
-        — 以参数列表的数组，调用用户方法
-    -   [call\_user\_method](/ref/classobj.html#call_user_method) —
-        对特定对象调用用户方法
     -   [class\_alias](/ref/classobj.html#class_alias) —
         为一个类创建别名
     -   [class\_exists](/ref/classobj.html#class_exists) —

@@ -1919,9 +1919,9 @@ Returns the number of bytes read.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                             |
-|-------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.6.0 | Renamed <span class="methodname">EventBuffer::appendFrom</span>(the old method name) to <span class="methodname">EventBuffer::appendFrom</span>. |
+| 版本             | 说明                                                                                                                                             |
+|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL event 1.6.0 | Renamed <span class="methodname">EventBuffer::appendFrom</span>(the old method name) to <span class="methodname">EventBuffer::appendFrom</span>. |
 
 ### 参见
 
@@ -2251,9 +2251,9 @@ Returns string read, or **`FALSE`** on failure.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                                                                                           |
-|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.6.0 | Renamed <span class="methodname">EventBuffer::read</span>(the old method name) to <span class="methodname">EventBuffer::read</span>. <span class="methodname">EventBuffer::read</span> now takes only `max_bytes` argument; returns string instead of integer. |
+| 版本             | 说明                                                                                                                                                                                                                                                           |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL event 1.6.0 | Renamed <span class="methodname">EventBuffer::read</span>(the old method name) to <span class="methodname">EventBuffer::read</span>. <span class="methodname">EventBuffer::read</span> now takes only `max_bytes` argument; returns string instead of integer. |
 
 ### 参见
 
@@ -3417,9 +3417,9 @@ objects connected to each other.
 
 ### 更新日志
 
-| 版本  | 说明                |
-|-------|---------------------|
-| 1.9.0 | Method made static. |
+| 版本             | 说明                |
+|------------------|---------------------|
+| PECL event 1.9.0 | Method made static. |
 
 EventBufferEvent::disable
 =========================
@@ -5324,9 +5324,9 @@ Returns <span class="classname">EventHttp</span> object.
 
 ### 更新日志
 
-| 版本  | 说明                           |
-|-------|--------------------------------|
-| 1.9.0 | OpenSSL support (`ctx`) added. |
+| 版本             | 说明                           |
+|------------------|--------------------------------|
+| PECL event 1.9.0 | OpenSSL support (`ctx`) added. |
 
 ### 范例
 
@@ -5947,9 +5947,9 @@ Returns <span class="classname">EventHttpConnection</span> object.
 
 ### 更新日志
 
-| 版本  | 说明                           |
-|-------|--------------------------------|
-| 1.9.0 | OpenSSL support (`ctx`) added. |
+| 版本             | 说明                           |
+|------------------|--------------------------------|
+| PECL event 1.9.0 | OpenSSL support (`ctx`) added. |
 
 EventHttpConnection::getBase
 ============================
@@ -7520,9 +7520,9 @@ the event connection listener.
 
 ### 更新日志
 
-| 版本  | 说明                                |
-|-------|-------------------------------------|
-| 1.5.0 | UNIX domain sockets' support added. |
+| 版本             | 说明                                |
+|------------------|-------------------------------------|
+| PECL event 1.5.0 | UNIX domain sockets' support added. |
 
 ### 范例
 

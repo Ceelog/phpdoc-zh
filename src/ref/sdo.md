@@ -637,9 +637,9 @@ None.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                   |
-|-------|--------------------------------------------------------------------------------------------------------|
-| 0.5.2 | Optional parameters `many`, `readOnly`, and `containment` deprecated in favour of the `options` array. |
+| 版本           | 说明                                                                                                   |
+|----------------|--------------------------------------------------------------------------------------------------------|
+| PECL sdo 0.5.2 | Optional parameters `many`, `readOnly`, and `containment` deprecated in favour of the `options` array. |
 
 ### 范例
 

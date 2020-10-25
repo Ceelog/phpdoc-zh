@@ -50,9 +50,9 @@ Returns **`TRUE`** on success.
 
 ### 更新日志
 
-| 版本  | 说明                                 |
-|-------|--------------------------------------|
-| 1.1.0 | The `callbacks` parameter was added. |
+| 版本            | 说明                                 |
+|-----------------|--------------------------------------|
+| PECL yaml 1.1.0 | The `callbacks` parameter was added. |
 
 ### 参见
 
@@ -106,9 +106,9 @@ Returns a YAML encoded <span class="type">string</span> on success.
 
 ### 更新日志
 
-| 版本  | 说明                                 |
-|-------|--------------------------------------|
-| 1.1.0 | The `callbacks` parameter was added. |
+| 版本            | 说明                                 |
+|-----------------|--------------------------------------|
+| PECL yaml 1.1.0 | The `callbacks` parameter was added. |
 
 ### 范例
 

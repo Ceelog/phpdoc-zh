@@ -2497,42 +2497,42 @@ parameter.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.8.0</td>
+<td>PECL mongodb 1.8.0</td>
 <td><p>Added the <em>"directConnection"</em>, <em>"tlsDisableCertificateRevocationCheck"</em>, and <em>"tlsDisableOCSPEndpointCheck"</em> URI options.</p>
 <p>Added the <em>"driver"</em> driver option.</p></td>
 </tr>
 <tr class="even">
-<td>1.7.0</td>
+<td>PECL mongodb 1.7.0</td>
 <td><p>Added the <em>"autoEncryption"</em> driver option.</p>
 <p>Specifying any SSL or TLS option via the <code class="parameter">driverOptions</code> parameter will now implicitly enable TLS, as is done for the corresponding URI options.</p></td>
 </tr>
 <tr class="odd">
-<td>1.6.0</td>
+<td>PECL mongodb 1.6.0</td>
 <td><p>Added the <em>"retryReads"</em>, <em>"tls"</em>, <em>"tlsAllowInvalidCertificates"</em>, <em>"tlsAllowInvalidHostnames"</em>, <em>"tlsCAFile"</em>, <em>"tlsCertificateKeyFile"</em>, <em>"tlsCertificateKeyFilePassword"</em>, and <em>"tlsInsecure"</em> URI options.</p>
 <p>The <em>"retryWrites"</em> URI option defaults to <strong><code>TRUE</code></strong>.</p>
 <p>Specifying any SSL or TLS URI option via the connection string or <code class="parameter">uriOptions</code> parameter will now implicitly enable TLS unless <em>ssl</em> or <em>tls</em> is <strong><code>FALSE</code></strong>. TLS is <em>not</em> implicitly enabled for any options in the <code class="parameter">driverOptions</code> parameter, which is unchanged from previous versions.</p></td>
 </tr>
 <tr class="even">
-<td>1.5.0</td>
+<td>PECL mongodb 1.5.0</td>
 <td><p><em>"wtimeoutMS"</em> is now always validated and applied to the write concern. Previously, the option was ignored if <em>"w"</em> was &lt;= 1, since the timeout only applies to replication.</p></td>
 </tr>
 <tr class="odd">
-<td>1.4.0</td>
+<td>PECL mongodb 1.4.0</td>
 <td><p>Added the <em>"compressors"</em>, <em>"retryWrites"</em>, and <em>"zlibCompressionLevel"</em> URI options.</p></td>
 </tr>
 <tr class="even">
-<td>1.3.0</td>
+<td>PECL mongodb 1.3.0</td>
 <td><p>The <code class="parameter">uriOptions</code> argument now accepts <em>"authMechanism"</em> and <em>"authMechanismProperties"</em> options. Previously, these options were only supported in the <code class="parameter">uri</code> argument.</p></td>
 </tr>
 <tr class="odd">
-<td>1.2.0</td>
+<td>PECL mongodb 1.2.0</td>
 <td><p>The <code class="parameter">uri</code> argument defaults to <em>"mongodb://127.0.0.1/"</em>. The default port remains <em>27017</em>.</p>
 <p>Added the <em>"appname"</em> URI option.</p>
 <p>Added the <em>"allow_invalid_hostname"</em>, <em>"ca_file"</em>, <em>"ca_dir"</em>, <em>"clr_file"</em>, <em>"pem_file"</em>, <em>"pem_pwd"</em>, and <em>"weak_cert_validation"</em> driver options.</p>
 <p>The PHP Streams API is no longer used for socket communication. The <em>"connectTimeoutMS"</em> URI option now defaults to 10 seconds instead of <a href="/filesystem/setup.html#" class="link">default_socket_timeout</a> in previous versions. Additionally, the driver no longer supports all <a href="/context/ssl.html" class="link">SSL context options</a> via the <em>"context"</em> driver option.</p></td>
 </tr>
 <tr class="even">
-<td>1.1.0</td>
+<td>PECL mongodb 1.1.0</td>
 <td><p>The <code class="parameter">uri</code> argument is optional and defaults to <em>"mongodb://localhost:27017/"</em>.</p></td>
 </tr>
 </tbody>
@@ -2800,11 +2800,11 @@ success.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                                                                                       |
-|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern.                                                                  |
-| 1.4.0 | The third parameter is now an `options` array. For backwards compatibility, this paramater will still accept a <span class="classname">MongoDB\\Driver\\WriteConcern</span> object.                                                                        |
-| 1.3.0 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> is now thrown if `bulk` does not contain any write operations. Previously, a <span class="classname">MongoDB\\Driver\\Exception\\BulkWriteException</span> was thrown. |
+| 版本               | 说明                                                                                                                                                                                                                                                       |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern.                                                                  |
+| PECL mongodb 1.4.0 | The third parameter is now an `options` array. For backwards compatibility, this paramater will still accept a <span class="classname">MongoDB\\Driver\\WriteConcern</span> object.                                                                        |
+| PECL mongodb 1.3.0 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> is now thrown if `bulk` does not contain any write operations. Previously, a <span class="classname">MongoDB\\Driver\\Exception\\BulkWriteException</span> was thrown. |
 
 ### 范例
 
@@ -2995,10 +2995,10 @@ success.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern. |
-| 1.4.0 | The third parameter is now an `options` array. For backwards compatibility, this paramater will still accept a <span class="classname">MongoDB\\Driver\\ReadPreference</span> object.     |
+| 版本               | 说明                                                                                                                                                                                      |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern. |
+| PECL mongodb 1.4.0 | The third parameter is now an `options` array. For backwards compatibility, this paramater will still accept a <span class="classname">MongoDB\\Driver\\ReadPreference</span> object.     |
 
 ### 范例
 
@@ -3195,9 +3195,9 @@ success.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                  |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.0 | The third parameter is now an `options` array. For backwards compatibility, this paramater will still accept a <span class="classname">MongoDB\\Driver\\ReadPreference</span> object. |
+| 版本               | 说明                                                                                                                                                                                  |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.4.0 | The third parameter is now an `options` array. For backwards compatibility, this paramater will still accept a <span class="classname">MongoDB\\Driver\\ReadPreference</span> object. |
 
 ### 范例
 
@@ -3510,9 +3510,9 @@ success.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern. |
+| 版本               | 说明                                                                                                                                                                                      |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern. |
 
 ### 参见
 
@@ -3616,9 +3616,9 @@ success.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern. |
+| 版本               | 说明                                                                                                                                                                                      |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern. |
 
 ### 参见
 
@@ -4133,10 +4133,10 @@ Returns a <span class="classname">MongoDB\\Driver\\Session</span>.
 
 ### 更新日志
 
-| 版本  | 说明                                                                       |
-|-------|----------------------------------------------------------------------------|
-| 1.6.0 | The *"maxCommitTimeMS"* option was added to *"defaultTransactionOptions"*. |
-| 1.5.0 | The *"defaultTransactionOptions"* option was added.                        |
+| 版本               | 说明                                                                       |
+|--------------------|----------------------------------------------------------------------------|
+| PECL mongodb 1.6.0 | The *"maxCommitTimeMS"* option was added to *"defaultTransactionOptions"*. |
+| PECL mongodb 1.5.0 | The *"defaultTransactionOptions"* option was added.                        |
 
 ### 参见
 
@@ -4340,9 +4340,9 @@ The complete command document, which will be sent to the server.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                    |
-|-------|-----------------------------------------------------------------------------------------|
-| 1.4.0 | Added a second `commandOptions` argument, which supports the *"maxAwaitTimeMS"* option. |
+| 版本               | 说明                                                                                    |
+|--------------------|-----------------------------------------------------------------------------------------|
+| PECL mongodb 1.4.0 | Added a second `commandOptions` argument, which supports the *"maxAwaitTimeMS"* option. |
 
 ### 范例
 
@@ -4732,26 +4732,26 @@ An empty predicate will match all documents in the collection.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.8.0</td>
+<td>PECL mongodb 1.8.0</td>
 <td><p>Added the <em>"allowDiskUse"</em> option.</p>
 <p>The <em>"oplogReplay"</em> option is deprecated.</p></td>
 </tr>
 <tr class="even">
-<td>1.5.0</td>
+<td>PECL mongodb 1.5.0</td>
 <td><p>The <em>"maxScan"</em> and <em>"snapshot"</em> options are deprecated.</p></td>
 </tr>
 <tr class="odd">
-<td>1.3.0</td>
+<td>PECL mongodb 1.3.0</td>
 <td><p>Added the <em>"maxAwaitTimeMS"</em> option.</p></td>
 </tr>
 <tr class="even">
-<td>1.2.0</td>
+<td>PECL mongodb 1.2.0</td>
 <td><p>Added the <em>"allowPartialResults"</em>, <em>"collation"</em>, <em>"comment"</em>, <em>"hint"</em>, <em>"max"</em>, <em>"maxScan"</em>, <em>"maxTimeMS"</em>, <em>"min"</em>, <em>"returnKey"</em>, <em>"showRecordId"</em>, and <em>"snapshot"</em> options.</p>
 <p>Renamed the <em>"partial"</em> option to <em>"allowPartialResults"</em>. For backwards compatibility, <em>"partial"</em> will still be read if <em>"allowPartialResults"</em> is not specified.</p>
 <p>Removed the <em>"slaveOk"</em> option, which is obsolete. For queries using the legacy wire protocol OP_QUERY, the driver will set the <em>slaveOk</em> bit as needed in accordance with the <a href="https://github.com/mongodb/specifications/blob/master/source/server-selection/server-selection.rst" class="link external">» Server Selection Specification</a>.</p></td>
 </tr>
 <tr class="odd">
-<td>1.1.0</td>
+<td>PECL mongodb 1.1.0</td>
 <td>Added the <em>"readConcern"</em> option.</td>
 </tr>
 </tbody>
@@ -5044,9 +5044,9 @@ class="methodname">MongoDB\\Driver\\Manager::executeBulkWrite</span>.
 
 ### 更新日志
 
-| 版本  | 说明                                           |
-|-------|------------------------------------------------|
-| 1.1.0 | Added the *"bypassDocumentValidation"* option. |
+| 版本               | 说明                                           |
+|--------------------|------------------------------------------------|
+| PECL mongodb 1.1.0 | Added the *"bypassDocumentValidation"* option. |
 
 ### 范例
 
@@ -5155,9 +5155,9 @@ class="classname">MongoDB\\Driver\\BulkWrite</span> object.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                                                                         |
-|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.2.0 | Returns the number of write operations added to the <span class="classname">MongoDB\\Driver\\BulkWrite</span> object. Earlier versions returned the expected number of client-to-server roundtrips required to execute all write operations. |
+| 版本               | 说明                                                                                                                                                                                                                                         |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.2.0 | Returns the number of write operations added to the <span class="classname">MongoDB\\Driver\\BulkWrite</span> object. Earlier versions returned the expected number of client-to-server roundtrips required to execute all write operations. |
 
 ### 范例
 
@@ -5273,10 +5273,10 @@ An empty predicate will match all documents in the collection.
 
 ### 更新日志
 
-| 版本  | 说明                            |
-|-------|---------------------------------|
-| 1.8.0 | Added the *"hint"* option.      |
-| 1.2.0 | Added the *"collation"* option. |
+| 版本               | 说明                            |
+|--------------------|---------------------------------|
+| PECL mongodb 1.8.0 | Added the *"hint"* option.      |
+| PECL mongodb 1.2.0 | Added the *"collation"* option. |
 
 ### 范例
 
@@ -5337,9 +5337,9 @@ insert will be returned.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                            |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.3.0 | The *\_id* of the inserted document is always returned. Previously, the method only returned a value if a <span class="classname">MongoDB\\BSON\\ObjectId</span> was generated. |
+| 版本               | 说明                                                                                                                                                                            |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.3.0 | The *\_id* of the inserted document is always returned. Previously, the method only returned a value if a <span class="classname">MongoDB\\BSON\\ObjectId</span> was generated. |
 
 ### 范例
 
@@ -5495,13 +5495,13 @@ replacement document (i.e. *only* *field:value* expressions), or an
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                         |
-|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.7.0 | Added the *"hint"* option.                                                                                                                                                                   |
-| 1.6.0 | The `newObj` parameter now accepts an aggregation pipeline. This feature requires MongoDB 4.2+ and will result in an exception at execution time if specified for an older server version.   |
-| 1.5.0 | Using the *"arrayFilters"* option will result in an exception at execution time if unsupported by the server. Previously, no exception would be thrown and the option may have been ignored. |
-| 1.4.0 | Added the *"arrayFilters"* option.                                                                                                                                                           |
-| 1.2.0 | Added the *"collation"* option.                                                                                                                                                              |
+| 版本               | 说明                                                                                                                                                                                         |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.7.0 | Added the *"hint"* option.                                                                                                                                                                   |
+| PECL mongodb 1.6.0 | The `newObj` parameter now accepts an aggregation pipeline. This feature requires MongoDB 4.2+ and will result in an exception at execution time if specified for an older server version.   |
+| PECL mongodb 1.5.0 | Using the *"arrayFilters"* option will result in an exception at execution time if unsupported by the server. Previously, no exception would be thrown and the option may have been ignored. |
+| PECL mongodb 1.4.0 | Added the *"arrayFilters"* option.                                                                                                                                                           |
+| PECL mongodb 1.2.0 | Added the *"collation"* option.                                                                                                                                                              |
 
 ### 范例
 
@@ -5612,10 +5612,10 @@ the definition of majority write concern.
 更新日志
 --------
 
-| 版本  | 说明                                                                       |
-|-------|----------------------------------------------------------------------------|
-| 1.7.0 | Implements <span class="interfacename">Serializable</span>.                |
-| 1.2.0 | Implements <span class="interfacename">MongoDB\\BSON\\Serializable</span>. |
+| 版本               | 说明                                                                       |
+|--------------------|----------------------------------------------------------------------------|
+| PECL mongodb 1.7.0 | Implements <span class="interfacename">Serializable</span>.                |
+| PECL mongodb 1.2.0 | Implements <span class="interfacename">MongoDB\\BSON\\Serializable</span>. |
 
 MongoDB\\Driver\\WriteConcern::bsonSerialize
 ============================================
@@ -5795,9 +5795,9 @@ Wait until mongod has applied the write to the journal.
 
 ### 更新日志
 
-| 版本  | 说明                                                |
-|-------|-----------------------------------------------------|
-| 1.7.0 | The `wTimeout` parameter now accepts 64-bit values. |
+| 版本               | 说明                                                |
+|--------------------|-----------------------------------------------------|
+| PECL mongodb 1.7.0 | The `wTimeout` parameter now accepts 64-bit values. |
 
 ### 范例
 
@@ -5958,9 +5958,9 @@ Returns the WriteConcern's "wtimeout" option.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                                                                                                  |
-|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.7.0 | On 32-bit systems, this method will return a <span class="classname">MongoDB\\BSON\\Int64</span> instance if the WriteConcern object was created with a *wTimeout* that exceeds the 32-bit range. On 64-bit systems, this method will always return an integer value. |
+| 版本               | 说明                                                                                                                                                                                                                                                                  |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.7.0 | On 32-bit systems, this method will return a <span class="classname">MongoDB\\BSON\\Int64</span> instance if the WriteConcern object was created with a *wTimeout* that exceeds the 32-bit range. On 64-bit systems, this method will always return an integer value. |
 
 ### 范例
 
@@ -6335,12 +6335,12 @@ enforce a max staleness value of less than 90 seconds.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.7.0</td>
+<td>PECL mongodb 1.7.0</td>
 <td><p>Added the <strong><code>MongoDB\Driver\ReadPreference::PRIMARY</code></strong>, <strong><code>MongoDB\Driver\ReadPreference::PRIMARY_PREFERRED</code></strong>, <strong><code>MongoDB\Driver\ReadPreference::SECONDARY</code></strong>, <strong><code>MongoDB\Driver\ReadPreference::SECONDARY_PREFERRED</code></strong>, <strong><code>MongoDB\Driver\ReadPreference::NEAREST</code></strong> constants.</p>
 <p>Implements <span class="interfacename">Serializable</span>.</p></td>
 </tr>
 <tr class="even">
-<td>1.2.0</td>
+<td>PECL mongodb 1.2.0</td>
 <td><p>Added the <strong><code>MongoDB\Driver\ReadPreference::NO_MAX_STALENESS</code></strong> and <strong><code>MongoDB\Driver\ReadPreference::SMALLEST_MAX_STALENESS_SECONDS</code></strong> constants.</p>
 <p>Implements <span class="interfacename">MongoDB\BSON\Serializable</span>.</p></td>
 </tr>
@@ -6584,11 +6584,11 @@ lowest network latency. This member may be a primary or secondary.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                  |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.8.0 | Added the *"hedge"* option.                                                                                                                                                           |
-| 1.3.0 | The `mode` argument now accepts a string value, which is consistent with the *"readPreference"* URI option for <span class="function">MongoDB\\Driver\\Manager::\_\_construct</span>. |
-| 1.2.0 | Added a third `options` argument, which supports the *"maxStalenessSeconds"* option.                                                                                                  |
+| 版本               | 说明                                                                                                                                                                                  |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.8.0 | Added the *"hedge"* option.                                                                                                                                                           |
+| PECL mongodb 1.3.0 | The `mode` argument now accepts a string value, which is consistent with the *"readPreference"* URI option for <span class="function">MongoDB\\Driver\\Manager::\_\_construct</span>. |
+| PECL mongodb 1.2.0 | Added a third `options` argument, which supports the *"maxStalenessSeconds"* option.                                                                                                  |
 
 ### 范例
 
@@ -7212,15 +7212,15 @@ WiredTiger storage engine and election protocol version 1.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.7.0</td>
+<td>PECL mongodb 1.7.0</td>
 <td>Implements <span class="interfacename">Serializable</span>.</td>
 </tr>
 <tr class="even">
-<td>1.4.0</td>
+<td>PECL mongodb 1.4.0</td>
 <td><p>Added the <strong><code>MongoDB\Driver\ReadConcern::AVAILABLE</code></strong> constant.</p></td>
 </tr>
 <tr class="odd">
-<td>1.2.0</td>
+<td>PECL mongodb 1.2.0</td>
 <td><p>Added the <strong><code>MongoDB\Driver\ReadConcern::LINEARIZABLE</code></strong> constant.</p>
 <p>Implements <span class="interfacename">MongoDB\BSON\Serializable</span>.</p></td>
 </tr>
@@ -7639,9 +7639,9 @@ class="type">array</span> `$typemap`</span> )
 更新日志
 --------
 
-| 版本  | 说明                                                                                                                                          |
-|-------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.6.0 | Implements <span class="interfacename">MongoDB\\Driver\\CursorInterface</span>, which extends <span class="interfacename">Traversable</span>. |
+| 版本               | 说明                                                                                                                                          |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.6.0 | Implements <span class="interfacename">MongoDB\\Driver\\CursorInterface</span>, which extends <span class="interfacename">Traversable</span>. |
 
 范例
 ----
@@ -8364,9 +8364,9 @@ class="type">string</span> `$serialized`</span> )
 更新日志
 --------
 
-| 版本  | 说明                                                        |
-|-------|-------------------------------------------------------------|
-| 1.7.0 | Implements <span class="interfacename">Serializable</span>. |
+| 版本               | 说明                                                        |
+|--------------------|-------------------------------------------------------------|
+| PECL mongodb 1.7.0 | Implements <span class="interfacename">Serializable</span>. |
 
 MongoDB\\Driver\\CursorId::\_\_construct
 ========================================
@@ -8845,11 +8845,11 @@ success.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                                                                                       |
-|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern.                                                                  |
-| 1.4.0 | The third parameter is now an `options` array. For backwards compatibility, this paramater will still accept a <span class="classname">MongoDB\\Driver\\WriteConcern</span> object.                                                                        |
-| 1.3.0 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> is now thrown if `bulk` does not contain any write operations. Previously, a <span class="classname">MongoDB\\Driver\\Exception\\BulkWriteException</span> was thrown. |
+| 版本               | 说明                                                                                                                                                                                                                                                       |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern.                                                                  |
+| PECL mongodb 1.4.0 | The third parameter is now an `options` array. For backwards compatibility, this paramater will still accept a <span class="classname">MongoDB\\Driver\\WriteConcern</span> object.                                                                        |
+| PECL mongodb 1.3.0 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> is now thrown if `bulk` does not contain any write operations. Previously, a <span class="classname">MongoDB\\Driver\\Exception\\BulkWriteException</span> was thrown. |
 
 ### 注释
 
@@ -8990,10 +8990,10 @@ success.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern. |
-| 1.4.0 | The third parameter is now an `options` array. For backwards compatibility, this paramater will still accept a <span class="classname">MongoDB\\Driver\\ReadPreference</span> object.     |
+| 版本               | 说明                                                                                                                                                                                      |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern. |
+| PECL mongodb 1.4.0 | The third parameter is now an `options` array. For backwards compatibility, this paramater will still accept a <span class="classname">MongoDB\\Driver\\ReadPreference</span> object.     |
 
 ### 注释
 
@@ -9078,9 +9078,9 @@ success.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                  |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.0 | The third parameter is now an `options` array. For backwards compatibility, this paramater will still accept a <span class="classname">MongoDB\\Driver\\ReadPreference</span> object. |
+| 版本               | 说明                                                                                                                                                                                  |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.4.0 | The third parameter is now an `options` array. For backwards compatibility, this paramater will still accept a <span class="classname">MongoDB\\Driver\\ReadPreference</span> object. |
 
 ### 参见
 
@@ -9321,9 +9321,9 @@ success.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern. |
+| 版本               | 说明                                                                                                                                                                                      |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern. |
 
 ### 注释
 
@@ -9434,9 +9434,9 @@ success.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern. |
+| 版本               | 说明                                                                                                                                                                                      |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.4.4 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> will be thrown if the *"session"* option is used in combination with an unacknowledged write concern. |
 
 ### 注释
 
@@ -11893,11 +11893,11 @@ The unserialized PHP value.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                                                                                                                                                                                                    |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.0 | If the input contains an unsupported, deprecated BSON type, the driver will now no longer log a warning to the debug log, but instead will create an object representing this type.                                                                                                                                                                                     |
-| 1.3.2 | <span class="classname">MongoDB\\Driver\\Exception\\UnexpectedValueException</span> is no longer thrown if the input contains an unsupported, deprecated BSON type. Such types will be ignored (as they were in versions before 1.3.0), although the driver will now log a warning to the debug log (see: <a href="/set/mongodb.html#" class="link">mongodb.debug</a>). |
-| 1.3.0 | <span class="classname">MongoDB\\Driver\\Exception\\UnexpectedValueException</span> is thrown if the input contains an unsupported, deprecated BSON type. Previously, such types were ignored.                                                                                                                                                                          |
+| 版本               | 说明                                                                                                                                                                                                                                                                                                                                                                    |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.4.0 | If the input contains an unsupported, deprecated BSON type, the driver will now no longer log a warning to the debug log, but instead will create an object representing this type.                                                                                                                                                                                     |
+| PECL mongodb 1.3.2 | <span class="classname">MongoDB\\Driver\\Exception\\UnexpectedValueException</span> is no longer thrown if the input contains an unsupported, deprecated BSON type. Such types will be ignored (as they were in versions before 1.3.0), although the driver will now log a warning to the debug log (see: <a href="/set/mongodb.html#" class="link">mongodb.debug</a>). |
+| PECL mongodb 1.3.0 | <span class="classname">MongoDB\\Driver\\Exception\\UnexpectedValueException</span> is thrown if the input contains an unsupported, deprecated BSON type. Previously, such types were ignored.                                                                                                                                                                          |
 
 ### 范例
 
@@ -12182,10 +12182,10 @@ anything.
 更新日志
 --------
 
-| 版本  | 说明                                                                                                                |
-|-------|---------------------------------------------------------------------------------------------------------------------|
-| 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\BinaryInterface</span>.                                       |
-| 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
+| 版本               | 说明                                                                                                                |
+|--------------------|---------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\BinaryInterface</span>.                                       |
+| PECL mongodb 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
 
 MongoDB\\BSON\\Binary::\_\_construct
 ====================================
@@ -12224,10 +12224,10 @@ Unsigned 8-bit integer denoting the data's type.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.3.0 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> is thrown if `type` is **`MongoDB\BSON\Binary::TYPE_UUID`** or **`MongoDB\BSON\Binary::TYPE_OLD_UUID`** and `data` is not exactly 16 bytes in length. |
-| 1.1.3 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> is thrown if `type` is not an unsigned 8-bit integer.                                                                                                 |
+| 版本               | 说明                                                                                                                                                                                                                                      |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.3.0 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> is thrown if `type` is **`MongoDB\BSON\Binary::TYPE_UUID`** or **`MongoDB\BSON\Binary::TYPE_OLD_UUID`** and `data` is not exactly 16 bytes in length. |
+| PECL mongodb 1.1.3 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> is thrown if `type` is not an unsigned 8-bit integer.                                                                                                 |
 
 ### 范例
 
@@ -12589,10 +12589,10 @@ class="type">string</span> `$serialized`</span> )
 更新日志
 --------
 
-| 版本  | 说明                                                                                                                |
-|-------|---------------------------------------------------------------------------------------------------------------------|
-| 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\Decimal128Interface</span>.                                   |
-| 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
+| 版本               | 说明                                                                                                                |
+|--------------------|---------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\Decimal128Interface</span>.                                   |
+| PECL mongodb 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
 
 MongoDB\\BSON\\Decimal128::\_\_construct
 ========================================
@@ -12904,10 +12904,10 @@ class="type">string</span> `$serialized`</span> )
 更新日志
 --------
 
-| 版本  | 说明                                                                                                                |
-|-------|---------------------------------------------------------------------------------------------------------------------|
-| 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\JavascriptInterface</span>.                                   |
-| 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
+| 版本               | 说明                                                                                                                |
+|--------------------|---------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\JavascriptInterface</span>.                                   |
+| PECL mongodb 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
 
 MongoDB\\BSON\\Javascript::\_\_construct
 ========================================
@@ -12941,9 +12941,9 @@ Javascript scope.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                       |
-|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.2.0 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> is thrown if `code` contains null bytes. Previously, values would be truncated at the first null byte. |
+| 版本               | 说明                                                                                                                                                                                       |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.2.0 | <span class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span> is thrown if `code` contains null bytes. Previously, values would be truncated at the first null byte. |
 
 ### 范例
 
@@ -13311,10 +13311,10 @@ class="type">string</span> `$serialized`</span> )
 更新日志
 --------
 
-| 版本  | 说明                                                                                                                |
-|-------|---------------------------------------------------------------------------------------------------------------------|
-| 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\MaxKeyInterface</span>.                                       |
-| 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
+| 版本               | 说明                                                                                                                |
+|--------------------|---------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\MaxKeyInterface</span>.                                       |
+| PECL mongodb 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
 
 MongoDB\\BSON\\MaxKey::\_\_construct
 ====================================
@@ -13525,10 +13525,10 @@ class="type">string</span> `$serialized`</span> )
 更新日志
 --------
 
-| 版本  | 说明                                                                                                                |
-|-------|---------------------------------------------------------------------------------------------------------------------|
-| 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\MinKeyInterface</span>.                                       |
-| 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
+| 版本               | 说明                                                                                                                |
+|--------------------|---------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\MinKeyInterface</span>.                                       |
+| PECL mongodb 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
 
 MongoDB\\BSON\\MinKey::\_\_construct
 ====================================
@@ -13785,12 +13785,12 @@ class="type">string</span> `$serialized`</span> )
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.3.0</td>
+<td>PECL mongodb 1.3.0</td>
 <td><p>Renamed from <em>MongoDB\BSON\ObjectID</em> to <em>MongoDB\BSON\ObjectId</em>.</p>
 <p>Implements <span class="interfacename">MongoDB\BSON\ObjectIdInterface</span>.</p></td>
 </tr>
 <tr class="even">
-<td>1.2.0</td>
+<td>PECL mongodb 1.2.0</td>
 <td>Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>.</td>
 </tr>
 </tbody>
@@ -14152,10 +14152,10 @@ class="type">string</span> `$serialized`</span> )
 更新日志
 --------
 
-| 版本  | 说明                                                                                                                |
-|-------|---------------------------------------------------------------------------------------------------------------------|
-| 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\RegexInterface</span>.                                        |
-| 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
+| 版本               | 说明                                                                                                                |
+|--------------------|---------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\RegexInterface</span>.                                        |
+| PECL mongodb 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
 
 MongoDB\\BSON\\Regex::\_\_construct
 ===================================
@@ -14208,7 +14208,7 @@ Characters in this argument will be sorted alphabetically.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.2.0</td>
+<td>PECL mongodb 1.2.0</td>
 <td><p>The <code class="parameter">flags</code> argument is optional and defaults to an empty string.</p>
 <p>Characters in the <code class="parameter">flags</code> argument will be sorted alphabetically when a Regex is constructed. Previously, the characters were stored in the order provided.</p>
 <p><span class="classname">MongoDB\Driver\Exception\InvalidArgumentException</span> is thrown if <code class="parameter">pattern</code> or <code class="parameter">flags</code> contain null bytes. Previously, values would be truncated at the first null byte.</p></td>
@@ -14579,10 +14579,10 @@ class="type">string</span> `$serialized`</span> )
 更新日志
 --------
 
-| 版本  | 说明                                                                                                                |
-|-------|---------------------------------------------------------------------------------------------------------------------|
-| 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\TimestampInterface</span>.                                    |
-| 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
+| 版本               | 说明                                                                                                                |
+|--------------------|---------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\TimestampInterface</span>.                                    |
+| PECL mongodb 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
 
 MongoDB\\BSON\\Timestamp::\_\_construct
 =======================================
@@ -14963,10 +14963,10 @@ class="type">string</span> `$serialized`</span> )
 更新日志
 --------
 
-| 版本  | 说明                                                                                                                |
-|-------|---------------------------------------------------------------------------------------------------------------------|
-| 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\UTCDateTimeInterface</span>.                                  |
-| 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
+| 版本               | 说明                                                                                                                |
+|--------------------|---------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.3.0 | Implements <span class="interfacename">MongoDB\\BSON\\UTCDateTimeInterface</span>.                                  |
+| PECL mongodb 1.2.0 | Implements <span class="interfacename">Serializable</span> and <span class="interfacename">JsonSerializable</span>. |
 
 MongoDB\\BSON\\UTCDateTime::\_\_construct
 =========================================
@@ -15011,9 +15011,9 @@ default.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                                                                                                                                                                                                                              |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.2.0 | The `milliseconds` argument is optional and defaults to **`NULL`** (i.e. current time). The argument also accepts a <span class="classname">DateTimeInterface</span>, which may be used to derive the number of milliseconds since the Unix epoch. Previously, only <span class="type">integer</span>, <span class="type">float</span>, and <span class="type">string</span> types were accepted. |
+| 版本               | 说明                                                                                                                                                                                                                                                                                                                                                                                              |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.2.0 | The `milliseconds` argument is optional and defaults to **`NULL`** (i.e. current time). The argument also accepts a <span class="classname">DateTimeInterface</span>, which may be used to derive the number of milliseconds since the Unix epoch. Previously, only <span class="type">integer</span>, <span class="type">float</span>, and <span class="type">string</span> types were accepted. |
 
 ### 范例
 
@@ -18948,9 +18948,9 @@ class="methodparam">void</span> )
 更新日志
 --------
 
-| 版本  | 说明                                                                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.5.0 | This class now extends <span class="classname">MongoDB\\Driver\\Exception\\ServerException</span> instead of <span class="classname">MongoDB\\Driver\\Exception\\RuntimeException</span>. |
+| 版本               | 说明                                                                                                                                                                                      |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.5.0 | This class now extends <span class="classname">MongoDB\\Driver\\Exception\\ServerException</span> instead of <span class="classname">MongoDB\\Driver\\Exception\\RuntimeException</span>. |
 
 简介
 ----
@@ -19220,9 +19220,9 @@ instead of interpreting this *errorLabels* property manually.
 更新日志
 --------
 
-| 版本  | 说明                                                                                                                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.6.0 | The <span class="methodname">MongoDB\\Driver\\Exception\\RuntimeException::hasErrorLabel</span> method and <a href="/set/mongodb.html#" class="link">MongoDB\Driver\Exception\RuntimeException::errorLabels</a> property have been added. |
+| 版本               | 说明                                                                                                                                                                                                                                      |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.6.0 | The <span class="methodname">MongoDB\\Driver\\Exception\\RuntimeException::hasErrorLabel</span> method and <a href="/set/mongodb.html#" class="link">MongoDB\Driver\Exception\RuntimeException::errorLabels</a> property have been added. |
 
 MongoDB\\Driver\\Exception\\RuntimeException::hasErrorLabel
 ===========================================================
@@ -19550,9 +19550,9 @@ associated with the failed write operation.
 更新日志
 --------
 
-| 版本  | 说明                                                                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.5.0 | This class now extends <span class="classname">MongoDB\\Driver\\Exception\\ServerException</span> instead of <span class="classname">MongoDB\\Driver\\Exception\\RuntimeException</span>. |
+| 版本               | 说明                                                                                                                                                                                      |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.5.0 | This class now extends <span class="classname">MongoDB\\Driver\\Exception\\ServerException</span> instead of <span class="classname">MongoDB\\Driver\\Exception\\RuntimeException</span>. |
 
 MongoDB\\Driver\\Exception\\WriteException::getWriteResult
 ==========================================================

@@ -1222,9 +1222,9 @@ values.
 
 ### 更新日志
 
-| PECL/sphinx 版本 | 说明                                                                                          |
-|------------------|-----------------------------------------------------------------------------------------------|
-| 1.0.3            | Added SphinxClient::setOverride(), available only if compiled with libsphinxclient \>= 0.9.9. |
+| PECL/sphinx 版本  | 说明                                                                                          |
+|-------------------|-----------------------------------------------------------------------------------------------|
+| PECL sphinx 1.0.3 | Added SphinxClient::setOverride(), available only if compiled with libsphinxclient \>= 0.9.9. |
 
 ### 返回值
 
@@ -1318,9 +1318,9 @@ SQL-like clause.
 
 ### 更新日志
 
-| PECL/sphinx 版本 | 说明                                                                                        |
-|------------------|---------------------------------------------------------------------------------------------|
-| 1.0.1            | Added SphinxClient::setSelect(), available only if compiled with libsphinxclient \>= 0.9.9. |
+| PECL/sphinx 版本  | 说明                                                                                        |
+|-------------------|---------------------------------------------------------------------------------------------|
+| PECL sphinx 1.0.1 | Added SphinxClient::setSelect(), available only if compiled with libsphinxclient \>= 0.9.9. |
 
 ### 返回值
 
@@ -1412,9 +1412,9 @@ value pairs.
 
 ### 更新日志
 
-| PECL/sphinx 版本 | 说明                                                                                     |
-|------------------|------------------------------------------------------------------------------------------|
-| 1.0.3            | Added SphinxClient::status(), available only if compiled with libsphinxclient \>= 0.9.9. |
+| PECL/sphinx 版本  | 说明                                                                                     |
+|-------------------|------------------------------------------------------------------------------------------|
+| PECL sphinx 1.0.3 | Added SphinxClient::status(), available only if compiled with libsphinxclient \>= 0.9.9. |
 
 ### 返回值
 

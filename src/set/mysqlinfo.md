@@ -895,12 +895,6 @@ MySQL增强版扩展
     mysqli异常类
 -   [别名和过时的 Mysqli
     函数](/set/mysqlinfo.html#别名和过时的%20Mysqli%20函数)
-    -   [mysqli\_bind\_param](/set/mysqlinfo.html#mysqli_bind_param) —
-        mysqli\_stmt\_bind\_param 的别名
-    -   [mysqli\_bind\_result](/set/mysqlinfo.html#mysqli_bind_result) —
-        mysqli\_stmt\_bind\_result 的别名
-    -   [mysqli\_client\_encoding](/set/mysqlinfo.html#mysqli_client_encoding)
-        — mysqli\_character\_set\_name 的别名
     -   [mysqli\_connect](/set/mysqlinfo.html#mysqli_connect) — 别名
         mysqli::\_\_construct
     -   [mysqli::disable\_reads\_from\_master](/set/mysqlinfo.html#mysqli::disable_reads_from_master)
@@ -915,28 +909,20 @@ MySQL增强版扩展
         — 别名 mysqli\_real\_escape\_string
     -   [mysqli\_execute](/set/mysqlinfo.html#mysqli_execute) —
         mysqli\_stmt\_execute 的别名
-    -   [mysqli\_fetch](/set/mysqlinfo.html#mysqli_fetch) —
-        mysqli\_stmt\_fetch 的别名。
     -   [mysqli\_get\_cache\_stats](/set/mysqlinfo.html#mysqli_get_cache_stats)
         — 返回客户端Zval缓存统计信息
     -   [mysqli\_get\_client\_stats](/set/mysqlinfo.html#mysqli_get_client_stats)
         — 返回客户端进程统计信息
     -   [mysqli\_get\_links\_stats](/set/mysqlinfo.html#mysqli_get_links_stats)
         — 返回打开和缓存的链接相关信息
-    -   [mysqli\_get\_metadata](/set/mysqlinfo.html#mysqli_get_metadata)
-        — mysqli\_stmt\_result\_metadata 的别名
     -   [mysqli\_master\_query](/set/mysqlinfo.html#mysqli_master_query)
         — 在主/从机制中强制在主机中执行一个查询
-    -   [mysqli\_param\_count](/set/mysqlinfo.html#mysqli_param_count) —
-        mysqli\_stmt\_param\_count 的别名
     -   [mysqli\_report](/set/mysqlinfo.html#mysqli_report) — 别名
         mysqli\_driver-\>report\_mode
     -   [mysqli\_rpl\_parse\_enabled](/set/mysqlinfo.html#mysqli_rpl_parse_enabled)
         — 检查是否开启了 RPL 解析
     -   [mysqli\_rpl\_probe](/set/mysqlinfo.html#mysqli_rpl_probe) — RPL
         探测
-    -   [mysqli\_send\_long\_data](/set/mysqlinfo.html#mysqli_send_long_data)
-        — mysqli\_stmt\_send\_long\_data 的别名
     -   [mysqli::set\_opt](/set/mysqlinfo.html#mysqli::set_opt) — Alias
         of mysqli\_options
     -   [mysqli\_slave\_query](/set/mysqlinfo.html#mysqli_slave_query) —
@@ -15415,60 +15401,6 @@ class="ooclass"> <span class="modifier">extends</span>
 `sqlstate`  
 出现错误的sql状态
 
-mysqli\_bind\_param
-===================
-
-<span class="function">mysqli\_stmt\_bind\_param</span> 的别名
-
-### 说明
-
-此函数是该函数的别名： 这个函数是 <span
-class="function">mysqli\_stmt\_bind\_param</span> 的一个别名。
-
-**Warning**
-
-本函数已自 PHP 5.3.0 起*废弃*并将自 PHP 5.4.0 起*移除*。
-
-### 参见
-
--   <span class="function">mysqli\_stmt\_bind\_param</span>
-
-mysqli\_bind\_result
-====================
-
-<span class="function">mysqli\_stmt\_bind\_result</span> 的别名
-
-### 说明
-
-此函数是该函数的别名： 此函数是 <span
-class="function">mysqli\_stmt\_bind\_result</span> 的一个别名。
-
-**Warning**
-
-本函数已自 PHP 5.3.0 起*废弃*并将自 PHP 5.4.0 起*移除*。
-
-### 参见
-
--   <span class="function">mysqli\_stmt\_bind\_result</span>
-
-mysqli\_client\_encoding
-========================
-
-<span class="function">mysqli\_character\_set\_name</span> 的别名
-
-### 说明
-
-此函数是该函数的别名： 这个函数是 <span
-class="function">mysqli\_character\_set\_name</span> 的一个别名。
-
-**Warning**
-
-本函数已自 PHP 5.3.0 起*废弃*并将自 PHP 5.4.0 起*移除*。
-
-### 参见
-
--   <span class="function">mysqli\_real\_escape\_string</span>
-
 mysqli\_connect
 ===============
 
@@ -15627,24 +15559,6 @@ class="function">mysqli\_stmt\_execute</span> 的一个别名。
 ### 参见
 
 -   <span class="function">mysqli\_stmt\_execute</span>
-
-mysqli\_fetch
-=============
-
-<span class="function">mysqli\_stmt\_fetch</span> 的别名。
-
-### 说明
-
-此函数是该函数的别名： 这个函数是 <span
-class="function">mysqli\_stmt\_fetch</span> 的一个别名。
-
-**Warning**
-
-本函数已自 PHP 5.3.0 起*废弃*并将自 PHP 5.4.0 起*移除*。
-
-### 参见
-
--   <span class="function">mysqli\_stmt\_fetch</span>
 
 mysqli\_get\_cache\_stats
 =========================
@@ -15874,24 +15788,6 @@ class="methodparam">void</span> )
 `cached_plinks`  
 类型 <span class="type">integer</span> 不活跃的持久链接数
 
-mysqli\_get\_metadata
-=====================
-
-<span class="function">mysqli\_stmt\_result\_metadata</span> 的别名
-
-### 说明
-
-此函数是该函数的别名： 这个函数是 <span
-class="function">mysqli\_stmt\_result\_metadata</span> 的一个别名。
-
-**Warning**
-
-本函数已自 PHP 5.3.0 起*废弃*并将自 PHP 5.4.0 起*移除*。
-
-### 参见
-
--   <span class="function">mysqli\_stmt\_result\_metadata</span>
-
 mysqli\_master\_query
 =====================
 
@@ -15912,24 +15808,6 @@ class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
 **Warning**
 
 自 PHP 5.3.0 起，已经*废弃*并*移除*此函数。
-
-mysqli\_param\_count
-====================
-
-<span class="function">mysqli\_stmt\_param\_count</span> 的别名
-
-### 说明
-
-此函数是该函数的别名： 这个函数是 <span
-class="function">mysqli\_stmt\_param\_count</span> 的一个别名。
-
-**Warning**
-
-本函数已自 PHP 5.3.0 起*废弃*并将自 PHP 5.4.0 起*移除*。
-
-### 参见
-
--   <span class="function">mysqli\_stmt\_param\_count</span>
 
 mysqli\_report
 ==============
@@ -15980,24 +15858,6 @@ class="methodparam"><span class="type">mysqli</span> `$link`</span> )
 
 自 PHP 5.3.0 起，已经*废弃*并*移除*此函数。
 
-mysqli\_send\_long\_data
-========================
-
-<span class="function">mysqli\_stmt\_send\_long\_data</span> 的别名
-
-### 说明
-
-此函数是该函数的别名： 这个函数是 <span
-class="function">mysqli\_stmt\_send\_long\_data</span> 的一个别名。
-
-**Warning**
-
-本函数已自 PHP 5.3.0 起*废弃*并将自 PHP 5.4.0 起*移除*。
-
-### 参见
-
--   <span class="function">mysqli\_stmt\_send\_long\_data</span>
-
 mysqli::set\_opt
 ================
 
@@ -16034,12 +15894,6 @@ class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
 
 **目录**
 
--   [mysqli\_bind\_param](/set/mysqlinfo.html#mysqli_bind_param) —
-    mysqli\_stmt\_bind\_param 的别名
--   [mysqli\_bind\_result](/set/mysqlinfo.html#mysqli_bind_result) —
-    mysqli\_stmt\_bind\_result 的别名
--   [mysqli\_client\_encoding](/set/mysqlinfo.html#mysqli_client_encoding)
-    — mysqli\_character\_set\_name 的别名
 -   [mysqli\_connect](/set/mysqlinfo.html#mysqli_connect) — 别名
     mysqli::\_\_construct
 -   [mysqli::disable\_reads\_from\_master](/set/mysqlinfo.html#mysqli::disable_reads_from_master)
@@ -16054,28 +15908,20 @@ class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
     别名 mysqli\_real\_escape\_string
 -   [mysqli\_execute](/set/mysqlinfo.html#mysqli_execute) —
     mysqli\_stmt\_execute 的别名
--   [mysqli\_fetch](/set/mysqlinfo.html#mysqli_fetch) —
-    mysqli\_stmt\_fetch 的别名。
 -   [mysqli\_get\_cache\_stats](/set/mysqlinfo.html#mysqli_get_cache_stats)
     — 返回客户端Zval缓存统计信息
 -   [mysqli\_get\_client\_stats](/set/mysqlinfo.html#mysqli_get_client_stats)
     — 返回客户端进程统计信息
 -   [mysqli\_get\_links\_stats](/set/mysqlinfo.html#mysqli_get_links_stats)
     — 返回打开和缓存的链接相关信息
--   [mysqli\_get\_metadata](/set/mysqlinfo.html#mysqli_get_metadata) —
-    mysqli\_stmt\_result\_metadata 的别名
 -   [mysqli\_master\_query](/set/mysqlinfo.html#mysqli_master_query) —
     在主/从机制中强制在主机中执行一个查询
--   [mysqli\_param\_count](/set/mysqlinfo.html#mysqli_param_count) —
-    mysqli\_stmt\_param\_count 的别名
 -   [mysqli\_report](/set/mysqlinfo.html#mysqli_report) — 别名
     mysqli\_driver-\>report\_mode
 -   [mysqli\_rpl\_parse\_enabled](/set/mysqlinfo.html#mysqli_rpl_parse_enabled)
     — 检查是否开启了 RPL 解析
 -   [mysqli\_rpl\_probe](/set/mysqlinfo.html#mysqli_rpl_probe) — RPL
     探测
--   [mysqli\_send\_long\_data](/set/mysqlinfo.html#mysqli_send_long_data)
-    — mysqli\_stmt\_send\_long\_data 的别名
 -   [mysqli::set\_opt](/set/mysqlinfo.html#mysqli::set_opt) — Alias of
     mysqli\_options
 -   [mysqli\_slave\_query](/set/mysqlinfo.html#mysqli_slave_query) —
