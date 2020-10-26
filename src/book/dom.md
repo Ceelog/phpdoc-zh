@@ -1970,14 +1970,17 @@ the only way of manipulating XML document encoding in this
 implementation.
 
 `formatOutput`  
-Nicely formats output with indentation and extra space.
+Nicely formats output with indentation and extra space. This has no
+effect if the document was loaded with `preserveWhitespace` enabled.
 
 `implementation`  
 The <span class="classname">DOMImplementation</span> object that handles
 this document.
 
 `preserveWhiteSpace`  
-Do not remove redundant white space. Default to **`TRUE`**.
+Do not remove redundant white space. Default to **`TRUE`**. Setting this
+to **`FALSE`** has the same effect as passing **`LIBXML_NOBLANKS`** as
+`option` to <span class="methodname">DOMDocument::load</span> etc.
 
 `recover`  
 *Proprietary*. Enables recovery mode, i.e. trying to parse non-well
