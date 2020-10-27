@@ -1730,7 +1730,8 @@ priority exceptional ("out-of-band") data arriving.
 >
 > When <span class="function">stream\_select</span> returns, the arrays
 > `read`, `write` and `except` are modified to indicate which stream
-> resource(s) actually changed status.
+> resource(s) actually changed status. The original keys of the <span
+> class="type">array</span>s are preserved.
 
 `tv_sec`  
 The `tv_sec` and `tv_usec` together form the *timeout* parameter,

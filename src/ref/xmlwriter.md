@@ -706,22 +706,6 @@ The indentation string.
 >
 > The indent is reset when an xmlwriter is opened.
 
-> **Note**: <span
-> class="simpara">因为是一个语言构造器而不是一个函数，不能被
-> <a href="/functions/variable-functions.html" class="link">可变函数</a>
-> 调用。 </span>
-
-**Warning**
-
-此函数（还）不能安全地适用于二进制对象！
-
-> **Note**: **register\_globals 重要说明：**  
->
-> 自 PHP 4.2.0 起，PHP 指令
-> <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>
-> 的默认值为 *off*。PHP 社区鼓励开发者不要依赖于此指令,
-> 用其他手段替代，例如<a href="/language/variables/predefined.html" class="link">superglobals</a>。
-
 ### 参见
 
 -   <span class="methodname">XMLWriter::setIndent</span>
@@ -767,27 +751,41 @@ Whether indentation is enabled.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 范例
+
+**示例 \#1 <span class="methodname">XMLWriter::setIndent</span> and
+mixed Content**
+
+Enabling indentation is not suitable for mixed content, because the
+indent string is also inserted before inline elements.
+
+``` php
+<?php
+$writer = new XMLWriter();
+$writer->openMemory();
+$writer->setIndent(2);
+$writer->startDocument();
+$writer->startElement('p');
+$writer->text('before');
+$writer->writeElement('a', 'element');
+$writer->text('after');
+$writer->endElement();
+$writer->endDocument();
+echo $writer->outputMemory();
+?>
+```
+
+以上例程会输出：
+
+    <?xml version="1.0"?>
+    <p>before <a>element</a>
+    after</p>
+
 ### 注释
 
 > **Note**:
 >
 > The indent is reset when an xmlwriter is opened.
-
-> **Note**: <span
-> class="simpara">因为是一个语言构造器而不是一个函数，不能被
-> <a href="/functions/variable-functions.html" class="link">可变函数</a>
-> 调用。 </span>
-
-**Warning**
-
-此函数（还）不能安全地适用于二进制对象！
-
-> **Note**: **register\_globals 重要说明：**  
->
-> 自 PHP 4.2.0 起，PHP 指令
-> <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>
-> 的默认值为 *off*。PHP 社区鼓励开发者不要依赖于此指令,
-> 用其他手段替代，例如<a href="/language/variables/predefined.html" class="link">superglobals</a>。
 
 ### 参见
 
