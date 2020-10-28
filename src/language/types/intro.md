@@ -1,7 +1,7 @@
 简介
 ----
 
-PHP 支持 9 种原始数据类型。
+PHP 支持 10 种原始数据类型。
 
 四种标量类型：
 
@@ -15,13 +15,15 @@ PHP 支持 9 种原始数据类型。
 -   <span class="simpara"> <span class="type">string</span>（字符串）
     </span>
 
-三种复合类型：
+四种复合类型：
 
 -   <span class="simpara"> <span class="type">array</span>（数组）
     </span>
 -   <span class="simpara"> <span class="type">object</span>（对象）
     </span>
 -   <span class="simpara"> <span class="type">callable</span>（可调用）
+    </span>
+-   <span class="simpara"> <span class="type">iterable</span>（可迭代）
     </span>
 
 最后是两种特殊类型：
@@ -37,9 +39,6 @@ PHP 支持 9 种原始数据类型。
     </span>
 -   <span class="simpara"> <span class="type">number</span>（数字类型）
     </span>
--   <span class="simpara"> <span
-    class="type">callback</span>（回调类型，又称为 <span
-    class="type">callable</span>） </span>
 -   <span class="simpara"> <span class="type">array\|object</span>（数组
     \| 对象类型） </span>
 -   <span class="simpara"> <span class="type">void</span> （无类型）

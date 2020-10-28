@@ -75,6 +75,7 @@
     * [Float 浮点型](language/types/float.md)
     * [String 字符串](language/types/string.md)
     * [Array 数组](language/types/array.md)
+    * [Iterables](language/types/iterable.md)
     * [Object 对象](language/types/object.md)
     * [Resource 资源类型](language/types/resource.md)
     * [NULL](language/types/null.md)
