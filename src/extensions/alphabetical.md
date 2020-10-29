@@ -220,8 +220,6 @@
 -   <span
     class="simpara"><a href="/book/pcre.html" class="xref">PCRE</a></span>
 -   <span
-    class="simpara"><a href="/book/pdf.html" class="xref">PDF</a></span>
--   <span
     class="simpara"><a href="/book/pdo.html" class="xref">PDO</a></span>
 -   <span
     class="simpara"><a href="/book/pdo.html#CUBRID%20(PDO)" class="xref"></a></span>

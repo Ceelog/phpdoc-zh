@@ -16,7 +16,7 @@ Extension Community Library (PECL), at
 
 | Extension                                                                | Alternative/Status                                                                                                                      |
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| ext/cpdf                                                                 | <a href="/ref/pdf.html" class="link">pecl/pdflib</a>                                                                                    |
+| ext/cpdf                                                                 | pecl/pdflib                                                                                                                             |
 | <a href="/book/dbx.html#dbx%20函数" class="link">ext/dbx</a>             | pecl/dbx                                                                                                                                |
 | <a href="/ref/dio.html" class="link">ext/dio</a>                         | pecl/dio                                                                                                                                |
 | ext/fam                                                                  | Not actively maintained                                                                                                                 |

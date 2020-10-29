@@ -289,7 +289,7 @@ class="function">ini\_set</span>来更改这项设置。不管
 
 <!-- -->
 
-**怎样才能不用非免费的商业库（例如 <a href="/ref/pdf.html" class="link">PDFLib</a>） 来生成 PDF 文档？我想要个免费的并且不需要再连接别的 PDF 库。**  
+**怎样才能不用非免费的商业库（例如 PDFLib） 来生成 PDF 文档？我想要个免费的并且不需要再连接别的 PDF 库。**  
 有几个选择，例如
 <a href="http://www.fpdf.org/" class="link external">» FPDF</a> 和
 <a href="http://www.tcpdf.org/" class="link external">» TCPDF</a> 模块。

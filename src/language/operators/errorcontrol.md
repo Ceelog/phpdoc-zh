@@ -9,16 +9,15 @@ PHP 支持一个错误控制运算符：@。当将其放置在一个 PHP
 <span class="function">error\_reporting</span>，而该函数在出错语句前有 @
 时将返回 0。
 
-如果激活了
-<a href="/errorfunc/setup.html#" class="link"><strong>track_errors</strong></a>
-特性，表达式所产生的任何错误信息都被存放在变量 `$php_errormsg`
-中。此变量在每次出错时都会被覆盖，所以如果想用它的话就要尽早检查。
+<span class="function">get\_error\_last</span> 返回数组中的 *"message"*
+元素储存了表达式产生的任意错误信息。
+此函数的返回结果会随着每次错误的发生而相应变化，所以需要尽早检查。
 
 ``` php
 <?php
 /* Intentional file error */
 $my_file = @file ('non_existent_file') or
-    die ("Failed opening file: error was '$php_errormsg'");
+    die ("Failed opening file: error was '" . error_get_last()['message'] . "'");
 
 // this works for any expression, not just functions:
 $value = @$cache[$key];

@@ -56,7 +56,6 @@ print "$b\n"; // 也输出 4，因为 $b 是 $a 的引用，因此也被改变
 ?>
 ```
 
-The
 <a href="/language/oop5/basic.html#language.oop5.basic.new" class="link">new</a>
 运算符自动返回一个引用，因此在 PHP 7.0.0及之后的版本中禁止对
 <a href="/language/oop5/basic.html#language.oop5.basic.new" class="link">new</a>
@@ -86,3 +85,35 @@ $o = &new C;
     Strict Standards: Assigning the return value of new by reference is deprecated in …
 
 有关引用更多信息参见本手册中<a href="/language/references.html" class="link">引用的解释</a>一章。
+
+### 算术赋值运算符
+
+| 例子      | 等同于        | 操作 |
+|-----------|---------------|------|
+| $a += $b  | $a = $a + b   | 加法 |
+| $a -= $b  | $a = $a - $b  | 减法 |
+| $a \*= $b | $a = $a \* $b | 乘法 |
+| $a /= $b  | $a = $a / $b  | 除法 |
+| $a %= $b  | $a = $a % $b  | 取模 |
+
+### 位赋值运算符
+
+| 例子        | 等同于          | 操作     |
+|-------------|-----------------|----------|
+| $a &= $b    | $a = $a & $b    | 按位与   |
+| $a \|= $b   | $a = $a \| $b   | 按位或   |
+| $a ^= $b    | $a = $a ^ $b    | 按位异或 |
+| $a \<\<= $b | $a = $a \<\< $b | 左移     |
+| $a \>\>= $b | $a = $a \>\> $b | 右移     |
+
+### 其他赋值运算符
+
+| 例子      | 等同于        | 操作       |
+|-----------|---------------|------------|
+| $a .= $b  | $a = $a . $b  | 字符串拼接 |
+| $a ??= $b | $a = $a ?? $b | NULL 合并  |
+
+可参见手册中
+<a href="/language/operators/arithmetic.html" class="link">算术运算符</a>、<a href="/language/operators/bitwise.html" class="link">位运算符</a>、
+<a href="/language/operators/string.html" class="link">字符串运算符</a>、
+<a href="/language/operators/comparison.html#language.operators.comparison.coalesce" class="link">NULL 合并运算符</a>章节。

@@ -751,14 +751,10 @@ MySQL增强版扩展
         — 从当前事务的保存点中移除一个命名保存点
     -   [mysqli::rollback](/set/mysqlinfo.html#mysqli::rollback) —
         回退当前事务
-    -   [mysqli::rpl\_query\_type](/set/mysqlinfo.html#mysqli::rpl_query_type)
-        — 返回 RPL 查询类型
     -   [mysqli::savepoint](/set/mysqlinfo.html#mysqli::savepoint) —
         在当前事务中增加一个命名保存点
     -   [mysqli::select\_db](/set/mysqlinfo.html#mysqli::select_db) —
         选择用于数据库查询的默认数据库
-    -   [mysqli::send\_query](/set/mysqlinfo.html#mysqli::send_query) —
-        发送请求并返回结果
     -   [mysqli::set\_charset](/set/mysqlinfo.html#mysqli::set_charset)
         — 设置默认字符编码
     -   [mysqli::set\_local\_infile\_default](/set/mysqlinfo.html#mysqli::set_local_infile_default)
@@ -897,14 +893,6 @@ MySQL增强版扩展
     函数](/set/mysqlinfo.html#别名和过时的%20Mysqli%20函数)
     -   [mysqli\_connect](/set/mysqlinfo.html#mysqli_connect) — 别名
         mysqli::\_\_construct
-    -   [mysqli::disable\_reads\_from\_master](/set/mysqlinfo.html#mysqli::disable_reads_from_master)
-        — 在主从服务器结构中，禁用从主机读取数据
-    -   [mysqli\_disable\_rpl\_parse](/set/mysqlinfo.html#mysqli_disable_rpl_parse)
-        — 禁用RPL解析
-    -   [mysqli\_enable\_reads\_from\_master](/set/mysqlinfo.html#mysqli_enable_reads_from_master)
-        — 开启从主机读取
-    -   [mysqli\_enable\_rpl\_parse](/set/mysqlinfo.html#mysqli_enable_rpl_parse)
-        — 开启RPL解析
     -   [mysqli\_escape\_string](/set/mysqlinfo.html#mysqli_escape_string)
         — 别名 mysqli\_real\_escape\_string
     -   [mysqli\_execute](/set/mysqlinfo.html#mysqli_execute) —
@@ -915,18 +903,10 @@ MySQL增强版扩展
         — 返回客户端进程统计信息
     -   [mysqli\_get\_links\_stats](/set/mysqlinfo.html#mysqli_get_links_stats)
         — 返回打开和缓存的链接相关信息
-    -   [mysqli\_master\_query](/set/mysqlinfo.html#mysqli_master_query)
-        — 在主/从机制中强制在主机中执行一个查询
     -   [mysqli\_report](/set/mysqlinfo.html#mysqli_report) — 别名
         mysqli\_driver-\>report\_mode
-    -   [mysqli\_rpl\_parse\_enabled](/set/mysqlinfo.html#mysqli_rpl_parse_enabled)
-        — 检查是否开启了 RPL 解析
-    -   [mysqli\_rpl\_probe](/set/mysqlinfo.html#mysqli_rpl_probe) — RPL
-        探测
     -   [mysqli::set\_opt](/set/mysqlinfo.html#mysqli::set_opt) — Alias
         of mysqli\_options
-    -   [mysqli\_slave\_query](/set/mysqlinfo.html#mysqli_slave_query) —
-        在主/从机制中强制在从机上执行一个查询
 
 *mysqli*扩展允许我们访问MySQL 4.1及以上版本提供的功能。关于MySQL数据库
 服务端的信息请参阅<a href="http://www.mysql.com/" class="link external">» http://www.mysql.com/</a>。
@@ -4288,10 +4268,6 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 <span class="type">bool</span> <span class="methodname">rollback</span>
 ( <span class="methodparam">void</span> )
 
-<span class="type">int</span> <span
-class="methodname">rpl\_query\_type</span> ( <span
-class="methodparam"><span class="type">string</span> `$query`</span> )
-
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">savepoint</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
@@ -4299,10 +4275,6 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 <span class="type">bool</span> <span
 class="methodname">select\_db</span> ( <span class="methodparam"><span
 class="type">string</span> `$dbname`</span> )
-
-<span class="type">bool</span> <span
-class="methodname">send\_query</span> ( <span class="methodparam"><span
-class="type">string</span> `$query`</span> )
 
 <span class="type">bool</span> <span
 class="methodname">set\_charset</span> ( <span class="methodparam"><span
@@ -8743,43 +8715,6 @@ mysqli_close($link);
 -   <span class="function">mysqli\_commit</span>
 -   <span class="function">mysqli\_autocommit</span>
 
-mysqli::rpl\_query\_type
-========================
-
-mysqli\_rpl\_query\_type
-========================
-
-返回 RPL 查询类型
-
-### 说明
-
-面向对象风格
-
-<span class="type">int</span> <span
-class="methodname">mysqli::rpl\_query\_type</span> ( <span
-class="methodparam"><span class="type">string</span> `$query`</span> )
-
-过程化风格
-
-<span class="type">int</span> <span
-class="methodname">mysqli\_rpl\_query\_type</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$query`</span> )
-
-返回 **`MYSQLI_RPL_MASTER`**， **`MYSQLI_RPL_SLAVE`** 或
-**`MYSQLI_RPL_ADMIN`**，具体的返回值取决于查询的类型。
-*INSERT*，*UPDATE* 以及类似的操作属于 *主机* 查询，*SELECT* 属于
-*从机*查询，*FLUSH* 和 *REPAIR* 以及类似的操作属于 *管理* 查询。
-
-**Warning**
-
-本函数还未编写文档，仅有参数列表。
-
-**Warning**
-
-自 PHP 5.3.0 起，已经*废弃*并*移除*此函数。
-
 mysqli::savepoint
 =================
 
@@ -8947,38 +8882,6 @@ mysqli_close($link);
 
 -   <span class="function">mysqli\_connect</span>
 -   <span class="function">mysqli\_real\_connect</span>
-
-mysqli::send\_query
-===================
-
-mysqli\_send\_query
-===================
-
-发送请求并返回结果
-
-### 说明
-
-面向对象风格
-
-<span class="type">bool</span> <span
-class="methodname">mysqli::send\_query</span> ( <span
-class="methodparam"><span class="type">string</span> `$query`</span> )
-
-过程化风格
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_send\_query</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$query`</span> )
-
-**Warning**
-
-本函数还未编写文档，仅有参数列表。
-
-**Warning**
-
-自 PHP 5.3.0 起，已经*废弃*并*移除*此函数。
 
 mysqli::set\_charset
 ====================
@@ -15442,93 +15345,6 @@ mysqli_close($link);
     Success: A proper connection to MySQL was made! The my_db database is great.
     Host information: localhost via TCP/IP
 
-mysqli::disable\_reads\_from\_master
-====================================
-
-mysqli\_disable\_reads\_from\_master
-====================================
-
-在主从服务器结构中，禁用从主机读取数据
-
-### 说明
-
-面向对象风格
-
-<span class="type">void</span> <span
-class="methodname">mysqli::disable\_reads\_from\_master</span> ( <span
-class="methodparam">void</span> )
-
-过程化风格
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_disable\_reads\_from\_master</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-**Warning**
-
-本函数还未编写文档，仅有参数列表。
-
-**Warning**
-
-自 PHP 5.3.0 起，已经*废弃*并*移除*此函数。
-
-mysqli\_disable\_rpl\_parse
-===========================
-
-禁用RPL解析
-
-### 说明
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_disable\_rpl\_parse</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-**Warning**
-
-本函数还未编写文档，仅有参数列表。
-
-**Warning**
-
-自 PHP 5.3.0 起，已经*废弃*并*移除*此函数。
-
-mysqli\_enable\_reads\_from\_master
-===================================
-
-开启从主机读取
-
-### 说明
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_enable\_reads\_from\_master</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-**Warning**
-
-本函数还未编写文档，仅有参数列表。
-
-**Warning**
-
-自 PHP 5.3.0 起，已经*废弃*并*移除*此函数。
-
-mysqli\_enable\_rpl\_parse
-==========================
-
-开启RPL解析
-
-### 说明
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_enable\_rpl\_parse</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-**Warning**
-
-本函数还未编写文档，仅有参数列表。
-
-**Warning**
-
-自 PHP 5.3.0 起，已经*废弃*并*移除*此函数。
-
 mysqli\_escape\_string
 ======================
 
@@ -15788,27 +15604,6 @@ class="methodparam">void</span> )
 `cached_plinks`  
 类型 <span class="type">integer</span> 不活跃的持久链接数
 
-mysqli\_master\_query
-=====================
-
-在主/从机制中强制在主机中执行一个查询
-
-### 说明
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_master\_query</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$query`</span> )
-
-**Warning**
-
-本函数还未编写文档，仅有参数列表。
-
-**Warning**
-
-自 PHP 5.3.0 起，已经*废弃*并*移除*此函数。
-
 mysqli\_report
 ==============
 
@@ -15819,44 +15614,6 @@ mysqli\_report
 
 此函数是该函数的别名：
 <a href="/set/mysqlinfo.html#mysqli_driver::$report_mode" class="link">mysqli_driver-&gt;report_mode</a>
-
-mysqli\_rpl\_parse\_enabled
-===========================
-
-检查是否开启了 RPL 解析
-
-### 说明
-
-<span class="type">int</span> <span
-class="methodname">mysqli\_rpl\_parse\_enabled</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-**Warning**
-
-本函数还未编写文档，仅有参数列表。
-
-**Warning**
-
-自 PHP 5.3.0 起，已经*废弃*并*移除*此函数。
-
-mysqli\_rpl\_probe
-==================
-
-RPL 探测
-
-### 说明
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_rpl\_probe</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-**Warning**
-
-本函数还未编写文档，仅有参数列表。
-
-**Warning**
-
-自 PHP 5.3.0 起，已经*废弃*并*移除*此函数。
 
 mysqli::set\_opt
 ================
@@ -15871,39 +15628,10 @@ Alias of <span class="function">mysqli\_options</span>
 此函数是该函数的别名： 这个函数是 <span
 class="function">mysqli\_options</span> 的一个别名。
 
-mysqli\_slave\_query
-====================
-
-在主/从机制中强制在从机上执行一个查询
-
-### 说明
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_slave\_query</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$query`</span> )
-
-**Warning**
-
-本函数还未编写文档，仅有参数列表。
-
-**Warning**
-
-自 PHP 5.3.0 起，已经*废弃*并*移除*此函数。
-
 **目录**
 
 -   [mysqli\_connect](/set/mysqlinfo.html#mysqli_connect) — 别名
     mysqli::\_\_construct
--   [mysqli::disable\_reads\_from\_master](/set/mysqlinfo.html#mysqli::disable_reads_from_master)
-    — 在主从服务器结构中，禁用从主机读取数据
--   [mysqli\_disable\_rpl\_parse](/set/mysqlinfo.html#mysqli_disable_rpl_parse)
-    — 禁用RPL解析
--   [mysqli\_enable\_reads\_from\_master](/set/mysqlinfo.html#mysqli_enable_reads_from_master)
-    — 开启从主机读取
--   [mysqli\_enable\_rpl\_parse](/set/mysqlinfo.html#mysqli_enable_rpl_parse)
-    — 开启RPL解析
 -   [mysqli\_escape\_string](/set/mysqlinfo.html#mysqli_escape_string) —
     别名 mysqli\_real\_escape\_string
 -   [mysqli\_execute](/set/mysqlinfo.html#mysqli_execute) —
@@ -15914,18 +15642,10 @@ class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
     — 返回客户端进程统计信息
 -   [mysqli\_get\_links\_stats](/set/mysqlinfo.html#mysqli_get_links_stats)
     — 返回打开和缓存的链接相关信息
--   [mysqli\_master\_query](/set/mysqlinfo.html#mysqli_master_query) —
-    在主/从机制中强制在主机中执行一个查询
 -   [mysqli\_report](/set/mysqlinfo.html#mysqli_report) — 别名
     mysqli\_driver-\>report\_mode
--   [mysqli\_rpl\_parse\_enabled](/set/mysqlinfo.html#mysqli_rpl_parse_enabled)
-    — 检查是否开启了 RPL 解析
--   [mysqli\_rpl\_probe](/set/mysqlinfo.html#mysqli_rpl_probe) — RPL
-    探测
 -   [mysqli::set\_opt](/set/mysqlinfo.html#mysqli::set_opt) — Alias of
     mysqli\_options
--   [mysqli\_slave\_query](/set/mysqlinfo.html#mysqli_slave_query) —
-    在主/从机制中强制在从机上执行一个查询
 
 Mysql\_xdevapi
 ==============
@@ -38992,7 +38712,7 @@ candidates down to one for statement execution.
 <td><p>One or more node groups must be defined. A node group can have an arbitrary user defined name. The name is used in combination with a SQL hint to restrict query execution to the nodes listed for the node group. To run a query on any of the servers of a node group, the query must begin with the SQL hint <em>/*user defined node group name*/</em>. Please note, no white space is allowed around <em>user defined node group name</em>. Because <em>user defined node group name</em> is used as-is as part of a SQL hint, you should choose the name that is compliant with the SQL language.</p>
 <p>Each node group entry must contain a list of <em>master</em> servers. Additional <em>slave</em> servers are allowed. Failing to provide a list of <em>master</em> for a node group <em>name_of_group</em> may cause an error of type <strong><code>E_RECOVERABLE_ERROR</code></strong> like <em>(mysqlnd_ms) No masters configured in node group 'name_of_group' for 'node_groups' filter</em>.</p>
 <p>The list of master and slave servers must reference corresponding entries in the <a href="/set/mysqlinfo.html#" class="link">global master</a> respectively <a href="/set/mysqlinfo.html#" class="link">slave</a> server list. Referencing an unknown server in either of the both server lists may cause an <strong><code>E_RECOVERABLE_ERROR</code></strong> error like <em>(mysqlnd_ms) Unknown master 'server_alias_name' (section 'name_of_group') in 'node_groups' filter configuration</em>.</p>
-<div id="example-2153" class="example">
+<div id="example-2154" class="example">
 <p><strong>示例 #23 Manual partitioning</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -39081,7 +38801,7 @@ file is the combination of eventual consistency and maximum slave lag.
 <td><p>Request eventual consistency. Allows the use of all master and slave servers. Data returned may or may not be current.</p>
 <p>Eventual consistency accepts an optional <em>age</em> parameter. If <em>age</em> is given the plugin considers only slaves for reading for which MySQL replication reports a slave lag less or equal to <em>age</em>. The replication lag is measure using <em>SHOW SLAVE STATUS</em>. If the plugin fails to fetch the replication lag, the slave tested is skipped. Implementation details and tips are given in the <a href="/set/mysqlinfo.html#Service%20level%20and%20consistency" class="link">quality of service concepts section</a>.</p>
 <p>Please note, if a filter chain generates an empty slave list and the PHP configuration directive <em>mysqlnd_ms.multi_master=0</em> is used, the plugin may emit a warning.</p>
-<div id="example-2154" class="example">
+<div id="example-2155" class="example">
 <p><strong>示例 #24 Global limit on slave lag</strong></p>
 <div class="example-contents">
 <div class="inicode">

@@ -131,7 +131,7 @@ var_dump($a instanceof $d); // $d is a string 'NotMyClass'
     bool(false)
 
 如果被检测的变量不是对象，instanceof 并不发出任何错误信息而是返回
-**`FALSE`**。不允许用来检测常量。
+**`FALSE`**。PHP 7.3.0 之前不允许用于检测常量。
 
 **示例 \#6 用 *instanceof* 检测其它变量**
 
@@ -154,11 +154,25 @@ var_dump(FALSE instanceof stdClass);
     bool(false)
     PHP Fatal error:  instanceof expects an object instance, constant given
 
+PHP 7.3.0 起， *instanceof* 操作符的左侧可以放常量。
+
+**示例 \#7 使用 *instanceof* 测试常量**
+
+``` php
+<?php
+var_dump(FALSE instanceof stdClass);
+?>
+```
+
+以上例程在 PHP 7.3 中的输出：
+
+    bool(false)
+
 然而 instanceof 的使用还有一些陷阱必须了解。在 PHP 5.1.0
 之前，如果要检查的类名称不存在，*instanceof* 会调用 <span
 class="function">\_\_autoload</span>。另外，如果该类没有被装载则会产生一个致命错误。可以通过使用动态类引用或用一个包含类名的字符串变量来避开这种问题：
 
-**示例 \#7 避免 PHP 5.0 中 instanceof 引起的类名查找和致命错误问题**
+**示例 \#8 避免 PHP 5.0 中 instanceof 引起的类名查找和致命错误问题**
 
 ``` php
 <?php
