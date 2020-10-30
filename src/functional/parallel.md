@@ -54,13 +54,15 @@ Execution
 
 ### 说明
 
-<span class="type">?Future</span> <span
+<span class="type"><span class="type">Future</span><span
+class="type">null</span></span> <span
 class="methodname">parallel\\run</span> ( <span
 class="methodparam"><span class="type">Closure</span> `$task`</span> )
 
 Shall schedule `task` for execution in parallel.
 
-<span class="type">?Future</span> <span
+<span class="type"><span class="type">Future</span><span
+class="type">null</span></span> <span
 class="methodname">parallel\\run</span> ( <span
 class="methodparam"><span class="type">Closure</span> `$task`</span> ,
 <span class="methodparam"><span class="type">array</span> `$argv`</span>

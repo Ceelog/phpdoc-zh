@@ -458,8 +458,10 @@ class="type">string</span> `$entry`</span> )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">extractTo</span> ( <span
 class="methodparam"><span class="type">string</span> `$pathto`</span>
-\[, <span class="methodparam"><span class="type">string\|array</span>
-`$files`</span> \[, <span class="methodparam"><span
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span><span
+class="type">null</span></span> `$files`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
 **`FALSE`**</span></span> \]\] )
 
@@ -2352,8 +2354,10 @@ Extract the contents of a phar archive to a directory
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Phar::extractTo</span> ( <span
 class="methodparam"><span class="type">string</span> `$pathto`</span>
-\[, <span class="methodparam"><span class="type">string\|array</span>
-`$files`</span> \[, <span class="methodparam"><span
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span><span
+class="type">null</span></span> `$files`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
 **`FALSE`**</span></span> \]\] )
 
@@ -4659,10 +4663,12 @@ class="methodparam">void</span> )
 
 <span class="type">bool</span> <span class="methodname">extractTo</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$pathto`</span> \[, <span class="methodparam"><span
-class="type">string\|array</span> `$files`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$overwrite`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+`$pathto`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span><span
+class="type">null</span></span> `$files`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">bool</span> `$overwrite`<span class="initializer"> =
+**`FALSE`**</span></span> \]\] )
 
 <span class="type">bool</span> <span
 class="methodname">isWritable</span> ( <span
@@ -4828,8 +4834,10 @@ class="methodparam"><span class="type">string</span> `$entry`</span> )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Phar::extractTo</span> ( <span
 class="methodparam"><span class="type">string</span> `$pathto`</span>
-\[, <span class="methodparam"><span class="type">string\|array</span>
-`$files`</span> \[, <span class="methodparam"><span
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span><span
+class="type">null</span></span> `$files`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
 **`FALSE`**</span></span> \]\] )
 
@@ -6158,8 +6166,10 @@ Extract the contents of a tar/zip archive to a directory
 <span class="type">bool</span> <span
 class="methodname">PharData::extractTo</span> ( <span
 class="methodparam"><span class="type">string</span> `$pathto`</span>
-\[, <span class="methodparam"><span class="type">string\|array</span>
-`$files`</span> \[, <span class="methodparam"><span
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span><span
+class="type">null</span></span> `$files`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
 **`FALSE`**</span></span> \]\] )
 

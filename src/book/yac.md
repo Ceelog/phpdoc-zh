@@ -59,7 +59,8 @@ class="type">array</span> `$key_vals`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">delete</span> ( <span class="methodparam"><span
-class="type">string\|array</span> `$keys`</span> \[, <span
+class="type"><span class="type">string</span><span
+class="type">array</span></span> `$keys`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$ttl`</span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
@@ -72,7 +73,8 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">get</span> ( <span class="methodparam"><span
-class="type">string\|array</span> `$key`</span> \[, <span
+class="type"><span class="type">string</span><span
+class="type">array</span></span> `$key`</span> \[, <span
 class="methodparam"><span class="type">int</span> `&$cas`<span
 class="initializer"> = **`NULL`**</span></span> \] )
 
@@ -187,7 +189,8 @@ Remove items from cache
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Yac::delete</span> ( <span
-class="methodparam"><span class="type">string\|array</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
 `$keys`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$ttl`</span> \] )
 
@@ -255,7 +258,8 @@ Retrieve values from cache
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">Yac::get</span> ( <span
-class="methodparam"><span class="type">string\|array</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
 `$key`</span> \[, <span class="methodparam"><span
 class="type">int</span> `&$cas`<span class="initializer"> =
 **`NULL`**</span></span> \] )

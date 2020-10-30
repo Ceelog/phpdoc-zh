@@ -807,8 +807,9 @@ Create start namespaced attribute
 class="methodname">XMLWriter::startAttributeNs</span> ( <span
 class="methodparam"><span class="type">string</span> `$prefix`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$name`</span> , <span class="methodparam"><span
-class="type">string</span> `$uri`</span> )
+`$name`</span> , <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$uri`</span> )
 
 过程化风格
 
@@ -818,8 +819,9 @@ class="methodparam"><span class="type">resource</span>
 `$xmlwriter`</span> , <span class="methodparam"><span
 class="type">string</span> `$prefix`</span> , <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">string</span> `$uri`</span>
-)
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$uri`</span> )
 
 Starts a namespaced attribute.
 
@@ -838,7 +840,8 @@ The namespace prefix.
 The attribute name.
 
 `uri`  
-The namespace URI.
+The namespace URI. If `uri` is **`NULL`**, the namespace declaration
+will be omitted.
 
 ### 返回值
 
@@ -1283,21 +1286,26 @@ Create start namespaced element tag
 
 <span class="type">bool</span> <span
 class="methodname">XMLWriter::startElementNs</span> ( <span
-class="methodparam"><span class="type">string</span> `$prefix`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$name`</span> , <span class="methodparam"><span
-class="type">string</span> `$uri`</span> )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$prefix`</span> , <span class="methodparam"><span
+class="type">string</span> `$name`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$uri`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_element\_ns</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$prefix`</span> , <span
-class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">string</span> `$uri`</span>
-)
+`$xmlwriter`</span> , <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$prefix`</span> , <span class="methodparam"><span
+class="type">string</span> `$name`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$uri`</span> )
 
 Starts a namespaced element.
 
@@ -1310,13 +1318,15 @@ class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
 `prefix`  
-The namespace prefix.
+The namespace prefix. If `prefix` is **`NULL`**, the namespace will be
+omitted.
 
 `name`  
 The element name.
 
 `uri`  
-The namespace URI.
+The namespace URI. If `uri` is **`NULL`**, the namespace declaration
+will be omitted.
 
 ### 返回值
 
@@ -1479,23 +1489,28 @@ Write full namespaced attribute
 
 <span class="type">bool</span> <span
 class="methodname">XMLWriter::writeAttributeNs</span> ( <span
-class="methodparam"><span class="type">string</span> `$prefix`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$name`</span> , <span class="methodparam"><span
-class="type">string</span> `$uri`</span> , <span
-class="methodparam"><span class="type">string</span> `$content`</span> )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$prefix`</span> , <span class="methodparam"><span
+class="type">string</span> `$name`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$uri`</span> , <span class="methodparam"><span
+class="type">string</span> `$content`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_attribute\_ns</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$prefix`</span> , <span
-class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">string</span> `$uri`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$content`</span> )
+`$xmlwriter`</span> , <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$prefix`</span> , <span class="methodparam"><span
+class="type">string</span> `$name`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$uri`</span> , <span class="methodparam"><span
+class="type">string</span> `$content`</span> )
 
 Writes a full namespaced attribute.
 
@@ -1508,13 +1523,15 @@ class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
 `prefix`  
-The namespace prefix.
+The namespace prefix. If `prefix` is **`NULL`**, the namespace will be
+omitted.
 
 `name`  
 The attribute name.
 
 `uri`  
-The namespace URI.
+The namespace URI. If `uri` is **`NULL`**, the namespace declaration
+will be omitted.
 
 `content`  
 The attribute value.
@@ -1982,24 +1999,30 @@ Write full namespaced element tag
 
 <span class="type">bool</span> <span
 class="methodname">XMLWriter::writeElementNs</span> ( <span
-class="methodparam"><span class="type">string</span> `$prefix`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$name`</span> , <span class="methodparam"><span
-class="type">string</span> `$uri`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$content`</span>
-\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$prefix`</span> , <span class="methodparam"><span
+class="type">string</span> `$name`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$uri`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$content`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_element\_ns</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$prefix`</span> , <span
-class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">string</span> `$uri`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$content`</span> \] )
+`$xmlwriter`</span> , <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$prefix`</span> , <span class="methodparam"><span
+class="type">string</span> `$name`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$uri`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$content`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
 Writes a full namespaced element tag.
 
@@ -2012,13 +2035,15 @@ class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
 `prefix`  
-The namespace prefix.
+The namespace prefix. If `prefix` is **`NULL`**, the namespace will be
+omitted.
 
 `name`  
 The element name.
 
 `uri`  
-The namespace URI.
+The namespace URI. If `uri` is **`NULL`**, the namespace declaration
+will be omitted.
 
 `content`  
 The element contents.

@@ -9291,9 +9291,9 @@ class="methodparam">void</span> )
 <span class="methodname">getName</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">?ReflectionType</span> <span
-class="methodname">getType</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionType</span><span class="type">null</span></span>
+<span class="methodname">getType</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
@@ -9750,9 +9750,9 @@ Gets a property's type
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">?ReflectionType</span> <span
-class="methodname">ReflectionProperty::getType</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionType</span><span class="type">null</span></span>
+<span class="methodname">ReflectionProperty::getType</span> ( <span
 class="methodparam">void</span> )
 
 Gets the associated type of a property.

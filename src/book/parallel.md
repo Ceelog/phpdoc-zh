@@ -140,12 +140,14 @@ class="methodparam"><span class="type">string</span> `$bootstrap`</span>
 
 /\* Execute \*/
 
-<span class="modifier">public</span> <span class="type">?Future</span>
-<span class="methodname">run</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">Future</span><span class="type">null</span></span> <span
+class="methodname">run</span> ( <span class="methodparam"><span
 class="type">Closure</span> `$task`</span> )
 
-<span class="modifier">public</span> <span class="type">?Future</span>
-<span class="methodname">run</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">Future</span><span class="type">null</span></span> <span
+class="methodname">run</span> ( <span class="methodparam"><span
 class="type">Closure</span> `$task`</span> , <span
 class="methodparam"><span class="type">array</span> `$argv`</span> )
 
@@ -205,14 +207,16 @@ Execution
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">?Future</span>
-<span class="methodname">parallel\\Runtime::run</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">Future</span><span class="type">null</span></span> <span
+class="methodname">parallel\\Runtime::run</span> ( <span
 class="methodparam"><span class="type">Closure</span> `$task`</span> )
 
 Shall schedule `task` for execution in parallel.
 
-<span class="modifier">public</span> <span class="type">?Future</span>
-<span class="methodname">parallel\\Runtime::run</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">Future</span><span class="type">null</span></span> <span
+class="methodname">parallel\\Runtime::run</span> ( <span
 class="methodparam"><span class="type">Closure</span> `$task`</span> ,
 <span class="methodparam"><span class="type">array</span> `$argv`</span>
 )
@@ -867,9 +871,9 @@ class="methodparam"><span class="type">int</span> `$timeout`</span> )
 
 /\* Polling \*/
 
-<span class="modifier">public</span> <span class="type">?Event</span>
-<span class="methodname">poll</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">Event</span><span class="type">null</span></span> <span
+class="methodname">poll</span> ( <span class="methodparam">void</span> )
 
 }
 
@@ -1019,8 +1023,9 @@ Polling
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">?Event</span>
-<span class="methodname">parallel\\Events::poll</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">Event</span><span class="type">null</span></span> <span
+class="methodname">parallel\\Events::poll</span> ( <span
 class="methodparam">void</span> )
 
 Shall poll for the next event

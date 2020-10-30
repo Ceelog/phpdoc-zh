@@ -296,7 +296,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -304,31 +305,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -339,7 +347,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -610,7 +619,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -618,31 +628,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -653,7 +670,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -883,7 +901,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -891,31 +910,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -926,7 +952,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -1304,7 +1331,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -1312,31 +1340,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -1347,7 +1382,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -1563,7 +1599,8 @@ class="type">DOMDocumentType</span> `$doctype` ;
 class="modifier">readonly</span> <span class="type">DOMElement</span>
 `$documentElement` ;
 
-<span class="modifier">public</span> <span class="type">string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$documentURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -1601,7 +1638,8 @@ class="type">DOMImplementation</span> `$implementation` ;
 `$version` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$xmlEncoding` ;
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -1624,7 +1662,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -1632,31 +1671,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -1667,7 +1713,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -3987,7 +4034,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -3995,31 +4043,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -4030,7 +4085,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -4241,7 +4297,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -4249,31 +4306,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -4284,7 +4348,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -4443,7 +4508,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -4451,31 +4517,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -4486,7 +4559,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -5492,7 +5566,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -5500,31 +5575,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -5535,7 +5617,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -5688,7 +5771,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -5696,31 +5780,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -5731,7 +5822,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -6419,7 +6511,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -6427,31 +6520,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -6462,7 +6562,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -7521,7 +7622,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -7529,31 +7631,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -7564,7 +7673,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -7703,7 +7813,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -7711,31 +7822,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -7746,7 +7864,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -7960,7 +8079,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 `$nodeType` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$parentNode` ;
 
 <span class="modifier">public</span> <span
@@ -7968,31 +8088,38 @@ class="modifier">readonly</span> <span class="type">DOMNodeList</span>
 `$childNodes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$previousSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMNode</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
 `$nextSibling` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span
-class="type">DOMNamedNodeMap</span> `$attributes` ;
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMNamedNodeMap</span><span class="type">null</span></span>
+`$attributes` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">DOMDocument</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">null</span></span>
 `$ownerDocument` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$namespaceURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -8003,7 +8130,8 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$localName` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$baseURI` ;
 
 <span class="modifier">public</span> <span class="type">string</span>

@@ -4644,49 +4644,94 @@ Savepoint name for the transaction.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 注释
+
+> **Note**:
+>
+> This function does not work with non transactional table types (like
+> MyISAM or ISAM).
+
 ### 范例
 
-**示例 \#1 <span class="methodname">$mysqli-\>begin\_transaction</span>
+**示例 \#1 <span class="methodname">mysqli::begin\_transaction</span>
 example**
 
 面向对象风格
 
 ``` php
 <?php
-$mysqli = new mysqli("127.0.0.1", "my_user", "my_password", "sakila");
 
-if ($mysqli->connect_errno) {
-    printf("Connect failed: %s\n", $mysqli->connect_error);
-    exit();
+/* Tell mysqli to throw an exception if an error occurs */
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+$mysqli = new mysqli("localhost", "my_user", "my_password", "world");
+
+/* The table engine has to support transactions */
+$mysqli->query("CREATE TABLE IF NOT EXISTS language (
+    Code text NOT NULL,
+    Speakers int(11) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
+
+/* Start transaction */
+$mysqli->begin_transaction();
+
+try {
+    /* Insert some values */
+    $mysqli->query("INSERT INTO language(Code, Speakers) VALUES ('DE', 42000123)");
+
+    /* Try to insert invalid values */
+    $language_code = 'FR';
+    $native_speakers = 'Unknown';
+    $stmt = $mysqli->prepare('INSERT INTO language(Code, Speakers) VALUES (?,?)');
+    $stmt->bind_param('ss', $language_code, $native_speakers);
+    $stmt->execute();
+
+    /* If code reaches this point without errors then commit the data in the database */
+    $mysqli->commit();
+} catch (mysqli_sql_exception $exception) {
+    $mysqli->rollback();
+
+    throw $exception;
 }
-
-$mysqli->begin_transaction(MYSQLI_TRANS_START_READ_ONLY);
-
-$mysqli->query("SELECT first_name, last_name FROM actor");
-$mysqli->commit();
-
-$mysqli->close();
-?>
 ```
 
 过程化风格
 
 ``` php
 <?php
-$link = mysqli_connect("127.0.0.1", "my_user", "my_password", "sakila");
 
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
+/* Tell mysqli to throw an exception if an error occurs */
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+$mysqli = mysqli_connect("localhost", "my_user", "my_password", "world");
+
+/* The table engine has to support transactions */
+mysqli_query($mysqli, "CREATE TABLE IF NOT EXISTS language (
+    Code text NOT NULL,
+    Speakers int(11) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
+
+/* Start transaction */
+mysqli_begin_transaction($mysqli);
+
+try {
+    /* Insert some values */
+    mysqli_query($mysqli, "INSERT INTO language(Code, Speakers) VALUES ('DE', 42000123)");
+
+    /* Try to insert invalid values */
+    $language_code = 'FR';
+    $native_speakers = 'Unknown';
+    $stmt = mysqli_prepare($mysqli, 'INSERT INTO language(Code, Speakers) VALUES (?,?)');
+    mysqli_stmt_bind_param($stmt, 'ss', $language_code, $native_speakers);
+    mysqli_stmt_execute($stmt);
+
+    /* If code reaches this point without errors then commit the data in the database */
+    mysqli_commit($mysqli);
+} catch (mysqli_sql_exception $exception) {
+    mysqli_rollback($mysqli);
+
+    throw $exception;
 }
-
-mysqli_begin_transaction($link, MYSQLI_TRANS_START_READ_ONLY);
-
-mysqli_query($link, "SELECT first_name, last_name FROM actor LIMIT 1");
-mysqli_commit($link);
-
-mysqli_close($link);
-?>
 ```
 
 ### 参见

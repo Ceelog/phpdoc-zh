@@ -10482,14 +10482,15 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> ( <span
-class="methodparam"><span
-class="type">RecursiveIterator\|IteratorAggregate</span> `$it`</span>
+class="methodparam"><span class="type"><span
+class="type">RecursiveIterator</span><span
+class="type">IteratorAggregate</span></span> `$it`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = RecursiveTreeIterator::BYPASS\_KEY</span></span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$flags`<span class="initializer"> =
-RecursiveTreeIterator::BYPASS\_KEY</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$cit_flags`<span
-class="initializer"> = CachingIterator::CATCH\_GET\_CHILD</span></span>
-\[, <span class="methodparam"><span class="type">int</span> `$mode`<span
+`$cit_flags`<span class="initializer"> =
+CachingIterator::CATCH\_GET\_CHILD</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$mode`<span
 class="initializer"> =
 RecursiveIteratorIterator::SELF\_FIRST</span></span> \]\]\] )
 
@@ -10765,14 +10766,15 @@ Construct a RecursiveTreeIterator
 
 <span class="modifier">public</span> <span
 class="methodname">RecursiveTreeIterator::\_\_construct</span> ( <span
-class="methodparam"><span
-class="type">RecursiveIterator\|IteratorAggregate</span> `$it`</span>
+class="methodparam"><span class="type"><span
+class="type">RecursiveIterator</span><span
+class="type">IteratorAggregate</span></span> `$it`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = RecursiveTreeIterator::BYPASS\_KEY</span></span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$flags`<span class="initializer"> =
-RecursiveTreeIterator::BYPASS\_KEY</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$cit_flags`<span
-class="initializer"> = CachingIterator::CATCH\_GET\_CHILD</span></span>
-\[, <span class="methodparam"><span class="type">int</span> `$mode`<span
+`$cit_flags`<span class="initializer"> =
+CachingIterator::CATCH\_GET\_CHILD</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$mode`<span
 class="initializer"> =
 RecursiveIteratorIterator::SELF\_FIRST</span></span> \]\]\] )
 

@@ -1601,8 +1601,8 @@ class="interfacename">SeekableIterator</span> </span> {
 
 /\* 方法 \*/
 
-<span class="modifier">public</span> <span
-class="type">string\|array</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">array</span></span> <span
 class="methodname">current</span> ( <span
 class="methodparam">void</span> )
 
@@ -1990,8 +1990,8 @@ Retrieve current line of file
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">string\|array</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">array</span></span> <span
 class="methodname">SplFileObject::current</span> ( <span
 class="methodparam">void</span> )
 
@@ -3902,8 +3902,8 @@ class="methodparam"><span class="type">int</span> `$max_memory`</span>
 
 /\* 继承的方法 \*/
 
-<span class="modifier">public</span> <span
-class="type">string\|array</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">array</span></span> <span
 class="methodname">SplFileObject::current</span> ( <span
 class="methodparam">void</span> )
 

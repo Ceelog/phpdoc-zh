@@ -1046,9 +1046,11 @@ Convert string from one codepage to another
 
 <span class="type">string</span> <span
 class="methodname">sapi\_windows\_cp\_conv</span> ( <span
-class="methodparam"><span class="type">int\|string</span>
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">string</span></span>
 `$in_codepage`</span> , <span class="methodparam"><span
-class="type">int\|string</span> `$out_codepage`</span> , <span
+class="type"><span class="type">int</span><span
+class="type">string</span></span> `$out_codepage`</span> , <span
 class="methodparam"><span class="type">string</span> `$subject`</span> )
 
 Convert string from one codepage to another.

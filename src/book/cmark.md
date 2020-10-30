@@ -132,23 +132,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -226,23 +230,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -359,23 +367,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -453,23 +465,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -547,23 +563,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -695,23 +715,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -864,23 +888,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -958,23 +986,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -995,7 +1027,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">?string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$literal` ;
 
 /\* Constructor \*/
@@ -1090,23 +1123,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -1184,23 +1221,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -1278,23 +1319,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -1372,23 +1417,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -1466,23 +1515,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -1560,23 +1613,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -1595,7 +1652,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 class="modifier">readonly</span> <span class="type">int</span>
 `$endColumn` ;
 
-<span class="modifier">public</span> <span class="type">?string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$literal` ;
 
 /\* Constructor \*/
@@ -1667,23 +1725,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -1702,13 +1764,15 @@ class="modifier">readonly</span> <span class="type">int</span>
 class="modifier">readonly</span> <span class="type">int</span>
 `$endColumn` ;
 
-<span class="modifier">public</span> <span class="type">?string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$literal` ;
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">?string</span>
-`$fence` ;
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> `$fence`
+;
 
 /\* Constructor \*/
 
@@ -1808,23 +1872,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -1843,7 +1911,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 class="modifier">readonly</span> <span class="type">int</span>
 `$endColumn` ;
 
-<span class="modifier">public</span> <span class="type">?string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$literal` ;
 
 /\* Constructor \*/
@@ -1915,23 +1984,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -1950,7 +2023,8 @@ class="modifier">readonly</span> <span class="type">int</span>
 class="modifier">readonly</span> <span class="type">int</span>
 `$endColumn` ;
 
-<span class="modifier">public</span> <span class="type">?string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$literal` ;
 
 /\* Constructor \*/
@@ -2022,23 +2096,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -2059,11 +2137,12 @@ class="modifier">readonly</span> <span class="type">int</span>
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">?string</span>
-`$url` ;
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> `$url` ;
 
-<span class="modifier">public</span> <span class="type">?string</span>
-`$title` ;
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> `$title`
+;
 
 /\* Constructor \*/
 
@@ -2171,23 +2250,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -2208,11 +2291,12 @@ class="modifier">readonly</span> <span class="type">int</span>
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">?string</span>
-`$url` ;
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> `$url` ;
 
-<span class="modifier">public</span> <span class="type">?string</span>
-`$title` ;
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> `$title`
+;
 
 /\* Constructor \*/
 
@@ -2320,23 +2404,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -2357,10 +2445,12 @@ class="modifier">readonly</span> <span class="type">int</span>
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">?string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$onEnter` ;
 
-<span class="modifier">public</span> <span class="type">?string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$onLeave` ;
 
 /\* 继承的方法 \*/
@@ -2422,23 +2512,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 继承的属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -2459,10 +2553,12 @@ class="modifier">readonly</span> <span class="type">int</span>
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">?string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$onEnter` ;
 
-<span class="modifier">public</span> <span class="type">?string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$onLeave` ;
 
 /\* 继承的方法 \*/
@@ -2529,23 +2625,27 @@ class="interfacename">Traversable</span> </span> {
 /\* 属性 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$parent` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
-`$previous` ;
-
-<span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span> `$next`
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$parent`
 ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
+`$previous` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span> `$next` ;
+
+<span class="modifier">public</span> <span
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$lastChild` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">?Node</span>
+class="modifier">readonly</span> <span class="type"><span
+class="type">Node</span><span class="type">null</span></span>
 `$firstChild` ;
 
 <span class="modifier">public</span> <span
@@ -2785,16 +2885,18 @@ class="classname">CommonMark\\Interfaces\\IVisitor</span>
 /\* 方法 \*/
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span
-class="type">?int\|IVisitable</span> <span
-class="methodname">enter</span> ( <span class="methodparam"><span
-class="type">IVisitable</span> `$visitable`</span> )
+class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">IVisitable</span><span
+class="type">null</span></span> <span class="methodname">enter</span> (
+<span class="methodparam"><span class="type">IVisitable</span>
+`$visitable`</span> )
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span
-class="type">?int\|IVisitable</span> <span
-class="methodname">leave</span> ( <span class="methodparam"><span
-class="type">IVisitable</span> `$visitable`</span> )
+class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">IVisitable</span><span
+class="type">null</span></span> <span class="methodname">leave</span> (
+<span class="methodparam"><span class="type">IVisitable</span>
+`$visitable`</span> )
 
 }
 
@@ -2806,8 +2908,9 @@ Visitation
 ### 说明
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span
-class="type">?int\|IVisitable</span> <span
+class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">IVisitable</span><span
+class="type">null</span></span> <span
 class="methodname">CommonMark\\Interfaces\\IVisitor::enter</span> (
 <span class="methodparam"><span class="type">IVisitable</span>
 `$visitable`</span> )
@@ -2850,8 +2953,9 @@ Visitation
 ### 说明
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span
-class="type">?int\|IVisitable</span> <span
+class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">IVisitable</span><span
+class="type">null</span></span> <span
 class="methodname">CommonMark\\Interfaces\\IVisitor::leave</span> (
 <span class="methodparam"><span class="type">IVisitable</span>
 `$visitable`</span> )
@@ -3183,7 +3287,8 @@ the root node of a tree
 `handler`  
 should have the prototype:
 
-<span class="type">?bool</span> <span class="methodname">handler</span>
+<span class="type"><span class="type">bool</span><span
+class="type">null</span></span> <span class="methodname">handler</span>
 ( <span class="methodparam"><span class="type">CommonMark\\Node</span>
 `$root`</span> , <span class="methodparam"><span
 class="type">CommonMark\\Node</span> `$entering`</span> )
