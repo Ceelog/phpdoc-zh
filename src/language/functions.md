@@ -9,4 +9,4 @@
 -   [可变函数](/functions/variable-functions.html)
 -   [内部（内置）函数](/functions/internal.html)
 -   [匿名函数](/functions/anonymous.html)
--   [Arrow Functions](/functions/arrow.html)
+-   [箭头函数](/functions/arrow.html)

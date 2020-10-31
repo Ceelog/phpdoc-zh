@@ -376,6 +376,8 @@
         — Export
     -   [ReflectionProperty::getDeclaringClass](/class/reflectionproperty.html#ReflectionProperty::getDeclaringClass)
         — Gets declaring class
+    -   [ReflectionProperty::getDefaultValue](/class/reflectionproperty.html#ReflectionProperty::getDefaultValue)
+        — Returns the default value declared for a property
     -   [ReflectionProperty::getDocComment](/class/reflectionproperty.html#ReflectionProperty::getDocComment)
         — Gets the property doc comment
     -   [ReflectionProperty::getModifiers](/class/reflectionproperty.html#ReflectionProperty::getModifiers)
@@ -386,6 +388,8 @@
         — Gets a property's type
     -   [ReflectionProperty::getValue](/class/reflectionproperty.html#ReflectionProperty::getValue)
         — Gets value
+    -   [ReflectionProperty::hasDefaultValue](/class/reflectionproperty.html#ReflectionProperty::hasDefaultValue)
+        — Checks if property has a default value declared
     -   [ReflectionProperty::hasType](/class/reflectionproperty.html#ReflectionProperty::hasType)
         — Checks if property has a type
     -   [ReflectionProperty::isDefault](/class/reflectionproperty.html#ReflectionProperty::isDefault)
@@ -9279,6 +9283,10 @@ class="type">ReflectionClass</span> <span
 class="methodname">getDeclaringClass</span> ( <span
 class="methodparam">void</span> )
 
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">getDefaultValue</span> ( <span
+class="methodparam">void</span> )
+
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">getDocComment</span> ( <span
 class="methodparam">void</span> )
@@ -9300,6 +9308,10 @@ class="methodparam">void</span> )
 <span class="methodname">getValue</span> (\[ <span
 class="methodparam"><span class="type">object</span> `$object`</span> \]
 )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">hasDefaultValue</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">hasType</span> ( <span
@@ -9605,6 +9617,62 @@ A <span class="classname">ReflectionClass</span> object.
 
 -   <span class="methodname">ReflectionProperty::getName</span>
 
+ReflectionProperty::getDefaultValue
+===================================
+
+Returns the default value declared for a property
+
+### 说明
+
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">ReflectionProperty::getDefaultValue</span> (
+<span class="methodparam">void</span> )
+
+Gets the implicit or explicitly declared default value for a property.
+
+### 参数
+
+此函数没有参数。
+
+### 返回值
+
+The default value if the property has any default value (including
+**`NULL`**). If there is no default value, then **`NULL`** is returned.
+It is not possible to differentiate between a **`NULL`** default value
+and an unitialized typed property. Use <span
+class="methodname">ReflectionClass::hasDefaultValue</span> to detect the
+difference.
+
+### 范例
+
+**示例 \#1 <span
+class="methodname">ReflectionClass::getDefaultValue</span> example**
+
+``` php
+<?php
+class Foo {
+    public $bar = 1;
+    public ?int $baz;
+    public int $boing = 0;
+}
+
+$ro = new ReflectionClass(Foo::class);
+var_dump($ro->getProperty('bar')->getDefaultValue());
+var_dump($ro->getProperty('baz')->getDefaultValue());
+var_dump($ro->getProperty('boing')->getDefaultValue());
+?>
+```
+
+以上例程会输出：
+
+    int(1)
+    NULL
+    int(0)
+
+### 参见
+
+-   <span class="methodname">ReflectionProperty::hasDefaultValue</span>
+
 ReflectionProperty::getDocComment
 =================================
 
@@ -9864,6 +9932,61 @@ var_dump($reflectionProperty->getValue(new Foo));
     class="methodname">ReflectionClass::getDefaultProperties</span>
 -   <span
     class="methodname">ReflectionClass::getStaticPropertyValue</span>
+
+ReflectionProperty::hasDefaultValue
+===================================
+
+Checks if property has a default value declared
+
+### 说明
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ReflectionProperty::hasDefaultValue</span> (
+<span class="methodparam">void</span> )
+
+Checks whether the property was declared with a default value, including
+an implicit **`NULL`** default value. Only returns **`FALSE`** for typed
+properties without default value (or dynamic properties).
+
+### 参数
+
+此函数没有参数。
+
+### 返回值
+
+If the property has any default value (including **`NULL`**) **`TRUE`**
+is returned; if the property is typed without a default value declared
+or is a dynamic property, **`FALSE`** is returned.
+
+### 范例
+
+**示例 \#1 <span
+class="methodname">ReflectionClass::hasDefaultValue</span> example**
+
+``` php
+<?php
+class Foo {
+    public $bar;
+    public ?int $baz;
+    public int $boing;
+}
+
+$ro = new ReflectionClass(Foo::class);
+var_dump($ro->getProperty('bar')->hasDefaultValue());
+var_dump($ro->getProperty('baz')->hasDefaultValue());
+var_dump($ro->getProperty('boing')->hasDefaultValue());
+?>
+```
+
+以上例程会输出：
+
+    bool(true)
+    bool(false)
+    bool(false)
+
+### 参见
+
+-   <span class="methodname">ReflectionProperty::getDefaultValue</span>
 
 ReflectionProperty::hasType
 ===========================

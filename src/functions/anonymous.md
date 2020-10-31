@@ -158,7 +158,7 @@ print $my_cart->getTotal(0.05) . "\n";
 ?>
 ```
 
-**示例 \#5 Automatic binding of *$this***
+**示例 \#5 自动绑定 *$this***
 
 ``` php
 <?php
@@ -190,21 +190,17 @@ $function();
     Notice: Undefined variable: this in script.php on line 8
     NULL
 
-As of PHP 5.4.0, when declared in the context of a class, the current
-class is automatically bound to it, making *$this* available inside of
-the function's scope. If this automatic binding of the current class is
-not wanted, then
-<a href="/functions/anonymous.html#functions.anonymous-functions.static" class="link">static anonymous functions</a>
-may be used instead.
+从 PHP 5.4.0 开始，当在类的上下文中声明时，当前的类会自动与之绑定，使得
+*$this* 在函数的作用域中可用。如果不需要当前类的自动绑定，可以使用
+<a href="/functions/anonymous.html#functions.anonymous-functions.static" class="link">静态匿名函数</a>
+替代。
 
-### Static anonymous functions
+### 静态匿名函数
 
-As of PHP 5.4, anonymous functions may be declared statically. This
-prevents them from having the current class automatically bound to them.
-Objects may also not be bound to them at runtime.
+从 PHP 5.4
+开始，匿名函数允许被定义为静态化。这样可以防止当前类自动绑定到它们身上，对象在运行时也可能不会被绑定到它们上面。
 
-**示例 \#6 Attempting to use *$this* inside a static anonymous
-function**
+**示例 \#6 试图在静态匿名函数中使用 *$this***
 
 ``` php
 <?php
@@ -229,7 +225,7 @@ new Foo();
     Notice: Undefined variable: this in %s on line %d
     NULL
 
-**示例 \#7 Attempting to bind an object to a static anonymous function**
+**示例 \#7 试图将对象绑定到静态匿名函数**
 
 ``` php
 <?php

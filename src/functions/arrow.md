@@ -1,24 +1,23 @@
-Arrow Functions
----------------
+箭头函数
+--------
 
-Arrow functions were introduced in PHP 7.4 as a more concise syntax for
-<a href="/functions/anonymous.html" class="link">anonymous functions</a>.
+箭头函数是 PHP 7.4 的新语法，是一种更简洁的
+<a href="/functions/anonymous.html" class="link">匿名函数</a> 写法。
 
-Both anonymous functions and arrow functions are implemented using the
+匿名函数和箭头函数都是
 <a href="/class/closure.html" class="link"><span class="classname">Closure</span></a>
-class.
+类的实现。
 
-Arrow functions have the basic form `fn (argument_list) => expr`.
+箭头函数的基本语法为 `fn (argument_list) => expr`。
 
-Arrow functions support the same features as
-<a href="/functions/anonymous.html" class="link">anonymous functions</a>,
-except that using variables from the parent scope is always automatic.
+箭头函数支持与
+<a href="/functions/anonymous.html" class="link">匿名函数</a>
+相同的功能，只是其父作用域的变量总是自动的。
 
-When a variable used in the expression is defined in the parent scope it
-will be implicitly captured by-value. In the following example, the
-functions `$fn1` and `$fn2` behave the same way.
+当表达式中使用的变量是在父作用域中定义的，它将被隐式地按值捕获。在下面的例子中，函数
+`$fn1` 和 `$fn2` 的行为是一样的。
 
-**示例 \#1 Arrow functions capture variables by value automatically**
+**示例 \#1 箭头函数自动捕捉变量的值**
 
 ``` php
 <?php
@@ -26,7 +25,7 @@ functions `$fn1` and `$fn2` behave the same way.
 $y = 1;
  
 $fn1 = fn($x) => $x + $y;
-// equivalent to using $y by value:
+// 相当于 using $y by value:
 $fn2 = function ($x) use ($y) {
     return $x + $y;
 };
@@ -39,27 +38,23 @@ var_export($fn1(3));
 
     4
 
-This also works if the arrow functions are nested:
+在箭头函数嵌套的情况下同样有效。
 
-**示例 \#2 Arrow functions capture variables by value automatically,
-even when nested**
+**示例 \#2 箭头函数自动捕捉变量的值，即使在嵌套的情况下**
 
 ``` php
 <?php
 
 $z = 1;
 $fn = fn($x) => fn($y) => $x * $y + $z;
-// Outputs 51
+// 输出 51
 var_export($fn(5)(10));
 ?>
 ```
 
-Similarly to anonymous functions, the arrow function syntax allows
-arbitrary function signatures, including parameter and return types,
-default values, variadics, as well as by-reference passing and
-returning. All of the following are valid examples of arrow functions:
+和匿名函数一样，箭头函数语法同样允许标准的函数声明，包括参数和返回类型、缺省值、变量，以及通过引用传递和返回。以下都是箭头函数的有效例子。
 
-**示例 \#3 Examples of arrow functions**
+**示例 \#3 合法的箭头函数例子**
 
 ``` php
 <?php
@@ -74,37 +69,33 @@ fn($x, ...$rest) => $rest;
 ?>
 ```
 
-Arrow functions use by-value variable binding. This is roughly
-equivalent to performing a `use($x)` for every variable `$x` used inside
-the arrow function. A by-value binding means that it is not possible to
-modify any values from the outer scope.
-<a href="/functions/anonymous.html" class="link">Anonymous functions</a>
-can be used instead for by-ref bindings.
+箭头函数会自动绑定上下文变量，这相当于对箭头函数内部使用的每一个变量
+`$x` 执行了一个
+`use($x)`。这意味着不可能修改外部作用域的任何值，若要实现对值的修改，可以使用
+<a href="/functions/anonymous.html" class="link">匿名函数</a> 来替代。
 
-**示例 \#4 Values from the outer scope cannot be modified by arrow
-functions**
+**示例 \#4 来自外部范围的值不能在箭头函数内修改**
 
 ``` php
 <?php
 
 $x = 1;
-$fn = fn() => $x++; // Has no effect
+$fn = fn() => $x++; // 不会影响 x 的值
 $fn();
-var_export($x);  // Outputs 1
+var_export($x);  // 输出 1
 
 ?>
 ```
 
 ### 更新日志
 
-| 版本  | 说明                              |
-|-------|-----------------------------------|
-| 7.4.0 | Arrow functions became available. |
+| 版本  | 说明               |
+|-------|--------------------|
+| 7.4.0 | 新增箭头函数语法。 |
 
 ### 注释
 
-> **Note**: <span class="simpara"> It is possible to use <span
+> **Note**: <span class="simpara"> 可以对箭头函数使用 <span
 > class="function">func\_num\_args</span>, <span
-> class="function">func\_get\_arg</span>, and <span
-> class="function">func\_get\_args</span> from within an arrow function.
-> </span>
+> class="function">func\_get\_arg</span>, 和 <span
+> class="function">func\_get\_args</span> 函数。 </span>

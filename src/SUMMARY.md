@@ -132,7 +132,7 @@
     * [可变函数](functions/variable-functions.md)
     * [内部（内置）函数](functions/internal.md)
     * [匿名函数](functions/anonymous.md)
-    * [Arrow Functions](functions/arrow.md)
+    * [箭头函数](functions/arrow.md)
   * [类与对象](language/oop5.md)
     * [简介](oop5/intro.md)
     * [基本概念](language/oop5/basic.md)

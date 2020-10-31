@@ -6771,6 +6771,8 @@ class="methodname">DOMDocument::createElement</span>, <span
 class="methodname">DOMDocument::createTextNode</span> etc. or simply by
 using any other node.
 
+When using an existing node it will be moved.
+
 ### 参数
 
 `newnode`  
@@ -7120,6 +7122,8 @@ class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 This function inserts a new node right before the reference node. If you
 plan to do further modifications on the appended child you must use the
 returned node.
+
+When using an existing node it will be moved.
 
 ### 参数
 

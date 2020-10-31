@@ -53,24 +53,30 @@ $newref =& returns_reference();
 ?>
 ```
 
-有关引用的更多信息,
-请查看<a href="/language/references.html" class="link">引用的解释</a>。
+有关引用的更多信息, 请查看
+<a href="/language/references.html" class="link">引用的解释</a>。
 
 ### 返回值类型声明
 
 PHP 7 增加了对返回值类型声明的支持。 就如
-<a href="/functions/arguments.html#functions.arguments.type-declaration" class="link">类型声明</a>一样,
-返回值类型声明将指定该函数返回值的类型。同样，返回值类型声明也与
+<a href="/functions/arguments.html#functions.arguments.type-declaration" class="link">类型声明</a>
+一样, 返回值类型声明将指定该函数返回值的类型。同样，返回值类型声明也与
 <a href="/functions/arguments.html#functions.arguments.type-declaration.types" class="link">有效类型</a>
 中可用的参数类型声明一致。
 
-<a href="/functions/arguments.html#functions.arguments.type-declaration.strict" class="link">严格类型</a>
-也会影响返回值类型声明。在默认的弱模式中，如果返回值与返回值的类型不一致，则会被强制转换为返回值声明的类型。在强模式中，返回值的类型必须正确，否则将会抛出一个<span
-class="classname">TypeError</span>异常.
+<a href="/functions/arguments.html#functions.arguments.type-declaration.strict" class="link">严格类型声明</a>
+也会影响返回值类型声明。在默认情况下，如果返回值与返回值的类型不一致，则会被强制转换为返回值声明的类型，在强制转换失败的情况下才会抛出
+<span class="classname">TypeError</span> 异常（例如：函数预期返回 <span
+class="type">array</span> 实际返回 <span class="type">integer</span>
+的情况，无法强制转换）。而在严格类型声明模式中，返回值的类型必须与预期一致，否则将会直接抛出
+<span class="classname">TypeError</span> 异常。
 
-As of PHP 7.1.0, return values can be marked as nullable by prefixing
-the type name with a question mark (*?*). This signifies that the
-function returns either the specified type or **`NULL`**.
+从 PHP 7.1.0 开始，不指定类型的返回语句会导致一个 **`E_COMPILE_ERROR`**
+错误，除非指定了返回类型为 <span
+class="type">void</span>，在此情况下，带有指定类型的返回会触发此错误。
+
+从 7.1.0 开始，返回值可以通过在类型前添加问号 (*?*)
+来标记为允许返回空值。这表示该函数将返回指定类型或 **`NULL`**。
 
 > **Note**:
 >
@@ -139,7 +145,7 @@ var_dump(getC());
     object(C)#1 (0) {
     }
 
-**示例 \#7 Nullable return type declaration (as of PHP 7.1.0)**
+**示例 \#7 指定可选返回空值 (PHP 7.1.0 起可用)**
 
 ``` php
 <?php

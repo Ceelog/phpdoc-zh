@@ -4,7 +4,10 @@
 通过参数列表可以传递信息到函数，即以逗号作为分隔符的表达式列表。参数是从左向右求值的。
 
 PHP
-支持按值传递参数（默认），<a href="/functions/arguments.html#functions.arguments.by-reference" class="link">通过引用传递参数</a>以及<a href="/functions/arguments.html#functions.arguments.default" class="link">默认参数</a>。也支持<a href="/functions/arguments.html#functions.variable-arg-list" class="link">可变长度参数列表</a>。
+支持按值传递参数（默认），<a href="/functions/arguments.html#functions.arguments.by-reference" class="link">通过引用传递参数</a>
+以及
+<a href="/functions/arguments.html#functions.arguments.default" class="link">默认参数</a>。也支持
+<a href="/functions/arguments.html#functions.variable-arg-list" class="link">可变长度参数列表</a>。
 
 **示例 \#1 向函数传递数组**
 
@@ -128,29 +131,30 @@ echo makeyogurt("raspberry");   // works as expected
 
 > **Note**:
 >
-> 在PHP 5中，类型声明也被称为类型提示。
+> 在 PHP 5 中，类型声明也被称为类型提示。
 
 类型声明允许函数在调用时要求参数为特定类型。
-如果给出的值类型不对，那么将会产生一个错误： 在PHP
-5中，这将是一个可恢复的致命错误，而在PHP 7中将会抛出一个<span
-class="classname">TypeError</span>异常。
+如果给出的值类型不对，那么将会产生一个错误： 在 PHP 5
+中，这将是一个可恢复的致命错误，而在 PHP 7 中将会抛出一个 <span
+class="classname">TypeError</span> 异常。
 
-为了指定一个类型声明，类型应该加到参数名前。这个声明可以通过将参数的默认值设为**`NULL`**来实现允许传递**`NULL`**。
+为了指定一个类型声明，类型应该加到参数名前。这个声明可以通过将参数的默认值设为
+**`NULL`** 来实现允许传递 **`NULL`**。
 
-#### Valid types
+#### 有效类型
 
-| Type                               | Description                                                                                                                                                                                                    | Minimum PHP version |
-|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
-| Class/interface name               | The parameter must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the given class or interface name.                                                                       | PHP 5.0.0           |
-| *self*                             | The parameter must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the same class as the one the method is defined on. This can only be used on class and instance methods. | PHP 5.0.0           |
-| <span class="type">array</span>    | The parameter must be an <span class="type">array</span>.                                                                                                                                                      | PHP 5.1.0           |
-| <span class="type">callable</span> | The parameter must be a valid <span class="type">callable</span>.                                                                                                                                              | PHP 5.4.0           |
-| <span class="type">bool</span>     | The parameter must be a <span class="type">boolean</span> value.                                                                                                                                               | PHP 7.0.0           |
-| <span class="type">float</span>    | The parameter must be a <span class="type">float</span>ing point number.                                                                                                                                       | PHP 7.0.0           |
-| <span class="type">int</span>      | The parameter must be an <span class="type">integer</span>.                                                                                                                                                    | PHP 7.0.0           |
-| <span class="type">string</span>   | The parameter must be a <span class="type">string</span>.                                                                                                                                                      | PHP 7.0.0           |
-| *iterable*                         | The parameter must be either an <span class="type">array</span> or an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> <span class="classname">Traversable</span>.                 | PHP 7.1.0           |
-| *object*                           | The parameter must be an <span class="type">object</span>.                                                                                                                                                     | PHP 7.2.0           |
+| 类型                               | 描述                                                                                                                                                                       | 最小可用 PHP 版本 |
+|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| Class/interface name               | 参数为指定类或接口的 <a href="/language/operators/type.html" class="link"><em>instanceof</em></a>。                                                                        | PHP 5.0.0         |
+| *self*                             | 参数为当前类的 <a href="/language/operators/type.html" class="link"><em>instanceof</em></a>。可以为类或接口。                                                              | PHP 5.0.0         |
+| <span class="type">array</span>    | 参数必须为 <span class="type">array</span>。                                                                                                                               | PHP 5.1.0         |
+| <span class="type">callable</span> | 参数必须为有效的 <span class="type">callable</span>。                                                                                                                      | PHP 5.4.0         |
+| <span class="type">bool</span>     | 参数必须为 <span class="type">boolean</span> 值。                                                                                                                          | PHP 7.0.0         |
+| <span class="type">float</span>    | 参数必须为 <span class="type">float</span> 浮点数。                                                                                                                        | PHP 7.0.0         |
+| <span class="type">int</span>      | 参数必须为 <span class="type">integer</span>。                                                                                                                             | PHP 7.0.0         |
+| <span class="type">string</span>   | 参数必须为 <span class="type">string</span>。                                                                                                                              | PHP 7.0.0         |
+| *iterable*                         | 参数必须为 <span class="type">array</span> 或 <span class="classname">Traversable</span> 的 <a href="/language/operators/type.html" class="link"><em>instanceof</em></a>。 | PHP 7.1.0         |
+| *object*                           | 参数必须为 <span class="type">object</span>。                                                                                                                              | PHP 7.2.0         |
 
 **Warning**
 
@@ -176,7 +180,7 @@ class="type">bool</span>:
 
 #### 范例
 
-**示例 \#7 Basic class type declaration**
+**示例 \#7 基类类型声明**
 
 ``` php
 <?php
@@ -207,7 +211,7 @@ f(new E);
     #1 {main}
       thrown in - on line 8
 
-**示例 \#8 Basic interface type declaration**
+**示例 \#8 接口类类型声明**
 
 ``` php
 <?php
@@ -261,7 +265,7 @@ array_baz($var);
 
     Fatal error: Uncaught TypeError: Argument 1 passed to array_baz() must be of the type array, int given, called in %s on line %d
 
-**示例 \#10 Nullable type declaration**
+**示例 \#10 可空类型声明**
 
 ``` php
 <?php
@@ -282,38 +286,41 @@ f(null);
     }
     NULL
 
-#### 严格类型
+#### 严格类型声明
 
-默认情况下，如果能做到的话，PHP将会强迫错误类型的值转为函数期望的标量类型。
-例如，一个函数的一个参数期望是<span
-class="type">string</span>，但传入的是<span
-class="type">integer</span>，最终函数得到的将会是一个<span
-class="type">string</span>类型的值。
+默认情况下，如果能做到的话，PHP
+将会强迫错误类型的值转为函数期望的标量类型。
+例如，一个函数的一个参数期望是 <span
+class="type">string</span>，但传入的是 <span
+class="type">integer</span>，最终函数得到的将会是一个 <span
+class="type">string</span> 类型的值。
 
-可以基于每一个文件开启严格模式。在严格模式中，只有一个与类型声明完全相符的变量才会被接受，否则将会抛出一个<span
-class="classname">TypeError</span>。 唯一的一个例外是可以将<span
-class="type">integer</span>传给一个期望<span
-class="type">float</span>的函数。
+可以基于每一个文件开启严格模式。在严格模式中，只有一个与类型声明完全相符的变量才会被接受，否则将会抛出一个
+<span class="classname">TypeError</span>。唯一的一个例外是可以将 <span
+class="type">integer</span> 传给一个期望 <span class="type">float</span>
+的函数。
 
 使用
 <a href="/control-structures/declare.html" class="link"><em>declare</em></a>
-语句和*strict\_types* 声明来启用严格模式：
+语句和 *strict\_types* 声明来启用严格模式：
 
 **Caution**
 
-启用严格模式同时也会影响<a href="/functions/returning-values.html#functions.returning-values.type-declaration" class="link">返回值类型声明</a>.
+启用严格模式同时也会影响
+<a href="/functions/returning-values.html#functions.returning-values.type-declaration" class="link">返回值类型声明</a>。
 
 > **Note**:
 >
-> 严格类型适用于在*启用严格模式的文件内*的函数调用，而不是在那个文件内声明的函数。
+> 严格类型适用于在 *启用严格模式的文件内*
+> 的函数调用，而不是在那个文件内声明的函数。
 > 一个没有启用严格模式的文件内调用了一个在启用严格模式的文件中定义的函数，那么将会遵循调用者的偏好（弱类型），而这个值将会被转换。
 
 > **Note**:
 >
-> 严格类型仅用于标量类型声明，也正是因为如此，这需要PHP 7.0.0
+> 严格类型仅用于标量类型声明，也正是因为如此，这需要 PHP 7.0.0
 > 或更新版本，因为标量类型声明也是在那个版本中添加的。
 
-**示例 \#11 Strict typing**
+**示例 \#11 严格类型**
 
 ``` php
 <?php
@@ -338,7 +345,7 @@ var_dump(sum(1.5, 2.5));
     #1 {main}
       thrown in - on line 4
 
-**示例 \#12 Weak typing**
+**示例 \#12 弱类型转换**
 
 ``` php
 <?php
@@ -358,7 +365,7 @@ var_dump(sum(1.5, 2.5));
     int(3)
     int(3)
 
-**示例 \#13 Catching <span class="classname">TypeError</span>**
+**示例 \#13 捕捉 <span class="classname">TypeError</span>**
 
 ``` php
 <?php
@@ -392,12 +399,10 @@ class="function">func\_get\_args</span> 。
 
 #### *...* in PHP 5.6+
 
-In PHP 5.6 and later, argument lists may include the *...* token to
-denote that the function accepts a variable number of arguments. The
-arguments will be passed into the given variable as an array; for
-example:
+PHP 5.6 之后的版本中，包含 *...*
+的参数，会转换为指定参数变量的一个数组，见以下示例：
 
-**示例 \#14 Using *...* to access variable arguments**
+**示例 \#14 使用 *...* 来访问变量参数**
 
 ``` php
 <?php
@@ -417,11 +422,10 @@ echo sum(1, 2, 3, 4);
 
     10
 
-You can also use *...* when calling functions to unpack an <span
-class="type">array</span> or <span class="classname">Traversable</span>
-variable or literal into the argument list:
+也可以使用 *...* 语法来传递 <span class="type">array</span> 或 <span
+class="classname">Traversable</span> 做为参数到函数中：
 
-**示例 \#15 Using *...* to provide arguments**
+**示例 \#15 使用 *...* 来传递参数**
 
 ``` php
 <?php
@@ -450,7 +454,7 @@ It is also possible to add a
 before the *...* token. If this is present, then all arguments captured
 by *...* must be objects of the hinted class.
 
-**示例 \#16 Type hinted variable arguments**
+**示例 \#16 输入提示的变量参数**
 
 ``` php
 <?php
@@ -480,18 +484,16 @@ Finally, you may also pass variable arguments
 <a href="/functions/arguments.html#functions.arguments.by-reference" class="link">by reference</a>
 by prefixing the *...* with an ampersand (*&*).
 
-#### Older versions of PHP
+#### 旧版本的 PHP
 
-No special syntax is required to note that a function is variadic;
-however access to the function's arguments must use <span
+不需要特殊的语法来声明一个函数是可变的；但是访问函数的参数必须使用 <span
 class="function">func\_num\_args</span>, <span
-class="function">func\_get\_arg</span> and <span
-class="function">func\_get\_args</span>.
+class="function">func\_get\_arg</span> 和 <span
+class="function">func\_get\_args</span> 函数。
 
-The first example above would be implemented as follows in PHP 5.5 and
-earlier:
+上面的第一个例子在 PHP 5.5 和更早的版本中的实现如下：
 
-**示例 \#17 Accessing variable arguments in PHP 5.5 and earlier**
+**示例 \#17 在 PHP 5.5 和更早的版本中访问可变参数**
 
 ``` php
 <?php

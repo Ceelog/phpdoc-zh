@@ -72,7 +72,7 @@
     -   [可变函数](/functions/variable-functions.html)
     -   [内部（内置）函数](/functions/internal.html)
     -   [匿名函数](/functions/anonymous.html)
-    -   [Arrow Functions](/functions/arrow.html)
+    -   [箭头函数](/functions/arrow.html)
 -   [类与对象](/language/oop5.html)
     -   [简介](/oop5/intro.html)
     -   [基本概念](/language/oop5/basic.html)

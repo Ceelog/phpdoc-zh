@@ -15,19 +15,20 @@ function foo($arg_1, $arg_2, /* ..., */ $arg_n)
 ?>
 ```
 
-任何有效的 PHP
-代码都有可能出现在函数内部，甚至包括其它函数和<a href="/language/oop5/basic.html#language.oop5.basic.class" class="link">类</a>定义。
+任何有效的 PHP 代码都有可能出现在函数内部，甚至包括其它函数和
+<a href="/language/oop5/basic.html#language.oop5.basic.class" class="link">类</a>定义。
 
 函数名和 PHP
-中的其它标识符命名规则相同。有效的函数名以字母或下划线打头，后面跟字母，数字或下划线。可以用正则表达式表示为：`^[a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*$`。
+中的其它标识符命名规则相同。有效的函数名以字母或下划线打头，后面跟字母，数字或下划线。可以用正则表达式表示为:
+`^[a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*$`。
 
 **小贴士**
 
 请参见<a href="/userlandnaming.html" class="xref">用户空间命名指南</a>。
 
-函数无需在调用之前被定义，*除非*是下面两个例子中函数是有条件被定义时。
+函数无需在调用之前被定义，*除非* 是下面两个例子中函数是有条件被定义时。
 
-当一个函数是有条件被定义时，必须在调用函数*之前*定义。
+当一个函数是有条件被定义时，必须在调用函数 *之前* 定义。
 
 **示例 \#2 有条件的函数**
 
@@ -94,8 +95,10 @@ PHP 不支持函数重载，也不可能取消定义或者重定义已声明的�
 > 函数名是大小写无关的，不过在调用函数的时候，使用其在定义时相同的形式是个好习惯。
 > </span>
 
-PHP
-的函数支持<a href="/functions/arguments.html#functions.variable-arg-list" class="link">可变数量的参数</a>和<a href="/functions/arguments.html#functions.arguments.default" class="link">默认参数</a>。参见
+PHP 的函数支持
+<a href="/functions/arguments.html#functions.variable-arg-list" class="link">可变数量的参数</a>
+和
+<a href="/functions/arguments.html#functions.arguments.default" class="link">默认参数</a>。参见
 <span class="function">func\_num\_args</span>，<span
 class="function">func\_get\_arg</span> 和 <span
 class="function">func\_get\_args</span>。

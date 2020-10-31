@@ -90,8 +90,8 @@ Foo::$variable();  // This calls $foo->Variable() reading $variable in this scop
 ?>
 ```
 
-As of PHP 5.4.0, you can call any <span class="type">callable</span>
-stored in a variable.
+PHP 5.4.0, you can call any <span class="type">callable</span> stored in
+a variable.
 
 **示例 \#4 Complex callables**
 
@@ -126,5 +126,5 @@ class="function">call\_user\_func</span>，<a href="/language/variables/variable
 
 | 版本  | 说明                                                                  |
 |-------|-----------------------------------------------------------------------|
-| 7.0.0 | 'ClassName::methodName' is allowed as variable function.              |
+| 7.0.0 | 'ClassName::methodName' 允许为可变函数。                              |
 | 5.4.0 | Arrays, which are valid callables, are allowed as variable functions. |
