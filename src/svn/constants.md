@@ -3,7 +3,7 @@
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-**`SVN_REVISION_HEAD`** (<span class="type">integer</span>)  
+**`SVN_REVISION_HEAD`** (<span class="type">int</span>)  
 <span class="simpara"> Magic number (-1) specifying the HEAD revision
 </span>
 

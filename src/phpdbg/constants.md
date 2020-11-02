@@ -6,23 +6,23 @@
 **`PHPDBG_VERSION`** (<span class="type">string</span>)  
 <span class="simpara"> </span>
 
-**`PHPDBG_FILE`** (<span class="type">integer</span>)  
+**`PHPDBG_FILE`** (<span class="type">int</span>)  
 <span class="simpara"> Removed as of PHP 7.3.0. </span>
 
-**`PHPDBG_METHOD`** (<span class="type">integer</span>)  
+**`PHPDBG_METHOD`** (<span class="type">int</span>)  
 <span class="simpara"> Removed as of PHP 7.3.0. </span>
 
-**`PHPDBG_LINENO`** (<span class="type">integer</span>)  
+**`PHPDBG_LINENO`** (<span class="type">int</span>)  
 <span class="simpara"> Removed as of PHP 7.3.0. </span>
 
-**`PHPDBG_FUNC`** (<span class="type">integer</span>)  
+**`PHPDBG_FUNC`** (<span class="type">int</span>)  
 <span class="simpara"> Removed as of PHP 7.3.0. </span>
 
-**`PHPDBG_COLOR_PROMPT`** (<span class="type">integer</span>)  
+**`PHPDBG_COLOR_PROMPT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`PHPDBG_COLOR_NOTICE`** (<span class="type">integer</span>)  
+**`PHPDBG_COLOR_NOTICE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`PHPDBG_COLOR_ERROR`** (<span class="type">integer</span>)  
+**`PHPDBG_COLOR_ERROR`** (<span class="type">int</span>)  
 <span class="simpara"> </span>

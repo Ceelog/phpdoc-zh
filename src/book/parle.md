@@ -164,36 +164,36 @@ not compatible with this lexer.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Lexer::ICASE` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Lexer::DOT_NOT_LF` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Lexer::DOT_NOT_CRLF` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Lexer::SKIP_WS` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Lexer::MATCH_ZERO_LEN` <span class="initializer"> = 16</span> ;
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 `$bol` <span class="initializer"> = **`FALSE`**</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$flags` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$state` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$marker` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$cursor` <span class="initializer"> = 0</span> ;
 
 /\* 方法 \*/
@@ -510,36 +510,36 @@ lexer.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RLexer::ICASE` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RLexer::DOT_NOT_LF` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RLexer::DOT_NOT_CRLF` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RLexer::SKIP_WS` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RLexer::MATCH_ZERO_LEN` <span class="initializer"> = 16</span> ;
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 `$bol` <span class="initializer"> = **`FALSE`**</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$flags` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$state` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$marker` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$cursor` <span class="initializer"> = 0</span> ;
 
 /\* 方法 \*/
@@ -930,38 +930,38 @@ the token stream.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Parser::ACTION_ERROR` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Parser::ACTION_SHIFT` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Parser::ACTION_REDUCE` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Parser::ACTION_GOTO` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Parser::ACTION_ACCEPT` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Parser::ERROR_SYNTAX` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Parser::ERROR_NON_ASSOCIATIVE` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Parser::ERROR_UNKNOWN_TOKEN` <span class="initializer"> =
 2</span> ;
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$action` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$reduceId` <span class="initializer"> = 0</span> ;
 
 /\* 方法 \*/
@@ -1277,7 +1277,7 @@ The rule to be added. The syntax is Bison compatible.
 
 ### 返回值
 
-Returns <span class="type">integer</span> representing the rule index.
+Returns <span class="type">int</span> representing the rule index.
 
 Parle\\Parser::reset
 ====================
@@ -1389,7 +1389,7 @@ class="methodname">Parle\\Parser::token</span>.
 
 ### 返回值
 
-Returns <span class="type">integer</span> representing the token id.
+Returns <span class="type">int</span> representing the token id.
 
 Parle\\Parser::trace
 ====================
@@ -1440,7 +1440,7 @@ grammar.
 
 ### 返回值
 
-Returns <span class="type">boolean</span> witnessing whether the input
+Returns <span class="type">bool</span> witnessing whether the input
 chimes or not with the defined rules.
 
 简介
@@ -1459,38 +1459,38 @@ the token stream.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RParser::ACTION_ERROR` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RParser::ACTION_SHIFT` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RParser::ACTION_REDUCE` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RParser::ACTION_GOTO` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RParser::ACTION_ACCEPT` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RParser::ERROR_SYNTAX` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RParser::ERROR_NON_ASSOCIATIVE` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\RParser::ERROR_UNKNOWN_TOKEN` <span class="initializer"> =
 2</span> ;
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$action` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$reduceId` <span class="initializer"> = 0</span> ;
 
 /\* 方法 \*/
@@ -1806,7 +1806,7 @@ The rule to be added. The syntax is Bison compatible.
 
 ### 返回值
 
-Returns <span class="type">integer</span> representing the rule index.
+Returns <span class="type">int</span> representing the rule index.
 
 Parle\\RParser::reset
 =====================
@@ -1918,7 +1918,7 @@ class="methodname">Parle\\RParser::token</span>.
 
 ### 返回值
 
-Returns <span class="type">integer</span> representing the token id.
+Returns <span class="type">int</span> representing the token id.
 
 Parle\\RParser::trace
 =====================
@@ -1969,7 +1969,7 @@ grammar.
 
 ### 返回值
 
-Returns <span class="type">boolean</span> whitnessing whether the input
+Returns <span class="type">bool</span> whitnessing whether the input
 chimes or not with the defined rules.
 
 简介
@@ -1987,10 +1987,10 @@ elements are inserted and removed only from one end.
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 `$empty` <span class="initializer"> = **`TRUE`**</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$size` <span class="initializer"> = 0</span> ;
 
 <span class="modifier">public</span> <span class="type">mixed</span>
@@ -2073,19 +2073,19 @@ This class represents a token. Lexer returns instances of this class.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Token::EOI` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Token::UNKNOWN` <span class="initializer"> = -1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Parle\Token::SKIP` <span class="initializer"> = -2</span> ;
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">integer</span>
-`$id` ;
+<span class="modifier">public</span> <span class="type">int</span> `$id`
+;
 
 <span class="modifier">public</span> <span class="type">string</span>
 `$value` ;
@@ -2130,10 +2130,10 @@ class="methodname">Parle\\Parser::errorInfo</span>
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">integer</span>
-`$id` ;
+<span class="modifier">public</span> <span class="type">int</span> `$id`
+;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$position` ;
 
 <span class="modifier">public</span> <span class="type">mixed</span>

@@ -1,7 +1,7 @@
 This extension aims at helping people making PHP a stronger typed
 language and can be a good alternative to scalar type hinting. It
 provides different typehandling classes as such as <span
-class="type">integer</span>, <span class="type">float</span>, <span
+class="type">int</span>, <span class="type">float</span>, <span
 class="type">bool</span>, <span class="type">enum</span> and <span
 class="type">string</span>
 

@@ -55,7 +55,7 @@ PECL 扩展安装
 
 这是配置指令的简短说明。
 
-`phar.readonly` <span class="type">boolean</span>  
+`phar.readonly` <span class="type">bool</span>  
 This option disables creation or modification of Phar archives using the
 *phar* stream or <span class="classname">Phar</span> object's write
 support. This setting should always be enabled on production machines,
@@ -71,7 +71,7 @@ common security vulnerabilities.
 > enabled in php.ini, a script may harmlessly "re-enable" the INI
 > variable, but may not disable it.
 
-`phar.require_hash` <span class="type">boolean</span>  
+`phar.require_hash` <span class="type">bool</span>  
 This option will force all opened Phar archives to contain some kind of
 signature (currently MD5, SHA1, SHA256 and SHA512 are supported), and
 will refuse to process any Phar archive that does not contain a

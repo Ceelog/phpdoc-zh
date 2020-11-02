@@ -749,7 +749,7 @@ class="type">array</span> or number.
 
 Returns an array of integers in the form \[seconds, nanoseconds\], if
 the parameter `get_as_number` is false. Otherwise the nanoseconds are
-returned as <span class="type">integer</span> (64bit platforms) or <span
+returned as <span class="type">int</span> (64bit platforms) or <span
 class="type">float</span> (32bit platforms).
 
 ### 范例
@@ -1753,8 +1753,9 @@ Unpack data from binary string
 
 ### 说明
 
-<span class="type">array</span> <span class="methodname">unpack</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span class="methodname">unpack</span>
+( <span class="methodparam"><span class="type">string</span>
 `$format`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span

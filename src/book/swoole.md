@@ -557,9 +557,9 @@ class="methodname">read</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> , <span
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$chunk_size`</span> \[, <span
-class="methodparam"><span class="type">integer</span> `$offset`</span>
-\]\] )
+class="type">int</span> `$chunk_size`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$offset`</span> \]\]
+)
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
@@ -578,7 +578,7 @@ class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">write</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> , <span
 class="methodparam"><span class="type">string</span> `$content`</span>
-\[, <span class="methodparam"><span class="type">integer</span>
+\[, <span class="methodparam"><span class="type">int</span>
 `$offset`</span> \[, <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \]\] )
 
@@ -642,9 +642,9 @@ class="methodname">Swoole\\Async::read</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 , <span class="methodparam"><span class="type">callable</span>
 `$callback`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$chunk_size`</span> \[, <span
-class="methodparam"><span class="type">integer</span> `$offset`</span>
-\]\] )
+class="type">int</span> `$chunk_size`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$offset`</span> \]\]
+)
 
 ### 参数
 
@@ -735,7 +735,7 @@ class="methodname">Swoole\\Async::write</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$content`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$offset`</span> \[, <span
+class="type">int</span> `$offset`</span> \[, <span
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> \]\] )
 
@@ -797,27 +797,25 @@ The content writing to the file.
 
 /\* 方法 \*/
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">add</span> (\[ <span class="methodparam"><span
-class="type">integer</span> `$add_value`</span> \] )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">add</span> (\[ <span class="methodparam"><span
+class="type">int</span> `$add_value`</span> \] )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">cmpset</span> ( <span class="methodparam"><span
-class="type">integer</span> `$cmp_value`</span> , <span
-class="methodparam"><span class="type">integer</span>
-`$new_value`</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">cmpset</span> ( <span class="methodparam"><span
+class="type">int</span> `$cmp_value`</span> , <span
+class="methodparam"><span class="type">int</span> `$new_value`</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">get</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">get</span> ( <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">set</span> ( <span class="methodparam"><span
-class="type">integer</span> `$value`</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">set</span> ( <span class="methodparam"><span
+class="type">int</span> `$value`</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">sub</span> (\[ <span class="methodparam"><span
-class="type">integer</span> `$sub_value`</span> \] )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">sub</span> (\[ <span class="methodparam"><span
+class="type">int</span> `$sub_value`</span> \] )
 
 }
 
@@ -828,10 +826,10 @@ Add a number to the value to the atomic object.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Atomic::add</span> (\[ <span
-class="methodparam"><span class="type">integer</span>
-`$add_value`</span> \] )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Atomic::add</span> (\[ <span
+class="methodparam"><span class="type">int</span> `$add_value`</span> \]
+)
 
 Add a number to the value to the atomic object.
 
@@ -851,11 +849,11 @@ Compare and set the value of the atomic object.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Atomic::cmpset</span> ( <span
-class="methodparam"><span class="type">integer</span>
-`$cmp_value`</span> , <span class="methodparam"><span
-class="type">integer</span> `$new_value`</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Atomic::cmpset</span> ( <span
+class="methodparam"><span class="type">int</span> `$cmp_value`</span> ,
+<span class="methodparam"><span class="type">int</span>
+`$new_value`</span> )
 
 ### 参数
 
@@ -879,8 +877,7 @@ Construct a swoole atomic object.
 
 <span class="modifier">public</span> <span
 class="methodname">Swoole\\Atomic::\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">integer</span> `$value`</span> \]
-)
+class="methodparam"><span class="type">int</span> `$value`</span> \] )
 
 Swoole atomic object is a integer variable allows any processor to
 atomically test and modify. It is implemented based on CPU atomic
@@ -904,8 +901,8 @@ Get the current value of the atomic object.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Atomic::get</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Atomic::get</span> ( <span
 class="methodparam">void</span> )
 
 Get the current value of the atomic object.
@@ -925,9 +922,9 @@ Set a new value to the atomic object.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Atomic::set</span> ( <span
-class="methodparam"><span class="type">integer</span> `$value`</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Atomic::set</span> ( <span
+class="methodparam"><span class="type">int</span> `$value`</span> )
 
 Set a new value to the atomic object.
 
@@ -951,10 +948,10 @@ Subtract a number to the value of the atomic object.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Atomic::sub</span> (\[ <span
-class="methodparam"><span class="type">integer</span>
-`$sub_value`</span> \] )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Atomic::sub</span> (\[ <span
+class="methodparam"><span class="type">int</span> `$sub_value`</span> \]
+)
 
 Subtract a number to the value of the atomic object.
 
@@ -979,8 +976,8 @@ The current value of the atomic object.
 
 /\* 方法 \*/
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">append</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">append</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
@@ -991,14 +988,14 @@ class="methodparam">void</span> )
 <span class="methodname">\_\_destruct</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">expand</span> ( <span class="methodparam"><span
-class="type">integer</span> `$size`</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">expand</span> ( <span class="methodparam"><span
+class="type">int</span> `$size`</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">read</span> ( <span class="methodparam"><span
-class="type">integer</span> `$offset`</span> , <span
-class="methodparam"><span class="type">integer</span> `$length`</span> )
+class="type">int</span> `$offset`</span> , <span
+class="methodparam"><span class="type">int</span> `$length`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">recycle</span> ( <span
@@ -1006,9 +1003,9 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">substr</span> ( <span class="methodparam"><span
-class="type">integer</span> `$offset`</span> \[, <span
-class="methodparam"><span class="type">integer</span> `$length`</span>
-\[, <span class="methodparam"><span class="type">bool</span>
+class="type">int</span> `$offset`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$length`</span> \[,
+<span class="methodparam"><span class="type">bool</span>
 `$remove`</span> \]\] )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -1017,7 +1014,7 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">write</span> ( <span class="methodparam"><span
-class="type">integer</span> `$offset`</span> , <span
+class="type">int</span> `$offset`</span> , <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
 }
@@ -1030,8 +1027,8 @@ return the new size of memory allocated.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Buffer::append</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Buffer::append</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
 ### 参数
@@ -1067,8 +1064,7 @@ Fixed size memory blocks allocation.
 
 <span class="modifier">public</span> <span
 class="methodname">Swoole\\Buffer::\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">integer</span> `$size`</span> \]
-)
+class="methodparam"><span class="type">int</span> `$size`</span> \] )
 
 ### 参数
 
@@ -1101,9 +1097,9 @@ Expand the size of memory buffer.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Buffer::expand</span> ( <span
-class="methodparam"><span class="type">integer</span> `$size`</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Buffer::expand</span> ( <span
+class="methodparam"><span class="type">int</span> `$size`</span> )
 
 ### 参数
 
@@ -1123,9 +1119,9 @@ Read data from the memory buffer based on offset and length.
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">Swoole\\Buffer::read</span> ( <span
-class="methodparam"><span class="type">integer</span> `$offset`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$length`</span> )
+class="methodparam"><span class="type">int</span> `$offset`</span> ,
+<span class="methodparam"><span class="type">int</span> `$length`</span>
+)
 
 ### 参数
 
@@ -1164,10 +1160,10 @@ data from the memory buffer.
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">Swoole\\Buffer::substr</span> ( <span
-class="methodparam"><span class="type">integer</span> `$offset`</span>
-\[, <span class="methodparam"><span class="type">integer</span>
-`$length`</span> \[, <span class="methodparam"><span
-class="type">bool</span> `$remove`</span> \]\] )
+class="methodparam"><span class="type">int</span> `$offset`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$length`</span>
+\[, <span class="methodparam"><span class="type">bool</span>
+`$remove`</span> \]\] )
 
 If $remove is set to be true and $offset is set to be 0, the data will
 be removed from the buffer. The memory for storing the data will be
@@ -1217,7 +1213,7 @@ will not be changed.
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Buffer::write</span> ( <span
-class="methodparam"><span class="type">integer</span> `$offset`</span> ,
+class="methodparam"><span class="type">int</span> `$offset`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$data`</span> )
 
@@ -1381,16 +1377,16 @@ The stats of the Swoole channel.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Client::MSG_OOB` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Client::MSG_PEEK` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Client::MSG_DONTWAIT` <span class="initializer"> = 128</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Client::MSG_WAITALL` <span class="initializer"> = 64</span> ;
 
 /\* 属性 \*/
@@ -1412,11 +1408,10 @@ class="methodparam"><span class="type">bool</span> `$force`</span> \] )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$timeout`</span> \[, <span
-class="methodparam"><span class="type">integer</span> `$flag`</span>
-\]\]\] )
+<span class="methodparam"><span class="type">int</span> `$port`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$timeout`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$flag`</span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">\_\_destruct</span> ( <span
@@ -1458,23 +1453,22 @@ class="methodparam"><span class="type">string</span> `$flag`</span> \]\]
 <span class="methodname">resume</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">send</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">send</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$flag`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">sendfile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$offset`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">sendto</span> ( <span class="methodparam"><span
 class="type">string</span> `$ip`</span> , <span
-class="methodparam"><span class="type">integer</span> `$port`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$data`</span> )
+class="methodparam"><span class="type">int</span> `$port`</span> , <span
+class="methodparam"><span class="type">string</span> `$data`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">set</span> ( <span class="methodparam"><span
@@ -1542,11 +1536,10 @@ Connect to the remote TCP or UDP port.
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Client::connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$timeout`</span> \[, <span
-class="methodparam"><span class="type">integer</span> `$flag`</span>
-\]\]\] )
+<span class="methodparam"><span class="type">int</span> `$port`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$timeout`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$flag`</span> \]\]\] )
 
 ### 参数
 
@@ -1580,7 +1573,7 @@ Create Swoole sync or async TCP/UDP client, with or without SSL.
 <span class="modifier">public</span> <span
 class="methodname">Swoole\\Client::\_\_construct</span> ( <span
 class="methodparam"><span class="type">int</span> `$sock_type`</span>
-\[, <span class="methodparam"><span class="type">integer</span>
+\[, <span class="methodparam"><span class="type">int</span>
 `$is_async`</span> \] )
 
 ### 参数
@@ -1766,8 +1759,8 @@ Send data to the remote TCP socket.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Client::send</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Client::send</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$flag`</span> \] )
@@ -1793,7 +1786,7 @@ Send file to the remote TCP socket.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Client::sendfile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -1818,12 +1811,12 @@ Send data to the remote UDP address.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Client::sendto</span> ( <span
 class="methodparam"><span class="type">string</span> `$ip`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> , <span class="methodparam"><span
-class="type">string</span> `$data`</span> )
+<span class="methodparam"><span class="type">int</span> `$port`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$data`</span> )
 
 The swoole client should be type of SWOOLE\_SOCK\_UDP or
 SWOOLE\_SOCK\_UDP6.
@@ -1926,7 +1919,7 @@ class="methodname">key</span> ( <span class="methodparam">void</span> )
 class="type">Connection</span> <span class="methodname">next</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">offsetExists</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
@@ -1949,7 +1942,7 @@ class="methodparam"><span class="type">int</span> `$offset`</span> )
 <span class="methodname">rewind</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">valid</span> ( <span
 class="methodparam">void</span> )
 
@@ -2046,7 +2039,7 @@ Check if offet exists.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span
 class="methodname">Swoole\\Connection\\Iterator::offsetExists</span> (
 <span class="methodparam"><span class="type">int</span> `$index`</span>
@@ -2156,7 +2149,7 @@ Check if current position is valid.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Connection\\Iterator::valid</span> (
 <span class="methodparam">void</span> )
 
@@ -2193,8 +2186,8 @@ class="type">array</span> `$param_array`</span> )
 class="modifier">static</span> <span class="type">mixed</span> <span
 class="methodname">call\_user\_func</span> ( <span
 class="methodparam"><span class="type">callable</span>
-`$callback`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$callback`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$args`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">ReturnType</span>
@@ -2261,8 +2254,8 @@ Call a callback given by the first parameter
 class="modifier">static</span> <span class="type">mixed</span> <span
 class="methodname">Swoole\\Coroutine::call\_user\_func</span> ( <span
 class="methodparam"><span class="type">callable</span>
-`$callback`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$callback`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$args`</span> )
 
 Calls the `callback` given by the first parameter and passes the
 remaining parameters as arguments.
@@ -2272,7 +2265,7 @@ remaining parameters as arguments.
 `callback`  
 The <span class="type">callable</span> to be called.
 
-`...`  
+`args`  
 Zero or more parameters to be passed to the callback.
 
 ### 返回值
@@ -2396,7 +2389,7 @@ class="methodparam">void</span> )
 /\* 方法 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">boolean</span> <span
+class="modifier">static</span> <span class="type">bool</span> <span
 class="methodname">add</span> ( <span class="methodparam"><span
 class="type">int</span> `$fd`</span> , <span class="methodparam"><span
 class="type">callable</span> `$read_callback`</span> \[, <span
@@ -2410,7 +2403,7 @@ class="methodname">defer</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$callback`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">boolean</span> <span
+class="modifier">static</span> <span class="type">bool</span> <span
 class="methodname">del</span> ( <span class="methodparam"><span
 class="type">string</span> `$fd`</span> )
 
@@ -2419,7 +2412,7 @@ class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">exit</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">boolean</span> <span
+class="modifier">static</span> <span class="type">bool</span> <span
 class="methodname">set</span> ( <span class="methodparam"><span
 class="type">int</span> `$fd`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$read_callback`</span> \[, <span
@@ -2447,7 +2440,7 @@ Add new callback functions of a socket into the EventLoop.
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">boolean</span> <span
+class="modifier">static</span> <span class="type">bool</span> <span
 class="methodname">Swoole\\Event::add</span> ( <span
 class="methodparam"><span class="type">int</span> `$fd`</span> , <span
 class="methodparam"><span class="type">callable</span>
@@ -2494,7 +2487,7 @@ Remove all event callback functions of a socket.
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">boolean</span> <span
+class="modifier">static</span> <span class="type">bool</span> <span
 class="methodname">Swoole\\Event::del</span> ( <span
 class="methodparam"><span class="type">string</span> `$fd`</span> )
 
@@ -2530,7 +2523,7 @@ Update the event callback functions of a socket.
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">boolean</span> <span
+class="modifier">static</span> <span class="type">bool</span> <span
 class="methodname">Swoole\\Event::set</span> ( <span
 class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
 class="methodparam"><span class="type">string</span>
@@ -2666,8 +2659,7 @@ class="methodparam"><span class="type">string</span> `$path`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$file`</span> , <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \[, <span
-class="methodparam"><span class="type">integer</span> `$offset`</span>
-\] )
+class="methodparam"><span class="type">int</span> `$offset`</span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">execute</span> ( <span
@@ -2681,7 +2673,7 @@ class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">isConnected</span> ( <span
 class="methodparam">void</span> )
 
@@ -2801,7 +2793,7 @@ class="methodname">Swoole\\Http\\Client::\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$port`</span> \[, <span class="methodparam"><span
-class="type">boolean</span> `$ssl`</span> \]\] )
+class="type">bool</span> `$ssl`</span> \]\] )
 
 ### 参数
 
@@ -2844,8 +2836,7 @@ class="methodparam"><span class="type">string</span> `$path`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$file`</span> , <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \[, <span
-class="methodparam"><span class="type">integer</span> `$offset`</span>
-\] )
+class="methodparam"><span class="type">int</span> `$offset`</span> \] )
 
 ### 参数
 
@@ -2908,7 +2899,7 @@ Check if the HTTP connection is connected.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Http\\Client::isConnected</span> (
 <span class="methodparam">void</span> )
 
@@ -3508,11 +3499,11 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::addlistener</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> , <span class="methodparam"><span
-class="type">string</span> `$socket_type`</span> )
+<span class="methodparam"><span class="type">int</span> `$port`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$socket_type`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::addProcess</span> ( <span
 class="methodparam"><span class="type">swoole\_process</span>
 `$process`</span> )
@@ -3520,48 +3511,44 @@ class="methodparam"><span class="type">swoole\_process</span>
 <span class="modifier">public</span> <span
 class="type">ReturnType</span> <span
 class="methodname">Swoole\\Server::after</span> ( <span
-class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span>
 `$after_time_ms`</span> , <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$param`</span> \]
 )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::bind</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$uid`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">int</span> `$uid`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::clearTimer</span> ( <span
-class="methodparam"><span class="type">integer</span> `$timer_id`</span>
-)
+class="methodparam"><span class="type">int</span> `$timer_id`</span> )
 
 <span class="type">void</span> <span
 class="methodname">swoole\_timer\_clear</span> ( <span
-class="methodparam"><span class="type">integer</span> `$timer_id`</span>
-)
+class="methodparam"><span class="type">int</span> `$timer_id`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::close</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">boolean</span>
-`$reset`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$reset`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::confirm</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">Swoole\\Server::connection\_info</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$reactor_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$reactor_id`</span>
+\] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">Swoole\\Server::connection\_list</span> ( <span
-class="methodparam"><span class="type">integer</span> `$start_fd`</span>
-\[, <span class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span> `$start_fd`</span> \[,
+<span class="methodparam"><span class="type">int</span>
 `$pagesize`</span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
@@ -3569,9 +3556,9 @@ class="methodparam"><span class="type">integer</span> `$start_fd`</span>
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::exist</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::finish</span> ( <span
@@ -3580,31 +3567,31 @@ class="methodparam"><span class="type">string</span> `$data`</span> )
 <span class="modifier">public</span> <span
 class="type">ReturnType</span> <span
 class="methodname">Swoole\\Server::getClientInfo</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$reactor_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$reactor_id`</span>
+\] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">Swoole\\Server::getClientList</span> ( <span
-class="methodparam"><span class="type">integer</span> `$start_fd`</span>
-\[, <span class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span> `$start_fd`</span> \[,
+<span class="methodparam"><span class="type">int</span>
 `$pagesize`</span> \] )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Server::getLastError</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Server::getLastError</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">Swoole\\Server::heartbeat</span> ( <span
-class="methodparam"><span class="type">boolean</span>
+class="methodparam"><span class="type">bool</span>
 `$if_close_connection`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::listen</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> , <span class="methodparam"><span
-class="type">string</span> `$socket_type`</span> )
+<span class="methodparam"><span class="type">int</span> `$port`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$socket_type`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::on</span> ( <span
@@ -3614,56 +3601,54 @@ class="type">callable</span> `$callback`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::pause</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::protect</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">boolean</span>
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">bool</span>
 `$is_protected`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::reload</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::resume</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::send</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$data`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$reactor_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">string</span> `$data`</span> \[,
+<span class="methodparam"><span class="type">int</span>
+`$reactor_id`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::sendfile</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$filename`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$offset`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$offset`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::sendMessage</span> ( <span
-class="methodparam"><span class="type">integer</span>
-`$worker_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$data`</span> )
-
-<span class="modifier">public</span> <span class="type">boolean</span>
-<span class="methodname">Swoole\\Server::sendto</span> ( <span
-class="methodparam"><span class="type">string</span> `$ip`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> , <span class="methodparam"><span
-class="type">string</span> `$data`</span> \[, <span
-class="methodparam"><span class="type">string</span>
-`$server_socket`</span> \] )
-
-<span class="modifier">public</span> <span class="type">boolean</span>
-<span class="methodname">Swoole\\Server::sendwait</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
+class="methodparam"><span class="type">int</span> `$worker_id`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$data`</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Swoole\\Server::sendto</span> ( <span
+class="methodparam"><span class="type">string</span> `$ip`</span> ,
+<span class="methodparam"><span class="type">int</span> `$port`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$data`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$server_socket`</span> \] )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Swoole\\Server::sendwait</span> ( <span
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">string</span> `$data`</span> )
 
 <span class="modifier">public</span> <span
 class="type">ReturnType</span> <span
@@ -3682,15 +3667,15 @@ class="methodparam">void</span> )
 <span class="methodname">Swoole\\Server::stats</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::stop</span> (\[ <span
-class="methodparam"><span class="type">integer</span>
-`$worker_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$worker_id`</span> \]
+)
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">Swoole\\Server::task</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
+<span class="methodparam"><span class="type">int</span>
 `$dst_worker_id`</span> \[, <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \]\] )
 
@@ -3699,7 +3684,7 @@ class="type">callable</span> `$callback`</span> \]\] )
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">float</span>
 `$timeout`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$worker_id`</span> \]\] )
+class="type">int</span> `$worker_id`</span> \]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::taskWaitMulti</span> ( <span
@@ -3709,9 +3694,9 @@ class="methodparam"><span class="type">array</span> `$tasks`</span> \[,
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::tick</span> ( <span
-class="methodparam"><span class="type">integer</span>
-`$interval_ms`</span> , <span class="methodparam"><span
-class="type">callable</span> `$callback`</span> )
+class="methodparam"><span class="type">int</span> `$interval_ms`</span>
+, <span class="methodparam"><span class="type">callable</span>
+`$callback`</span> )
 
 }
 
@@ -4198,7 +4183,7 @@ class="interfacename">Throwable</span> </span> {
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Process::IPC_NOWAIT` <span class="initializer"> = 256</span> ;
 
 /\* 方法 \*/
@@ -4206,7 +4191,7 @@ class="interfacename">Throwable</span> </span> {
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">alarm</span> ( <span class="methodparam"><span
-class="type">integer</span> `$interval_usec`</span> )
+class="type">int</span> `$interval_usec`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">close</span> ( <span
@@ -4215,8 +4200,8 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">daemon</span> (\[ <span class="methodparam"><span
-class="type">boolean</span> `$nochdir`</span> \[, <span
-class="methodparam"><span class="type">boolean</span> `$noclose`</span>
+class="type">bool</span> `$nochdir`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$noclose`</span>
 \]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
@@ -4240,7 +4225,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">kill</span> ( <span class="methodparam"><span
-class="type">integer</span> `$pid`</span> \[, <span
+class="type">int</span> `$pid`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$signal_no`</span>
 \] )
 
@@ -4250,15 +4235,15 @@ class="type">string</span> `$process_name`</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">pop</span> (\[ <span class="methodparam"><span
-class="type">integer</span> `$maxsize`</span> \] )
+class="type">int</span> `$maxsize`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">push</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">read</span> (\[ <span class="methodparam"><span
-class="type">integer</span> `$maxsize`</span> \] )
+class="type">int</span> `$maxsize`</span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
@@ -4275,19 +4260,19 @@ class="methodparam">void</span> )
 <span class="methodname">statQueue</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">useQueue</span> ( <span
-class="methodparam"><span class="type">integer</span> `$key`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$mode`</span> \] )
+class="methodparam"><span class="type">int</span> `$key`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$mode`</span>
+\] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">array</span> <span
 class="methodname">wait</span> (\[ <span class="methodparam"><span
-class="type">boolean</span> `$blocking`</span> \] )
+class="type">bool</span> `$blocking`</span> \] )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">write</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">write</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> )
 
 }
@@ -4307,7 +4292,7 @@ High precision timer which triggers signal with fixed interval.
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">Swoole\\Process::alarm</span> ( <span
-class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span>
 `$interval_usec`</span> )
 
 ### 参数
@@ -4346,9 +4331,9 @@ Construct a process.
 class="methodname">Swoole\\Process::\_\_construct</span> ( <span
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> \[, <span class="methodparam"><span
-class="type">boolean</span> `$redirect_stdin_and_stdout`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$pipe_type`</span> \]\] )
+class="type">bool</span> `$redirect_stdin_and_stdout`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$pipe_type`</span>
+\]\] )
 
 ### 参数
 
@@ -4368,8 +4353,8 @@ Change the process to be a daemon process.
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">Swoole\\Process::daemon</span> (\[ <span
-class="methodparam"><span class="type">boolean</span> `$nochdir`</span>
-\[, <span class="methodparam"><span class="type">boolean</span>
+class="methodparam"><span class="type">bool</span> `$nochdir`</span> \[,
+<span class="methodparam"><span class="type">bool</span>
 `$noclose`</span> \]\] )
 
 **Warning**
@@ -4471,7 +4456,7 @@ Send signal to the child process.
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">Swoole\\Process::kill</span> ( <span
-class="methodparam"><span class="type">integer</span> `$pid`</span> \[,
+class="methodparam"><span class="type">int</span> `$pid`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$signal_no`</span> \] )
 
@@ -4512,8 +4497,7 @@ Read and pop data from the message queue.
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">Swoole\\Process::pop</span> (\[ <span
-class="methodparam"><span class="type">integer</span> `$maxsize`</span>
-\] )
+class="methodparam"><span class="type">int</span> `$maxsize`</span> \] )
 
 ### 参数
 
@@ -4528,7 +4512,7 @@ Write and push data into the message queue.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Process::push</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
@@ -4547,8 +4531,7 @@ Read data sending to the process.
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">Swoole\\Process::read</span> (\[ <span
-class="methodparam"><span class="type">integer</span> `$maxsize`</span>
-\] )
+class="methodparam"><span class="type">int</span> `$maxsize`</span> \] )
 
 ### 参数
 
@@ -4626,11 +4609,11 @@ process and child processes.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Process::useQueue</span> ( <span
-class="methodparam"><span class="type">integer</span> `$key`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$mode`</span> \] )
+class="methodparam"><span class="type">int</span> `$key`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$mode`</span>
+\] )
 
 ### 参数
 
@@ -4650,8 +4633,8 @@ Wait for the events of child processes.
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">array</span> <span
 class="methodname">Swoole\\Process::wait</span> (\[ <span
-class="methodparam"><span class="type">boolean</span> `$blocking`</span>
-\] )
+class="methodparam"><span class="type">bool</span> `$blocking`</span> \]
+)
 
 ### 参数
 
@@ -4667,8 +4650,8 @@ child processes.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Process::write</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Process::write</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
 ### 参数
@@ -4691,25 +4674,25 @@ class="ooclass"> <span class="modifier">extends</span>
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Redis\Server::NIL` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Redis\Server::ERROR` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Redis\Server::STATUS` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Redis\Server::INT` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Redis\Server::STRING` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Redis\Server::SET` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Redis\Server::MAP` <span class="initializer"> = 6</span> ;
 
 /\* 方法 \*/
@@ -4739,11 +4722,11 @@ class="type">ReturnType</span> <span class="methodname">start</span> (
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::addlistener</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> , <span class="methodparam"><span
-class="type">string</span> `$socket_type`</span> )
+<span class="methodparam"><span class="type">int</span> `$port`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$socket_type`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::addProcess</span> ( <span
 class="methodparam"><span class="type">swoole\_process</span>
 `$process`</span> )
@@ -4751,48 +4734,44 @@ class="methodparam"><span class="type">swoole\_process</span>
 <span class="modifier">public</span> <span
 class="type">ReturnType</span> <span
 class="methodname">Swoole\\Server::after</span> ( <span
-class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span>
 `$after_time_ms`</span> , <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$param`</span> \]
 )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::bind</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$uid`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">int</span> `$uid`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::clearTimer</span> ( <span
-class="methodparam"><span class="type">integer</span> `$timer_id`</span>
-)
+class="methodparam"><span class="type">int</span> `$timer_id`</span> )
 
 <span class="type">void</span> <span
 class="methodname">swoole\_timer\_clear</span> ( <span
-class="methodparam"><span class="type">integer</span> `$timer_id`</span>
-)
+class="methodparam"><span class="type">int</span> `$timer_id`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::close</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">boolean</span>
-`$reset`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$reset`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::confirm</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">Swoole\\Server::connection\_info</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$reactor_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$reactor_id`</span>
+\] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">Swoole\\Server::connection\_list</span> ( <span
-class="methodparam"><span class="type">integer</span> `$start_fd`</span>
-\[, <span class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span> `$start_fd`</span> \[,
+<span class="methodparam"><span class="type">int</span>
 `$pagesize`</span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
@@ -4800,9 +4779,9 @@ class="methodparam"><span class="type">integer</span> `$start_fd`</span>
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::exist</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::finish</span> ( <span
@@ -4811,31 +4790,31 @@ class="methodparam"><span class="type">string</span> `$data`</span> )
 <span class="modifier">public</span> <span
 class="type">ReturnType</span> <span
 class="methodname">Swoole\\Server::getClientInfo</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$reactor_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$reactor_id`</span>
+\] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">Swoole\\Server::getClientList</span> ( <span
-class="methodparam"><span class="type">integer</span> `$start_fd`</span>
-\[, <span class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span> `$start_fd`</span> \[,
+<span class="methodparam"><span class="type">int</span>
 `$pagesize`</span> \] )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Server::getLastError</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Server::getLastError</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">Swoole\\Server::heartbeat</span> ( <span
-class="methodparam"><span class="type">boolean</span>
+class="methodparam"><span class="type">bool</span>
 `$if_close_connection`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::listen</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> , <span class="methodparam"><span
-class="type">string</span> `$socket_type`</span> )
+<span class="methodparam"><span class="type">int</span> `$port`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$socket_type`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::on</span> ( <span
@@ -4845,56 +4824,54 @@ class="type">callable</span> `$callback`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::pause</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::protect</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">boolean</span>
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">bool</span>
 `$is_protected`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::reload</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::resume</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::send</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$data`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$reactor_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">string</span> `$data`</span> \[,
+<span class="methodparam"><span class="type">int</span>
+`$reactor_id`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::sendfile</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$filename`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$offset`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$offset`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::sendMessage</span> ( <span
-class="methodparam"><span class="type">integer</span>
-`$worker_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$data`</span> )
-
-<span class="modifier">public</span> <span class="type">boolean</span>
-<span class="methodname">Swoole\\Server::sendto</span> ( <span
-class="methodparam"><span class="type">string</span> `$ip`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> , <span class="methodparam"><span
-class="type">string</span> `$data`</span> \[, <span
-class="methodparam"><span class="type">string</span>
-`$server_socket`</span> \] )
-
-<span class="modifier">public</span> <span class="type">boolean</span>
-<span class="methodname">Swoole\\Server::sendwait</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
+class="methodparam"><span class="type">int</span> `$worker_id`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$data`</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Swoole\\Server::sendto</span> ( <span
+class="methodparam"><span class="type">string</span> `$ip`</span> ,
+<span class="methodparam"><span class="type">int</span> `$port`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$data`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$server_socket`</span> \] )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Swoole\\Server::sendwait</span> ( <span
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">string</span> `$data`</span> )
 
 <span class="modifier">public</span> <span
 class="type">ReturnType</span> <span
@@ -4913,15 +4890,15 @@ class="methodparam">void</span> )
 <span class="methodname">Swoole\\Server::stats</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::stop</span> (\[ <span
-class="methodparam"><span class="type">integer</span>
-`$worker_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$worker_id`</span> \]
+)
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">Swoole\\Server::task</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
+<span class="methodparam"><span class="type">int</span>
 `$dst_worker_id`</span> \[, <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \]\] )
 
@@ -4930,7 +4907,7 @@ class="type">callable</span> `$callback`</span> \]\] )
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">float</span>
 `$timeout`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$worker_id`</span> \]\] )
+class="type">int</span> `$worker_id`</span> \]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::taskWaitMulti</span> ( <span
@@ -4940,9 +4917,9 @@ class="methodparam"><span class="type">array</span> `$tasks`</span> \[,
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::tick</span> ( <span
-class="methodparam"><span class="type">integer</span>
-`$interval_ms`</span> , <span class="methodparam"><span
-class="type">callable</span> `$callback`</span> )
+class="methodparam"><span class="type">int</span> `$interval_ms`</span>
+, <span class="methodparam"><span class="type">callable</span>
+`$callback`</span> )
 
 }
 
@@ -5133,67 +5110,64 @@ Unserialize the data.
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">addlistener</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> , <span class="methodparam"><span
-class="type">string</span> `$socket_type`</span> )
+<span class="methodparam"><span class="type">int</span> `$port`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$socket_type`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">addProcess</span> ( <span
 class="methodparam"><span class="type">swoole\_process</span>
 `$process`</span> )
 
 <span class="modifier">public</span> <span
 class="type">ReturnType</span> <span class="methodname">after</span> (
-<span class="methodparam"><span class="type">integer</span>
+<span class="methodparam"><span class="type">int</span>
 `$after_time_ms`</span> , <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$param`</span> \]
 )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">bind</span> ( <span class="methodparam"><span
-class="type">integer</span> `$fd`</span> , <span
-class="methodparam"><span class="type">integer</span> `$uid`</span> )
+class="type">int</span> `$fd`</span> , <span class="methodparam"><span
+class="type">int</span> `$uid`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">clearTimer</span> ( <span
-class="methodparam"><span class="type">integer</span> `$timer_id`</span>
-)
+class="methodparam"><span class="type">int</span> `$timer_id`</span> )
 
 <span class="type">void</span> <span
 class="methodname">swoole\_timer\_clear</span> ( <span
-class="methodparam"><span class="type">integer</span> `$timer_id`</span>
-)
+class="methodparam"><span class="type">int</span> `$timer_id`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">close</span> ( <span class="methodparam"><span
-class="type">integer</span> `$fd`</span> \[, <span
-class="methodparam"><span class="type">boolean</span> `$reset`</span> \]
-)
+class="type">int</span> `$fd`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$reset`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">confirm</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">connection\_info</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$reactor_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$reactor_id`</span>
+\] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">connection\_list</span> ( <span
-class="methodparam"><span class="type">integer</span> `$start_fd`</span>
-\[, <span class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span> `$start_fd`</span> \[,
+<span class="methodparam"><span class="type">int</span>
 `$pagesize`</span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">defer</span> ( <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">exist</span> ( <span class="methodparam"><span
-class="type">integer</span> `$fd`</span> )
+class="type">int</span> `$fd`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">finish</span> ( <span class="methodparam"><span
@@ -5202,30 +5176,30 @@ class="type">string</span> `$data`</span> )
 <span class="modifier">public</span> <span
 class="type">ReturnType</span> <span
 class="methodname">getClientInfo</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$reactor_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$reactor_id`</span>
+\] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">getClientList</span> ( <span
-class="methodparam"><span class="type">integer</span> `$start_fd`</span>
-\[, <span class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span> `$start_fd`</span> \[,
+<span class="methodparam"><span class="type">int</span>
 `$pagesize`</span> \] )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">getLastError</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getLastError</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">heartbeat</span> ( <span
-class="methodparam"><span class="type">boolean</span>
+class="methodparam"><span class="type">bool</span>
 `$if_close_connection`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">listen</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> , <span
-class="methodparam"><span class="type">integer</span> `$port`</span> ,
-<span class="methodparam"><span class="type">string</span>
+class="methodparam"><span class="type">int</span> `$port`</span> , <span
+class="methodparam"><span class="type">string</span>
 `$socket_type`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
@@ -5236,55 +5210,54 @@ class="methodparam"><span class="type">callable</span>
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">pause</span> ( <span class="methodparam"><span
-class="type">integer</span> `$fd`</span> )
+class="type">int</span> `$fd`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">protect</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">boolean</span>
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">bool</span>
 `$is_protected`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">reload</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">resume</span> ( <span class="methodparam"><span
-class="type">integer</span> `$fd`</span> )
+class="type">int</span> `$fd`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">send</span> ( <span class="methodparam"><span
-class="type">integer</span> `$fd`</span> , <span
-class="methodparam"><span class="type">string</span> `$data`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$reactor_id`</span> \] )
+class="type">int</span> `$fd`</span> , <span class="methodparam"><span
+class="type">string</span> `$data`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$reactor_id`</span>
+\] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">sendfile</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$filename`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$offset`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$offset`</span> \] )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">sendMessage</span> ( <span
-class="methodparam"><span class="type">integer</span>
-`$worker_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$data`</span> )
-
-<span class="modifier">public</span> <span class="type">boolean</span>
-<span class="methodname">sendto</span> ( <span class="methodparam"><span
-class="type">string</span> `$ip`</span> , <span
-class="methodparam"><span class="type">integer</span> `$port`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$data`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$server_socket`</span> \] )
-
-<span class="modifier">public</span> <span class="type">boolean</span>
-<span class="methodname">sendwait</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
+class="methodparam"><span class="type">int</span> `$worker_id`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$data`</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">sendto</span> ( <span class="methodparam"><span
+class="type">string</span> `$ip`</span> , <span
+class="methodparam"><span class="type">int</span> `$port`</span> , <span
+class="methodparam"><span class="type">string</span> `$data`</span> \[,
+<span class="methodparam"><span class="type">string</span>
+`$server_socket`</span> \] )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">sendwait</span> ( <span
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">string</span> `$data`</span> )
 
 <span class="modifier">public</span> <span
 class="type">ReturnType</span> <span class="methodname">set</span> (
@@ -5303,14 +5276,14 @@ class="methodparam">void</span> )
 <span class="methodname">stats</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">stop</span> (\[ <span class="methodparam"><span
-class="type">integer</span> `$worker_id`</span> \] )
+class="type">int</span> `$worker_id`</span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">task</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
-class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span>
 `$dst_worker_id`</span> \[, <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \]\] )
 
@@ -5319,7 +5292,7 @@ class="type">callable</span> `$callback`</span> \]\] )
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">float</span>
 `$timeout`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$worker_id`</span> \]\] )
+class="type">int</span> `$worker_id`</span> \]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">taskWaitMulti</span> ( <span
@@ -5329,7 +5302,7 @@ class="methodparam"><span class="type">array</span> `$tasks`</span> \[,
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">tick</span> ( <span class="methodparam"><span
-class="type">integer</span> `$interval_ms`</span> , <span
+class="type">int</span> `$interval_ms`</span> , <span
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> )
 
@@ -5345,9 +5318,9 @@ Add a new listener to the server.
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::addlistener</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> , <span class="methodparam"><span
-class="type">string</span> `$socket_type`</span> )
+<span class="methodparam"><span class="type">int</span> `$port`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$socket_type`</span> )
 
 ### 参数
 
@@ -5366,7 +5339,7 @@ Add a user defined swoole\_process to the server.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::addProcess</span> ( <span
 class="methodparam"><span class="type">swoole\_process</span>
 `$process`</span> )
@@ -5387,7 +5360,7 @@ Trigger a callback function after a period of time.
 <span class="modifier">public</span> <span
 class="type">ReturnType</span> <span
 class="methodname">Swoole\\Server::after</span> ( <span
-class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span>
 `$after_time_ms`</span> , <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$param`</span> \]
@@ -5410,11 +5383,10 @@ Bind the connection to a user defined user ID.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::bind</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$uid`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">int</span> `$uid`</span> )
 
 ### 参数
 
@@ -5438,15 +5410,13 @@ Stop and destory a timer.
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::clearTimer</span> ( <span
-class="methodparam"><span class="type">integer</span> `$timer_id`</span>
-)
+class="methodparam"><span class="type">int</span> `$timer_id`</span> )
 
 过程化风格:
 
 <span class="type">void</span> <span
 class="methodname">swoole\_timer\_clear</span> ( <span
-class="methodparam"><span class="type">integer</span> `$timer_id`</span>
-)
+class="methodparam"><span class="type">int</span> `$timer_id`</span> )
 
 Stop and destory a timer
 
@@ -5463,11 +5433,10 @@ Close a connection to the client.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::close</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">boolean</span>
-`$reset`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$reset`</span> \] )
 
 ### 参数
 
@@ -5484,9 +5453,9 @@ Check status of the connection.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::confirm</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 ### 参数
 
@@ -5503,9 +5472,9 @@ Get the connection info by file description.
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">Swoole\\Server::connection\_info</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$reactor_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$reactor_id`</span>
+\] )
 
 ### 参数
 
@@ -5524,8 +5493,8 @@ Get all of the established connections.
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">Swoole\\Server::connection\_list</span> ( <span
-class="methodparam"><span class="type">integer</span> `$start_fd`</span>
-\[, <span class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span> `$start_fd`</span> \[,
+<span class="methodparam"><span class="type">int</span>
 `$pagesize`</span> \] )
 
 ### 参数
@@ -5546,11 +5515,10 @@ Construct a Swoole server.
 <span class="modifier">public</span> <span
 class="methodname">Swoole\\Server::\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> \[, <span class="methodparam"><span
-class="type">integr</span> `$mode`</span> \[, <span
-class="methodparam"><span class="type">integer</span>
-`$sock_type`</span> \]\]\] )
+<span class="methodparam"><span class="type">int</span> `$port`</span>
+\[, <span class="methodparam"><span class="type">integr</span>
+`$mode`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$sock_type`</span> \]\]\] )
 
 ### 参数
 
@@ -5588,9 +5556,9 @@ Check if the connection is existed.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::exist</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 ### 参数
 
@@ -5626,9 +5594,9 @@ Get the connection info by file description.
 <span class="modifier">public</span> <span
 class="type">ReturnType</span> <span
 class="methodname">Swoole\\Server::getClientInfo</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
-`$reactor_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$reactor_id`</span>
+\] )
 
 ### 参数
 
@@ -5647,8 +5615,8 @@ Get all of the established connections.
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">Swoole\\Server::getClientList</span> ( <span
-class="methodparam"><span class="type">integer</span> `$start_fd`</span>
-\[, <span class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span> `$start_fd`</span> \[,
+<span class="methodparam"><span class="type">int</span>
 `$pagesize`</span> \] )
 
 **Warning**
@@ -5670,8 +5638,8 @@ Get the error code of the most recent error.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Server::getLastError</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Server::getLastError</span> ( <span
 class="methodparam">void</span> )
 
 ### 参数
@@ -5689,7 +5657,7 @@ Check all the connections on the server.
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">Swoole\\Server::heartbeat</span> ( <span
-class="methodparam"><span class="type">boolean</span>
+class="methodparam"><span class="type">bool</span>
 `$if_close_connection`</span> )
 
 ### 参数
@@ -5705,12 +5673,12 @@ Listen on the given IP and port, socket type.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::listen</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> , <span class="methodparam"><span
-class="type">string</span> `$socket_type`</span> )
+<span class="methodparam"><span class="type">int</span> `$port`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$socket_type`</span> )
 
 ### 参数
 
@@ -5752,7 +5720,7 @@ Stop receiving data from the connection.
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::pause</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 ### 参数
 
@@ -5769,8 +5737,8 @@ Set the connection to be protected mode.
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::protect</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> \[,
-<span class="methodparam"><span class="type">boolean</span>
+class="methodparam"><span class="type">int</span> `$fd`</span> \[, <span
+class="methodparam"><span class="type">bool</span>
 `$is_protected`</span> \] )
 
 ### 参数
@@ -5788,7 +5756,7 @@ Restart all the worker process.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::reload</span> ( <span
 class="methodparam">void</span> )
 
@@ -5807,7 +5775,7 @@ Start receving data from the connection.
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::resume</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 ### 参数
 
@@ -5822,12 +5790,12 @@ Send data to the client.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::send</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$data`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$reactor_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">string</span> `$data`</span> \[,
+<span class="methodparam"><span class="type">int</span>
+`$reactor_id`</span> \] )
 
 **Warning**
 
@@ -5850,12 +5818,12 @@ Send file to the connection.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::sendfile</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$filename`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$offset`</span> \] )
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$offset`</span> \] )
 
 **Warning**
 
@@ -5878,11 +5846,11 @@ Send message to worker processes by ID.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::sendMessage</span> ( <span
-class="methodparam"><span class="type">integer</span>
-`$worker_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$data`</span> )
+class="methodparam"><span class="type">int</span> `$worker_id`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$data`</span> )
 
 ### 参数
 
@@ -5899,14 +5867,13 @@ Send data to the remote UDP address.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::sendto</span> ( <span
 class="methodparam"><span class="type">string</span> `$ip`</span> ,
-<span class="methodparam"><span class="type">integer</span>
-`$port`</span> , <span class="methodparam"><span
-class="type">string</span> `$data`</span> \[, <span
-class="methodparam"><span class="type">string</span>
-`$server_socket`</span> \] )
+<span class="methodparam"><span class="type">int</span> `$port`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$data`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$server_socket`</span> \] )
 
 ### 参数
 
@@ -5927,11 +5894,10 @@ Send data to the remote socket in the blocking way.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::sendwait</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$data`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> , <span
+class="methodparam"><span class="type">string</span> `$data`</span> )
 
 **Warning**
 
@@ -6025,10 +5991,10 @@ Stop the Swoole server.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Server::stop</span> (\[ <span
-class="methodparam"><span class="type">integer</span>
-`$worker_id`</span> \] )
+class="methodparam"><span class="type">int</span> `$worker_id`</span> \]
+)
 
 ### 参数
 
@@ -6046,7 +6012,7 @@ Send data to the task worker processes.
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">Swoole\\Server::task</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
-<span class="methodparam"><span class="type">integer</span>
+<span class="methodparam"><span class="type">int</span>
 `$dst_worker_id`</span> \[, <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \]\] )
 
@@ -6076,7 +6042,7 @@ Send data to the task worker processes in blocking way.
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">float</span>
 `$timeout`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$worker_id`</span> \]\] )
+class="type">int</span> `$worker_id`</span> \]\] )
 
 **Warning**
 
@@ -6122,9 +6088,9 @@ Repeats a given function at every given time-interval.
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Swoole\\Server::tick</span> ( <span
-class="methodparam"><span class="type">integer</span>
-`$interval_ms`</span> , <span class="methodparam"><span
-class="type">callable</span> `$callback`</span> )
+class="methodparam"><span class="type">int</span> `$interval_ms`</span>
+, <span class="methodparam"><span class="type">callable</span>
+`$callback`</span> )
 
 ### 参数
 
@@ -6150,13 +6116,13 @@ class="oointerface">, <span class="interfacename">Countable</span>
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Table::TYPE_INT` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Table::TYPE_STRING` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Swoole\Table::TYPE_FLOAT` <span class="initializer"> = 6</span> ;
 
 /\* 方法 \*/
@@ -6166,12 +6132,11 @@ class="type">ReturnType</span> <span class="methodname">column</span> (
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> , <span class="methodparam"><span
 class="type">string</span> `$type`</span> \[, <span
-class="methodparam"><span class="type">integer</span> `$size`</span> \]
-)
+class="methodparam"><span class="type">int</span> `$size`</span> \] )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">count</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">count</span> ( <span class="methodparam">void</span>
+)
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">create</span> ( <span
@@ -6186,7 +6151,7 @@ class="type">ReturnType</span> <span class="methodname">decr</span> (
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$column`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$decrby`</span> \] )
+class="type">int</span> `$decrby`</span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">del</span> ( <span class="methodparam"><span
@@ -6196,12 +6161,12 @@ class="type">string</span> `$key`</span> )
 <span class="methodname">destroy</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">exist</span> ( <span class="methodparam"><span
 class="type">string</span> `$key`</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">get</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">get</span> ( <span class="methodparam"><span
 class="type">string</span> `$row_key`</span> , <span
 class="methodparam"><span class="type">string</span>
 `$column_key`</span> )
@@ -6210,7 +6175,7 @@ class="methodparam"><span class="type">string</span>
 <span class="methodname">incr</span> ( <span class="methodparam"><span
 class="type">string</span> `$key`</span> , <span
 class="methodparam"><span class="type">string</span> `$column`</span>
-\[, <span class="methodparam"><span class="type">integer</span>
+\[, <span class="methodparam"><span class="type">int</span>
 `$incrby`</span> \] )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -6230,7 +6195,7 @@ class="methodparam">void</span> )
 class="type">string</span> `$key`</span> , <span
 class="methodparam"><span class="type">array</span> `$value`</span> )
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">valid</span> ( <span
 class="methodparam">void</span> )
 
@@ -6258,7 +6223,7 @@ class="methodname">Swoole\\Table::column</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$type`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$size`</span> \] )
+class="type">int</span> `$size`</span> \] )
 
 ### 参数
 
@@ -6279,8 +6244,7 @@ Construct a Swoole memory table with fixed size.
 
 <span class="modifier">public</span> <span
 class="methodname">Swoole\\Table::\_\_construct</span> ( <span
-class="methodparam"><span class="type">integer</span>
-`$table_size`</span> )
+class="methodparam"><span class="type">int</span> `$table_size`</span> )
 
 ### 参数
 
@@ -6294,8 +6258,8 @@ $mode = 1.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Table::count</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Table::count</span> ( <span
 class="methodparam">void</span> )
 
 ### 参数
@@ -6351,7 +6315,7 @@ class="methodname">Swoole\\Table::decr</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$column`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$decrby`</span> \] )
+class="type">int</span> `$decrby`</span> \] )
 
 ### 参数
 
@@ -6404,7 +6368,7 @@ Check if a row is existed by $row\_key.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Table::exist</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> )
 
@@ -6421,8 +6385,8 @@ Get the value in the Swoole table by $row\_key and $column\_key.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">Swoole\\Table::get</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">Swoole\\Table::get</span> ( <span
 class="methodparam"><span class="type">string</span> `$row_key`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$column_key`</span> )
@@ -6447,7 +6411,7 @@ Increment the value by $row\_key and $column\_key.
 class="methodparam"><span class="type">string</span> `$key`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$column`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$incrby`</span> \] )
+class="type">int</span> `$incrby`</span> \] )
 
 ### 参数
 
@@ -6539,7 +6503,7 @@ Check current if the current row is valid.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\Table::valid</span> ( <span
 class="methodparam">void</span> )
 
@@ -6571,17 +6535,17 @@ class="methodparam"><span class="type">callable</span>
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">clear</span> ( <span class="methodparam"><span
-class="type">integer</span> `$timer_id`</span> )
+class="type">int</span> `$timer_id`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">boolean</span> <span
+class="modifier">static</span> <span class="type">bool</span> <span
 class="methodname">exists</span> ( <span class="methodparam"><span
-class="type">integer</span> `$timer_id`</span> )
+class="type">int</span> `$timer_id`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">tick</span> ( <span class="methodparam"><span
-class="type">integer</span> `$interval_ms`</span> , <span
+class="type">int</span> `$interval_ms`</span> , <span
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$param`</span> \] )
@@ -6622,8 +6586,7 @@ Delete a timer by timer ID.
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">Swoole\\Timer::clear</span> ( <span
-class="methodparam"><span class="type">integer</span> `$timer_id`</span>
-)
+class="methodparam"><span class="type">int</span> `$timer_id`</span> )
 
 Delete a timer by timer ID.
 
@@ -6641,10 +6604,9 @@ Check if a timer is existed.
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">boolean</span> <span
+class="modifier">static</span> <span class="type">bool</span> <span
 class="methodname">Swoole\\Timer::exists</span> ( <span
-class="methodparam"><span class="type">integer</span> `$timer_id`</span>
-)
+class="methodparam"><span class="type">int</span> `$timer_id`</span> )
 
 Check if a timer is existed.
 
@@ -6664,11 +6626,10 @@ Repeats a given function at every given time-interval.
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">Swoole\\Timer::tick</span> ( <span
-class="methodparam"><span class="type">integer</span>
-`$interval_ms`</span> , <span class="methodparam"><span
-class="type">callable</span> `$callback`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$param`</span> \]
-)
+class="methodparam"><span class="type">int</span> `$interval_ms`</span>
+, <span class="methodparam"><span class="type">callable</span>
+`$callback`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$param`</span> \] )
 
 ### 参数
 
@@ -6708,9 +6669,9 @@ class="ooclass"> <span class="modifier">extends</span>
 
 /\* 方法 \*/
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">exist</span> ( <span class="methodparam"><span
-class="type">integer</span> `$fd`</span> )
+class="type">int</span> `$fd`</span> )
 
 <span class="modifier">public</span> <span
 class="type">ReturnType</span> <span class="methodname">on</span> (
@@ -6761,9 +6722,9 @@ Check if the file descriptor exists.
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Swoole\\WebSocket\\Server::exist</span> ( <span
-class="methodparam"><span class="type">integer</span> `$fd`</span> )
+class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 ### 参数
 

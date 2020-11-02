@@ -97,7 +97,8 @@ Retrieve an OpenAL buffer property
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">openal\_buffer\_get</span> ( <span
 class="methodparam"><span class="type">resource</span> `$buffer`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -689,7 +690,8 @@ Begin streaming on a source
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">openal\_stream</span> ( <span
 class="methodparam"><span class="type">resource</span> `$source`</span>
 , <span class="methodparam"><span class="type">int</span>

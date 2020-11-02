@@ -1009,9 +1009,9 @@ Register one or more global variables with the current session
 
 <span class="type">bool</span> <span
 class="methodname">session\_register</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$name`</span> \[,
-<span class="methodparam"><span class="type">mixed</span> `$...`</span>
-\] )
+class="methodparam"><span class="type">mixed</span> `$name`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$names`</span> )
 
 <span class="function">session\_register</span> accepts a variable
 number of arguments, any of which can be either a string holding the
@@ -1049,7 +1049,7 @@ class="function">session\_start</span> before use.
 A string holding the name of a variable or an array consisting of
 variable names or other arrays.
 
-`...`  
+`names`  
 
 ### 返回值
 

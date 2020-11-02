@@ -39,7 +39,7 @@
 
 这是配置指令的简短说明。
 
-`memtrack.enabled` <span class="type">boolean</span>  
+`memtrack.enabled` <span class="type">bool</span>  
 Disables or enables the extension. Default value is 0, i.e. disabled.
 
 `memtrack.soft_limit` <span class="type">int</span>  

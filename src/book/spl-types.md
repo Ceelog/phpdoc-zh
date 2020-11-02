@@ -96,7 +96,7 @@ The SplInt class is used to enforce strong typing of the integer type.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SplInt::__default` <span class="initializer"> = 0</span> ;
 
 /\* 继承的方法 \*/
@@ -337,13 +337,13 @@ The SplBool class is used to enforce strong typing of the bool type.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">boolean</span>
+<span class="modifier">const</span> <span class="type">bool</span>
 `SplBool::__default` <span class="initializer"> = **`FALSE`**</span> ;
 
-<span class="modifier">const</span> <span class="type">boolean</span>
+<span class="modifier">const</span> <span class="type">bool</span>
 `SplBool::false` <span class="initializer"> = **`FALSE`**</span> ;
 
-<span class="modifier">const</span> <span class="type">boolean</span>
+<span class="modifier">const</span> <span class="type">bool</span>
 `SplBool::true` <span class="initializer"> = **`TRUE`**</span> ;
 
 /\* 继承的方法 \*/

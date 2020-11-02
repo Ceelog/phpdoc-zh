@@ -99,13 +99,13 @@ impact at startup.
 
 这是配置指令的简短说明。
 
-`apc.enabled` <span class="type">boolean</span>  
+`apc.enabled` <span class="type">bool</span>  
 *apc.enabled* can be set to 0 to disable APC. This is primarily useful
 when APC is statically compiled into PHP, since there is no other way to
 disable it (when compiled as a DSO, the *extension* line in *php.ini*
 can just be commented-out).
 
-`apc.shm_segments` <span class="type">integer</span>  
+`apc.shm_segments` <span class="type">int</span>  
 The number of shared memory segments to allocate for the compiler cache.
 If APC is running out of shared memory but *apc.shm\_size* is set as
 high as the system allows, raising this value might prevent APC from
@@ -118,11 +118,11 @@ described in
 By default, some systems (including most BSD variants) have very low
 limits on the size of a shared memory segment.
 
-`apc.entries_hint` <span class="type">integer</span>  
+`apc.entries_hint` <span class="type">int</span>  
 A "hint" about the number of distinct variables that might be stored.
 Set to zero or omit if not sure.
 
-`apc.ttl` <span class="type">integer</span>  
+`apc.ttl` <span class="type">int</span>  
 The number of seconds a cache entry is allowed to idle in a slot in case
 this cache entry slot is needed by another entry. Leaving this at zero
 means that APC's cache could potentially fill up with stale entries
@@ -131,7 +131,7 @@ of available memory, the cache will be completely expunged if ttl is
 equal to 0. Otherwise, if the ttl is greater than 0, APC will attempt to
 remove expired entries.
 
-`apc.gc_ttl` <span class="type">integer</span>  
+`apc.gc_ttl` <span class="type">int</span>  
 The number of seconds that a cache entry may remain on the
 garbage-collection list. This value provides a fail-safe in the event
 that a server process dies while executing a cached source file; if that
@@ -150,7 +150,7 @@ set it to */dev/zero* to use your kernel's */dev/zero* interface to
 anonymous mmap'ed memory. Leaving it undefined will force an anonymous
 mmap.
 
-`apc.slam_defense` <span class="type">integer</span>  
+`apc.slam_defense` <span class="type">int</span>  
 On very busy servers whenever you start the server or modify files you
 can create a race of many processes all trying to cache the same file at
 the same time. This option sets the percentage of processes that will
@@ -161,7 +161,7 @@ the process will not cache an uncached file. So, the higher the setting
 the greater the defense against cache slams. Setting this to *0*
 disables this feature.
 
-`apc.enable_cli` <span class="type">integer</span>  
+`apc.enable_cli` <span class="type">int</span>  
 Mostly for testing and debugging. Setting this enables APC for the CLI
 version of PHP. Under normal circumstances, it is not ideal to create,
 populate and destroy the APC cache on every CLI request, but for various
@@ -171,7 +171,7 @@ of PHP easily.
 `apc.serializer` <span class="type">string</span>  
 Used to configure APC to use a third party serializer.
 
-`apc.coredump_unmap` <span class="type">boolean</span>  
+`apc.coredump_unmap` <span class="type">bool</span>  
 Enables APC handling of signals, such as SIGSEGV, that write core files
 when signaled. When these signals are received, APC will attempt to
 unmap the shared memory segment in order to exclude it from the core

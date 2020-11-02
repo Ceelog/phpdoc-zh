@@ -629,161 +629,161 @@ to that in the varnishstat tool.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_Debug` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_Error` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_CLI` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_StatSess` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_ReqEnd` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_SessionOpen` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_SessionClose` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_BackendOpen` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_BackendXID` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_BackendReuse` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_BackendClose` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_HttpGarbage` <span class="initializer"> = 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_Backend` <span class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_Length` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_FetchError` <span class="initializer"> = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_RxRequest` <span class="initializer"> = 15</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_RxResponse` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_RxStatus` <span class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_RxURL` <span class="initializer"> = 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_RxProtocol` <span class="initializer"> = 19</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_RxHeader` <span class="initializer"> = 20</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_TxRequest` <span class="initializer"> = 21</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_TxResponse` <span class="initializer"> = 22</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_TxStatus` <span class="initializer"> = 23</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_TxURL` <span class="initializer"> = 24</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_TxProtocol` <span class="initializer"> = 25</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_TxHeader` <span class="initializer"> = 26</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_ObjRequest` <span class="initializer"> = 27</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_ObjResponse` <span class="initializer"> = 28</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_ObjStatus` <span class="initializer"> = 29</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_ObjURL` <span class="initializer"> = 30</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_ObjProtocol` <span class="initializer"> = 31</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_ObjHeader` <span class="initializer"> = 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_LostHeader` <span class="initializer"> = 33</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_TTL` <span class="initializer"> = 34</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_Fetch_Body` <span class="initializer"> = 35</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_VCL_acl` <span class="initializer"> = 36</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_VCL_call` <span class="initializer"> = 37</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_VCL_trace` <span class="initializer"> = 38</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_VCL_return` <span class="initializer"> = 39</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_VCL_error` <span class="initializer"> = 40</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_ReqStart` <span class="initializer"> = 41</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_Hit` <span class="initializer"> = 42</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_HitPass` <span class="initializer"> = 43</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_ExpBan` <span class="initializer"> = 44</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_ExpKill` <span class="initializer"> = 45</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_WorkThread` <span class="initializer"> = 46</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_ESI_xmlerror` <span class="initializer"> = 47</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_Hash` <span class="initializer"> = 48</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_Backend_health` <span class="initializer"> = 49</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_VCL_Log` <span class="initializer"> = 50</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `VarnishLog::TAG_Gzip` <span class="initializer"> = 51</span> ;
 
 /\* 方法 \*/

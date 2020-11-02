@@ -130,23 +130,23 @@ guaranteed.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntSet::CHECK_FOR_DUPES` <span class="initializer"> = 1</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntSet::DO_NOT_USE_ZEND_ALLOC` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntSet::HASHER_NO_HASH` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntSet::HASHER_JENKINS1` <span class="initializer"> =
 512</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntSet::HASHER_JENKINS2` <span class="initializer"> =
 1024</span> ;
 
@@ -753,23 +753,23 @@ not guaranteed.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntHash::CHECK_FOR_DUPES` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntHash::DO_NOT_USE_ZEND_ALLOC` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntHash::HASHER_NO_HASH` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntHash::HASHER_JENKINS1` <span class="initializer"> =
 512</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntHash::HASHER_JENKINS2` <span class="initializer"> =
 1024</span> ;
 
@@ -1601,11 +1601,11 @@ not guaranteed.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashStringIntHash::CHECK_FOR_DUPES` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashStringIntHash::DO_NOT_USE_ZEND_ALLOC` <span
 class="initializer"> = 2</span> ;
 
@@ -2424,23 +2424,23 @@ not guaranteed.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntStringHash::CHECK_FOR_DUPES` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntStringHash::DO_NOT_USE_ZEND_ALLOC` <span
 class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntStringHash::HASHER_NO_HASH` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntStringHash::HASHER_JENKINS1` <span class="initializer"> =
 512</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `QuickHashIntStringHash::HASHER_JENKINS2` <span class="initializer"> =
 1024</span> ;
 

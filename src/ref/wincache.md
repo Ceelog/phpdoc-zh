@@ -5,7 +5,8 @@ Retrieves information about files cached in the file cache
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">wincache\_fcache\_fileinfo</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$summaryonly`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
@@ -107,7 +108,8 @@ Retrieves information about file cache memory usage
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">wincache\_fcache\_meminfo</span> ( <span
 class="methodparam">void</span> )
 
@@ -247,7 +249,8 @@ Retrieves information about files cached in the opcode cache
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">wincache\_ocache\_fileinfo</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$summaryonly`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
@@ -361,7 +364,8 @@ Retrieves information about opcode cache memory usage
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">wincache\_ocache\_meminfo</span> ( <span
 class="methodparam">void</span> )
 
@@ -496,7 +500,8 @@ Retrieves information about resolve file path cache
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">wincache\_rplist\_fileinfo</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$summaryonly`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
@@ -571,7 +576,8 @@ Retrieves information about memory usage by the resolve file path cache
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">wincache\_rplist\_meminfo</span> ( <span
 class="methodparam">void</span> )
 
@@ -640,7 +646,8 @@ Retrieves information about files cached in the session cache
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">wincache\_scache\_info</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$summaryonly`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
@@ -749,7 +756,8 @@ Retrieves information about session cache memory usage
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">wincache\_scache\_meminfo</span> ( <span
 class="methodparam">void</span> )
 
@@ -1411,7 +1419,8 @@ Retrieves information about data stored in the user cache
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">wincache\_ucache\_info</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$summaryonly`<span
 class="initializer"> = **`FALSE`**</span></span> \[, <span
@@ -1529,7 +1538,8 @@ Retrieves information about user cache memory usage
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">wincache\_ucache\_meminfo</span> ( <span
 class="methodparam">void</span> )
 

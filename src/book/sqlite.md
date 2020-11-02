@@ -2282,7 +2282,8 @@ Executes a query against a given database and returns a result handle
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">sqlite\_query</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$dbhandle`</span> , <span class="methodparam"><span
@@ -2292,7 +2293,8 @@ class="initializer"> = SQLITE\_BOTH</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
 `&$error_msg`</span> \]\] )
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">sqlite\_query</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> ,
 <span class="methodparam"><span class="type">resource</span>
@@ -2303,9 +2305,9 @@ class="type">string</span> `&$error_msg`</span> \]\] )
 
 面向对象风格 (method):
 
-<span class="modifier">public</span> <span
-class="type">SQLiteResult</span> <span
-class="methodname">SQLiteDatabase::query</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">SQLiteResult</span><span class="type">false</span></span>
+<span class="methodname">SQLiteDatabase::query</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$result_type`<span class="initializer"> = SQLITE\_BOTH</span></span>
@@ -2654,7 +2656,8 @@ Execute a query that does not prefetch and buffer all data
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">sqlite\_unbuffered\_query</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$dbhandle`</span> , <span class="methodparam"><span
@@ -2664,7 +2667,8 @@ class="initializer"> = SQLITE\_BOTH</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
 `&$error_msg`</span> \]\] )
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">sqlite\_unbuffered\_query</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> ,
 <span class="methodparam"><span class="type">resource</span>
@@ -2675,8 +2679,9 @@ class="type">string</span> `&$error_msg`</span> \]\] )
 
 面向对象风格 (method):
 
-<span class="modifier">public</span> <span
-class="type">SQLiteUnbuffered</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">SQLiteUnbuffered</span><span
+class="type">false</span></span> <span
 class="methodname">SQLiteDatabase::unbufferedQuery</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> \[,
 <span class="methodparam"><span class="type">int</span>

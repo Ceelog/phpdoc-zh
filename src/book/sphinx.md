@@ -106,8 +106,9 @@ class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$comment`<span
 class="initializer"> = ""</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">buildExcerpts</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">buildExcerpts</span> ( <span
 class="methodparam"><span class="type">array</span> `$docs`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$index`</span> , <span class="methodparam"><span
@@ -345,8 +346,9 @@ Build text snippets
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">SphinxClient::buildExcerpts</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">SphinxClient::buildExcerpts</span> ( <span
 class="methodparam"><span class="type">array</span> `$docs`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$index`</span> , <span class="methodparam"><span

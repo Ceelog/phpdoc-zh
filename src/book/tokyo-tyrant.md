@@ -254,7 +254,7 @@ creates a new empty session.
 
 这是配置指令的简短说明。
 
-`tokyo_tyrant.default_timeout` <span class="type">integer</span>  
+`tokyo_tyrant.default_timeout` <span class="type">int</span>  
 Default timeout when connecting to databases
 
 `tokyo_tyrant.session_salt` <span class="type">string</span>  
@@ -265,20 +265,20 @@ Prefix all keys with this string. The prefix is transparent to the
 developer but helps making sure that keys won't collide if multiple
 applications are using the same database.
 
-`tokyo_tyrant.allow_failover` <span class="type">integer</span>  
+`tokyo_tyrant.allow_failover` <span class="type">int</span>  
 Whether to allow session failover in case a server dies.
 
-`tokyo_tyrant.fail_threshold` <span class="type">integer</span>  
+`tokyo_tyrant.fail_threshold` <span class="type">int</span>  
 How many read/write or connection failures is allowed before server is
 marked as failed.
 
-`tokyo_tyrant.health_check_divisor` <span class="type">integer</span>  
+`tokyo_tyrant.health_check_divisor` <span class="type">int</span>  
 Defines the divisor for the health check probability. If there are
 failed servers and the probability matches, the servers are health
 checked and in case the server seems healthy, it will be added back to
 the pool.
 
-`tokyo_tyrant.php_expiration` <span class="type">integer</span>  
+`tokyo_tyrant.php_expiration` <span class="type">int</span>  
 Whether to use built in session expiration mechanism or delegate the
 expiration to a lua-script on the server-side.
 
@@ -325,139 +325,142 @@ The main Tokyo Tyrant class
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBDEF_PORT` <span class="initializer"> = 1978</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_STREQ` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_STRINC` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_STRBW` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_STREW` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_STRAND` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_STROR` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_STROREQ` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_STRRX` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_NUMEQ` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_NUMGT` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_NUMGE` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_NUMLT` <span class="initializer"> = 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_NUMLE` <span class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_NUMBT` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_NUMOREQ` <span class="initializer"> = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_NEGATE` <span class="initializer"> = 16777216</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQC_NOIDX` <span class="initializer"> = 33554432</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQO_STRASC` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQO_STRDESC` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQO_NUMASC` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQO_NUMDESC` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBIT_LEXICAL` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBIT_DECIMAL` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBIT_TOKEN` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBIT_QGRAM` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBIT_OPT` <span class="initializer"> = 9998</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBIT_VOID` <span class="initializer"> = 9999</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBIT_KEEP` <span class="initializer"> = 16777216</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQCFTS_PH` <span class="initializer"> = 15</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQCFTS_AND` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQCFTS_OR` <span class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBQCFTS_EX` <span class="initializer"> = 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBXO_LCKREC` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBXOLCK_GLB` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBREC_INT` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBREC_DBL` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBMS_UNION` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBMS_ISECT` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBMS_DIFF` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `TokyoTyrant::RDBT_RECON` <span class="initializer"> = 1</span> ;
 
 /\* 方法 \*/
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">add</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">add</span> ( <span class="methodparam"><span
 class="type">string</span> `$key`</span> , <span
-class="methodparam"><span class="type">number</span> `$increment`</span>
-\[, <span class="methodparam"><span class="type">int</span> `$type`<span
-class="initializer"> = 0</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span></span>
+`$increment`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$type`<span class="initializer"> =
+0</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="type">TokyoTyrant</span> <span class="methodname">connect</span>
@@ -755,10 +758,12 @@ Adds to a numeric key
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">TokyoTyrant::add</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">TokyoTyrant::add</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> ,
-<span class="methodparam"><span class="type">number</span>
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span></span>
 `$increment`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$type`<span class="initializer"> =
 0</span></span> \] )
@@ -1993,10 +1998,12 @@ class="methodparam"><span class="type">string</span> `$column`</span> ,
 
 /\* 继承的方法 \*/
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">TokyoTyrant::add</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">TokyoTyrant::add</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> ,
-<span class="methodparam"><span class="type">number</span>
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span></span>
 `$increment`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$type`<span class="initializer"> =
 0</span></span> \] )
@@ -3717,10 +3724,12 @@ class="methodparam">void</span> )
 
 /\* Inherited methods \*/
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">TokyoTyrant::add</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">TokyoTyrant::add</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> ,
-<span class="methodparam"><span class="type">number</span>
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span></span>
 `$increment`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$type`<span class="initializer"> =
 0</span></span> \] )

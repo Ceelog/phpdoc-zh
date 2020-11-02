@@ -90,7 +90,8 @@ Retrieves cached information from APCu's data store
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">apcu\_cache\_info</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$limited`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
@@ -266,13 +267,14 @@ Decrease a stored number
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">apcu\_dec</span>
-( <span class="methodparam"><span class="type">string</span>
-`$key`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$step`<span class="initializer"> =
-1</span></span> \[, <span class="methodparam"><span
-class="type">bool</span> `&$success`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$ttl`<span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">apcu\_dec</span> ( <span class="methodparam"><span
+class="type">string</span> `$key`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$step`<span
+class="initializer"> = 1</span></span> \[, <span
+class="methodparam"><span class="type">bool</span> `&$success`</span>
+\[, <span class="methodparam"><span class="type">int</span> `$ttl`<span
 class="initializer"> = 0</span></span> \]\]\] )
 
 Decreases a stored integer value.
@@ -675,13 +677,14 @@ Increase a stored number
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">apcu\_inc</span>
-( <span class="methodparam"><span class="type">string</span>
-`$key`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$step`<span class="initializer"> =
-1</span></span> \[, <span class="methodparam"><span
-class="type">bool</span> `&$success`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$ttl`<span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">apcu\_inc</span> ( <span class="methodparam"><span
+class="type">string</span> `$key`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$step`<span
+class="initializer"> = 1</span></span> \[, <span
+class="methodparam"><span class="type">bool</span> `&$success`</span>
+\[, <span class="methodparam"><span class="type">int</span> `$ttl`<span
 class="initializer"> = 0</span></span> \]\]\] )
 
 Increases a stored number.

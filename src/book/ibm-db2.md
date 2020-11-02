@@ -234,7 +234,7 @@ The **configure** command defaults to `/opt/IBM/db2/V8.1`.
 
 这是配置指令的简短说明。
 
-`ibm_db2.binmode` <span class="type">integer</span>  
+`ibm_db2.binmode` <span class="type">int</span>  
 This option controls the mode used for converting to and from binary
 data in the PHP application.
 
@@ -244,7 +244,7 @@ data in the PHP application.
 
 -   3 (DB2\_PASSTHRU)
 
-`ibm_db2.i5_all_pconnect` <span class="type">integer</span>  
+`ibm_db2.i5_all_pconnect` <span class="type">int</span>  
 This option overrides i5 <span class="function">db2\_connect</span> full
 open and close in the PHP application. When `ibm_db2.i5_all_pconnect` =
 1, all db2 connections become persistent (<span
@@ -261,7 +261,7 @@ class="function">db2\_pconnect</span> without PHP source code changes.
 -   1 <span class="function">db2\_connect</span> override to <span
     class="function">db2\_pconnect</span> for persistent connection only
 
-`ibm_db2.i5_allow_commit` <span class="type">integer</span>  
+`ibm_db2.i5_allow_commit` <span class="type">int</span>  
 This option controls the isolation mode used for i5 schema collections
 in the PHP application (see `i5_commit` for override).
 
@@ -277,7 +277,7 @@ in the PHP application (see `i5_commit` for override).
 -   4 - serializeable, dirty reads, non-repeatable reads, and phantoms
     are not possible
 
-`ibm_db2.i5_dbcs_alloc` <span class="type">integer</span>  
+`ibm_db2.i5_dbcs_alloc` <span class="type">int</span>  
 This option controls the internal ibm\_db2 allocation scheme for large
 DBCS column buffers.
 
@@ -292,7 +292,7 @@ set, its value overrides the DB2INSTANCE environment variable setting.
 
 This option is ignored on Windows operating systems.
 
-`ibm_db2.i5_ignore_userid` <span class="type">integer</span>  
+`ibm_db2.i5_ignore_userid` <span class="type">int</span>  
 This option overrides i5 db2\_(p)connect userid and password in the PHP
 application. When `ibm_db2.i5_ignore_userid` = 1, all db2 (p)connections
 become null userid and null password. Therefore Apache jobs connect with
@@ -319,81 +319,81 @@ resources, and result set resources.
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-**`DB2_BINARY`** (<span class="type">integer</span>)  
+**`DB2_BINARY`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that binary data shall be returned as
 is. This is the default mode. </span>
 
-**`DB2_CONVERT`** (<span class="type">integer</span>)  
+**`DB2_CONVERT`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that binary data shall be converted to
 a hexadecimal encoding and returned as an ASCII string. </span>
 
-**`DB2_PASSTHRU`** (<span class="type">integer</span>)  
+**`DB2_PASSTHRU`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that binary data shall be converted to
 a **`NULL`** value. </span>
 
-**`DB2_SCROLLABLE`** (<span class="type">integer</span>)  
+**`DB2_SCROLLABLE`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies a scrollable cursor for a statement
 resource. This mode enables random access to rows in a result set, but
 currently is supported only by IBM DB2 Universal Database. </span>
 
-**`DB2_FORWARD_ONLY`** (<span class="type">integer</span>)  
+**`DB2_FORWARD_ONLY`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies a forward-only cursor for a statement
 resource. This is the default cursor type and is supported on all
 database servers. </span>
 
-**`DB2_PARAM_IN`** (<span class="type">integer</span>)  
+**`DB2_PARAM_IN`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies the PHP variable should be bound as an
 IN parameter for a stored procedure. </span>
 
-**`DB2_PARAM_OUT`** (<span class="type">integer</span>)  
+**`DB2_PARAM_OUT`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies the PHP variable should be bound as an
 OUT parameter for a stored procedure. </span>
 
-**`DB2_PARAM_INOUT`** (<span class="type">integer</span>)  
+**`DB2_PARAM_INOUT`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies the PHP variable should be bound as an
 INOUT parameter for a stored procedure. </span>
 
-**`DB2_PARAM_FILE`** (<span class="type">integer</span>)  
+**`DB2_PARAM_FILE`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the column should be bound
 directly to a file for input. </span>
 
-**`DB2_AUTOCOMMIT_ON`** (<span class="type">integer</span>)  
+**`DB2_AUTOCOMMIT_ON`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that autocommit should be turned on.
 </span>
 
-**`DB2_AUTOCOMMIT_OFF`** (<span class="type">integer</span>)  
+**`DB2_AUTOCOMMIT_OFF`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that autocommit should be turned off.
 </span>
 
-**`DB2_DOUBLE`** (<span class="type">integer</span>)  
+**`DB2_DOUBLE`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the variable should be bound as a
 DOUBLE, FLOAT, or REAL data type. </span>
 
-**`DB2_LONG`** (<span class="type">integer</span>)  
+**`DB2_LONG`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the variable should be bound as a
 SMALLINT, INTEGER, or BIGINT data type. </span>
 
-**`DB2_CHAR`** (<span class="type">integer</span>)  
+**`DB2_CHAR`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the variable should be bound as a
 CHAR or VARCHAR data type. </span>
 
-**`DB2_CASE_NATURAL`** (<span class="type">integer</span>)  
+**`DB2_CASE_NATURAL`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that column names will be returned in
 their natural case. </span>
 
-**`DB2_CASE_LOWER`** (<span class="type">integer</span>)  
+**`DB2_CASE_LOWER`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that column names will be returned in
 lower case. </span>
 
-**`DB2_CASE_UPPER`** (<span class="type">integer</span>)  
+**`DB2_CASE_UPPER`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that column names will be returned in
 upper case. </span>
 
-**`DB2_DEFERRED_PREPARE_ON`** (<span class="type">integer</span>)  
+**`DB2_DEFERRED_PREPARE_ON`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that deferred prepare should be turned
 on for the specified statement resource. </span>
 
-**`DB2_DEFERRED_PREPARE_OFF`** (<span class="type">integer</span>)  
+**`DB2_DEFERRED_PREPARE_OFF`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that deferred prepare should be turned
 off for the specified statement resource. </span>
 
@@ -3297,7 +3297,8 @@ resource
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">db2\_get\_option</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$resource`</span> , <span class="methodparam"><span
@@ -3964,7 +3965,7 @@ function returns **`FALSE`**.
 > with scrollable cursors significantly degrades the performance of your
 > application, so if this is the only reason you are considering using
 > scrollable cursors, you should use a forward-only cursor and either
-> call SELECT COUNT(\*) or rely on the <span class="type">boolean</span>
+> call SELECT COUNT(\*) or rely on the <span class="type">bool</span>
 > return value of the fetch functions to achieve the equivalent
 > functionality with much better performance.
 

@@ -53,7 +53,7 @@ in the
 
 这是配置指令的简短说明。
 
-`expect.timeout` <span class="type">integer</span>  
+`expect.timeout` <span class="type">int</span>  
 The timeout period for waiting for the data, when using the <span
 class="function">expect\_expectl</span> function.
 
@@ -65,7 +65,7 @@ A value of "-1" disables a timeout from occurring.
 > class="function">expect\_expectl</span> function to return
 > immediately.
 
-`expect.loguser` <span class="type">boolean</span>  
+`expect.loguser` <span class="type">bool</span>  
 Whether expect should send any output from the spawned process to
 stdout. Since interactive programs typically echo their input, this
 usually suffices to show both sides of the conversation.
@@ -80,7 +80,7 @@ written. If this file doesn't exist, it will be created.
 > of the value of
 > <a href="/expect/setup.html#" class="link">expect.loguser</a>.
 
-`expect.match_max` <span class="type">integer</span>  
+`expect.match_max` <span class="type">int</span>  
 Changes default size (2000 bytes) of the buffer used to match asterisks
 in patterns.
 

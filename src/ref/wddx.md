@@ -13,8 +13,9 @@ This function was *REMOVED* in PHP 7.4.0.
 class="methodname">wddx\_add\_vars</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$packet_id`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$var_name`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+class="type">mixed</span> `$var_name`</span> , <span
+class="methodparam"><span class="type">mixed</span> `$var_names`</span>
+)
 
 Serializes the passed variables and add the result to the given packet.
 
@@ -30,7 +31,7 @@ class="function">wddx\_packet\_start</span>.
 Can be either a string naming a variable or an array containing strings
 naming the variables or another array, etc.
 
-`...`  
+`var_names`  
 
 ### 返回值
 
@@ -175,9 +176,9 @@ This function was *REMOVED* in PHP 7.4.0.
 
 <span class="type">string</span> <span
 class="methodname">wddx\_serialize\_vars</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$var_name`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+class="methodparam"><span class="type">mixed</span> `$var_name`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$var_names`</span> )
 
 Creates a WDDX packet with a structure that contains the serialized
 representation of the passed variables.
@@ -190,7 +191,7 @@ This function takes a variable number of parameters.
 Can be either a string naming a variable or an array containing strings
 naming the variables or another array, etc.
 
-`...`  
+`var_names`  
 
 ### 返回值
 

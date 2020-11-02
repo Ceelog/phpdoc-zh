@@ -1526,7 +1526,8 @@ and waits for the result
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_execute</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \], <span class="methodparam"><span
@@ -3592,7 +3593,8 @@ parameters, and waits for completion
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_prepare</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \], <span class="methodparam"><span
@@ -3752,7 +3754,8 @@ ability to pass parameters separately from the SQL command text
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_query\_params</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \], <span class="methodparam"><span
@@ -4511,7 +4514,8 @@ Get a read only handle to the socket underlying a PostgreSQL connection
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_socket</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection`</span> )
 

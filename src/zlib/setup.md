@@ -48,7 +48,7 @@ there are three options in the
 
 这是配置指令的简短说明。
 
-`zlib.output_compression` <span class="type">boolean</span>/<span class="type">integer</span>  
+`zlib.output_compression` <span class="type">bool</span>/<span class="type">int</span>  
 Whether to transparently compress pages. If this option is set to "On"
 in `php.ini` or the Apache configuration, pages are compressed if the
 browser sends an "Accept-Encoding: gzip" or "deflate" header.
@@ -65,7 +65,7 @@ using this you can set the output buffer size (default is 4KB).
 > be empty if this is set 'On' ! Instead you must use
 > *zlib.output\_handler*.
 
-`zlib.output_compression_level` <span class="type">integer</span>  
+`zlib.output_compression_level` <span class="type">int</span>  
 Compression level used for transparent output compression. Specify a
 value between 0 (no compression) to 9 (most compression). The default
 value, -1, lets the server decide which level to use.

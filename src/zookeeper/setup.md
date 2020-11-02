@@ -53,13 +53,13 @@ PECL 扩展的 DLL 当前不可用。参见
 
 这是配置指令的简短说明。
 
-`zookeeper.recv_timeout` <span class="type">integer</span>  
+`zookeeper.recv_timeout` <span class="type">int</span>  
 Default the timeout for any ZooKeeper session.
 
-`zookeeper.session_lock` <span class="type">integer</span>  
+`zookeeper.session_lock` <span class="type">int</span>  
 Enable PHP session locking.
 
-`zookeeper.sess_lock_wait` <span class="type">integer</span>  
+`zookeeper.sess_lock_wait` <span class="type">int</span>  
 PHP Session spin lock retry wait time in microseconds. Be carefull when
 setting this value. Valid values are integers, where 0 is interpreted as
 the default value. Negative values result in a reduces locking to a try

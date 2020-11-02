@@ -305,26 +305,26 @@ SQLITE3\_OPEN\_CREATE</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$encryption_key`<span class="initializer"> =
 ""</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type">resource</span>
-<span class="methodname">openBlob</span> ( <span
-class="methodparam"><span class="type">string</span> `$table`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$column`</span> , <span class="methodparam"><span
-class="type">int</span> `$rowid`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$dbname`<span
-class="initializer"> = "main"</span></span> \[, <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">resource</span><span class="type">false</span></span> <span
+class="methodname">openBlob</span> ( <span class="methodparam"><span
+class="type">string</span> `$table`</span> , <span
+class="methodparam"><span class="type">string</span> `$column`</span> ,
+<span class="methodparam"><span class="type">int</span> `$rowid`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$dbname`<span class="initializer"> = "main"</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = SQLITE3\_OPEN\_READONLY</span></span> \]\] )
 
-<span class="modifier">public</span> <span
-class="type">SQLite3Stmt</span> <span class="methodname">prepare</span>
-( <span class="methodparam"><span class="type">string</span>
-`$query`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">SQLite3Stmt</span><span class="type">false</span></span>
+<span class="methodname">prepare</span> ( <span
+class="methodparam"><span class="type">string</span> `$query`</span> )
 
-<span class="modifier">public</span> <span
-class="type">SQLite3Result</span> <span class="methodname">query</span>
-( <span class="methodparam"><span class="type">string</span>
-`$query`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">SQLite3Result</span><span class="type">false</span></span>
+<span class="methodname">query</span> ( <span class="methodparam"><span
+class="type">string</span> `$query`</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">querySingle</span> ( <span
@@ -436,7 +436,7 @@ deleted) by the most recent SQL statement.
 
 ### 返回值
 
-Returns an <span class="type">integer</span> value corresponding to the
+Returns an <span class="type">int</span> value corresponding to the
 number of database rows changed (or inserted or deleted) by the most
 recent SQL statement.
 
@@ -598,8 +598,8 @@ class="replaceable">step</span></span> ( <span class="methodparam"><span
 class="type">mixed</span> `$context`</span> , <span
 class="methodparam"><span class="type">int</span> `$rownumber`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
-`$value1`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$value`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 `context`  
 **`NULL`** for the first row; on subsequent rows it will have the value
@@ -609,10 +609,10 @@ to maintain the aggregate state.
 `rownumber`  
 The current row number.
 
-`value1`  
+`value`  
 The first argument passed to the aggregate.
 
-`...`  
+`values`  
 Further arguments passed to the aggregate.
 
 The return value of this function will be used as the `context` argument
@@ -858,14 +858,14 @@ This function need to be defined as:
 
 <span class="type">mixed</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
-class="methodparam"><span class="type">mixed</span> `$value1`</span> \[,
-<span class="methodparam"><span class="type">mixed</span> `$...`</span>
-\] )
+class="methodparam"><span class="type">mixed</span> `$value`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$values`</span> )
 
-`value1`  
+`value`  
 The first argument passed to the SQL function.
 
-`...`  
+`values`  
 Further arguments passed to the SQL function.
 
 `argument_count`  
@@ -1233,8 +1233,9 @@ Opens a stream resource to read a BLOB
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">resource</span>
-<span class="methodname">SQLite3::openBlob</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">resource</span><span class="type">false</span></span> <span
+class="methodname">SQLite3::openBlob</span> ( <span
 class="methodparam"><span class="type">string</span> `$table`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$column`</span> , <span class="methodparam"><span
@@ -1333,9 +1334,9 @@ Prepares an SQL statement for execution
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">SQLite3Stmt</span> <span
-class="methodname">SQLite3::prepare</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">SQLite3Stmt</span><span class="type">false</span></span>
+<span class="methodname">SQLite3::prepare</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> )
 
 Prepares an SQL statement for execution and returns an <span
@@ -1384,9 +1385,9 @@ Executes an SQL query
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">SQLite3Result</span> <span
-class="methodname">SQLite3::query</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">SQLite3Result</span><span class="type">false</span></span>
+<span class="methodname">SQLite3::query</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> )
 
 Executes an SQL query, returning an <span
@@ -1561,10 +1562,11 @@ class="type">SQLite3Result</span> <span
 class="methodname">execute</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getSQL</span> (\[ <span
-class="methodparam"><span class="type">bool</span> `$expanded`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getSQL</span> (\[ <span class="methodparam"><span
+class="type">bool</span> `$expanded`<span class="initializer"> =
+**`FALSE`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">paramCount</span> ( <span
@@ -1639,8 +1641,8 @@ The data type of the parameter to bind.
 -   **`SQLITE3_NULL`**: The value is a NULL value.
 
 As of PHP 7.0.7, if `type` is omitted, it is automatically detected from
-the type of the `param`: <span class="type">boolean</span> and <span
-class="type">integer</span> are treated as **`SQLITE3_INTEGER`**, <span
+the type of the `param`: <span class="type">bool</span> and <span
+class="type">int</span> are treated as **`SQLITE3_INTEGER`**, <span
 class="type">float</span> as **`SQLITE3_FLOAT`**, <span
 class="type">null</span> as **`SQLITE3_NULL`** and all others as
 **`SQLITE3_TEXT`**. Formerly, if `type` has been omitted, it has
@@ -1759,8 +1761,8 @@ The data type of the value to bind.
 -   **`SQLITE3_NULL`**: The value is a NULL value.
 
 As of PHP 7.0.7, if `type` is omitted, it is automatically detected from
-the type of the `value`: <span class="type">boolean</span> and <span
-class="type">integer</span> are treated as **`SQLITE3_INTEGER`**, <span
+the type of the `value`: <span class="type">bool</span> and <span
+class="type">int</span> are treated as **`SQLITE3_INTEGER`**, <span
 class="type">float</span> as **`SQLITE3_FLOAT`**, <span
 class="type">null</span> as **`SQLITE3_NULL`** and all others as
 **`SQLITE3_TEXT`**. Formerly, if `type` has been omitted, it has
@@ -1915,8 +1917,9 @@ Get the SQL of the statement
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">SQLite3Stmt::getSQL</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">SQLite3Stmt::getSQL</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$expanded`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
 
@@ -2168,10 +2171,9 @@ Returns a result row as an associatively or numerically indexed array or
 both. Alternately will return **`FALSE`** if there are no more rows.
 
 The types of the values of the returned array are mapped from SQLite3
-types as follows: integers are mapped to <span
-class="type">integer</span> if they fit into the range
-**`PHP_INT_MIN`**..**`PHP_INT_MAX`**, and to <span
-class="type">string</span> otherwise. Floats are mapped to <span
+types as follows: integers are mapped to <span class="type">int</span>
+if they fit into the range **`PHP_INT_MIN`**..**`PHP_INT_MAX`**, and to
+<span class="type">string</span> otherwise. Floats are mapped to <span
 class="type">float</span>, *NULL* values are mapped to <span
 class="type">null</span>, and strings and blobs are mapped to <span
 class="type">string</span>.

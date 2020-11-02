@@ -534,7 +534,8 @@ call
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">json\_last\_error\_msg</span> ( <span
 class="methodparam">void</span> )
 

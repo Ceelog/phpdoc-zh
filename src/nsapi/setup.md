@@ -37,7 +37,7 @@ additional parameters to the *php4\_execute* call in `obj.conf`
 
 这是配置指令的简短说明。
 
-`nsapi.read_timeout` <span class="type">integer</span>  
+`nsapi.read_timeout` <span class="type">int</span>  
 Sets the time in seconds the plugin is waiting for POST data from the
 client.
 

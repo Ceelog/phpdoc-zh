@@ -3833,9 +3833,10 @@ The size in bytes.
 class="methodname">\_\_construct</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span class="methodname">create</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">create</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">data</span> ( <span
@@ -3928,9 +3929,9 @@ Create a task (deprecated)
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span
-class="methodname">GearmanTask::create</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">GearmanTask::create</span> ( <span
 class="methodparam">void</span> )
 
 Returns a new <span class="classname">GearmanTask</span> object.

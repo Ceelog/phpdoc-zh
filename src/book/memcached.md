@@ -198,7 +198,8 @@ class="type">string</span> `$key`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 1</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">decrementByKey</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_key`</span> , <span class="methodparam"><span
@@ -258,8 +259,9 @@ class="methodparam"><span class="type">callback</span>
 `$cache_cb`</span> \[, <span class="methodparam"><span
 class="type">float</span> `&$cas_token`</span> \]\] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">getAllKeys</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">getAllKeys</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
@@ -337,7 +339,8 @@ class="type">string</span> `$key`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 1</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">incrementByKey</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_key`</span> , <span class="methodparam"><span
@@ -1002,7 +1005,8 @@ Decrement numeric item's value, stored on a specific server
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">Memcached::decrementByKey</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_key`</span> , <span class="methodparam"><span
@@ -1524,8 +1528,9 @@ Gets the keys stored on all the servers
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Memcached::getAllKeys</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">Memcached::getAllKeys</span> ( <span
 class="methodparam">void</span> )
 
 <span class="function">Memcached::getAllKeys</span> queries each
@@ -2439,7 +2444,8 @@ Increment numeric item's value, stored on a specific server
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">Memcached::incrementByKey</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_key`</span> , <span class="methodparam"><span

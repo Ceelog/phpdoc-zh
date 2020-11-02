@@ -146,13 +146,13 @@ mSQL base install directory, defaults to `/usr/local/msql3`.
 
 这是配置指令的简短说明。
 
-`msql.allow_persistent` <span class="type">boolean</span>  
+`msql.allow_persistent` <span class="type">bool</span>  
 Whether to allow persistent mSQL connections.
 
-`msql.max_persistent` <span class="type">integer</span>  
+`msql.max_persistent` <span class="type">int</span>  
 The maximum number of persistent mSQL connections per process.
 
-`msql.max_links` <span class="type">integer</span>  
+`msql.max_links` <span class="type">int</span>  
 The maximum number of mSQL connections per process, including persistent
 connections.
 
@@ -168,13 +168,13 @@ which holds the result of a query.
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-**`MSQL_ASSOC`** (<span class="type">integer</span>)  
+**`MSQL_ASSOC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MSQL_NUM`** (<span class="type">integer</span>)  
+**`MSQL_NUM`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MSQL_BOTH`** (<span class="type">integer</span>)  
+**`MSQL_BOTH`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 范例
@@ -849,7 +849,8 @@ Get the name of the specified field in a result
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">msql\_field\_name</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -916,7 +917,8 @@ Get table name for field
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">msql\_field\_table</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>

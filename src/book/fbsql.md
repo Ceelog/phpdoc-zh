@@ -216,61 +216,61 @@ libraries installed by FrontBase, avoiding any conflicts.
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-**`FBSQL_ASSOC`** (<span class="type">integer</span>)  
+**`FBSQL_ASSOC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_NUM`** (<span class="type">integer</span>)  
+**`FBSQL_NUM`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_BOTH`** (<span class="type">integer</span>)  
+**`FBSQL_BOTH`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_LOCK_DEFERRED`** (<span class="type">integer</span>)  
+**`FBSQL_LOCK_DEFERRED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_LOCK_OPTIMISTIC`** (<span class="type">integer</span>)  
+**`FBSQL_LOCK_OPTIMISTIC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_LOCK_PESSIMISTIC`** (<span class="type">integer</span>)  
+**`FBSQL_LOCK_PESSIMISTIC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_ISO_READ_UNCOMMITTED`** (<span class="type">integer</span>)  
+**`FBSQL_ISO_READ_UNCOMMITTED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_ISO_READ_COMMITTED`** (<span class="type">integer</span>)  
+**`FBSQL_ISO_READ_COMMITTED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_ISO_REPEATABLE_READ`** (<span class="type">integer</span>)  
+**`FBSQL_ISO_REPEATABLE_READ`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_ISO_SERIALIZABLE`** (<span class="type">integer</span>)  
+**`FBSQL_ISO_SERIALIZABLE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_ISO_VERSIONED`** (<span class="type">integer</span>)  
+**`FBSQL_ISO_VERSIONED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_UNKNOWN`** (<span class="type">integer</span>)  
+**`FBSQL_UNKNOWN`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_STOPPED`** (<span class="type">integer</span>)  
+**`FBSQL_STOPPED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_STARTING`** (<span class="type">integer</span>)  
+**`FBSQL_STARTING`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_RUNNING`** (<span class="type">integer</span>)  
+**`FBSQL_RUNNING`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_STOPPING`** (<span class="type">integer</span>)  
+**`FBSQL_STOPPING`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_NOEXEC`** (<span class="type">integer</span>)  
+**`FBSQL_NOEXEC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_LOB_DIRECT`** (<span class="type">integer</span>)  
+**`FBSQL_LOB_DIRECT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FBSQL_LOB_HANDLE`** (<span class="type">integer</span>)  
+**`FBSQL_LOB_HANDLE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 fbsql\_affected\_rows

@@ -129,7 +129,7 @@ provided by the WinCache extension:
 
 这是配置指令的简短说明。
 
-`wincache.fcenabled` <span class="type">boolean</span>  
+`wincache.fcenabled` <span class="type">bool</span>  
 <span class="simpara">Enables or disables the file cache
 functionality.</span>
 
@@ -142,13 +142,13 @@ will have the file cache turned off; if *wincache.fcenabled* is set to
 0, then the sites listed in the *wincache.fcenabledfilter* will have the
 file cache turned on. </span>
 
-`wincache.fcachesize` <span class="type">integer</span>  
+`wincache.fcachesize` <span class="type">int</span>  
 <span class="simpara"> Defines the maximum memory size (in megabytes)
 that is allocated for the file cache. If the total size of all the
 cached files exceeds the value specified in this setting, then most
 stale files will be removed from the file cache. </span>
 
-`wincache.fcndetect` <span class="type">boolean</span>  
+`wincache.fcndetect` <span class="type">bool</span>  
 <span class="simpara"> Enables or disables the file change notification
 detection functionality. If file change notification is supported then
 it will be used to refresh the opcode and file cache entries as soon as
@@ -157,13 +157,13 @@ notification is not supported, for example when using network file
 shares, then wincache will poll for file changes at regular time
 intervals specified by *wincache.chkinterval*. </span>
 
-`wincache.maxfilesize` <span class="type">integer</span>  
+`wincache.maxfilesize` <span class="type">int</span>  
 <span class="simpara"> Defines the maximum allowed size (in kilobytes)
 for a single file to be cached. If a file size exceeds the specified
 value, the file will not be cached. This setting applies to the file
 cache only. </span>
 
-`wincache.ocenabled` <span class="type">boolean</span>  
+`wincache.ocenabled` <span class="type">bool</span>  
 **Warning**
 This option has been *REMOVED* as of 2.0.0.0
 
@@ -182,7 +182,7 @@ setting works in conjunction with *wincache.ocenabled*: if
 *wincache.ocenabled* is set to 0, then the sites listed in the
 *wincache.ocenabledfilter* will have the opcode cache turned on. </span>
 
-`wincache.ocachesize` <span class="type">integer</span>  
+`wincache.ocachesize` <span class="type">int</span>  
 **Warning**
 This option has been *REMOVED* as of 2.0.0.0
 
@@ -193,13 +193,13 @@ the cache. Note that the opcode cache size must be at least 3 times
 bigger than file cache size. If that is not the case the opcode cache
 size will be automatically increased. </span>
 
-`wincache.filecount` <span class="type">integer</span>  
+`wincache.filecount` <span class="type">int</span>  
 <span class="simpara"> Defines how many files are expected to be cached
 by the extension, so that appropriate memory size is allocated at the
 startup time. If the number of files exceeds the specified value, the
 WinCache will re-allocate more memory as needed. </span>
 
-`wincache.chkinterval` <span class="type">integer</span>  
+`wincache.chkinterval` <span class="type">int</span>  
 <span class="simpara"> Defines how often (in seconds) the extension
 checks for file changes in order to refresh the cache. Setting it to 0
 will disable the refreshing of the cache. The file changes will not be
@@ -207,13 +207,13 @@ reflected in the cache unless the cache entry for that file is removed
 by scavenger or IIS application pool is recycled or
 wincache\_refresh\_if\_changed function is called. </span>
 
-`wincache.ttlmax` <span class="type">integer</span>  
+`wincache.ttlmax` <span class="type">int</span>  
 <span class="simpara"> Defines the maximum time to live (in seconds) for
 a cached entry without being used. Setting it to 0 will disable the
 cache scavenger, so the cached entries will never be removed from the
 cache during the lifetime of the IIS worker process. </span>
 
-`wincache.enablecli` <span class="type">boolean</span>  
+`wincache.enablecli` <span class="type">bool</span>  
 <span class="simpara"> Defines if caching is enabled when PHP is running
 in command line (CLI) mode. </span>
 
@@ -235,17 +235,17 @@ used to avoid conflicts that may be caused if other applications within
 an IIS worker process tries to access shared memory. The length of the
 namesalt string cannot exceed 8 characters. </span>
 
-`wincache.ucenabled` <span class="type">boolean</span>  
+`wincache.ucenabled` <span class="type">bool</span>  
 <span class="simpara"> Enables or disables the user cache functionality.
 </span>
 
-`wincache.ucachesize` <span class="type">integer</span>  
+`wincache.ucachesize` <span class="type">int</span>  
 <span class="simpara"> Defines the maximum memory size in megabytes that
 is allocated for the user cache. If the total size of variables stored
 in the user cache exceeds the specified value, then the most stale
 variables will be removed from the cache. </span>
 
-`wincache.scachesize` <span class="type">integer</span>  
+`wincache.scachesize` <span class="type">int</span>  
 <span class="simpara"> Defines the maximum memory size in megabytes that
 is allocated for the session cache. If the total size of data stored in
 the session cache exceeds the specified value, then the most stale data
@@ -262,11 +262,11 @@ implementation should be replaced with the WinCache function
 equivalents. If a relative path is specified then it is assumed to be
 relative to the location of php-cgi.exe file. </span>
 
-`wincache.reroute_enabled` <span class="type">boolean</span>  
+`wincache.reroute_enabled` <span class="type">bool</span>  
 <span class="simpara"> Enables or disables the rerouting of certain file
 I/O functions through the file cache. </span>
 
-`wincache.srwlocks` <span class="type">boolean</span>  
+`wincache.srwlocks` <span class="type">bool</span>  
 **Warning**
 This option has been *REMOVED* as of 2.0.0.0
 

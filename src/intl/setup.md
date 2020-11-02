@@ -69,7 +69,7 @@ locale. Once set, the ini setting cannot be reset to this default value.
 It is not recommended that this default be relied on, as its effective
 value depends on the server's environment.
 
-`intl.error_level` <span class="type">integer</span>  
+`intl.error_level` <span class="type">int</span>  
 The level of the error messages generated when an error occurs in ICU
 functions. This is a PHP error level, such as **`E_WARNING`**. It can be
 set to *0* in order to inhibit the messages. This does not affect the
@@ -81,7 +81,7 @@ classes.
 
 The default value is *0*.
 
-`intl.use_exceptions` <span class="type">integer</span>  
+`intl.use_exceptions` <span class="type">int</span>  
 If set to true, an exception will be raised whenever an error occurs in
 an intl function. The exception will be of type <span
 class="classname">IntlException</span>. This is possibly in addition to

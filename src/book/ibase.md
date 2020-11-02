@@ -306,17 +306,17 @@ install directory, which defaults to `/usr`.
 
 这是配置指令的简短说明。
 
-`ibase.allow_persistent` <span class="type">boolean</span>  
+`ibase.allow_persistent` <span class="type">bool</span>  
 Whether to allow
 <a href="/features/persistent-connections.html" class="link">persistent connections</a>
 to Firebird/InterBase.
 
-`ibase.max_persistent` <span class="type">integer</span>  
+`ibase.max_persistent` <span class="type">int</span>  
 The maximum number of persistent Firebird/InterBase connections per
 process. New connections created with ibase\_pconnect() will be
 non-persistent if this number would be exceeded.
 
-`ibase.max_links` <span class="type">integer</span>  
+`ibase.max_links` <span class="type">int</span>  
 The maximum number of Firebird/InterBase connections per process,
 including persistent connections.
 
@@ -1477,7 +1477,8 @@ Create a new blob for adding data
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_blob\_create</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`<span class="initializer"> = **`NULL`**</span></span>
@@ -1714,13 +1715,15 @@ Open blob for retrieving data parts
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_blob\_open</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
 class="type">string</span> `$blob_id`</span> )
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_blob\_open</span> ( <span
 class="methodparam"><span class="type">string</span> `$blob_id`</span> )
 
@@ -2077,9 +2080,9 @@ Execute a previously prepared query
 
 <span class="type">resource</span> <span
 class="methodname">ibase\_execute</span> ( <span
-class="methodparam"><span class="type">resource</span> `$query`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+class="methodparam"><span class="type">resource</span> `$query`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$values`</span> )
 
 Execute a query prepared by <span
 class="function">ibase\_prepare</span>.
@@ -2094,7 +2097,7 @@ query several times with only some parameters changing.
 An InterBase query prepared by <span
 class="function">ibase\_prepare</span>.
 
-`...`  
+`values`  
 
 ### 返回值
 
@@ -3124,7 +3127,8 @@ Connect to the service manager
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_service\_attach</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -3284,8 +3288,9 @@ Register a callback function to be called when events are posted
 class="methodname">ibase\_set\_event\_handler</span> ( <span
 class="methodparam"><span class="type">callable</span>
 `$event_handler`</span> , <span class="methodparam"><span
-class="type">string</span> `$event_name1`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$...`</span> \] )
+class="type">string</span> `$event_name`</span> , <span
+class="methodparam"><span class="type">string</span>
+`$even_names`</span> )
 
 <span class="type">resource</span> <span
 class="methodname">ibase\_set\_event\_handler</span> ( <span
@@ -3293,8 +3298,8 @@ class="methodparam"><span class="type">resource</span>
 `$connection`</span> , <span class="methodparam"><span
 class="type">callable</span> `$event_handler`</span> , <span
 class="methodparam"><span class="type">string</span>
-`$event_name1`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$...`</span> \] )
+`$event_name`</span> , <span class="methodparam"><span
+class="type">string</span> `$event_names`</span> )
 
 This function registers a PHP user function as event handler for the
 specified events.
@@ -3310,10 +3315,10 @@ The callback must return **`FALSE`** if the event handler should be
 canceled. Any other return value is ignored. This function accepts up to
 15 event arguments.
 
-`event_name1`  
+`event_name`  
 An event name.
 
-`...`  
+`event_names`  
 At most 15 events allowed.
 
 ### 返回值
@@ -3420,15 +3425,16 @@ Wait for an event to be posted by the database
 <span class="type">string</span> <span
 class="methodname">ibase\_wait\_event</span> ( <span
 class="methodparam"><span class="type">string</span>
-`$event_name1`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$...`</span> \] )
+`$event_name`</span> , <span class="methodparam"><span
+class="type">string</span> `$event_names`</span> )
 
 <span class="type">string</span> <span
 class="methodname">ibase\_wait\_event</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> , <span class="methodparam"><span
-class="type">string</span> `$event_name1`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$...`</span> \] )
+class="type">string</span> `$event_name`</span> , <span
+class="methodparam"><span class="type">string</span>
+`$event_names`</span> )
 
 This function suspends execution of the script until one of the
 specified events is posted by the database. The name of the event that
@@ -3436,10 +3442,10 @@ was posted is returned. This function accepts up to 15 event arguments.
 
 ### 参数
 
-`event_name1`  
+`event_name`  
 The event name.
 
-`...`  
+`event_names`  
 
 ### 返回值
 

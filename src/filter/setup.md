@@ -62,7 +62,7 @@ the list of the filter names.
 > filter.default_flags = 0
 > ```
 
-`filter.default_flags` <span class="type">integer</span>  
+`filter.default_flags` <span class="type">int</span>  
 Default flags to apply when the default filter is set. This is set to
 **`FILTER_FLAG_NO_ENCODE_QUOTES`** by default for backwards
 compatibility reasons. See the

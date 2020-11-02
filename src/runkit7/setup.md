@@ -70,7 +70,7 @@ show_values();
 ?>
 ```
 
-`runkit.internal_override` <span class="type">boolean</span>  
+`runkit.internal_override` <span class="type">bool</span>  
 <span class="simpara"> Enables ability to modify/rename/remove internal
 functions. </span>
 

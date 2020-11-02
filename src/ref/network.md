@@ -832,7 +832,8 @@ Get protocol number associated with protocol name
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">getprotobyname</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
@@ -875,7 +876,8 @@ Get protocol name associated with protocol number
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">getprotobynumber</span> ( <span
 class="methodparam"><span class="type">int</span> `$number`</span> )
 
@@ -1525,7 +1527,8 @@ Converts a packed internet address to a human readable representation
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">inet\_ntop</span> ( <span class="methodparam"><span
 class="type">string</span> `$in_addr`</span> )
 

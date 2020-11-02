@@ -577,8 +577,7 @@ class="methodparam"><span class="type">resource</span> `$td`</span> )
 
 ### 返回值
 
-自检成功返回 *0*，失败则返回一个小于零的<span
-class="type">integer</span>。
+自检成功返回 *0*，失败则返回一个小于零的<span class="type">int</span>。
 
 mcrypt\_encrypt
 ===============

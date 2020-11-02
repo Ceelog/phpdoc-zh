@@ -297,19 +297,19 @@ class="oointerface">, <span class="interfacename">Serializable</span>
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SplDoublyLinkedList::IT_MODE_LIFO` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SplDoublyLinkedList::IT_MODE_FIFO` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SplDoublyLinkedList::IT_MODE_DELETE` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SplDoublyLinkedList::IT_MODE_KEEP` <span class="initializer"> =
 0</span> ;
 
@@ -3034,7 +3034,7 @@ Gets the size of the array.
 
 ### 返回值
 
-Returns the size of the array, as an <span class="type">integer</span>.
+Returns the size of the array, as an <span class="type">int</span>.
 
 ### 范例
 

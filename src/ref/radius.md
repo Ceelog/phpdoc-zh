@@ -470,7 +470,8 @@ Extracts the data from a tagged attribute
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">radius\_get\_tagged\_attr\_data</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
@@ -524,7 +525,8 @@ Extracts the tag from a tagged attribute
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">radius\_get\_tagged\_attr\_tag</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
@@ -1225,7 +1227,8 @@ Salt-encrypts a value
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">radius\_salt\_encrypt\_attr</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$radius_handle`</span> , <span class="methodparam"><span

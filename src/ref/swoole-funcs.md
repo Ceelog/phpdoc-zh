@@ -140,7 +140,7 @@ class="methodname">swoole\_async\_write</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$content`</span> \[, <span class="methodparam"><span
-class="type">integer</span> `$offset`</span> \[, <span
+class="type">int</span> `$offset`</span> \[, <span
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> \]\] )
 

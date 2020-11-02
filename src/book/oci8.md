@@ -741,7 +741,7 @@ Refer to Oracle documentation for more detail.
 > queries that return large amounts of data, the performance benefit can
 > be significant. </span>
 
-`oci8.events` <span class="type">boolean</span>  
+`oci8.events` <span class="type">bool</span>  
 Using *On* allows PHP to be notified of database Fast Application
 Notification (FAN) events.
 
@@ -762,7 +762,7 @@ later) libraries and connected to Oracle Database 10*g*R2 (or later).
 The maximum number of persistent OCI8 connections per PHP process.
 Setting this option to -1 means that there is no limit.
 
-`oci8.old_oci_close_semantics` <span class="type">boolean</span>  
+`oci8.old_oci_close_semantics` <span class="type">bool</span>  
 This option controls <span class="function">oci\_close</span> behaviour.
 Enabling it means that <span class="function">oci\_close</span> will do
 nothing; the connection will not be closed until the end of the script.
@@ -809,7 +809,7 @@ To disable pings completely, set this option to -1.
 > script. Consult the <span class="function">oci\_pconnect</span>
 > documentation for more information. </span>
 
-`oci8.privileged_connect` <span class="type">boolean</span>  
+`oci8.privileged_connect` <span class="type">bool</span>  
 This option allows connections to use the privileged external
 credentials **`OCI_SYSOPER`** or **`OCI_SYSDBA`**.
 
@@ -8599,10 +8599,11 @@ objects.
 <span class="type">bool</span> <span class="methodname">eof</span> (
 <span class="methodparam">void</span> )
 
-<span class="type">int</span> <span class="methodname">erase</span> (\[
-<span class="methodparam"><span class="type">int</span> `$offset`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$length`</span> \]\] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">erase</span>
+(\[ <span class="methodparam"><span class="type">int</span>
+`$offset`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$length`</span> \]\] )
 
 <span class="type">bool</span> <span class="methodname">export</span> (
 <span class="methodparam"><span class="type">string</span>
@@ -8629,7 +8630,8 @@ class="methodparam">void</span> )
 <span class="type">string</span> <span class="methodname">load</span> (
 <span class="methodparam">void</span> )
 
-<span class="type">string</span> <span class="methodname">read</span> (
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">read</span> (
 <span class="methodparam"><span class="type">int</span> `$length`</span>
 )
 
@@ -8651,7 +8653,8 @@ class="type">int</span> `$offset`</span> \] )
 class="methodname">setBuffering</span> ( <span class="methodparam"><span
 class="type">bool</span> `$on_off`</span> )
 
-<span class="type">int</span> <span class="methodname">size</span> (
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">size</span> (
 <span class="methodparam">void</span> )
 
 <span class="type">int</span> <span class="methodname">tell</span> (
@@ -8661,7 +8664,8 @@ class="type">bool</span> `$on_off`</span> )
 (\[ <span class="methodparam"><span class="type">int</span>
 `$length`<span class="initializer"> = 0</span></span> \] )
 
-<span class="type">int</span> <span class="methodname">write</span> (
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">write</span> (
 <span class="methodparam"><span class="type">string</span>
 `$data`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$length`</span> \] )
@@ -8768,7 +8772,8 @@ Erases a specified portion of the internal LOB data
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">OCI-Lob::erase</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$offset`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`</span>
@@ -8969,7 +8974,8 @@ Reads part of the large object
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">OCI-Lob::read</span> ( <span
 class="methodparam"><span class="type">int</span> `$length`</span> )
 
@@ -9139,7 +9145,8 @@ Returns size of large object
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">OCI-Lob::size</span> ( <span
 class="methodparam">void</span> )
 
@@ -9209,7 +9216,8 @@ Writes data to the large object
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">OCI-Lob::write</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`</span>

@@ -266,7 +266,7 @@ The body of the message.
 > **Note**:
 >
 > If `serialize` set to **`FALSE`** is supplied, MUST be of type: <span
-> class="type">string</span>, <span class="type">integer</span>, <span
+> class="type">string</span>, <span class="type">int</span>, <span
 > class="type">float</span> or <span class="type">bool</span>. In other
 > case a warning will be issued.
 

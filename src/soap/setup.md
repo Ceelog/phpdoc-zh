@@ -35,17 +35,17 @@ To enable SOAP support, configure PHP with **--enable-soap**.
 
 这是配置指令的简短说明。
 
-`soap.wsdl_cache_enabled` <span class="type">integer</span>  
+`soap.wsdl_cache_enabled` <span class="type">int</span>  
 Enables or disables the WSDL caching feature.
 
 `soap.wsdl_cache_dir` <span class="type">string</span>  
 Sets the directory name where the SOAP extension will put cache files.
 
-`soap.wsdl_cache_ttl` <span class="type">integer</span>  
+`soap.wsdl_cache_ttl` <span class="type">int</span>  
 Sets the number of seconds (time to live) that cached files will be used
 instead of the originals.
 
-`soap.wsdl_cache` <span class="type">integer</span>  
+`soap.wsdl_cache` <span class="type">int</span>  
 If `soap.wsdl_cache_enabled` is on, this setting determines the type of
 caching. It can be any of: **`WSDL_CACHE_NONE`** (*0*),
 **`WSDL_CACHE_DISK`** (*1*), **`WSDL_CACHE_MEMORY`** (*2*) or
@@ -53,7 +53,7 @@ caching. It can be any of: **`WSDL_CACHE_NONE`** (*0*),
 array in the <span class="classname">SoapClient</span> or <span
 class="classname">SoapServer</span> constructor.
 
-`soap.wsdl_cache_limit` <span class="type">integer</span>  
+`soap.wsdl_cache_limit` <span class="type">int</span>  
 Maximum number of in-memory cached WSDL files. Adding further files into
 a full memory cache will delete the oldest files from it.
 

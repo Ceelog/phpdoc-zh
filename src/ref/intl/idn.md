@@ -7,7 +7,8 @@ Convert domain name to IDNA ASCII form
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">idn\_to\_ascii</span> ( <span
 class="methodparam"><span class="type">string</span> `$domain`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -84,7 +85,8 @@ Convert domain name from IDNA ASCII to Unicode
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">idn\_to\_utf8</span> ( <span
 class="methodparam"><span class="type">string</span> `$domain`</span>
 \[, <span class="methodparam"><span class="type">int</span>

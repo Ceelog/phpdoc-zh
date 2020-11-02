@@ -3,13 +3,13 @@
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-**`SOLR_MAJOR_VERSION`** (<span class="type">integer</span>)  
+**`SOLR_MAJOR_VERSION`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SOLR_MINOR_VERSION`** (<span class="type">integer</span>)  
+**`SOLR_MINOR_VERSION`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SOLR_PATCH_VERSION`** (<span class="type">integer</span>)  
+**`SOLR_PATCH_VERSION`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 **`SOLR_EXTENSION_VERSION`** (<span class="type">string</span>)  

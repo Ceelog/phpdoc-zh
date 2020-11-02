@@ -34,7 +34,7 @@ class="function">dns\_get\_record</span> requires Bind on Linux.
 
 这是配置指令的简短说明。
 
-`define_syslog_variables` <span class="type">boolean</span>  
+`define_syslog_variables` <span class="type">bool</span>  
 Whether or not to define the various syslog variables (e.g. $LOG\_PID,
 $LOG\_CRON, etc.). Turning it off is a good idea performance-wise. At
 runtime, you can define these variables by calling <span

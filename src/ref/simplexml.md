@@ -5,7 +5,8 @@ Get a *SimpleXMLElement* object from a DOM node
 
 ### 说明
 
-<span class="type">SimpleXMLElement</span> <span
+<span class="type"><span class="type">SimpleXMLElement</span><span
+class="type">false</span></span> <span
 class="methodname">simplexml\_import\_dom</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$node`</span> \[,
 <span class="methodparam"><span class="type">string</span>
@@ -75,7 +76,8 @@ Interprets an XML file into an object
 
 ### 说明
 
-<span class="type">SimpleXMLElement</span> <span
+<span class="type"><span class="type">SimpleXMLElement</span><span
+class="type">false</span></span> <span
 class="methodname">simplexml\_load\_file</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -197,7 +199,8 @@ Interprets a string of XML into an object
 
 ### 说明
 
-<span class="type">SimpleXMLElement</span> <span
+<span class="type"><span class="type">SimpleXMLElement</span><span
+class="type">false</span></span> <span
 class="methodname">simplexml\_load\_string</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">string</span>

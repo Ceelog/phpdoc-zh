@@ -116,20 +116,20 @@ queue. A thread may be reused for any number of tasks.
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">addClassTask</span> ( <span
 class="methodparam"><span class="type">string</span> `$className`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...ctorArgs`</span> \] )
+, <span class="methodparam"><span class="type">mixed</span>
+`$ctorArgs`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">addFileTask</span> ( <span
 class="methodparam"><span class="type">string</span> `$fileName`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...globals`</span> \] )
+, <span class="methodparam"><span class="type">mixed</span>
+`$globals`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">addFunctionTask</span> ( <span
-class="methodparam"><span class="type">callable</span> `$func`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...funcArgs`</span> \] )
+class="methodparam"><span class="type">callable</span> `$func`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$funcArgs`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">join</span> ( <span
@@ -155,8 +155,8 @@ Class threading
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">pht\\Thread::addClassTask</span> ( <span
 class="methodparam"><span class="type">string</span> `$className`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...ctorArgs`</span> \] )
+, <span class="methodparam"><span class="type">mixed</span>
+`$ctorArgs`</span> )
 
 Adds a new class task to a <span class="classname">pht\\Thread</span>s
 internal task queue.
@@ -167,7 +167,7 @@ internal task queue.
 The name of the class to be threaded. This class must implement the
 <span class="interfacename">pht\\Runnable</span> interface.
 
-`...ctorArgs`  
+`ctorArgs`  
 An optional list of arguments for the threaded class' constructor. These
 arguments will be serialised (since they are being passed to another
 thread).
@@ -222,8 +222,8 @@ File threading
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">pht\\Thread::addFileTask</span> ( <span
 class="methodparam"><span class="type">string</span> `$fileName`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...globals`</span> \] )
+, <span class="methodparam"><span class="type">mixed</span>
+`$globals`</span> )
 
 Adds a new file task to a <span class="classname">pht\\Thread</span>s
 internal task queue.
@@ -233,7 +233,7 @@ internal task queue.
 `func`  
 The name of the file to be threaded.
 
-`...globals`  
+`globals`  
 An optional list of arguments for the file. These arguments will be
 placed into a *$\_THREAD* superglobal, which will be made available
 inside of the threaded file. All arguments will be serialised (since
@@ -285,9 +285,9 @@ Function threading
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">pht\\Thread::addFunctionTask</span> ( <span
-class="methodparam"><span class="type">callable</span> `$func`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...funcArgs`</span> \] )
+class="methodparam"><span class="type">callable</span> `$func`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$funcArgs`</span> )
 
 Adds a new function task to a <span
 class="classname">pht\\Thread</span>s internal task queue.
@@ -298,7 +298,7 @@ class="classname">pht\\Thread</span>s internal task queue.
 The function to be threaded. If it is bound to an instance, then *$this*
 will become **`NULL`**.
 
-`...funcArgs`  
+`funcArgs`  
 An optional list of arguments for the function. These arguments will be
 serialised (since they are being passed to another thread).
 

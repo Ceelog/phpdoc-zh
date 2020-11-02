@@ -931,8 +931,8 @@ Gets the index of the current inner iterator.
 
 ### 返回值
 
-Returns an <span class="type">integer</span>, which is the zero-based
-index of the current inner iterator.
+Returns an <span class="type">int</span>, which is the zero-based index
+of the current inner iterator.
 
 ### 范例
 
@@ -2163,26 +2163,26 @@ class="interfacename">Countable</span> </span> {
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CachingIterator::CALL_TOSTRING` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CachingIterator::CATCH_GET_CHILD` <span class="initializer"> =
 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CachingIterator::TOSTRING_USE_KEY` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CachingIterator::TOSTRING_USE_CURRENT` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CachingIterator::TOSTRING_USE_INNER` <span class="initializer"> =
 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CachingIterator::FULL_CACHE` <span class="initializer"> = 256</span> ;
 
 /\* 方法 \*/
@@ -3823,7 +3823,7 @@ class="classname">DirectoryIterator</span> item.
 ### 返回值
 
 Returns the permissions of the file, as a decimal <span
-class="type">integer</span>.
+class="type">int</span>.
 
 ### 范例
 
@@ -4844,47 +4844,47 @@ class="interfacename">SeekableIterator</span> </span> {
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_AS_PATHNAME` <span class="initializer"> =
 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_AS_FILEINFO` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_AS_SELF` <span class="initializer"> =
 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_MODE_MASK` <span class="initializer"> =
 240</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::KEY_AS_PATHNAME` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::KEY_AS_FILENAME` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::FOLLOW_SYMLINKS` <span class="initializer"> =
 512</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::KEY_MODE_MASK` <span class="initializer"> =
 3840</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::NEW_CURRENT_AND_KEY` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::SKIP_DOTS` <span class="initializer"> = 4096</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::UNIX_PATHS` <span class="initializer"> =
 8192</span> ;
 
@@ -5909,7 +5909,7 @@ Gets the number of directories and files found by the glob expression.
 ### 返回值
 
 The number of returned directories and files, as an <span
-class="type">integer</span>.
+class="type">int</span>.
 
 ### 范例
 
@@ -6781,17 +6781,17 @@ class="interfacename">Iterator</span> </span> {
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MultipleIterator::MIT_NEED_ANY` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MultipleIterator::MIT_NEED_ALL` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MultipleIterator::MIT_KEYS_NUMERIC` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MultipleIterator::MIT_KEYS_ASSOC` <span class="initializer"> = 2</span>
 ;
 
@@ -6894,7 +6894,7 @@ The new iterator to attach.
 
 `infos`  
 The associative information for the Iterator, which must be an <span
-class="type">integer</span>, a <span class="type">string</span>, or
+class="type">int</span>, a <span class="type">string</span>, or
 **`NULL`**.
 
 ### 返回值
@@ -7106,7 +7106,7 @@ Gets the number of attached iterator instances.
 ### 返回值
 
 The number of attached iterator instances (as an <span
-class="type">integer</span>).
+class="type">int</span>).
 
 ### 参见
 
@@ -7203,7 +7203,7 @@ Gets information about the flags.
 
 ### 返回值
 
-Information about the flags, as an <span class="type">integer</span>.
+Information about the flags, as an <span class="type">int</span>.
 
 ### 参见
 
@@ -7953,7 +7953,7 @@ class="interfacename">RecursiveIterator</span> </span> {
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CHILD_ARRAYS_ONLY` <span class="initializer"> = 4</span> ;
 
 /\* 方法 \*/
@@ -8247,26 +8247,26 @@ class="interfacename">RecursiveIterator</span> </span> {
 
 /\* 继承的常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CachingIterator::CALL_TOSTRING` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CachingIterator::CATCH_GET_CHILD` <span class="initializer"> =
 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CachingIterator::TOSTRING_USE_KEY` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CachingIterator::TOSTRING_USE_CURRENT` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CachingIterator::TOSTRING_USE_INNER` <span class="initializer"> =
 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CachingIterator::FULL_CACHE` <span class="initializer"> = 256</span> ;
 
 /\* 方法 \*/
@@ -8707,47 +8707,47 @@ class="interfacename">RecursiveIterator</span> </span> {
 
 /\* 继承的常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_AS_PATHNAME` <span class="initializer"> =
 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_AS_FILEINFO` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_AS_SELF` <span class="initializer"> =
 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_MODE_MASK` <span class="initializer"> =
 240</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::KEY_AS_PATHNAME` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::KEY_AS_FILENAME` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::FOLLOW_SYMLINKS` <span class="initializer"> =
 512</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::KEY_MODE_MASK` <span class="initializer"> =
 3840</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::NEW_CURRENT_AND_KEY` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::SKIP_DOTS` <span class="initializer"> = 4096</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::UNIX_PATHS` <span class="initializer"> =
 8192</span> ;
 
@@ -9402,19 +9402,19 @@ class="interfacename">OuterIterator</span> </span> {
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveIteratorIterator::LEAVES_ONLY` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveIteratorIterator::SELF_FIRST` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveIteratorIterator::CHILD_FIRST` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveIteratorIterator::CATCH_GET_CHILD` <span class="initializer">
 = 16</span> ;
 
@@ -10094,22 +10094,22 @@ class="interfacename">RecursiveIterator</span> </span> {
 
 /\* 继承的常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MATCH` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `GET_MATCH` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ALL_MATCHES` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SPLIT` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `REPLACE` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `USE_KEY` <span class="initializer"> = 1</span> ;
 
 /\* 方法 \*/
@@ -10410,53 +10410,53 @@ class="interfacename">OuterIterator</span> </span> {
 
 /\* 继承的常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveIteratorIterator::LEAVES_ONLY` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveIteratorIterator::SELF_FIRST` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveIteratorIterator::CHILD_FIRST` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveIteratorIterator::CATCH_GET_CHILD` <span class="initializer">
 = 16</span> ;
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveTreeIterator::BYPASS_CURRENT` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveTreeIterator::BYPASS_KEY` <span class="initializer"> =
 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveTreeIterator::PREFIX_LEFT` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveTreeIterator::PREFIX_MID_HAS_NEXT` <span class="initializer">
 = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveTreeIterator::PREFIX_MID_LAST` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveTreeIterator::PREFIX_END_HAS_NEXT` <span class="initializer">
 = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveTreeIterator::PREFIX_END_LAST` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RecursiveTreeIterator::PREFIX_RIGHT` <span class="initializer"> =
 5</span> ;
 
@@ -11163,22 +11163,22 @@ class="ooclass"> <span class="modifier">extends</span>
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MATCH` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `GET_MATCH` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ALL_MATCHES` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SPLIT` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `REPLACE` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `USE_KEY` <span class="initializer"> = 1</span> ;
 
 /\* 方法 \*/

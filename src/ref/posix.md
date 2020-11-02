@@ -214,7 +214,7 @@ Return the numeric effective group ID of the current process.
 
 ### 返回值
 
-Returns an <span class="type">integer</span> of the effective group ID.
+Returns an <span class="type">int</span> of the effective group ID.
 
 ### 范例
 
@@ -262,7 +262,7 @@ convert this into a useable username.
 
 ### 返回值
 
-Returns the user id, as an <span class="type">integer</span>
+Returns the user id, as an <span class="type">int</span>
 
 ### 范例
 
@@ -304,7 +304,7 @@ Return the numeric real group ID of the current process.
 
 ### 返回值
 
-Returns the real group id, as an <span class="type">integer</span>.
+Returns the real group id, as an <span class="type">int</span>.
 
 ### 范例
 
@@ -402,7 +402,8 @@ Return info about a group by name
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getgrnam</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
@@ -557,7 +558,8 @@ Get process group id for job control
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getpgid</span> ( <span
 class="methodparam"><span class="type">int</span> `$pid`</span> )
 
@@ -571,7 +573,7 @@ The process id.
 
 ### 返回值
 
-Returns the identifier, as an <span class="type">integer</span>.
+Returns the identifier, as an <span class="type">int</span>.
 
 ### 范例
 
@@ -613,7 +615,7 @@ Return the process group identifier of the current process.
 
 ### 返回值
 
-Returns the identifier, as an <span class="type">integer</span>.
+Returns the identifier, as an <span class="type">int</span>.
 
 ### 参见
 
@@ -668,7 +670,7 @@ process.
 
 ### 返回值
 
-Returns the identifier, as an <span class="type">integer</span>.
+Returns the identifier, as an <span class="type">int</span>.
 
 ### 范例
 
@@ -921,7 +923,7 @@ class="function">posix\_get\_last\_error</span>.
 
 ### 返回值
 
-Returns the identifier, as an <span class="type">integer</span>.
+Returns the identifier, as an <span class="type">int</span>.
 
 ### 范例
 
@@ -955,7 +957,7 @@ Return the numeric real user ID of the current process.
 
 ### 返回值
 
-Returns the user id, as an <span class="type">integer</span>
+Returns the user id, as an <span class="type">int</span>
 
 ### 范例
 

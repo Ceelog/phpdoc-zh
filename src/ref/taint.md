@@ -28,8 +28,8 @@ Taint a string
 
 <span class="type">bool</span> <span class="methodname">taint</span> (
 <span class="methodparam"><span class="type">string</span>
-`&$string`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$...`</span> \] )
+`&$string`</span> , <span class="methodparam"><span
+class="type">string</span> `$strings`</span> )
 
 Make a string tainted. This is used for testing purpose only.
 
@@ -37,7 +37,7 @@ Make a string tainted. This is used for testing purpose only.
 
 `string`  
 
-`...`  
+`strings`  
 
 ### 返回值
 
@@ -53,8 +53,8 @@ Untaint strings
 
 <span class="type">bool</span> <span class="methodname">untaint</span> (
 <span class="methodparam"><span class="type">string</span>
-`&$string`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$...`</span> \] )
+`&$string`</span> , <span class="methodparam"><span
+class="type">string</span> `$strings`</span> )
 
 Untaint strings
 
@@ -62,7 +62,7 @@ Untaint strings
 
 `string`  
 
-`...`  
+`strings`  
 
 ### 返回值
 

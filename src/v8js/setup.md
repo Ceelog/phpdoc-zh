@@ -33,7 +33,7 @@ PHP 5.3.3+ and V8 library and headers installed in proper paths.
 
 这是配置指令的简短说明。
 
-`v8js.max_disposed_contexts` <span class="type">integer</span>  
+`v8js.max_disposed_contexts` <span class="type">int</span>  
 Sets limit for disposed contexts before forcing V8 to do garbage
 collection.
 

@@ -39,10 +39,10 @@ PECL 扩展的 DLL 当前不可用。参见
 
 这是配置指令的简短说明。
 
-`taint.enable` <span class="type">integer</span>  
+`taint.enable` <span class="type">int</span>  
 Whether enable the taint.
 
-`taint.error_level` <span class="type">integer</span>  
+`taint.error_level` <span class="type">int</span>  
 the error type which taint will report as when taint find a tainted
 string.
 

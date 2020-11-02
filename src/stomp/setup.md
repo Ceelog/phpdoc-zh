@@ -46,16 +46,16 @@ be required to use stomp over SSL.
 The default broker URI to use when connecting to the message broker if
 no other URI is specified.
 
-`stomp.default_connection_timeout_sec` <span class="type">integer</span>  
+`stomp.default_connection_timeout_sec` <span class="type">int</span>  
 The seconds part of the default connection timeout.
 
-`stomp.default_connection_timeout_usec` <span class="type">integer</span>  
+`stomp.default_connection_timeout_usec` <span class="type">int</span>  
 The microseconds part of the default connection timeout.
 
-`stomp.default_read_timeout_sec` <span class="type">integer</span>  
+`stomp.default_read_timeout_sec` <span class="type">int</span>  
 The seconds part of the default reading timeout.
 
-`stomp.default_read_timeout_usec` <span class="type">integer</span>  
+`stomp.default_read_timeout_usec` <span class="type">int</span>  
 The microseconds part of the default reading timeout.
 
 资源类型

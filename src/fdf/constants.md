@@ -3,83 +3,83 @@
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-**`FDFValue`** (<span class="type">integer</span>)  
+**`FDFValue`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFStatus`** (<span class="type">integer</span>)  
+**`FDFStatus`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFFile`** (<span class="type">integer</span>)  
+**`FDFFile`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFID`** (<span class="type">integer</span>)  
+**`FDFID`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFFf`** (<span class="type">integer</span>)  
+**`FDFFf`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFSetFf`** (<span class="type">integer</span>)  
+**`FDFSetFf`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFClearFf`** (<span class="type">integer</span>)  
+**`FDFClearFf`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFFlags`** (<span class="type">integer</span>)  
+**`FDFFlags`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFSetF`** (<span class="type">integer</span>)  
+**`FDFSetF`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFClrF`** (<span class="type">integer</span>)  
+**`FDFClrF`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFAP`** (<span class="type">integer</span>)  
+**`FDFAP`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFAS`** (<span class="type">integer</span>)  
+**`FDFAS`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFAction`** (<span class="type">integer</span>)  
+**`FDFAction`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFAA`** (<span class="type">integer</span>)  
+**`FDFAA`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFAPRef`** (<span class="type">integer</span>)  
+**`FDFAPRef`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFIF`** (<span class="type">integer</span>)  
+**`FDFIF`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFEnter`** (<span class="type">integer</span>)  
+**`FDFEnter`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFExit`** (<span class="type">integer</span>)  
+**`FDFExit`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFDown`** (<span class="type">integer</span>)  
+**`FDFDown`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFUp`** (<span class="type">integer</span>)  
+**`FDFUp`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFFormat`** (<span class="type">integer</span>)  
+**`FDFFormat`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFValidate`** (<span class="type">integer</span>)  
+**`FDFValidate`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFKeystroke`** (<span class="type">integer</span>)  
+**`FDFKeystroke`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFCalculate`** (<span class="type">integer</span>)  
+**`FDFCalculate`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFNormalAP`** (<span class="type">integer</span>)  
+**`FDFNormalAP`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFRolloverAP`** (<span class="type">integer</span>)  
+**`FDFRolloverAP`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`FDFDownAP`** (<span class="type">integer</span>)  
+**`FDFDownAP`** (<span class="type">int</span>)  
 <span class="simpara"> </span>

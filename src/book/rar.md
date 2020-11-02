@@ -100,14 +100,15 @@ class="methodparam">void</span> )
 <span class="methodname">getComment</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">getEntries</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">getEntries</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">RarEntry</span>
-<span class="methodname">getEntry</span> ( <span
-class="methodparam"><span class="type">string</span> `$entryname`</span>
-)
+<span class="modifier">public</span> <span class="type"><span
+class="type">RarEntry</span><span class="type">false</span></span> <span
+class="methodname">getEntry</span> ( <span class="methodparam"><span
+class="type">string</span> `$entryname`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">isBroken</span> ( <span
@@ -118,7 +119,8 @@ class="methodparam">void</span> )
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">RarArchive</span>
+class="modifier">static</span> <span class="type"><span
+class="type">RarArchive</span><span class="type">false</span></span>
 <span class="methodname">open</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$password`<span
@@ -288,13 +290,15 @@ Get full list of entries from the RAR archive
 
 面向对象风格 (method):
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">RarArchive::getEntries</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">RarArchive::getEntries</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格:
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">rar\_list</span> ( <span class="methodparam"><span
 class="type">RarArchive</span> `$rarfile`</span> )
 
@@ -396,14 +400,16 @@ Get entry object from the RAR archive
 
 面向对象风格 (method):
 
-<span class="modifier">public</span> <span class="type">RarEntry</span>
-<span class="methodname">RarArchive::getEntry</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">RarEntry</span><span class="type">false</span></span> <span
+class="methodname">RarArchive::getEntry</span> ( <span
 class="methodparam"><span class="type">string</span> `$entryname`</span>
 )
 
 过程化风格:
 
-<span class="type">RarEntry</span> <span
+<span class="type"><span class="type">RarEntry</span><span
+class="type">false</span></span> <span
 class="methodname">rar\_entry\_get</span> ( <span
 class="methodparam"><span class="type">RarArchive</span>
 `$rarfile`</span> , <span class="methodparam"><span
@@ -635,7 +641,8 @@ Open RAR archive
 面向对象风格 (method):
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">RarArchive</span>
+class="modifier">static</span> <span class="type"><span
+class="type">RarArchive</span><span class="type">false</span></span>
 <span class="methodname">RarArchive::open</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -645,7 +652,8 @@ class="methodparam"><span class="type">callable</span>
 
 过程化风格:
 
-<span class="type">RarArchive</span> <span
+<span class="type"><span class="type">RarArchive</span><span
+class="type">false</span></span> <span
 class="methodname">rar\_open</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$password`<span
@@ -938,159 +946,159 @@ archive.
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::HOST_MSDOS` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::HOST_OS2` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::HOST_WIN32` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::HOST_UNIX` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::HOST_MACOS` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::HOST_BEOS` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_READONLY` <span class="initializer"> = 1</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_HIDDEN` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_SYSTEM` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_DIRECTORY` <span class="initializer"> =
 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_ARCHIVE` <span class="initializer"> = 32</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_DEVICE` <span class="initializer"> = 64</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_NORMAL` <span class="initializer"> = 128</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_TEMPORARY` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_SPARSE_FILE` <span class="initializer"> =
 512</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_REPARSE_POINT` <span class="initializer"> =
 1024</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_COMPRESSED` <span class="initializer"> =
 2048</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_OFFLINE` <span class="initializer"> =
 4096</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_NOT_CONTENT_INDEXED` <span class="initializer">
 = 8192</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_ENCRYPTED` <span class="initializer"> =
 16384</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_WIN_VIRTUAL` <span class="initializer"> =
 65536</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_WORLD_EXECUTE` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_WORLD_WRITE` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_WORLD_READ` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_GROUP_EXECUTE` <span class="initializer"> =
 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_GROUP_WRITE` <span class="initializer"> =
 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_GROUP_READ` <span class="initializer"> =
 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_OWNER_EXECUTE` <span class="initializer"> =
 64</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_OWNER_WRITE` <span class="initializer"> =
 128</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_OWNER_READ` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_STICKY` <span class="initializer"> =
 512</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_SETGID` <span class="initializer"> =
 1024</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_SETUID` <span class="initializer"> =
 2048</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_FINAL_QUARTET` <span class="initializer"> =
 61440</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_FIFO` <span class="initializer"> = 4096</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_CHAR_DEV` <span class="initializer"> =
 8192</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_DIRECTORY` <span class="initializer"> =
 16384</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_BLOCK_DEV` <span class="initializer"> =
 24576</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_REGULAR_FILE` <span class="initializer"> =
 32768</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_SYM_LINK` <span class="initializer"> =
 40960</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `RarEntry::ATTRIBUTE_UNIX_SOCKET` <span class="initializer"> =
 49152</span> ;
 
@@ -1134,10 +1142,10 @@ class="methodparam">void</span> )
 class="methodname">getPackedSize</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">resource</span>
-<span class="methodname">getStream</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$password`</span>
-\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">resource</span><span class="type">false</span></span> <span
+class="methodname">getStream</span> (\[ <span class="methodparam"><span
+class="type">string</span> `$password`</span> \] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getUnpackedSize</span> ( <span
@@ -1865,9 +1873,9 @@ Returns the packed size, or **`FALSE`** on error.
 
 ### 更新日志
 
-| 版本           | 说明                                                                                                                                                                                       |
-|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PECL rar 2.0.0 | This method now returns correct values of packed sizes bigger than 2 GiB on platforms with 64-bit <span class="type">integer</span>s and never returns negative values on other platforms. |
+| 版本           | 说明                                                                                                                                                                                   |
+|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL rar 2.0.0 | This method now returns correct values of packed sizes bigger than 2 GiB on platforms with 64-bit <span class="type">int</span>s and never returns negative values on other platforms. |
 
 ### 范例
 
@@ -1893,8 +1901,9 @@ Get file handler for entry
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">resource</span>
-<span class="methodname">RarEntry::getStream</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">resource</span><span class="type">false</span></span> <span
+class="methodname">RarEntry::getStream</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$password`</span>
 \] )
 
@@ -2002,9 +2011,9 @@ Returns the unpacked size, or **`FALSE`** on error.
 
 ### 更新日志
 
-| 版本           | 说明                                                                                                                                                                                         |
-|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PECL rar 2.0.0 | This method now returns correct values of unpacked sizes bigger than 2 GiB on platforms with 64-bit <span class="type">integer</span>s and never returns negative values on other platforms. |
+| 版本           | 说明                                                                                                                                                                                     |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL rar 2.0.0 | This method now returns correct values of unpacked sizes bigger than 2 GiB on platforms with 64-bit <span class="type">int</span>s and never returns negative values on other platforms. |
 
 ### 返回值
 

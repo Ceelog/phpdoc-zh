@@ -42,16 +42,16 @@ version 0.1.0 or higher to be installed.
 
 这是配置指令的简短说明。
 
-`yaml.decode_binary` <span class="type">boolean</span>  
+`yaml.decode_binary` <span class="type">bool</span>  
 Off by default, but can be set to on to cause base64 binary encoded
 entities which have the explicit tag "tag:yaml.org,2002:binary" to be
 decoded.
 
-`yaml.decode_php` <span class="type">boolean</span>  
+`yaml.decode_php` <span class="type">bool</span>  
 Off by default, but can be set to on to cause serialized php objects
 which have the explicit tag "!php/object" to be unserialized.
 
-`yaml.decode_timestamp` <span class="type">integer</span>  
+`yaml.decode_timestamp` <span class="type">int</span>  
 Controls the decoding of both implicit and explicit
 "tag:yaml.org,2002:timestamp" scalars in the YAML document stream. The
 default setting of *0* will not apply any decoding. A setting of *1*
@@ -60,14 +60,14 @@ value as a Unix timestamp. A setting of *2* will use <span
 class="function">date\_create</span> to parse the timestamp value as
 <span class="type">DateTime</span> object.
 
-`yaml.output_canonical` <span class="type">boolean</span>  
+`yaml.output_canonical` <span class="type">bool</span>  
 Off by default, but can be set to on to cause canonical form output.
 
-`yaml.output_indent` <span class="type">integer</span>  
+`yaml.output_indent` <span class="type">int</span>  
 Number of spaces to indent sections. Value should be between *1* and
 *10*.
 
-`yaml.output_width` <span class="type">integer</span>  
+`yaml.output_width` <span class="type">int</span>  
 Set the preferred line width. *-1* means unlimited.
 
 资源类型

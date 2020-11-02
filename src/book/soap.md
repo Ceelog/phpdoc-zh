@@ -1129,8 +1129,8 @@ class="methodparam"><span class="type">string</span>
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setClass</span> ( <span
 class="methodparam"><span class="type">string</span>
-`$class_name`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$class_name`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$args`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setObject</span> ( <span
@@ -1410,8 +1410,8 @@ Sets the class which handles SOAP requests
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">SoapServer::setClass</span> ( <span
 class="methodparam"><span class="type">string</span>
-`$class_name`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$class_name`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$args`</span> )
 
 Exports all methods from specified class.
 
@@ -1424,7 +1424,7 @@ method.
 `class_name`  
 The name of the exported class.
 
-`...`  
+`args`  
 These optional parameters will be passed to the default class
 constructor during object creation.
 

@@ -770,7 +770,8 @@ Opens a database
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">dbase\_open</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">int</span> `$mode`</span> )
@@ -980,7 +981,7 @@ if ($db) {
 
 > **Note**:
 >
-> Boolean fields result in an <span class="type">integer</span> element
+> Boolean fields result in an <span class="type">int</span> element
 > value (*0* or *1*) when retrieved via <span
 > class="function">dbase\_get\_record</span> or <span
 > class="function">dbase\_get\_record\_with\_names</span>. If they are

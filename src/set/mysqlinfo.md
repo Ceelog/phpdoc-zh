@@ -5349,7 +5349,8 @@ ini\_get("mysqli.default\_socket")</span></span> \]\]\]\]\]\] )
 
 过程化风格
 
-<span class="type">mysqli</span> <span
+<span class="type"><span class="type">mysqli</span><span
+class="type">false</span></span> <span
 class="methodname">mysqli\_connect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$host`<span
 class="initializer"> = ini\_get("mysqli.default\_host")</span></span>
@@ -16238,15 +16239,15 @@ on Ubuntu 18.04 example:
 
 这是配置指令的简短说明。
 
-`xmysqlnd.collect_memory_statistics` <span class="type">integer</span>  
+`xmysqlnd.collect_memory_statistics` <span class="type">int</span>  
 
-`xmysqlnd.collect_statistics` <span class="type">integer</span>  
+`xmysqlnd.collect_statistics` <span class="type">int</span>  
 
 `xmysqlnd.debug` <span class="type">string</span>  
 
-`xmysqlnd.mempool_default_size` <span class="type">integer</span>  
+`xmysqlnd.mempool_default_size` <span class="type">int</span>  
 
-`xmysqlnd.net_read_timeout` <span class="type">integer</span>  
+`xmysqlnd.net_read_timeout` <span class="type">int</span>  
 
 `xmysqlnd.trace_alloc` <span class="type">string</span>  
 
@@ -16302,118 +16303,118 @@ Considerations for compiling this extension from source.
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-**`MYSQLX_CLIENT_SSL`** (<span class="type">integer</span>)  
+**`MYSQLX_CLIENT_SSL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_DECIMAL`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_DECIMAL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_TINY`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_TINY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_SHORT`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_SHORT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_SMALLINT`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_SMALLINT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_MEDIUMINT`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_MEDIUMINT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_INT`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_INT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_BIGINT`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_BIGINT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_LONG`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_LONG`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_FLOAT`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_FLOAT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_DOUBLE`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_DOUBLE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_NULL`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_NULL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_TIMESTAMP`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_TIMESTAMP`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_LONGLONG`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_LONGLONG`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_INT24`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_INT24`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_DATE`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_DATE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_TIME`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_TIME`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_DATETIME`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_DATETIME`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_YEAR`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_YEAR`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_NEWDATE`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_NEWDATE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_ENUM`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_ENUM`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_SET`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_SET`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_TINY_BLOB`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_TINY_BLOB`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_MEDIUM_BLOB`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_MEDIUM_BLOB`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_LONG_BLOB`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_LONG_BLOB`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_BLOB`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_BLOB`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_VAR_STRING`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_VAR_STRING`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_STRING`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_STRING`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_CHAR`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_CHAR`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_BYTES`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_BYTES`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_INTERVAL`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_INTERVAL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_GEOMETRY`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_GEOMETRY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_JSON`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_JSON`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_NEWDECIMAL`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_NEWDECIMAL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_TYPE_BIT`** (<span class="type">integer</span>)  
+**`MYSQLX_TYPE_BIT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_LOCK_DEFAULT`** (<span class="type">integer</span>)  
+**`MYSQLX_LOCK_DEFAULT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_LOCK_NOWAIT`** (<span class="type">integer</span>)  
+**`MYSQLX_LOCK_NOWAIT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MYSQLX_LOCK_SKIP_LOCKED`** (<span class="type">integer</span>)  
+**`MYSQLX_LOCK_SKIP_LOCKED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 范例
@@ -16768,7 +16769,7 @@ class="methodname">getWarnings</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span class="type">integer</span> <span
+class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getWarningsCount</span> ( <span
 class="methodparam">void</span> )
 
@@ -16848,7 +16849,7 @@ Fetch warning count from last operation
 ### 说明
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span class="type">integer</span> <span
+class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysql\_xdevapi\\BaseResult::getWarningsCount</span> (
 <span class="methodparam">void</span> )
 
@@ -17024,9 +17025,9 @@ class="methodparam"><span class="type">string</span> `$id`</span> ,
 <span class="methodparam"><span class="type">string</span> `$doc`</span>
 )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">count</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">count</span> ( <span class="methodparam">void</span>
+)
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">createIndex</span> ( <span
@@ -17328,9 +17329,9 @@ Get document count
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">mysql\_xdevapi\\Collection::count</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">mysql\_xdevapi\\Collection::count</span> ( <span
+class="methodparam">void</span> )
 
 This functionality is similar to a *SELECT COUNT(\*)* SQL operation
 against the MySQL server for the current schema and collection. In other
@@ -18405,23 +18406,23 @@ class="type">string</span> `$sort_expr`</span> )
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionFind</span> <span
 class="methodname">limit</span> ( <span class="methodparam"><span
-class="type">integer</span> `$rows`</span> )
+class="type">int</span> `$rows`</span> )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionFind</span> <span
 class="methodname">lockExclusive</span> (\[ <span
-class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span>
 `$lock_waiting_option`</span> \] )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionFind</span> <span
 class="methodname">lockShared</span> (\[ <span class="methodparam"><span
-class="type">integer</span> `$lock_waiting_option`</span> \] )
+class="type">int</span> `$lock_waiting_option`</span> \] )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionFind</span> <span
 class="methodname">offset</span> ( <span class="methodparam"><span
-class="type">integer</span> `$position`</span> )
+class="type">int</span> `$position`</span> )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionFind</span> <span
@@ -18810,7 +18811,7 @@ Limit number of returned documents
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionFind</span> <span
 class="methodname">mysql\_xdevapi\\CollectionFind::limit</span> ( <span
-class="methodparam"><span class="type">integer</span> `$rows`</span> )
+class="methodparam"><span class="type">int</span> `$rows`</span> )
 
 Set the maximum number of documents to return.
 
@@ -18886,7 +18887,7 @@ Execute operation with EXCLUSIVE LOCK
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionFind</span> <span
 class="methodname">mysql\_xdevapi\\CollectionFind::lockExclusive</span>
-(\[ <span class="methodparam"><span class="type">integer</span>
+(\[ <span class="methodparam"><span class="type">int</span>
 `$lock_waiting_option`</span> \] )
 
 Lock exclusively the document, other transactions are blocked from
@@ -18953,7 +18954,7 @@ Execute operation with SHARED LOCK
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionFind</span> <span
 class="methodname">mysql\_xdevapi\\CollectionFind::lockShared</span> (\[
-<span class="methodparam"><span class="type">integer</span>
+<span class="methodparam"><span class="type">int</span>
 `$lock_waiting_option`</span> \] )
 
 Allows to share the documents between multiple transactions which are
@@ -19021,8 +19022,7 @@ Skip given number of elements to be returned
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionFind</span> <span
 class="methodname">mysql\_xdevapi\\CollectionFind::offset</span> ( <span
-class="methodparam"><span class="type">integer</span> `$position`</span>
-)
+class="methodparam"><span class="type">int</span> `$position`</span> )
 
 Skip (offset) these number of elements that otherwise would be returned
 by the find operation. Use with the limit() method.
@@ -19229,7 +19229,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionModify</span> <span
 class="methodname">limit</span> ( <span class="methodparam"><span
-class="type">integer</span> `$rows`</span> )
+class="type">int</span> `$rows`</span> )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionModify</span> <span
@@ -19253,7 +19253,7 @@ class="methodparam"><span class="type">string</span>
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionModify</span> <span
 class="methodname">skip</span> ( <span class="methodparam"><span
-class="type">integer</span> `$position`</span> )
+class="type">int</span> `$position`</span> )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionModify</span> <span
@@ -19646,8 +19646,7 @@ Limit number of modified documents
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionModify</span> <span
 class="methodname">mysql\_xdevapi\\CollectionModify::limit</span> (
-<span class="methodparam"><span class="type">integer</span>
-`$rows`</span> )
+<span class="methodparam"><span class="type">int</span> `$rows`</span> )
 
 Limit the number of documents modified by this operation. Optionally
 combine with skip() to define an offset value.
@@ -19934,8 +19933,7 @@ Skip elements
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionModify</span> <span
 class="methodname">mysql\_xdevapi\\CollectionModify::skip</span> ( <span
-class="methodparam"><span class="type">integer</span> `$position`</span>
-)
+class="methodparam"><span class="type">int</span> `$position`</span> )
 
 Skip the first N elements that would otherwise be returned by a find
 operation. If the number of elements skipped is larger than the size of
@@ -20089,7 +20087,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionRemove</span> <span
 class="methodname">limit</span> ( <span class="methodparam"><span
-class="type">integer</span> `$rows`</span> )
+class="type">int</span> `$rows`</span> )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionRemove</span> <span
@@ -20257,8 +20255,7 @@ Limit number of documents to remove
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CollectionRemove</span> <span
 class="methodname">mysql\_xdevapi\\CollectionRemove::limit</span> (
-<span class="methodparam"><span class="type">integer</span>
-`$rows`</span> )
+<span class="methodparam"><span class="type">int</span> `$rows`</span> )
 
 Sets the maximum number of documents to remove.
 
@@ -20364,12 +20361,12 @@ class="methodparam">void</span> )
 <span class="methodname">getColumnName</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">getFractionalDigits</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getFractionalDigits</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">getLength</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getLength</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -20384,16 +20381,16 @@ class="methodparam">void</span> )
 <span class="methodname">getTableName</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">getType</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getType</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">isNumberSigned</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">isNumberSigned</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">isPadded</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">isPadded</span> ( <span
 class="methodparam">void</span> )
 
 }
@@ -20645,8 +20642,7 @@ Get fractional digit length
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysql\_xdevapi\\ColumnResult::getFractionalDigits</span>
 ( <span class="methodparam">void</span> )
 
@@ -20683,9 +20679,9 @@ Get column field length
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">mysql\_xdevapi\\ColumnResult::getLength</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">mysql\_xdevapi\\ColumnResult::getLength</span> (
+<span class="methodparam">void</span> )
 
 **Warning**
 
@@ -20830,9 +20826,9 @@ Get column type
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">mysql\_xdevapi\\ColumnResult::getType</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">mysql\_xdevapi\\ColumnResult::getType</span> ( <span
+class="methodparam">void</span> )
 
 **Warning**
 
@@ -20864,8 +20860,7 @@ Check if signed type
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysql\_xdevapi\\ColumnResult::isNumberSigned</span> (
 <span class="methodparam">void</span> )
 
@@ -20905,9 +20900,9 @@ Check if padded
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">mysql\_xdevapi\\ColumnResult::isPadded</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">mysql\_xdevapi\\ColumnResult::isPadded</span> ( <span
+class="methodparam">void</span> )
 
 **Warning**
 
@@ -21016,7 +21011,7 @@ $res = $table->delete()->orderby('age desc')->where('age < 20 and age > 12 and n
 class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CrudOperationLimitable</span> <span
 class="methodname">limit</span> ( <span class="methodparam"><span
-class="type">integer</span> `$rows`</span> )
+class="type">int</span> `$rows`</span> )
 
 }
 
@@ -21031,8 +21026,8 @@ Set result limit
 class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CrudOperationLimitable</span> <span
 class="methodname">mysql\_xdevapi\\CrudOperationLimitable::limit</span>
-( <span class="methodparam"><span class="type">integer</span>
-`$rows`</span> )
+( <span class="methodparam"><span class="type">int</span> `$rows`</span>
+)
 
 Sets the maximum number of records or documents to return.
 
@@ -21081,7 +21076,7 @@ $res = $table->update()->set('age',69)->where('age > 15 and age < 22')->limit(4)
 class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CrudOperationSkippable</span> <span
 class="methodname">skip</span> ( <span class="methodparam"><span
-class="type">integer</span> `$skip`</span> )
+class="type">int</span> `$skip`</span> )
 
 }
 
@@ -21096,8 +21091,7 @@ Number of operations to skip
 class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\CrudOperationSkippable</span> <span
 class="methodname">mysql\_xdevapi\\CrudOperationSkippable::skip</span> (
-<span class="methodparam"><span class="type">integer</span>
-`$skip`</span> )
+<span class="methodparam"><span class="type">int</span> `$skip`</span> )
 
 Skip this number of records in the returned operation.
 
@@ -21374,8 +21368,8 @@ class="methodparam">void</span> )
 <span class="methodname">getWarnings</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">getWarningsCount</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getWarningsCount</span> ( <span
 class="methodparam">void</span> )
 
 }
@@ -21686,8 +21680,7 @@ Get warning count from last operation
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysql\_xdevapi\\DocResult::getWarningsCount</span> (
 <span class="methodparam">void</span> )
 
@@ -22024,8 +22017,8 @@ class="methodparam">void</span> )
 <span class="methodname">getWarnings</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">getWarningsCount</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getWarningsCount</span> ( <span
 class="methodparam">void</span> )
 
 }
@@ -22315,9 +22308,9 @@ Get warning count from last operation
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">mysql\_xdevapi\\Result::getWarningsCount</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">mysql\_xdevapi\\Result::getWarningsCount</span> (
+<span class="methodparam">void</span> )
 
 Retrieve the number of warnings from the last Result operation.
 
@@ -22382,8 +22375,8 @@ class="methodparam">void</span> )
 <span class="methodname">fetchOne</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">getColumnsCount</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getColumnsCount</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -22398,8 +22391,8 @@ class="methodparam">void</span> )
 <span class="methodname">getWarnings</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">getWarningsCount</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getWarningsCount</span> ( <span
 class="methodparam">void</span> )
 
 }
@@ -22578,8 +22571,7 @@ Get column count
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysql\_xdevapi\\RowResult::getColumnsCount</span> (
 <span class="methodparam">void</span> )
 
@@ -22837,8 +22829,7 @@ Get warning count from last operation
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysql\_xdevapi\\RowResult::getWarningsCount</span> (
 <span class="methodparam">void</span> )
 
@@ -23680,8 +23671,8 @@ class="type">string</span> `$schema_name`</span> )
 <span class="methodname">getSchemas</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">getServerVersion</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getServerVersion</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -24100,8 +24091,7 @@ Get server version
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysql\_xdevapi\\Session::getServerVersion</span> (
 <span class="methodparam">void</span> )
 
@@ -24521,11 +24511,11 @@ $session->rollback();
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `mysql_xdevapi\SqlStatement::EXECUTE_ASYNC` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `mysql_xdevapi\SqlStatement::BUFFERED` <span class="initializer"> =
 2</span> ;
 
@@ -24810,12 +24800,12 @@ class="methodparam">void</span> )
 <span class="methodname">fetchOne</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">getAffectedItemsCount</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getAffectedItemsCount</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">getColumnsCount</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getColumnsCount</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -24838,8 +24828,8 @@ class="methodparam">void</span> )
 <span class="methodname">getWarnings</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">getWarningCounts</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getWarningCounts</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -25018,8 +25008,7 @@ Get affected row count
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysql\_xdevapi\\SqlStatementResult::getAffectedItemsCount</span>
 ( <span class="methodparam">void</span> )
 
@@ -25054,8 +25043,7 @@ Get column count
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysql\_xdevapi\\SqlStatementResult::getColumnsCount</span>
 ( <span class="methodparam">void</span> )
 
@@ -25287,8 +25275,7 @@ Get warning count from last operation
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysql\_xdevapi\\SqlStatementResult::getWarningCounts</span>
 ( <span class="methodparam">void</span> )
 
@@ -25406,11 +25393,11 @@ example**
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `mysql_xdevapi\Statement::EXECUTE_ASYNC` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `mysql_xdevapi\Statement::BUFFERED` <span class="initializer"> =
 2</span> ;
 
@@ -25600,9 +25587,9 @@ class="interfacename">mysql\_xdevapi\\SchemaObject</span> </span> {
 
 /\* 方法 \*/
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">count</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">count</span> ( <span class="methodparam">void</span>
+)
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableDelete</span> <span
@@ -25630,8 +25617,9 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableInsert</span> <span
 class="methodname">insert</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$columns`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+class="type">mixed</span> `$columns`</span> , <span
+class="methodparam"><span class="type">mixed</span>
+`$more_columns`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">isView</span> ( <span
@@ -25640,8 +25628,9 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableSelect</span> <span
 class="methodname">select</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$columns`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+class="type">mixed</span> `$columns`</span> , <span
+class="methodparam"><span class="type">mixed</span>
+`$more_columns`</span> )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableUpdate</span> <span
@@ -25693,8 +25682,8 @@ Get row count
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">integer</span>
-<span class="methodname">mysql\_xdevapi\\Table::count</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">mysql\_xdevapi\\Table::count</span> ( <span
 class="methodparam">void</span> )
 
 Fetch the number of rows in the table.
@@ -25980,9 +25969,9 @@ Insert table rows
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableInsert</span> <span
 class="methodname">mysql\_xdevapi\\Table::insert</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$columns`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+class="methodparam"><span class="type">mixed</span> `$columns`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$more_columns`</span> )
 
 Inserts rows into a table.
 
@@ -25992,7 +25981,7 @@ Inserts rows into a table.
 The columns to insert data into. Can be an array with one or more
 values, or a string.
 
-`...`  
+`more_columns`  
 Additional columns definitions.
 
 ### 返回值
@@ -26083,9 +26072,9 @@ Select rows from table
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableSelect</span> <span
 class="methodname">mysql\_xdevapi\\Table::select</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$columns`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+class="methodparam"><span class="type">mixed</span> `$columns`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$more_columns`</span> )
 
 Fetches data from a table.
 
@@ -26095,7 +26084,7 @@ Fetches data from a table.
 The columns to select data from. Can be an array with one or more
 values, or a string.
 
-`...`  
+`more_columns`  
 Additional columns parameter definitions.
 
 ### 返回值
@@ -26214,7 +26203,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableDelete</span> <span
 class="methodname">limit</span> ( <span class="methodparam"><span
-class="type">integer</span> `$rows`</span> )
+class="type">int</span> `$rows`</span> )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableDelete</span> <span
@@ -26383,7 +26372,7 @@ Limit deleted rows
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableDelete</span> <span
 class="methodname">mysql\_xdevapi\\TableDelete::limit</span> ( <span
-class="methodparam"><span class="type">integer</span> `$rows`</span> )
+class="methodparam"><span class="type">int</span> `$rows`</span> )
 
 Sets the maximum number of records or documents to delete.
 
@@ -26717,29 +26706,30 @@ class="type">string</span> `$sort_expr`</span> )
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableSelect</span> <span
 class="methodname">limit</span> ( <span class="methodparam"><span
-class="type">integer</span> `$rows`</span> )
+class="type">int</span> `$rows`</span> )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableSelect</span> <span
 class="methodname">lockExclusive</span> (\[ <span
-class="methodparam"><span class="type">integer</span>
+class="methodparam"><span class="type">int</span>
 `$lock_waiting_option`</span> \] )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableSelect</span> <span
 class="methodname">lockShared</span> (\[ <span class="methodparam"><span
-class="type">integer</span> `$lock_waiting_option`</span> \] )
+class="type">int</span> `$lock_waiting_option`</span> \] )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableSelect</span> <span
 class="methodname">offset</span> ( <span class="methodparam"><span
-class="type">integer</span> `$position`</span> )
+class="type">int</span> `$position`</span> )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableSelect</span> <span
 class="methodname">orderby</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$sort_expr`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+class="type">mixed</span> `$sort_expr`</span> , <span
+class="methodparam"><span class="type">mixed</span> `$sort_exprs`</span>
+)
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableSelect</span> <span
@@ -27060,7 +27050,7 @@ Limit selected rows
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableSelect</span> <span
 class="methodname">mysql\_xdevapi\\TableSelect::limit</span> ( <span
-class="methodparam"><span class="type">integer</span> `$rows`</span> )
+class="methodparam"><span class="type">int</span> `$rows`</span> )
 
 Sets the maximum number of records or documents to return.
 
@@ -27115,7 +27105,7 @@ Execute EXCLUSIVE LOCK
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableSelect</span> <span
 class="methodname">mysql\_xdevapi\\TableSelect::lockExclusive</span> (\[
-<span class="methodparam"><span class="type">integer</span>
+<span class="methodparam"><span class="type">int</span>
 `$lock_waiting_option`</span> \] )
 
 Execute a read operation with EXCLUSIVE LOCK. Only one lock can be
@@ -27189,7 +27179,7 @@ Execute SHARED LOCK
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableSelect</span> <span
 class="methodname">mysql\_xdevapi\\TableSelect::lockShared</span> (\[
-<span class="methodparam"><span class="type">integer</span>
+<span class="methodparam"><span class="type">int</span>
 `$lock_waiting_option`</span> \] )
 
 Execute a read operation with SHARED LOCK. Only one lock can be active
@@ -27263,8 +27253,7 @@ Set limit offset
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableSelect</span> <span
 class="methodname">mysql\_xdevapi\\TableSelect::offset</span> ( <span
-class="methodparam"><span class="type">integer</span> `$position`</span>
-)
+class="methodparam"><span class="type">int</span> `$position`</span> )
 
 Skip given number of rows in result.
 
@@ -27326,8 +27315,8 @@ Set select sort criteria
 class="type">mysql\_xdevapi\\TableSelect</span> <span
 class="methodname">mysql\_xdevapi\\TableSelect::orderby</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$sort_expr`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+, <span class="methodparam"><span class="type">mixed</span>
+`$sort_exprs`</span> )
 
 Sets the order by criteria.
 
@@ -27337,7 +27326,7 @@ Sets the order by criteria.
 The expressions that define the order by criteria. Can be an array with
 one or more expressions, or a string.
 
-`...`  
+`sort_expr`  
 Additional sort\_expr parameters.
 
 ### 返回值
@@ -27467,13 +27456,14 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableUpdate</span> <span
 class="methodname">limit</span> ( <span class="methodparam"><span
-class="type">integer</span> `$rows`</span> )
+class="type">int</span> `$rows`</span> )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableUpdate</span> <span
 class="methodname">orderby</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$orderby_expr`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+class="type">mixed</span> `$orderby_expr`</span> , <span
+class="methodparam"><span class="type">mixed</span>
+`$orderby_exprs`</span> )
 
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableUpdate</span> <span
@@ -27629,7 +27619,7 @@ Limit update row count
 <span class="modifier">public</span> <span
 class="type">mysql\_xdevapi\\TableUpdate</span> <span
 class="methodname">mysql\_xdevapi\\TableUpdate::limit</span> ( <span
-class="methodparam"><span class="type">integer</span> `$rows`</span> )
+class="methodparam"><span class="type">int</span> `$rows`</span> )
 
 Set the maximum number of records or documents update.
 
@@ -27675,8 +27665,8 @@ Set sorting criteria
 class="type">mysql\_xdevapi\\TableUpdate</span> <span
 class="methodname">mysql\_xdevapi\\TableUpdate::orderby</span> ( <span
 class="methodparam"><span class="type">mixed</span>
-`$orderby_expr`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$orderby_expr`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$orderby_exprs`</span> )
 
 Sets the sorting criteria.
 
@@ -27686,7 +27676,7 @@ Sets the sorting criteria.
 The expressions that define the order by criteria. Can be an array with
 one or more expressions, or a string.
 
-`...`  
+`orderby_exprs`  
 Additional sort\_expr parameters.
 
 ### 返回值
@@ -31815,7 +31805,7 @@ configured using:
 
 这是配置指令的简短说明。
 
-`mysqlnd.collect_statistics` <span class="type">boolean</span>  
+`mysqlnd.collect_statistics` <span class="type">bool</span>  
 Enables the collection of various client statistics which can be
 accessed through <span
 class="function">mysqli\_get\_client\_stats</span>, <span
@@ -31828,7 +31818,7 @@ This configuration setting enables all
 <a href="/set/mysqlinfo.html#Statistics" class="link">MySQL Native Driver statistics</a>
 except those relating to memory management.
 
-`mysqlnd.collect_memory_statistics` <span class="type">boolean</span>  
+`mysqlnd.collect_memory_statistics` <span class="type">bool</span>  
 Enable the collection of various memory statistics which can be accessed
 through <span class="function">mysqli\_get\_client\_stats</span>, <span
 class="function">mysqli\_get\_connection\_stats</span>, <span
@@ -31900,7 +31890,7 @@ Example:
 > Microsoft Windows if using a debug build of PHP and PHP was built
 > using Microsoft Visual C version 9 and above.
 
-`mysqlnd.log_mask` <span class="type">integer</span>  
+`mysqlnd.log_mask` <span class="type">int</span>  
 Defines which queries will be logged. The default 0, which disables
 logging. Define using an integer, and not with PHP constants. For
 example, a value of 48 (16 + 32) will log slow queries which either use
@@ -31916,10 +31906,10 @@ SERVER\_STATUS\_LAST\_ROW\_SENT=128, SERVER\_STATUS\_DB\_DROPPED=256,
 SERVER\_STATUS\_NO\_BACKSLASH\_ESCAPES=512, and
 SERVER\_QUERY\_WAS\_SLOW=1024.
 
-`mysqlnd.mempool_default_size` <span class="type">integer</span>  
+`mysqlnd.mempool_default_size` <span class="type">int</span>  
 Default size of the mysqlnd memory pool, which is used by result sets.
 
-`mysqlnd.net_read_timeout` <span class="type">integer</span>  
+`mysqlnd.net_read_timeout` <span class="type">int</span>  
 *mysqlnd* and the MySQL Client Library, *libmysqlclient* use different
 networking APIs. *mysqlnd* uses PHP streams, whereas *libmysqlclient*
 uses its own wrapper around the operating level network calls. PHP, by
@@ -31942,7 +31932,7 @@ is documented to work only for TCP/IP connections and, prior to MySQL
 5.1.2, only for Windows. PHP streams may not have this limitation.
 Please check the streams documentation, if in doubt.
 
-`mysqlnd.net_cmd_buffer_size` <span class="type">integer</span>  
+`mysqlnd.net_cmd_buffer_size` <span class="type">int</span>  
 *mysqlnd* allocates an internal command/network buffer of
 *mysqlnd.net\_cmd\_buffer\_size* (in `php.ini`) bytes for every
 connection. If a MySQL Client Server protocol command, for example,
@@ -31976,7 +31966,7 @@ bytes.
 The value can also be set using *mysqli\_options(link,
 MYSQLI\_OPT\_NET\_CMD\_BUFFER\_SIZE, size)*.
 
-`mysqlnd.net_read_buffer_size` <span class="type">integer</span>  
+`mysqlnd.net_read_buffer_size` <span class="type">int</span>  
 Maximum read chunk size in bytes when reading the body of a MySQL
 command packet. The MySQL client server protocol encapsulates all its
 commands in packets. The packets consist of a small header and a body
@@ -32001,7 +31991,7 @@ the standard SHA-256 Authentication Plugin authentication procedure.
 
 `mysqlnd.trace_alloc` <span class="type">string</span>  
 
-`mysqlnd.fetch_data_copy` <span class="type">integer</span>  
+`mysqlnd.fetch_data_copy` <span class="type">int</span>  
 Enforce copying result sets from the internal result set buffers into
 PHP variables instead of using the default reference and copy-on-write
 logic. Please, see the
@@ -40126,21 +40116,21 @@ slave server in a MySQL replication setup. </span>
 
 <span class="function">mysqlnd\_ms\_query\_is\_select</span> related
 
-**`MYSQLND_MS_QUERY_USE_MASTER`** (<span class="type">integer</span>)  
+**`MYSQLND_MS_QUERY_USE_MASTER`** (<span class="type">int</span>)  
 <span class="simpara"> If <span
 class="function">mysqlnd\_ms\_is\_select</span> returns
 **`MYSQLND_MS_QUERY_USE_MASTER`** for a given query, the built-in
 read/write split mechanism recommends sending the query to a MySQL
 replication master server. </span>
 
-**`MYSQLND_MS_QUERY_USE_SLAVE`** (<span class="type">integer</span>)  
+**`MYSQLND_MS_QUERY_USE_SLAVE`** (<span class="type">int</span>)  
 <span class="simpara"> If <span
 class="function">mysqlnd\_ms\_is\_select</span> returns
 **`MYSQLND_MS_QUERY_USE_SLAVE`** for a given query, the built-in
 read/write split mechanism recommends sending the query to a MySQL
 replication slave server. </span>
 
-**`MYSQLND_MS_QUERY_USE_LAST_USED`** (<span class="type">integer</span>)  
+**`MYSQLND_MS_QUERY_USE_LAST_USED`** (<span class="type">int</span>)  
 <span class="simpara"> If <span
 class="function">mysqlnd\_ms\_is\_select</span> returns
 **`MYSQLND_MS_QUERY_USE_LAST_USED`** for a given query, the built-in
@@ -40150,7 +40140,7 @@ server. </span>
 <span class="function">mysqlnd\_ms\_set\_qos</span>, quality of service
 filter and service level related
 
-**`MYSQLND_MS_QOS_CONSISTENCY_EVENTUAL`** (<span class="type">integer</span>)  
+**`MYSQLND_MS_QOS_CONSISTENCY_EVENTUAL`** (<span class="type">int</span>)  
 <span class="simpara"> Use to request the service level eventual
 consistency from the <span
 class="function">mysqlnd\_ms\_set\_qos</span>. Eventual consistency is
@@ -40160,25 +40150,25 @@ stale, depending on whether the selected slaves happen to have
 replicated the latest changes from the MySQL replication master or not.
 </span>
 
-**`MYSQLND_MS_QOS_CONSISTENCY_SESSION`** (<span class="type">integer</span>)  
+**`MYSQLND_MS_QOS_CONSISTENCY_SESSION`** (<span class="type">int</span>)  
 <span class="simpara"> Use to request the service level session
 consistency from the <span
 class="function">mysqlnd\_ms\_set\_qos</span>. Session consistency is
 defined as read your writes. The client is guaranteed to see his latest
 changes. </span>
 
-**`MYSQLND_MS_QOS_CONSISTENCY_STRONG`** (<span class="type">integer</span>)  
+**`MYSQLND_MS_QOS_CONSISTENCY_STRONG`** (<span class="type">int</span>)  
 <span class="simpara"> Use to request the service level strong
 consistency from the <span
 class="function">mysqlnd\_ms\_set\_qos</span>. Strong consistency is
 used to ensure all clients see each others changes. </span>
 
-**`MYSQLND_MS_QOS_OPTION_GTID`** (<span class="type">integer</span>)  
+**`MYSQLND_MS_QOS_OPTION_GTID`** (<span class="type">int</span>)  
 <span class="simpara"> Used as a service level option with <span
 class="function">mysqlnd\_ms\_set\_qos</span> to parameterize session
 consistency. </span>
 
-**`MYSQLND_MS_QOS_OPTION_AGE`** (<span class="type">integer</span>)  
+**`MYSQLND_MS_QOS_OPTION_AGE`** (<span class="type">int</span>)  
 <span class="simpara"> Used as a service level option with <span
 class="function">mysqlnd\_ms\_set\_qos</span> to parameterize eventual
 consistency. </span>
@@ -40202,7 +40192,7 @@ version number **`MYSQLND_MS_VERSION_ID`**, which is an integer such as
 <span class="simpara"> Plugin version string, for example,
 “1.0.0-prototype”. </span>
 
-**`MYSQLND_MS_VERSION_ID`** (<span class="type">integer</span>)  
+**`MYSQLND_MS_VERSION_ID`** (<span class="type">int</span>)  
 <span class="simpara"> Plugin version number, for example, 10000.
 </span>
 
@@ -44139,44 +44129,44 @@ PECL 扩展的 DLL 当前不可用。参见
 
 这是配置指令的简短说明。
 
-`mysqlnd_qc.enable_qc` <span class="type">integer</span>  
+`mysqlnd_qc.enable_qc` <span class="type">int</span>  
 Enables or disables the plugin. If disabled the extension will not plug
 into <a href="/set/mysqlinfo.html#Mysqlnd" class="link">mysqlnd</a> to
 proxy internal
 <a href="/set/mysqlinfo.html#Mysqlnd" class="link">mysqlnd</a> C API
 calls.
 
-`mysqlnd_qc.ttl` <span class="type">integer</span>  
+`mysqlnd_qc.ttl` <span class="type">int</span>  
 Default Time-to-Live (TTL) for cache entries in seconds.
 
-`mysqlnd_qc.cache_by_default` <span class="type">integer</span>  
+`mysqlnd_qc.cache_by_default` <span class="type">int</span>  
 Cache all queries regardless if they begin with the SQL hint that
 enables caching of a query or not. Storage handler cannot overrule the
 setting. It is evaluated by the core of the plugin.
 
-`mysqlnd_qc.cache_no_table` <span class="type">integer</span>  
+`mysqlnd_qc.cache_no_table` <span class="type">int</span>  
 Whether to cache queries with no table name in any of columns meta data
 of their result set, for example, *SELECT SLEEP(1)*, *SELECT NOW()*,
 *SELECT SUBSTRING()*.
 
-`mysqlnd_qc.use_request_time` <span class="type">integer</span>  
+`mysqlnd_qc.use_request_time` <span class="type">int</span>  
 Use PHP global request time to avoid *gettimeofday()* system calls? If
 using *APC* storage handler it should be set to the value of
 *apc.use\_request\_time*, if not warnings will be generated.
 
-`mysqlnd_qc.time_statistics` <span class="type">integer</span>  
+`mysqlnd_qc.time_statistics` <span class="type">int</span>  
 Collect run time and store time statistics using *gettimeofday()* system
 call? Data will be collected only if you also set
 *mysqlnd\_qc.collect\_statistics = 1*,
 
-`mysqlnd_qc.collect_statistics` <span class="type">integer</span>  
+`mysqlnd_qc.collect_statistics` <span class="type">int</span>  
 Collect statistics for <span
 class="function">mysqlnd\_qc\_get\_core\_stats</span>? Does not
 influence storage handler statistics! Handler statistics can be an
 integral part of the handler internal storage format. Therefore,
 collection of some handler statistics cannot be disabled.
 
-`mysqlnd_qc.collect_statistics-log-file` <span class="type">integer</span>  
+`mysqlnd_qc.collect_statistics-log-file` <span class="type">int</span>  
 If *mysqlnd\_qc.collect\_statistics* and
 *mysqlnd\_qc.collect\_statistics\_log\_file* are set, the plugin will
 dump statistics into the specified log file at every 10th web request
@@ -44185,13 +44175,13 @@ web server user.
 
 Since 1.1.0.
 
-`mysqlnd_qc.collect_query_trace` <span class="type">integer</span>  
+`mysqlnd_qc.collect_query_trace` <span class="type">int</span>  
 Collect query back traces?
 
-`mysqlnd_qc.query_trace_bt_depth` <span class="type">integer</span>  
+`mysqlnd_qc.query_trace_bt_depth` <span class="type">int</span>  
 Maximum depth/level of a query code backtrace.
 
-`mysqlnd_qc.ignore_sql_comments` <span class="type">integer</span>  
+`mysqlnd_qc.ignore_sql_comments` <span class="type">int</span>  
 Whether to remove SQL comments from a query string before hashing it to
 generate a cache key. Disable if you do not want two statemts such as
 *SELECT /\*my\_source\_ip=123\*/ id FROM test* and *SELECT
@@ -44199,20 +44189,20 @@ generate a cache key. Disable if you do not want two statemts such as
 
 Since 1.1.0.
 
-`mysqlnd_qc.slam_defense` <span class="type">integer</span>  
+`mysqlnd_qc.slam_defense` <span class="type">int</span>  
 Activates handler based slam defense (cache stampeding protection) if
 available. Supported by *Default* and *APC* storage handler
 
-`mysqlnd_qc.slam_defense_ttl` <span class="type">integer</span>  
+`mysqlnd_qc.slam_defense_ttl` <span class="type">int</span>  
 *TTL* for stale cache entries which are served while another client
 updates the entries. Supported by *APC* storage handler.
 
-`mysqlnd_qc.collect_normalized_query_trace` <span class="type">integer</span>  
+`mysqlnd_qc.collect_normalized_query_trace` <span class="type">int</span>  
 Collect aggregated normalized query traces? The setting has no effect by
 default. You compile the extension using the define
 *NORM\_QUERY\_TRACE\_LOG* to make use of the setting.
 
-`mysqlnd_qc.std_data_copy` <span class="type">integer</span>  
+`mysqlnd_qc.std_data_copy` <span class="type">int</span>  
 Default storage handler: copy cached wire data? EXPERIMENTAL – use
 default setting!
 
@@ -44223,7 +44213,7 @@ setting sets a prefix to be used for cache entries.
 `mysqlnd_qc.memc_server` <span class="type">string</span>  
 *MEMCACHE* storage handler: memcache server host.
 
-`mysqlnd_qc.memc_port` <span class="type">integer</span>  
+`mysqlnd_qc.memc_port` <span class="type">int</span>  
 *MEMCACHE* storage handler: memcached server port.
 
 `mysqlnd_qc.sqlite_data_file` <span class="type">string</span>  
@@ -46505,13 +46495,13 @@ Windows builds.
 
 这是配置指令的简短说明。
 
-`mysqlnd_uh.enable` <span class="type">integer</span>  
+`mysqlnd_uh.enable` <span class="type">int</span>  
 Enables or disables the plugin. If set to disabled, the extension will
 not allow users to plug into
 <a href="/set/mysqlinfo.html#Mysqlnd" class="link">mysqlnd</a> to hook
 <a href="/set/mysqlinfo.html#Mysqlnd" class="link">mysqlnd</a> calls.
 
-`mysqlnd_uh.report_wrong_types` <span class="type">integer</span>  
+`mysqlnd_uh.report_wrong_types` <span class="type">int</span>  
 Whether to report wrong return value types of user hooks as
 **`E_WARNING`** level errors. This is recommended for detecting errors.
 
@@ -46537,175 +46527,175 @@ The following constants can be used to detect what command is to be send
 through <span
 class="methodname">MysqlndUhConnection::simpleCommand</span>.
 
-**`MYSQLND_UH_MYSQLND_COM_SLEEP`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_SLEEP`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command: COM\_SLEEP.
 </span>
 
-**`MYSQLND_UH_MYSQLND_COM_QUIT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_QUIT`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command: COM\_QUIT.
 </span>
 
-**`MYSQLND_UH_MYSQLND_COM_INIT_DB`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_INIT_DB`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_INIT\_DB. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_QUERY`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_QUERY`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command: COM\_QUERY.
 </span>
 
-**`MYSQLND_UH_MYSQLND_COM_FIELD_LIST`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_FIELD_LIST`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_FIELD\_LIST. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_CREATE_DB`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_CREATE_DB`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_CREATE\_DB. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_DROP_DB`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_DROP_DB`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_DROP\_DB. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_REFRESH`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_REFRESH`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_REFRESH. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_SHUTDOWN`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_SHUTDOWN`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_SHUTDOWN. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_STATISTICS`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_STATISTICS`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_STATISTICS. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_PROCESS_INFO`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_PROCESS_INFO`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_PROCESS\_INFO. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_CONNECT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_CONNECT`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_CONNECT. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_PROCESS_KILL`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_PROCESS_KILL`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_PROCESS\_KILL. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_DEBUG`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_DEBUG`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command: COM\_DEBUG.
 </span>
 
-**`MYSQLND_UH_MYSQLND_COM_PING`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_PING`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command: COM\_PING.
 </span>
 
-**`MYSQLND_UH_MYSQLND_COM_TIME`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_TIME`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command: COM\_TIME.
 </span>
 
-**`MYSQLND_UH_MYSQLND_COM_DELAYED_INSERT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_DELAYED_INSERT`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_DELAYED\_INSERT. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_CHANGE_USER`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_CHANGE_USER`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_CHANGE\_USER. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_BINLOG_DUMP`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_BINLOG_DUMP`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_BINLOG\_DUMP. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_TABLE_DUMP`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_TABLE_DUMP`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_TABLE\_DUMP. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_CONNECT_OUT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_CONNECT_OUT`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_CONNECT\_OUT. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_REGISTER_SLAVED`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_REGISTER_SLAVED`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_REGISTER\_SLAVED. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_STMT_PREPARE`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_STMT_PREPARE`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_STMT\_PREPARE. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_STMT_EXECUTE`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_STMT_EXECUTE`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_STMT\_EXECUTE. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_STMT_SEND_LONG_DATA`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_STMT_SEND_LONG_DATA`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_STMT\_SEND\_LONG\_DATA. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_STMT_CLOSE`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_STMT_CLOSE`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_STMT\_CLOSE. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_STMT_RESET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_STMT_RESET`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_STMT\_RESET. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_SET_OPTION`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_SET_OPTION`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_SET\_OPTION. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_STMT_FETCH`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_STMT_FETCH`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_STMT\_FETCH. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_DAEMON`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_DAEMON`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command:
 COM\_DAEMON. </span>
 
-**`MYSQLND_UH_MYSQLND_COM_END`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_COM_END`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol command: COM\_END.
 </span>
 
 The following constants can be used to analyze the *ok\_packet* argument
 of <span class="methodname">MysqlndUhConnection::simpleCommand</span>.
 
-**`MYSQLND_UH_MYSQLND_PROT_GREET_PACKET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_PROT_GREET_PACKET`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol packet: greeting.
 </span>
 
-**`MYSQLND_UH_MYSQLND_PROT_AUTH_PACKET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_PROT_AUTH_PACKET`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol packet:
 authentication. </span>
 
-**`MYSQLND_UH_MYSQLND_PROT_OK_PACKET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_PROT_OK_PACKET`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol packet: OK. </span>
 
-**`MYSQLND_UH_MYSQLND_PROT_EOF_PACKET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_PROT_EOF_PACKET`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol packet: EOF. </span>
 
-**`MYSQLND_UH_MYSQLND_PROT_CMD_PACKET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_PROT_CMD_PACKET`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol packet: command.
 </span>
 
-**`MYSQLND_UH_MYSQLND_PROT_RSET_HEADER_PACKET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_PROT_RSET_HEADER_PACKET`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol packet: result set
 header. </span>
 
-**`MYSQLND_UH_MYSQLND_PROT_RSET_FLD_PACKET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_PROT_RSET_FLD_PACKET`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol packet: resultset
 field. </span>
 
-**`MYSQLND_UH_MYSQLND_PROT_ROW_PACKET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_PROT_ROW_PACKET`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol packet: row. </span>
 
-**`MYSQLND_UH_MYSQLND_PROT_STATS_PACKET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_PROT_STATS_PACKET`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol packet: stats.
 </span>
 
-**`MYSQLND_UH_MYSQLND_PREPARE_RESP_PACKET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_PREPARE_RESP_PACKET`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol packet: prepare
 response. </span>
 
-**`MYSQLND_UH_MYSQLND_CHG_USER_RESP_PACKET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_CHG_USER_RESP_PACKET`** (<span class="type">int</span>)  
 <span class="simpara"> MySQL Client Server protocol packet: change user
 response. </span>
 
-**`MYSQLND_UH_MYSQLND_PROT_LAST`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_PROT_LAST`** (<span class="type">int</span>)  
 <span class="simpara"> No practical meaning. Last entry marker of
 internal C data structure list. </span>
 
@@ -46714,18 +46704,18 @@ internal C data structure list. </span>
 The following constants can be used to detect why a connection has been
 closed through *MysqlndUhConnection::close()*.
 
-**`MYSQLND_UH_MYSQLND_CLOSE_EXPLICIT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_CLOSE_EXPLICIT`** (<span class="type">int</span>)  
 <span class="simpara"> User has called mysqlnd to close the connection.
 </span>
 
-**`MYSQLND_UH_MYSQLND_CLOSE_IMPLICIT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_CLOSE_IMPLICIT`** (<span class="type">int</span>)  
 <span class="simpara"> Implicitly closed, for example, during garbage
 connection. </span>
 
-**`MYSQLND_UH_MYSQLND_CLOSE_DISCONNECTED`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_CLOSE_DISCONNECTED`** (<span class="type">int</span>)  
 <span class="simpara"> Connection error. </span>
 
-**`MYSQLND_UH_MYSQLND_CLOSE_LAST`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_CLOSE_LAST`** (<span class="type">int</span>)  
 <span class="simpara"> No practical meaning. Last entry marker of
 internal C data structure list. </span>
 
@@ -46734,10 +46724,10 @@ internal C data structure list. </span>
 The following constants can be used to detect which option is set
 through *MysqlndUhConnection::setServerOption()*.
 
-**`MYSQLND_UH_SERVER_OPTION_MULTI_STATEMENTS_ON`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_SERVER_OPTION_MULTI_STATEMENTS_ON`** (<span class="type">int</span>)  
 <span class="simpara"> Option: enables multi statement support. </span>
 
-**`MYSQLND_UH_SERVER_OPTION_MULTI_STATEMENTS_OFF`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_SERVER_OPTION_MULTI_STATEMENTS_OFF`** (<span class="type">int</span>)  
 <span class="simpara"> Option: disables multi statement support. </span>
 
 *<span class="methodname">MysqlndUhConnection::setClientOption</span>
@@ -46747,126 +46737,126 @@ The following constants can be used to detect which option is set
 through <span
 class="methodname">MysqlndUhConnection::setClientOption</span>.
 
-**`MYSQLND_UH_MYSQLND_OPTION_OPT_CONNECT_TIMEOUT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPTION_OPT_CONNECT_TIMEOUT`** (<span class="type">int</span>)  
 <span class="simpara"> Option: connection timeout. </span>
 
-**`MYSQLND_UH_MYSQLND_OPTION_OPT_COMPRESS`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPTION_OPT_COMPRESS`** (<span class="type">int</span>)  
 <span class="simpara"> Option: whether the MySQL compressed protocol is
 to be used. </span>
 
-**`MYSQLND_UH_MYSQLND_OPTION_OPT_NAMED_PIPE`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPTION_OPT_NAMED_PIPE`** (<span class="type">int</span>)  
 <span class="simpara"> Option: named pipe to use for connection
 (Windows). </span>
 
-**`MYSQLND_UH_MYSQLND_OPTION_INIT_COMMAND`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPTION_INIT_COMMAND`** (<span class="type">int</span>)  
 <span class="simpara"> Option: init command to execute upon connect.
 </span>
 
-**`MYSQLND_UH_MYSQLND_READ_DEFAULT_FILE`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_READ_DEFAULT_FILE`** (<span class="type">int</span>)  
 <span class="simpara"> Option: MySQL server default file to read upon
 connect. </span>
 
-**`MYSQLND_UH_MYSQLND_READ_DEFAULT_GROUP`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_READ_DEFAULT_GROUP`** (<span class="type">int</span>)  
 <span class="simpara"> Option: MySQL server default file group to read
 upon connect. </span>
 
-**`MYSQLND_UH_MYSQLND_SET_CHARSET_DIR`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_SET_CHARSET_DIR`** (<span class="type">int</span>)  
 <span class="simpara"> Option: charset description files directory.
 </span>
 
-**`MYSQLND_UH_MYSQLND_SET_CHARSET_NAME`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_SET_CHARSET_NAME`** (<span class="type">int</span>)  
 <span class="simpara"> Option: charset name. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_LOCAL_INFILE`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_LOCAL_INFILE`** (<span class="type">int</span>)  
 <span class="simpara"> Option: Whether to allow *LOAD DATA LOCAL INFILE*
 use. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_PROTOCOL`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_PROTOCOL`** (<span class="type">int</span>)  
 <span class="simpara"> Option: supported protocol version. </span>
 
-**`MYSQLND_UH_MYSQLND_SHARED_MEMORY_BASE_NAME`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_SHARED_MEMORY_BASE_NAME`** (<span class="type">int</span>)  
 <span class="simpara"> Option: shared memory base name for shared memory
 connections. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_READ_TIMEOUT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_READ_TIMEOUT`** (<span class="type">int</span>)  
 <span class="simpara"> Option: connection read timeout. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_WRITE_TIMEOUT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_WRITE_TIMEOUT`** (<span class="type">int</span>)  
 <span class="simpara"> Option: connection write timeout. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_USE_RESULT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_USE_RESULT`** (<span class="type">int</span>)  
 <span class="simpara"> Option: unbuffered result sets. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_USE_REMOTE_CONNECTION`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_USE_REMOTE_CONNECTION`** (<span class="type">int</span>)  
 <span class="simpara"> Embedded server related. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_USE_EMBEDDED_CONNECTION`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_USE_EMBEDDED_CONNECTION`** (<span class="type">int</span>)  
 <span class="simpara"> Embedded server related. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_GUESS_CONNECTION`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_GUESS_CONNECTION`** (<span class="type">int</span>)  
 <span class="simpara"> TODO </span>
 
-**`MYSQLND_UH_MYSQLND_SET_CLIENT_IP`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_SET_CLIENT_IP`** (<span class="type">int</span>)  
 <span class="simpara"> TODO </span>
 
-**`MYSQLND_UH_MYSQLND_SECURE_AUTH`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_SECURE_AUTH`** (<span class="type">int</span>)  
 <span class="simpara"> TODO </span>
 
-**`MYSQLND_UH_MYSQLND_REPORT_DATA_TRUNCATION`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_REPORT_DATA_TRUNCATION`** (<span class="type">int</span>)  
 <span class="simpara"> Option: Whether to report data truncation.
 </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_RECONNECT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_RECONNECT`** (<span class="type">int</span>)  
 <span class="simpara"> Option: Whether to reconnect automatically.
 </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_SSL_VERIFY_SERVER_CERT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_SSL_VERIFY_SERVER_CERT`** (<span class="type">int</span>)  
 <span class="simpara"> Option: TODO </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_NET_CMD_BUFFER_SIZE`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_NET_CMD_BUFFER_SIZE`** (<span class="type">int</span>)  
 <span class="simpara"> Option: mysqlnd network buffer size for commands.
 </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_NET_READ_BUFFER_SIZE`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_NET_READ_BUFFER_SIZE`** (<span class="type">int</span>)  
 <span class="simpara"> Option: mysqlnd network buffer size for reading
 from the server. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_SSL_KEY`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_SSL_KEY`** (<span class="type">int</span>)  
 <span class="simpara"> Option: SSL key. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_SSL_CERT`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_SSL_CERT`** (<span class="type">int</span>)  
 <span class="simpara"> Option: SSL certificate. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_SSL_CA`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_SSL_CA`** (<span class="type">int</span>)  
 <span class="simpara"> Option: SSL CA. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_SSL_CAPATH`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_SSL_CAPATH`** (<span class="type">int</span>)  
 <span class="simpara"> Option: Path to SSL CA. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_SSL_CIPHER`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_SSL_CIPHER`** (<span class="type">int</span>)  
 <span class="simpara"> Option: SSL cipher. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_SSL_PASSPHRASE`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_SSL_PASSPHRASE`** (<span class="type">int</span>)  
 <span class="simpara"> Option: SSL passphrase. </span>
 
-**`MYSQLND_UH_SERVER_OPTION_PLUGIN_DIR`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_SERVER_OPTION_PLUGIN_DIR`** (<span class="type">int</span>)  
 <span class="simpara"> Option: server plugin directory. </span>
 
-**`MYSQLND_UH_SERVER_OPTION_DEFAULT_AUTH`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_SERVER_OPTION_DEFAULT_AUTH`** (<span class="type">int</span>)  
 <span class="simpara"> Option: default authentication method. </span>
 
-**`MYSQLND_UH_SERVER_OPTION_SET_CLIENT_IP`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_SERVER_OPTION_SET_CLIENT_IP`** (<span class="type">int</span>)  
 <span class="simpara"> TODO </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_MAX_ALLOWED_PACKET`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_MAX_ALLOWED_PACKET`** (<span class="type">int</span>)  
 <span class="simpara"> Option: maximum allowed packet size. Available as
 of *PHP 5.4.0*. </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_AUTH_PROTOCOL`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_AUTH_PROTOCOL`** (<span class="type">int</span>)  
 <span class="simpara"> Option: TODO. Available as of *PHP 5.4.0*.
 </span>
 
-**`MYSQLND_UH_MYSQLND_OPT_INT_AND_FLOAT_NATIVE`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_MYSQLND_OPT_INT_AND_FLOAT_NATIVE`** (<span class="type">int</span>)  
 <span class="simpara"> Option: make mysqlnd return integer and float
 columns as long even when using the MySQL Client Server text protocol.
 Only available with a custom build of mysqlnd. </span>
@@ -46890,7 +46880,7 @@ version number **`MYSQLND_UH_VERSION_ID`**, which is an integer such as
 <span class="simpara"> Plugin version string, for example,
 “1.0.0-alpha”. </span>
 
-**`MYSQLND_UH_VERSION_ID`** (<span class="type">integer</span>)  
+**`MYSQLND_UH_VERSION_ID`** (<span class="type">int</span>)  
 <span class="simpara"> Plugin version number, for example, 10000.
 </span>
 
@@ -52055,7 +52045,7 @@ to be able to use the *mysqlnd\_mux* plugin for
 
 这是配置指令的简短说明。
 
-`mysqlnd_mux.enable` <span class="type">integer</span>  
+`mysqlnd_mux.enable` <span class="type">int</span>  
 Enables or disables the plugin. If disabled, the extension will not plug
 into <a href="/set/mysqlinfo.html#Mysqlnd" class="link">mysqlnd</a> to
 proxy internal
@@ -52086,7 +52076,7 @@ version number **`MYSQLND_MUX_VERSION_ID`**, which is an integer such as
 <span class="simpara"> Plugin version string, for example,
 “1.0.0-prototype”. </span>
 
-**`MYSQLND_MUX_VERSION_ID`** (<span class="type">integer</span>)  
+**`MYSQLND_MUX_VERSION_ID`** (<span class="type">int</span>)  
 <span class="simpara"> Plugin version number, for example, 10000.
 </span>
 
@@ -52423,7 +52413,7 @@ PECL 扩展的 DLL 当前不可用。参见
 
 这是配置指令的简短说明。
 
-`mysqlnd_memcache.enable` <span class="type">integer</span>  
+`mysqlnd_memcache.enable` <span class="type">int</span>  
 Enables or disables the plugin. If disabled, the extension will not plug
 into <a href="/set/mysqlinfo.html#Mysqlnd" class="link">mysqlnd</a> to
 proxy internal
@@ -52472,7 +52462,7 @@ follows.
 <span class="simpara"> Plugin version string, for example,
 “1.0.0-alpha”. </span>
 
-**`MYSQLND_MEMCACHE_VERSION_ID`** (<span class="type">integer</span>)  
+**`MYSQLND_MEMCACHE_VERSION_ID`** (<span class="type">int</span>)  
 <span class="simpara"> Plugin version number, for example, 10000.
 </span>
 
@@ -52681,7 +52671,7 @@ third the requested value. If this parameter is omitted or os set to
 
 `callback`  
 A callback which will be used whenever a query is being sent to MySQL.
-The callback will receive a single <span class="type">boolean</span>
+The callback will receive a single <span class="type">bool</span>
 parameter telling if a query was sent via Memcache.
 
 ### 返回值

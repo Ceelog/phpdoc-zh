@@ -5108,8 +5108,8 @@ class="methodparam"><span class="type">string</span> `$return`</span> \]
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">invoke</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+<span class="methodname">invoke</span> ( <span class="methodparam"><span
+class="type">mixed</span> `$args`</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">invokeArgs</span> ( <span
@@ -5457,14 +5457,14 @@ Invokes function
 ### 说明
 
 <span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">ReflectionFunction::invoke</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+<span class="methodname">ReflectionFunction::invoke</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$args`</span> )
 
 Invokes a reflected function.
 
 ### 参数
 
-`...`  
+`args`  
 The passed in argument list. It accepts a variable number of arguments
 which are passed to the function much like <span
 class="function">call\_user\_func</span> is.
@@ -8419,8 +8419,8 @@ instance.
 The function to reflect parameters from.
 
 `parameter`  
-Either an <span class="type">integer</span> specifying the position of
-the parameter (starting with zero), or a the parameter name as <span
+Either an <span class="type">int</span> specifying the position of the
+parameter (starting with zero), or a the parameter name as <span
 class="type">string</span>.
 
 ### 返回值

@@ -5,7 +5,8 @@ Incrementally deflate data
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">deflate\_add</span> ( <span class="methodparam"><span
 class="type">resource</span> `$context`</span> , <span
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
@@ -52,7 +53,8 @@ Initialize an incremental deflate context
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">deflate\_init</span> ( <span
 class="methodparam"><span class="type">int</span> `$encoding`</span> \[,
 <span class="methodparam"><span class="type">array</span>
@@ -1077,7 +1079,8 @@ Incrementally inflate encoded data
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">inflate\_add</span> ( <span class="methodparam"><span
 class="type">resource</span> `$context`</span> , <span
 class="methodparam"><span class="type">string</span>
@@ -1128,7 +1131,8 @@ Get number of bytes read so far
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">inflate\_get\_read\_len</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$resource`</span> )
@@ -1152,7 +1156,8 @@ Get decompression status
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">inflate\_get\_status</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$resource`</span> )
@@ -1174,7 +1179,8 @@ Initialize an incremental inflate context
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">inflate\_init</span> ( <span
 class="methodparam"><span class="type">int</span> `$encoding`</span> \[,
 <span class="methodparam"><span class="type">array</span>
@@ -1230,11 +1236,12 @@ Output a gz-file
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">readgzfile</span>
-( <span class="methodparam"><span class="type">string</span>
-`$filename`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$use_include_path`<span class="initializer"> =
-0</span></span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">readgzfile</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> \[, <span
+class="methodparam"><span class="type">int</span>
+`$use_include_path`<span class="initializer"> = 0</span></span> \] )
 
 Reads a file, decompresses it and writes it to standard output.
 
@@ -1277,7 +1284,8 @@ Uncompress any raw/gzip/zlib encoded data
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">zlib\_decode</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">string</span>

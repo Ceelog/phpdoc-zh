@@ -67,7 +67,7 @@ PHP 7 增加了对返回值类型声明的支持。 就如
 <a href="/functions/arguments.html#functions.arguments.type-declaration.strict" class="link">严格类型声明</a>
 也会影响返回值类型声明。在默认情况下，如果返回值与返回值的类型不一致，则会被强制转换为返回值声明的类型，在强制转换失败的情况下才会抛出
 <span class="classname">TypeError</span> 异常（例如：函数预期返回 <span
-class="type">array</span> 实际返回 <span class="type">integer</span>
+class="type">array</span> 实际返回 <span class="type">int</span>
 的情况，无法强制转换）。而在严格类型声明模式中，返回值的类型必须与预期一致，否则将会直接抛出
 <span class="classname">TypeError</span> 异常。
 

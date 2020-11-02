@@ -181,42 +181,42 @@ class="type">int</span> `$non_repeaters`</span> \]\]\] )
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SNMP::ERRNO_NOERROR` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SNMP::ERRNO_GENERIC` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SNMP::ERRNO_TIMEOUT` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SNMP::ERRNO_ERROR_IN_REPLY` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SNMP::ERRNO_OID_NOT_INCREASING` <span class="initializer"> = 16</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SNMP::ERRNO_OID_PARSING_ERROR` <span class="initializer"> = 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SNMP::ERRNO_MULTIPLE_SET_QUERIES` <span class="initializer"> =
 64</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SNMP::ERRNO_ANY` <span class="initializer"> = 126</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SNMP::VERSION_1` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SNMP::VERSION_2C` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SNMP::VERSION_2c` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SNMP::VERSION_3` <span class="initializer"> = 3</span> ;
 
 }

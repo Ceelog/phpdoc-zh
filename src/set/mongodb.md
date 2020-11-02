@@ -2083,7 +2083,7 @@ parameter.
 </tr>
 <tr class="odd">
 <td>canonicalizeHostname</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>If <strong><code>TRUE</code></strong>, the driver will resolve the real hostname for the server IP address before authenticating via SASL. Some underlying GSSAPI layers already do this, but the functionality may be disabled in their config (e.g. <em>krb.conf</em>). Defaults to <strong><code>FALSE</code></strong>.</p>
 <p>This option is a deprecated alias for the <em>"CANONICALIZE_HOST_NAME"</em> property of the <em>"authMechanismProperties"</em> URI option.</p></td>
 </tr>
@@ -2094,12 +2094,12 @@ parameter.
 </tr>
 <tr class="odd">
 <td>connectTimeoutMS</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>The time in milliseconds to attempt a connection before timing out. Defaults to 10,000 milliseconds.</p></td>
 </tr>
 <tr class="even">
 <td>directConnection</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>This option can be used to control replica set discovery behavior when only a single host is provided in the connection string. By default, providing a single member in the connection string will establish a direct connection or discover additional members depending on whether the <em>"replicaSet"</em> URI option is omitted or present, respectively. Specify <strong><code>FALSE</code></strong> to force discovery to occur (if <em>"replicaSet"</em> is omitted) or specify <strong><code>TRUE</code></strong> to force a direct connection (if <em>"replicaSet"</em> is present).</p></td>
 </tr>
 <tr class="odd">
@@ -2110,23 +2110,23 @@ parameter.
 </tr>
 <tr class="even">
 <td>heartbeatFrequencyMS</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>Specifies the interval in milliseconds between the driver's checks of the MongoDB topology, counted from the end of the previous check until the beginning of the next one. Defaults to 60,000 milliseconds.</p>
 <p>Per the <a href="https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-discovery-and-monitoring.rst#heartbeatfrequencyms" class="link external">» Server Discovery and Monitoring Specification</a>, this value cannot be less than 500 milliseconds.</p></td>
 </tr>
 <tr class="odd">
 <td>journal</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Corresponds to the default write concern's <code class="parameter">journal</code> parameter. If <strong><code>TRUE</code></strong>, writes will require acknowledgement from MongoDB that the operation has been written to the journal. For details, see <span class="classname">MongoDB\Driver\WriteConcern</span>.</p></td>
 </tr>
 <tr class="even">
 <td>localThresholdMS</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>The size in milliseconds of the latency window for selecting among multiple suitable MongoDB instances while resolving a read preference. Defaults to 15 milliseconds.</p></td>
 </tr>
 <tr class="odd">
 <td>maxStalenessSeconds</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>Corresponds to the read preference's <em>"maxStalenessSeconds"</em>. Specifies, in seconds, how stale a secondary can be before the client stops using it for read operations. By default, there is no maximum staleness and clients will not consider a secondary’s lag when choosing where to direct a read operation. For details, see <span class="classname">MongoDB\Driver\ReadPreference</span>.</p>
 <p>If specified, the max staleness must be a signed 32-bit integer greater than or equal to <strong><code>MongoDB\Driver\ReadPreference::SMALLEST_MAX_STALENESS_SECONDS</code></strong> (i.e. 90 seconds).</p></td>
 </tr>
@@ -2160,62 +2160,62 @@ parameter.
 </tr>
 <tr class="odd">
 <td>retryReads</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Specifies whether or not the driver should automatically retry certain read operations that fail due to transient network errors or replica set elections. This functionality requires MongoDB 3.6+. Defaults to <strong><code>TRUE</code></strong>.</p>
 <p>See the <a href="https://github.com/mongodb/specifications/blob/master/source/retryable-reads/retryable-reads.rst" class="link external">» Retryable Reads Specification</a> for more information.</p></td>
 </tr>
 <tr class="even">
 <td>retryWrites</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Specifies whether or not the driver should automatically retry certain write operations that fail due to transient network errors or replica set elections. This functionality requires MongoDB 3.6+. Defaults to <strong><code>TRUE</code></strong>.</p>
 <p>See <a href="https://docs.mongodb.com/manual/core/retryable-writes/" class="link external">» Retryable Writes</a> in the MongoDB manual for more information.</p></td>
 </tr>
 <tr class="odd">
 <td>safe</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>If <strong><code>TRUE</code></strong>, specifies <em>1</em> for the default write concern's <code class="parameter">w</code> parameter. If <strong><code>FALSE</code></strong>, <em>0</em> is specified. For details, see <span class="classname">MongoDB\Driver\WriteConcern</span>.</p>
 <p>This option is deprecated and should not be used.</p></td>
 </tr>
 <tr class="even">
 <td>serverSelectionTimeoutMS</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>Specifies how long in milliseconds to block for server selection before throwing an exception. Defaults to 30,000 milliseconds.</p></td>
 </tr>
 <tr class="odd">
 <td>serverSelectionTryOnce</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>When <strong><code>TRUE</code></strong>, instructs the driver to scan the MongoDB deployment exactly once after server selection fails and then either select a server or raise an error. When <strong><code>FALSE</code></strong>, the driver blocks and searches for a server up to the <em>"serverSelectionTimeoutMS"</em> value. Defaults to <strong><code>TRUE</code></strong>.</p></td>
 </tr>
 <tr class="even">
 <td>slaveOk</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Specifies <em>"secondaryPreferred"</em> for the read preference mode if <strong><code>TRUE</code></strong>. For details, see <span class="classname">MongoDB\Driver\ReadPreference</span>.</p>
 <p>This option is deprecated and should not be used.</p></td>
 </tr>
 <tr class="odd">
 <td>socketCheckIntervalMS</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>If a socket has not been used recently, the driver must check it via an <em>isMaster</em> command before using it for any operation. Defaults to 5,000 milliseconds.</p></td>
 </tr>
 <tr class="even">
 <td>socketTimeoutMS</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>The time in milliseconds to attempt a send or receive on a socket before timing out. Defaults to 300,000 milliseconds (i.e. five minutes).</p></td>
 </tr>
 <tr class="odd">
 <td>ssl</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Initiates the connection with TLS/SSL if <strong><code>TRUE</code></strong>. Defaults to <strong><code>FALSE</code></strong>.</p>
 <p>This option is a deprecated alias for the <em>"tls"</em> URI option.</p></td>
 </tr>
 <tr class="even">
 <td>tls</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Initiates the connection with TLS/SSL if <strong><code>TRUE</code></strong>. Defaults to <strong><code>FALSE</code></strong>.</p></td>
 </tr>
 <tr class="odd">
 <td>tlsAllowInvalidCertificates</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Specifies whether or not the driver should error when the server's TLS certificate is invalid. Defaults to <strong><code>FALSE</code></strong>.</p>
 <div class="warning">
 <strong>Warning</strong>
@@ -2224,7 +2224,7 @@ parameter.
 </tr>
 <tr class="even">
 <td>tlsAllowInvalidHostnames</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Specifies whether or not the driver should error when there is a mismatch between the server's hostname and the hostname specified by the TLS certificate. Defaults to <strong><code>FALSE</code></strong>.</p>
 <div class="warning">
 <strong>Warning</strong>
@@ -2248,17 +2248,17 @@ parameter.
 </tr>
 <tr class="even">
 <td>tlsDisableCertificateRevocationCheck</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>If <strong><code>TRUE</code></strong>, the driver will not attempt to check certificate revocation status (e.g. OCSP, CRL). Defaults to <strong><code>FALSE</code></strong>.</p></td>
 </tr>
 <tr class="odd">
 <td>tlsDisableOCSPEndpointCheck</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>If <strong><code>TRUE</code></strong>, the driver will not attempt to contact an OCSP responder endpoint if needed (i.e. an OCSP response is not stapled). Defaults to <strong><code>FALSE</code></strong>.</p></td>
 </tr>
 <tr class="even">
 <td>tlsInsecure</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Relax TLS constraints as much as possible. Specifying <strong><code>TRUE</code></strong> for this option has the same effect as specifying <strong><code>TRUE</code></strong> for both the <em>"tlsAllowInvalidCertificates"</em> and <em>"tlsAllowInvalidHostnames"</em> URI options. Defaults to <strong><code>FALSE</code></strong>.</p>
 <div class="warning">
 <strong>Warning</strong>
@@ -2283,7 +2283,7 @@ parameter.
 </tr>
 <tr class="even">
 <td>zlibCompressionLevel</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>Specifies the compression level to use for the zlib compressor. This option has no effect if <em>zlib</em> is not included in the <em>"compressors"</em> URI option. See the <a href="https://github.com/mongodb/specifications/blob/master/source/compression/OP_COMPRESSED.rst#zlibcompressionlevel" class="link external">» Driver Compression Specification</a> for more information.</p></td>
 </tr>
 </tbody>
@@ -2307,7 +2307,7 @@ parameter.
 <tbody>
 <tr class="odd">
 <td>allow_invalid_hostname</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Disables hostname validation if <strong><code>TRUE</code></strong>. Defaults to <strong><code>FALSE</code></strong>.</p>
 <p>Allowing invalid hostnames may expose the driver to a <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" class="link external">» man-in-the-middle attack</a>.</p>
 <p>This option is a deprecated alias for the <em>"tlsAllowInvalidHostnames"</em> URI option.</p></td>
@@ -2377,7 +2377,7 @@ parameter.
 </tr>
 <tr class="odd">
 <td>bypassAutoEncryption</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td>With this option set to <strong><code>TRUE</code></strong>, <em>mongocryptd</em> will not be spawned automatically. This is used to disable automatic encryption.</td>
 </tr>
 <tr class="even">
@@ -2466,7 +2466,7 @@ parameter.
 </tr>
 <tr class="even">
 <td>weak_cert_validation</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Disables certificate validation if <strong><code>TRUE</code></strong>. Defaults to <strong><code>FALSE</code></strong></p>
 <p>This option is a deprecated alias for the <em>"tlsAllowInvalidHostnames"</em> URI option.</p></td>
 </tr>
@@ -4063,7 +4063,7 @@ commands, queries, and write operations.
 <tbody>
 <tr class="odd">
 <td>causalConsistency</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Configure causal consistency in a session. If <strong><code>TRUE</code></strong>, each operation in the session will be causally ordered after the previous read or write operation. Set to <strong><code>FALSE</code></strong> to disable causal consistency.</p>
 <p>See <a href="https://docs.mongodb.com/manual/core/read-isolation-consistency-recency/#causal-consistency" class="link external">» Casual Consistency</a> in the MongoDB manual for more information.</p></td>
 <td><strong><code>TRUE</code></strong></td>
@@ -4330,9 +4330,9 @@ The complete command document, which will be sent to the server.
 > This parameter should only be used for the options explicitly listed
 > below. </span>
 
-| Option         | Type                              | Description                                                                                                                                                                                                                                                                                                                          |
-|----------------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| maxAwaitTimeMS | <span class="type">integer</span> | Positive integer denoting the time limit in milliseconds for the server to block a getMore operation if no data is available. This option should only be used in conjunction with commands that return a tailable cursor (e.g. <a href="https://docs.mongodb.com/manual/changeStreams/" class="link external">» Change Streams</a>). |
+| Option         | Type                          | Description                                                                                                                                                                                                                                                                                                                          |
+|----------------|-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| maxAwaitTimeMS | <span class="type">int</span> | Positive integer denoting the time limit in milliseconds for the server to block a getMore operation if no data is available. This option should only be used in conjunction with commands that return a tailable cursor (e.g. <a href="https://docs.mongodb.com/manual/changeStreams/" class="link external">» Change Streams</a>). |
 
 ### 错误／异常
 
@@ -4538,23 +4538,23 @@ An empty predicate will match all documents in the collection.
 <tbody>
 <tr class="odd">
 <td>allowDiskUse</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Allows MongoDB to use temporary disk files to store data exceeding the 100 megabyte system memory limit while processing a blocking sort operation.</p></td>
 </tr>
 <tr class="even">
 <td>allowPartialResults</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>For queries against a sharded collection, returns partial results from the mongos if some shards are unavailable instead of throwing an error.</p>
 <p>Falls back to the deprecated <em>"partial"</em> option if not specified.</p></td>
 </tr>
 <tr class="odd">
 <td>awaitData</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td>Use in conjunction with the <em>"tailable"</em> option to block a getMore operation on the cursor temporarily if at the end of data rather than returning no data. After a timeout period, the query returns as normal.</td>
 </tr>
 <tr class="even">
 <td>batchSize</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>The number of documents to return in the first batch. Defaults to 101. A batch size of 0 means that the cursor will be established, but no documents will be returned in the first batch.</p>
 <p>In versions of MongoDB before 3.2, where queries use the legacy wire protocol OP_QUERY, a batch size of 1 will close the cursor irrespective of the number of matched documents.</p></td>
 </tr>
@@ -4573,13 +4573,13 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="odd">
 <td>exhaust</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Stream the data down full blast in multiple "more" packages, on the assumption that the client will fully read all data queried. Faster when you are pulling a lot of data and know you want to pull it all down. Note: the client is not allowed to not read all the data unless it closes the connection.</p>
 <p>This option is not supported by the find command in MongoDB 3.2+ and will force the driver to use the legacy wire protocol version (i.e. OP_QUERY).</p></td>
 </tr>
 <tr class="even">
 <td>explain</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>If <strong><code>TRUE</code></strong>, the returned <span class="classname">MongoDB\Driver\Cursor</span> will contain a single document that describes the process and indexes used to return the query.</p>
 <p>Falls back to the deprecated <em>"$explain"</em> modifier if not specified.</p>
 <p>This option is not supported by the find command in MongoDB 3.2+ and will only be respected when using the legacy wire protocol version (i.e. OP_QUERY). The <a href="https://docs.mongodb.com/manual/reference/command/explain/" class="link external">» explain</a> command should be used on MongoDB 3.0+.</p></td>
@@ -4592,7 +4592,7 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="even">
 <td>limit</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>The maximum number of documents to return. If unspecified, then defaults to no limit. A limit of 0 is equivalent to setting no limit.</p>
 <p>A negative limit is will be interpreted as a positive limit with the <em>"singleBatch"</em> option set to <strong><code>TRUE</code></strong>. This behavior is supported for backwards compatibility, but should be considered deprecated.</p></td>
 </tr>
@@ -4604,12 +4604,12 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="even">
 <td>maxAwaitTimeMS</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>Positive integer denoting the time limit in milliseconds for the server to block a getMore operation if no data is available. This option should only be used in conjunction with the <em>"tailable"</em> and <em>"awaitData"</em> options.</p></td>
 </tr>
 <tr class="odd">
 <td>maxScan</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><div class="warning">
 <strong>Warning</strong>
 <p>This option is deprecated and should not be used.</p>
@@ -4619,7 +4619,7 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="even">
 <td>maxTimeMS</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>The cumulative time limit in milliseconds for processing operations on the cursor. MongoDB aborts the operation at the earliest following interrupt point.</p>
 <p>Falls back to the deprecated <em>"$maxTimeMS"</em> modifier if not specified.</p></td>
 </tr>
@@ -4636,12 +4636,12 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="odd">
 <td>noCursorTimeout</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td>Prevents the server from timing out idle cursors after an inactivity period (10 minutes).</td>
 </tr>
 <tr class="even">
 <td>oplogReplay</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Internal use for replica sets. To use oplogReplay, you must include the following condition in the filter:</p>
 <div class="example-contents">
 <div class="textcode">
@@ -4666,34 +4666,34 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="odd">
 <td>returnKey</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>If <strong><code>TRUE</code></strong>, returns only the index keys in the resulting documents. Default value is <strong><code>FALSE</code></strong>. If <strong><code>TRUE</code></strong> and the find command does not use an index, the returned documents will be empty.</p>
 <p>Falls back to the deprecated <em>"$returnKey"</em> modifier if not specified.</p></td>
 </tr>
 <tr class="even">
 <td>showRecordId</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>Determines whether to return the record identifier for each document. If <strong><code>TRUE</code></strong>, adds a top-level <em>"$recordId"</em> field to the returned documents.</p>
 <p>Falls back to the deprecated <em>"$showDiskLoc"</em> modifier if not specified.</p></td>
 </tr>
 <tr class="odd">
 <td>singleBatch</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td>Determines whether to close the cursor after the first batch. Defaults to <strong><code>FALSE</code></strong>.</td>
 </tr>
 <tr class="even">
 <td>skip</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td>Number of documents to skip. Defaults to 0.</td>
 </tr>
 <tr class="odd">
 <td>slaveOk</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td>Allow query of replica set secondaries</td>
 </tr>
 <tr class="even">
 <td>snapshot</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><div class="warning">
 <strong>Warning</strong>
 <p>This option is deprecated and should not be used.</p>
@@ -4709,7 +4709,7 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="even">
 <td>tailable</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td>Returns a tailable cursor for a capped collection.</td>
 </tr>
 </tbody>
@@ -5030,14 +5030,14 @@ class="methodname">MongoDB\\Driver\\Manager::executeBulkWrite</span>.
 <tbody>
 <tr class="odd">
 <td>bypassDocumentValidation</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td><p>If <strong><code>TRUE</code></strong>, allows insert and update operations to circumvent document level validation.</p>
 <p>This option is available in MongoDB 3.2+ and is ignored for older server versions, which do not support document level validation.</p></td>
 <td><strong><code>FALSE</code></strong></td>
 </tr>
 <tr class="even">
 <td>ordered</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td>Ordered operations (<strong><code>TRUE</code></strong>) are executed serially on the MongoDB server, while unordered operations (<strong><code>FALSE</code></strong>) are sent to the server in an arbitrary order and may be executed in parallel.</td>
 <td><strong><code>TRUE</code></strong></td>
 </tr>
@@ -5263,7 +5263,7 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="odd">
 <td>limit</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td>Delete all matching documents (<strong><code>FALSE</code></strong>), or only the first matching document (<strong><code>TRUE</code></strong>)</td>
 <td><strong><code>FALSE</code></strong></td>
 </tr>
@@ -5481,13 +5481,13 @@ replacement document (i.e. *only* *field:value* expressions), or an
 </tr>
 <tr class="even">
 <td>multi</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td>Update only the first matching document if <strong><code>FALSE</code></strong>, or all matching documents <strong><code>TRUE</code></strong>. This option cannot be <strong><code>TRUE</code></strong> if <code class="parameter">newObj</code> is a replacement document.</td>
 <td><strong><code>FALSE</code></strong></td>
 </tr>
 <tr class="odd">
 <td>upsert</td>
-<td><span class="type">boolean</span></td>
+<td><span class="type">bool</span></td>
 <td>If <code class="parameter">filter</code> does not match an existing document, insert a <em>single</em> document. The document will be created from <code class="parameter">newObj</code> if it is a replacement document (i.e. no update operators); otherwise, the operators in <code class="parameter">newObj</code> will be applied to <code class="parameter">filter</code> to create the new document.</td>
 <td><strong><code>FALSE</code></strong></td>
 </tr>
@@ -5584,14 +5584,14 @@ class="type">string</span><span class="type">int</span></span>
 class="type">bool</span> `$journal`</span> \]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type"><span class="type">boolean</span><span
+<span class="type"><span class="type">bool</span><span
 class="type">null</span></span> <span
 class="methodname">getJournal</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type"><span class="type">string</span><span
-class="type">integer</span><span class="type">null</span></span> <span
+class="type">int</span><span class="type">null</span></span> <span
 class="methodname">getW</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
@@ -5845,7 +5845,7 @@ Returns the WriteConcern's "journal" option
 ### 说明
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type"><span class="type">boolean</span><span
+<span class="type"><span class="type">bool</span><span
 class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteConcern::getJournal</span> (
 <span class="methodparam">void</span> )
@@ -5904,7 +5904,7 @@ Returns the WriteConcern's "w" option
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type"><span class="type">string</span><span
-class="type">integer</span><span class="type">null</span></span> <span
+class="type">int</span><span class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteConcern::getW</span> ( <span
 class="methodparam">void</span> )
 
@@ -6184,23 +6184,23 @@ class="oointerface">, <span class="interfacename">Serializable</span>
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\ReadPreference::RP_PRIMARY` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\ReadPreference::RP_PRIMARY_PREFERRED` <span
 class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\ReadPreference::RP_SECONDARY` <span class="initializer">
 = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\ReadPreference::RP_SECONDARY_PREFERRED` <span
 class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\ReadPreference::RP_NEAREST` <span class="initializer"> =
 10</span> ;
 
@@ -6224,11 +6224,11 @@ class="initializer"> = secondaryPreferred</span> ;
 `MongoDB\Driver\ReadPreference::NEAREST` <span class="initializer"> =
 nearest</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\ReadPreference::NO_MAX_STALENESS` <span
 class="initializer"> = -1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\ReadPreference::SMALLEST_MAX_STALENESS_SECONDS` <span
 class="initializer"> = 90</span> ;
 
@@ -6577,7 +6577,7 @@ lowest network latency. This member may be a primary or secondary.
 </tr>
 <tr class="even">
 <td>maxStalenessSeconds</td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>Specifies a maximum replication lag, or "staleness", for reads from secondaries. When a secondary's estimated staleness exceeds this value, the driver stops using it for read operations.</p>
 <p>If specified, the max staleness must be a signed 32-bit integer greater than or equal to <strong><code>MongoDB\Driver\ReadPreference::SMALLEST_MAX_STALENESS_SECONDS</code></strong>.</p>
 <p>Defaults to <strong><code>MongoDB\Driver\ReadPreference::NO_MAX_STALENESS</code></strong>, which means that the driver will not consider a secondary's lag when choosing where to direct a read operation.</p>
@@ -8565,39 +8565,39 @@ class="classname">MongoDB\\Driver\\CursorId</span>.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\Server::TYPE_UNKNOWN` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\Server::TYPE_STANDALONE` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\Server::TYPE_MONGOS` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\Server::TYPE_POSSIBLE_PRIMARY` <span
 class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\Server::TYPE_RS_PRIMARY` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\Server::TYPE_RS_SECONDARY` <span class="initializer"> =
 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\Server::TYPE_RS_ARBITER` <span class="initializer"> =
 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\Server::TYPE_RS_OTHER` <span class="initializer"> =
 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\Driver\Server::TYPE_RS_GHOST` <span class="initializer"> =
 8</span> ;
 
@@ -9764,7 +9764,7 @@ Returns an integer denoting the type of this server
 class="methodname">MongoDB\\Driver\\Server::getType</span> ( <span
 class="methodparam">void</span> )
 
-Returns an <span class="type">integer</span> denoting the type of this
+Returns an <span class="type">int</span> denoting the type of this
 server. The value will correlate with a <span
 class="classname">MongoDB\\Driver\\Server</span> constant.
 
@@ -9774,7 +9774,7 @@ class="classname">MongoDB\\Driver\\Server</span> constant.
 
 ### 返回值
 
-Returns an <span class="type">integer</span> denoting the type of this
+Returns an <span class="type">int</span> denoting the type of this
 server.
 
 ### 错误／异常
@@ -12113,33 +12113,33 @@ class="interfacename">JsonSerializable</span> </span> {
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\BSON\Binary::TYPE_GENERIC` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\BSON\Binary::TYPE_FUNCTION` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\BSON\Binary::TYPE_OLD_BINARY` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\BSON\Binary::TYPE_OLD_UUID` <span class="initializer"> =
 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\BSON\Binary::TYPE_UUID` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\BSON\Binary::TYPE_MD5` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\BSON\Binary::TYPE_ENCRYPTED` <span class="initializer"> =
 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `MongoDB\BSON\Binary::TYPE_USER_DEFINED` <span class="initializer"> =
 128</span> ;
 
@@ -12246,7 +12246,7 @@ Construct a new Binary
 `data` (<span class="type">string</span>)  
 Binary data.
 
-`type` (<span class="type">integer</span>)  
+`type` (<span class="type">int</span>)  
 Unsigned 8-bit integer denoting the data's type.
 
 ### 错误／异常
@@ -14643,11 +14643,11 @@ class="type">int</span> `$timestamp`</span> )
 
 ### 参数
 
-`increment` (<span class="type">integer</span>)  
+`increment` (<span class="type">int</span>)  
 32-bit integer denoting the incrementing ordinal for operations within a
 given second.
 
-`timestamp` (<span class="type">integer</span>)  
+`timestamp` (<span class="type">int</span>)  
 32-bit integer denoting seconds since the Unix epoch.
 
 ### 错误／异常
@@ -15034,7 +15034,7 @@ class="initializer"> = **`NULL`**</span></span> \] )
 `milliseconds` (<span class="type"><span class="type">int</span><span class="type">float</span><span class="type">string</span><span class="type">DateTimeInterface</span></span>)  
 Number of milliseconds since the Unix epoch (Jan 1, 1970). Negative
 values represent dates before 1970. This value may be provided as a
-64-bit <span class="type">integer</span>. For compatibility on 32-bit
+64-bit <span class="type">int</span>. For compatibility on 32-bit
 systems, this parameter may also be provided as a <span
 class="type">float</span> or <span class="type">string</span>.
 
@@ -15057,9 +15057,9 @@ default.
 
 ### 更新日志
 
-| 版本               | 说明                                                                                                                                                                                                                                                                                                                                                                                              |
-|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PECL mongodb 1.2.0 | The `milliseconds` argument is optional and defaults to **`NULL`** (i.e. current time). The argument also accepts a <span class="classname">DateTimeInterface</span>, which may be used to derive the number of milliseconds since the Unix epoch. Previously, only <span class="type">integer</span>, <span class="type">float</span>, and <span class="type">string</span> types were accepted. |
+| 版本               | 说明                                                                                                                                                                                                                                                                                                                                                                                          |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.2.0 | The `milliseconds` argument is optional and defaults to **`NULL`** (i.e. current time). The argument also accepts a <span class="classname">DateTimeInterface</span>, which may be used to derive the number of milliseconds since the Unix epoch. Previously, only <span class="type">int</span>, <span class="type">float</span>, and <span class="type">string</span> types were accepted. |
 
 ### 范例
 

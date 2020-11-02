@@ -1915,8 +1915,9 @@ class="methodparam">void</span> )
 class="methodname">hasPreviousImage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">identifyFormat</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">identifyFormat</span> ( <span
 class="methodparam"><span class="type">string</span> `$embedText`</span>
 )
 
@@ -7295,8 +7296,8 @@ Gets the number of unique colors in the image.
 
 ### 返回值
 
-Returns an <span class="type">integer</span>, the number of unique
-colors in the image.
+Returns an <span class="type">int</span>, the number of unique colors in
+the image.
 
 Imagick::getImageColorspace
 ===========================
@@ -8898,7 +8899,7 @@ Returns the quantum range for the Imagick instance.
 ### 返回值
 
 Returns an associative array containing the quantum range as an <span
-class="type">integer</span> (*"quantumRangeLong"*) and as a <span
+class="type">int</span> (*"quantumRangeLong"*) and as a <span
 class="type">string</span> (*"quantumRangeString"*).
 
 ### 错误／异常
@@ -9227,8 +9228,9 @@ Description
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Imagick::identifyFormat</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">Imagick::identifyFormat</span> ( <span
 class="methodparam"><span class="type">string</span> `$embedText`</span>
 )
 
@@ -13044,7 +13046,7 @@ class="methodname">Imagick::setImageCompressionQuality</span>.
 ### 参数
 
 `quality`  
-An <span class="type">integer</span> between 1 and 100, 1 = high
+An <span class="type">int</span> between 1 and 100, 1 = high
 compression, 100 low compression.
 
 ### 返回值
@@ -23601,8 +23603,9 @@ class="methodparam">void</span> )
 class="methodname">getColorValue</span> ( <span
 class="methodparam"><span class="type">int</span> `$color`</span> )
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">getColorValueQuantum</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">getColorValueQuantum</span> ( <span
 class="methodparam"><span class="type">int</span> `$color`</span> )
 
 <span class="type">array</span> <span class="methodname">getHSL</span> (
@@ -23646,7 +23649,8 @@ class="methodparam"><span class="type">int</span> `$color`</span> ,
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setColorValueQuantum</span> ( <span
 class="methodparam"><span class="type">int</span> `$color`</span> ,
-<span class="methodparam"><span class="type">number</span>
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span></span>
 `$value`</span> )
 
 <span class="type">bool</span> <span class="methodname">setHSL</span> (
@@ -24053,10 +24057,10 @@ Description
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">ImagickPixel::getColorValueQuantum</span> (
-<span class="methodparam"><span class="type">int</span> `$color`</span>
-)
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">ImagickPixel::getColorValueQuantum</span> ( <span
+class="methodparam"><span class="type">int</span> `$color`</span> )
 
 Gets the quantum value of a color in the ImagickPixel. Return value is a
 float if ImageMagick was compiled with HDRI, otherwise an integer.
@@ -24495,7 +24499,8 @@ Description
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">ImagickPixel::setColorValueQuantum</span> (
 <span class="methodparam"><span class="type">int</span> `$color`</span>
-, <span class="methodparam"><span class="type">number</span>
+, <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span></span>
 `$value`</span> )
 
 Sets the quantum value of a color element of the ImagickPixel.

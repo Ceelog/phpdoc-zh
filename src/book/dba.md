@@ -487,7 +487,8 @@ Fetch first key
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">dba\_firstkey</span> ( <span
 class="methodparam"><span class="type">resource</span> `$handle`</span>
 )
@@ -671,7 +672,8 @@ Fetch next key
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">dba\_nextkey</span> ( <span class="methodparam"><span
 class="type">resource</span> `$handle`</span> )
 
@@ -703,13 +705,14 @@ Open database
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">dba\_open</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">string</span> `$mode`</span> \[,
 <span class="methodparam"><span class="type">string</span>
-`$handler`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$...`</span> \]\] )
+`$handler`</span> \], <span class="methodparam"><span
+class="type">string</span> `$args`</span> )
 
 <span class="function">dba\_open</span> establishes a database instance
 for `path` with `mode` using `handler`.
@@ -766,7 +769,7 @@ which shall be used for accessing `path`. It is passed all optional
 parameters given to <span class="function">dba\_open</span> and can act
 on behalf of them.
 
-`...`  
+`args`  
 Optional <span class="type">string</span> parameters which are passed to
 the driver.
 
@@ -836,13 +839,14 @@ Open database persistently
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">dba\_popen</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">string</span> `$mode`</span> \[,
 <span class="methodparam"><span class="type">string</span>
-`$handler`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \]\] )
+`$handler`</span> \], <span class="methodparam"><span
+class="type">mixed</span> `$args`</span> )
 
 <span class="function">dba\_popen</span> establishes a persistent
 database instance for `path` with `mode` using `handler`.
@@ -863,6 +867,24 @@ The name of the <a href="/book/dba.html#需求" class="link">handler</a>
 which shall be used for accessing `path`. It is passed all optional
 parameters given to <span class="function">dba\_popen</span> and can act
 on behalf of them.
+
+`args`  
+Optional <span class="type">string</span> parameters which are passed to
+the driver.
+
+The *cdb*, *cdb\_make*, *flatfile*, *inifile*, *qdbm* and *tcadb*
+drivers do not support additional parameters.
+
+The *db1*, *db2*, *db3*, *db4*, *dbm*, *gdbm*, and *ndbm* drivers
+supports a single additional parameter *$filemode*, which has the same
+meaning as the *$mode* parameter of <span class="function">chmod</span>,
+and defaults to *0644*.
+
+The *lmdb* driver accepts two additional parameters. The first allows to
+specify the *$filemode* (see description above), and the second to
+specify the *$mapsize*, where the value should be a multiple of the page
+size of the OS, or zero, to use the default mapsize. The *$mapsize*
+parameter is supported as of PHP 7.3.14 and 7.4.2, respectively.
 
 ### 返回值
 

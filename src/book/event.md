@@ -387,22 +387,22 @@ class="methodname">Event::add</span> method it could be added again.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Event::ET` <span class="initializer"> = 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Event::PERSIST` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Event::READ` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Event::WRITE` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Event::SIGNAL` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Event::TIMEOUT` <span class="initializer"> = 1</span> ;
 
 /\* 属性 \*/
@@ -1104,22 +1104,22 @@ Otherwise, it will lead to unpredictable results!
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBase::LOOP_ONCE` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBase::LOOP_NONBLOCK` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBase::NOLOCK` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBase::STARTUP_IOCP` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBase::NO_CACHE_TIME` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBase::EPOLL_USE_CHANGELIST` <span class="initializer"> = 16</span>
 ;
 
@@ -1649,22 +1649,22 @@ part of buffered network I/O.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBuffer::EOL_ANY` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBuffer::EOL_CRLF` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBuffer::EOL_CRLF_STRICT` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBuffer::EOL_LF` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBuffer::PTR_SET` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBuffer::PTR_ADD` <span class="initializer"> = 1</span> ;
 
 /\* 属性 \*/
@@ -2622,57 +2622,57 @@ callbacks when it has read or written enough data.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::READING` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::WRITING` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::EOF` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::ERROR` <span class="initializer"> = 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::TIMEOUT` <span class="initializer"> = 64</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::CONNECTED` <span class="initializer"> = 128</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::OPT_CLOSE_ON_FREE` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::OPT_THREADSAFE` <span class="initializer"> = 2</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::OPT_DEFER_CALLBACKS` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::OPT_UNLOCK_CALLBACKS` <span class="initializer"> =
 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::SSL_OPEN` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::SSL_CONNECTING` <span class="initializer"> = 1</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventBufferEvent::SSL_ACCEPTING` <span class="initializer"> = 2</span>
 ;
 
 /\* 属性 \*/
 
-<span class="modifier">public</span> <span class="type">integer</span>
-`$fd` ;
+<span class="modifier">public</span> <span class="type">int</span> `$fd`
+;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$priority` ;
 
 <span class="modifier">public</span> <span
@@ -4383,13 +4383,13 @@ of the <span class="classname">EventBase</span> .
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventConfig::FEATURE_ET` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventConfig::FEATURE_O1` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventConfig::FEATURE_FDS` <span class="initializer"> = 4</span> ;
 
 /\* 方法 \*/
@@ -4631,20 +4631,20 @@ asyncronously, parse configuration files like resolv.conf etc.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventDnsBase::OPTION_SEARCH` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventDnsBase::OPTION_NAMESERVERS` <span class="initializer"> = 2</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventDnsBase::OPTION_MISC` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventDnsBase::OPTION_HOSTSFILE` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventDnsBase::OPTIONS_ALL` <span class="initializer"> = 15</span> ;
 
 /\* 方法 \*/
@@ -6402,38 +6402,38 @@ Represents an HTTP request.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventHttpRequest::CMD_GET` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventHttpRequest::CMD_POST` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventHttpRequest::CMD_HEAD` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventHttpRequest::CMD_PUT` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventHttpRequest::CMD_DELETE` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventHttpRequest::CMD_OPTIONS` <span class="initializer"> = 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventHttpRequest::CMD_TRACE` <span class="initializer"> = 64</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventHttpRequest::CMD_CONNECT` <span class="initializer"> = 128</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventHttpRequest::CMD_PATCH` <span class="initializer"> = 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventHttpRequest::INPUT_HEADER` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventHttpRequest::OUTPUT_HEADER` <span class="initializer"> = 2</span>
 ;
 
@@ -7362,22 +7362,22 @@ Represents a connection listener.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventListener::OPT_LEAVE_SOCKETS_BLOCKING` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventListener::OPT_CLOSE_ON_FREE` <span class="initializer"> = 2</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventListener::OPT_CLOSE_ON_EXEC` <span class="initializer"> = 4</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventListener::OPT_REUSEABLE` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventListener::OPT_THREADSAFE` <span class="initializer"> = 16</span> ;
 
 /\* 属性 \*/
@@ -7877,68 +7877,68 @@ configure the SSL context.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::SSLv2_CLIENT_METHOD` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::SSLv3_CLIENT_METHOD` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::SSLv23_CLIENT_METHOD` <span class="initializer"> =
 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::TLS_CLIENT_METHOD` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::SSLv2_SERVER_METHOD` <span class="initializer"> =
 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::SSLv3_SERVER_METHOD` <span class="initializer"> =
 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::SSLv23_SERVER_METHOD` <span class="initializer"> =
 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::TLS_SERVER_METHOD` <span class="initializer"> =
 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::OPT_LOCAL_CERT` <span class="initializer"> = 1</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::OPT_LOCAL_PK` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::OPT_PASSPHRASE` <span class="initializer"> = 3</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::OPT_CA_FILE` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::OPT_CA_PATH` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::OPT_ALLOW_SELF_SIGNED` <span class="initializer"> =
 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::OPT_VERIFY_PEER` <span class="initializer"> = 7</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::OPT_VERIFY_DEPTH` <span class="initializer"> =
 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventSslContext::OPT_CIPHERS` <span class="initializer"> = 9</span> ;
 
 /\* 属性 \*/
@@ -8108,77 +8108,77 @@ supplimentary methods and constants.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::AF_INET` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::AF_INET6` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::AF_UNSPEC` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::LIBEVENT_VERSION_NUMBER` <span class="initializer"> =
 33559808</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_DEBUG` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_REUSEADDR` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_KEEPALIVE` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_DONTROUTE` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_LINGER` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_BROADCAST` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_OOBINLINE` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_SNDBUF` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_RCVBUF` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_SNDLOWAT` <span class="initializer"> = 19</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_RCVLOWAT` <span class="initializer"> = 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_SNDTIMEO` <span class="initializer"> = 21</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_RCVTIMEO` <span class="initializer"> = 20</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_TYPE` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SO_ERROR` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SOL_SOCKET` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SOL_TCP` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::SOL_UDP` <span class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::IPPROTO_IP` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `EventUtil::IPPROTO_IPV6` <span class="initializer"> = 41</span> ;
 
 /\* 方法 \*/

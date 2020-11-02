@@ -34,192 +34,192 @@ Determine gender of firstnames
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::IS_FEMALE` <span class="initializer"> = 70</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::IS_MOSTLY_FEMALE` <span class="initializer"> =
 102</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::IS_MALE` <span class="initializer"> = 77</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::IS_MOSTLY_MALE` <span class="initializer"> = 109</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::IS_UNISEX_NAME` <span class="initializer"> = 63</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::IS_A_COUPLE` <span class="initializer"> = 67</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::NAME_NOT_FOUND` <span class="initializer"> = 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::ERROR_IN_NAME` <span class="initializer"> = 69</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::ANY_COUNTRY` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::BRITAIN` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::IRELAND` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::USA` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::SPAIN` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::PORTUGAL` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::ITALY` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::MALTA` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::FRANCE` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::BELGIUM` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::LUXEMBOURG` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::NETHERLANDS` <span class="initializer"> = 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::GERMANY` <span class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::EAST_FRISIA` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::AUSTRIA` <span class="initializer"> = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::SWISS` <span class="initializer"> = 15</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::ICELAND` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::DENMARK` <span class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::NORWAY` <span class="initializer"> = 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::SWEDEN` <span class="initializer"> = 19</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::FINLAND` <span class="initializer"> = 20</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::ESTONIA` <span class="initializer"> = 21</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::LATVIA` <span class="initializer"> = 22</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::LITHUANIA` <span class="initializer"> = 23</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::POLAND` <span class="initializer"> = 24</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::CZECH_REP` <span class="initializer"> = 25</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::SLOVAKIA` <span class="initializer"> = 26</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::HUNGARY` <span class="initializer"> = 27</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::ROMANIA` <span class="initializer"> = 28</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::BULGARIA` <span class="initializer"> = 29</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::BOSNIA` <span class="initializer"> = 30</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::CROATIA` <span class="initializer"> = 31</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::KOSOVO` <span class="initializer"> = 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::MACEDONIA` <span class="initializer"> = 33</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::MONTENEGRO` <span class="initializer"> = 34</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::SERBIA` <span class="initializer"> = 35</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::SLOVENIA` <span class="initializer"> = 36</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::ALBANIA` <span class="initializer"> = 37</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::GREECE` <span class="initializer"> = 38</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::RUSSIA` <span class="initializer"> = 39</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::BELARUS` <span class="initializer"> = 40</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::MOLDOVA` <span class="initializer"> = 41</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::UKRAINE` <span class="initializer"> = 42</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::ARMENIA` <span class="initializer"> = 43</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::AZERBAIJAN` <span class="initializer"> = 44</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::GEORGIA` <span class="initializer"> = 45</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::KAZAKH_UZBEK` <span class="initializer"> = 46</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::TURKEY` <span class="initializer"> = 47</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::ARABIA` <span class="initializer"> = 48</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::ISRAEL` <span class="initializer"> = 49</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::CHINA` <span class="initializer"> = 50</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::INDIA` <span class="initializer"> = 51</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::JAPAN` <span class="initializer"> = 52</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Gender\Gender::KOREA` <span class="initializer"> = 53</span> ;
 
 /\* 方法 \*/
@@ -232,9 +232,10 @@ class="methodparam"><span class="type">string</span> `$dsn`</span> )
 class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$dsn`</span> \] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">country</span> ( <span
-class="methodparam"><span class="type">int</span> `$country`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">country</span> ( <span class="methodparam"><span
+class="type">int</span> `$country`</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">get</span> ( <span class="methodparam"><span
@@ -435,8 +436,9 @@ Get textual country representation
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Gender\\Gender::country</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">Gender\\Gender::country</span> ( <span
 class="methodparam"><span class="type">int</span> `$country`</span> )
 
 Returns the textual representation of a country from a Gender class

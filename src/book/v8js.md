@@ -53,10 +53,10 @@ information.
 <span class="modifier">const</span> <span class="type">string</span>
 `V8Js::V8_VERSION` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `V8Js::FLAG_NONE` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `V8Js::FLAG_FORCE_ARRAY` <span class="initializer"> = 2</span> ;
 
 /\* Methods \*/

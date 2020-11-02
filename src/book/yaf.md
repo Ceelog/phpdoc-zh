@@ -6579,7 +6579,7 @@ class="methodname">Yaf\_Request\_Abstract::setParam</span>
 
 ### 返回值
 
-<span class="type">boolean</span>
+<span class="type">bool</span>
 
 ### 参见
 

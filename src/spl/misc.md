@@ -85,10 +85,10 @@ class="oointerface">, <span class="interfacename">Countable</span>
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `STD_PROP_LIST` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ARRAY_AS_PROPS` <span class="initializer"> = 2</span> ;
 
 /\* 方法 \*/

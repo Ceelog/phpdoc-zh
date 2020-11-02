@@ -131,67 +131,67 @@ of a query.
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-**`DBX_MYSQL`** (<span class="type">integer</span>)  
+**`DBX_MYSQL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_ODBC`** (<span class="type">integer</span>)  
+**`DBX_ODBC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_PGSQL`** (<span class="type">integer</span>)  
+**`DBX_PGSQL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_MSSQL`** (<span class="type">integer</span>)  
+**`DBX_MSSQL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_FBSQL`** (<span class="type">integer</span>)  
+**`DBX_FBSQL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_OCI8`** (<span class="type">integer</span>)  
+**`DBX_OCI8`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_SYBASECT`** (<span class="type">integer</span>)  
+**`DBX_SYBASECT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_SQLITE`** (<span class="type">integer</span>)  
+**`DBX_SQLITE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_PERSISTENT`** (<span class="type">integer</span>)  
+**`DBX_PERSISTENT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_RESULT_INFO`** (<span class="type">integer</span>)  
+**`DBX_RESULT_INFO`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_RESULT_INDEX`** (<span class="type">integer</span>)  
+**`DBX_RESULT_INDEX`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_RESULT_ASSOC`** (<span class="type">integer</span>)  
+**`DBX_RESULT_ASSOC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_RESULT_UNBUFFERED`** (<span class="type">integer</span>)  
+**`DBX_RESULT_UNBUFFERED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_COLNAMES_UNCHANGED`** (<span class="type">integer</span>)  
+**`DBX_COLNAMES_UNCHANGED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_COLNAMES_UPPERCASE`** (<span class="type">integer</span>)  
+**`DBX_COLNAMES_UPPERCASE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_COLNAMES_LOWERCASE`** (<span class="type">integer</span>)  
+**`DBX_COLNAMES_LOWERCASE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_CMP_NATIVE`** (<span class="type">integer</span>)  
+**`DBX_CMP_NATIVE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_CMP_TEXT`** (<span class="type">integer</span>)  
+**`DBX_CMP_TEXT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_CMP_NUMBER`** (<span class="type">integer</span>)  
+**`DBX_CMP_NUMBER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_CMP_ASC`** (<span class="type">integer</span>)  
+**`DBX_CMP_ASC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`DBX_CMP_DESC`** (<span class="type">integer</span>)  
+**`DBX_CMP_DESC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 dbx\_close

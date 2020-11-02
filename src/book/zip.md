@@ -171,19 +171,21 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 class="type">int</span> `$flags`<span class="initializer"> =
 ZipArchive::FL\_OVERWRITE</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">addGlob</span> ( <span
-class="methodparam"><span class="type">string</span> `$pattern`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$flags`<span class="initializer"> = 0</span></span> \[, <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">addGlob</span> ( <span class="methodparam"><span
+class="type">string</span> `$pattern`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$options`<span
 class="initializer"> = array()</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">addPattern</span> ( <span
-class="methodparam"><span class="type">string</span> `$pattern`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$path`<span class="initializer"> = "."</span></span> \[, <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">addPattern</span> ( <span class="methodparam"><span
+class="type">string</span> `$pattern`</span> \[, <span
+class="methodparam"><span class="type">string</span> `$path`<span
+class="initializer"> = "."</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$options`<span
 class="initializer"> = array()</span></span> \]\] )
 
@@ -208,18 +210,21 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 `$destination`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$entries`</span> \] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getArchiveComment</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getArchiveComment</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getCommentIndex</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getCommentIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getCommentName</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getCommentName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
@@ -240,33 +245,37 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 `&$attr`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`</span> \] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getFromIndex</span> ( <span
-class="methodparam"><span class="type">int</span> `$index`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$length`<span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getFromIndex</span> ( <span class="methodparam"><span
+class="type">int</span> `$index`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`</span> \]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getFromName</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$length`<span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getFromName</span> ( <span class="methodparam"><span
+class="type">string</span> `$name`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`</span> \]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getNameIndex</span> ( <span
-class="methodparam"><span class="type">int</span> `$index`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$flags`</span>
-\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getNameIndex</span> ( <span class="methodparam"><span
+class="type">int</span> `$index`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getStatusString</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getStatusString</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">resource</span>
-<span class="methodname">getStream</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">resource</span><span class="type">false</span></span> <span
+class="methodname">getStream</span> ( <span class="methodparam"><span
+class="type">string</span> `$name`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">isCompressionMethodSupported</span> ( <span
@@ -280,7 +289,8 @@ class="methodparam"><span class="type">int</span> `$method`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$encode`<span
 class="initializer"> = true</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">locateName</span> ( <span class="methodparam"><span
 class="type">string</span> `$name`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`</span> \] )
@@ -406,17 +416,17 @@ class="type">int</span> `$flags`</span> \] )
 class="methodparam"><span class="type">string</span> `$password`</span>
 )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">statIndex</span> ( <span
-class="methodparam"><span class="type">int</span> `$index`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$flags`</span>
-\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">statIndex</span> ( <span class="methodparam"><span
+class="type">int</span> `$index`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">statName</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$flags`</span>
-\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">statName</span> ( <span class="methodparam"><span
+class="type">string</span> `$name`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">unchangeAll</span> ( <span
@@ -690,8 +700,9 @@ Add files from a directory by glob pattern
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">ZipArchive::addGlob</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">ZipArchive::addGlob</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$flags`<span class="initializer"> = 0</span></span> \[, <span
@@ -801,8 +812,9 @@ Add files from a directory by PCRE pattern
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">ZipArchive::addPattern</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">ZipArchive::addPattern</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$path`<span class="initializer"> = "."</span></span> \[, <span
@@ -1046,8 +1058,9 @@ Returns the Zip archive comment
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">ZipArchive::getArchiveComment</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">ZipArchive::getArchiveComment</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
 Returns the Zip archive comment.
@@ -1087,8 +1100,9 @@ Returns the comment of an entry using the entry index
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">ZipArchive::getCommentIndex</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">ZipArchive::getCommentIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
@@ -1131,8 +1145,9 @@ Returns the comment of an entry using the entry name
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">ZipArchive::getCommentName</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">ZipArchive::getCommentName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
@@ -1278,8 +1293,9 @@ Returns the entry contents using its index
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">ZipArchive::getFromIndex</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">ZipArchive::getFromIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 0</span></span> \[, <span
@@ -1336,8 +1352,9 @@ Returns the entry contents using its name
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">ZipArchive::getFromName</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">ZipArchive::getFromName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 0</span></span> \[, <span
@@ -1408,8 +1425,9 @@ Returns the name of an entry using its index
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">ZipArchive::getNameIndex</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">ZipArchive::getNameIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
@@ -1452,8 +1470,9 @@ Returns the status error message, system and/or zip messages
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">ZipArchive::getStatusString</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">ZipArchive::getStatusString</span> ( <span
 class="methodparam">void</span> )
 
 Returns the status error message, system and/or zip messages.
@@ -1480,8 +1499,9 @@ Get a file handler to the entry defined by its name (read only)
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">resource</span>
-<span class="methodname">ZipArchive::getStream</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">resource</span><span class="type">false</span></span> <span
+class="methodname">ZipArchive::getStream</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 Get a file handler to the entry defined by its name. For now it only
@@ -1635,7 +1655,8 @@ Returns the index of the entry in the archive
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">ZipArchive::locateName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
@@ -2727,8 +2748,9 @@ Get the details of an entry defined by its index
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">ZipArchive::statIndex</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">ZipArchive::statIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
@@ -2786,8 +2808,9 @@ Get the details of an entry defined by its name
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">ZipArchive::statName</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">ZipArchive::statName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )

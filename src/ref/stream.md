@@ -526,7 +526,8 @@ Copies data from one stream to another
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">stream\_copy\_to\_stream</span> ( <span
 class="methodparam"><span class="type">resource</span> `$source`</span>
 , <span class="methodparam"><span class="type">resource</span>
@@ -1650,7 +1651,8 @@ Resolve filename against the include path
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">stream\_resolve\_include\_path</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )

@@ -2624,7 +2624,8 @@ Calculate the metaphone key of a string
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">metaphone</span> ( <span class="methodparam"><span
 class="type">string</span> `$str`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$phonemes`<span
@@ -3882,7 +3883,8 @@ Calculate the soundex key of a string
 
 ### 说明
 
-<span class="type">string</span> <span class="methodname">soundex</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">soundex</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$str`</span> )
 
@@ -3936,10 +3938,11 @@ Return a formatted string
 
 ### 说明
 
-<span class="type">string</span> <span class="methodname">sprintf</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">sprintf</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$format`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$format`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 Returns a string produced according to the formatting string `format`.
 
@@ -4086,7 +4089,7 @@ Variables will be co-erced to a suitable type for the specifier:
 | *integer* | *d*, *u*, *c*, *o*, *x*, *X*, *b* |
 | *double*  | *g*, *G*, *e*, *E*, *f*, *F*      |
 
-`...`  
+`values`  
 
 ### 返回值
 

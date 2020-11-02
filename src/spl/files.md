@@ -1646,7 +1646,8 @@ class="methodparam"><span class="type">int</span> `&$wouldblock`</span>
 class="methodname">fpassthru</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">fputcsv</span> ( <span class="methodparam"><span
 class="type">array</span> `$fields`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$delimiter`<span
@@ -1656,14 +1657,15 @@ class="initializer"> = '"'</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$escape`<span
 class="initializer"> = "\\\\"</span></span> \]\]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">fread</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">fread</span> ( <span class="methodparam"><span
 class="type">int</span> `$length`</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">fscanf</span> ( <span class="methodparam"><span
-class="type">string</span> `$format`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `&$...`</span> \] )
+class="type">string</span> `$format`</span> , <span
+class="methodparam"><span class="type">mixed</span> `&$vars`</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">fseek</span> ( <span class="methodparam"><span
@@ -2536,7 +2538,8 @@ Write a field array as a CSV line
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">SplFileObject::fputcsv</span> ( <span
 class="methodparam"><span class="type">array</span> `$fields`</span> \[,
 <span class="methodparam"><span class="type">string</span>
@@ -2632,8 +2635,9 @@ Read from file
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">SplFileObject::fread</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">SplFileObject::fread</span> ( <span
 class="methodparam"><span class="type">int</span> `$length`</span> )
 
 Reads the given number of bytes from the file.
@@ -2686,9 +2690,9 @@ Parses input from file according to a format
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">SplFileObject::fscanf</span> ( <span
-class="methodparam"><span class="type">string</span> `$format`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`&$...`</span> \] )
+class="methodparam"><span class="type">string</span> `$format`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`&$vars`</span> )
 
 Reads a line from the file and interprets it according to the specified
 `format`, which is described in the documentation for <span
@@ -2841,7 +2845,7 @@ Variables will be co-erced to a suitable type for the specifier:
 | *integer* | *d*, *u*, *c*, *o*, *x*, *X*, *b* |
 | *double*  | *g*, *G*, *e*, *E*, *f*, *F*      |
 
-`...`  
+`vars`  
 The optional assigned values.
 
 ### 返回值
@@ -3265,7 +3269,7 @@ class="methodname">SplFileObject::getFlags</span> ( <span
 class="methodparam">void</span> )
 
 Gets the flags set for an instance of SplFileObject as an <span
-class="type">integer</span>.
+class="type">int</span>.
 
 ### 参数
 
@@ -3273,7 +3277,7 @@ class="type">integer</span>.
 
 ### 返回值
 
-Returns an <span class="type">integer</span> representing the flags.
+Returns an <span class="type">int</span> representing the flags.
 
 ### 范例
 
@@ -3947,7 +3951,8 @@ class="methodparam"><span class="type">int</span> `$operation`</span>
 class="methodname">SplFileObject::fpassthru</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">SplFileObject::fputcsv</span> ( <span
 class="methodparam"><span class="type">array</span> `$fields`</span> \[,
 <span class="methodparam"><span class="type">string</span>
@@ -3957,15 +3962,16 @@ class="initializer"> = '"'</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$escape`<span
 class="initializer"> = "\\\\"</span></span> \]\]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">SplFileObject::fread</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">SplFileObject::fread</span> ( <span
 class="methodparam"><span class="type">int</span> `$length`</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">SplFileObject::fscanf</span> ( <span
-class="methodparam"><span class="type">string</span> `$format`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`&$...`</span> \] )
+class="methodparam"><span class="type">string</span> `$format`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`&$vars`</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SplFileObject::fseek</span> ( <span

@@ -94,175 +94,175 @@ ZMQ
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_PAIR` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_PUB` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_SUB` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_REQ` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_REP` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_XREQ` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_XREP` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_PUSH` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_PULL` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_ROUTER` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_DEALER` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_XPUB` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_XSUB` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKET_STREAM` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_HWM` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_SNDHWM` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_RCVHWM` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_AFFINITY` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_IDENTITY` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_SUBSCRIBE` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_UNSUBSCRIBE` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_RATE` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_RECOVERY_IVL` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_RECONNECT_IVL` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_RECONNECT_IVL_MAX` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_MCAST_LOOP` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_SNDBUF` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_RCVBUF` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_RCVMORE` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_TYPE` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_LINGER` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_BACKLOG` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_MAXMSGSIZE` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_SNDTIMEO` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_RCVTIMEO` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_IPV4ONLY` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_LAST_ENDPOINT` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_TCP_KEEPALIVE_IDLE` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_TCP_KEEPALIVE_CNT` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_TCP_KEEPALIVE_INTVL` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_TCP_ACCEPT_FILTER` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_TCP_ACCEPT_FILTER` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_DELAY_ATTACH_ON_CONNECT` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_XPUB_VERBOSE` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_ROUTER_RAW` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::SOCKOPT_IPV6` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::CTXOPT_MAX_SOCKETS` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::POLL_IN` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::POLL_OUT` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::MODE_NOBLOCK` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::MODE_DONTWAIT` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::MODE_SNDMORE` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::ERR_INTERNAL` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::ERR_EAGAIN` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::ERR_ENOTSUP` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::ERR_EFSM` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `ZMQ::ERR_ETERM` ;
 
 /\* Methods \*/
@@ -324,7 +324,7 @@ See SOCKET\_XPUB for format.
 **`ZMQ::SOCKET_STREAM`**  
 Used to send and receive TCP data from a non-ØMQ peer. Available if
 compiled against ZeroMQ 4.x or higher (Value: <span
-class="type">integer</span>).
+class="type">int</span>).
 
 **`ZMQ::SOCKOPT_HWM`**  
 The high water mark for inbound and outbound messages is a hard limit on
@@ -332,20 +332,20 @@ the maximum number of outstanding messages ØMQ shall queue in memory for
 any single peer that the specified socket is communicating with. Setting
 this option on a socket will only affect connections made after the
 option has been set. On ZeroMQ 3.x this is a wrapper for setting both
-SNDHWM and RCVHWM. (Value: <span class="type">integer</span>).
+SNDHWM and RCVHWM. (Value: <span class="type">int</span>).
 
 **`ZMQ::SOCKOPT_SNDHWM`**  
 The ZMQ\_SNDHWM option shall set the high water mark for outbound
 messages on the specified socket. Available if compiled against ZeroMQ
-3.x or higher (Value: <span class="type">integer</span>).
+3.x or higher (Value: <span class="type">int</span>).
 
 **`ZMQ::SOCKOPT_RCVHWM`**  
 The SOCKOPT\_RCVHWM option shall set the high water mark for inbound
 messages on the specified socket. Available if compiled against ZeroMQ
-3.x or higher (Value: <span class="type">integer</span>).
+3.x or higher (Value: <span class="type">int</span>).
 
 **`ZMQ::SOCKOPT_AFFINITY`**  
-Set I/O thread affinity (Value: <span class="type">integer</span>)
+Set I/O thread affinity (Value: <span class="type">int</span>)
 
 **`ZMQ::SOCKOPT_IDENTITY`**  
 Set socket identity (Value: <span class="type">string</span>)
@@ -360,68 +360,67 @@ class="type">string</span>)
 
 **`ZMQ::SOCKOPT_RATE`**  
 Set rate for multicast sockets (pgm) (Value: <span
-class="type">integer</span> \>= 0)
+class="type">int</span> \>= 0)
 
 **`ZMQ::SOCKOPT_RECOVERY_IVL`**  
 Set multicast recovery interval (Value: <span
-class="type">integer</span> \>= 0)
+class="type">int</span> \>= 0)
 
 **`ZMQ::SOCKOPT_RECONNECT_IVL`**  
 Set the initial reconnection interval (Value: <span
-class="type">integer</span> \>= 0)
+class="type">int</span> \>= 0)
 
 **`ZMQ::SOCKOPT_RECONNECT_IVL_MAX`**  
 Set the max reconnection interval (Value: <span
-class="type">integer</span> \>= 0)
+class="type">int</span> \>= 0)
 
 **`ZMQ::SOCKOPT_MCAST_LOOP`**  
-Control multicast loopback (Value: <span
-class="type">integer</span> \>= 0)
+Control multicast loopback (Value: <span class="type">int</span> \>= 0)
 
 **`ZMQ::SOCKOPT_SNDBUF`**  
 Set kernel transmit buffer size (Value: <span
-class="type">integer</span> \>= 0)
+class="type">int</span> \>= 0)
 
 **`ZMQ::SOCKOPT_RCVBUF`**  
 Set kernel receive buffer size (Value: <span
-class="type">integer</span> \>= 0)
+class="type">int</span> \>= 0)
 
 **`ZMQ::SOCKOPT_RCVMORE`**  
-Receive multi-part messages (Value: <span class="type">integer</span>)
+Receive multi-part messages (Value: <span class="type">int</span>)
 
 **`ZMQ::SOCKOPT_TYPE`**  
 Get the socket type. Valid for getSockOpt (Value: <span
-class="type">integer</span>)
+class="type">int</span>)
 
 **`ZMQ::SOCKOPT_LINGER`**  
 The linger value of the socket. Specifies how long the socket blocks
 trying flush messages after it has been closed (Value: <span
-class="type">integer</span>)
+class="type">int</span>)
 
 **`ZMQ::SOCKOPT_BACKLOG`**  
 The SOCKOPT\_BACKLOG option shall set the maximum length of the queue of
 outstanding peer connections for the specified socket; this only applies
 to connection-oriented transports. (Value: <span
-class="type">integer</span>)
+class="type">int</span>)
 
 **`ZMQ::SOCKOPT_MAXMSGSIZE`**  
 Limits the maximum size of the inbound message. Value -1 means no limit.
 Available if compiled against ZeroMQ 3.x or higher (Value: <span
-class="type">integer</span>)
+class="type">int</span>)
 
 **`ZMQ::SOCKOPT_SNDTIMEO`**  
 Sets the timeout for send operation on the socket. Value -1 means no
 limit. Available if compiled against ZeroMQ 3.x or higher (Value: <span
-class="type">integer</span>)
+class="type">int</span>)
 
 **`ZMQ::SOCKOPT_RCVTIMEO`**  
 Sets the timeout for receive operation on the socket. Value -1 means no
 limit. Available if compiled against ZeroMQ 3.x or higher (Value: <span
-class="type">integer</span>)
+class="type">int</span>)
 
 **`ZMQ::SOCKOPT_IPV4ONLY`**  
 Disable IPV6 support if 1. Available if compiled against ZeroMQ 3.x
-(Value: <span class="type">integer</span>)
+(Value: <span class="type">int</span>)
 
 **`ZMQ::SOCKOPT_LAST_ENDPOINT`**  
 Retrieve the last connected endpoint - for use with \* wildcard ports.
@@ -430,15 +429,15 @@ class="type">string</span>)
 
 **`ZMQ::SOCKOPT_TCP_KEEPALIVE_IDLE`**  
 Idle time for TCP keepalive. Available if compiled against ZeroMQ 3.x or
-higher (Value: <span class="type">integer</span>)
+higher (Value: <span class="type">int</span>)
 
 **`ZMQ::SOCKOPT_TCP_KEEPALIVE_CNT`**  
 Count time for TCP keepalive. Available if compiled against ZeroMQ 3.x
-or higher (Value: <span class="type">integer</span>)
+or higher (Value: <span class="type">int</span>)
 
 **`ZMQ::SOCKOPT_TCP_KEEPALIVE_INTVL`**  
 Interval for TCP keepalive. Available if compiled against ZeroMQ 3.x or
-higher (Value: <span class="type">integer</span>)
+higher (Value: <span class="type">int</span>)
 
 **`ZMQ::SOCKOPT_DELAY_ATTACH_ON_CONNECT`**  
 Set a CIDR string to match against incoming TCP connections. Available
@@ -467,7 +466,7 @@ Enable IPV6. Available if compiled against ZeroMQ 4.0 or higher (Value:
 
 **`ZMQ::CTXOPT_MAX_SOCKETS`**  
 The socket limit for this context. Available if compiled against ZeroMQ
-3.x or higher (Value: <span class="type">integer</span>)
+3.x or higher (Value: <span class="type">int</span>)
 
 **`ZMQ::POLL_IN`**  
 Poll for incoming data
@@ -648,8 +647,8 @@ constants.
 ### 返回值
 
 Returns either a <span class="type">string</span> or an <span
-class="type">integer</span> depending on `key`. Throws
-ZMQContextException on error.
+class="type">int</span> depending on `key`. Throws ZMQContextException
+on error.
 
 ZMQContext::getSocket
 =====================
@@ -1152,8 +1151,8 @@ constants.
 ### 返回值
 
 Returns either a <span class="type">string</span> or an <span
-class="type">integer</span> depending on `key`. Throws
-ZMQSocketException on error.
+class="type">int</span> depending on `key`. Throws ZMQSocketException on
+error.
 
 ZMQSocket::isPersistent
 =======================
@@ -1174,8 +1173,8 @@ Check whether the socket is persistent.
 
 ### 返回值
 
-Returns a <span class="type">boolean</span> based on whether the socket
-is persistent or not.
+Returns a <span class="type">bool</span> based on whether the socket is
+persistent or not.
 
 ZMQSocket::recv
 ===============
@@ -1254,7 +1253,7 @@ do {
 
 Returns the message. Throws ZMQSocketException in error. If
 **`ZMQ::MODE_DONTWAIT`** is used and the operation would block <span
-class="type">boolean</span> false shall be returned.
+class="type">bool</span> false shall be returned.
 
 ZMQSocket::recvMulti
 ====================
@@ -1282,7 +1281,7 @@ See **`ZMQ::MODE_*`** constants.
 
 Returns the array of message parts. Throws ZMQSocketException in error.
 If **`ZMQ::MODE_NOBLOCK`** is used and the operation would block <span
-class="type">boolean</span> false shall be returned.
+class="type">bool</span> false shall be returned.
 
 ZMQSocket::send
 ===============
@@ -1313,7 +1312,7 @@ See **`ZMQ::MODE_*`** constants.
 
 Returns the current object. Throws ZMQSocketException on error. If
 **`ZMQ::MODE_NOBLOCK`** is used and the operation would block <span
-class="type">boolean</span> false shall be returned.
+class="type">bool</span> false shall be returned.
 
 ZMQSocket::sendmulti
 ====================
@@ -1344,7 +1343,7 @@ See **`ZMQ::MODE_*`** constants.
 
 Returns the current object. Throws ZMQSocketException on error. If
 **`ZMQ::MODE_NOBLOCK`** is used and the operation would block <span
-class="type">boolean</span> false shall be returned.
+class="type">bool</span> false shall be returned.
 
 ZMQSocket::setSockOpt
 =====================
@@ -1511,7 +1510,7 @@ Count the items in the poll set.
 
 ### 返回值
 
-Returns an <span class="type">integer</span> representing the amount of
+Returns an <span class="type">int</span> representing the amount of
 items in the poll set.
 
 ZMQPoll::getLastErrors

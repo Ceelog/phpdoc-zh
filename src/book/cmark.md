@@ -2873,13 +2873,13 @@ class="classname">CommonMark\\Interfaces\\IVisitor</span>
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CommonMark\Interfaces\IVisitor::Done` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CommonMark\Interfaces\IVisitor::Enter` ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `CommonMark\Interfaces\IVisitor::Leave` ;
 
 /\* 方法 \*/
@@ -3084,16 +3084,16 @@ class="methodparam"><span class="type">int</span> `$options`</span> \] )
 `options`  
 A mask of:
 
-**`CommonMark\Parser\Normal`** (<span class="type">integer</span>)  
+**`CommonMark\Parser\Normal`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Parser\Normalize`** (<span class="type">integer</span>)  
+**`CommonMark\Parser\Normalize`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Parser\ValidateUTF8`** (<span class="type">integer</span>)  
+**`CommonMark\Parser\ValidateUTF8`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Parser\Smart`** (<span class="type">integer</span>)  
+**`CommonMark\Parser\Smart`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 CommonMark\\Parser::parse

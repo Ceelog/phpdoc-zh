@@ -202,47 +202,47 @@ generated as the result of a query.
 db++ error codes
 ----------------
 
-| PHP Constant                                                       | db++ constant       | meaning                                                                                  |
-|--------------------------------------------------------------------|---------------------|------------------------------------------------------------------------------------------|
-| **`DBPLUS_ERR_NOERR`** (<span class="type">integer</span>)         | ERR\_NOERR          | Null error condition                                                                     |
-| **`DBPLUS_ERR_DUPLICATE`** (<span class="type">integer</span>)     | ERR\_DUPLICATE      | Tried to insert a duplicate tuple                                                        |
-| **`DBPLUS_ERR_EOSCAN`** (<span class="type">integer</span>)        | ERR\_EOSCAN         | End of scan from *rget()*                                                                |
-| **`DBPLUS_ERR_EMPTY`** (<span class="type">integer</span>)         | ERR\_EMPTY          | Relation is empty (server)                                                               |
-| **`DBPLUS_ERR_CLOSE`** (<span class="type">integer</span>)         | ERR\_CLOSE          | The server can't close                                                                   |
-| **`DBPLUS_ERR_WLOCKED`** (<span class="type">integer</span>)       | ERR\_WLOCKED        | The record is write locked                                                               |
-| **`DBPLUS_ERR_LOCKED`** (<span class="type">integer</span>)        | ERR\_LOCKED         | Relation was already locked                                                              |
-| **`DBPLUS_ERR_NOLOCK`** (<span class="type">integer</span>)        | ERR\_NOLOCK         | Relation cannot be locked                                                                |
-| **`DBPLUS_ERR_READ`** (<span class="type">integer</span>)          | ERR\_READ           | Read error on relation                                                                   |
-| **`DBPLUS_ERR_WRITE`** (<span class="type">integer</span>)         | ERR\_WRITE          | Write error on relation                                                                  |
-| **`DBPLUS_ERR_CREATE`** (<span class="type">integer</span>)        | ERR\_CREATE         | *Create()* system call failed                                                            |
-| **`DBPLUS_ERR_LSEEK`** (<span class="type">integer</span>)         | ERR\_LSEEK          | *Lseek()* system call failed                                                             |
-| **`DBPLUS_ERR_LENGTH`** (<span class="type">integer</span>)        | ERR\_LENGTH         | Tuple exceeds maximum length                                                             |
-| **`DBPLUS_ERR_OPEN`** (<span class="type">integer</span>)          | ERR\_OPEN           | *Open()* system call failed                                                              |
-| **`DBPLUS_ERR_WOPEN`** (<span class="type">integer</span>)         | ERR\_WOPEN          | Relation already opened for writing                                                      |
-| **`DBPLUS_ERR_MAGIC`** (<span class="type">integer</span>)         | ERR\_MAGIC          | File is not a relation                                                                   |
-| **`DBPLUS_ERR_VERSION`** (<span class="type">integer</span>)       | ERR\_VERSION        | File is a very old relation                                                              |
-| **`DBPLUS_ERR_PGSIZE`** (<span class="type">integer</span>)        | ERR\_PGSIZE         | Relation uses a different page size                                                      |
-| **`DBPLUS_ERR_CRC`** (<span class="type">integer</span>)           | ERR\_CRC            | Invalid crc in the superpage                                                             |
-| **`DBPLUS_ERR_PIPE`** (<span class="type">integer</span>)          | ERR\_PIPE           | Piped relation requires *lseek()*                                                        |
-| **`DBPLUS_ERR_NIDX`** (<span class="type">integer</span>)          | ERR\_NIDX           | Too many secondary indices                                                               |
-| **`DBPLUS_ERR_MALLOC`** (<span class="type">integer</span>)        | ERR\_MALLOC         | *Malloc()* call failed                                                                   |
-| **`DBPLUS_ERR_NUSERS`** (<span class="type">integer</span>)        | ERR\_NUSERS         | Error use of max users                                                                   |
-| **`DBPLUS_ERR_PREEXIT`** (<span class="type">integer</span>)       | ERR\_PREEXIT        | Caused by invalid usage                                                                  |
-| **`DBPLUS_ERR_ONTRAP`** (<span class="type">integer</span>)        | ERR\_ONTRAP         | Caused by a signal                                                                       |
-| **`DBPLUS_ERR_PREPROC`** (<span class="type">integer</span>)       | ERR\_PREPROC        | Error in the preprocessor                                                                |
-| **`DBPLUS_ERR_DBPARSE`** (<span class="type">integer</span>)       | ERR\_DBPARSE        | Error in the parser                                                                      |
-| **`DBPLUS_ERR_DBRUNERR`** (<span class="type">integer</span>)      | ERR\_DBRUNERR       | Run error in db                                                                          |
-| **`DBPLUS_ERR_DBPREEXIT`** (<span class="type">integer</span>)     | ERR\_DBPREEXIT      | Exit condition caused by *prexit()* \* procedure                                         |
-| **`DBPLUS_ERR_WAIT`** (<span class="type">integer</span>)          | ERR\_WAIT           | Wait a little (Simple only)                                                              |
-| **`DBPLUS_ERR_CORRUPT_TUPLE`** (<span class="type">integer</span>) | ERR\_CORRUPT\_TUPLE | A client sent a corrupt tuple                                                            |
-| **`DBPLUS_ERR_WARNING0`** (<span class="type">integer</span>)      | ERR\_WARNING0       | The Simple routines encountered a non fatal error which was corrected                    |
-| **`DBPLUS_ERR_PANIC`** (<span class="type">integer</span>)         | ERR\_PANIC          | The server should not really die but after a disaster send ERR\_PANIC to all its clients |
-| **`DBPLUS_ERR_FIFO`** (<span class="type">integer</span>)          | ERR\_FIFO           | Can't create a fifo                                                                      |
-| **`DBPLUS_ERR_PERM`** (<span class="type">integer</span>)          | ERR\_PERM           | Permission denied                                                                        |
-| **`DBPLUS_ERR_TCL`** (<span class="type">integer</span>)           | ERR\_TCL            | TCL\_error                                                                               |
-| **`DBPLUS_ERR_RESTRICTED`** (<span class="type">integer</span>)    | ERR\_RESTRICTED     | Only two users                                                                           |
-| **`DBPLUS_ERR_USER`** (<span class="type">integer</span>)          | ERR\_USER           | An error in the use of the library by an application programmer                          |
-| **`DBPLUS_ERR_UNKNOWN`** (<span class="type">integer</span>)       | ERR\_UNKNOWN        |                                                                                          |
+| PHP Constant                                                   | db++ constant       | meaning                                                                                  |
+|----------------------------------------------------------------|---------------------|------------------------------------------------------------------------------------------|
+| **`DBPLUS_ERR_NOERR`** (<span class="type">int</span>)         | ERR\_NOERR          | Null error condition                                                                     |
+| **`DBPLUS_ERR_DUPLICATE`** (<span class="type">int</span>)     | ERR\_DUPLICATE      | Tried to insert a duplicate tuple                                                        |
+| **`DBPLUS_ERR_EOSCAN`** (<span class="type">int</span>)        | ERR\_EOSCAN         | End of scan from *rget()*                                                                |
+| **`DBPLUS_ERR_EMPTY`** (<span class="type">int</span>)         | ERR\_EMPTY          | Relation is empty (server)                                                               |
+| **`DBPLUS_ERR_CLOSE`** (<span class="type">int</span>)         | ERR\_CLOSE          | The server can't close                                                                   |
+| **`DBPLUS_ERR_WLOCKED`** (<span class="type">int</span>)       | ERR\_WLOCKED        | The record is write locked                                                               |
+| **`DBPLUS_ERR_LOCKED`** (<span class="type">int</span>)        | ERR\_LOCKED         | Relation was already locked                                                              |
+| **`DBPLUS_ERR_NOLOCK`** (<span class="type">int</span>)        | ERR\_NOLOCK         | Relation cannot be locked                                                                |
+| **`DBPLUS_ERR_READ`** (<span class="type">int</span>)          | ERR\_READ           | Read error on relation                                                                   |
+| **`DBPLUS_ERR_WRITE`** (<span class="type">int</span>)         | ERR\_WRITE          | Write error on relation                                                                  |
+| **`DBPLUS_ERR_CREATE`** (<span class="type">int</span>)        | ERR\_CREATE         | *Create()* system call failed                                                            |
+| **`DBPLUS_ERR_LSEEK`** (<span class="type">int</span>)         | ERR\_LSEEK          | *Lseek()* system call failed                                                             |
+| **`DBPLUS_ERR_LENGTH`** (<span class="type">int</span>)        | ERR\_LENGTH         | Tuple exceeds maximum length                                                             |
+| **`DBPLUS_ERR_OPEN`** (<span class="type">int</span>)          | ERR\_OPEN           | *Open()* system call failed                                                              |
+| **`DBPLUS_ERR_WOPEN`** (<span class="type">int</span>)         | ERR\_WOPEN          | Relation already opened for writing                                                      |
+| **`DBPLUS_ERR_MAGIC`** (<span class="type">int</span>)         | ERR\_MAGIC          | File is not a relation                                                                   |
+| **`DBPLUS_ERR_VERSION`** (<span class="type">int</span>)       | ERR\_VERSION        | File is a very old relation                                                              |
+| **`DBPLUS_ERR_PGSIZE`** (<span class="type">int</span>)        | ERR\_PGSIZE         | Relation uses a different page size                                                      |
+| **`DBPLUS_ERR_CRC`** (<span class="type">int</span>)           | ERR\_CRC            | Invalid crc in the superpage                                                             |
+| **`DBPLUS_ERR_PIPE`** (<span class="type">int</span>)          | ERR\_PIPE           | Piped relation requires *lseek()*                                                        |
+| **`DBPLUS_ERR_NIDX`** (<span class="type">int</span>)          | ERR\_NIDX           | Too many secondary indices                                                               |
+| **`DBPLUS_ERR_MALLOC`** (<span class="type">int</span>)        | ERR\_MALLOC         | *Malloc()* call failed                                                                   |
+| **`DBPLUS_ERR_NUSERS`** (<span class="type">int</span>)        | ERR\_NUSERS         | Error use of max users                                                                   |
+| **`DBPLUS_ERR_PREEXIT`** (<span class="type">int</span>)       | ERR\_PREEXIT        | Caused by invalid usage                                                                  |
+| **`DBPLUS_ERR_ONTRAP`** (<span class="type">int</span>)        | ERR\_ONTRAP         | Caused by a signal                                                                       |
+| **`DBPLUS_ERR_PREPROC`** (<span class="type">int</span>)       | ERR\_PREPROC        | Error in the preprocessor                                                                |
+| **`DBPLUS_ERR_DBPARSE`** (<span class="type">int</span>)       | ERR\_DBPARSE        | Error in the parser                                                                      |
+| **`DBPLUS_ERR_DBRUNERR`** (<span class="type">int</span>)      | ERR\_DBRUNERR       | Run error in db                                                                          |
+| **`DBPLUS_ERR_DBPREEXIT`** (<span class="type">int</span>)     | ERR\_DBPREEXIT      | Exit condition caused by *prexit()* \* procedure                                         |
+| **`DBPLUS_ERR_WAIT`** (<span class="type">int</span>)          | ERR\_WAIT           | Wait a little (Simple only)                                                              |
+| **`DBPLUS_ERR_CORRUPT_TUPLE`** (<span class="type">int</span>) | ERR\_CORRUPT\_TUPLE | A client sent a corrupt tuple                                                            |
+| **`DBPLUS_ERR_WARNING0`** (<span class="type">int</span>)      | ERR\_WARNING0       | The Simple routines encountered a non fatal error which was corrected                    |
+| **`DBPLUS_ERR_PANIC`** (<span class="type">int</span>)         | ERR\_PANIC          | The server should not really die but after a disaster send ERR\_PANIC to all its clients |
+| **`DBPLUS_ERR_FIFO`** (<span class="type">int</span>)          | ERR\_FIFO           | Can't create a fifo                                                                      |
+| **`DBPLUS_ERR_PERM`** (<span class="type">int</span>)          | ERR\_PERM           | Permission denied                                                                        |
+| **`DBPLUS_ERR_TCL`** (<span class="type">int</span>)           | ERR\_TCL            | TCL\_error                                                                               |
+| **`DBPLUS_ERR_RESTRICTED`** (<span class="type">int</span>)    | ERR\_RESTRICTED     | Only two users                                                                           |
+| **`DBPLUS_ERR_USER`** (<span class="type">int</span>)          | ERR\_USER           | An error in the use of the library by an application programmer                          |
+| **`DBPLUS_ERR_UNKNOWN`** (<span class="type">int</span>)       | ERR\_UNKNOWN        |                                                                                          |
 
 dbplus\_add
 ===========

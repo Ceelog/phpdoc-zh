@@ -21,7 +21,7 @@ Supported Options:
     This is the intended mode of operation and as of PHP 7.0.0 the salt
     option has been deprecated.
 
--   *cost* (<span class="type">integer</span>) - which denotes the
+-   *cost* (<span class="type">int</span>) - which denotes the
     algorithmic cost that should be used. Examples of these values can
     be found on the <span class="function">crypt</span> page.
 
@@ -35,16 +35,16 @@ Argon2i algorithm.
 
 Supported Options:
 
--   *memory\_cost* (<span class="type">integer</span>) - Maximum memory
-    (in bytes) that may be used to compute the Argon2 hash. Defaults to
+-   *memory\_cost* (<span class="type">int</span>) - Maximum memory (in
+    bytes) that may be used to compute the Argon2 hash. Defaults to
     **`PASSWORD_ARGON2_DEFAULT_MEMORY_COST`**.
 
--   *time\_cost* (<span class="type">integer</span>) - Maximum amount of
+-   *time\_cost* (<span class="type">int</span>) - Maximum amount of
     time it may take to compute the Argon2 hash. Defaults to
     **`PASSWORD_ARGON2_DEFAULT_TIME_COST`**.
 
--   *threads* (<span class="type">integer</span>) - Number of threads to
-    use for computing the Argon2 hash. Defaults to
+-   *threads* (<span class="type">int</span>) - Number of threads to use
+    for computing the Argon2 hash. Defaults to
     **`PASSWORD_ARGON2_DEFAULT_THREADS`**.
 
 Available as of PHP 7.2.0.
@@ -56,19 +56,19 @@ Argon2id algorithm. It supports the same options as
 
 Available as of PHP 7.3.0.
 
-**`PASSWORD_ARGON2_DEFAULT_MEMORY_COST`** (<span class="type">integer</span>)  
+**`PASSWORD_ARGON2_DEFAULT_MEMORY_COST`** (<span class="type">int</span>)  
 Default amount of memory in bytes that Argon2lib will use while trying
 to compute a hash.
 
 Available as of PHP 7.2.0.
 
-**`PASSWORD_ARGON2_DEFAULT_TIME_COST`** (<span class="type">integer</span>)  
+**`PASSWORD_ARGON2_DEFAULT_TIME_COST`** (<span class="type">int</span>)  
 Default amount of time that Argon2lib will spend trying to compute a
 hash.
 
 Available as of PHP 7.2.0.
 
-**`PASSWORD_ARGON2_DEFAULT_THREADS`** (<span class="type">integer</span>)  
+**`PASSWORD_ARGON2_DEFAULT_THREADS`** (<span class="type">int</span>)  
 Default number of threads that Argon2lib will use.
 
 Available as of PHP 7.2.0.
@@ -90,6 +90,6 @@ Values for this constant:
 
 ##### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                                                                              |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.4.0 | The values of the password algo IDs (**`PASSWORD_BCRYPT`**, **`PASSWORD_ARGON2I`**, **`PASSWORD_ARGON2ID`** and **`PASSWORD_DEFAULT`**) are now <span class="type">string</span>s. Previously, they have been <span class="type">integer</span>s. |
+| 版本  | 说明                                                                                                                                                                                                                                          |
+|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.4.0 | The values of the password algo IDs (**`PASSWORD_BCRYPT`**, **`PASSWORD_ARGON2I`**, **`PASSWORD_ARGON2ID`** and **`PASSWORD_DEFAULT`**) are now <span class="type">string</span>s. Previously, they have been <span class="type">int</span>s. |

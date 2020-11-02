@@ -254,20 +254,20 @@ Password to use if none is specified in <span
 class="function">odbc\_connect</span> or <span
 class="function">odbc\_pconnect</span>.
 
-`odbc.allow_persistent` <span class="type">boolean</span>  
+`odbc.allow_persistent` <span class="type">bool</span>  
 Whether to allow persistent ODBC connections.
 
-`odbc.check_persistent` <span class="type">boolean</span>  
+`odbc.check_persistent` <span class="type">bool</span>  
 Check that a connection is still valid before reuse.
 
-`odbc.max_persistent` <span class="type">integer</span>  
+`odbc.max_persistent` <span class="type">int</span>  
 The maximum number of persistent ODBC connections per process.
 
-`odbc.max_links` <span class="type">integer</span>  
+`odbc.max_links` <span class="type">int</span>  
 The maximum number of ODBC connections per process, including persistent
 connections.
 
-`odbc.defaultlrl` <span class="type">integer</span>  
+`odbc.defaultlrl` <span class="type">int</span>  
 Handling of LONG fields. Specifies the number of bytes returned to
 variables. See <span class="function">odbc\_longreadlen</span> for
 details.
@@ -275,11 +275,11 @@ details.
 <span class="simpara">当使用 <span class="type">integer</span> 时,
 其值以字节来衡量。还可以使用在<a href="/faq/using.html#faq.using.shorthandbytes" class="link">FAQ</a>中描述的速记符。</span>
 
-`odbc.defaultbinmode` <span class="type">integer</span>  
+`odbc.defaultbinmode` <span class="type">int</span>  
 Handling of binary data. See <span class="function">odbc\_binmode</span>
 for details.
 
-`odbc.default_cursortype` <span class="type">integer</span>  
+`odbc.default_cursortype` <span class="type">int</span>  
 Controls the ODBC cursor model. Possible values are
 **`SQL_CURSOR_FORWARD_ONLY`**, **`SQL_CURSOR_KEYSET_DRIVEN`**,
 **`SQL_CURSOR_DYNAMIC`** and **`SQL_CURSOR_STATIC`** (default).
@@ -295,160 +295,160 @@ and an ODBC result identifier.
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-**`ODBC_TYPE`** (<span class="type">integer</span>)  
+**`ODBC_TYPE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`ODBC_BINMODE_PASSTHRU`** (<span class="type">integer</span>)  
+**`ODBC_BINMODE_PASSTHRU`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`ODBC_BINMODE_RETURN`** (<span class="type">integer</span>)  
+**`ODBC_BINMODE_RETURN`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`ODBC_BINMODE_CONVERT`** (<span class="type">integer</span>)  
+**`ODBC_BINMODE_CONVERT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_ODBC_CURSORS`** (<span class="type">integer</span>)  
+**`SQL_ODBC_CURSORS`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CUR_USE_DRIVER`** (<span class="type">integer</span>)  
+**`SQL_CUR_USE_DRIVER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CUR_USE_IF_NEEDED`** (<span class="type">integer</span>)  
+**`SQL_CUR_USE_IF_NEEDED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CUR_USE_ODBC`** (<span class="type">integer</span>)  
+**`SQL_CUR_USE_ODBC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CONCURRENCY`** (<span class="type">integer</span>)  
+**`SQL_CONCURRENCY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CONCUR_READ_ONLY`** (<span class="type">integer</span>)  
+**`SQL_CONCUR_READ_ONLY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CONCUR_LOCK`** (<span class="type">integer</span>)  
+**`SQL_CONCUR_LOCK`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CONCUR_ROWVER`** (<span class="type">integer</span>)  
+**`SQL_CONCUR_ROWVER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CONCUR_VALUES`** (<span class="type">integer</span>)  
+**`SQL_CONCUR_VALUES`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CURSOR_TYPE`** (<span class="type">integer</span>)  
+**`SQL_CURSOR_TYPE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CURSOR_FORWARD_ONLY`** (<span class="type">integer</span>)  
+**`SQL_CURSOR_FORWARD_ONLY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CURSOR_KEYSET_DRIVEN`** (<span class="type">integer</span>)  
+**`SQL_CURSOR_KEYSET_DRIVEN`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CURSOR_DYNAMIC`** (<span class="type">integer</span>)  
+**`SQL_CURSOR_DYNAMIC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CURSOR_STATIC`** (<span class="type">integer</span>)  
+**`SQL_CURSOR_STATIC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_KEYSET_SIZE`** (<span class="type">integer</span>)  
+**`SQL_KEYSET_SIZE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_CHAR`** (<span class="type">integer</span>)  
+**`SQL_CHAR`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_VARCHAR`** (<span class="type">integer</span>)  
+**`SQL_VARCHAR`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_LONGVARCHAR`** (<span class="type">integer</span>)  
+**`SQL_LONGVARCHAR`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_DECIMAL`** (<span class="type">integer</span>)  
+**`SQL_DECIMAL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_NUMERIC`** (<span class="type">integer</span>)  
+**`SQL_NUMERIC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_BIT`** (<span class="type">integer</span>)  
+**`SQL_BIT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_TINYINT`** (<span class="type">integer</span>)  
+**`SQL_TINYINT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_SMALLINT`** (<span class="type">integer</span>)  
+**`SQL_SMALLINT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_INTEGER`** (<span class="type">integer</span>)  
+**`SQL_INTEGER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_BIGINT`** (<span class="type">integer</span>)  
+**`SQL_BIGINT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_REAL`** (<span class="type">integer</span>)  
+**`SQL_REAL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_FLOAT`** (<span class="type">integer</span>)  
+**`SQL_FLOAT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_DOUBLE`** (<span class="type">integer</span>)  
+**`SQL_DOUBLE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_BINARY`** (<span class="type">integer</span>)  
+**`SQL_BINARY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_VARBINARY`** (<span class="type">integer</span>)  
+**`SQL_VARBINARY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_LONGVARBINARY`** (<span class="type">integer</span>)  
+**`SQL_LONGVARBINARY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_DATE`** (<span class="type">integer</span>)  
+**`SQL_DATE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_TIME`** (<span class="type">integer</span>)  
+**`SQL_TIME`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_TIMESTAMP`** (<span class="type">integer</span>)  
+**`SQL_TIMESTAMP`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_TYPE_DATE`** (<span class="type">integer</span>)  
+**`SQL_TYPE_DATE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_TYPE_TIME`** (<span class="type">integer</span>)  
+**`SQL_TYPE_TIME`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_TYPE_TIMESTAMP`** (<span class="type">integer</span>)  
+**`SQL_TYPE_TIMESTAMP`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_BEST_ROWID`** (<span class="type">integer</span>)  
+**`SQL_BEST_ROWID`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_ROWVER`** (<span class="type">integer</span>)  
+**`SQL_ROWVER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_SCOPE_CURROW`** (<span class="type">integer</span>)  
+**`SQL_SCOPE_CURROW`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_SCOPE_TRANSACTION`** (<span class="type">integer</span>)  
+**`SQL_SCOPE_TRANSACTION`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_SCOPE_SESSION`** (<span class="type">integer</span>)  
+**`SQL_SCOPE_SESSION`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_NO_NULLS`** (<span class="type">integer</span>)  
+**`SQL_NO_NULLS`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_NULLABLE`** (<span class="type">integer</span>)  
+**`SQL_NULLABLE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_INDEX_UNIQUE`** (<span class="type">integer</span>)  
+**`SQL_INDEX_UNIQUE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_INDEX_ALL`** (<span class="type">integer</span>)  
+**`SQL_INDEX_ALL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_ENSURE`** (<span class="type">integer</span>)  
+**`SQL_ENSURE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`SQL_QUICK`** (<span class="type">integer</span>)  
+**`SQL_QUICK`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 odbc\_autocommit
@@ -627,7 +627,8 @@ Lists columns and associated privileges for the given table
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_columnprivileges</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
@@ -717,7 +718,8 @@ Lists the column names in specified tables
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_columns</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> \[, <span class="methodparam"><span
@@ -1528,7 +1530,8 @@ Retrieves a list of foreign keys
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_foreignkeys</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
@@ -2004,7 +2007,8 @@ Gets the primary keys for a table
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_primarykeys</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
@@ -2086,12 +2090,14 @@ Retrieve information about parameters to procedures
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_procedurecolumns</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> )
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_procedurecolumns</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
@@ -2207,12 +2213,14 @@ Get the list of procedures stored in a specific data source
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_procedures</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> )
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_procedures</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
@@ -2565,7 +2573,8 @@ Retrieve statistics about a table
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_statistics</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
@@ -2671,7 +2680,8 @@ Lists tables and the privileges associated with each table
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_tableprivileges</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
@@ -2757,7 +2767,8 @@ Get the list of table names stored in a specific data source
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_tables</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection_id`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$catalog`</span>

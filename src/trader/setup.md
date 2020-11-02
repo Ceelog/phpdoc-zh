@@ -41,7 +41,7 @@ A DLL for this PECL extension is available under
 
 这是配置指令的简短说明。
 
-`trader.real_precision` <span class="type">integer</span>  
+`trader.real_precision` <span class="type">int</span>  
 All the values in the returned arrays will be rounded to this precision.
 However the calculations inside TA-Lib happen with unrounded values.
 

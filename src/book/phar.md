@@ -288,47 +288,47 @@ class="oointerface">, <span class="interfacename">ArrayAccess</span>
 
 /\* 继承的常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_AS_PATHNAME` <span class="initializer"> =
 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_AS_FILEINFO` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_AS_SELF` <span class="initializer"> =
 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_MODE_MASK` <span class="initializer"> =
 240</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::KEY_AS_PATHNAME` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::KEY_AS_FILENAME` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::FOLLOW_SYMLINKS` <span class="initializer"> =
 512</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::KEY_MODE_MASK` <span class="initializer"> =
 3840</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::NEW_CURRENT_AND_KEY` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::SKIP_DOTS` <span class="initializer"> = 4096</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::UNIX_PATHS` <span class="initializer"> =
 8192</span> ;
 
@@ -4533,47 +4533,47 @@ PharData class even if *phar.readonly* php.ini setting is *1*.
 
 /\* 继承的常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_AS_PATHNAME` <span class="initializer"> =
 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_AS_FILEINFO` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_AS_SELF` <span class="initializer"> =
 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::CURRENT_MODE_MASK` <span class="initializer"> =
 240</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::KEY_AS_PATHNAME` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::KEY_AS_FILENAME` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::FOLLOW_SYMLINKS` <span class="initializer"> =
 512</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::KEY_MODE_MASK` <span class="initializer"> =
 3840</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::NEW_CURRENT_AND_KEY` <span class="initializer"> =
 256</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::SKIP_DOTS` <span class="initializer"> = 4096</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `FilesystemIterator::UNIX_PATHS` <span class="initializer"> =
 8192</span> ;
 

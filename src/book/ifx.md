@@ -251,13 +251,13 @@ still under construction.
 
 这是配置指令的简短说明。
 
-`ifx.allow_persistent` <span class="type">boolean</span>  
+`ifx.allow_persistent` <span class="type">bool</span>  
 Whether to allow persistent Informix connections.
 
-`ifx.max_persistent` <span class="type">integer</span>  
+`ifx.max_persistent` <span class="type">int</span>  
 The maximum number of persistent Informix connections per process.
 
-`ifx.max_links` <span class="type">integer</span>  
+`ifx.max_links` <span class="type">int</span>  
 The maximum number of Informix connections per process, including
 persistent connections.
 
@@ -276,28 +276,28 @@ The default password to use when none is specified in <span
 class="function">ifx\_connect</span> or <span
 class="function">ifx\_pconnect</span>.
 
-`ifx.blobinfile` <span class="type">boolean</span>  
+`ifx.blobinfile` <span class="type">bool</span>  
 Set to **`TRUE`** if you want to return blob columns in a file,
 **`FALSE`** if you want them in memory. You can override the setting at
 runtime with <span class="function">ifx\_blobinfile\_mode</span>.
 
-`ifx.textasvarchar` <span class="type">boolean</span>  
+`ifx.textasvarchar` <span class="type">bool</span>  
 Set to **`TRUE`** if you want to return TEXT columns as normal strings
 in select statements, **`FALSE`** if you want to use blob id parameters.
 You can override the setting at runtime with <span
 class="function">ifx\_textasvarchar</span>.
 
-`ifx.byteasvarchar` <span class="type">boolean</span>  
+`ifx.byteasvarchar` <span class="type">bool</span>  
 Set to **`TRUE`** if you want to return BYTE columns as normal strings
 in select queries, **`FALSE`** if you want to use blob id parameters.
 You can override the setting at runtime with <span
 class="function">ifx\_textasvarchar</span>.
 
-`ifx.charasvarchar` <span class="type">boolean</span>  
+`ifx.charasvarchar` <span class="type">bool</span>  
 Set to **`TRUE`** if you want to trim trailing spaces from CHAR columns
 when fetching them.
 
-`ifx.nullformat` <span class="type">boolean</span>  
+`ifx.nullformat` <span class="type">bool</span>  
 Set to **`TRUE`** if you want to return **`NULL`** columns as the
 literal string "**`NULL`**", **`FALSE`** if you want them returned as
 the empty string "". You can override this setting at runtime with <span
@@ -313,28 +313,28 @@ class="function">ifx\_nullformat</span>.
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-**`IFX_SCROLL`** (<span class="type">integer</span>)  
+**`IFX_SCROLL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`IFX_HOLD`** (<span class="type">integer</span>)  
+**`IFX_HOLD`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`IFX_LO_RDONLY`** (<span class="type">integer</span>)  
+**`IFX_LO_RDONLY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`IFX_LO_WRONLY`** (<span class="type">integer</span>)  
+**`IFX_LO_WRONLY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`IFX_LO_APPEND`** (<span class="type">integer</span>)  
+**`IFX_LO_APPEND`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`IFX_LO_RDWR`** (<span class="type">integer</span>)  
+**`IFX_LO_RDWR`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`IFX_LO_BUFFER`** (<span class="type">integer</span>)  
+**`IFX_LO_BUFFER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`IFX_LO_NOBUFFER`** (<span class="type">integer</span>)  
+**`IFX_LO_NOBUFFER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 ifx\_affected\_rows

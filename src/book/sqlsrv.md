@@ -189,151 +189,151 @@ class="function">sqlsrv\_prepare</span>.
 
 下列常量由此扩展定义，且仅在此扩展编译入 PHP 或在运行时动态载入时可用。
 
-**`SQLSRV_FETCH_ASSOC`** (<span class="type">integer</span>)  
+**`SQLSRV_FETCH_ASSOC`** (<span class="type">int</span>)  
 <span class="simpara"> Forces <span
 class="function">sqlsrv\_fetch\_array</span> to return an associative
 array when passed as a parameter. </span>
 
-**`SQLSRV_FETCH_NUMERIC`** (<span class="type">integer</span>)  
+**`SQLSRV_FETCH_NUMERIC`** (<span class="type">int</span>)  
 <span class="simpara"> Forces <span
 class="function">sqlsrv\_fetch\_array</span> to return an array with
 numeric when passed as a parameter. </span>
 
-**`SQLSRV_FETCH_BOTH`** (<span class="type">integer</span>)  
+**`SQLSRV_FETCH_BOTH`** (<span class="type">int</span>)  
 <span class="simpara"> Forces <span
 class="function">sqlsrv\_fetch\_array</span> to return an array with
 both associative and numeric keys when passed as a parameter (the
 default behavior). </span>
 
-**`SQLSRV_ERR_ALL`** (<span class="type">integer</span>)  
+**`SQLSRV_ERR_ALL`** (<span class="type">int</span>)  
 <span class="simpara"> Forces <span
 class="function">sqlsrv\_errors</span> to return both errors and warings
 when passed as a parameter (the default behavior). </span>
 
-**`SQLSRV_ERR_ERRORS`** (<span class="type">integer</span>)  
+**`SQLSRV_ERR_ERRORS`** (<span class="type">int</span>)  
 <span class="simpara"> Forces <span
 class="function">sqlsrv\_errors</span> to return errors only (no
 warnings) when passed as a parameter. </span>
 
-**`SQLSRV_ERR_WARNINGS`** (<span class="type">integer</span>)  
+**`SQLSRV_ERR_WARNINGS`** (<span class="type">int</span>)  
 <span class="simpara"> Forces <span
 class="function">sqlsrv\_errors</span> to return warnings only (no
 errors) when passed as a parameter. </span>
 
-**`SQLSRV_LOG_SYSTEM_ALL`** (<span class="type">integer</span>)  
+**`SQLSRV_LOG_SYSTEM_ALL`** (<span class="type">int</span>)  
 <span class="simpara"> Turns on logging of all subsystems when passed to
 <span class="function">sqlsrv\_configure</span> as a parameter. </span>
 
-**`SQLSRV_LOG_SYSTEM_CONN`** (<span class="type">integer</span>)  
+**`SQLSRV_LOG_SYSTEM_CONN`** (<span class="type">int</span>)  
 <span class="simpara"> Turns on logging of connection activity when
 passed to <span class="function">sqlsrv\_configure</span> as a
 parameter. </span>
 
-**`SQLSRV_LOG_SYSTEM_INIT`** (<span class="type">integer</span>)  
+**`SQLSRV_LOG_SYSTEM_INIT`** (<span class="type">int</span>)  
 <span class="simpara"> Turns on logging of initialization activity when
 passed to <span class="function">sqlsrv\_configure</span> as a
 parameter. </span>
 
-**`SQLSRV_LOG_SYSTEM_OFF`** (<span class="type">integer</span>)  
+**`SQLSRV_LOG_SYSTEM_OFF`** (<span class="type">int</span>)  
 <span class="simpara"> Turns off logging of all subsystems when passed
 to <span class="function">sqlsrv\_configure</span> as a parameter.
 </span>
 
-**`SQLSRV_LOG_SYSTEM_STMT`** (<span class="type">integer</span>)  
+**`SQLSRV_LOG_SYSTEM_STMT`** (<span class="type">int</span>)  
 <span class="simpara"> Turns on logging of statement activity when
 passed to <span class="function">sqlsrv\_configure</span> as a
 parameter. </span>
 
-**`SQLSRV_LOG_SYSTEM_UTIL`** (<span class="type">integer</span>)  
+**`SQLSRV_LOG_SYSTEM_UTIL`** (<span class="type">int</span>)  
 <span class="simpara"> Turns on logging of error function activity when
 passed to <span class="function">sqlsrv\_configure</span> as a
 parameter. </span>
 
-**`SQLSRV_LOG_SEVERITY_ALL`** (<span class="type">integer</span>)  
+**`SQLSRV_LOG_SEVERITY_ALL`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that errors, warnings, and notices will
 be logged when passed to <span class="function">sqlsrv\_configure</span>
 as a parameter. </span>
 
-**`SQLSRV_LOG_SEVERITY_ERROR`** (<span class="type">integer</span>)  
+**`SQLSRV_LOG_SEVERITY_ERROR`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that errors will be logged when passed
 to <span class="function">sqlsrv\_configure</span> as a parameter.
 </span>
 
-**`SQLSRV_LOG_SEVERITY_NOTICE`** (<span class="type">integer</span>)  
+**`SQLSRV_LOG_SEVERITY_NOTICE`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that notices will be logged when passed
 to <span class="function">sqlsrv\_configure</span> as a parameter.
 </span>
 
-**`SQLSRV_LOG_SEVERITY_WARNING`** (<span class="type">integer</span>)  
+**`SQLSRV_LOG_SEVERITY_WARNING`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that warnings will be logged when
 passed to <span class="function">sqlsrv\_configure</span> as a
 parameter. </span>
 
-**`SQLSRV_NULLABLE_YES`** (<span class="type">integer</span>)  
+**`SQLSRV_NULLABLE_YES`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates that a column is nullable. </span>
 
-**`SQLSRV_NULLABLE_NO`** (<span class="type">integer</span>)  
+**`SQLSRV_NULLABLE_NO`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates that a column is not nullable. </span>
 
-**`SQLSRV_NULLABLE_UNKNOWN`** (<span class="type">integer</span>)  
+**`SQLSRV_NULLABLE_UNKNOWN`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates that it is not known if a column is
 nullable. </span>
 
-**`SQLSRV_PARAM_IN`** (<span class="type">integer</span>)  
+**`SQLSRV_PARAM_IN`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates an input parameter when passed to <span
 class="function">sqlsrv\_query</span> or <span
 class="function">sqlsrv\_prepare</span>. </span>
 
-**`SQLSRV_PARAM_INOUT`** (<span class="type">integer</span>)  
+**`SQLSRV_PARAM_INOUT`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates a bidirectional parameter when passed
 to <span class="function">sqlsrv\_query</span> or <span
 class="function">sqlsrv\_prepare</span>. </span>
 
-**`SQLSRV_PARAM_OUT`** (<span class="type">integer</span>)  
+**`SQLSRV_PARAM_OUT`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates an output parameter when passed to
 <span class="function">sqlsrv\_query</span> or <span
 class="function">sqlsrv\_prepare</span>. </span>
 
-**`SQLSRV_PHPTYPE_INT`** (<span class="type">integer</span>)  
+**`SQLSRV_PHPTYPE_INT`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies an integer PHP data type. For usage
 information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc296208.aspx" class="link external">» How to: Specify PHP Types</a>.
 </span>
 
-**`SQLSRV_PHPTYPE_DATETIME`** (<span class="type">integer</span>)  
+**`SQLSRV_PHPTYPE_DATETIME`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies a datetime PHP data type. For usage
 information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc296208.aspx" class="link external">» How to: Specify PHP Types</a>.
 </span>
 
-**`SQLSRV_PHPTYPE_FLOAT`** (<span class="type">integer</span>)  
+**`SQLSRV_PHPTYPE_FLOAT`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies a float PHP data type. For usage
 information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc296208.aspx" class="link external">» How to: Specify PHP Types</a>.
 </span>
 
-**`SQLSRV_PHPTYPE_STREAM`** (<span class="type">integer</span>)  
+**`SQLSRV_PHPTYPE_STREAM`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies a PHP stream. This constant works like
 a function and accepts an encoding constant. See the SQLSRV\_ENC\_\*
 constants. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc296208.aspx" class="link external">» How to: Specify PHP Types</a>.
 </span>
 
-**`SQLSRV_PHPTYPE_STRING`** (<span class="type">integer</span>)  
+**`SQLSRV_PHPTYPE_STRING`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies a string PHP data type. This constant
 works like a function and accepts an encoding constant. See the
 SQLSRV\_ENC\_\* constants. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc296208.aspx" class="link external">» How to: Specify PHP Types</a>.
 </span>
 
-**`SQLSRV_ENC_BINARY`** (<span class="type">integer</span>)  
+**`SQLSRV_ENC_BINARY`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that data is returned as a raw byte
 stream from the server without performing encoding or translation. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc296208.aspx" class="link external">» How to: Specify PHP Types</a>.
 </span>
 
-**`SQLSRV_ENC_CHAR`** (<span class="type">integer</span>)  
+**`SQLSRV_ENC_CHAR`** (<span class="type">int</span>)  
 <span class="simpara"> Data is returned in 8-bit characters as specified
 in the code page of the Windows locale that is set on the system. Any
 multi-byte characters or characters that do not map into this code page
@@ -342,308 +342,308 @@ the default encoding. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc296208.aspx" class="link external">» How to: Specify PHP Types</a>.
 </span>
 
-**`UTF-8`** (<span class="type">integer</span>)  
+**`UTF-8`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that data is returned with UTF-8
 encoding. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc296208.aspx" class="link external">» How to: Specify PHP Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_BIGINT`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_BIGINT`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the bigint SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_BINARY`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_BINARY`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the binary SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_BIT`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_BIT`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the bit SQL Server data type. For usage
 information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_CHAR`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_CHAR`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the char SQL Server data type. This
 constant works like a function and accepts a parameter indicating the
 number characters. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_DATE`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_DATE`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the date SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_DATETIME`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_DATETIME`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the datetime SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_DATETIME2`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_DATETIME2`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the datetime2 SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_DATETIMEOFFSET`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_DATETIMEOFFSET`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the datetimeoffset SQL Server data
 type. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_DECIMAL`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_DECIMAL`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the decimal SQL Server data type. This
 constant works like a function and accepts two parameters indicating (in
 order) precision and scale. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_FLOAT`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_FLOAT`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the float SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_IMAGE`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_IMAGE`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the image SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_INT`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_INT`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the int SQL Server data type. For usage
 information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_MONEY`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_MONEY`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the money SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_NCHAR`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_NCHAR`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the nchar SQL Server data type. This
 constant works like a function and accepts a single parameter indicating
 the character count. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_NUMERIC`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_NUMERIC`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the numeric SQL Server data type. This
 constant works like a function and accepts two parameter indicating (in
 order) precision and scale. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_NVARCHAR`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_NVARCHAR`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the nvarchar SQL Server data type. This
 constant works like a function and accepts a single parameter indicating
 the character count. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_NVARCHAR`**('max') (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_NVARCHAR`**('max') (<span class="type">int</span>)  
 <span class="simpara"> Describes the nvarchar(MAX) SQL Server data type.
 For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_NTEXT`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_NTEXT`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the ntext SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_REAL`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_REAL`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the real SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_SMALLDATETIME`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_SMALLDATETIME`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the smalldatetime SQL Server data type.
 For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_SMALLINT`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_SMALLINT`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the smallint SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_SMALLMONEY`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_SMALLMONEY`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the smallmoney SQL Server data type.
 For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_TEXT`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_TEXT`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the text SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_TIME`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_TIME`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the time SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_TIMESTAMP`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_TIMESTAMP`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the timestamp SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_TINYINT`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_TINYINT`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the tinyint SQL Server data type. For
 usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_UNIQUEIDENTIFIER`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_UNIQUEIDENTIFIER`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the uniqueidentifier SQL Server data
 type. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_UDT`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_UDT`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the UDT SQL Server data type. For usage
 information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_VARBINARY`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_VARBINARY`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the varbinary SQL Server data type.
 This constant works like a function and accepts a single parameter
 indicating the byte count. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_VARBINARY`**('max') (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_VARBINARY`**('max') (<span class="type">int</span>)  
 <span class="simpara"> Describes the varbinary(MAX) SQL Server data
 type. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_VARCHAR`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_VARCHAR`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the varchar SQL Server data type. This
 constant works like a function and accepts a single parameter indicating
 the character count. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_VARCHAR`**('max') (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_VARCHAR`**('max') (<span class="type">int</span>)  
 <span class="simpara"> Describes the varchar(MAX) SQL Server data type.
 For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_SQLTYPE_XML`** (<span class="type">integer</span>)  
+**`SQLSRV_SQLTYPE_XML`** (<span class="type">int</span>)  
 <span class="simpara"> Describes the XML SQL Server data type. For usage
 information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc626305.aspx" class="link external">» How to: Specify SQL Types</a>.
 </span>
 
-**`SQLSRV_TXN_READ_UNCOMMITTED`** (<span class="type">integer</span>)  
+**`SQLSRV_TXN_READ_UNCOMMITTED`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates a transaction isolation level of READ
 UNCOMMITTED. This value is used to set the TransactionIsolation level in
 the $connectionOptions array passed to <span
 class="function">sqlsrv\_connect</span>. </span>
 
-**`SQLSRV_TXN_READ_COMMITTED`** (<span class="type">integer</span>)  
+**`SQLSRV_TXN_READ_COMMITTED`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates a transaction isolation level of READ
 COMMITTED. This value is used to set the TransactionIsolation level in
 the $connectionOptions array passed to <span
 class="function">sqlsrv\_connect</span>. </span>
 
-**`SQLSRV_TXN_REPEATABLE_READ`** (<span class="type">integer</span>)  
+**`SQLSRV_TXN_REPEATABLE_READ`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates a transaction isolation level of
 REPEATABLE READ. This value is used to set the TransactionIsolation
 level in the $connectionOptions array passed to <span
 class="function">sqlsrv\_connect</span>. </span>
 
-**`SQLSRV_TXN_SNAPSHOT`** (<span class="type">integer</span>)  
+**`SQLSRV_TXN_SNAPSHOT`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates a transaction isolation level of
 SNAPSHOT. This value is used to set the TransactionIsolation level in
 the $connectionOptions array passed to <span
 class="function">sqlsrv\_connect</span>. </span>
 
-**`SQLSRV_TXN_READ_SERIALIZABLE`** (<span class="type">integer</span>)  
+**`SQLSRV_TXN_READ_SERIALIZABLE`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates a transaction isolation level of
 SERIALIZABLE. This value is used to set the TransactionIsolation level
 in the $connectionOptions array passed to <span
 class="function">sqlsrv\_connect</span>. </span>
 
-**`SQLSRV_CURSOR_FORWARD`** (<span class="type">integer</span>)  
+**`SQLSRV_CURSOR_FORWARD`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates a forward-only cursor. For usage
 information, see
 <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a>.
 </span>
 
-**`SQLSRV_CURSOR_STATIC`** (<span class="type">integer</span>)  
+**`SQLSRV_CURSOR_STATIC`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates a static cursor. For usage information,
 see
 <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a>.
 </span>
 
-**`SQLSRV_CURSOR_DYNAMIC`** (<span class="type">integer</span>)  
+**`SQLSRV_CURSOR_DYNAMIC`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates a dynamic cursor. For usage
 information, see
 <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a>.
 </span>
 
-**`SQLSRV_CURSOR_KEYSET`** (<span class="type">integer</span>)  
+**`SQLSRV_CURSOR_KEYSET`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates a keyset cursor. For usage information,
 see
 <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a>.
 </span>
 
-**`SQLSRV_CURSOR_BUFFERED`** (<span class="type">integer</span>)  
+**`SQLSRV_CURSOR_BUFFERED`** (<span class="type">int</span>)  
 <span class="simpara"> Creates a client-side cursor query. Lets you
 access rows in any order. For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a>.
 </span>
 
-**`SQLSRV_SCROLL_NEXT`** (<span class="type">integer</span>)  
+**`SQLSRV_SCROLL_NEXT`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies which row to select in a result set.
 For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a>.
 </span>
 
-**`SQLSRV_SCROLL_PRIOR`** (<span class="type">integer</span>)  
+**`SQLSRV_SCROLL_PRIOR`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies which row to select in a result set.
 For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a>.
 </span>
 
-**`SQLSRV_SCROLL_FIRST`** (<span class="type">integer</span>)  
+**`SQLSRV_SCROLL_FIRST`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies which row to select in a result set.
 For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a>.
 </span>
 
-**`SQLSRV_SCROLL_LAST`** (<span class="type">integer</span>)  
+**`SQLSRV_SCROLL_LAST`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies which row to select in a result set.
 For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a>.
 </span>
 
-**`SQLSRV_SCROLL_ABSOLUTE`** (<span class="type">integer</span>)  
+**`SQLSRV_SCROLL_ABSOLUTE`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies which row to select in a result set.
 For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a>.
 </span>
 
-**`SQLSRV_SCROLL_RELATIVE`** (<span class="type">integer</span>)  
+**`SQLSRV_SCROLL_RELATIVE`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies which row to select in a result set.
 For usage information, see
 <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a>.

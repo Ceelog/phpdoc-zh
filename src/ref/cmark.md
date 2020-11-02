@@ -21,16 +21,16 @@ markdown string
 `options`  
 A mask of:
 
-**`CommonMark\Parser\Normal`** (<span class="type">integer</span>)  
+**`CommonMark\Parser\Normal`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Parser\Normalize`** (<span class="type">integer</span>)  
+**`CommonMark\Parser\Normalize`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Parser\ValidateUTF8`** (<span class="type">integer</span>)  
+**`CommonMark\Parser\ValidateUTF8`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Parser\Smart`** (<span class="type">integer</span>)  
+**`CommonMark\Parser\Smart`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 ### 返回值
@@ -62,19 +62,19 @@ class="methodparam"><span class="type">int</span> `$width`</span> \]\] )
 `options`  
 A mask of:
 
-**`CommonMark\Render\Normal`** (<span class="type">integer</span>)  
+**`CommonMark\Render\Normal`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\SourcePos`** (<span class="type">integer</span>)  
+**`CommonMark\Render\SourcePos`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\HardBreaks`** (<span class="type">integer</span>)  
+**`CommonMark\Render\HardBreaks`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\Safe`** (<span class="type">integer</span>)  
+**`CommonMark\Render\Safe`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\NoBreaks`** (<span class="type">integer</span>)  
+**`CommonMark\Render\NoBreaks`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 `width`  
@@ -105,19 +105,19 @@ class="type">int</span> `$options`</span> \] )
 `options`  
 A mask of:
 
-**`CommonMark\Render\Normal`** (<span class="type">integer</span>)  
+**`CommonMark\Render\Normal`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\SourcePos`** (<span class="type">integer</span>)  
+**`CommonMark\Render\SourcePos`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\HardBreaks`** (<span class="type">integer</span>)  
+**`CommonMark\Render\HardBreaks`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\Safe`** (<span class="type">integer</span>)  
+**`CommonMark\Render\Safe`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\NoBreaks`** (<span class="type">integer</span>)  
+**`CommonMark\Render\NoBreaks`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 ### 返回值
@@ -147,19 +147,19 @@ class="methodparam"><span class="type">int</span> `$width`</span> \]\] )
 `options`  
 A mask of:
 
-**`CommonMark\Render\Normal`** (<span class="type">integer</span>)  
+**`CommonMark\Render\Normal`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\SourcePos`** (<span class="type">integer</span>)  
+**`CommonMark\Render\SourcePos`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\HardBreaks`** (<span class="type">integer</span>)  
+**`CommonMark\Render\HardBreaks`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\Safe`** (<span class="type">integer</span>)  
+**`CommonMark\Render\Safe`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\NoBreaks`** (<span class="type">integer</span>)  
+**`CommonMark\Render\NoBreaks`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 `width`  
@@ -191,19 +191,19 @@ class="methodparam"><span class="type">int</span> `$width`</span> \]\] )
 `options`  
 A mask of:
 
-**`CommonMark\Render\Normal`** (<span class="type">integer</span>)  
+**`CommonMark\Render\Normal`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\SourcePos`** (<span class="type">integer</span>)  
+**`CommonMark\Render\SourcePos`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\HardBreaks`** (<span class="type">integer</span>)  
+**`CommonMark\Render\HardBreaks`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\Safe`** (<span class="type">integer</span>)  
+**`CommonMark\Render\Safe`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\NoBreaks`** (<span class="type">integer</span>)  
+**`CommonMark\Render\NoBreaks`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 `width`  
@@ -234,19 +234,19 @@ class="type">int</span> `$options`</span> \] )
 `options`  
 A mask of:
 
-**`CommonMark\Render\Normal`** (<span class="type">integer</span>)  
+**`CommonMark\Render\Normal`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\SourcePos`** (<span class="type">integer</span>)  
+**`CommonMark\Render\SourcePos`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\HardBreaks`** (<span class="type">integer</span>)  
+**`CommonMark\Render\HardBreaks`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\Safe`** (<span class="type">integer</span>)  
+**`CommonMark\Render\Safe`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`CommonMark\Render\NoBreaks`** (<span class="type">integer</span>)  
+**`CommonMark\Render\NoBreaks`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 ### 返回值

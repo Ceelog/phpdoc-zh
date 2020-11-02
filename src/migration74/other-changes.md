@@ -198,8 +198,8 @@ directive.
 
 The <span class="function">password\_hash</span> and <span
 class="function"></span> functions now accept nullable <span
-class="type">string</span> and <span class="type">integer</span> for
-*$algo* argument.
+class="type">string</span> and <span class="type">int</span> for *$algo*
+argument.
 
 ### PEAR
 

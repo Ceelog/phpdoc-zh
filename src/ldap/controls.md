@@ -41,7 +41,7 @@ oid (<span class="type">string</span>)
 starting with LDAP\_CONTROL\_ for this. See
 <a href="/ldap/constants.html" class="link">LDAP Constants</a>. </span>
 
-iscritical (<span class="type">boolean</span>)  
+iscritical (<span class="type">bool</span>)  
 <span class="simpara"> If a control is noted as critical, the request
 will fail if the control is not supported by the server, or if it fails
 to be applied. Note that some controls should always be marked as

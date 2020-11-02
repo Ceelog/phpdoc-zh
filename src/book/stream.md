@@ -1178,9 +1178,9 @@ If `option` is
 -   **`STREAM_META_OWNER_NAME`** or **`STREAM_META_GROUP_NAME`**: The
     name of the owner user/group as <span class="type">string</span>.
 -   **`STREAM_META_OWNER`** or **`STREAM_META_GROUP`**: The value owner
-    user/group argument as <span class="type">integer</span>.
+    user/group argument as <span class="type">int</span>.
 -   **`STREAM_META_ACCESS`**: The argument of the <span
-    class="function">chmod</span> as <span class="type">integer</span>.
+    class="function">chmod</span> as <span class="type">int</span>.
 
 ### 返回值
 

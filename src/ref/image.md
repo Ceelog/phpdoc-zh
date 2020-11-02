@@ -558,7 +558,8 @@ Concatenate two affine transformation matrices
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">imageaffinematrixconcat</span> ( <span
 class="methodparam"><span class="type">array</span> `$m1`</span> , <span
 class="methodparam"><span class="type">array</span> `$m2`</span> )
@@ -620,7 +621,8 @@ Get an affine transformation matrix
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">imageaffinematrixget</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> \[,
 <span class="methodparam"><span class="type">mixed</span>
@@ -3164,7 +3166,8 @@ Crop an image to the given rectangle
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">imagecrop</span> ( <span class="methodparam"><span
 class="type">resource</span> `$image`</span> , <span
 class="methodparam"><span class="type">array</span> `$rect`</span> )
@@ -3216,7 +3219,8 @@ Crop an image automatically using one of the available modes
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">imagecropauto</span> ( <span
 class="methodparam"><span class="type">resource</span> `$image`</span>
 \[, <span class="methodparam"><span class="type">int</span> `$mode`<span
@@ -5821,7 +5825,8 @@ Scale an image using the given new width and height
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">imagescale</span> ( <span class="methodparam"><span
 class="type">resource</span> `$image`</span> , <span
 class="methodparam"><span class="type">int</span> `$new_width`</span>

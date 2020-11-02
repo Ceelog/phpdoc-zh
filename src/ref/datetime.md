@@ -423,7 +423,8 @@ Returns associative array with detailed info about given date/time
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">date\_parse</span> ( <span class="methodparam"><span
 class="type">string</span> `$datetime`</span> )
 
@@ -546,7 +547,8 @@ begin/end
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">date\_sun\_info</span> ( <span
 class="methodparam"><span class="type">int</span> `$timestamp`</span> ,
 <span class="methodparam"><span class="type">float</span>
@@ -2661,7 +2663,8 @@ Returns the timezone name from abbreviation
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">timezone\_name\_from\_abbr</span> ( <span
 class="methodparam"><span class="type">string</span> `$abbr`</span> \[,
 <span class="methodparam"><span class="type">int</span>

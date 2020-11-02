@@ -76,7 +76,7 @@ Windows 2000之前的系统是不支持的 IMAP
 
 这是配置指令的简短说明。
 
-`imap.enable_insecure_rsh` <span class="type">boolean</span>  
+`imap.enable_insecure_rsh` <span class="type">bool</span>  
 Establishing a connection to a server may invoke **rsh** or **ssh**
 commands, unless this `php.ini` option is disabled.
 

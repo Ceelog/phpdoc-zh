@@ -746,9 +746,10 @@ class="methodparam">void</span> )
 <span class="methodname">getLocale</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getSortKey</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getSortKey</span> ( <span class="methodparam"><span
+class="type">string</span> `$str`</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getStrength</span> ( <span
@@ -778,7 +779,7 @@ class="methodparam"><span class="type">int</span> `$sort_flag`</span> \]
 预定义常量
 ----------
 
-**`Collator::FRENCH_COLLATION`** (<span class="type">integer</span>)  
+**`Collator::FRENCH_COLLATION`** (<span class="type">int</span>)  
 Sort strings with different accents from the back of the string. This
 attribute is automatically set to *On* for the French locales and a few
 others. Users normally would not need to explicitly set this attribute.
@@ -794,7 +795,7 @@ sort key length is unaffected. Possible values are:
 -   F=OFF cote \< coté \< côte \< côté
 -   F=ON cote \< côte \< coté \< côté
 
-**`Collator::ALTERNATE_HANDLING`** (<span class="type">integer</span>)  
+**`Collator::ALTERNATE_HANDLING`** (<span class="type">int</span>)  
 The Alternate attribute is used to control the handling of the so called
 variable characters in the UCA: whitespace, punctuation and symbols. If
 Alternate is set to *NonIgnorable* (N), then differences among these
@@ -828,7 +829,7 @@ Possible values are:
 -   S=3, A=S di Silva = diSilva \< Di Silva \< U.S.A. = USA
 -   S=4, A=S di Silva \< diSilva \< Di Silva \< U.S.A. \< USA
 
-**`Collator::CASE_FIRST`** (<span class="type">integer</span>)  
+**`Collator::CASE_FIRST`** (<span class="type">int</span>)  
 The Case\_First attribute is used to control whether uppercase letters
 come before lowercase letters or vice versa, in the absence of other
 differences in the strings. The possible values are
@@ -852,7 +853,7 @@ Possible values are:
 -   C=X or C=L "china" \< "China" \< "denmark" \< "Denmark"
 -   C=U "China" \< "china" \< "Denmark" \< "denmark"
 
-**`Collator::CASE_LEVEL`** (<span class="type">integer</span>)  
+**`Collator::CASE_LEVEL`** (<span class="type">int</span>)  
 The Case\_Level attribute is used when ignoring accents but not case. In
 such a situation, set Strength to be *Primary*, and Case\_Level to be
 *On*. In most locales, this setting is Off by default. There is a small
@@ -870,7 +871,7 @@ Possible values are:
 -   S=1, E=X role = Role = rôle
 -   S=1, E=O role = rôle \< Role
 
-**`Collator::NORMALIZATION_MODE`** (<span class="type">integer</span>)  
+**`Collator::NORMALIZATION_MODE`** (<span class="type">int</span>)  
 The Normalization setting determines whether text is thoroughly
 normalized or not in comparison. Even if the setting is off (which is
 the default for many locales), text as represented in common usage will
@@ -889,7 +890,7 @@ Possible values are:
 -   **`Collator::ON`**
 -   **`Collator::DEFAULT_VALUE`**
 
-**`Collator::STRENGTH`** (<span class="type">integer</span>)  
+**`Collator::STRENGTH`** (<span class="type">int</span>)  
 The ICU Collation Service supports many levels of comparison (named
 "Levels", but also known as "Strengths"). Having these categories
 enables ICU to sort strings precisely according to local conventions.
@@ -907,7 +908,7 @@ Possible values are:
 -   **`Collator::IDENTICAL`**
 -   **`Collator::DEFAULT_VALUE`**
 
-**`Collator::HIRAGANA_QUATERNARY_MODE`** (<span class="type">integer</span>)  
+**`Collator::HIRAGANA_QUATERNARY_MODE`** (<span class="type">int</span>)  
 Compatibility with JIS x 4061 requires the introduction of an additional
 level to distinguish Hiragana and Katakana characters. If compatibility
 with that standard is required, then this attribute should be set *On*,
@@ -920,7 +921,7 @@ Possible values are:
 -   **`Collator::ON`**
 -   **`Collator::DEFAULT_VALUE`**
 
-**`Collator::NUMERIC_COLLATION`** (<span class="type">integer</span>)  
+**`Collator::NUMERIC_COLLATION`** (<span class="type">int</span>)  
 When turned on, this attribute generates a collation key for the numeric
 value of substrings of digits. This is a way to get '100' to sort AFTER
 '2'.
@@ -931,43 +932,43 @@ Possible values are:
 -   **`Collator::ON`**
 -   **`Collator::DEFAULT_VALUE`**
 
-**`Collator::DEFAULT_VALUE`** (<span class="type">integer</span>)  
+**`Collator::DEFAULT_VALUE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`Collator::PRIMARY`** (<span class="type">integer</span>)  
+**`Collator::PRIMARY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`Collator::SECONDARY`** (<span class="type">integer</span>)  
+**`Collator::SECONDARY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`Collator::TERTIARY`** (<span class="type">integer</span>)  
+**`Collator::TERTIARY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`Collator::DEFAULT_STRENGTH`** (<span class="type">integer</span>)  
+**`Collator::DEFAULT_STRENGTH`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`Collator::QUATERNARY`** (<span class="type">integer</span>)  
+**`Collator::QUATERNARY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`Collator::IDENTICAL`** (<span class="type">integer</span>)  
+**`Collator::IDENTICAL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`Collator::OFF`** (<span class="type">integer</span>)  
+**`Collator::OFF`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`Collator::ON`** (<span class="type">integer</span>)  
+**`Collator::ON`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`Collator::SHIFTED`** (<span class="type">integer</span>)  
+**`Collator::SHIFTED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`Collator::NON_IGNORABLE`** (<span class="type">integer</span>)  
+**`Collator::NON_IGNORABLE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`Collator::LOWER_FIRST`** (<span class="type">integer</span>)  
+**`Collator::LOWER_FIRST`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`Collator::UPPER_FIRST`** (<span class="type">integer</span>)  
+**`Collator::UPPER_FIRST`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 Collator::asort
@@ -1118,7 +1119,7 @@ Return comparison result:
 
 -   -1 if `str1` is *less* than `str2` .
 
-On error <span class="type">boolean</span> **`FALSE`** is returned.
+On error <span class="type">bool</span> **`FALSE`** is returned.
 
 **Warning**
 
@@ -1317,8 +1318,7 @@ Attribute to get value for.
 
 ### 返回值
 
-Attribute value, or <span class="type">boolean</span> **`FALSE`** on
-error.
+Attribute value, or <span class="type">bool</span> **`FALSE`** on error.
 
 ### 范例
 
@@ -1480,7 +1480,7 @@ respectively).
 
 Real locale name from which the collation data comes. If the collator
 was instantiated from rules or an error occurred, returns <span
-class="type">boolean</span> **`FALSE`**.
+class="type">bool</span> **`FALSE`**.
 
 ### 范例
 
@@ -1518,13 +1518,15 @@ Get sorting key for a string
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Collator::getSortKey</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">Collator::getSortKey</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">collator\_get\_sort\_key</span> ( <span
 class="methodparam"><span class="type">Collator</span> `$coll`</span> ,
 <span class="methodparam"><span class="type">string</span> `$str`</span>
@@ -1616,7 +1618,7 @@ class="methodparam"><span class="type">Collator</span> `$coll`</span> )
 
 ### 返回值
 
-Returns current collation strength, or <span class="type">boolean</span>
+Returns current collation strength, or <span class="type">bool</span>
 **`FALSE`** on error.
 
 ### 范例
@@ -2075,15 +2077,17 @@ class="methodparam"><span class="type">int</span> `$style`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$pattern`</span> \] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">formatCurrency</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">formatCurrency</span> ( <span
 class="methodparam"><span class="type">float</span> `$value`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$currency`</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">format</span> ( <span class="methodparam"><span
-class="type">number</span> `$value`</span> \[, <span
+class="type"><span class="type">int</span><span
+class="type">float</span></span> `$value`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$type`</span> \] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -2156,42 +2160,42 @@ These styles are used by the <span
 class="function">numfmt\_create</span> to define the type of the
 formatter.
 
-**`NumberFormatter::PATTERN_DECIMAL`** (<span class="type">integer</span>)  
+**`NumberFormatter::PATTERN_DECIMAL`** (<span class="type">int</span>)  
 <span class="simpara">Decimal format defined by pattern</span>
 
-**`NumberFormatter::DECIMAL`** (<span class="type">integer</span>)  
+**`NumberFormatter::DECIMAL`** (<span class="type">int</span>)  
 <span class="simpara">Decimal format</span>
 
-**`NumberFormatter::CURRENCY`** (<span class="type">integer</span>)  
+**`NumberFormatter::CURRENCY`** (<span class="type">int</span>)  
 <span class="simpara">Currency format</span>
 
-**`NumberFormatter::PERCENT`** (<span class="type">integer</span>)  
+**`NumberFormatter::PERCENT`** (<span class="type">int</span>)  
 <span class="simpara">Percent format</span>
 
-**`NumberFormatter::SCIENTIFIC`** (<span class="type">integer</span>)  
+**`NumberFormatter::SCIENTIFIC`** (<span class="type">int</span>)  
 <span class="simpara">Scientific format</span>
 
-**`NumberFormatter::SPELLOUT`** (<span class="type">integer</span>)  
+**`NumberFormatter::SPELLOUT`** (<span class="type">int</span>)  
 <span class="simpara">Spellout rule-based format</span>
 
-**`NumberFormatter::ORDINAL`** (<span class="type">integer</span>)  
+**`NumberFormatter::ORDINAL`** (<span class="type">int</span>)  
 <span class="simpara">Ordinal rule-based format</span>
 
-**`NumberFormatter::DURATION`** (<span class="type">integer</span>)  
+**`NumberFormatter::DURATION`** (<span class="type">int</span>)  
 <span class="simpara">Duration rule-based format</span>
 
-**`NumberFormatter::PATTERN_RULEBASED`** (<span class="type">integer</span>)  
+**`NumberFormatter::PATTERN_RULEBASED`** (<span class="type">int</span>)  
 <span class="simpara">Rule-based format defined by pattern</span>
 
-**`NumberFormatter::CURRENCY_ACCOUNTING`** (<span class="type">integer</span>)  
+**`NumberFormatter::CURRENCY_ACCOUNTING`** (<span class="type">int</span>)  
 <span class="simpara"> Currency format for accounting, e.g., *($3.00)*
 for negative currency amount instead of *-$3.00*. Available as of PHP
 7.4.1 and ICU 53. </span>
 
-**`NumberFormatter::DEFAULT_STYLE`** (<span class="type">integer</span>)  
+**`NumberFormatter::DEFAULT_STYLE`** (<span class="type">int</span>)  
 <span class="simpara">Default format for the locale</span>
 
-**`NumberFormatter::IGNORE`** (<span class="type">integer</span>)  
+**`NumberFormatter::IGNORE`** (<span class="type">int</span>)  
 <span class="simpara">Alias for PATTERN\_DECIMAL</span>
 
 These constants define how the numbers are parsed or formatted. They
@@ -2199,85 +2203,85 @@ should be used as arguments to <span
 class="function">numfmt\_format</span> and <span
 class="function">numfmt\_parse</span>.
 
-**`NumberFormatter::TYPE_DEFAULT`** (<span class="type">integer</span>)  
+**`NumberFormatter::TYPE_DEFAULT`** (<span class="type">int</span>)  
 <span class="simpara">Derive the type from variable type</span>
 
-**`NumberFormatter::TYPE_INT32`** (<span class="type">integer</span>)  
+**`NumberFormatter::TYPE_INT32`** (<span class="type">int</span>)  
 <span class="simpara">Format/parse as 32-bit integer</span>
 
-**`NumberFormatter::TYPE_INT64`** (<span class="type">integer</span>)  
+**`NumberFormatter::TYPE_INT64`** (<span class="type">int</span>)  
 <span class="simpara">Format/parse as 64-bit integer</span>
 
-**`NumberFormatter::TYPE_DOUBLE`** (<span class="type">integer</span>)  
+**`NumberFormatter::TYPE_DOUBLE`** (<span class="type">int</span>)  
 <span class="simpara">Format/parse as floating point value</span>
 
-**`NumberFormatter::TYPE_CURRENCY`** (<span class="type">integer</span>)  
+**`NumberFormatter::TYPE_CURRENCY`** (<span class="type">int</span>)  
 <span class="simpara">Format/parse as currency value</span>
 
 Number format attribute used by <span
 class="function">numfmt\_get\_attribute</span> and <span
 class="function">numfmt\_set\_attribute</span>.
 
-**`NumberFormatter::PARSE_INT_ONLY`** (<span class="type">integer</span>)  
+**`NumberFormatter::PARSE_INT_ONLY`** (<span class="type">int</span>)  
 <span class="simpara">Parse integers only.</span>
 
-**`NumberFormatter::GROUPING_USED`** (<span class="type">integer</span>)  
+**`NumberFormatter::GROUPING_USED`** (<span class="type">int</span>)  
 <span class="simpara">Use grouping separator.</span>
 
-**`NumberFormatter::DECIMAL_ALWAYS_SHOWN`** (<span class="type">integer</span>)  
+**`NumberFormatter::DECIMAL_ALWAYS_SHOWN`** (<span class="type">int</span>)  
 <span class="simpara">Always show decimal point.</span>
 
-**`NumberFormatter::MAX_INTEGER_DIGITS`** (<span class="type">integer</span>)  
+**`NumberFormatter::MAX_INTEGER_DIGITS`** (<span class="type">int</span>)  
 <span class="simpara">Maximum integer digits.</span>
 
-**`NumberFormatter::MIN_INTEGER_DIGITS`** (<span class="type">integer</span>)  
+**`NumberFormatter::MIN_INTEGER_DIGITS`** (<span class="type">int</span>)  
 <span class="simpara">Minimum integer digits.</span>
 
-**`NumberFormatter::INTEGER_DIGITS`** (<span class="type">integer</span>)  
+**`NumberFormatter::INTEGER_DIGITS`** (<span class="type">int</span>)  
 <span class="simpara">Integer digits.</span>
 
-**`NumberFormatter::MAX_FRACTION_DIGITS`** (<span class="type">integer</span>)  
+**`NumberFormatter::MAX_FRACTION_DIGITS`** (<span class="type">int</span>)  
 <span class="simpara">Maximum fraction digits.</span>
 
-**`NumberFormatter::MIN_FRACTION_DIGITS`** (<span class="type">integer</span>)  
+**`NumberFormatter::MIN_FRACTION_DIGITS`** (<span class="type">int</span>)  
 <span class="simpara">Minimum fraction digits.</span>
 
-**`NumberFormatter::FRACTION_DIGITS`** (<span class="type">integer</span>)  
+**`NumberFormatter::FRACTION_DIGITS`** (<span class="type">int</span>)  
 <span class="simpara">Fraction digits.</span>
 
-**`NumberFormatter::MULTIPLIER`** (<span class="type">integer</span>)  
+**`NumberFormatter::MULTIPLIER`** (<span class="type">int</span>)  
 <span class="simpara">Multiplier.</span>
 
-**`NumberFormatter::GROUPING_SIZE`** (<span class="type">integer</span>)  
+**`NumberFormatter::GROUPING_SIZE`** (<span class="type">int</span>)  
 <span class="simpara">Grouping size.</span>
 
-**`NumberFormatter::ROUNDING_MODE`** (<span class="type">integer</span>)  
+**`NumberFormatter::ROUNDING_MODE`** (<span class="type">int</span>)  
 <span class="simpara">Rounding Mode.</span>
 
-**`NumberFormatter::ROUNDING_INCREMENT`** (<span class="type">integer</span>)  
+**`NumberFormatter::ROUNDING_INCREMENT`** (<span class="type">int</span>)  
 <span class="simpara">Rounding increment.</span>
 
-**`NumberFormatter::FORMAT_WIDTH`** (<span class="type">integer</span>)  
+**`NumberFormatter::FORMAT_WIDTH`** (<span class="type">int</span>)  
 <span class="simpara">The width to which the output of format() is
 padded.</span>
 
-**`NumberFormatter::PADDING_POSITION`** (<span class="type">integer</span>)  
+**`NumberFormatter::PADDING_POSITION`** (<span class="type">int</span>)  
 <span class="simpara"> The position at which padding will take place.
 See pad position constants for possible argument values. </span>
 
-**`NumberFormatter::SECONDARY_GROUPING_SIZE`** (<span class="type">integer</span>)  
+**`NumberFormatter::SECONDARY_GROUPING_SIZE`** (<span class="type">int</span>)  
 <span class="simpara">Secondary grouping size.</span>
 
-**`NumberFormatter::SIGNIFICANT_DIGITS_USED`** (<span class="type">integer</span>)  
+**`NumberFormatter::SIGNIFICANT_DIGITS_USED`** (<span class="type">int</span>)  
 <span class="simpara">Use significant digits.</span>
 
-**`NumberFormatter::MIN_SIGNIFICANT_DIGITS`** (<span class="type">integer</span>)  
+**`NumberFormatter::MIN_SIGNIFICANT_DIGITS`** (<span class="type">int</span>)  
 <span class="simpara">Minimum significant digits.</span>
 
-**`NumberFormatter::MAX_SIGNIFICANT_DIGITS`** (<span class="type">integer</span>)  
+**`NumberFormatter::MAX_SIGNIFICANT_DIGITS`** (<span class="type">int</span>)  
 <span class="simpara">Maximum significant digits.</span>
 
-**`NumberFormatter::LENIENT_PARSE`** (<span class="type">integer</span>)  
+**`NumberFormatter::LENIENT_PARSE`** (<span class="type">int</span>)  
 <span class="simpara">Lenient parse mode used by rule-based
 formats.</span>
 
@@ -2285,30 +2289,30 @@ Number format text attribute used by <span
 class="function">numfmt\_get\_text\_attribute</span> and <span
 class="function">numfmt\_set\_text\_attribute</span>.
 
-**`NumberFormatter::POSITIVE_PREFIX`** (<span class="type">integer</span>)  
+**`NumberFormatter::POSITIVE_PREFIX`** (<span class="type">int</span>)  
 <span class="simpara">Positive prefix.</span>
 
-**`NumberFormatter::POSITIVE_SUFFIX`** (<span class="type">integer</span>)  
+**`NumberFormatter::POSITIVE_SUFFIX`** (<span class="type">int</span>)  
 <span class="simpara">Positive suffix.</span>
 
-**`NumberFormatter::NEGATIVE_PREFIX`** (<span class="type">integer</span>)  
+**`NumberFormatter::NEGATIVE_PREFIX`** (<span class="type">int</span>)  
 <span class="simpara">Negative prefix.</span>
 
-**`NumberFormatter::NEGATIVE_SUFFIX`** (<span class="type">integer</span>)  
+**`NumberFormatter::NEGATIVE_SUFFIX`** (<span class="type">int</span>)  
 <span class="simpara">Negative suffix.</span>
 
-**`NumberFormatter::PADDING_CHARACTER`** (<span class="type">integer</span>)  
+**`NumberFormatter::PADDING_CHARACTER`** (<span class="type">int</span>)  
 <span class="simpara">The character used to pad to the format
 width.</span>
 
-**`NumberFormatter::CURRENCY_CODE`** (<span class="type">integer</span>)  
+**`NumberFormatter::CURRENCY_CODE`** (<span class="type">int</span>)  
 <span class="simpara">The ISO currency code.</span>
 
-**`NumberFormatter::DEFAULT_RULESET`** (<span class="type">integer</span>)  
+**`NumberFormatter::DEFAULT_RULESET`** (<span class="type">int</span>)  
 <span class="simpara"> The default rule set. This is only available with
 rule-based formatters. </span>
 
-**`NumberFormatter::PUBLIC_RULESETS`** (<span class="type">integer</span>)  
+**`NumberFormatter::PUBLIC_RULESETS`** (<span class="type">int</span>)  
 <span class="simpara"> The public rule sets. This is only available with
 rule-based formatters. This is a read-only attribute. The public
 rulesets are returned as a single string, with each ruleset name
@@ -2318,59 +2322,59 @@ Number format symbols used by <span
 class="function">numfmt\_get\_symbol</span> and <span
 class="function">numfmt\_set\_symbol</span>.
 
-**`NumberFormatter::DECIMAL_SEPARATOR_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::DECIMAL_SEPARATOR_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">The decimal separator.</span>
 
-**`NumberFormatter::GROUPING_SEPARATOR_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::GROUPING_SEPARATOR_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">The grouping separator.</span>
 
-**`NumberFormatter::PATTERN_SEPARATOR_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::PATTERN_SEPARATOR_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">The pattern separator.</span>
 
-**`NumberFormatter::PERCENT_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::PERCENT_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">The percent sign.</span>
 
-**`NumberFormatter::ZERO_DIGIT_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::ZERO_DIGIT_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">Zero.</span>
 
-**`NumberFormatter::DIGIT_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::DIGIT_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">Character representing a digit in the
 pattern.</span>
 
-**`NumberFormatter::MINUS_SIGN_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::MINUS_SIGN_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">The minus sign.</span>
 
-**`NumberFormatter::PLUS_SIGN_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::PLUS_SIGN_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">The plus sign.</span>
 
-**`NumberFormatter::CURRENCY_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::CURRENCY_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">The currency symbol.</span>
 
-**`NumberFormatter::INTL_CURRENCY_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::INTL_CURRENCY_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">The international currency symbol.</span>
 
-**`NumberFormatter::MONETARY_SEPARATOR_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::MONETARY_SEPARATOR_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">The monetary separator.</span>
 
-**`NumberFormatter::EXPONENTIAL_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::EXPONENTIAL_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">The exponential symbol.</span>
 
-**`NumberFormatter::PERMILL_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::PERMILL_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">Per mill symbol.</span>
 
-**`NumberFormatter::PAD_ESCAPE_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::PAD_ESCAPE_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">Escape padding character.</span>
 
-**`NumberFormatter::INFINITY_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::INFINITY_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">Infinity symbol.</span>
 
-**`NumberFormatter::NAN_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::NAN_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">Not-a-number symbol.</span>
 
-**`NumberFormatter::SIGNIFICANT_DIGIT_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::SIGNIFICANT_DIGIT_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">Significant digit symbol.</span>
 
-**`NumberFormatter::MONETARY_GROUPING_SEPARATOR_SYMBOL`** (<span class="type">integer</span>)  
+**`NumberFormatter::MONETARY_GROUPING_SEPARATOR_SYMBOL`** (<span class="type">int</span>)  
 <span class="simpara">The monetary grouping separator.</span>
 
 Rounding mode values used by <span
@@ -2378,31 +2382,31 @@ class="function">numfmt\_get\_attribute</span> and <span
 class="function">numfmt\_set\_attribute</span> with
 **`NumberFormatter::ROUNDING_MODE`** attribute.
 
-**`NumberFormatter::ROUND_CEILING`** (<span class="type">integer</span>)  
+**`NumberFormatter::ROUND_CEILING`** (<span class="type">int</span>)  
 <span class="simpara">Rounding mode to round towards positive
 infinity.</span>
 
-**`NumberFormatter::ROUND_DOWN`** (<span class="type">integer</span>)  
+**`NumberFormatter::ROUND_DOWN`** (<span class="type">int</span>)  
 <span class="simpara">Rounding mode to round towards zero.</span>
 
-**`NumberFormatter::ROUND_FLOOR`** (<span class="type">integer</span>)  
+**`NumberFormatter::ROUND_FLOOR`** (<span class="type">int</span>)  
 <span class="simpara">Rounding mode to round towards negative
 infinity.</span>
 
-**`NumberFormatter::ROUND_HALFDOWN`** (<span class="type">integer</span>)  
+**`NumberFormatter::ROUND_HALFDOWN`** (<span class="type">int</span>)  
 <span class="simpara"> Rounding mode to round towards "nearest neighbor"
 unless both neighbors are equidistant, in which case round down. </span>
 
-**`NumberFormatter::ROUND_HALFEVEN`** (<span class="type">integer</span>)  
+**`NumberFormatter::ROUND_HALFEVEN`** (<span class="type">int</span>)  
 <span class="simpara"> Rounding mode to round towards the "nearest
 neighbor" unless both neighbors are equidistant, in which case, round
 towards the even neighbor. </span>
 
-**`NumberFormatter::ROUND_HALFUP`** (<span class="type">integer</span>)  
+**`NumberFormatter::ROUND_HALFUP`** (<span class="type">int</span>)  
 <span class="simpara"> Rounding mode to round towards "nearest neighbor"
 unless both neighbors are equidistant, in which case round up. </span>
 
-**`NumberFormatter::ROUND_UP`** (<span class="type">integer</span>)  
+**`NumberFormatter::ROUND_UP`** (<span class="type">int</span>)  
 <span class="simpara">Rounding mode to round away from zero.</span>
 
 Pad position values used by <span
@@ -2410,16 +2414,16 @@ class="function">numfmt\_get\_attribute</span> and <span
 class="function">numfmt\_set\_attribute</span> with
 **`NumberFormatter::PADDING_POSITION`** attribute.
 
-**`NumberFormatter::PAD_AFTER_PREFIX`** (<span class="type">integer</span>)  
+**`NumberFormatter::PAD_AFTER_PREFIX`** (<span class="type">int</span>)  
 <span class="simpara">Pad characters inserted after the prefix.</span>
 
-**`NumberFormatter::PAD_AFTER_SUFFIX`** (<span class="type">integer</span>)  
+**`NumberFormatter::PAD_AFTER_SUFFIX`** (<span class="type">int</span>)  
 <span class="simpara">Pad characters inserted after the suffix.</span>
 
-**`NumberFormatter::PAD_BEFORE_PREFIX`** (<span class="type">integer</span>)  
+**`NumberFormatter::PAD_BEFORE_PREFIX`** (<span class="type">int</span>)  
 <span class="simpara">Pad characters inserted before the prefix.</span>
 
-**`NumberFormatter::PAD_BEFORE_SUFFIX`** (<span class="type">integer</span>)  
+**`NumberFormatter::PAD_BEFORE_SUFFIX`** (<span class="type">int</span>)  
 <span class="simpara">Pad characters inserted before the suffix.</span>
 
 参见
@@ -2546,15 +2550,17 @@ Format a currency value
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">NumberFormatter::formatCurrency</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">NumberFormatter::formatCurrency</span> ( <span
 class="methodparam"><span class="type">float</span> `$value`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$currency`</span> )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">numfmt\_format\_currency</span> ( <span
 class="methodparam"><span class="type">NumberFormatter</span>
 `$fmt`</span> , <span class="methodparam"><span
@@ -2636,18 +2642,20 @@ Format a number
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">NumberFormatter::format</span> ( <span
-class="methodparam"><span class="type">number</span> `$value`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$type`</span>
-\] )
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span></span>
+`$value`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$type`</span> \] )
 
 过程化风格
 
 <span class="type">string</span> <span
 class="methodname">numfmt\_format</span> ( <span
 class="methodparam"><span class="type">NumberFormatter</span>
-`$fmt`</span> , <span class="methodparam"><span
-class="type">number</span> `$value`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$type`</span> \] )
+`$fmt`</span> , <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span></span>
+`$value`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$type`</span> \] )
 
 Format a numeric value according to the formatter rules.
 
@@ -2657,7 +2665,7 @@ Format a numeric value according to the formatter rules.
 <span class="classname">NumberFormatter</span> object.
 
 `value`  
-The value to format. Can be <span class="type">integer</span> or <span
+The value to format. Can be <span class="type">int</span> or <span
 class="type">float</span>, other values will be converted to a numeric
 value.
 
@@ -5338,26 +5346,26 @@ class="initializer"> = Normalizer::FORM\_C</span></span> \] )
 The following constants define the normalization form used by the
 normalizer:
 
-**`Normalizer::FORM_C`** (<span class="type">integer</span>)  
+**`Normalizer::FORM_C`** (<span class="type">int</span>)  
 <span class="simpara"> Normalization Form C (NFC) - Canonical
 Decomposition followed by Canonical Composition </span>
 
-**`Normalizer::FORM_D`** (<span class="type">integer</span>)  
+**`Normalizer::FORM_D`** (<span class="type">int</span>)  
 <span class="simpara">Normalization Form D (NFD) - Canonical
 Decomposition</span>
 
-**`Normalizer::FORM_KC`** (<span class="type">integer</span>)  
+**`Normalizer::FORM_KC`** (<span class="type">int</span>)  
 <span class="simpara"> Normalization Form KC (NFKC) - Compatibility
 Decomposition, followed by Canonical Composition </span>
 
-**`Normalizer::FORM_KD`** (<span class="type">integer</span>)  
+**`Normalizer::FORM_KD`** (<span class="type">int</span>)  
 <span class="simpara"> Normalization Form KD (NFKD) - Compatibility
 Decomposition </span>
 
-**`Normalizer::NONE`** (<span class="type">integer</span>)  
+**`Normalizer::NONE`** (<span class="type">int</span>)  
 <span class="simpara">No decomposition/composition</span>
 
-**`Normalizer::OPTION_DEFAULT`** (<span class="type">integer</span>)  
+**`Normalizer::OPTION_DEFAULT`** (<span class="type">int</span>)  
 <span class="simpara">Default normalization options</span>
 
 参见
@@ -6546,138 +6554,138 @@ echo "Formatted number: " . $fmt->format(array(123, 456)) . "\n";
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_ERA` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_YEAR` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_MONTH` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_WEEK_OF_YEAR` <span class="initializer"> = 3</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_WEEK_OF_MONTH` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DATE` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DAY_OF_YEAR` <span class="initializer"> = 6</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DAY_OF_WEEK` <span class="initializer"> = 7</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DAY_OF_WEEK_IN_MONTH` <span class="initializer"> =
 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_AM_PM` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_HOUR` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_HOUR_OF_DAY` <span class="initializer"> = 11</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_MINUTE` <span class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_SECOND` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_MILLISECOND` <span class="initializer"> = 14</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_ZONE_OFFSET` <span class="initializer"> = 15</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DST_OFFSET` <span class="initializer"> = 16</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_YEAR_WOY` <span class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DOW_LOCAL` <span class="initializer"> = 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_EXTENDED_YEAR` <span class="initializer"> =
 19</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_JULIAN_DAY` <span class="initializer"> = 20</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_MILLISECONDS_IN_DAY` <span class="initializer"> =
 21</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_IS_LEAP_MONTH` <span class="initializer"> =
 22</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_FIELD_COUNT ` <span class="initializer"> =
 23</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DAY_OF_MONTH` <span class="initializer"> = 5</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_SUNDAY` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_MONDAY` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_TUESDAY` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_WEDNESDAY` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_THURSDAY` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_FRIDAY` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_SATURDAY` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_TYPE_WEEKDAY` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_TYPE_WEEKEND` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_TYPE_WEEKEND_OFFSET` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_TYPE_WEEKEND_CEASE` <span class="initializer"> =
 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::WALLTIME_FIRST` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::WALLTIME_LAST` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::WALLTIME_NEXT_VALID` <span class="initializer"> =
 2</span> ;
 
@@ -6755,13 +6763,15 @@ class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">IntlCalendar</span>
 `$other`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">fieldDifference</span> ( <span
 class="methodparam"><span class="type">float</span> `$when`</span> ,
 <span class="methodparam"><span class="type">int</span> `$field`</span>
 )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_field\_difference</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">float</span>
@@ -6786,21 +6796,25 @@ class="methodname">intlcal\_get</span> ( <span class="methodparam"><span
 class="type">IntlCalendar</span> `$cal`</span> , <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getActualMaximum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_actual\_maximum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$field`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getActualMinimum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_actual\_minimum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -6815,11 +6829,13 @@ class="methodparam">void</span> )
 class="methodname">intlcal\_get\_available\_locales</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getDayOfWeekType</span> ( <span
 class="methodparam"><span class="type">int</span> `$dayOfWeek`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_day\_of\_week\_type</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -6833,84 +6849,100 @@ class="methodparam">void</span> )
 <span class="methodname">getErrorMessage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getFirstDayOfWeek</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_first\_day\_of\_week</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getGreatestMinimum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_greatest\_minimum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$field`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">Iterator</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">Iterator</span><span class="type">false</span></span> <span
 class="methodname">getKeywordValuesForLocale</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$locale`</span> , <span class="methodparam"><span
 class="type">bool</span> `$commonlyUsed`</span> )
 
-<span class="type">Iterator</span> <span
+<span class="modifier">static</span> <span class="type"><span
+class="type">Iterator</span><span class="type">false</span></span> <span
 class="methodname">intlcal\_get\_keyword\_values\_for\_locale</span> (
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$locale`</span> , <span class="methodparam"><span
 class="type">bool</span> `$commonlyUsed`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getLeastMaximum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_least\_maximum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$field`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getLocale</span> ( <span
-class="methodparam"><span class="type">int</span> `$localeType`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getLocale</span> ( <span class="methodparam"><span
+class="type">int</span> `$localeType`</span> )
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_locale</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$localeType`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getMaximum</span> ( <span class="methodparam"><span
 class="type">int</span> `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_maximum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$field`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getMinimalDaysInFirstWeek</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_minimal\_days\_in\_first\_week</span> (
 <span class="methodparam"><span class="type">IntlCalendar</span>
 `$cal`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getMinimum</span> ( <span class="methodparam"><span
 class="type">int</span> `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_minimum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -6971,12 +7003,14 @@ class="methodname">intlcal\_get\_type</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getWeekendTransition</span> ( <span
 class="methodparam"><span class="type">string</span> `$dayOfWeek`</span>
 )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_weekend\_transition</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -7967,7 +8001,8 @@ Calculate difference between given time and this objectʼs time
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::fieldDifference</span> ( <span
 class="methodparam"><span class="type">float</span> `$when`</span> ,
 <span class="methodparam"><span class="type">int</span> `$field`</span>
@@ -7975,7 +8010,8 @@ class="methodparam"><span class="type">float</span> `$when`</span> ,
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_field\_difference</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">float</span>
@@ -8234,13 +8270,15 @@ The maximum value for a field, considering the objectʼs current time
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getActualMaximum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_actual\_maximum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -8312,13 +8350,15 @@ The minimum value for a field, considering the objectʼs current time
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getActualMinimum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_actual\_minimum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -8436,13 +8476,15 @@ between the two
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getDayOfWeekType</span> ( <span
 class="methodparam"><span class="type">int</span> `$dayOfWeek`</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_day\_of\_week\_type</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -8677,13 +8719,15 @@ Get the first day of the week for the calendarʼs locale
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getFirstDayOfWeek</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_first\_day\_of\_week</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 )
@@ -8743,13 +8787,15 @@ Get the largest local minimum value for a field
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getGreatestMinimum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_greatest\_minimum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -8788,7 +8834,8 @@ Get set of locale keyword values
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">Iterator</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">Iterator</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getKeywordValuesForLocale</span> (
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -8797,7 +8844,8 @@ class="type">bool</span> `$commonlyUsed`</span> )
 
 过程化风格
 
-<span class="type">Iterator</span> <span
+<span class="modifier">static</span> <span class="type"><span
+class="type">Iterator</span><span class="type">false</span></span> <span
 class="methodname">intlcal\_get\_keyword\_values\_for\_locale</span> (
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -8879,13 +8927,15 @@ Get the smallest local maximum for a field
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getLeastMaximum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_least\_maximum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -8951,13 +9001,15 @@ Get the locale associated with the object
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">IntlCalendar::getLocale</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">IntlCalendar::getLocale</span> ( <span
 class="methodparam"><span class="type">int</span> `$localeType`</span> )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_locale</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -9009,13 +9061,15 @@ Get the global maximum value for a field
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getMaximum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_maximum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -9058,13 +9112,15 @@ Get minimal number of days the first week in a year or month can have
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getMinimalDaysInFirstWeek</span> (
 <span class="methodparam">void</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_minimal\_days\_in\_first\_week</span> (
 <span class="methodparam"><span class="type">IntlCalendar</span>
 `$cal`</span> )
@@ -9134,13 +9190,15 @@ Get the global minimum value for a field
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getMinimum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_minimum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -9611,14 +9669,16 @@ Get time of the day at which weekend begins or ends
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getWeekendTransition</span> ( <span
 class="methodparam"><span class="type">string</span> `$dayOfWeek`</span>
 )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_weekend\_transition</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -10745,138 +10805,138 @@ class="ooclass"> <span class="modifier">extends</span> **IntlCalendar**
 
 /\* 继承的常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_ERA` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_YEAR` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_MONTH` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_WEEK_OF_YEAR` <span class="initializer"> = 3</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_WEEK_OF_MONTH` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DATE` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DAY_OF_YEAR` <span class="initializer"> = 6</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DAY_OF_WEEK` <span class="initializer"> = 7</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DAY_OF_WEEK_IN_MONTH` <span class="initializer"> =
 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_AM_PM` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_HOUR` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_HOUR_OF_DAY` <span class="initializer"> = 11</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_MINUTE` <span class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_SECOND` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_MILLISECOND` <span class="initializer"> = 14</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_ZONE_OFFSET` <span class="initializer"> = 15</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DST_OFFSET` <span class="initializer"> = 16</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_YEAR_WOY` <span class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DOW_LOCAL` <span class="initializer"> = 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_EXTENDED_YEAR` <span class="initializer"> =
 19</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_JULIAN_DAY` <span class="initializer"> = 20</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_MILLISECONDS_IN_DAY` <span class="initializer"> =
 21</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_IS_LEAP_MONTH` <span class="initializer"> =
 22</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_FIELD_COUNT ` <span class="initializer"> =
 23</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::FIELD_DAY_OF_MONTH` <span class="initializer"> = 5</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_SUNDAY` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_MONDAY` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_TUESDAY` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_WEDNESDAY` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_THURSDAY` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_FRIDAY` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_SATURDAY` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_TYPE_WEEKDAY` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_TYPE_WEEKEND` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_TYPE_WEEKEND_OFFSET` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::DOW_TYPE_WEEKEND_CEASE` <span class="initializer"> =
 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::WALLTIME_FIRST` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::WALLTIME_LAST` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlCalendar::WALLTIME_NEXT_VALID` <span class="initializer"> =
 2</span> ;
 
@@ -10888,8 +10948,9 @@ class="methodparam"><span class="type">IntlTimeZone</span> `$tz`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$locale`</span> \]\] )
 
-<span class="modifier">public</span> <span class="type">float</span>
-<span class="methodname">getGregorianChange</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">float</span><span class="type">false</span></span> <span
+class="methodname">getGregorianChange</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -10978,13 +11039,15 @@ class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">IntlCalendar</span>
 `$other`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::fieldDifference</span> ( <span
 class="methodparam"><span class="type">float</span> `$when`</span> ,
 <span class="methodparam"><span class="type">int</span> `$field`</span>
 )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_field\_difference</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">float</span>
@@ -11009,21 +11072,25 @@ class="methodname">intlcal\_get</span> ( <span class="methodparam"><span
 class="type">IntlCalendar</span> `$cal`</span> , <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getActualMaximum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_actual\_maximum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$field`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getActualMinimum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_actual\_minimum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -11038,11 +11105,13 @@ class="methodparam">void</span> )
 class="methodname">intlcal\_get\_available\_locales</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getDayOfWeekType</span> ( <span
 class="methodparam"><span class="type">int</span> `$dayOfWeek`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_day\_of\_week\_type</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -11056,84 +11125,100 @@ class="methodparam">void</span> )
 <span class="methodname">IntlCalendar::getErrorMessage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getFirstDayOfWeek</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_first\_day\_of\_week</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getGreatestMinimum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_greatest\_minimum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$field`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">Iterator</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">Iterator</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getKeywordValuesForLocale</span> (
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$locale`</span> , <span class="methodparam"><span
 class="type">bool</span> `$commonlyUsed`</span> )
 
-<span class="type">Iterator</span> <span
+<span class="modifier">static</span> <span class="type"><span
+class="type">Iterator</span><span class="type">false</span></span> <span
 class="methodname">intlcal\_get\_keyword\_values\_for\_locale</span> (
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$locale`</span> , <span class="methodparam"><span
 class="type">bool</span> `$commonlyUsed`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getLeastMaximum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_least\_maximum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$field`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">IntlCalendar::getLocale</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">IntlCalendar::getLocale</span> ( <span
 class="methodparam"><span class="type">int</span> `$localeType`</span> )
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_locale</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$localeType`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getMaximum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_maximum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$field`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getMinimalDaysInFirstWeek</span> (
 <span class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_minimal\_days\_in\_first\_week</span> (
 <span class="methodparam"><span class="type">IntlCalendar</span>
 `$cal`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getMinimum</span> ( <span
 class="methodparam"><span class="type">int</span> `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_minimum</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -11194,12 +11279,14 @@ class="methodname">intlcal\_get\_type</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlCalendar::getWeekendTransition</span> ( <span
 class="methodparam"><span class="type">string</span> `$dayOfWeek`</span>
 )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_get\_weekend\_transition</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -11452,8 +11539,8 @@ Get the Gregorian Calendar change date
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">float</span>
-<span
+<span class="modifier">public</span> <span class="type"><span
+class="type">float</span><span class="type">false</span></span> <span
 class="methodname">IntlGregorianCalendar::getGregorianChange</span> (
 <span class="methodparam">void</span> )
 
@@ -11529,10 +11616,10 @@ class="methodname">IntlGregorianCalendar::setGregorianChange</span> (
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlTimeZone::DISPLAY_SHORT` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlTimeZone::DISPLAY_LONG` <span class="initializer"> = 2</span> ;
 
 /\* 方法 \*/
@@ -11559,7 +11646,8 @@ class="modifier">static</span> <span class="type">IntlTimeZone</span>
 class="methodparam"><span class="type">string</span> `$zoneId`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">IntlIterator</span>
+class="modifier">static</span> <span class="type"><span
+class="type">IntlIterator</span><span class="type">false</span></span>
 <span class="methodname">createTimeZoneIDEnumeration</span> ( <span
 class="methodparam"><span class="type">int</span> `$zoneType`</span> \[,
 <span class="methodparam"><span class="type">string</span>
@@ -11615,7 +11703,8 @@ class="methodparam">void</span> )
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">getIDForWindowsID</span> ( <span
 class="methodparam"><span class="type">string</span> `$timezone`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -11634,7 +11723,8 @@ class="methodname">getRawOffset</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">getRegion</span> ( <span class="methodparam"><span
 class="type">string</span> `$zoneId`</span> )
 
@@ -11649,7 +11739,8 @@ class="modifier">static</span> <span class="type">IntlTimeZone</span>
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">getWindowsID</span> ( <span class="methodparam"><span
 class="type">string</span> `$timezone`</span> )
 
@@ -11776,7 +11867,8 @@ conditions
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">IntlIterator</span>
+class="modifier">static</span> <span class="type"><span
+class="type">IntlIterator</span><span class="type">false</span></span>
 <span
 class="methodname">IntlTimeZone::createTimeZoneIDEnumeration</span> (
 <span class="methodparam"><span class="type">int</span>
@@ -12043,7 +12135,8 @@ Translate a Windows timezone into a system timezone
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">IntlTimeZone::getIDForWindowsID</span> ( <span
 class="methodparam"><span class="type">string</span> `$timezone`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -12133,7 +12226,8 @@ Get the region code associated with the given system time zone ID
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">IntlTimeZone::getRegion</span> ( <span
 class="methodparam"><span class="type">string</span> `$zoneId`</span> )
 
@@ -12204,7 +12298,8 @@ Translate a system timezone into a Windows timezone
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">IntlTimeZone::getWindowsID</span> ( <span
 class="methodparam"><span class="type">string</span> `$timezone`</span>
 )
@@ -12349,7 +12444,8 @@ class="type">string</span> `$pattern`<span class="initializer"> =
 class="type">mixed</span> `$value`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">formatObject</span> ( <span class="methodparam"><span
 class="type">object</span> `$object`</span> \[, <span
 class="methodparam"><span class="type">mixed</span> `$format`<span
@@ -12394,9 +12490,9 @@ class="type">IntlCalendar</span> <span
 class="methodname">getCalendarObject</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">IntlTimeZone</span> <span
-class="methodname">getTimeZone</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">IntlTimeZone</span><span class="type">false</span></span>
+<span class="methodname">getTimeZone</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -12452,20 +12548,20 @@ class="methodparam"><span class="type">mixed</span> `$zone`</span> )
 These constants are used to specify different formats in the constructor
 for DateType and TimeType.
 
-**`IntlDateFormatter::NONE`** (<span class="type">integer</span>)  
+**`IntlDateFormatter::NONE`** (<span class="type">int</span>)  
 <span class="simpara">Do not include this element</span>
 
-**`IntlDateFormatter::FULL`** (<span class="type">integer</span>)  
+**`IntlDateFormatter::FULL`** (<span class="type">int</span>)  
 <span class="simpara">Completely specified style (Tuesday, April 12,
 1952 AD or 3:30:42pm PST)</span>
 
-**`IntlDateFormatter::LONG`** (<span class="type">integer</span>)  
+**`IntlDateFormatter::LONG`** (<span class="type">int</span>)  
 <span class="simpara">Long style (January 12, 1952 or 3:30:32pm)</span>
 
-**`IntlDateFormatter::MEDIUM`** (<span class="type">integer</span>)  
+**`IntlDateFormatter::MEDIUM`** (<span class="type">int</span>)  
 <span class="simpara">Medium style (Jan 12, 1952)</span>
 
-**`IntlDateFormatter::SHORT`** (<span class="type">integer</span>)  
+**`IntlDateFormatter::SHORT`** (<span class="type">int</span>)  
 <span class="simpara">Most abbreviated style, only essential data
 (12/13/52 or 3:30pm)</span>
 
@@ -12474,10 +12570,10 @@ calendars are all based directly on the Gregorian calendar.
 Non-Gregorian calendars need to be specified in locale. Examples might
 include locale="hi@calendar=BUDDHIST".
 
-**`IntlDateFormatter::TRADITIONAL`** (<span class="type">integer</span>)  
+**`IntlDateFormatter::TRADITIONAL`** (<span class="type">int</span>)  
 <span class="simpara">Non-Gregorian Calendar</span>
 
-**`IntlDateFormatter::GREGORIAN`** (<span class="type">integer</span>)  
+**`IntlDateFormatter::GREGORIAN`** (<span class="type">int</span>)  
 <span class="simpara">Gregorian Calendar</span>
 
 IntlDateFormatter::create
@@ -12894,7 +12990,8 @@ Formats an object
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">IntlDateFormatter::formatObject</span> ( <span
 class="methodparam"><span class="type">object</span> `$object`</span>
 \[, <span class="methodparam"><span class="type">mixed</span>
@@ -12905,7 +13002,8 @@ class="initializer"> = NULL</span></span> \]\] )
 过程化风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">datefmt\_format\_object</span> ( <span
 class="methodparam"><span class="type">object</span> `$object`</span>
 \[, <span class="methodparam"><span class="type">mixed</span>
@@ -12938,10 +13036,10 @@ class="type">array</span> with two elements (first the date style, then
 the time style, these being one of the constants
 **`IntlDateFormatter::NONE`**, **`IntlDateFormatter::SHORT`**,
 **`IntlDateFormatter::MEDIUM`**, **`IntlDateFormatter::LONG`**,
-**`IntlDateFormatter::FULL`**), an <span class="type">integer</span>
-with the value of one of these constants (in which case it will be used
-both for the time and the date) or a <span class="type">string</span>
-with the format described in
+**`IntlDateFormatter::FULL`**), an <span class="type">int</span> with
+the value of one of these constants (in which case it will be used both
+for the time and the date) or a <span class="type">string</span> with
+the format described in
 <a href="http://www.icu-project.org/apiref/icu4c/classSimpleDateFormat.html#details" class="link external">» the ICU documentation</a>.
 If **`NULL`**, the default style will be used.
 
@@ -13856,14 +13954,15 @@ Get formatterʼs timezone
 
 面向对象风格
 
-<span class="modifier">public</span> <span
-class="type">IntlTimeZone</span> <span
-class="methodname">IntlDateFormatter::getTimeZone</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">IntlTimeZone</span><span class="type">false</span></span>
+<span class="methodname">IntlDateFormatter::getTimeZone</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
-<span class="type">IntlTimeZone</span> <span
+<span class="type"><span class="type">IntlTimeZone</span><span
+class="type">false</span></span> <span
 class="methodname">datefmt\_get\_timezone</span> ( <span
 class="methodparam">void</span> )
 
@@ -15397,51 +15496,57 @@ spelled with Cyrillic 'а' characters.
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">number</span>
+<span class="modifier">const</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span>
 `Spoofchecker::ASCII` <span class="initializer"> = 0x10000000</span> ;
 
-<span class="modifier">const</span> <span class="type">number</span>
+<span class="modifier">const</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span>
 `Spoofchecker::HIGHLY_RESTRICTIVE` <span class="initializer"> =
 0x30000000</span> ;
 
-<span class="modifier">const</span> <span class="type">number</span>
+<span class="modifier">const</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span>
 `Spoofchecker::MODERATELY_RESTRICTIVE` <span class="initializer"> =
 0x40000000</span> ;
 
-<span class="modifier">const</span> <span class="type">number</span>
+<span class="modifier">const</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span>
 `Spoofchecker::MINIMALLY_RESTRICTIVE` <span class="initializer"> =
 0x50000000</span> ;
 
-<span class="modifier">const</span> <span class="type">number</span>
+<span class="modifier">const</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span>
 `Spoofchecker::UNRESTRICTIVE` <span class="initializer"> =
 0x60000000</span> ;
 
-<span class="modifier">const</span> <span class="type">number</span>
+<span class="modifier">const</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span>
 `Spoofchecker::SINGLE_SCRIPT_RESTRICTIVE` <span class="initializer"> =
 0x20000000</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Spoofchecker::SINGLE_SCRIPT_CONFUSABLE` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Spoofchecker::MIXED_SCRIPT_CONFUSABLE` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Spoofchecker::WHOLE_SCRIPT_CONFUSABLE` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Spoofchecker::ANY_CASE` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Spoofchecker::SINGLE_SCRIPT` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Spoofchecker::INVISIBLE` <span class="initializer"> = 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Spoofchecker::CHAR_LIMIT` <span class="initializer"> = 64</span> ;
 
 /\* 方法 \*/
@@ -15683,10 +15788,10 @@ Transliterator provides transliteration of strings.
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Transliterator::FORWARD` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `Transliterator::REVERSE` <span class="initializer"> = 1</span> ;
 
 /\* 属性 \*/
@@ -15727,12 +15832,14 @@ class="methodparam">void</span> )
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">array</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
 class="methodname">listIDs</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">transliterate</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">transliterate</span> ( <span
 class="methodparam"><span class="type">string</span> `$subject`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$start`</span> \[, <span class="methodparam"><span
@@ -16037,13 +16144,15 @@ Get transliterator IDs
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">array</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
 class="methodname">Transliterator::listIDs</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">transliterator\_list\_ids</span> ( <span
 class="methodparam">void</span> )
 
@@ -16102,8 +16211,9 @@ Transliterate a string
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Transliterator::transliterate</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">Transliterator::transliterate</span> ( <span
 class="methodparam"><span class="type">string</span> `$subject`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$start`</span> \[, <span class="methodparam"><span
@@ -16209,73 +16319,73 @@ class="interfacename">Traversable</span> </span> {
 
 /\* 常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::DONE` <span class="initializer"> = -1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_NONE` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_NONE_LIMIT` <span class="initializer"> =
 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_NUMBER` <span class="initializer"> = 100</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_NUMBER_LIMIT` <span class="initializer"> =
 200</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_LETTER` <span class="initializer"> = 200</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_LETTER_LIMIT` <span class="initializer"> =
 300</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_KANA` <span class="initializer"> = 300</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_KANA_LIMIT` <span class="initializer"> =
 400</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_IDEO` <span class="initializer"> = 400</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_IDEO_LIMIT` <span class="initializer"> =
 500</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::LINE_SOFT` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::LINE_SOFT_LIMIT` <span class="initializer"> =
 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::LINE_HARD` <span class="initializer"> = 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::LINE_HARD_LIMIT` <span class="initializer"> =
 200</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::SENTENCE_TERM` <span class="initializer"> = 0</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::SENTENCE_TERM_LIMIT` <span class="initializer"> =
 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::SENTENCE_SEP` <span class="initializer"> =
 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::SENTENCE_SEP_LIMIT` <span class="initializer"> =
 200</span> ;
 
@@ -16950,73 +17060,73 @@ class="interfacename">Traversable</span> </span> {
 
 /\* 继承的常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::DONE` <span class="initializer"> = -1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_NONE` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_NONE_LIMIT` <span class="initializer"> =
 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_NUMBER` <span class="initializer"> = 100</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_NUMBER_LIMIT` <span class="initializer"> =
 200</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_LETTER` <span class="initializer"> = 200</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_LETTER_LIMIT` <span class="initializer"> =
 300</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_KANA` <span class="initializer"> = 300</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_KANA_LIMIT` <span class="initializer"> =
 400</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_IDEO` <span class="initializer"> = 400</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_IDEO_LIMIT` <span class="initializer"> =
 500</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::LINE_SOFT` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::LINE_SOFT_LIMIT` <span class="initializer"> =
 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::LINE_HARD` <span class="initializer"> = 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::LINE_HARD_LIMIT` <span class="initializer"> =
 200</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::SENTENCE_TERM` <span class="initializer"> = 0</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::SENTENCE_TERM_LIMIT` <span class="initializer"> =
 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::SENTENCE_SEP` <span class="initializer"> =
 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::SENTENCE_SEP_LIMIT` <span class="initializer"> =
 200</span> ;
 
@@ -17293,73 +17403,73 @@ class="interfacename">Traversable</span> </span> {
 
 /\* 继承的常量 \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::DONE` <span class="initializer"> = -1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_NONE` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_NONE_LIMIT` <span class="initializer"> =
 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_NUMBER` <span class="initializer"> = 100</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_NUMBER_LIMIT` <span class="initializer"> =
 200</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_LETTER` <span class="initializer"> = 200</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_LETTER_LIMIT` <span class="initializer"> =
 300</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_KANA` <span class="initializer"> = 300</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_KANA_LIMIT` <span class="initializer"> =
 400</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_IDEO` <span class="initializer"> = 400</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::WORD_IDEO_LIMIT` <span class="initializer"> =
 500</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::LINE_SOFT` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::LINE_SOFT_LIMIT` <span class="initializer"> =
 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::LINE_HARD` <span class="initializer"> = 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::LINE_HARD_LIMIT` <span class="initializer"> =
 200</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::SENTENCE_TERM` <span class="initializer"> = 0</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::SENTENCE_TERM_LIMIT` <span class="initializer"> =
 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::SENTENCE_SEP` <span class="initializer"> =
 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlBreakIterator::SENTENCE_SEP_LIMIT` <span class="initializer"> =
 200</span> ;
 
@@ -17533,14 +17643,14 @@ class="interfacename">Iterator</span> </span> {
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlPartsIterator::KEY_SEQUENTIAL` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlPartsIterator::KEY_LEFT` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlPartsIterator::KEY_RIGHT` <span class="initializer"> = 2</span> ;
 
 /\* 方法 \*/
@@ -17617,128 +17727,128 @@ class="methodparam">void</span> )
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::REASON_UNASSIGNED` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::REASON_ILLEGAL` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::REASON_IRREGULAR` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::REASON_RESET` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::REASON_CLOSE` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::REASON_CLONE` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::UNSUPPORTED_CONVERTER` <span class="initializer"> =
 -1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::SBCS` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::DBCS` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::MBCS` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LATIN_1` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::UTF8` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::UTF16_BigEndian` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::UTF16_LittleEndian` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::UTF32_BigEndian` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::UTF32_LittleEndian` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::EBCDIC_STATEFUL` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::ISO_2022` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_1` <span class="initializer"> = 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_2` <span class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_3` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_4` <span class="initializer"> = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_5` <span class="initializer"> = 15</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_6` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_8` <span class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_11` <span class="initializer"> = 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_16` <span class="initializer"> = 19</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_17` <span class="initializer"> = 20</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_18` <span class="initializer"> = 21</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_19` <span class="initializer"> = 22</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::LMBCS_LAST` <span class="initializer"> = 22</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::HZ` <span class="initializer"> = 23</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::SCSU` <span class="initializer"> = 24</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::ISCII` <span class="initializer"> = 25</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::US_ASCII` <span class="initializer"> = 26</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::UTF7` <span class="initializer"> = 27</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::BOCU1` <span class="initializer"> = 28</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::UTF16` <span class="initializer"> = 29</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::UTF32` <span class="initializer"> = 30</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::CESU8` <span class="initializer"> = 31</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `UConverter::IMAP_MAILBOX` <span class="initializer"> = 32</span> ;
 
 /\* 方法 \*/
@@ -18400,2117 +18510,2117 @@ by the underlying ICU library.
 <span class="modifier">const</span> <span class="type">string</span>
 `IntlChar::UNICODE_VERSION` <span class="initializer"> = 6.3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CODEPOINT_MIN` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CODEPOINT_MAX` <span class="initializer"> = 1114111</span> ;
 
 <span class="modifier">const</span> <span class="type">float</span>
 `IntlChar::NO_NUMERIC_VALUE` <span class="initializer"> =
 -123456789</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_ALPHABETIC` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_BINARY_START` <span class="initializer"> = 0</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_ASCII_HEX_DIGIT` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_BIDI_CONTROL` <span class="initializer"> = 2</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_BIDI_MIRRORED` <span class="initializer"> = 3</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_DASH` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_DEFAULT_IGNORABLE_CODE_POINT` <span
 class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_DEPRECATED` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_DIACRITIC` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_EXTENDER` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_FULL_COMPOSITION_EXCLUSION` <span
 class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_GRAPHEME_BASE` <span class="initializer"> =
 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_GRAPHEME_EXTEND` <span class="initializer"> =
 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_GRAPHEME_LINK` <span class="initializer"> =
 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_HEX_DIGIT` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_HYPHEN` <span class="initializer"> = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_ID_CONTINUE` <span class="initializer"> = 15</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_ID_START` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_IDEOGRAPHIC` <span class="initializer"> = 17</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_IDS_BINARY_OPERATOR` <span class="initializer"> =
 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_IDS_TRINARY_OPERATOR` <span class="initializer"> =
 19</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_JOIN_CONTROL` <span class="initializer"> = 20</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_LOGICAL_ORDER_EXCEPTION` <span class="initializer">
 = 21</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_LOWERCASE` <span class="initializer"> = 22</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_MATH` <span class="initializer"> = 23</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NONCHARACTER_CODE_POINT` <span class="initializer">
 = 24</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_QUOTATION_MARK` <span class="initializer"> =
 25</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_RADICAL` <span class="initializer"> = 26</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_SOFT_DOTTED` <span class="initializer"> = 27</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_TERMINAL_PUNCTUATION` <span class="initializer"> =
 28</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_UNIFIED_IDEOGRAPH` <span class="initializer"> =
 29</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_UPPERCASE` <span class="initializer"> = 30</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_WHITE_SPACE` <span class="initializer"> = 31</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_XID_CONTINUE` <span class="initializer"> = 32</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_XID_START` <span class="initializer"> = 33</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_CASE_SENSITIVE` <span class="initializer"> =
 34</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_S_TERM` <span class="initializer"> = 35</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_VARIATION_SELECTOR` <span class="initializer"> =
 36</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NFD_INERT` <span class="initializer"> = 37</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NFKD_INERT` <span class="initializer"> = 38</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NFC_INERT` <span class="initializer"> = 39</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NFKC_INERT` <span class="initializer"> = 40</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_SEGMENT_STARTER` <span class="initializer"> =
 41</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_PATTERN_SYNTAX` <span class="initializer"> =
 42</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_PATTERN_WHITE_SPACE` <span class="initializer"> =
 43</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_POSIX_ALNUM` <span class="initializer"> = 44</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_POSIX_BLANK` <span class="initializer"> = 45</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_POSIX_GRAPH` <span class="initializer"> = 46</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_POSIX_PRINT` <span class="initializer"> = 47</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_POSIX_XDIGIT` <span class="initializer"> = 48</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_CASED` <span class="initializer"> = 49</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_CASE_IGNORABLE` <span class="initializer"> =
 50</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_CHANGES_WHEN_LOWERCASED` <span class="initializer">
 = 51</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_CHANGES_WHEN_UPPERCASED` <span class="initializer">
 = 52</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_CHANGES_WHEN_TITLECASED` <span class="initializer">
 = 53</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_CHANGES_WHEN_CASEFOLDED` <span class="initializer">
 = 54</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_CHANGES_WHEN_CASEMAPPED` <span class="initializer">
 = 55</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_CHANGES_WHEN_NFKC_CASEFOLDED` <span
 class="initializer"> = 56</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_BINARY_LIMIT` <span class="initializer"> = 57</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_BIDI_CLASS` <span class="initializer"> = 4096</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_INT_START` <span class="initializer"> = 4096</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_BLOCK` <span class="initializer"> = 4097</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_CANONICAL_COMBINING_CLASS` <span
 class="initializer"> = 4098</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_DECOMPOSITION_TYPE` <span class="initializer"> =
 4099</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_EAST_ASIAN_WIDTH` <span class="initializer"> =
 4100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_GENERAL_CATEGORY` <span class="initializer"> =
 4101</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_JOINING_GROUP` <span class="initializer"> =
 4102</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_JOINING_TYPE` <span class="initializer"> =
 4103</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_LINE_BREAK` <span class="initializer"> = 4104</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NUMERIC_TYPE` <span class="initializer"> =
 4105</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_SCRIPT` <span class="initializer"> = 4106</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_HANGUL_SYLLABLE_TYPE` <span class="initializer"> =
 4107</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NFD_QUICK_CHECK` <span class="initializer"> =
 4108</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NFKD_QUICK_CHECK` <span class="initializer"> =
 4109</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NFC_QUICK_CHECK` <span class="initializer"> =
 4110</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NFKC_QUICK_CHECK` <span class="initializer"> =
 4111</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_LEAD_CANONICAL_COMBINING_CLASS` <span
 class="initializer"> = 4112</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_TRAIL_CANONICAL_COMBINING_CLASS` <span
 class="initializer"> = 4113</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_GRAPHEME_CLUSTER_BREAK` <span class="initializer"> =
 4114</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_SENTENCE_BREAK` <span class="initializer"> =
 4115</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_WORD_BREAK` <span class="initializer"> = 4116</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_BIDI_PAIRED_BRACKET_TYPE` <span class="initializer">
 = 4117</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_INT_LIMIT` <span class="initializer"> = 4118</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_GENERAL_CATEGORY_MASK` <span class="initializer"> =
 8192</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_MASK_START` <span class="initializer"> = 8192</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_MASK_LIMIT` <span class="initializer"> = 8193</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NUMERIC_VALUE` <span class="initializer"> =
 12288</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_DOUBLE_START` <span class="initializer"> =
 12288</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_DOUBLE_LIMIT` <span class="initializer"> =
 12289</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_AGE` <span class="initializer"> = 16384</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_STRING_START` <span class="initializer"> =
 16384</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_BIDI_MIRRORING_GLYPH` <span class="initializer"> =
 16385</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_CASE_FOLDING` <span class="initializer"> =
 16386</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_ISO_COMMENT` <span class="initializer"> =
 16387</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_LOWERCASE_MAPPING` <span class="initializer"> =
 16388</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NAME` <span class="initializer"> = 16389</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_SIMPLE_CASE_FOLDING` <span class="initializer"> =
 16390</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_SIMPLE_LOWERCASE_MAPPING` <span class="initializer">
 = 16391</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_SIMPLE_TITLECASE_MAPPING` <span class="initializer">
 = 16392</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_SIMPLE_UPPERCASE_MAPPING` <span class="initializer">
 = 16393</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_TITLECASE_MAPPING` <span class="initializer"> =
 16394</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_UNICODE_1_NAME` <span class="initializer"> =
 16395</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_UPPERCASE_MAPPING` <span class="initializer"> =
 16396</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_BIDI_PAIRED_BRACKET` <span class="initializer"> =
 16397</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_STRING_LIMIT` <span class="initializer"> =
 16398</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_SCRIPT_EXTENSIONS` <span class="initializer"> =
 28672</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_OTHER_PROPERTY_START` <span class="initializer"> =
 28672</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_OTHER_PROPERTY_LIMIT` <span class="initializer"> =
 28673</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_INVALID_CODE` <span class="initializer"> = -1</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_UNASSIGNED` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_GENERAL_OTHER_TYPES` <span class="initializer">
 = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_UPPERCASE_LETTER` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_LOWERCASE_LETTER` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_TITLECASE_LETTER` <span class="initializer"> =
 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_MODIFIER_LETTER` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_OTHER_LETTER` <span class="initializer"> =
 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_NON_SPACING_MARK` <span class="initializer"> =
 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_ENCLOSING_MARK` <span class="initializer"> =
 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_COMBINING_SPACING_MARK` <span
 class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_DECIMAL_DIGIT_NUMBER` <span
 class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_LETTER_NUMBER` <span class="initializer"> =
 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_OTHER_NUMBER` <span class="initializer"> =
 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_SPACE_SEPARATOR` <span class="initializer"> =
 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_LINE_SEPARATOR` <span class="initializer"> =
 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_PARAGRAPH_SEPARATOR` <span class="initializer">
 = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_CONTROL_CHAR` <span class="initializer"> =
 15</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_FORMAT_CHAR` <span class="initializer"> =
 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_PRIVATE_USE_CHAR` <span class="initializer"> =
 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_SURROGATE` <span class="initializer"> =
 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_DASH_PUNCTUATION` <span class="initializer"> =
 19</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_START_PUNCTUATION` <span class="initializer"> =
 20</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_END_PUNCTUATION` <span class="initializer"> =
 21</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_CONNECTOR_PUNCTUATION` <span
 class="initializer"> = 22</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_OTHER_PUNCTUATION` <span class="initializer"> =
 23</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_MATH_SYMBOL` <span class="initializer"> =
 24</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_CURRENCY_SYMBOL` <span class="initializer"> =
 25</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_MODIFIER_SYMBOL` <span class="initializer"> =
 26</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_OTHER_SYMBOL` <span class="initializer"> =
 27</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_INITIAL_PUNCTUATION` <span class="initializer">
 = 28</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_FINAL_PUNCTUATION` <span class="initializer"> =
 29</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_CATEGORY_CHAR_CATEGORY_COUNT` <span class="initializer">
 = 30</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_LEFT_TO_RIGHT` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_RIGHT_TO_LEFT` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_EUROPEAN_NUMBER` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_EUROPEAN_NUMBER_SEPARATOR` <span
 class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_EUROPEAN_NUMBER_TERMINATOR` <span
 class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_ARABIC_NUMBER` <span class="initializer"> =
 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_COMMON_NUMBER_SEPARATOR` <span
 class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_BLOCK_SEPARATOR` <span class="initializer"> =
 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_SEGMENT_SEPARATOR` <span class="initializer">
 = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_WHITE_SPACE_NEUTRAL` <span
 class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_OTHER_NEUTRAL` <span class="initializer"> =
 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_LEFT_TO_RIGHT_EMBEDDING` <span
 class="initializer"> = 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_LEFT_TO_RIGHT_OVERRIDE` <span
 class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_RIGHT_TO_LEFT_ARABIC` <span
 class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_RIGHT_TO_LEFT_EMBEDDING` <span
 class="initializer"> = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_RIGHT_TO_LEFT_OVERRIDE` <span
 class="initializer"> = 15</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_POP_DIRECTIONAL_FORMAT` <span
 class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_DIR_NON_SPACING_MARK` <span
 class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_BOUNDARY_NEUTRAL` <span class="initializer"> =
 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_FIRST_STRONG_ISOLATE` <span
 class="initializer"> = 19</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_LEFT_TO_RIGHT_ISOLATE` <span
 class="initializer"> = 20</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_RIGHT_TO_LEFT_ISOLATE` <span
 class="initializer"> = 21</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_POP_DIRECTIONAL_ISOLATE` <span
 class="initializer"> = 22</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_DIRECTION_CHAR_DIRECTION_COUNT` <span
 class="initializer"> = 23</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_NO_BLOCK` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BASIC_LATIN` <span class="initializer"> = 1</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LATIN_1_SUPPLEMENT` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LATIN_EXTENDED_A` <span class="initializer"> =
 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LATIN_EXTENDED_B` <span class="initializer"> =
 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_IPA_EXTENSIONS` <span class="initializer"> =
 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SPACING_MODIFIER_LETTERS` <span
 class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_COMBINING_DIACRITICAL_MARKS` <span
 class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_GREEK` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CYRILLIC` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ARMENIAN` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_HEBREW` <span class="initializer"> = 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ARABIC` <span class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SYRIAC` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_THAANA` <span class="initializer"> = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_DEVANAGARI` <span class="initializer"> = 15</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BENGALI` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_GURMUKHI` <span class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_GUJARATI` <span class="initializer"> = 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ORIYA` <span class="initializer"> = 19</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TAMIL` <span class="initializer"> = 20</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TELUGU` <span class="initializer"> = 21</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_KANNADA` <span class="initializer"> = 22</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MALAYALAM` <span class="initializer"> = 23</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SINHALA` <span class="initializer"> = 24</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_THAI` <span class="initializer"> = 25</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LAO` <span class="initializer"> = 26</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TIBETAN` <span class="initializer"> = 27</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MYANMAR` <span class="initializer"> = 28</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_GEORGIAN` <span class="initializer"> = 29</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_HANGUL_JAMO` <span class="initializer"> =
 30</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ETHIOPIC` <span class="initializer"> = 31</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CHEROKEE` <span class="initializer"> = 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS` <span
 class="initializer"> = 33</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_OGHAM` <span class="initializer"> = 34</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_RUNIC` <span class="initializer"> = 35</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_KHMER` <span class="initializer"> = 36</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MONGOLIAN` <span class="initializer"> = 37</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LATIN_EXTENDED_ADDITIONAL` <span
 class="initializer"> = 38</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_GREEK_EXTENDED` <span class="initializer"> =
 39</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_GENERAL_PUNCTUATION` <span class="initializer"> =
 40</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SUPERSCRIPTS_AND_SUBSCRIPTS` <span
 class="initializer"> = 41</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CURRENCY_SYMBOLS` <span class="initializer"> =
 42</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_COMBINING_MARKS_FOR_SYMBOLS` <span
 class="initializer"> = 43</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LETTERLIKE_SYMBOLS` <span class="initializer"> =
 44</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_NUMBER_FORMS` <span class="initializer"> =
 45</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ARROWS` <span class="initializer"> = 46</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MATHEMATICAL_OPERATORS` <span class="initializer">
 = 47</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MISCELLANEOUS_TECHNICAL` <span
 class="initializer"> = 48</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CONTROL_PICTURES` <span class="initializer"> =
 49</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_OPTICAL_CHARACTER_RECOGNITION` <span
 class="initializer"> = 50</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ENCLOSED_ALPHANUMERICS` <span class="initializer">
 = 51</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BOX_DRAWING` <span class="initializer"> =
 52</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BLOCK_ELEMENTS` <span class="initializer"> =
 53</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_GEOMETRIC_SHAPES` <span class="initializer"> =
 54</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MISCELLANEOUS_SYMBOLS` <span class="initializer">
 = 55</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_DINGBATS` <span class="initializer"> = 56</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BRAILLE_PATTERNS` <span class="initializer"> =
 57</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CJK_RADICALS_SUPPLEMENT` <span
 class="initializer"> = 58</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_KANGXI_RADICALS` <span class="initializer"> =
 59</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_IDEOGRAPHIC_DESCRIPTION_CHARACTERS` <span
 class="initializer"> = 60</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CJK_SYMBOLS_AND_PUNCTUATION` <span
 class="initializer"> = 61</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_HIRAGANA` <span class="initializer"> = 62</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_KATAKANA` <span class="initializer"> = 63</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BOPOMOFO` <span class="initializer"> = 64</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_HANGUL_COMPATIBILITY_JAMO` <span
 class="initializer"> = 65</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_KANBUN` <span class="initializer"> = 66</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BOPOMOFO_EXTENDED` <span class="initializer"> =
 67</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ENCLOSED_CJK_LETTERS_AND_MONTHS` <span
 class="initializer"> = 68</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CJK_COMPATIBILITY` <span class="initializer"> =
 69</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A` <span
 class="initializer"> = 70</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CJK_UNIFIED_IDEOGRAPHS` <span class="initializer">
 = 71</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_YI_SYLLABLES` <span class="initializer"> =
 72</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_YI_RADICALS` <span class="initializer"> =
 73</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_HANGUL_SYLLABLES` <span class="initializer"> =
 74</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_HIGH_SURROGATES` <span class="initializer"> =
 75</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_HIGH_PRIVATE_USE_SURROGATES` <span
 class="initializer"> = 76</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LOW_SURROGATES` <span class="initializer"> =
 77</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_PRIVATE_USE_AREA` <span class="initializer"> =
 78</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_PRIVATE_USE` <span class="initializer"> =
 78</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CJK_COMPATIBILITY_IDEOGRAPHS` <span
 class="initializer"> = 79</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ALPHABETIC_PRESENTATION_FORMS` <span
 class="initializer"> = 80</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ARABIC_PRESENTATION_FORMS_A` <span
 class="initializer"> = 81</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_COMBINING_HALF_MARKS` <span class="initializer"> =
 82</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CJK_COMPATIBILITY_FORMS` <span
 class="initializer"> = 83</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SMALL_FORM_VARIANTS` <span class="initializer"> =
 84</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ARABIC_PRESENTATION_FORMS_B` <span
 class="initializer"> = 85</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SPECIALS` <span class="initializer"> = 86</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_HALFWIDTH_AND_FULLWIDTH_FORMS` <span
 class="initializer"> = 87</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_OLD_ITALIC` <span class="initializer"> = 88</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_GOTHIC` <span class="initializer"> = 89</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_DESERET` <span class="initializer"> = 90</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BYZANTINE_MUSICAL_SYMBOLS` <span
 class="initializer"> = 91</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MUSICAL_SYMBOLS` <span class="initializer"> =
 92</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MATHEMATICAL_ALPHANUMERIC_SYMBOLS` <span
 class="initializer"> = 93</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B` <span
 class="initializer"> = 94</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT` <span
 class="initializer"> = 95</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TAGS` <span class="initializer"> = 96</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CYRILLIC_SUPPLEMENT` <span class="initializer"> =
 97</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CYRILLIC_SUPPLEMENTARY` <span class="initializer">
 = 97</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TAGALOG` <span class="initializer"> = 98</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_HANUNOO` <span class="initializer"> = 99</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BUHID` <span class="initializer"> = 100</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TAGBANWA` <span class="initializer"> = 101</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A` <span
 class="initializer"> = 102</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SUPPLEMENTAL_ARROWS_A` <span class="initializer">
 = 103</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SUPPLEMENTAL_ARROWS_B` <span class="initializer">
 = 104</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B` <span
 class="initializer"> = 105</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SUPPLEMENTAL_MATHEMATICAL_OPERATORS` <span
 class="initializer"> = 106</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_KATAKANA_PHONETIC_EXTENSIONS` <span
 class="initializer"> = 107</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_VARIATION_SELECTORS` <span class="initializer"> =
 108</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SUPPLEMENTARY_PRIVATE_USE_AREA_A` <span
 class="initializer"> = 109</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SUPPLEMENTARY_PRIVATE_USE_AREA_B` <span
 class="initializer"> = 110</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LIMBU` <span class="initializer"> = 111</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TAI_LE` <span class="initializer"> = 112</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_KHMER_SYMBOLS` <span class="initializer"> =
 113</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_PHONETIC_EXTENSIONS` <span class="initializer"> =
 114</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MISCELLANEOUS_SYMBOLS_AND_ARROWS` <span
 class="initializer"> = 115</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_YIJING_HEXAGRAM_SYMBOLS` <span
 class="initializer"> = 116</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LINEAR_B_SYLLABARY` <span class="initializer"> =
 117</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LINEAR_B_IDEOGRAMS` <span class="initializer"> =
 118</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_AEGEAN_NUMBERS` <span class="initializer"> =
 119</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_UGARITIC` <span class="initializer"> = 120</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SHAVIAN` <span class="initializer"> = 121</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_OSMANYA` <span class="initializer"> = 122</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CYPRIOT_SYLLABARY` <span class="initializer"> =
 123</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TAI_XUAN_JING_SYMBOLS` <span class="initializer">
 = 124</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_VARIATION_SELECTORS_SUPPLEMENT` <span
 class="initializer"> = 125</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ANCIENT_GREEK_MUSICAL_NOTATION` <span
 class="initializer"> = 126</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ANCIENT_GREEK_NUMBERS` <span class="initializer">
 = 127</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ARABIC_SUPPLEMENT` <span class="initializer"> =
 128</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BUGINESE` <span class="initializer"> = 129</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CJK_STROKES` <span class="initializer"> =
 130</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_COMBINING_DIACRITICAL_MARKS_SUPPLEMENT` <span
 class="initializer"> = 131</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_COPTIC` <span class="initializer"> = 132</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ETHIOPIC_EXTENDED` <span class="initializer"> =
 133</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ETHIOPIC_SUPPLEMENT` <span class="initializer"> =
 134</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_GEORGIAN_SUPPLEMENT` <span class="initializer"> =
 135</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_GLAGOLITIC` <span class="initializer"> =
 136</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_KHAROSHTHI` <span class="initializer"> =
 137</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MODIFIER_TONE_LETTERS` <span class="initializer">
 = 138</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_NEW_TAI_LUE` <span class="initializer"> =
 139</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_OLD_PERSIAN` <span class="initializer"> =
 140</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_PHONETIC_EXTENSIONS_SUPPLEMENT` <span
 class="initializer"> = 141</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SUPPLEMENTAL_PUNCTUATION` <span
 class="initializer"> = 142</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SYLOTI_NAGRI` <span class="initializer"> =
 143</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TIFINAGH` <span class="initializer"> = 144</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_VERTICAL_FORMS` <span class="initializer"> =
 145</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_NKO` <span class="initializer"> = 146</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BALINESE` <span class="initializer"> = 147</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LATIN_EXTENDED_C` <span class="initializer"> =
 148</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LATIN_EXTENDED_D` <span class="initializer"> =
 149</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_PHAGS_PA` <span class="initializer"> = 150</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_PHOENICIAN` <span class="initializer"> =
 151</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CUNEIFORM` <span class="initializer"> = 152</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CUNEIFORM_NUMBERS_AND_PUNCTUATION` <span
 class="initializer"> = 153</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_COUNTING_ROD_NUMERALS` <span class="initializer">
 = 154</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SUNDANESE` <span class="initializer"> = 155</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LEPCHA` <span class="initializer"> = 156</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_OL_CHIKI` <span class="initializer"> = 157</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CYRILLIC_EXTENDED_A` <span class="initializer"> =
 158</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_VAI` <span class="initializer"> = 159</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CYRILLIC_EXTENDED_B` <span class="initializer"> =
 160</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SAURASHTRA` <span class="initializer"> =
 161</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_KAYAH_LI` <span class="initializer"> = 162</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_REJANG` <span class="initializer"> = 163</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CHAM` <span class="initializer"> = 164</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ANCIENT_SYMBOLS` <span class="initializer"> =
 165</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_PHAISTOS_DISC` <span class="initializer"> =
 166</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LYCIAN` <span class="initializer"> = 167</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CARIAN` <span class="initializer"> = 168</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LYDIAN` <span class="initializer"> = 169</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MAHJONG_TILES` <span class="initializer"> =
 170</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_DOMINO_TILES` <span class="initializer"> =
 171</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SAMARITAN` <span class="initializer"> = 172</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED`
 <span class="initializer"> = 173</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TAI_THAM` <span class="initializer"> = 174</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_VEDIC_EXTENSIONS` <span class="initializer"> =
 175</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_LISU` <span class="initializer"> = 176</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BAMUM` <span class="initializer"> = 177</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_COMMON_INDIC_NUMBER_FORMS` <span
 class="initializer"> = 178</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_DEVANAGARI_EXTENDED` <span class="initializer"> =
 179</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_HANGUL_JAMO_EXTENDED_A` <span class="initializer">
 = 180</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_JAVANESE` <span class="initializer"> = 181</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MYANMAR_EXTENDED_A` <span class="initializer"> =
 182</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TAI_VIET` <span class="initializer"> = 183</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MEETEI_MAYEK` <span class="initializer"> =
 184</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_HANGUL_JAMO_EXTENDED_B` <span class="initializer">
 = 185</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_IMPERIAL_ARAMAIC` <span class="initializer"> =
 186</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_OLD_SOUTH_ARABIAN` <span class="initializer"> =
 187</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_AVESTAN` <span class="initializer"> = 188</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_INSCRIPTIONAL_PARTHIAN` <span class="initializer">
 = 189</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_INSCRIPTIONAL_PAHLAVI` <span class="initializer">
 = 190</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_OLD_TURKIC` <span class="initializer"> =
 191</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_RUMI_NUMERAL_SYMBOLS` <span class="initializer"> =
 192</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_KAITHI` <span class="initializer"> = 193</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_EGYPTIAN_HIEROGLYPHS` <span class="initializer"> =
 194</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ENCLOSED_ALPHANUMERIC_SUPPLEMENT` <span
 class="initializer"> = 195</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ENCLOSED_IDEOGRAPHIC_SUPPLEMENT` <span
 class="initializer"> = 196</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C` <span
 class="initializer"> = 197</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MANDAIC` <span class="initializer"> = 198</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BATAK` <span class="initializer"> = 199</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ETHIOPIC_EXTENDED_A` <span class="initializer"> =
 200</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BRAHMI` <span class="initializer"> = 201</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_BAMUM_SUPPLEMENT` <span class="initializer"> =
 202</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_KANA_SUPPLEMENT` <span class="initializer"> =
 203</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_PLAYING_CARDS` <span class="initializer"> =
 204</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS` <span
 class="initializer"> = 205</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_EMOTICONS` <span class="initializer"> = 206</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TRANSPORT_AND_MAP_SYMBOLS` <span
 class="initializer"> = 207</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ALCHEMICAL_SYMBOLS` <span class="initializer"> =
 208</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D` <span
 class="initializer"> = 209</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ARABIC_EXTENDED_A` <span class="initializer"> =
 210</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS` <span
 class="initializer"> = 211</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_CHAKMA` <span class="initializer"> = 212</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MEETEI_MAYEK_EXTENSIONS` <span
 class="initializer"> = 213</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MEROITIC_CURSIVE` <span class="initializer"> =
 214</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MEROITIC_HIEROGLYPHS` <span class="initializer"> =
 215</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_MIAO` <span class="initializer"> = 216</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SHARADA` <span class="initializer"> = 217</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SORA_SOMPENG` <span class="initializer"> =
 218</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_SUNDANESE_SUPPLEMENT` <span class="initializer"> =
 219</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_TAKRI` <span class="initializer"> = 220</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_COUNT` <span class="initializer"> = 221</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BLOCK_CODE_INVALID_CODE` <span class="initializer"> =
 -1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BPT_NONE` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BPT_OPEN` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BPT_CLOSE` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::BPT_COUNT` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::EA_NEUTRAL` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::EA_AMBIGUOUS` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::EA_HALFWIDTH` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::EA_FULLWIDTH` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::EA_NARROW` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::EA_WIDE` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::EA_COUNT` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::UNICODE_CHAR_NAME` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::UNICODE_10_CHAR_NAME` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::EXTENDED_CHAR_NAME` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_NAME_ALIAS` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::CHAR_NAME_CHOICE_COUNT` <span class="initializer"> = 4</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SHORT_PROPERTY_NAME` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LONG_PROPERTY_NAME` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::PROPERTY_NAME_CHOICE_COUNT` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_NONE` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_CANONICAL` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_COMPAT` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_CIRCLE` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_FINAL` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_FONT` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_FRACTION` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_INITIAL` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_ISOLATED` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_MEDIAL` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_NARROW` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_NOBREAK` <span class="initializer"> = 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_SMALL` <span class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_SQUARE` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_SUB` <span class="initializer"> = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_SUPER` <span class="initializer"> = 15</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_VERTICAL` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_WIDE` <span class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::DT_COUNT` <span class="initializer"> = 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JT_NON_JOINING` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JT_JOIN_CAUSING` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JT_DUAL_JOINING` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JT_LEFT_JOINING` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JT_RIGHT_JOINING` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JT_TRANSPARENT` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JT_COUNT` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_NO_JOINING_GROUP` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_AIN` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_ALAPH` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_ALEF` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_BEH` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_BETH` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_DAL` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_DALATH_RISH` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_E` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_FEH` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_FINAL_SEMKATH` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_GAF` <span class="initializer"> = 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_GAMAL` <span class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_HAH` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_TEH_MARBUTA_GOAL` <span class="initializer"> = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_HAMZA_ON_HEH_GOAL` <span class="initializer"> = 14</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_HE` <span class="initializer"> = 15</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_HEH` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_HEH_GOAL` <span class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_HETH` <span class="initializer"> = 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_KAF` <span class="initializer"> = 19</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_KAPH` <span class="initializer"> = 20</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_KNOTTED_HEH` <span class="initializer"> = 21</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_LAM` <span class="initializer"> = 22</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_LAMADH` <span class="initializer"> = 23</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_MEEM` <span class="initializer"> = 24</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_MIM` <span class="initializer"> = 25</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_NOON` <span class="initializer"> = 26</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_NUN` <span class="initializer"> = 27</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_PE` <span class="initializer"> = 28</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_QAF` <span class="initializer"> = 29</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_QAPH` <span class="initializer"> = 30</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_REH` <span class="initializer"> = 31</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_REVERSED_PE` <span class="initializer"> = 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_SAD` <span class="initializer"> = 33</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_SADHE` <span class="initializer"> = 34</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_SEEN` <span class="initializer"> = 35</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_SEMKATH` <span class="initializer"> = 36</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_SHIN` <span class="initializer"> = 37</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_SWASH_KAF` <span class="initializer"> = 38</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_SYRIAC_WAW` <span class="initializer"> = 39</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_TAH` <span class="initializer"> = 40</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_TAW` <span class="initializer"> = 41</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_TEH_MARBUTA` <span class="initializer"> = 42</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_TETH` <span class="initializer"> = 43</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_WAW` <span class="initializer"> = 44</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_YEH` <span class="initializer"> = 45</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_YEH_BARREE` <span class="initializer"> = 46</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_YEH_WITH_TAIL` <span class="initializer"> = 47</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_YUDH` <span class="initializer"> = 48</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_YUDH_HE` <span class="initializer"> = 49</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_ZAIN` <span class="initializer"> = 50</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_FE` <span class="initializer"> = 51</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_KHAPH` <span class="initializer"> = 52</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_ZHAIN` <span class="initializer"> = 53</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_BURUSHASKI_YEH_BARREE` <span class="initializer"> =
 54</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_FARSI_YEH` <span class="initializer"> = 55</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_NYA` <span class="initializer"> = 56</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_ROHINGYA_YEH` <span class="initializer"> = 57</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::JG_COUNT` <span class="initializer"> = 58</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_OTHER` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_CONTROL` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_CR` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_EXTEND` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_L` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_LF` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_LV` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_LVT` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_T` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_V` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_SPACING_MARK` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_PREPEND` <span class="initializer"> = 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_REGIONAL_INDICATOR` <span class="initializer"> =
 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::GCB_COUNT` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_OTHER` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_ALETTER` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_FORMAT` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_KATAKANA` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_MIDLETTER` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_MIDNUM` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_NUMERIC` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_EXTENDNUMLET` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_CR` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_EXTEND` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_LF` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_MIDNUMLET` <span class="initializer"> = 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_NEWLINE` <span class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_REGIONAL_INDICATOR` <span class="initializer"> = 13</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_HEBREW_LETTER` <span class="initializer"> = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_SINGLE_QUOTE` <span class="initializer"> = 15</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_DOUBLE_QUOTE` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::WB_COUNT` <span class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_OTHER` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_ATERM` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_CLOSE` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_FORMAT` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_LOWER` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_NUMERIC` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_OLETTER` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_SEP` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_SP` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_STERM` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_UPPER` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_CR` <span class="initializer"> = 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_EXTEND` <span class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_LF` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_SCONTINUE` <span class="initializer"> = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::SB_COUNT` <span class="initializer"> = 15</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_UNKNOWN` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_AMBIGUOUS` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_ALPHABETIC` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_BREAK_BOTH` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_BREAK_AFTER` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_BREAK_BEFORE` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_MANDATORY_BREAK` <span class="initializer"> = 6</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_CONTINGENT_BREAK` <span class="initializer"> = 7</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_CLOSE_PUNCTUATION` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_COMBINING_MARK` <span class="initializer"> = 9</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_CARRIAGE_RETURN` <span class="initializer"> = 10</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_EXCLAMATION` <span class="initializer"> = 11</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_GLUE` <span class="initializer"> = 12</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_HYPHEN` <span class="initializer"> = 13</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_IDEOGRAPHIC` <span class="initializer"> = 14</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_INSEPARABLE` <span class="initializer"> = 15</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_INSEPERABLE` <span class="initializer"> = 15</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_INFIX_NUMERIC` <span class="initializer"> = 16</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_LINE_FEED` <span class="initializer"> = 17</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_NONSTARTER` <span class="initializer"> = 18</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_NUMERIC` <span class="initializer"> = 19</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_OPEN_PUNCTUATION` <span class="initializer"> = 20</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_POSTFIX_NUMERIC` <span class="initializer"> = 21</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_PREFIX_NUMERIC` <span class="initializer"> = 22</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_QUOTATION` <span class="initializer"> = 23</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_COMPLEX_CONTEXT` <span class="initializer"> = 24</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_SURROGATE` <span class="initializer"> = 25</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_SPACE` <span class="initializer"> = 26</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_BREAK_SYMBOLS` <span class="initializer"> = 27</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_ZWSPACE` <span class="initializer"> = 28</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_NEXT_LINE` <span class="initializer"> = 29</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_WORD_JOINER` <span class="initializer"> = 30</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_H2` <span class="initializer"> = 31</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_H3` <span class="initializer"> = 32</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_JL` <span class="initializer"> = 33</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_JT` <span class="initializer"> = 34</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_JV` <span class="initializer"> = 35</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_CLOSE_PARENTHESIS` <span class="initializer"> = 36</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_CONDITIONAL_JAPANESE_STARTER` <span class="initializer"> =
 37</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_HEBREW_LETTER` <span class="initializer"> = 38</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_REGIONAL_INDICATOR` <span class="initializer"> = 39</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::LB_COUNT` <span class="initializer"> = 40</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::NT_NONE` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::NT_DECIMAL` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::NT_DIGIT` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::NT_NUMERIC` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::NT_COUNT` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::HST_NOT_APPLICABLE` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::HST_LEADING_JAMO` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::HST_VOWEL_JAMO` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::HST_TRAILING_JAMO` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::HST_LV_SYLLABLE` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::HST_LVT_SYLLABLE` <span class="initializer"> = 5</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `IntlChar::HST_COUNT` <span class="initializer"> = 6</span> ;
 
 /\* 方法 \*/
@@ -22318,8 +22428,7 @@ Which set of names to use for the lookup. Can be any of these constants:
 ### 返回值
 
 The Unicode value of the code point with the given name (as an <span
-class="type">integer</span>), or **`NULL`** if there is no such code
-point.
+class="type">int</span>), or **`NULL`** if there is no such code point.
 
 ### 范例
 
@@ -22734,10 +22843,10 @@ one after the range).
 The function that is to be called for each character name. The following
 three arguments will be passed into it:
 
--   <span class="type">integer</span> *$codepoint* - The numeric code
-    point value
--   <span class="type">integer</span> *$nameChoice* - The same value as
-    the `nameChoice` parameter below
+-   <span class="type">int</span> *$codepoint* - The numeric code point
+    value
+-   <span class="type">int</span> *$nameChoice* - The same value as the
+    `nameChoice` parameter below
 -   <span class="type">string</span> *$name* - The name of the character
 
 `nameChoice`  
@@ -22819,12 +22928,12 @@ The function that is to be called for each contiguous range of code
 points with the same general category. The following three arguments
 will be passed into it:
 
--   <span class="type">integer</span> *$start* - The starting code point
-    of the range
--   <span class="type">integer</span> *$end* - The ending code point of
+-   <span class="type">int</span> *$start* - The starting code point of
     the range
--   <span class="type">integer</span> *$name* - The category type (one
-    of the *IntlChar::CHAR\_CATEGORY\_\** constants)
+-   <span class="type">int</span> *$end* - The ending code point of the
+    range
+-   <span class="type">int</span> *$name* - The category type (one of
+    the *IntlChar::CHAR\_CATEGORY\_\** constants)
 
 ### 返回值
 

@@ -45,7 +45,8 @@ Get a specific character
 
 ### 说明
 
-<span class="type">string</span> <span class="methodname">mb\_chr</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">mb\_chr</span>
 ( <span class="methodparam"><span class="type">int</span> `$cp`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$encoding`</span> \] )
@@ -793,7 +794,8 @@ Get aliases of a known encoding type
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_encoding\_aliases</span> ( <span
 class="methodparam"><span class="type">string</span> `$encoding`</span>
 )
@@ -1891,10 +1893,11 @@ Get code point of character
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">mb\_ord</span> (
-<span class="methodparam"><span class="type">string</span> `$str`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$encoding`</span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">mb\_ord</span>
+( <span class="methodparam"><span class="type">string</span>
+`$str`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$encoding`</span> \] )
 
 **Warning**
 
@@ -2338,7 +2341,8 @@ Given a multibyte string, return an array of its characters
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_str\_split</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">int</span>

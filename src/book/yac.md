@@ -145,7 +145,7 @@ expire time
 
 ### 返回值
 
-<span class="type">boolean</span>, **`TRUE`** on success, **`FALSE`** on
+<span class="type">bool</span>, **`TRUE`** on success, **`FALSE`** on
 failure
 
 > **Note**:

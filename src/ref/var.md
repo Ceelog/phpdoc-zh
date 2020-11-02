@@ -72,16 +72,19 @@ Dumps a string representation of an internal zend value to output
 
 <span class="type">void</span> <span
 class="methodname">debug\_zval\_dump</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$variable`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+class="methodparam"><span class="type">mixed</span> `$variable`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$variables`</span> )
 
 Dumps a string representation of an internal zend value to output.
 
 ### 参数
 
 `variable`  
-The variable being evaluated.
+The variable to dump.
+
+`variables`  
+Further variables to dump.
 
 ### 返回值
 

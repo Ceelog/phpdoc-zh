@@ -2683,7 +2683,7 @@ Arbitrary variable passed to `callback`.
 success, or **`FALSE`** on error. Sets `result` argument of `callback`
 function according to `flags`:
 
-**`EIO_READDIR_DENTS`** (<span class="type">integer</span>)  
+**`EIO_READDIR_DENTS`** (<span class="type">int</span>)  
 <span class="simpara"> <span class="function">eio\_readdir</span> flag.
 If specified, the result argument of the callback becomes an array with
 the following keys: *'names'* - array of directory names *'dents'* -
@@ -2692,70 +2692,70 @@ each: *'name'* - the directory name; *'type'* - one of *EIO\_DT\_\**
 constants; *'inode'* - the inode number, if available, otherwise
 unspecified; </span>
 
-**`EIO_READDIR_DIRS_FIRST`** (<span class="type">integer</span>)  
+**`EIO_READDIR_DIRS_FIRST`** (<span class="type">int</span>)  
 <span class="simpara"> When this flag is specified, the names will be
 returned in an order where likely directories come first, in optimal
 stat order. </span>
 
-**`EIO_READDIR_STAT_ORDER`** (<span class="type">integer</span>)  
+**`EIO_READDIR_STAT_ORDER`** (<span class="type">int</span>)  
 <span class="simpara"> When this flag is specified, then the names will
 be returned in an order suitable for *stat*'ing each one. When planning
 to <span class="function">stat</span> all files in the given directory,
 the returned order will likely be fastest. </span>
 
-**`EIO_READDIR_FOUND_UNKNOWN`** (<span class="type">integer</span>)  
+**`EIO_READDIR_FOUND_UNKNOWN`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 Node types:
 
-**`EIO_DT_UNKNOWN`** (<span class="type">integer</span>)  
+**`EIO_DT_UNKNOWN`** (<span class="type">int</span>)  
 <span class="simpara"> Unknown node type(very common). Further <span
 class="function">stat</span> needed. </span>
 
-**`EIO_DT_FIFO`** (<span class="type">integer</span>)  
+**`EIO_DT_FIFO`** (<span class="type">int</span>)  
 <span class="simpara"> FIFO node type </span>
 
-**`EIO_DT_CHR`** (<span class="type">integer</span>)  
+**`EIO_DT_CHR`** (<span class="type">int</span>)  
 <span class="simpara"> Node type </span>
 
-**`EIO_DT_MPC`** (<span class="type">integer</span>)  
+**`EIO_DT_MPC`** (<span class="type">int</span>)  
 <span class="simpara"> Multiplexed char device (v7+coherent) node type
 </span>
 
-**`EIO_DT_DIR`** (<span class="type">integer</span>)  
+**`EIO_DT_DIR`** (<span class="type">int</span>)  
 <span class="simpara"> Directory node type </span>
 
-**`EIO_DT_NAM`** (<span class="type">integer</span>)  
+**`EIO_DT_NAM`** (<span class="type">int</span>)  
 <span class="simpara"> Xenix special named file node type </span>
 
-**`EIO_DT_BLK`** (<span class="type">integer</span>)  
+**`EIO_DT_BLK`** (<span class="type">int</span>)  
 <span class="simpara"> Node type </span>
 
-**`EIO_DT_MPB`** (<span class="type">integer</span>)  
+**`EIO_DT_MPB`** (<span class="type">int</span>)  
 <span class="simpara"> Multiplexed block device (v7+coherent) </span>
 
-**`EIO_DT_REG`** (<span class="type">integer</span>)  
+**`EIO_DT_REG`** (<span class="type">int</span>)  
 <span class="simpara"> Node type </span>
 
-**`EIO_DT_NWK`** (<span class="type">integer</span>)  
+**`EIO_DT_NWK`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`EIO_DT_CMP`** (<span class="type">integer</span>)  
+**`EIO_DT_CMP`** (<span class="type">int</span>)  
 <span class="simpara"> HP-UX network special node type </span>
 
-**`EIO_DT_LNK`** (<span class="type">integer</span>)  
+**`EIO_DT_LNK`** (<span class="type">int</span>)  
 <span class="simpara"> Link node type </span>
 
-**`EIO_DT_SOCK`** (<span class="type">integer</span>)  
+**`EIO_DT_SOCK`** (<span class="type">int</span>)  
 <span class="simpara"> Socket node type </span>
 
-**`EIO_DT_DOOR`** (<span class="type">integer</span>)  
+**`EIO_DT_DOOR`** (<span class="type">int</span>)  
 <span class="simpara"> Solaris door node type </span>
 
-**`EIO_DT_WHT`** (<span class="type">integer</span>)  
+**`EIO_DT_WHT`** (<span class="type">int</span>)  
 <span class="simpara"> Node type </span>
 
-**`EIO_DT_MAX`** (<span class="type">integer</span>)  
+**`EIO_DT_MAX`** (<span class="type">int</span>)  
 <span class="simpara"> Highest node type value </span>
 
 ### 范例
