@@ -174,8 +174,6 @@
 -   <span
     class="simpara"><a href="/book/mqseries.html" class="xref">mqseries</a></span>
 -   <span
-    class="simpara"><a href="/book/msql.html" class="xref">mSQL</a></span>
--   <span
     class="simpara"><a href="/set/mysqlinfo.html#Mysql（原始）" class="xref"></a></span>
 -   <span
     class="simpara"><a href="/set/mysqlinfo.html#Mysqli" class="xref"></a></span>
@@ -307,8 +305,6 @@
     class="simpara"><a href="/book/spl.html" class="xref">SPL</a></span>
 -   <span
     class="simpara"><a href="/book/spl-types.html" class="xref">SPL Types</a></span>
--   <span
-    class="simpara"><a href="/book/sqlite.html" class="xref">SQLite</a></span>
 -   <span
     class="simpara"><a href="/book/sqlite3.html" class="xref">SQLite3</a></span>
 -   <span

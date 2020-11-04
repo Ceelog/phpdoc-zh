@@ -2649,7 +2649,9 @@ The input string.
 
 `phonemes`  
 This parameter restricts the returned metaphone key to `phonemes`
-characters in length. The default value of *0* means no restriction.
+*characters* in length. However, the resulting phonemes are always
+transcribed completely, so the resulting string length may be slightly
+longer than `phonemes`. The default value of *0* means no restriction.
 
 ### 返回值
 
@@ -2666,7 +2668,7 @@ var_dump(metaphone('programmer'));
 ?>
 ```
 
-以上例程的输出类似于：
+以上例程会输出：
 
     string(7) "PRKRMNK"
     string(6) "PRKRMR"
@@ -2680,10 +2682,27 @@ var_dump(metaphone('programmer', 5));
 ?>
 ```
 
-以上例程的输出类似于：
+以上例程会输出：
 
     string(5) "PRKRM"
     string(5) "PRKRM"
+
+**示例 \#3 Using the `phonemes` parameter**
+
+In this example, <span class="function">metaphone</span> is advised to
+produce a string of five characters, but that would require to split the
+final phoneme (*'x'* is supposed to be transcribed to *'KS'*), so the
+function returns a string with six characters.
+
+``` php
+<?php
+var_dump(metaphone('Asterix', 5));
+?>
+```
+
+以上例程会输出：
+
+    string(6) "ASTRKS"
 
 money\_format
 =============

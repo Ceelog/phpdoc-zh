@@ -695,7 +695,7 @@ Returns error description on success 或者在失败时返回 **`FALSE`**.
 pcntl\_wait
 ===========
 
-等待或返回fork的子进程状态
+等待或返回 fork 的子进程状态
 
 ### 说明
 
@@ -703,33 +703,35 @@ pcntl\_wait
 class="methodname">pcntl\_wait</span> ( <span class="methodparam"><span
 class="type">int</span> `&$status`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$options`<span
-class="initializer"> = 0</span></span> \] )
+class="initializer"> = 0</span></span> \[, <span
+class="methodparam"><span class="type">array</span> `&$rusage`</span>
+\]\] )
 
-wait函数刮起当前进程的执行直到一个子进程退出或接收到一个信号要求中断当前进程或调用一个信号处理函数。
-如果一个子进程在调用此函数时已经退出（俗称僵尸进程），此函数立刻返回。子进程使用的所有系统资源将
-被释放。关于wait在您系统上工作的详细规范请查看您系统的wait（2）手册。
+wait函数挂起当前进程的执行直到一个子进程退出或接收到一个信号要求中断当前进程或调用一个信号处理函数。如果一个子进程在调用此函数时已经退出（俗称僵尸进程），此函数立刻返回。子进程使用的所有系统资源将被释放。关于
+wait 在您系统上工作的详细规范请查看您系统的 wait（2）手册。
 
 > **Note**:
 >
-> 这个函数等同于以*-1*作为参数`pid` 的值并且没有`options`参数来调用<span
-> class="function">pcntl\_waitpid</span> 函数。
+> 这个函数等同于以 *-1* 作为参数 `pid` 的值并且没有 `options` 参数来调用
+> <span class="function">pcntl\_waitpid</span> 函数。
 
 ### 参数
 
 `status`  
-<span class="function">pcntl\_wait</span>将会存储状态信息到`status`
-参数上，这个通过`status`参数返回的状态信息可以用以下函数 <span
+<span class="function">pcntl\_wait</span> 将会存储状态信息到 `status`
+参数上，这个通过 `status` 参数返回的状态信息可以用以下函数 <span
 class="function">pcntl\_wifexited</span>, <span
 class="function">pcntl\_wifstopped</span>, <span
 class="function">pcntl\_wifsignaled</span>, <span
 class="function">pcntl\_wexitstatus</span>, <span
-class="function">pcntl\_wtermsig</span>以及 <span
-class="function">pcntl\_wstopsig</span>获取其具体的值。
+class="function">pcntl\_wtermsig</span> 以及 <span
+class="function">pcntl\_wstopsig</span> 获取其具体的值。
 
 `options`  
-如果您的操作系统（多数BSD类系统）允许使用wait3，您可以提供可选的`options`
+如果您的操作系统（多数BSD类系统）允许使用
+wait3，您可以提供可选的`options`
 参数。如果这个参数没有提供，wait将会被用作系统调用。如果wait3不可用，提供参数
-`options`不会有任何效果。`options`的值可以是0
+`options` 不会有任何效果。`options` 的值可以是0
 或者以下两个常量或两个常量“或运算”结果（即两个常量代表意义都有效）。
 
 |             |                                        |
@@ -739,9 +741,9 @@ class="function">pcntl\_wstopsig</span>获取其具体的值。
 
 ### 返回值
 
-<span
-class="function">pcntl\_wait</span>返回退出的子进程进程号，发生错误时返回-1,如果提供了
-**`WNOHANG`**作为option（wait3可用的系统）并且没有可用子进程时返回0。
+<span class="function">pcntl\_wait</span>
+返回退出的子进程进程号，发生错误时返回 -1,如果提供了 WNOHANG 作为
+option（wait3可用的系统）并且没有可用子进程时返回 0。
 
 ### 参见
 
@@ -1039,8 +1041,8 @@ class="function">pcntl\_waitpid</span> 时的状态参数。
 -   [pcntl\_sigwaitinfo](/ref/pcntl.html#pcntl_sigwaitinfo) — 等待信号
 -   [pcntl\_strerror](/ref/pcntl.html#pcntl_strerror) — Retrieve the
     system error message associated with the given errno
--   [pcntl\_wait](/ref/pcntl.html#pcntl_wait) —
-    等待或返回fork的子进程状态
+-   [pcntl\_wait](/ref/pcntl.html#pcntl_wait) — 等待或返回 fork
+    的子进程状态
 -   [pcntl\_waitpid](/ref/pcntl.html#pcntl_waitpid) —
     等待或返回fork的子进程状态
 -   [pcntl\_wexitstatus](/ref/pcntl.html#pcntl_wexitstatus) —

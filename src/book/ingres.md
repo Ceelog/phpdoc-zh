@@ -2415,13 +2415,13 @@ fetches the expected parameter types from the server.
 
 | Type code | Ingres type                                            |
 |-----------|--------------------------------------------------------|
-| a         | <span class="type">bool</span>                         |
+| a         | <span class="type">BOOLEAN</span>                      |
 | b         | <span class="type">BYTE</span>                         |
 | B         | <span class="type">LONG BYTE/BLOB</span>               |
 | c         | <span class="type">CHAR</span>                         |
 | d         | <span class="type">DATE/ANSIDATE/TIMESTAMP/TIME</span> |
 | f         | <span class="type">FLOAT</span>                        |
-| i         | <span class="type">int</span>                          |
+| i         | <span class="type">INTEGER</span>                      |
 | L         | <span class="type">LONG TEXT</span>                    |
 | m         | <span class="type">MONEY</span>                        |
 | M         | <span class="type">LONG NVARCHAR</span>                |

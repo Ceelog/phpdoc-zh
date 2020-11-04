@@ -79,3 +79,13 @@ usage of ini\_set() for the codepage change is discouraged.
 <a href="http://mingweditline.sourceforge.net/" class="link external">» WinEditLine 库</a>
 来实现了支持。因此，一个交互式的 CLI 命令行也得到了支持。(*php.exe
 -a*)。
+
+### PHP\_FCGI\_CHILDREN
+
+`PHP_FCGI_CHILDREN` is now respected. If this environment variable is
+defined, the first `php-cgi.exe` process will exec the specified number
+of children. These will share the same TCP socket.
+
+### ftok()
+
+Added support for <span class="function">ftok</span>

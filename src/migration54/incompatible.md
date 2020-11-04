@@ -13,14 +13,18 @@
     class="simpara"> <span
     class="function">get\_magic\_quotes\_gpc</span> 和 <span
     class="function">get\_magic\_quotes\_runtime</span> 现在总是返回
-    **`FALSE`** 。 调用 <span
-    class="function">set\_magic\_quotes\_runtime</span> 将产生一个
-    **`E_CORE_ERROR`** 级别的错误。 </span>
+    **`FALSE`** 。 想用 <span
+    class="function">set\_magic\_quotes\_runtime</span> 开启
+    <a href="/security/magicquotes.html" class="link">魔术引号</a>
+    时将产生一个 **`E_CORE_ERROR`** 级别的错误。 </span>
 -   <span class="simpara">
     <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>
     和
     <a href="/ini/core.html#ini.register-long-arrays" class="link">register_long_arrays</a>
     `php.ini` 指令被移除。 </span>
+-   <span class="simpara"> 删除了 mbstring.script\_encoding 指令。使用
+    <a href="/ini/core.html#ini.zend.script-encoding" class="link">zend.script_encoding</a>
+    代替。 </span>
 -   <span class="simpara">
     <a href="/language/references/pass.html" class="link">调用时的引用传递</a>
     被移除。 </span>
@@ -30,6 +34,22 @@
     语句不再接受可变参数（ 比如： *break 1 + foo() \* $bar;* ）。像类似
     *break 2;* 这样的固定参数仍可使用。受此变化影响，不再允许出现 *break
     0;* 和 *continue 0;* 。 </span>
+-   <span class="simpara"> 现在 <span
+    class="function">htmlspecialchars</span>、 <span
+    class="function">htmlentities</span>、 <span
+    class="function">html\_entity\_decode</span> 的默认字符集是
+    *UTF-8*，而之前是 *ISO-8859-1*。 除非你调用 <span
+    class="function">htmlspecialchars</span>/<span
+    class="function">htmlentities</span>/<span
+    class="function">html\_entity\_decode</span> 时 encoding 参数传入了
+    "" （空字符串），否则此次修改不会影响 htmlspecialchars/htmlentities
+    输出设置。
+    通常我们不推荐这么用，因为用这些函数输出字符集时不应该依赖于运行环境。
+    最安全的办法是每次调用 <span
+    class="function">htmlspecialchars</span>、 <span
+    class="function">htmlentities</span>、 <span
+    class="function">html\_entity\_decode</span> 时都明确指定字符集。
+    </span>
 -   <span class="simpara"> 在
     <a href="/book/datetime.html" class="link">日期与时间扩展</a>
     中，不再支持时区使用 TZ（TimeZone）环境变量设置。必须使用
@@ -59,6 +79,11 @@
     foo($\_GET, $\_POST) {}* 这样的代码。 </span>
 -   <span class="simpara"> Salsa10 和 Salsa20
     <a href="/book/hash.html" class="link">哈希算法</a> 被移除。 </span>
+-   <span class="simpara"> 现在 Tiger
+    <a href="/book/hash.html" class="link">哈希算法</a>
+    使用大端字节序（big-endian） 请按照
+    <a href="/ref/hash.html#使用%20PHP%205.4%20或者更高版本计算%20tiger%20哈希值" class="link">本示例</a>
+    编写代码，以便同时兼容 PHP 5.3 和 5.4。 </span>
 -   <span class="simpara"> 当使用两个空数组作为参数时， <span
     class="function">array\_combine</span> 现在返回 *array()* 而不是
     **`FALSE`** 。 </span>
@@ -66,6 +91,12 @@
     将像 <span class="function">htmlspecialchars</span>
     一样处理亚洲字符集，这是以前 PHP 版本的处理情况，但现在将会发出一条
     **`E_STRICT`** 错误。 </span>
+-   <span class="simpara"> 现在 <span class="function">ob\_start</span>
+    的第三个参数由 <span class="type">bool</span> `erase` 变为 <span
+    class="type">int</span> `flags`。 注意，在 PHP 5.4 里代码明确设置
+    `erase` 为 **`FALSE`** 将不会按预期运行： 请按
+    <a href="/ref/outcontrol.html#以兼容%20PHP%205.3%20和%205.4%20的方式创建一个不可擦除的输出缓冲区" class="link">本示例</a>
+    编写代码，以便同时兼容 PHP 5.3 和 5.4。 </span>
 -   <span class="simpara"> 强烈建议不要再使用 <span
     class="function">eregi</span> ，此特性在最新版本中被移除。 </span>
 

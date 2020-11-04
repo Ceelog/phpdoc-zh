@@ -13,8 +13,7 @@
 -   <span class="simpara">
     <a href="/book/fdf.html" class="link">fdf</a> - 被保持 </span>
 -   <span class="simpara"> ming - 被保持 </span>
--   <span class="simpara">
-    <a href="/book/msql.html" class="link">msql</a> - 不再被保持 </span>
+-   <span class="simpara"> msql - 不再被保持 </span>
 -   <span class="simpara">
     <a href="/book/ncurses.html" class="link">ncurses</a> - 被保存
     </span>

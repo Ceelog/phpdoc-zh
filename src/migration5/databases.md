@@ -14,8 +14,6 @@ Windows 用户需要编辑 `php.ini` 开启 PHP 4 中不存在的 `php_mysql.dll
 <a href="/set/mysqlinfo.html#别名和过时的%20Mysqli%20函数" class="link">MySQLi（改良版 MySQL）</a>，设计用来工作于
 MySQL 4.1 及更高版本之下。
 
-自 PHP 5
-起，<a href="/book/sqlite.html#SQLite%20函数" class="link">SQLite</a>
-扩展库内置在 PHP 中。SQLite 是一个可嵌入 SQL
+自 PHP 5 起，SQLite 扩展库内置在 PHP 中。SQLite 是一个可嵌入 SQL
 数据库引擎，不是客户端连接库用来连接大型数据库服务器（如 MySQL 或
 PostgreSQL）的。SQLite 库直接读写磁盘上的数据库文件。

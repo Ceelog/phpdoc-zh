@@ -25,6 +25,7 @@ INI 文件处理的变化
     和
     <a href="/session/setup.html#" class="link">session.bug_compat_warn</a>
     </span>
+-   <span class="simpara"> mbstring.script\_encoding </span>
 -   <span class="simpara">
     <a href="/ini/core.html#ini.y2k-compliance" class="link">y2k_compliance</a>
     </span>

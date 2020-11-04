@@ -88,12 +88,6 @@
         — Monitoring classes and subscriber functions
     -   [MongoDB\\Driver\\Exception](/set/mongodb.html#MongoDB\Driver\Exception)
         — Exception 类
--   [mSQL](/book/msql.html)
-    -   [简介](/book/msql.html#简介)
-    -   [安装／配置](/book/msql.html#安装／配置)
-    -   [预定义常量](/book/msql.html#预定义常量)
-    -   [范例](/book/msql.html#范例)
-    -   [mSQL 函数](/book/msql.html#mSQL%20函数)
 -   [MySQL](/set/mysqlinfo.html) — MySQL Drivers and Plugins
     -   [Overview of the MySQL PHP
         drivers](/set/mysqlinfo.html#Overview%20of%20the%20MySQL%20PHP%20drivers)
@@ -144,11 +138,6 @@
     -   [预定义常量](/book/pgsql.html#预定义常量)
     -   [范例](/book/pgsql.html#范例)
     -   [PostgreSQL 函数](/book/pgsql.html#PostgreSQL%20函数)
--   [SQLite](/book/sqlite.html)
-    -   [简介](/book/sqlite.html#简介)
-    -   [安装／配置](/book/sqlite.html#安装／配置)
-    -   [预定义常量](/book/sqlite.html#预定义常量)
-    -   [SQLite 函数](/book/sqlite.html#SQLite%20函数)
 -   [SQLite3](/book/sqlite3.html) — SQLite3
     -   [简介](/book/sqlite3.html#简介)
     -   [安装／配置](/book/sqlite3.html#安装／配置)

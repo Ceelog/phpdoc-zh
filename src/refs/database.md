@@ -23,12 +23,10 @@
     -   [MaxDB](/book/maxdb.html)
     -   [Mongo](/book/mongo.html) — MongoDB 驱动（旧版）
     -   [MongoDB](/set/mongodb.html) — MongoDB driver
-    -   [mSQL](/book/msql.html)
     -   [MySQL](/set/mysqlinfo.html) — MySQL Drivers and Plugins
     -   [OCI8](/book/oci8.html) — Oracle OCI8
     -   [Paradox](/book/paradox.html) — Paradox File Access
     -   [PostgreSQL](/book/pgsql.html)
-    -   [SQLite](/book/sqlite.html)
     -   [SQLite3](/book/sqlite3.html) — SQLite3
     -   [SQLSRV](/book/sqlsrv.html) — Microsoft SQL Server Driver for
         PHP

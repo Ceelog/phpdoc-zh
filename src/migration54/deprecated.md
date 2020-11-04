@@ -4,6 +4,4 @@
 过时的函数：
 
 -   <span class="simpara"> <span
-    class="function">mcrypt\_generic\_end</span> </span>
--   <span class="simpara"> <span
     class="function">mysql\_list\_dbs</span> </span>

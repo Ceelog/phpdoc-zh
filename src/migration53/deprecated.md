@@ -51,6 +51,8 @@ PHP 5.3.0 新增了两个错误等级: **`E_DEPRECATED`** 和
     (使用 <span class="function">preg\_replace</span> 配合 *'i'*
     修正符替代) </span>
 -   <span class="simpara"> <span
+    class="function">mcrypt\_generic\_end</span> </span>
+-   <span class="simpara"> <span
     class="function">set\_magic\_quotes\_runtime</span> 以及它的别名函数
     <span class="function">magic\_quotes\_runtime</span> </span>
 -   <span class="simpara"> <span

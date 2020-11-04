@@ -694,10 +694,12 @@ ob\_start
 ### 说明
 
 <span class="type">bool</span> <span class="methodname">ob\_start</span>
-(\[ <span class="methodparam"><span class="type">callback</span>
-`$output_callback`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$chunk_size`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$erase`</span>
+(\[ <span class="methodparam"><span class="type">callable</span>
+`$output_callback`<span class="initializer"> = **`NULL`**</span></span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$chunk_size`<span class="initializer"> = 0</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`PHP_OUTPUT_HANDLER_STDFLAGS`**</span></span>
 \]\]\] )
 
 此函数将打开输出缓冲。当输出缓冲激活后，脚本将不会输出内容（除http标头外），相反需要输出的内容被存储在内部缓冲区中。
@@ -730,11 +732,21 @@ class="function">ob\_clean</span>
 当调用 `output_callback` 时，它将收到输出缓冲区的内容作为参数
 并预期返回一个新的输出缓冲区作为结果，这个新返回的输出缓冲区内容将被送到浏览器。
 如果这个 `output_callback` 不是一个可以调用的函数，此函数 会返回
-**`FALSE`** 。
+**`FALSE`**。以下是回调签名：
 
-如果回调函数有两个参数，第二个参数会由一个位域补充，该位域由
-**`PHP_OUTPUT_HANDLER_START`**, **`PHP_OUTPUT_HANDLER_CONT`** 和
-**`PHP_OUTPUT_HANDLER_END`** 组成。
+<span class="type">string</span> <span class="methodname"><span
+class="replaceable">handler</span></span> ( <span
+class="methodparam"><span class="type">string</span> `$buffer`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$phase`</span> \] )
+
+`buffer`  
+<span class="simpara"> 输出缓冲区中的内容。 </span>
+
+`phase`  
+<span class="simpara"> 比特掩码
+<a href="/outcontrol/constants.html" class="link"><strong><code>PHP_OUTPUT_HANDLER_*</code></strong> 常量</a>。
+</span>
 
 如果 `output_callback` 返回 **`FALSE`** ，其原来的输入
 内容被直接送到浏览器。
@@ -744,7 +756,7 @@ class="function">ob\_clean</span>
 <span class="function">ob\_end\_clean</span>, <span
 class="function">ob\_end\_flush</span>, <span
 class="function">ob\_clean</span>, <span
-class="function">ob\_flush</span> and <span
+class="function">ob\_flush</span> 和 <span
 class="function">ob\_start</span> 不能从一个回调函数中调用。
 如果从回调函数中调用了它们，产生的行为是不明确的。
 如果想要删除缓冲区的内容，从回调函数中返回一个"" (空字符串)。
@@ -753,33 +765,39 @@ class="function">ob\_start</span> 不能从一个回调函数中调用。
 
 > **Note**:
 >
-> 在PHP 4.0.4中， <span class="function">ob\_gzhandler</span>
-> 被引入是为了简化把gz编码过 数据发送到支持压缩网页的浏览器。 <span
-> class="function">ob\_gzhandler</span>
-> 会判定浏览器可以接受哪种类型的编码内容，并返回相应 的输出。
+> <span class="function">ob\_gzhandler</span> function exists to
+> facilitate sending gz-encoded data to web browsers that support
+> compressed web pages. <span class="function">ob\_gzhandler</span>
+> determines what type of content encoding the browser will accept and
+> will return its output accordingly.
 
 `chunk_size`  
 如果可选参数 `chunk_size` 被赋值了，在任何一个能引起缓冲区的长度等于
-或超过 `chunk_size` 的输出操作后，缓冲区都会被刷送。 默认值 0
-意味着函数仅在最后被调用，其余的特殊值可以将 `chunk_size` 从 1 设定到
-4096。
+或超过 `chunk_size` 的输出操作后，缓冲区都会被刷送。 默认值 *0*
+意味着函数仅在最后被调用。
 
-`erase`  
-如果可选参数 `erase` 被赋成
-**`FALSE`**，直到脚本执行完成缓冲区才被删除。
-这使得，如果调用了冲刷和清洗（清除）函数，会抛出一个“notice”,并返回
-**`FALSE`** 值。
+PHP 5.4.0 之前，*1* 是一个特殊情况下的值，代表将 chunk\_size 设置为 4096
+字节。
+
+`flags`  
+`flags` 参数代表了一个掩码位，用来控制对缓冲区的操作。 The default is to
+allow output buffers to be cleaned, flushed and removed, which can be
+set explicitly via **`PHP_OUTPUT_HANDLER_CLEANABLE`** \|
+**`PHP_OUTPUT_HANDLER_FLUSHABLE`** \|
+**`PHP_OUTPUT_HANDLER_REMOVABLE`**, or **`PHP_OUTPUT_HANDLER_STDFLAGS`**
+as shorthand.
+
+每个标志都控制着对一组功能的访问，详细介绍如下：
+
+| Constant                           | Functions                                                                                                                                    |
+|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| **`PHP_OUTPUT_HANDLER_CLEANABLE`** | <span class="function">ob\_clean</span>, <span class="function">ob\_end\_clean</span> 和 <span class="function">ob\_get\_clean</span>。      |
+| **`PHP_OUTPUT_HANDLER_FLUSHABLE`** | <span class="function">ob\_end\_flush</span>, <span class="function">ob\_flush</span> 和 <span class="function">ob\_get\_flush</span>。      |
+| **`PHP_OUTPUT_HANDLER_REMOVABLE`** | <span class="function">ob\_end\_clean</span>, <span class="function">ob\_end\_flush</span> 和 <span class="function">ob\_get\_flush</span>。 |
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
-
-### 更新日志
-
-| 版本  | 说明                                                                   |
-|-------|------------------------------------------------------------------------|
-| 4.3.2 | 在传递的 `output_callback` 不能被执行时，此函数 被改成返回 **`FALSE`** |
-| 4.2.0 | 添加了 `erase` 参数。                                                  |
 
 ### 范例
 
@@ -816,6 +834,21 @@ ob_end_flush();
     <p>It's like comparing oranges to oranges.</p>
     </body>
     </html>
+
+**示例 \#2 以兼容 PHP 5.3 和 5.4 的方式创建一个不可擦除的输出缓冲区**
+
+``` php
+<?php
+
+if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
+  ob_start(null, 0, PHP_OUTPUT_HANDLER_STDFLAGS ^
+    PHP_OUTPUT_HANDLER_REMOVABLE);
+} else {
+  ob_start(null, 0, false);
+}
+
+?>
+```
 
 ### 参见
 

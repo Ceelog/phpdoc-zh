@@ -21,5 +21,5 @@
 参见 PHP 版本迁移指南 <a href="/migration5.html" class="link">5.0.x</a>
 、 <a href="/migration51.html" class="link">5.1.x</a> 、
 <a href="/migration52.html" class="link">5.2.x</a>
-、<a href="/migration53.html" class="link">5.3.x</a> 以及
-<a href="/migration55.html" class="link">5.5.x</a>。
+、<a href="/migration53.html" class="link">5.3.x</a>、<a href="/migration55.html" class="link">5.5.x</a>、
+<a href="/migration56.html" class="link">5.6.x</a>。

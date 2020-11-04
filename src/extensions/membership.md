@@ -155,8 +155,6 @@
 
 -   <a href="/book/mhash.html" class="xref">Mhash</a>
 
--   <a href="/book/msql.html" class="xref">mSQL</a>
-
 -   <a href="/set/mysqlinfo.html#Mysql（原始）" class="xref"></a>
 
 -   <a href="/set/mysqlinfo.html#Mysqli" class="xref"></a>
@@ -343,8 +341,6 @@ PECL 扩展存在，但是在 PHP 手册中尚未有文档。
 -   <a href="/book/sphinx.html" class="xref">Sphinx</a>
 
 -   <a href="/book/spl-types.html" class="xref">SPL Types</a>
-
--   <a href="/book/sqlite.html" class="xref">SQLite</a>
 
 -   <a href="/book/sqlsrv.html" class="xref">SQLSRV</a>
 

@@ -1092,7 +1092,6 @@ PHP 扩展库的 DLL 文件都具有 *php\_* 前缀。
 <a href="/book/session.html" class="link">Session</a>,
 <a href="/book/simplexml.html" class="link">SimpleXML</a>,
 <a href="/book/spl.html" class="link">SPL</a>,
-<a href="/book/sqlite.html" class="link">SQLite</a>,
 <a href="/book/wddx.html" class="link">WDDX</a>,
 <a href="/book/xml.html" class="link">XML</a> 和
 <a href="/book/zlib.html" class="link">Zlib</a>.
@@ -1169,11 +1168,10 @@ PHP 搜索扩展库的默认位置在 `C:\php5`。要修改此项以符合用户
 | php\_mcrypt.dll      | <a href="/book/mcrypt.html" class="link">Mcrypt 加密</a>函数                      | 需要：`libmcrypt.dll`                                                                                                                          |
 | php\_mhash.dll       | <a href="/book/mhash.html" class="link">Mhash</a> 函数                            | 需要：`libmhash.dll`（已附带）                                                                                                                 |
 | php\_mime\_magic.dll | <a href="/book/mime-magic.html" class="link">Mimetype</a> 函数                    | 需要：`magic.mime`（已附带）                                                                                                                   |
-| php\_msql.dll        | <a href="/book/msql.html" class="link">mSQL</a> 函数                              | 需要：`msql.dll`（已附带）                                                                                                                     |
 | php\_mysql.dll       | <a href="/set/mysqlinfo.html#Mysql（原始）" class="link">MySQL</a> 函数           | 需要：`libmysql.dll`（已附带）                                                                                                                 |
 | php\_mysqli.dll      | <a href="/set/mysqlinfo.html#Mysqli" class="link">MySQLi</a> 函数                 | 需要：`libmysql.dll`（PHP \<= 5.0.2 中是 `libmysqli.dll`）（已附带）                                                                           |
 | php\_oci8.dll        | <a href="/book/oci8.html" class="link">Oracle 8</a> 函数                          | 需要：Oracle 8.1+ 客户端库                                                                                                                     |
-| php\_openssl.dll     | <a href="/book/openssl.html" class="link">OpenSSL</a> 函数                        | 需要：`libeay32.dll`（已附带）                                                                                                                 |
+| php\_openssl.dll     | <a href="/book/openssl.html" class="link">OpenSSL</a> 函数                        | 需要：`libeay32.dll`（已附带），OpenSSL 1.1 起需要 `liblibcrypto-*.dll`（已附带）                                                              |
 | php\_pgsql.dll       | <a href="/book/pgsql.html" class="link">PostgreSQL</a> 函数                       | 无                                                                                                                                             |
 | php\_shmop.dll       | <a href="/book/shmop.html" class="link">Shared Memory</a> 共享内存函数            | 无                                                                                                                                             |
 | php\_snmp.dll        | <a href="/book/snmp.html" class="link">SNMP</a> 函数                              | 仅用于 Windows NT！                                                                                                                            |

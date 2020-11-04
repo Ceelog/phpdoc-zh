@@ -16,9 +16,9 @@ PHP 5.3.0 提供了广泛的新特性：
     <a href="/functions/anonymous.html" class="link">闭包</a>
     (Lambda/匿名函数) 支持. </span>
 -   <span class="simpara"> 新增了两个魔术方法,
-    <a href="/language/oop5/overloading.html#language.oop5.overloading.methods" class="link">__callStatic</a>
+    <a href="/language/oop5/overloading.html#object.callstatic" class="link">__callStatic</a>
     和
-    <a href="/language/oop5/magic.html#language.oop5.magic.invoke" class="link">__invoke</a>。
+    <a href="/language/oop5/magic.html#object.invoke" class="link">__invoke</a>。
     </span>
 -   <span class="simpara"> 添加了
     <a href="/language/types/string.html#language.types.string.syntax.nowdoc" class="link">Nowdoc</a>

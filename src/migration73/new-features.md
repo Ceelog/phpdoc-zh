@@ -6,7 +6,7 @@
 #### 更灵活的 Heredoc 和 Nowdoc 语法
 
 Heredoc 和 Nowdoc
-语法变的更灵活。现在支持闭合标记符的缩进，并且不再强制闭合标记符的换行。请参阅：<a href="https://learnku.com/laravel/t/10857/php-73-we-will-have-flexible-heredoc-and-nowdoc-syntactic-structures" class="link external">» 第三方网站上的说明</a>
+语法变的更灵活。现在支持闭合标记符的缩进，并且不再强制闭合标记符的换行。
 
 #### Array Destructuring supports Reference Assignments
 

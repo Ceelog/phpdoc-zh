@@ -47,8 +47,8 @@
         等待信号
     -   [pcntl\_strerror](/ref/pcntl.html#pcntl_strerror) — Retrieve the
         system error message associated with the given errno
-    -   [pcntl\_wait](/ref/pcntl.html#pcntl_wait) —
-        等待或返回fork的子进程状态
+    -   [pcntl\_wait](/ref/pcntl.html#pcntl_wait) — 等待或返回 fork
+        的子进程状态
     -   [pcntl\_waitpid](/ref/pcntl.html#pcntl_waitpid) —
         等待或返回fork的子进程状态
     -   [pcntl\_wexitstatus](/ref/pcntl.html#pcntl_wexitstatus) —

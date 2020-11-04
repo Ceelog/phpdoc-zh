@@ -10,13 +10,13 @@
     class="function">get\_class</span> 在出现错误时将会返回
     **`FALSE`**。 </span>
 -   <span class="simpara"> <span class="function">clearstatcache</span>
-    默认不再清除缓存的 realpath。 </span>
+    默认不再清除 realpath 的缓存。 </span>
 -   <span class="simpara"> <span class="function">realpath</span>
-    现在是完全与平台无关的。结果是非法的相对路径比如 *\_\_FILE\_\_
-    。"/../x"* 将不会工作。 </span>
+    现在是完全与平台无关的。结果是非法的相对路径比如 *\_\_FILE\_\_ .
+    "/../x"* 将不会工作。 </span>
 -   <span class="simpara"> <span
     class="function">call\_user\_func</span>
-    系列函数即使被调用者是一个父类也使用 $this。 </span>
+    系列函数即使被调用者是一个父类也使用 *$this*。 </span>
 -   <span class="simpara"> 数组函数 <span
     class="function">natsort</span>，<span
     class="function">natcasesort</span>，<span
@@ -45,19 +45,19 @@
 -   <span class="simpara"> <span class="classname">SplFileInfo</span>
     及其相关目录类会移除末尾的 /。 </span>
 -   <span class="simpara">
-    <a href="/language/oop5/magic.html#language.oop5.magic.tostring" class="link">__toString</a>
+    <a href="/language/oop5/magic.html#object.tostring" class="link">__toString</a>
     魔术方法不再接受参数。 </span>
 -   <span class="simpara"> 魔术方法
-    <a href="/language/oop5/overloading.html#language.oop5.overloading.members" class="link">__get</a>，
-    <a href="/language/oop5/overloading.html#language.oop5.overloading.members" class="link">__set</a>，
-    <a href="/language/oop5/overloading.html#language.oop5.overloading.members" class="link">__isset</a>，
-    <a href="/language/oop5/overloading.html#language.oop5.overloading.members" class="link">__unset</a>
+    <a href="/language/oop5/overloading.html#object.get" class="link">__get</a>，
+    <a href="/language/oop5/overloading.html#object.set" class="link">__set</a>，
+    <a href="/language/oop5/overloading.html#object.isset" class="link">__isset</a>，
+    <a href="/language/oop5/overloading.html#object.unset" class="link">__unset</a>
     和
-    <a href="/language/oop5/overloading.html#language.oop5.overloading.methods" class="link">__call</a>
+    <a href="/language/oop5/overloading.html#object.call" class="link">__call</a>
     应该总是公共的 (public) 且不能是静态的 (static)，方法签名是必须的。
     </span>
 -   <span class="simpara"> 现在
-    <a href="/language/oop5/overloading.html#language.oop5.overloading.methods" class="link">__call</a>
+    <a href="/language/oop5/overloading.html#object.call" class="link">__call</a>
     魔术方法在访问私有的 (private) 和被保护的 (protected) 方法时被调用。
     </span>
 -   <span class="simpara"> 函数内 <span class="function">include</span>

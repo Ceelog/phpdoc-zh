@@ -99,7 +99,6 @@ class IEEventSinker {
     }
 }
 $ie = new COM("InternetExplorer.Application");
-// note that you don't need the & for PHP 5!
 $sink = new IEEventSinker();
 com_event_sink($ie, $sink, "DWebBrowserEvents2");
 $ie->Visible = true;
@@ -110,6 +109,16 @@ while(!$sink->terminated) {
 $ie = null;
 ?>
 ```
+
+### 注释
+
+**Caution**
+
+Prior to PHP 8.0.0, calling <span class="function">exit</span> from any
+of the event handlers is not supported, and may cause PHP to hang. This
+can be worked around by throwing an exception from the event handler,
+catching the exception in the main code, and calling <span
+class="function">exit</span> from there.
 
 ### 参见
 

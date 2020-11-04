@@ -29,3 +29,7 @@ PHP 5.4.0 提供了丰富的新特性：
 -   <span class="simpara"> 内置用于开发的
     <a href="/features/commandline/webserver.html" class="link">CLI 模式的 web server</a>
     。 </span>
+-   <span class="simpara"> 现在 GD 扩展可通过 <span
+    class="function">imagecreatefromwebp</span> 和 <span
+    class="function">imagewebp</span> 来相应地读取、写入 WebP 图片。
+    </span>

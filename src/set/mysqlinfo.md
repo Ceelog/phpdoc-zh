@@ -757,10 +757,6 @@ MySQL增强版扩展
         选择用于数据库查询的默认数据库
     -   [mysqli::set\_charset](/set/mysqlinfo.html#mysqli::set_charset)
         — 设置默认字符编码
-    -   [mysqli::set\_local\_infile\_default](/set/mysqlinfo.html#mysqli::set_local_infile_default)
-        — 取消用户指定的回调函数
-    -   [mysqli::set\_local\_infile\_handler](/set/mysqlinfo.html#mysqli::set_local_infile_handler)
-        — 设置 LOAD DATA LOCAL INFILE 命令的回调函数
     -   [mysqli::$sqlstate](/set/mysqlinfo.html#mysqli::$sqlstate) —
         返回上一次 SQL 操作的 SQLSTATE 错误信息
     -   [mysqli::ssl\_set](/set/mysqlinfo.html#mysqli::ssl_set) — 使用
@@ -897,8 +893,6 @@ MySQL增强版扩展
         — 别名 mysqli\_real\_escape\_string
     -   [mysqli\_execute](/set/mysqlinfo.html#mysqli_execute) —
         mysqli\_stmt\_execute 的别名
-    -   [mysqli\_get\_cache\_stats](/set/mysqlinfo.html#mysqli_get_cache_stats)
-        — 返回客户端Zval缓存统计信息
     -   [mysqli\_get\_client\_stats](/set/mysqlinfo.html#mysqli_get_client_stats)
         — 返回客户端进程统计信息
     -   [mysqli\_get\_links\_stats](/set/mysqlinfo.html#mysqli_get_links_stats)
@@ -4279,16 +4273,6 @@ class="type">string</span> `$dbname`</span> )
 <span class="type">bool</span> <span
 class="methodname">set\_charset</span> ( <span class="methodparam"><span
 class="type">string</span> `$charset`</span> )
-
-<span class="type">void</span> <span
-class="methodname">mysqli\_set\_local\_infile\_default</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-<span class="type">bool</span> <span
-class="methodname">set\_local\_infile\_handler</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
-<span class="methodparam"><span class="type">callable</span>
-`$read_func`</span> )
 
 <span class="type">string</span> <span
 class="methodname">mysqli\_sqlstate</span> ( <span
@@ -9041,195 +9025,6 @@ mysqli_close($link);
 -   <span class="function">mysqli\_character\_set\_name</span>
 -   <span class="function">mysqli\_real\_escape\_string</span>
 -   <a href="http://dev.mysql.com/doc/mysql/en/charset-charsets.html" class="link external">» 关于MySQL支持字符集的列表</a>
-
-mysqli::set\_local\_infile\_default
-===================================
-
-mysqli\_set\_local\_infile\_default
-===================================
-
-取消用户指定的回调函数
-
-### 说明
-
-<span class="type">void</span> <span
-class="methodname">mysqli\_set\_local\_infile\_default</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-使之前通过 <span
-class="function">mysqli\_set\_local\_infile\_handler</span> 设置的 *LOAD
-DATA INFILE LOCAL* 回调函数失效。
-
-### 参数
-
-` link`  
-仅以过程化样式：由<span class="function">mysqli\_connect</span> 或 <span
-class="function">mysqli\_init</span> 返回的链接标识。
-
-### 返回值
-
-没有返回值。
-
-### 范例
-
-参见 <span class="function">mysqli\_set\_local\_infile\_handler</span>
-例程
-
-### 参见
-
--   <span class="function">mysqli\_set\_local\_infile\_handler</span>
-
-mysqli::set\_local\_infile\_handler
-===================================
-
-mysqli\_set\_local\_infile\_handler
-===================================
-
-设置 LOAD DATA LOCAL INFILE 命令的回调函数
-
-### 说明
-
-面向对象风格
-
-<span class="type">bool</span> <span
-class="methodname">mysqli::set\_local\_infile\_handler</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
-<span class="methodparam"><span class="type">callable</span>
-`$read_func`</span> )
-
-过程化风格
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_set\_local\_infile\_handler</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
-<span class="methodparam"><span class="type">callable</span>
-`$read_func`</span> )
-
-设置 LOAD DATA LOCAL INFILE 命令的回调函数
-
-回调函数的作用是读取 *LOAD DATA LOCAL INFILE* 命令指定的文件，
-并且将其重新格式化。 所用的格式必须是 *LOAD DATA INFILE*
-命令可以识别的格式。
-
-返回的数据需要和 *LOAD DATA* 命令指定的格式匹配。
-
-### 参数
-
-` link`  
-仅以过程化样式：由<span class="function">mysqli\_connect</span> 或 <span
-class="function">mysqli\_init</span> 返回的链接标识。
-
-`read_func`  
-一个回调函数，或者对象的方法，它需要接收以下参数：
-
-`stream`  
-和 SQL 命令中的 INFILE 关联的 PHP 流
-
-`&buffer`  
-用来保存输入数据重写之后数据的字符串缓冲区
-
-`buflen`  
-缓冲区中存储的最大的字符数量
-
-`&errormsg`  
-如果发生错误，可以用这个变量存储一些错误信息
-
-如果处理成功，则回调函数需要返回 `buffer` 中存储的字符数量，
-如果处理失败， 返回一个负数。
-
-### 返回值
-
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
-
-### 范例
-
-**示例 \#1 <span
-class="methodname">mysqli::set\_local\_infile\_handler</span> 例程**
-
-面向对象风格
-
-``` php
-<?php
-  $db = mysqli_init();
-  $db->real_connect("localhost","root","","test");
-
-  function callme($stream, &$buffer, $buflen, &$errmsg)
-  {
-    $buffer = fgets($stream);
-
-    echo $buffer;
-
-    // 将字符串替换成大写，并且将 "," 分隔符替换成 [TAB]
-    $buffer = strtoupper(str_replace(",", "\t", $buffer));
-
-    return strlen($buffer);
-  }
-
-
-  echo "Input:\n";
-
-  $db->set_local_infile_handler("callme");
-  $db->query("LOAD DATA LOCAL INFILE 'input.txt' INTO TABLE t1");
-  $db->set_local_infile_default();
-
-  $res = $db->query("SELECT * FROM t1");
-
-  echo "\nResult:\n";
-  while ($row = $res->fetch_assoc()) {
-    echo join(",", $row)."\n";
-  }
-?>
-```
-
-过程化风格
-
-``` php
-<?php
-  $db = mysqli_init();
-  mysqli_real_connect($db, "localhost","root","","test");
-
-  function callme($stream, &$buffer, $buflen, &$errmsg)
-  {
-    $buffer = fgets($stream);
-
-    echo $buffer;
-
-    // 将字符串替换成大写，并且将 "," 分隔符替换成 [TAB]
-    $buffer = strtoupper(str_replace(",", "\t", $buffer));
-
-    return strlen($buffer);
-  }
-
-
-  echo "Input:\n";
-
-  mysqli_set_local_infile_handler($db, "callme");
-  mysqli_query($db, "LOAD DATA LOCAL INFILE 'input.txt' INTO TABLE t1");
-  mysqli_set_local_infile_default($db);
-
-  $res = mysqli_query($db, "SELECT * FROM t1");
-
-
-  echo "\nResult:\n";
-  while ($row = mysqli_fetch_assoc($res)) {
-    echo join(",", $row)."\n";
-  }
-?>
-```
-
-以上例程会输出：
-
-    Input:
-    23,foo
-    42,bar
-
-    Output:
-    23,FOO
-    42,BAR
-
-### 参见
-
--   <span class="function">mysqli\_set\_local\_infile\_default</span>
 
 mysqli::$sqlstate
 =================
@@ -15422,41 +15217,6 @@ class="function">mysqli\_stmt\_execute</span> 的一个别名。
 
 -   <span class="function">mysqli\_stmt\_execute</span>
 
-mysqli\_get\_cache\_stats
-=========================
-
-返回客户端Zval缓存统计信息
-
-**Warning**
-
-从 PHP 5.4.0 开始，此函数被 *移除*。
-
-### 说明
-
-<span class="type">array</span> <span
-class="methodname">mysqli\_get\_cache\_stats</span> ( <span
-class="methodparam">void</span> )
-
-**Warning**
-
-本函数还未编写文档，仅有参数列表。
-
-返回一个空数组。 仅可用于
-<a href="/set/mysqlinfo.html#Mysqlnd" class="link">mysqlnd</a>。
-
-### 参数
-
-### 返回值
-
-如果成功返回一个空数组，其他情况下返回 **`FALSE`**。
-
-### 更新日志
-
-| 版本  | 说明                                                                 |
-|-------|----------------------------------------------------------------------|
-| 5.4.0 | The <span class="function">mysqli\_get\_cache\_stats</span> 被移除。 |
-| 5.3.0 | 加入 <span class="function">mysqli\_get\_cache\_stats</span>。       |
-
 mysqli\_get\_client\_stats
 ==========================
 
@@ -15682,8 +15442,6 @@ class="function">mysqli\_options</span> 的一个别名。
     别名 mysqli\_real\_escape\_string
 -   [mysqli\_execute](/set/mysqlinfo.html#mysqli_execute) —
     mysqli\_stmt\_execute 的别名
--   [mysqli\_get\_cache\_stats](/set/mysqlinfo.html#mysqli_get_cache_stats)
-    — 返回客户端Zval缓存统计信息
 -   [mysqli\_get\_client\_stats](/set/mysqlinfo.html#mysqli_get_client_stats)
     — 返回客户端进程统计信息
 -   [mysqli\_get\_links\_stats](/set/mysqlinfo.html#mysqli_get_links_stats)
@@ -27326,7 +27084,7 @@ Sets the order by criteria.
 The expressions that define the order by criteria. Can be an array with
 one or more expressions, or a string.
 
-`sort_expr`  
+`sort_exprs`  
 Additional sort\_expr parameters.
 
 ### 返回值
@@ -31703,7 +31461,6 @@ special features are listed below:
     class="function">mysqli\_fetch\_all</span>
 
 -   Performance statistics calls: <span
-    class="function">mysqli\_get\_cache\_stats</span>, <span
     class="function">mysqli\_get\_client\_stats</span>, <span
     class="function">mysqli\_get\_connection\_stats</span>
 
@@ -31809,8 +31566,7 @@ configured using:
 Enables the collection of various client statistics which can be
 accessed through <span
 class="function">mysqli\_get\_client\_stats</span>, <span
-class="function">mysqli\_get\_connection\_stats</span>, <span
-class="function">mysqli\_get\_cache\_stats</span> and are shown in
+class="function">mysqli\_get\_connection\_stats</span>, and are shown in
 *mysqlnd* section of the output of the <span
 class="function">phpinfo</span> function as well.
 
@@ -31821,8 +31577,7 @@ except those relating to memory management.
 `mysqlnd.collect_memory_statistics` <span class="type">bool</span>  
 Enable the collection of various memory statistics which can be accessed
 through <span class="function">mysqli\_get\_client\_stats</span>, <span
-class="function">mysqli\_get\_connection\_stats</span>, <span
-class="function">mysqli\_get\_cache\_stats</span> and are shown in
+class="function">mysqli\_get\_connection\_stats</span>, and are shown in
 *mysqlnd* section of the output of the <span
 class="function">phpinfo</span> function as well.
 
@@ -38747,7 +38502,7 @@ candidates down to one for statement execution.
 <td><p>One or more node groups must be defined. A node group can have an arbitrary user defined name. The name is used in combination with a SQL hint to restrict query execution to the nodes listed for the node group. To run a query on any of the servers of a node group, the query must begin with the SQL hint <em>/*user defined node group name*/</em>. Please note, no white space is allowed around <em>user defined node group name</em>. Because <em>user defined node group name</em> is used as-is as part of a SQL hint, you should choose the name that is compliant with the SQL language.</p>
 <p>Each node group entry must contain a list of <em>master</em> servers. Additional <em>slave</em> servers are allowed. Failing to provide a list of <em>master</em> for a node group <em>name_of_group</em> may cause an error of type <strong><code>E_RECOVERABLE_ERROR</code></strong> like <em>(mysqlnd_ms) No masters configured in node group 'name_of_group' for 'node_groups' filter</em>.</p>
 <p>The list of master and slave servers must reference corresponding entries in the <a href="/set/mysqlinfo.html#" class="link">global master</a> respectively <a href="/set/mysqlinfo.html#" class="link">slave</a> server list. Referencing an unknown server in either of the both server lists may cause an <strong><code>E_RECOVERABLE_ERROR</code></strong> error like <em>(mysqlnd_ms) Unknown master 'server_alias_name' (section 'name_of_group') in 'node_groups' filter configuration</em>.</p>
-<div id="example-2154" class="example">
+<div id="example-2149" class="example">
 <p><strong>示例 #23 Manual partitioning</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -38836,7 +38591,7 @@ file is the combination of eventual consistency and maximum slave lag.
 <td><p>Request eventual consistency. Allows the use of all master and slave servers. Data returned may or may not be current.</p>
 <p>Eventual consistency accepts an optional <em>age</em> parameter. If <em>age</em> is given the plugin considers only slaves for reading for which MySQL replication reports a slave lag less or equal to <em>age</em>. The replication lag is measure using <em>SHOW SLAVE STATUS</em>. If the plugin fails to fetch the replication lag, the slave tested is skipped. Implementation details and tips are given in the <a href="/set/mysqlinfo.html#Service%20level%20and%20consistency" class="link">quality of service concepts section</a>.</p>
 <p>Please note, if a filter chain generates an empty slave list and the PHP configuration directive <em>mysqlnd_ms.multi_master=0</em> is used, the plugin may emit a warning.</p>
-<div id="example-2155" class="example">
+<div id="example-2150" class="example">
 <p><strong>示例 #24 Global limit on slave lag</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -41577,7 +41332,7 @@ Commits a distributed/XA transaction among MySQL servers
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type">bool</span> <span
 class="methodname">mysqlnd\_ms\_xa\_commit</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$connection`</span>
 , <span class="methodparam"><span class="type">string</span>

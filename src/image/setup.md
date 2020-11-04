@@ -87,9 +87,9 @@ class="function">imagecreatetruecolor</span>，需要 GD2。
 
 这些函数的行为受 `php.ini` 中的设置影响。
 
-| 名字                     | 默认 | 可修改范围    | Changelog                  |
-|--------------------------|------|---------------|----------------------------|
-| gd.jpeg\_ignore\_warning | "0"  | PHP\_INI\_ALL | Available since PHP 5.1.3. |
+| 名字                                                                 | 默认 | 可修改范围    | 更新日志 |
+|----------------------------------------------------------------------|------|---------------|----------|
+| <a href="/image/setup.html#" class="link">gd.jpeg_ignore_warning</a> | "1"  | PHP\_INI\_ALL |          |
 
 有关 PHP\_INI\_\* 样式的更多详情与定义，见
 <a href="/configuration/changes/modes.html" class="xref">配置可被设定范围</a>。
@@ -97,17 +97,19 @@ class="function">imagecreatetruecolor</span>，需要 GD2。
 这是配置指令的简短说明。
 
 `gd.jpeg_ignore_warning` <span class="type">bool</span>  
-Ignore warnings created by <span class="function">jpeg2wbmp</span> and
-<span class="function">imagecreatefromjpeg</span>
+Ignore warnings (but not errors) created by libjpeg(-turbo).
 
-See also the <a href="/exif/setup.html#运行时配置" class="link">exif</a>
-configuration directives.
+| 版本  | 说明                                           |
+|-------|------------------------------------------------|
+| 7.1.0 | gd.jpeg\_ignore\_warning 默认值从 0 变更为 1。 |
+
+参见 <a href="/exif/setup.html#运行时配置" class="link">exif</a> 配置。
 
 **Warning**
 
-Image functions are very memory intensive. Be sure to set
+图片处理函数相当占用内存，请确保你的
 <a href="/ini/core.html#ini.memory-limit" class="link">memory_limit</a>
-high enough.
+设置。
 
 资源类型
 --------
