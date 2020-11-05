@@ -231,14 +231,6 @@ about Firebird is available at
 >
 > This extension supports InterBase versions 6 and up and Firebird
 > version 2.0 and up.
->
-> This database uses a single quote (') character for escaping add to
-> your `php.ini` the following directive(Deprecated in PHP 5.3.0.
-> Removed in PHP 5.4.0):
->
-> ``` php.ini
-> magic_quotes_sybase = On
-> ```
 
 安装／配置
 ==========

@@ -9860,15 +9860,15 @@ class="methodparam"><span class="type">int</span> `$mode`</span> )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">bind\_param</span> ( <span
 class="methodparam"><span class="type">string</span> `$types`</span> ,
-<span class="methodparam"><span class="type">mixed</span>
-`&$var1`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `&$...`</span> \] )
+<span class="methodparam"><span class="type">mixed</span> `&$var`</span>
+, <span class="methodparam"><span class="type">mixed</span>
+`&$vars`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">bind\_result</span> ( <span
-class="methodparam"><span class="type">mixed</span> `&$var1`</span> \[,
-<span class="methodparam"><span class="type">mixed</span> `&$...`</span>
-\] )
+class="methodparam"><span class="type">mixed</span> `&$var`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`&$vars`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">close</span> ( <span
@@ -10228,9 +10228,9 @@ Binds variables to a prepared statement as parameters
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">mysqli\_stmt::bind\_param</span> ( <span
 class="methodparam"><span class="type">string</span> `$types`</span> ,
-<span class="methodparam"><span class="type">mixed</span>
-`&$var1`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `&$...`</span> \] )
+<span class="methodparam"><span class="type">mixed</span> `&$var`</span>
+, <span class="methodparam"><span class="type">mixed</span>
+`&$vars`</span> )
 
 过程化风格
 
@@ -10239,9 +10239,9 @@ class="methodname">mysqli\_stmt\_bind\_param</span> ( <span
 class="methodparam"><span class="type">mysqli\_stmt</span>
 `$stmt`</span> , <span class="methodparam"><span
 class="type">string</span> `$types`</span> , <span
-class="methodparam"><span class="type">mixed</span> `&$var1`</span> \[,
-<span class="methodparam"><span class="type">mixed</span> `&$...`</span>
-\] )
+class="methodparam"><span class="type">mixed</span> `&$var`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`&$vars`</span> )
 
 Bind variables for the parameter markers in the SQL statement that was
 passed to <span class="function">mysqli\_prepare</span>.
@@ -10280,7 +10280,8 @@ for the corresponding bind variables:
 | s         | corresponding variable has type string                       |
 | b         | corresponding variable is a blob and will be sent in packets |
 
-`var1`  
+`var`  
+`vars`  
 The number of variables and length of string `types` must match the
 parameters in the statement.
 
@@ -10393,9 +10394,9 @@ Binds variables to a prepared statement for result storage
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">mysqli\_stmt::bind\_result</span> ( <span
-class="methodparam"><span class="type">mixed</span> `&$var1`</span> \[,
-<span class="methodparam"><span class="type">mixed</span> `&$...`</span>
-\] )
+class="methodparam"><span class="type">mixed</span> `&$var`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`&$vars`</span> )
 
 过程化风格
 
@@ -10403,14 +10404,14 @@ class="methodparam"><span class="type">mixed</span> `&$var1`</span> \[,
 class="methodname">mysqli\_stmt\_bind\_result</span> ( <span
 class="methodparam"><span class="type">mysqli\_stmt</span>
 `$stmt`</span> , <span class="methodparam"><span
-class="type">mixed</span> `&$var1`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `&$...`</span> \] )
+class="type">mixed</span> `&$var`</span> , <span
+class="methodparam"><span class="type">mixed</span> `&$vars`</span> )
 
 Binds columns in the result set to variables.
 
 When <span class="function">mysqli\_stmt\_fetch</span> is called to
 fetch data, the MySQL client/server protocol places the data for the
-bound columns into the specified variables `var1, ...`.
+bound columns into the specified variables `var`/`vars`.
 
 > **Note**:
 >
@@ -10430,8 +10431,11 @@ bound columns into the specified variables `var1, ...`.
 仅以过程化样式：由 <span class="function">mysqli\_stmt\_init</span>
 返回的 statement 标识。
 
-`var1`  
-The variable to be bound.
+`var`  
+The first variable to be bound.
+
+`vars`  
+Further variables to be bound.
 
 ### 返回值
 
@@ -38502,7 +38506,7 @@ candidates down to one for statement execution.
 <td><p>One or more node groups must be defined. A node group can have an arbitrary user defined name. The name is used in combination with a SQL hint to restrict query execution to the nodes listed for the node group. To run a query on any of the servers of a node group, the query must begin with the SQL hint <em>/*user defined node group name*/</em>. Please note, no white space is allowed around <em>user defined node group name</em>. Because <em>user defined node group name</em> is used as-is as part of a SQL hint, you should choose the name that is compliant with the SQL language.</p>
 <p>Each node group entry must contain a list of <em>master</em> servers. Additional <em>slave</em> servers are allowed. Failing to provide a list of <em>master</em> for a node group <em>name_of_group</em> may cause an error of type <strong><code>E_RECOVERABLE_ERROR</code></strong> like <em>(mysqlnd_ms) No masters configured in node group 'name_of_group' for 'node_groups' filter</em>.</p>
 <p>The list of master and slave servers must reference corresponding entries in the <a href="/set/mysqlinfo.html#" class="link">global master</a> respectively <a href="/set/mysqlinfo.html#" class="link">slave</a> server list. Referencing an unknown server in either of the both server lists may cause an <strong><code>E_RECOVERABLE_ERROR</code></strong> error like <em>(mysqlnd_ms) Unknown master 'server_alias_name' (section 'name_of_group') in 'node_groups' filter configuration</em>.</p>
-<div id="example-2149" class="example">
+<div id="example-2012" class="example">
 <p><strong>示例 #23 Manual partitioning</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -38591,7 +38595,7 @@ file is the combination of eventual consistency and maximum slave lag.
 <td><p>Request eventual consistency. Allows the use of all master and slave servers. Data returned may or may not be current.</p>
 <p>Eventual consistency accepts an optional <em>age</em> parameter. If <em>age</em> is given the plugin considers only slaves for reading for which MySQL replication reports a slave lag less or equal to <em>age</em>. The replication lag is measure using <em>SHOW SLAVE STATUS</em>. If the plugin fails to fetch the replication lag, the slave tested is skipped. Implementation details and tips are given in the <a href="/set/mysqlinfo.html#Service%20level%20and%20consistency" class="link">quality of service concepts section</a>.</p>
 <p>Please note, if a filter chain generates an empty slave list and the PHP configuration directive <em>mysqlnd_ms.multi_master=0</em> is used, the plugin may emit a warning.</p>
-<div id="example-2150" class="example">
+<div id="example-2013" class="example">
 <p><strong>示例 #24 Global limit on slave lag</strong></p>
 <div class="example-contents">
 <div class="inicode">

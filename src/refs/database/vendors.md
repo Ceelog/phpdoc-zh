@@ -44,11 +44,6 @@
     -   [安装／配置](/book/ibm-db2.html#安装／配置)
     -   [预定义常量](/book/ibm-db2.html#预定义常量)
     -   [IBM DB2 函数](/book/ibm-db2.html#IBM%20DB2%20函数)
--   [Informix](/book/ifx.html)
-    -   [简介](/book/ifx.html#简介)
-    -   [安装／配置](/book/ifx.html#安装／配置)
-    -   [预定义常量](/book/ifx.html#预定义常量)
-    -   [Informix 函数](/book/ifx.html#Informix%20函数)
 -   [Ingres](/book/ingres.html) — Ingres DBMS, EDBC, and Enterprise
     Access Gateways
     -   [简介](/book/ingres.html#简介)
@@ -56,12 +51,6 @@
     -   [预定义常量](/book/ingres.html#预定义常量)
     -   [范例](/book/ingres.html#范例)
     -   [Ingres 函数](/book/ingres.html#Ingres%20函数)
--   [MaxDB](/book/maxdb.html)
-    -   [简介](/book/maxdb.html#简介)
-    -   [安装／配置](/book/maxdb.html#安装／配置)
-    -   [预定义常量](/book/maxdb.html#预定义常量)
-    -   [范例](/book/maxdb.html#范例)
-    -   [MaxDB 函数](/book/maxdb.html#MaxDB%20函数)
 -   [Mongo](/book/mongo.html) — MongoDB 驱动（旧版）
     -   [安装／配置](/book/mongo.html#安装／配置)
     -   [预定义常量](/book/mongo.html#预定义常量)

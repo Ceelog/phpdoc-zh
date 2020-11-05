@@ -370,9 +370,9 @@ class="type">int</span> `$comp_flags`<span class="initializer"> =
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setEncryptionIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$method`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$password`</span> \] )
+<span class="methodparam"><span class="type">int</span> `$method`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$password`</span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setEncryptionName</span> ( <span
@@ -2386,9 +2386,9 @@ Set the encryption method of an entry defined by its index
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">ZipArchive::setEncryptionIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$method`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$password`</span> \] )
+<span class="methodparam"><span class="type">int</span> `$method`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$password`</span> \] )
 
 Set the encryption method of an entry defined by its index.
 

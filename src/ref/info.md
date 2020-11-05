@@ -1198,7 +1198,8 @@ get\_loaded\_extensions
 <span class="type">array</span> <span
 class="methodname">get\_loaded\_extensions</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$zend_extensions`<span class="initializer"> = false</span></span> \] )
+`$zend_extensions`<span class="initializer"> = **`FALSE`**</span></span>
+\] )
 
 该函数返回了 PHP 解析器里所有编译并加载的模块名。
 
@@ -1211,12 +1212,6 @@ class="methodparam"><span class="type">bool</span>
 ### 返回值
 
 返回所有模块名的一个索引数组(array)。
-
-### 更新日志
-
-| 版本  | 说明                                  |
-|-------|---------------------------------------|
-| 5.2.4 | 添加了可选的 `zend_extensions` 参数。 |
 
 ### 范例
 

@@ -150,8 +150,6 @@
     -   [$\_COOKIE](/reserved/variables/cookies.html) — HTTP Cookies
     -   [$php\_errormsg](/reserved/variables/phperrormsg.html) —
         前一个错误信息
-    -   [$HTTP\_RAW\_POST\_DATA](/reserved/variables/httprawpostdata.html)
-        — 原生POST数据
     -   [$http\_response\_header](/reserved/variables/httpresponseheader.html)
         — HTTP 响应头
     -   [$argc](/reserved/variables/argc.html) — 传递给脚本的参数数目

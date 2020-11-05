@@ -715,25 +715,6 @@ echo $php_errormsg;
 
 -   <span class="function">error\_get\_last</span>
 
-$HTTP\_RAW\_POST\_DATA
-======================
-
-原生POST数据
-
-### 说明
-
-**Warning**
-
-This feature was *DEPRECATED* in PHP 5.6.0, and *REMOVED* as of PHP
-7.0.0.
-
-`$HTTP_RAW_POST_DATA` 包含 POST 提交的原始数据。参见
-<a href="/ini/core.html#ini.always-populate-raw-post-data" class="link">always_populate_raw_post_data</a>
-
-一般而言，使用
-<a href="/wrappers/php.html#wrappers.php.input" class="link"><em>php://input</em></a>
-代替 `$HTTP_RAW_POST_DATA`。
-
 $http\_response\_header
 =======================
 
@@ -891,8 +872,6 @@ var_dump($argv);
 -   [$\_COOKIE](/reserved/variables/cookies.html) — HTTP Cookies
 -   [$php\_errormsg](/reserved/variables/phperrormsg.html) —
     前一个错误信息
--   [$HTTP\_RAW\_POST\_DATA](/reserved/variables/httprawpostdata.html) —
-    原生POST数据
 -   [$http\_response\_header](/reserved/variables/httpresponseheader.html)
     — HTTP 响应头
 -   [$argc](/reserved/variables/argc.html) — 传递给脚本的参数数目

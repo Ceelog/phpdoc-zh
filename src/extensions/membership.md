@@ -143,8 +143,6 @@
 
 -   <a href="/book/ibase.html" class="xref">Firebird/InterBase</a>
 
--   <a href="/book/ifx.html" class="xref">Informix</a>
-
 -   <a href="/book/imap.html" class="xref">IMAP</a>
 
 -   <a href="/book/ldap.html" class="xref">LDAP</a>
@@ -269,8 +267,6 @@ PECL 扩展存在，但是在 PHP 手册中尚未有文档。
 -   <a href="/book/lzf.html" class="xref">LZF</a>
 
 -   <a href="/book/mailparse.html" class="xref">Mailparse</a>
-
--   <a href="/book/maxdb.html" class="xref">MaxDB</a>
 
 -   <a href="/book/memcache.html" class="xref">Memcache</a>
 
