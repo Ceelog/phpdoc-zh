@@ -3457,6 +3457,40 @@ var_dump(get_class($child->ownerDocument));
     string(13) "myDOMDocument"
     string(18) "myOtherDOMDocument"
 
+**示例 \#4 Custom objects are transient**
+
+**Caution**
+
+Objects of the registered node classes are transient, i.e. they are
+destroyed when they are no longer referenced from PHP code, and
+recreated when being retrieved again. That implies that custom property
+values will be lost after recreation.
+
+``` php
+<?php
+class MyDOMElement extends DOMElement
+{
+    public $myProp = 'default value';
+}
+
+$doc = new DOMDocument();
+$doc->registerNodeClass('DOMElement', 'MyDOMElement');
+
+$node = $doc->createElement('a');
+$node->myProp = 'modified value';
+$doc->appendChild($node);
+
+echo $doc->childNodes[0]->myProp, PHP_EOL;
+unset($node);
+echo $doc->childNodes[0]->myProp, PHP_EOL;
+?>
+```
+
+以上例程会输出：
+
+    modified value
+    default value
+
 DOMDocument::relaxNGValidate
 ============================
 
