@@ -3558,7 +3558,7 @@ class="methodparam"><span class="type">int</span> `$offset`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = **`NULL`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$preserve_keys`<span
-class="initializer"> = false</span></span> \]\] )
+class="initializer"> = **`FALSE`**</span></span> \]\] )
 
 <span class="function">array\_slice</span> 返回根据 `offset` 和 `length`
 参数所指定的 `array` 数组中的一段序列。
@@ -3569,19 +3569,29 @@ class="initializer"> = false</span></span> \]\] )
 输入的数组。
 
 `offset`  
-如果 `offset` 非负，则序列将从 `array` 中的此偏移量开始。如果 `offset`
-为负，则序列将从 `array` 中距离末端这么远的地方开始。
+如果 `offset` 非负，则序列将从 `array` 中的此偏移量开始。
+
+如果 `offset` 为负，则序列将从 `array` 中距离末端这么远的地方开始。
+
+> **Note**:
+>
+> 参数 `offset` 标识的是数组中的位置，而不是键。
 
 `length`  
-如果给出了 `length` 并且为正，则序列中将具有这么多的单元。如果给出了
-`length`
-并且为负，则序列将终止在距离数组末端这么远的地方。如果省略，则序列将从
-`offset` 开始一直到 `array` 的末端。
+如果给出了 `length` 并且为正，则序列中将具有这么多的单元。
+
+如果 array 比 `length` 要短，只会保留有效的数组单元。
+
+如果给出了 `length` 并且为负，则序列将终止在距离数组末端这么远的地方。
+
+如果省略，则序列将从 `offset` 开始一直到 `array` 的末端。
 
 `preserve_keys`  
-注意 <span class="function">array\_slice</span>
-默认会重新排序并重置数组的数字索引。你可以通过将 `preserve_keys` 设为
-**`TRUE`** 来改变此行为。
+> **Note**:
+>
+> 注意 <span class="function">array\_slice</span>
+> 默认会重新排序并重置数组的数字索引。你可以通过将 `preserve_keys` 设为
+> **`TRUE`** 来改变此行为。 无论本参数如何设置，都会保留字符串的键。
 
 ### 返回值
 
@@ -3616,6 +3626,50 @@ print_r(array_slice($input, 2, -1, true));
     (
         [2] => c
         [3] => d
+    )
+
+**示例 \#2 <span class="function">array\_slice</span> 于索引从 1 开始的
+array**
+
+``` php
+<?php
+$input = array(1 => "a", "b", "c", "d", "e");
+print_r(array_slice($input, 1, 2));
+?>
+```
+
+以上例程会输出：
+
+    Array
+    (
+        [0] => b
+        [1] => c
+    )
+
+**示例 \#3 <span class="function">array\_slice</span> 与混合类型键的
+array**
+
+``` php
+<?php
+$ar = array('a'=>'apple', 'b'=>'banana', '42'=>'pear', 'd'=>'orange');
+print_r(array_slice($ar, 0, 3));
+print_r(array_slice($ar, 0, 3, true));
+?>
+```
+
+以上例程会输出：
+
+    Array
+    (
+        [a] => apple
+        [b] => banana
+        [0] => pear
+    )
+    Array
+    (
+        [a] => apple
+        [b] => banana
+        [42] => pear
     )
 
 ### 参见
@@ -6903,7 +6957,7 @@ sort
 class="type">int</span> `$sort_flags`<span class="initializer"> =
 SORT\_REGULAR</span></span> \] )
 
-本函数对数组进行排序。当本函数结束时数组单元将被从最低到最高重新安排。
+本函数对数组进行排序。 当本函数结束时数组单元将被从最低到最高重新安排。
 
 > **Note**:
 >
@@ -6919,8 +6973,9 @@ SORT\_REGULAR</span></span> \] )
 
 排序类型标记：
 
--   <span class="simpara">**`SORT_REGULAR`** -
-    正常比较单元（不改变类型）</span>
+-   <span class="simpara">**`SORT_REGULAR`** - 正常比较单元 详细描述参见
+    <a href="/language/operators/comparison.html" class="link">比较运算符</a>
+    章节 </span>
 -   <span class="simpara">**`SORT_NUMERIC`** -
     单元被作为数字来比较</span>
 -   <span class="simpara">**`SORT_STRING`** -
@@ -6930,8 +6985,7 @@ SORT\_REGULAR</span></span> \] )
     class="function">setlocale</span> 来改变。 </span>
 -   <span class="simpara">**`SORT_NATURAL`** - 和 <span
     class="function">natsort</span>
-    类似对每个单元以“自然的顺序”对字符串进行排序。 PHP 5.4.0
-    中新增的。</span>
+    类似对每个单元以“自然的顺序”对字符串进行排序。</span>
 -   <span class="simpara">**`SORT_FLAG_CASE`** - 能够与
     **`SORT_STRING`** 或 **`SORT_NATURAL`** 合并（OR
     位运算），不区分大小写排序字符串。</span>
@@ -6965,8 +7019,8 @@ foreach ($fruits as $key => $val) {
 
 fruits 被按照字母顺序排序。
 
-**示例 \#2 使用不区分大小写自然排序的 <span class="function">sort</span>
-例子**
+**示例 \#2 使用 <span class="function">sort</span>
+不区分大小写自然排序的例子**
 
 ``` php
 <?php
@@ -7005,12 +7059,14 @@ fruits 排序得像 <span class="function">natcasesort</span> 的结果。
 
 **Warning**
 
-在对含有混合类型值的数组排序时要小心，因为 <span
-class="function">sort</span> 可能会产生不可预知的结果。
+在对含有混合类型值的数组 以 `sort_flags` 为 **`SORT_REGULAR`**
+排序时要小心，因为 <span class="function">sort</span>
+可能会产生不可预知的结果。
 
 ### 参见
 
 -   <span class="function">asort</span>
+-   <span class="function">rsort</span>
 -   <a href="/array/sorting.html" class="link">数组排序函数对比</a>
 
 uasort
