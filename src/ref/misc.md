@@ -127,7 +127,8 @@ define
 `$name`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$value`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$case_insensitive`<span class="initializer"> = false</span></span> \] )
+`$case_insensitive`<span class="initializer"> =
+**`FALSE`**</span></span> \] )
 
 在运行时定义一个常量。
 
@@ -136,9 +137,15 @@ class="methodparam"><span class="type">bool</span>
 `name`  
 常量名。
 
+> **Note**:
+>
+> 可以用 <span class="function">define</span>
+> 定义保留关键词甚至无效名称的常量，并且可以（仅可以）通过 <span
+> class="function">constant</span> 获取值。 不过，不推荐这么做。
+
 `value`  
 常量的值；在 PHP 5 中，`value` 必须是标量( <span
-class="type">integer</span>、 <span class="type">float</span>、<span
+class="type">int</span>、 <span class="type">float</span>、<span
 class="type">string</span>、<span
 class="type">boolean</span>、**`NULL`**）在 PHP 7 中还允许是个 <span
 class="type">array</span> 的值。
@@ -151,6 +158,9 @@ class="type">array</span> 的值。
 如果设置为 **`TRUE`**，该常量则大小写不敏感。默认是大小写敏感的。比如，
 *CONSTANT* 和 *Constant* 代表了不同的值。
 
+**Warning**
+PHP 7.3.0 起废弃了定义大小写不敏感的常量。
+
 > **Note**:
 >
 > 大小写不敏感的常量以小写的方式储存。
@@ -161,9 +171,10 @@ class="type">array</span> 的值。
 
 ### 更新日志
 
-| 版本  | 说明                                        |
-|-------|---------------------------------------------|
-| 7.0.0 | 允许 <span class="type">array</span> 的值。 |
+| 版本  | 说明                                               |
+|-------|----------------------------------------------------|
+| 7.3.0 | 废弃了 `case_insensitive`，并将在 8.0.0 版中移除。 |
+| 7.0.0 | 允许 <span class="type">array</span> 的值。        |
 
 ### 范例
 
@@ -190,11 +201,33 @@ echo ANIMALS[1]; // 输出 "cat"
 ?>
 ```
 
+**示例 \#2 以保留名称定义常量**
+
+本例子说明了以
+<a href="/language/constants/predefined.html" class="link">魔术常量</a>
+相同名称定义常量的*能力*。 由于行为结果过于令人迷惑，所以实践中不推荐。
+
+``` php
+<?php
+var_dump(defined('__LINE__'));
+var_dump(define('__LINE__', 'test'));
+var_dump(constant('__LINE__'));
+var_dump(__LINE__);
+?>
+```
+
+以上例程会输出：
+
+    bool(false)
+    bool(true)
+    string(4) "test"
+    int(5)
+
 ### 参见
 
 -   <span class="function">defined</span>
 -   <span class="function">constant</span>
--   <a href="/language/constants.html" class="link">Constants</a>这一节
+-   <a href="/language/constants.html" class="link">常量</a>这一节
 
 defined
 =======
@@ -379,7 +412,7 @@ exit
 如果 `status` 是一个字符串，在退出之前该函数会打印 `status` 。
 
 如果 `status` 是一个 <span
-class="type">integer</span>，该值会作为退出状态码，并且不会被打印输出。
+class="type">int</span>，该值会作为退出状态码，并且不会被打印输出。
 退出状态码应该在范围0至254，不应使用被PHP保留的退出状态码255。
 状态码0用于成功中止程序。
 
@@ -726,7 +759,7 @@ highlight_string('<?php phpinfo(); ?>');
 hrtime
 ======
 
-Get the system's high resolution time
+获取系统的高精度时间
 
 ### 说明
 
@@ -735,26 +768,23 @@ Get the system's high resolution time
 `$get_as_number`<span class="initializer"> = **`FALSE`**</span></span>
 \] )
 
-Returns the system's high resolution time, counted from an arbitrary
-point in time. The delivered timestamp is monotonic and can not be
-adjusted.
+从任意时间点开始统计，返回系统的高精度时间（high resolution time）。
+获取的时间戳为单调时间，无法被用户调整。
 
 ### 参数
 
 `get_as_number`  
-Whether the high resolution time should be returned as <span
-class="type">array</span> or number.
+以 <span class="type">array</span> 还是数字返回高精度时间。
 
 ### 返回值
 
-Returns an array of integers in the form \[seconds, nanoseconds\], if
-the parameter `get_as_number` is false. Otherwise the nanoseconds are
-returned as <span class="type">int</span> (64bit platforms) or <span
-class="type">float</span> (32bit platforms).
+参数 `get_as_number` 为 false 时，返回的整型数组格式为 \[seconds,
+nanoseconds\]。 否则会以 <span class="type">int</span> （64 位平台）或
+<span class="type">float</span> （32 位平台）返回奈秒（nanoseconds）。
 
 ### 范例
 
-**示例 \#1 <span class="function">hrtime</span> usage**
+**示例 \#1 <span class="function">hrtime</span> 的用法**
 
 ``` php
 <?php
@@ -774,9 +804,7 @@ print_r(hrtime());
 
 ### 参见
 
--   The
-    <a href="/book/hrtime.html" class="link">High resolution timing</a>
-    extension
+-   <a href="/book/hrtime.html" class="link">高精度记时</a> 扩展
 -   <span class="function">microtime</span>
 
 ignore\_user\_abort
@@ -1451,12 +1479,6 @@ API常量**`WAIT_IO_COMPLETION`**的值）。其他平台上，该返回值是�
 如果指定的 `seconds` 是负数，该函数会产生一个 **`E_WARNING`**
 级别的错误。
 
-### 更新日志
-
-| 版本  | 说明                                                                                                             |
-|-------|------------------------------------------------------------------------------------------------------------------|
-| 5.3.4 | 在PHP 5.3.4之前，Windows平台下无论 <span class="function">sleep</span> 是否成功调用，总是会返回一个 **`NULL`**。 |
-
 ### 范例
 
 **示例 \#1 <span class="function">sleep</span> 的例子**
@@ -1971,8 +1993,7 @@ echo date('h:i:s') . "\n";
 -   [highlight\_file](/ref/misc.html#highlight_file) — 语法高亮一个文件
 -   [highlight\_string](/ref/misc.html#highlight_string) —
     字符串的语法高亮
--   [hrtime](/ref/misc.html#hrtime) — Get the system's high resolution
-    time
+-   [hrtime](/ref/misc.html#hrtime) — 获取系统的高精度时间
 -   [ignore\_user\_abort](/ref/misc.html#ignore_user_abort) —
     设置客户端断开连接时是否中断脚本的执行
 -   [pack](/ref/misc.html#pack) — 将数据打包成二进制字符串

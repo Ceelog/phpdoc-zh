@@ -29,8 +29,7 @@
         语法高亮一个文件
     -   [highlight\_string](/ref/misc.html#highlight_string) —
         字符串的语法高亮
-    -   [hrtime](/ref/misc.html#hrtime) — Get the system's high
-        resolution time
+    -   [hrtime](/ref/misc.html#hrtime) — 获取系统的高精度时间
     -   [ignore\_user\_abort](/ref/misc.html#ignore_user_abort) —
         设置客户端断开连接时是否中断脚本的执行
     -   [pack](/ref/misc.html#pack) — 将数据打包成二进制字符串

@@ -2412,39 +2412,35 @@ used. Since MySQL 5.5, the default storage engine is InnoDB. InnoDB has
 full ACID transaction support.
 
 Transactions can either be controlled using SQL or API calls. It is
-recommended to use API calls for enabling and disabling the auto commit
+recommended to use API calls for enabling and disabling the *autocommit*
 mode and for committing and rolling back transactions.
 
-**示例 \#1 Setting auto commit mode with SQL and through the API**
+**示例 \#1 Setting *autocommit* mode with SQL and through the API**
 
 ``` php
 <?php
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $mysqli = new mysqli("example.com", "user", "password", "database");
-if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
 
 /* Recommended: using API to control transactional settings */
 $mysqli->autocommit(false);
 
 /* Won't be monitored and recognized by the replication and the load balancing plugin */
-if (!$mysqli->query('SET AUTOCOMMIT = 0')) {
-    echo "Query failed: (" . $mysqli->errno . ") " . $mysqli->error;
-}
-?>
+$mysqli->query('SET AUTOCOMMIT = 0');
 ```
 
 Optional feature packages, such as the replication and load balancing
 plugin, can easily monitor API calls. The replication plugin offers
 transaction aware load balancing, if transactions are controlled with
 API calls. Transaction aware load balancing is not available if SQL
-statements are used for setting auto commit mode, committing or rolling
+statements are used for setting *autocommit* mode, committing or rolling
 back a transaction.
 
 **示例 \#2 Commit and rollback**
 
 ``` php
 <?php
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $mysqli = new mysqli("example.com", "user", "password", "database");
 $mysqli->autocommit(false);
 
@@ -2453,7 +2449,6 @@ $mysqli->rollback();
 
 $mysqli->query("INSERT INTO test(id) VALUES (2)");
 $mysqli->commit();
-?>
 ```
 
 Please note, that the MySQL server cannot roll back all statements. Some
@@ -2462,8 +2457,9 @@ statements cause an implicit commit.
 *See also*
 
 -   <span class="methodname">mysqli::autocommit</span>
--   <span class="methodname">mysqli\_result::commit</span>
--   <span class="methodname">mysqli\_result::rollback</span>
+-   <span class="methodname">mysqli::begin\_transaction</span>
+-   <span class="methodname">mysqli::commit</span>
+-   <span class="methodname">mysqli::rollback</span>
 
 Metadata
 --------
@@ -14855,6 +14851,10 @@ mysqli\_embedded\_server\_end
 
 Stop embedded server
 
+**Warning**
+
+This function was *REMOVED* in PHP 7.4.0.
+
 ### 说明
 
 面向对象风格
@@ -14880,6 +14880,10 @@ mysqli\_embedded\_server\_start
 ===============================
 
 Initialize and start embedded server
+
+**Warning**
+
+This function was *REMOVED* in PHP 7.4.0.
 
 ### 说明
 

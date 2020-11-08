@@ -18,6 +18,17 @@ class="methodparam"><span class="type">string</span> `$suffix`</span> \]
 
 给出一个包含有指向一个文件的全路径的字符串，本函数返回基本的文件名。
 
+> **Note**:
+>
+> <span class="function">basename</span> 纯粹基于输入字符串操作，
+> 它不会受实际文件系统和类似 "*..*" 的路径格式影响。
+
+**Caution**
+
+<span class="function">basename</span> 是本地化的，
+所以如果要正确处理多字节字符的路径， 需要用 <span
+class="function">setlocale</span> 正确设置匹配的 locale。
+
 ### 参数
 
 `path`  
@@ -33,12 +44,6 @@ class="methodparam"><span class="type">string</span> `$suffix`</span> \]
 
 Returns the base name of the given `path`. 返回 `path` 的基本的文件名。
 
-### 更新日志
-
-| 版本  | 说明                |
-|-------|---------------------|
-| 4.1.0 | 增加了参数 `suffix` |
-
 ### 范例
 
 **示例 \#1 <span class="function">basename</span> 例子**
@@ -46,35 +51,22 @@ Returns the base name of the given `path`. 返回 `path` 的基本的文件名�
 ``` php
 <?php
 echo "1) ".basename("/etc/sudoers.d", ".d").PHP_EOL;
-echo "2) ".basename("/etc/passwd").PHP_EOL;
-echo "3) ".basename("/etc/").PHP_EOL;
-echo "4) ".basename(".").PHP_EOL;
-echo "5) ".basename("/");
+echo "2) ".basename("/etc/sudoers.d").PHP_EOL;
+echo "3) ".basename("/etc/passwd").PHP_EOL;
+echo "4) ".basename("/etc/").PHP_EOL;
+echo "5) ".basename(".").PHP_EOL;
+echo "6) ".basename("/");
 ?>
 ```
 
 以上例程会输出：
 
     1) sudoers
-    2) passwd
-    3) etc
-    4) .
-    5) 
-
-### 注释
-
-> **Note**:
->
-> <span class="function">basename</span> operates naively on the input
-> string, and is not aware of the actual filesystem, or path components
-> such as "*..*".
-
-> **Note**:
->
-> <span class="function">basename</span> is locale aware, so for it to
-> see the correct basename with multibyte character paths, the matching
-> locale must be set using the <span class="function">setlocale</span>
-> function.
+    2) sudoers.d
+    3) passwd
+    4) etc
+    5) .
+    6) 
 
 ### 参见
 
@@ -427,13 +419,6 @@ class="function">stream\_context\_create</span>.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
-### 更新日志
-
-| 版本  | 说明                                                                                                              |
-|-------|-------------------------------------------------------------------------------------------------------------------|
-| 5.3.0 | 增加了对 context 的支持。                                                                                         |
-| 4.3.0 | 如果启用了“fopen wrappers”的话，`source` 和 `dest` 都可以是 URL。更多细节见 <span class="function">fopen</span>。 |
-
 ### 范例
 
 **示例 \#1 <span class="function">copy</span> 例子**
@@ -483,9 +468,23 @@ dirname
 
 <span class="type">string</span> <span class="methodname">dirname</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$path`</span> )
+`$path`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$levels`<span class="initializer"> =
+1</span></span> \] )
 
-给出一个包含有指向一个文件的全路径的字符串，本函数返回去掉文件名后的目录名。
+给出一个包含有指向一个文件的全路径的字符串，本函数返回去掉文件名后的目录名，且目录深度为
+`levels` 级。
+
+> **Note**:
+>
+> <span class="function">dirname</span> 纯粹基于输入字符串操作，
+> 它不会受实际文件系统和类似 "*..*" 的路径格式影响。
+
+**Caution**
+
+<span class="function">dirname</span>
+是本地化的，所以如果要正确处理多字节字符的路径，需要用 <span
+class="function">setlocale</span> 正确设置匹配的 locale。
 
 ### 参数
 
@@ -495,6 +494,11 @@ dirname
 在 Windows
 中，斜线（*/*）和反斜线（*\\*）都可以用作目录分隔符。在其它环境下是斜线（*/*）。
 
+`levels`  
+要向上的父目录数量。
+
+整型，必须大于 0。
+
 ### 返回值
 
 返回 path 的父目录。 如果在 `path`
@@ -503,10 +507,9 @@ dirname
 
 ### 更新日志
 
-| 版本  | 说明                                                                            |
-|-------|---------------------------------------------------------------------------------|
-| 5.0.0 | <span class="function">dirname</span> 的操作从 PHP 5.0.0 版开始是二进制安全的。 |
-| 4.0.3 | 在这个版本中，<span class="function">dirname</span> 被修正为 POSIX 兼容。       |
+| 版本  | 说明                       |
+|-------|----------------------------|
+| 7.0.0 | 添加可选的 `levels` 参数。 |
 
 ### 范例
 
@@ -514,48 +517,20 @@ dirname
 
 ``` php
 <?php
-echo "1) " . dirname("/etc/passwd") . PHP_EOL; // 1) /etc
-echo "2) " . dirname("/etc/") . PHP_EOL; // 2) / (or \ on Windows)
-echo "3) " . dirname("."); // 3) .
-?>
+echo dirname("/etc/passwd") . PHP_EOL;
+echo dirname("/etc/") . PHP_EOL;
+echo dirname(".") . PHP_EOL;
+echo dirname("C:\\") . PHP_EOL;
+echo dirname("/usr/local/lib", 2);
 ```
 
-### 注释
+以上例程的输出类似于：
 
-> **Note**:
->
-> <span class="function">dirname</span> operates naively on the input
-> string, and is not aware of the actual filesystem, or path components
-> such as "*..*".
-
-> **Note**:
->
-> <span class="function">dirname</span> is locale aware, so for it to
-> see the correct directory name with multibyte character paths, the
-> matching locale must be set using the <span
-> class="function">setlocale</span> function.
-
-> **Note**:
->
-> Since PHP 4.3.0, you will often get a slash or a dot back from <span
-> class="function">dirname</span> in situations where the older
-> functionality would have given you the empty string.
-
-检查下面发生变化的例子：
-
-``` php
-<?php
-
-// PHP 4.3.0 以前
-dirname('c:/'); // 返回 '.'
-
-// PHP 4.3.0 以后
-dirname('c:/x'); // 返回 'c:'
-dirname('c:/Temp/x'); // 返回 'c:/Temp'
-dirname('/x'); // 返回 '\'
-
-?>
-```
+    /etc
+    / (or \ on Windows)
+    .
+    C:\
+    /usr
 
 ### 参见
 
@@ -1036,25 +1011,12 @@ class="function">fclose</span> 关闭)。
 1 字节后停止（看先碰到那一种情况）。如果没有指定 `length`，则默认为
 1K，或者说 1024 字节。
 
-> **Note**:
->
-> 从 PHP 4.3 开始，忽略掉 length 则行的长度被假定为
-> 1024，将继续从流中读取数据直到行结束。如果文件中的大多数行都大于
-> 8KB，则在脚本中指定最大行的长度在利用资源上更为有效。
-
 ### 返回值
 
 从指针 `handle` 指向的文件中读取了 `length` - 1 字节后返回字符串。
 如果文件指针中没有更多的数据了则返回 **`FALSE`**。
 
 错误发生时返回 **`FALSE`**。
-
-### 更新日志
-
-| 版本  | 说明                                               |
-|-------|----------------------------------------------------|
-| 4.3.0 | <span class="function">fgets</span> 开始二进制安全 |
-| 4.2.0 | `length` 参数成为可选。                            |
 
 ### 范例
 
@@ -3525,12 +3487,22 @@ class="type">int</span> `$flags`<span class="initializer"> =
 
 <span class="function">glob</span> 函数依照 libc glob()
 函数使用的规则寻找所有与 `pattern` 匹配的文件路径，类似于一般 shells
-所用的规则一样。不进行缩写扩展或参数替代。
+所用的规则一样。
 
 ### 参数
 
 `pattern`  
-The pattern. No tilde expansion or parameter substitution is done.
+匹配模式（pattern）。 不进行缩写扩展或参数替代。
+
+特殊字符：
+
+-   <span class="simpara"> *\** - 匹配零个或多个字符。 </span>
+-   <span class="simpara"> *?* - 只匹配单个字符（任意字符）。 </span>
+-   <span class="simpara"> *\[...\]* - 匹配一组字符中的一个字符。
+    如果第一个字符是 *!*，则为否定模式，
+    即匹配不在这组字符中的任意字符。 </span>
+-   <span class="simpara"> *\\* - 只要没有使用 **`GLOB_NOESCAPE`**
+    标记，该字符会转义后面的字符。 </span>
 
 `flags`  
 有效标记有：
@@ -3553,19 +3525,12 @@ The pattern. No tilde expansion or parameter substitution is done.
 
 ### 返回值
 
-返回一个包含有匹配文件／目录的数组。如果出错返回 **`FALSE`**。
+返回包含有匹配文件和目录的数组，没有匹配文件时返回空数组，出错返回
+**`FALSE`**。
 
 > **Note**:
 >
-> On some systems it is impossible to distinguish between empty match
-> and an error.
-
-### 更新日志
-
-| 版本  | 说明                                                                    |
-|-------|-------------------------------------------------------------------------|
-| 5.1.0 | **`GLOB_ERR`** was added                                                |
-| 4.3.3 | **`GLOB_ONLYDIR`** 在 Windows 或者其它不使用 GNU C 库的系统上开始可用。 |
+> 在个别操作系统上，无法区分是否为空匹配或错误。
 
 ### 范例
 
@@ -5331,17 +5296,25 @@ class="type">string</span> `$newname`</span> \[, <span
 class="methodparam"><span class="type">resource</span> `$context`</span>
 \] )
 
-尝试把 `oldname` 重命名为 `newname`。
+尝试把 `oldname` 重命名为 `newname`，必要时会在不同目录间移动。
+如果重命名文件时 `newname` 已经存在，将会覆盖掉它。 如果重命名文件夹时
+`newname` 已经存在，本函数将导致一个警告。
 
 ### 参数
 
 `oldname`  
+原名
+
 > **Note**:
 >
 > 用于 `oldname` 中的封装协议*必须*和用于 `newname` 中的相匹配。
 
 `newname`  
 新的名字。
+
+> **Note**: <span class="simpara"> 在 Windows 上如果 `newname`
+> 已经存在，它必须被覆盖。否则 <span class="function">rename</span>
+> 将失败并导致 **`E_WARNING`**。 </span>
 
 `context`  
 > **Note**: <span class="simpara">在 PHP 5.0.0
@@ -5351,14 +5324,6 @@ class="methodparam"><span class="type">resource</span> `$context`</span>
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
-
-### 更新日志
-
-| 版本  | 说明                                                                                                                                                                                                                                                                                                        |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.1 | 可以在 Windows 上跨驱动器 <span class="function">rename</span> 文件。                                                                                                                                                                                                                                       |
-| 5.0.0 | <span class="function">rename</span> 也可用于*某些* URL 封装协议。参见<a href="/wrappers.html" class="xref">支持的协议和封装协议</a> 的列表看看 <span class="function">rename</span> 支持哪些 URL 封装协议。                                                                                                |
-| 4.3.3 | 在有适当权限的时候 <span class="function">rename</span> 已经能够在基于 \*nix 的系统中跨磁盘分区重命名文件。Warnings may be generated if the destination filesystem doesn't permit *chown()* or *chmod()* system calls to be made on files — for example, if the destination filesystem is a FAT filesystem. |
 
 ### 范例
 
@@ -5839,12 +5804,6 @@ class="type">int</span> `$atime`</span> \]\] )
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
-### 更新日志
-
-| 版本  | 说明                                    |
-|-------|-----------------------------------------|
-| 5.3.0 | 能够修改 Windows 下目录的最后修改时间。 |
-
 ### 范例
 
 **示例 \#1 <span class="function">touch</span> 例子**
@@ -5968,9 +5927,9 @@ class="type">resource</span> `$context`</span> \] )
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                                                                     |
-|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.0.0 | 自 PHP 5.0.0 起 <span class="function">unlink</span> 也可以用于*某些* URL 封装协议。参考<a href="/wrappers.html" class="xref">支持的协议和封装协议</a> 中的列表看哪些封装协议支持 <span class="function">unlink</span>。 |
+| 版本  | 说明                                                                                                                                                                         |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.3.0 | 现在 Windows 也可以用 <span class="function">unlink</span> 删除文件句柄还在使用中的文件了，在此之前是无法删除的。 然而，还是无法重新创建文件，需要等到所有句柄都关闭才可以。 |
 
 ### 范例
 

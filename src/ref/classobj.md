@@ -996,7 +996,7 @@ is\_a
 ### 说明
 
 <span class="type">bool</span> <span class="methodname">is\_a</span> (
-<span class="methodparam"><span class="type">object</span>
+<span class="methodparam"><span class="type">mixed</span>
 `$object`</span> , <span class="methodparam"><span
 class="type">string</span> `$class_name`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$allow_string`<span
@@ -1007,20 +1007,19 @@ class="initializer"> = **`FALSE`**</span></span> \] )
 ### 参数
 
 `object`  
-The tested object
+类名或者实例对象。
 
 `class_name`  
-The class name
+类名
 
 `allow_string`  
-If this parameter set to **`FALSE`**, string class name as `object` is
-not allowed. This also prevents from calling autoloader if the class
-doesn't exist.
+如果本参数设置为 **`FALSE`**，`object` 就不允许传入字符串类名。
+这也会在类不存在时，阻止调用自动加载器（autoloader）。
 
 ### 返回值
 
-Returns **`TRUE`** if the object is of this class or has this class as
-one of its parents, **`FALSE`** otherwise.
+如果对象属于该类或该类是此对象的父类时返回 **`TRUE`**，否则返回
+**`FALSE`**。
 
 ### 范例
 

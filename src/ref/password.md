@@ -78,7 +78,8 @@ password\_hash
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">password\_hash</span> ( <span
 class="methodparam"><span class="type">string</span> `$password`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -123,22 +124,22 @@ class="function">password\_hash</span>。
     盐值（salt）选项从 PHP 7.0.0 开始被废弃（deprecated）了。
     现在最好选择简单的使用默认产生的盐值。
 
--   *cost* (<span class="type">integer</span>) - 代表算法使用的
-    cost。<span class="function">crypt</span> 页面上有 cost 值的例子。
+-   *cost* (<span class="type">int</span>) - 代表算法使用的 cost。<span
+    class="function">crypt</span> 页面上有 cost 值的例子。
 
     省略时，默认值是 *10*。 这个 cost
     是个不错的底线，但也许可以根据自己硬件的情况，加大这个值。
 
 **`PASSWORD_ARGON2I`** 和 **`PASSWORD_ARGON2ID`** 支持的选项：
 
--   *memory\_cost* (<span class="type">integer</span>) - 计算 Argon2
+-   *memory\_cost* (<span class="type">int</span>) - 计算 Argon2
     散列时的最大内存（单位：KB）。默认值：
     **`PASSWORD_ARGON2_DEFAULT_MEMORY_COST`**。
 
--   *time\_cost* (<span class="type">integer</span>) - 计算 Argon2
+-   *time\_cost* (<span class="type">int</span>) - 计算 Argon2
     散列时最多的时间。默认值： **`PASSWORD_ARGON2_DEFAULT_TIME_COST`**。
 
--   *threads* (<span class="type">integer</span>) - 计算 Argon2
+-   *threads* (<span class="type">int</span>) - 计算 Argon2
     散列时最多的线程数。默认值： **`PASSWORD_ARGON2_DEFAULT_THREADS`**。
 
 ### 参数

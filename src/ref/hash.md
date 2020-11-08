@@ -15,18 +15,16 @@ class="methodparam">void</span> )
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                            |
-|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0 | 加入 sha512/224，sha512/256，sha3-224，sha3-256，sha3-384 以及 sha3-512 算法的支持。                                                                                            |
-| 5.6.0 | 加入对 gost-crypto 算法的支持。 参照 <a href="http://www.faqs.org/rfcs/rfc4357" class="link external">» RFC 4357，11.2 小节</a> 定义的 CryptoPro S-box 表格实现 GOST 哈希函数。 |
-| 5.4.0 | 加入对于 joaat，fnv132 和 fnv164 算法的支持。移除 Salsa10 和 Salsa20 算法。                                                                                                     |
-| 5.3.0 | 加入对 md2，ripemd256，ripemd320，salsa10，salsa20，snefru256 和 sha224 哈希算法的支持。                                                                                        |
+| 版本  | 说明                                                                                 |
+|-------|--------------------------------------------------------------------------------------|
+| 7.4.0 | 支持 crc32c。                                                                        |
+| 7.1.0 | 加入 sha512/224，sha512/256，sha3-224，sha3-256，sha3-384 以及 sha3-512 算法的支持。 |
 
 ### 范例
 
 **示例 \#1 <span class="function">hash\_algos</span> 例程**
 
-在 PHP 5.6.0 中，<span class="function">hash\_algos</span>
+在 PHP 7.4.0 中，<span class="function">hash\_algos</span>
 会返回下表所示的算法清单：
 
 ``` php
@@ -46,45 +44,52 @@ print_r(hash_algos());
         [4] => sha224
         [5] => sha256
         [6] => sha384
-        [7] => sha512
-        [8] => ripemd128
-        [9] => ripemd160
-        [10] => ripemd256
-        [11] => ripemd320
-        [12] => whirlpool
-        [13] => tiger128,3
-        [14] => tiger160,3
-        [15] => tiger192,3
-        [16] => tiger128,4
-        [17] => tiger160,4
-        [18] => tiger192,4
-        [19] => snefru
-        [20] => snefru256
-        [21] => gost
-        [22] => gost-crypto
-        [23] => adler32
-        [24] => crc32
-        [25] => crc32b
-        [26] => fnv132
-        [27] => fnv1a32
-        [28] => fnv164
-        [29] => fnv1a64
-        [30] => joaat
-        [31] => haval128,3
-        [32] => haval160,3
-        [33] => haval192,3
-        [34] => haval224,3
-        [35] => haval256,3
-        [36] => haval128,4
-        [37] => haval160,4
-        [38] => haval192,4
-        [39] => haval224,4
-        [40] => haval256,4
-        [41] => haval128,5
-        [42] => haval160,5
-        [43] => haval192,5
-        [44] => haval224,5
-        [45] => haval256,5
+        [7] => sha512/224
+        [8] => sha512/256
+        [9] => sha512
+        [10] => sha3-224
+        [11] => sha3-256
+        [12] => sha3-384
+        [13] => sha3-512
+        [14] => ripemd128
+        [15] => ripemd160
+        [16] => ripemd256
+        [17] => ripemd320
+        [18] => whirlpool
+        [19] => tiger128,3
+        [20] => tiger160,3
+        [21] => tiger192,3
+        [22] => tiger128,4
+        [23] => tiger160,4
+        [24] => tiger192,4
+        [25] => snefru
+        [26] => snefru256
+        [27] => gost
+        [28] => gost-crypto
+        [29] => adler32
+        [30] => crc32
+        [31] => crc32b
+        [32] => crc32c
+        [33] => fnv132
+        [34] => fnv1a32
+        [35] => fnv164
+        [36] => fnv1a64
+        [37] => joaat
+        [38] => haval128,3
+        [39] => haval160,3
+        [40] => haval192,3
+        [41] => haval224,3
+        [42] => haval256,3
+        [43] => haval128,4
+        [44] => haval160,4
+        [45] => haval192,4
+        [46] => haval224,4
+        [47] => haval256,4
+        [48] => haval128,5
+        [49] => haval160,5
+        [50] => haval192,5
+        [51] => haval224,5
+        [52] => haval256,5
     )
 
 ### 参见
@@ -184,7 +189,7 @@ class="methodparam"><span class="type">string</span>
 <?php
 $expected  = crypt('12345', '$2a$07$usesomesillystringforsalt$');
 $correct   = crypt('12345', '$2a$07$usesomesillystringforsalt$');
-$incorrect = crypt('apple',  '$2a$07$usesomesillystringforsalt$');
+$incorrect = crypt('apple', '$2a$07$usesomesillystringforsalt$');
 
 var_dump(hash_equals($expected, $correct));
 var_dump(hash_equals($expected, $incorrect));
@@ -225,7 +230,8 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 ### 参数
 
 `algo`  
-要使用的哈希算法的名称，例如："md5"，"sha256"，"haval160,4" 等。
+要使用的哈希算法的名称，例如："md5"，"sha256"，"haval160,4" 等。 在
+<span class="function">hash\_algos</span> 中查看支持的算法。
 
 `filename`  
 要进行哈希运算的文件路径。支持 fopen 封装器。
@@ -976,7 +982,8 @@ class="initializer"> = **`FALSE`**</span></span> \] )
 ### 参数
 
 `algo`  
-要使用的哈希算法，例如："md5"，"sha256"，"haval160,4" 等。
+要使用的哈希算法，例如："md5"，"sha256"，"haval160,4" 等。 在 <span
+class="function">hash\_algos</span> 中查看支持的算法。
 
 `data`  
 要进行哈希运算的消息。
@@ -990,12 +997,6 @@ class="initializer"> = **`FALSE`**</span></span> \] )
 如果 `raw_output` 设置为 **`TRUE`**，
 则返回原始二进制数据表示的信息摘要， 否则返回 16
 进制小写字符串格式表示的信息摘要。
-
-### 更新日志
-
-| 版本  | 说明                                                     |
-|-------|----------------------------------------------------------|
-| 5.4.0 | tiger 算法使用大端（big-endian）字节序。参见下面的示例。 |
 
 ### 范例
 

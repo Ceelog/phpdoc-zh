@@ -249,7 +249,8 @@ json\_encode
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">json\_encode</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$value`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$options`<span

@@ -887,29 +887,24 @@ array\_diff
 
 <span class="type">array</span> <span
 class="methodname">array\_diff</span> ( <span class="methodparam"><span
-class="type">array</span> `$array1`</span> , <span
-class="methodparam"><span class="type">array</span> `$array2`</span> \[,
-<span class="methodparam"><span class="type">array</span> `$...`</span>
-\] )
+class="type">array</span> `$array`</span> , <span
+class="methodparam"><span class="type">array</span> `$arrays`</span> )
 
-对比 `array1` 和其他一个或者多个数组，返回在 `array1` 中但是不在其他
-array 里的值。
+对比 `array` 和其他一个或者多个数组，返回在 `array` 中但是不在其他 array
+里的值。
 
 ### 参数
 
-`array1`  
+`array`  
 要被对比的数组
 
-`array2`  
-和这个数组进行比较
-
-`...`  
-更多相比较的数组
+`arrays`  
+和更多数组进行比较
 
 ### 返回值
 
-返回一个数组，该数组包括了所有在 `array1`
-中但是不在任何其它参数数组中的值。注意键名保留不变。 保留数组 `array1`
+返回一个数组，该数组包括了所有在 `array`
+中但是不在任何其它参数数组中的值。注意键名保留不变。 保留数组 `array`
 里的键。
 
 ### 范例
@@ -1308,7 +1303,7 @@ class="type">array</span>，例如 `array` 中的键名变成了值，而 `array
 中的值成了键名。
 
 注意 `array` 中的值需要能够作为合法的键名（例如需要是 <span
-class="type">integer</span> 或者 <span
+class="type">int</span> 或者 <span
 class="type">string</span>）。如果类型不对，将出现一个警告，并且有问题的键／值对*将不会出现在结果里*。
 
 如果同一个值出现多次，则最后一个键名将作为它的值，其它键会被丢弃。
@@ -2028,16 +2023,16 @@ array\_map
 <span class="type">array</span> <span
 class="methodname">array\_map</span> ( <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> , <span
-class="methodparam"><span class="type">array</span> `$array1`</span> \[,
-<span class="methodparam"><span class="type">array</span> `$...`</span>
-\] )
+class="methodparam"><span class="type">array</span> `$array`</span> ,
+<span class="methodparam"><span class="type">array</span>
+`$arrays`</span> )
 
-<span class="function">array\_map</span>：返回数组，是为 `array1`
+<span class="function">array\_map</span>：返回数组，是为 `array`
 每个元素应用 `callback`函数之后的数组。 <span
 class="function">array\_map</span> 返回一个 <span
 class="type">array</span>，数组内容为 `array1`
 的元素按索引顺序为参数调用 `callback` 后的结果（有更多数组时，还会传入
-`...` 的元素）。 `callback` 函数形参的数量必须匹配 <span
+`arrays` 的元素）。 `callback` 函数形参的数量必须匹配 <span
 class="function">array\_map</span> 实参中数组的数量。
 
 ### 参数
@@ -2047,18 +2042,19 @@ class="function">array\_map</span> 实参中数组的数量。
 class="type">callable</span>，应用到每个数组里的每个元素。
 
 多个数组操作合并时，`callback` 可以设置为 **`NULL`**。 如果只提供了
-`array1` 一个数组， <span class="methodname">array\_map</span>
+`array` 一个数组， <span class="methodname">array\_map</span>
 会返回输入的数组。
 
-`array1`  
+`array`  
 数组，遍历运行 `callback` 函数。
 
-`...`  
+`arrays`  
 额外的数组列表，每个都遍历运行 `callback` 函数。
 
 ### 返回值
 
-返回数组，包含 `callback` 函数处理之后 `array1` 的所有元素。
+返回数组，包含 `callback` 函数处理之后 `array` (有多个数组时，为
+`arrays`) 对应索引所有元素作为函数的参数。
 
 当仅仅传入一个数组时，返回的数组会保留传入参数的键（key）。
 传入多个数组时，返回的数组键是按顺序的 integer。
@@ -3270,12 +3266,12 @@ array\_replace
 
 <span class="type">array</span> <span
 class="methodname">array\_replace</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> \[,
-<span class="methodparam"><span class="type">array</span> `$...`</span>
-\] )
+class="methodparam"><span class="type">array</span> `$array`</span> \[,
+<span class="methodparam"><span class="type">array</span>
+`$replacements`</span> \] )
 
 <span class="function">array\_replace</span> 函数使用后面数组元素相同
-key 的值替换 `array1`
+key 的值替换 `array`
 数组的值。如果一个键存在于第一个数组同时也存在于第二个数组，它的值将被第二个数组中的值替换。如果一个键存在于第二个数组，但是不存在于第一个数组，则会在第一个数组中创建这个元素。如果一个键仅存在于第一个数组，它将保持不变。如果传递了多个替换数组，它们将被按顺序依次处理，后面的数组将覆盖之前的值。
 
 <span class="function">array\_replace</span>
@@ -3283,10 +3279,10 @@ key 的值替换 `array1`
 
 ### 参数
 
-`array1`  
+`array`  
 替换该数组的值。
 
-`...`  
+`replacements`  
 包含要提取元素的数组。 后面的数组里的值会覆盖前面的值。
 
 ### 返回值
@@ -4653,9 +4649,9 @@ array\_unshift
 
 <span class="type">int</span> <span
 class="methodname">array\_unshift</span> ( <span
-class="methodparam"><span class="type">array</span> `&$array`</span> \[,
-<span class="methodparam"><span class="type">mixed</span> `$...`</span>
-\] )
+class="methodparam"><span class="type">array</span> `&$array`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$values`</span> )
 
 <span class="function">array\_unshift</span> 将传入的单元插入到 `array`
 数组的开头。注意单元是作为整体被插入的，因此传入单元将保持同样的顺序。所有的数值键名将修改为从零开始重新计数，所有的文字键名保持不变。
@@ -4665,7 +4661,7 @@ class="methodparam"><span class="type">array</span> `&$array`</span> \[,
 `array`  
 输入的数组。
 
-`...`  
+`values`  
 插入的变量。
 
 ### 返回值
@@ -5186,8 +5182,8 @@ compact
 
 <span class="type">array</span> <span class="methodname">compact</span>
 ( <span class="methodparam"><span class="type">mixed</span>
-`$varname1`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$var_name`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$var_names`</span> )
 
 创建一个包含变量与其值的数组。
 
@@ -5202,7 +5198,8 @@ class="type">mixed</span> `$...`</span> \] )
 
 ### 参数
 
-`varname1`  
+`var_name`  
+`var_names`  
 <span class="function">compact</span>
 接受可变的参数数目。每个参数可以是一个包括变量名的字符串或者是一个包含变量名的数组，该数组中还可以包含其它单元内容为变量名的数组，
 <span class="function">compact</span> 可以递归处理。
@@ -6109,9 +6106,9 @@ list
 ### 说明
 
 <span class="type">array</span> <span class="methodname">list</span> (
-<span class="methodparam"><span class="type">mixed</span> `$var1`</span>
+<span class="methodparam"><span class="type">mixed</span> `$var`</span>
 \[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+`$vars`</span> \] )
 
 像 <span class="function">array</span>
 一样，这不是真正的函数，而是语言结构。 <span
@@ -6136,8 +6133,13 @@ class="function">list</span> 中写的一样是从左到右的，但在 PHP 5
 
 ### 参数
 
-`var1`  
+`var`  
 一个变量。
+
+<!-- -->
+
+`vars`  
+更多变量。
 
 ### 返回值
 
@@ -6695,8 +6697,9 @@ range
 <span class="methodparam"><span class="type">mixed</span>
 `$start`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$end`</span> \[, <span
-class="methodparam"><span class="type">number</span> `$step`<span
-class="initializer"> = 1</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span></span>
+`$step`<span class="initializer"> = 1</span></span> \] )
 
 建立一个包含指定范围单元的数组。
 
