@@ -1,25 +1,24 @@
-Iterables
----------
+可迭代对象
+----------
 
-<span class="type">Iterable</span> is a pseudo-type introduced in PHP
-7.1. It accepts any <span class="type">array</span> or object
-implementing the <span class="classname">Traversable</span> interface.
-Both of these types are iterable using
-<a href="/control-structures/foreach.html" class="link">foreach</a> and
-can be used with **yield from** within a
-<a href="/language/generators.html" class="link">generator</a>.
+<span class="type">Iterable</span>是 PHP 7.1
+中引入的一个伪类型。它接受任何实现了 <span
+class="classname">Traversable</span> 接口的 <span
+class="type">array</span> 或对象。这些类型都能用
+<a href="/control-structures/foreach.html" class="link">foreach</a>
+迭代，并且可以与 **yield from** 在一个
+<a href="/language/generators.html" class="link">generator</a> 中使用。
 
-### Using Iterables
+### 使用可迭代对象
 
-Iterable can be used as a parameter type to indicate that a function
-requires a set of values, but does not care about the form of the value
-set since it will be used with
-<a href="/control-structures/foreach.html" class="link">foreach</a>. If
-a value is not an array or instance of <span
-class="classname">Traversable</span>, a <span
-class="classname">TypeError</span> will be thrown.
+可迭代对象可以用作参数类型，表示函数需要一组值，
+但是不会关心值集的形式，因为它将与
+<a href="/control-structures/foreach.html" class="link">foreach</a>
+一起使用。如果一个值不是数组或 <span
+class="classname">Traversable</span> 的实例，则会抛出一个 <span
+class="classname">TypeError</span>。
 
-**示例 \#1 Iterable parameter type example**
+**示例 \#1 可迭代参数类型示例**
 
 ``` php
 <?php
@@ -33,10 +32,9 @@ function foo(iterable $iterable) {
 ?>
 ```
 
-Parameters declared as iterable may use **`NULL`** or an array as a
-default value.
+声明为可迭代的参数可能会使用 **`NULL`** 或者一个数组作为默认值。
 
-**示例 \#2 Iterable parameter default value example**
+**示例 \#2 可迭代参数默认值示例**
 
 ``` php
 <?php
@@ -48,12 +46,11 @@ function foo(iterable $iterable = []) {
 ?>
 ```
 
-Iterable can also be used as a return type to indicate a function will
-return an iterable value. If the returned value is not an array or
-instance of <span class="classname">Traversable</span>, a <span
-class="classname">TypeError</span> will be thrown.
+可迭代对象还可以用作返回类型，表示函数将返回一个可迭代的值。
+如果返回值不是数组或 <span class="classname">Traversable</span>
+的实例，则会抛出一个 <span class="classname">TypeError</span>。
 
-**示例 \#3 Iterable return type example**
+**示例 \#3 可迭代返回类型示例**
 
 ``` php
 <?php
@@ -65,10 +62,10 @@ function bar(): iterable {
 ?>
 ```
 
-Functions declaring iterable as a return type may also be
-<a href="/language/generators.html" class="link">generators</a>.
+将可迭代对象声明为返回类型的函数也可能是
+<a href="/language/generators.html" class="link">generators</a>。
 
-**示例 \#4 Iterable generator return type example**
+**示例 \#4 可迭代生成器返回类型的示例**
 
 ``` php
 <?php
@@ -82,15 +79,15 @@ function gen(): iterable {
 ?>
 ```
 
-### Iterable Type Variance
+### 可迭代类型的类型差异
 
-Classes extending/implementing may broaden methods using <span
-class="type">array</span> or <span class="classname">Traversable</span>
-as parameter types to <span class="type">iterable</span> or narrow
-return types from <span class="type">iterable</span> to <span
-class="type">array</span> or <span class="classname">Traversable</span>.
+扩展/实现的类可以把使用 <span class="type">array</span> 或 <span
+class="classname">Traversable</span> 作为参数类型扩展为 <span
+class="type">iterable</span> ，或者把“狭窄”的返回类型从 <span
+class="type">iterable</span> 扩展为 <span class="type">array</span> 或者
+<span class="classname">Traversable</span>。
 
-**示例 \#5 Iterable type variance example**
+**示例 \#5 可迭代类型差异示例**
 
 ``` php
 <?php

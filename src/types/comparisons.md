@@ -2,7 +2,11 @@ PHP 类型比较表
 ==============
 
 以下的表格显示了 PHP
-<a href="/language/types.html" class="link">类型</a>和<a href="/language/operators/comparison.html" class="link">比较运算符</a>在松散和严格比较时的作用。该补充材料还和<a href="/language/types/type-juggling.html" class="link">类型戏法</a>的相关章节内容有关。同时，大量的用户注释和
+<a href="/language/types.html" class="link">类型</a> 和
+<a href="/language/operators/comparison.html" class="link">比较运算符</a>
+在松散和严格比较时的作用。该补充材料还和
+<a href="/language/types/type-juggling.html" class="link">类型戏法</a>
+的相关章节内容有关。同时，大量的用户注释和
 <a href="http://www.blueshoes.org/en/developer/php_cheat_sheet/" class="link external">» BlueShoes</a>
 的工作也给该材料提供了帮助。
 
@@ -25,25 +29,35 @@ class="type">字符串</span>。
 > class="function">empty</span> 或者 <span class="function">isset</span>
 > 函数来初始化变量。
 
-| 表达式            | <span class="function">gettype</span> | <span class="function">empty</span> | <span class="function">is\_null</span> | <span class="function">isset</span> | <span class="type">boolean</span> : *if($x)* |
-|-------------------|---------------------------------------|-------------------------------------|----------------------------------------|-------------------------------------|----------------------------------------------|
-| *$x = "";*        | <span class="type">string</span>      | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
-| *$x = null;*      | <span class="type">NULL</span>        | **`TRUE`**                          | **`TRUE`**                             | **`FALSE`**                         | **`FALSE`**                                  |
-| *var $x;*         | <span class="type">NULL</span>        | **`TRUE`**                          | **`TRUE`**                             | **`FALSE`**                         | **`FALSE`**                                  |
-| `$x` is undefined | <span class="type">NULL</span>        | **`TRUE`**                          | **`TRUE`**                             | **`FALSE`**                         | **`FALSE`**                                  |
-| *$x = array();*   | <span class="type">array</span>       | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
-| *$x = false;*     | <span class="type">boolean</span>     | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
-| *$x = true;*      | <span class="type">boolean</span>     | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = 1;*         | <span class="type">integer</span>     | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = 42;*        | <span class="type">integer</span>     | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = 0;*         | <span class="type">integer</span>     | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
-| *$x = -1;*        | <span class="type">integer</span>     | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = "1";*       | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = "0";*       | <span class="type">string</span>      | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
-| *$x = "-1";*      | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = "php";*     | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = "true";*    | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = "false";*   | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
+> **Note**:
+>
+> Some numeric operations can result in a value represented by the
+> constant **`NAN`**. Any loose or strict comparisons of this value
+> against any other value, including itself, but except **`TRUE`**, will
+> have a result of **`FALSE`**. (i.e. *NAN != NAN* and *NAN !== NAN*)
+> Examples of operations that produce **`NAN`** include *sqrt(-1)*,
+> *asin(2)*, and *acosh(0)*.
+
+| 表达式                  | <span class="function">gettype</span> | <span class="function">empty</span> | <span class="function">is\_null</span> | <span class="function">isset</span> | <span class="type">boolean</span> : *if($x)* |
+|-------------------------|---------------------------------------|-------------------------------------|----------------------------------------|-------------------------------------|----------------------------------------------|
+| *$x = "";*              | <span class="type">string</span>      | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
+| *$x = null;*            | <span class="type">NULL</span>        | **`TRUE`**                          | **`TRUE`**                             | **`FALSE`**                         | **`FALSE`**                                  |
+| *var $x;*               | <span class="type">NULL</span>        | **`TRUE`**                          | **`TRUE`**                             | **`FALSE`**                         | **`FALSE`**                                  |
+| `$x` is undefined       | <span class="type">NULL</span>        | **`TRUE`**                          | **`TRUE`**                             | **`FALSE`**                         | **`FALSE`**                                  |
+| *$x = array();*         | <span class="type">array</span>       | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
+| *$x = array('a', 'b');* | <span class="type">array</span>       | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
+| *$x = false;*           | <span class="type">boolean</span>     | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
+| *$x = true;*            | <span class="type">boolean</span>     | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
+| *$x = 1;*               | <span class="type">integer</span>     | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
+| *$x = 42;*              | <span class="type">integer</span>     | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
+| *$x = 0;*               | <span class="type">integer</span>     | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
+| *$x = -1;*              | <span class="type">integer</span>     | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
+| *$x = "1";*             | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
+| *$x = "0";*             | <span class="type">string</span>      | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
+| *$x = "-1";*            | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
+| *$x = "php";*           | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
+| *$x = "true";*          | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
+| *$x = "false";*         | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
 
 |             | **`TRUE`**  | **`FALSE`** | *1*         | *0*         | *-1*        | *"1"*       | *"0"*       | *"-1"*      | **`NULL`**  | *array()*   | *"php"*     | *""*        |
 |-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|

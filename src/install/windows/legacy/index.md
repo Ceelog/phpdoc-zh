@@ -31,8 +31,9 @@ PHP。
 从
 <a href="https://windows.php.net/download/" class="link external">» PHP for Windows: Binaries and Sources</a>
 页面下载 PHP 的 zip 二进制发行包。有几个不同版本，根据所用 web
-服务器选择合适的版本： follow the detailed guide on the
-<a href="https://windows.php.net/download/" class="link external">» download page</a>.
+服务器选择合适的版本： 参见
+<a href="https://windows.php.net/download/" class="link external">» 下载页</a>
+中的指南。
 
 #### PHP 压缩包的结构和内容
 
@@ -384,8 +385,9 @@ Windows Server 2008 R2下的 IIS 7.0 以及更高版本中手工安装 PHP
 
 #### 配置 IIS 以处理 PHP 请求
 
-根据<a href="/install/windows/manual.html" class="link">手工安装步骤</a>的说明下载和安装
-PHP。
+根据
+<a href="/install/windows/legacy/index.html#install.windows.legacy.manual" class="link">手工安装步骤</a>
+的说明下载和安装 PHP。
 
 > **Note**:
 >
@@ -568,11 +570,11 @@ PHP 从用户指定的位置加载配置文件，使用以下命令。指向 `ph
 
 本节包括在 Microsoft Windows 平台的 Apache 下安装 PHP
 的说明和提示。在另外的页面也有
-<a href="/install/windows/legacy/index.html#install.windows.legacy.apache2" class="link">Apache 2 的安装和说明</a>。
 
 > **Note**:
 >
-> 请先阅读<a href="/install/windows/legacy/index.html#install.windows.legacy.manual" class="link">手动安装步骤</a>！
+> 请先阅读
+> <a href="/install/windows/legacy/index.html#install.windows.legacy.manual" class="link">手动安装步骤</a>！
 
 有两种方式让 PHP 工作在 Windows 下的 Apache 1.3.x 中。首先是使用 CGI
 可执行程序（PHP 4 下为 `php.exe`，PHP 5 下为
@@ -639,8 +641,9 @@ AddType application/x-httpd-php-source .phps
 
 #### 作为 CGI 可执行文件的安装
 
-如果按照<a href="/install/windows/manual.html" class="link">手工安装步骤</a>将
-PHP 解压到 `C:\php\`，需要在 Apache 的配置文件中添加如下内容以使 PHP
+如果按照
+<a href="/install/windows/legacy/index.html#install.windows.legacy.manual" class="link">手工安装步骤</a>
+将 PHP 解压到 `C:\php\`，需要在 Apache 的配置文件中添加如下内容以使 PHP
 按照 CGI 方式运行:
 
 **示例 \#18 PHP 以 CGI 方式运行在 Apache 1.3.x**
@@ -678,8 +681,7 @@ highlight\_file('some\_php\_script.php'); ?\>*。
 ### Microsoft Windows 下的 Apache 2.x
 
 本节包括在 Microsoft Windows 系统中针对 Apache 2.x 安装 PHP
-的指导与说明。在其它页面也有
-<a href="/install/windows/legacy/index.html#install.windows.legacy.apache1" class="link">Apache 1.3.x 用户指导与说明</a>。
+的指导与说明。
 
 > **Note**:
 >
@@ -689,7 +691,7 @@ highlight\_file('some\_php\_script.php'); ?\>*。
 >
 > Apache 2.2 用户应留意对于 Apache 2.2 的 DLL 文件名是
 > `php5apache2_2.dll` 而不是 `php5apache2.dll`，并且只在 PHP 5.2.0
-> 以及更高版本中出现。参见 \[broken link\]。
+> 以及更高版本中出现。
 
 强烈建议阅读
 <a href="http://httpd.apache.org/docs/current/" class="link external">» Apache 文档</a>来加深对
@@ -705,7 +707,7 @@ Windows 9x
 下载最新版本的
 <a href="http://httpd.apache.org/" class="link external">» Apache 2.x</a>
 以及适合的 PHP
-版本。先完成<a href="/install/windows/manual.html" class="link">手工安装步骤</a>后再回来继续将
+版本。先完成<a href="/install/windows/legacy/index.html#install.windows.legacy.manual" class="link">手工安装步骤</a>后再回来继续将
 PHP 集成入 Apache。
 
 Windows 下有三种方法使 PHP 工作于 Apache 2.x 之中。可以以
@@ -989,7 +991,8 @@ class="function">nsapi\_virtual</span> 被禁用。
 
 > **Note**:
 >
-> 应该首先阅读<a href="/install/windows/manual.html" class="link">手工安装步骤</a>！
+> 应该首先阅读
+> <a href="/install/windows/legacy/index.html#install.windows.legacy.manual" class="link">手工安装步骤</a>！
 
 下面列出了怎样在 Windows 下设置 Sambar 服务器的 ISAPI 模块。
 
@@ -1024,7 +1027,8 @@ class="function">nsapi\_virtual</span> 被禁用。
 
 > **Note**:
 >
-> 应该首先阅读<a href="/install/windows/manual.html" class="link">手工安装步骤</a>！
+> 应该首先阅读
+> <a href="/install/windows/legacy/index.html#install.windows.legacy.manual" class="link">手工安装步骤</a>！
 
 下面列出了怎样在 Windows 下在 Xitami 中设置 PHP 的 CGI 方式。
 
@@ -1191,7 +1195,8 @@ PHP 搜索扩展库的默认位置在 `C:\php5`。要修改此项以符合用户
 
 > **Note**:
 >
-> 应该先阅读<a href="/install/windows/legacy/index.html#install.windows.legacy.manual" class="link">手工安装步骤</a>！
+> 应该先阅读
+> <a href="/install/windows/legacy/index.html#install.windows.legacy.manual" class="link">手工安装步骤</a>！
 
 要在命令行下运行 PHP，可以无需对 Windows 做任何改动。
 
@@ -1257,7 +1262,7 @@ PHP 搜索扩展库的默认位置在 `C:\php5`。要修改此项以符合用户
 
     "C:\PHP Scripts\script" -arg1 -arg2 -arg3
 
-或者如果 *"C:\\PHP Scripts"* 路径位于 *PATH* 环境变量中的话：
+或者如果 *"C:\\PHP Scripts"* 路径位于 `PATH` 环境变量中的话：
 
     script -arg1 -arg2 -arg3
 
@@ -1280,3 +1285,5 @@ PHP 搜索扩展库的默认位置在 `C:\php5`。要修改此项以符合用户
 >     "InheritConsoleHandles"=dword:00000001
 >
 > 有关此问题的更多信息见<a href="http://support.microsoft.com/default.aspx?scid=kb;en-us;321788" class="link external">» 微软知识库文章：321788</a>。
+> 从 Windows 10 开始，此设置似乎被颠倒，请参考以下链接
+> <a href="https://social.msdn.microsoft.com/Forums/en-US/f19d740d-21c8-4dc2-a9ab-d5c0527e932b/nasty-file-association-regression-bug-in-windows-10-console?forum=windowssdk" class="link external">»  Microsoft forum post</a>。

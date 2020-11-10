@@ -5,7 +5,7 @@
 
 -   [SplFileInfo](/spl/files.html#SplFileInfo) — The SplFileInfo class
     -   [SplFileInfo::\_\_construct](/spl/files.html#SplFileInfo::__construct)
-        — Construct a new SplFileInfo object
+        — 构建一个新的 SplFileInfo 对象
     -   [SplFileInfo::getATime](/spl/files.html#SplFileInfo::getATime) —
         Gets last access time of the file
     -   [SplFileInfo::getBasename](/spl/files.html#SplFileInfo::getBasename)
@@ -288,7 +288,7 @@ class="methodparam">void</span> )
 SplFileInfo::\_\_construct
 ==========================
 
-Construct a new SplFileInfo object
+构建一个新的 SplFileInfo 对象
 
 ### 说明
 
@@ -297,18 +297,18 @@ class="methodname">SplFileInfo::\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$file_name`</span>
 )
 
-Creates a new SplFileInfo object for the file\_name specified. The file
-does not need to exist, or be readable.
+为指定的 file\_name 创建一个新的 SplFileInfo
+对象，该文件不需要存在或者可读。
 
 ### 参数
 
 `file_name`  
-Path to the file.
+文件路径
 
 ### 范例
 
 **示例 \#1 <span class="function">SplFileInfo::\_\_construct</span>
-example**
+示例**
 
 ``` php
 <?php

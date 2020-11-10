@@ -9,7 +9,7 @@
 -   [Float 浮点型](/language/types/float.html)
 -   [String 字符串](/language/types/string.html)
 -   [Array 数组](/language/types/array.html)
--   [Iterables](/language/types/iterable.html)
+-   [可迭代对象](/language/types/iterable.html)
 -   [Object 对象](/language/types/object.html)
 -   [Resource 资源类型](/language/types/resource.html)
 -   [NULL](/language/types/null.html)
