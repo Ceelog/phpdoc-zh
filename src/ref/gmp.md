@@ -822,8 +822,8 @@ It should be positive.
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+The hamming distance between `a` and `b`, as an <span
+class="type">int</span>.
 
 ### 范例
 

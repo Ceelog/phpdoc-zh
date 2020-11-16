@@ -14938,7 +14938,7 @@ calls or queries that don't use an index (or use a bad index).
 `flags`  
 | Name                       | Description                                                                                |
 |----------------------------|--------------------------------------------------------------------------------------------|
-| **`MYSQLI_REPORT_OFF`**    | Turns reporting off                                                                        |
+| **`MYSQLI_REPORT_OFF`**    | Turns reporting off (the default)                                                          |
 | **`MYSQLI_REPORT_ERROR`**  | Report errors from mysqli function calls                                                   |
 | **`MYSQLI_REPORT_STRICT`** | Throw <span class="classname">mysqli\_sql\_exception</span> for errors instead of warnings |
 | **`MYSQLI_REPORT_INDEX`**  | Report if no index or bad index was used in a query                                        |
