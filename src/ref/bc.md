@@ -310,19 +310,19 @@ modulus
 
 <span class="type">string</span> <span
 class="methodname">bcpowmod</span> ( <span class="methodparam"><span
-class="type">string</span> `$base`</span> , <span
+class="type">string</span> `$num`</span> , <span
 class="methodparam"><span class="type">string</span> `$exponent`</span>
 , <span class="methodparam"><span class="type">string</span>
-`$modulus`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$scale`<span class="initializer"> =
-0</span></span> \] )
+`$modulus`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
 
-Use the fast-exponentiation method to raise `base` to the power
+Use the fast-exponentiation method to raise `num` to the power
 `exponent` with respect to the modulus `modulus`.
 
 ### 参数
 
-`base`  
+`num`  
 The base, as an integral string (i.e. the scale has to be zero).
 
 `exponent`  
@@ -348,6 +348,12 @@ Returns the result as a string, or **`FALSE`** if `modulus` is *0* or
 >
 > Because this method uses the modulus operation, numbers which are not
 > positive integers may give unexpected results.
+
+### 更新日志
+
+| 版本  | 说明                     |
+|-------|--------------------------|
+| 8.0.0 | `scale` is now nullable. |
 
 ### 范例
 

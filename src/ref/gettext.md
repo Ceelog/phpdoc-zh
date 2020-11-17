@@ -6,7 +6,8 @@ message catalog will be returned
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">bind\_textdomain\_codeset</span> ( <span
 class="methodparam"><span class="type">string</span> `$domain`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -35,7 +36,8 @@ Sets the path for a domain
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">bindtextdomain</span> ( <span
 class="methodparam"><span class="type">string</span> `$domain`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -119,11 +121,11 @@ Plural version of dcgettext
 <span class="type">string</span> <span
 class="methodname">dcngettext</span> ( <span class="methodparam"><span
 class="type">string</span> `$domain`</span> , <span
-class="methodparam"><span class="type">string</span> `$msgid1`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$msgid2`</span> , <span class="methodparam"><span
-class="type">int</span> `$n`</span> , <span class="methodparam"><span
-class="type">int</span> `$category`</span> )
+class="methodparam"><span class="type">string</span> `$singular`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$plural`</span> , <span class="methodparam"><span
+class="type">int</span> `$count`</span> , <span
+class="methodparam"><span class="type">int</span> `$category`</span> )
 
 This function allows you to override the current domain for a single
 plural message lookup.
@@ -133,11 +135,11 @@ plural message lookup.
 `domain`  
 The domain
 
-`msgid1`  
+`singular`  
 
-`msgid2`  
+`plural`  
 
-`n`  
+`count`  
 
 `category`  
 
@@ -190,10 +192,10 @@ Plural version of dgettext
 <span class="type">string</span> <span
 class="methodname">dngettext</span> ( <span class="methodparam"><span
 class="type">string</span> `$domain`</span> , <span
-class="methodparam"><span class="type">string</span> `$msgid1`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$msgid2`</span> , <span class="methodparam"><span
-class="type">int</span> `$n`</span> )
+class="methodparam"><span class="type">string</span> `$singular`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$plural`</span> , <span class="methodparam"><span
+class="type">int</span> `$count`</span> )
 
 The <span class="function">dngettext</span> function allows you to
 override the current `domain` for a single plural message lookup.
@@ -203,11 +205,11 @@ override the current `domain` for a single plural message lookup.
 `domain`  
 The domain
 
-`msgid1`  
+`singular`  
 
-`msgid2`  
+`plural`  
 
-`n`  
+`count`  
 
 ### 返回值
 
@@ -292,9 +294,10 @@ Plural version of gettext
 
 <span class="type">string</span> <span
 class="methodname">ngettext</span> ( <span class="methodparam"><span
-class="type">string</span> `$msgid1`</span> , <span
-class="methodparam"><span class="type">string</span> `$msgid2`</span> ,
-<span class="methodparam"><span class="type">int</span> `$n`</span> )
+class="type">string</span> `$singular`</span> , <span
+class="methodparam"><span class="type">string</span> `$plural`</span> ,
+<span class="methodparam"><span class="type">int</span> `$count`</span>
+)
 
 The plural version of <span class="function">gettext</span>. Some
 languages have more than one form for plural messages dependent on the
@@ -302,20 +305,20 @@ count.
 
 ### 参数
 
-`msgid1`  
+`singular`  
 The singular message ID.
 
-`msgid2`  
+`plural`  
 The plural message ID.
 
-`n`  
+`count`  
 The number (e.g. item count) to determine the translation for the
 respective grammatical number.
 
 ### 返回值
 
-Returns correct plural form of message identified by `msgid1` and
-`msgid2` for count `n`.
+Returns correct plural form of message identified by `singular` and
+`plural` for count `count`.
 
 ### 范例
 
@@ -341,8 +344,8 @@ Sets the default domain
 
 <span class="type">string</span> <span
 class="methodname">textdomain</span> ( <span class="methodparam"><span
-class="type">string</span> `$text_domain`<span class="initializer"> =
-**`NULL`**</span></span> )
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$domain`</span> )
 
 This function sets the domain to search within when calls are made to
 <span class="function">gettext</span>, usually the named after an
@@ -350,7 +353,7 @@ application.
 
 ### 参数
 
-`text_domain`  
+`domain`  
 The new message domain, or **`NULL`** to get the current setting without
 changing it
 

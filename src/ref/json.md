@@ -535,8 +535,7 @@ call
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">json\_last\_error\_msg</span> ( <span
 class="methodparam">void</span> )
 
@@ -551,8 +550,8 @@ class="function">json\_decode</span> call, which did not specify
 
 ### 返回值
 
-Returns the error message on success, *"No error"* if no error has
-occurred, 或者在失败时返回 **`FALSE`**.
+Returns the error message on success, or *"No error"* if no error has
+occurred.
 
 ### 参见
 

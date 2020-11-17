@@ -137,7 +137,8 @@ Tells whether a script is cached in OPCache
 
 <span class="type">bool</span> <span
 class="methodname">opcache\_is\_script\_cached</span> ( <span
-class="methodparam"><span class="type">string</span> `$file`</span> )
+class="methodparam"><span class="type">string</span> `$filename`</span>
+)
 
 This function checks if a PHP script has been cached in OPCache. This
 can be used to more easily detect the "warming" of the cache for a
@@ -145,12 +146,12 @@ particular script.
 
 ### 参数
 
-`file`  
+`filename`  
 The path to the PHP script to be checked.
 
 ### 返回值
 
-Returns **`TRUE`** if `file` is cached in OPCache, **`FALSE`**
+Returns **`TRUE`** if `filename` is cached in OPCache, **`FALSE`**
 otherwise.
 
 ### 参见
