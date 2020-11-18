@@ -40,20 +40,21 @@ Gets the block size of the specified hash
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">mhash\_get\_block\_size</span> ( <span
-class="methodparam"><span class="type">int</span> `$hash`</span> )
+class="methodparam"><span class="type">int</span> `$algo`</span> )
 
-Gets the size of a block of the specified `hash`.
+Gets the size of a block of the specified `algo`.
 
 ### 参数
 
-`hash`  
+`algo`  
 The hash ID. One of the **`MHASH_hashname`** constants.
 
 ### 返回值
 
-Returns the size in bytes or **`FALSE`**, if the `hash` does not exist.
+Returns the size in bytes or **`FALSE`**, if the `algo` does not exist.
 
 ### 范例
 
@@ -75,15 +76,16 @@ Gets the name of the specified hash
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mhash\_get\_hash\_name</span> ( <span
-class="methodparam"><span class="type">int</span> `$hash`</span> )
+class="methodparam"><span class="type">int</span> `$algo`</span> )
 
-Gets the name of the specified `hash`.
+Gets the name of the specified `algo`.
 
 ### 参数
 
-`hash`  
+`algo`  
 The hash ID. One of the **`MHASH_hashname`** constants.
 
 ### 返回值
@@ -110,15 +112,16 @@ Generates a key
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mhash\_keygen\_s2k</span> ( <span
-class="methodparam"><span class="type">int</span> `$hash`</span> , <span
+class="methodparam"><span class="type">int</span> `$algo`</span> , <span
 class="methodparam"><span class="type">string</span> `$password`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$salt`</span> , <span class="methodparam"><span class="type">int</span>
-`$bytes`</span> )
+`$length`</span> )
 
-Generates a key according to the given `hash`, using an user provided
+Generates a key according to the given `algo`, using an user provided
 `password`.
 
 This is the Salted S2K algorithm as specified in the OpenPGP document
@@ -132,7 +135,7 @@ transformation (like this function) to the user supplied key.
 
 ### 参数
 
-`hash`  
+`algo`  
 The hash ID used to create the key. One of the **`MHASH_hashname`**
 constants.
 
@@ -146,7 +149,7 @@ the keys, it is a good idea to append the key to it. Salt has a fixed
 length of 8 bytes and will be padded with zeros if you supply less
 bytes.
 
-`bytes`  
+`length`  
 The key length, in bytes.
 
 ### 返回值
@@ -160,18 +163,20 @@ Computes hash
 
 ### 说明
 
-<span class="type">string</span> <span class="methodname">mhash</span> (
-<span class="methodparam"><span class="type">int</span> `$hash`</span> ,
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">mhash</span> (
+<span class="methodparam"><span class="type">int</span> `$algo`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$data`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$key`</span> \] )
+`$data`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$key`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="function">mhash</span> applies a hash function specified by
-`hash` to the `data`.
+`algo` to the `data`.
 
 ### 参数
 
-`hash`  
+`algo`  
 The hash ID. One of the **`MHASH_hashname`** constants.
 
 `data`  
@@ -187,6 +192,12 @@ can be used in HMAC mode.
 
 Returns the resulting hash (also called digest) or HMAC as a string, or
 **`FALSE`** on error.
+
+### 更新日志
+
+| 版本  | 说明                   |
+|-------|------------------------|
+| 8.0.0 | `key` is now nullable. |
 
 **目录**
 

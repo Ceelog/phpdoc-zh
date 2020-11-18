@@ -338,13 +338,13 @@ Generate a HKDF key derivation of a supplied key input
 <span class="type">string</span> <span
 class="methodname">hash\_hkdf</span> ( <span class="methodparam"><span
 class="type">string</span> `$algo`</span> , <span
-class="methodparam"><span class="type">string</span> `$ikm`</span> \[,
+class="methodparam"><span class="type">string</span> `$key`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$info`<span
-class="initializer"> = ''</span></span> \[, <span
+class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$salt`<span
-class="initializer"> = ''</span></span> \]\]\] )
+class="initializer"> = ""</span></span> \]\]\] )
 
 ### 参数
 
@@ -357,7 +357,7 @@ list of supported algorithms.
 >
 > Non-cryptographic hash functions are not allowed.
 
-`ikm`  
+`key`  
 Input keying material (raw binary). Cannot be empty.
 
 `length`  
@@ -384,7 +384,7 @@ failure.
 
 ### 错误／异常
 
-An **`E_WARNING`** will be raised if `ikm` is empty, `algo` is
+An **`E_WARNING`** will be raised if `key` is empty, `algo` is
 unknown/non-cryptographic, `length` is less than *0* or too large
 (greater than 255 times the size of the hash function).
 
