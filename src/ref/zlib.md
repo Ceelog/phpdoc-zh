@@ -89,7 +89,10 @@ The compression level in range -1..9; defaults to -1.
 The compression memory level in range 1..9; defaults to 8.
 
 `window`  
-The zlib window size (logarithmic) in range 8..15; defaults to 15.
+The zlib window size (logarithmic) in range *8*..*15*; defaults to *15*.
+zlib changes a window size of *8* to *9*, and as of zlib 1.2.8 fails
+with a warning, if a window size of *8* is requested for
+**`ZLIB_ENCODING_RAW`** or **`ZLIB_ENCODING_GZIP`**.
 
 `strategy`  
 One of **`ZLIB_FILTERED`**, **`ZLIB_HUFFMAN_ONLY`**, **`ZLIB_RLE`**,
