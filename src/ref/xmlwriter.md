@@ -10,16 +10,16 @@ End attribute
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::endAttribute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::endAttribute</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_end\_attribute</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 Ends the current attribute.
 
@@ -34,6 +34,12 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -54,16 +60,16 @@ End current CDATA
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::endCdata</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::endCdata</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_end\_cdata</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 Ends the current CDATA section.
 
@@ -78,6 +84,12 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -96,16 +108,16 @@ Create end comment
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::endComment</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::endComment</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_end\_comment</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 Ends the current comment.
 
@@ -120,6 +132,12 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -138,16 +156,16 @@ End current document
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::endDocument</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::endDocument</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_end\_document</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 Ends the current document.
 
@@ -162,6 +180,12 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -179,16 +203,16 @@ End current DTD AttList
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::endDtdAttlist</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::endDtdAttlist</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_end\_dtd\_attlist</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 Ends the current DTD attribute list.
 
@@ -203,6 +227,12 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -221,16 +251,16 @@ End current DTD element
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::endDtdElement</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::endDtdElement</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_end\_dtd\_element</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 Ends the current DTD element.
 
@@ -245,6 +275,12 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -263,16 +299,16 @@ End current DTD Entity
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::endDtdEntity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::endDtdEntity</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_end\_dtd\_entity</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 Ends the current DTD entity.
 
@@ -287,6 +323,12 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -305,16 +347,16 @@ End current DTD
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::endDtd</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::endDtd</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_end\_dtd</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 Ends the DTD of the document.
 
@@ -325,6 +367,12 @@ Ends the DTD of the document.
 class="type">resource</span>。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 返回值
 
@@ -347,16 +395,16 @@ End current element
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::endElement</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::endElement</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_end\_element</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 Ends the current element.
 
@@ -371,6 +419,12 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -389,16 +443,16 @@ End current PI
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::endPi</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::endPi</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_end\_pi</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 Ends the current processing instruction.
 
@@ -413,6 +467,12 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -431,19 +491,20 @@ Flush current buffer
 
 面向对象风格
 
-<span class="type">mixed</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">int</span></span> <span
 class="methodname">XMLWriter::flush</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$empty`<span
 class="initializer"> = **`TRUE`**</span></span> \] )
 
 过程化风格
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">int</span></span> <span
 class="methodname">xmlwriter\_flush</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> \[, <span class="methodparam"><span
-class="type">bool</span> `$empty`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+\[, <span class="methodparam"><span class="type">bool</span>
+`$empty`<span class="initializer"> = **`TRUE`**</span></span> \] )
 
 Flushes the current buffer.
 
@@ -464,6 +525,13 @@ If you opened the writer in memory, this function returns the generated
 XML buffer, Else, if using URI, this function will write the buffer and
 return the number of written bytes.
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 8.0.0 | This function can no longer return **`FALSE`**.                                                                                           |
+
 XMLWriter::fullEndElement
 =========================
 
@@ -476,16 +544,16 @@ End current element
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::fullEndElement</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::fullEndElement</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_full\_end\_element</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 End the current xml element. Writes an end tag even if the element is
 empty.
@@ -501,6 +569,12 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -518,13 +592,14 @@ Create new xmlwriter using memory for string output
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::openMemory</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::openMemory</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">XMLWriter</span><span
+class="type">false</span></span> <span
 class="methodname">xmlwriter\_open\_memory</span> ( <span
 class="methodparam">void</span> )
 
@@ -537,10 +612,15 @@ string output.
 
 面向对象风格: 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
-过程化风格: Returns a new xmlwriter
-<a href="/language/types/resource.html" class="link">资源(resource)</a>
-for later use with the xmlwriter functions on success, **`FALSE`** on
-error.
+过程化风格: Returns a new <span class="classname">XMLWriter</span> for
+later use with the xmlwriter functions on success, 或者在失败时返回
+**`FALSE`**.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                                            |
+|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | This function returns now an <span class="classname">XMLWriter</span> instance on success. Previouly, a <a href="/language/types/resource.html" class="link">资源(resource)</a> has been returned in this case. |
 
 ### 参见
 
@@ -558,13 +638,14 @@ Create new xmlwriter using source uri for output
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::openUri</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::openUri</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> )
 
 过程化风格
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">XMLWriter</span><span
+class="type">false</span></span> <span
 class="methodname">xmlwriter\_open\_uri</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> )
 
@@ -580,10 +661,15 @@ The URI of the resource for the output.
 
 面向对象风格: 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
-过程化风格: Returns a new xmlwriter
-<a href="/language/types/resource.html" class="link">资源(resource)</a>
-for later use with the xmlwriter functions on success, **`FALSE`** on
-error.
+过程化风格: Returns a new <span class="classname">XMLWriter</span>
+instance for later use with the xmlwriter functions on success,
+或者在失败时返回 **`FALSE`**.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                                            |
+|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | This function returns now an <span class="classname">XMLWriter</span> instance on success. Previouly, a <a href="/language/types/resource.html" class="link">资源(resource)</a> has been returned in this case. |
 
 ### 范例
 
@@ -622,8 +708,8 @@ Returns current buffer
 
 面向对象风格
 
-<span class="type">string</span> <span
-class="methodname">XMLWriter::outputMemory</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">XMLWriter::outputMemory</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$flush`<span
 class="initializer"> = **`TRUE`**</span></span> \] )
 
@@ -631,10 +717,9 @@ class="initializer"> = **`TRUE`**</span></span> \] )
 
 <span class="type">string</span> <span
 class="methodname">xmlwriter\_output\_memory</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> \[, <span class="methodparam"><span
-class="type">bool</span> `$flush`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+\[, <span class="methodparam"><span class="type">bool</span>
+`$flush`<span class="initializer"> = **`TRUE`**</span></span> \] )
 
 Returns the current buffer.
 
@@ -653,6 +738,12 @@ Whether to flush the output buffer or not. Default is **`TRUE`**.
 
 Returns the current buffer as a string.
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::flush</span>
@@ -669,18 +760,18 @@ Set string used for indenting
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::setIndentString</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::setIndentString</span> ( <span
 class="methodparam"><span class="type">string</span>
-`$indentString`</span> )
+`$indentation`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_set\_indent\_string</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$indentString`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$indentation`</span> )
 
 Sets the string which will be used to indent each element/attribute of
 the resulting xml.
@@ -693,12 +784,18 @@ class="type">resource</span>。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
-`indentString`  
+`indentation`  
 The indentation string.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 注释
 
@@ -722,17 +819,17 @@ Toggle indentation on/off
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::setIndent</span> ( <span
-class="methodparam"><span class="type">bool</span> `$indent`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::setIndent</span> ( <span
+class="methodparam"><span class="type">bool</span> `$enable`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_set\_indent</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">bool</span> `$indent`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">bool</span>
+`$enable`</span> )
 
 Toggles indentation on or off.
 
@@ -744,12 +841,18 @@ class="type">resource</span>。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
-`indent`  
+`enable`  
 Whether indentation is enabled.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 范例
 
@@ -803,25 +906,28 @@ Create start namespaced attribute
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::startAttributeNs</span> ( <span
-class="methodparam"><span class="type">string</span> `$prefix`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$name`</span> , <span class="methodparam"><span class="type"><span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::startAttributeNs</span> ( <span
+class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$uri`</span> )
+`$prefix`</span> , <span class="methodparam"><span
+class="type">string</span> `$name`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$namespace`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_attribute\_ns</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$prefix`</span> , <span
-class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type"><span
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$uri`</span> )
+`$prefix`</span> , <span class="methodparam"><span
+class="type">string</span> `$name`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$namespace`</span> )
 
 Starts a namespaced attribute.
 
@@ -839,13 +945,20 @@ The namespace prefix.
 `name`  
 The attribute name.
 
-`uri`  
-The namespace URI. If `uri` is **`NULL`**, the namespace declaration
-will be omitted.
+`namespace`  
+The namespace URI. If `namespace` is **`NULL`**, the namespace
+declaration will be omitted.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 8.0.0 | `prefix` is nullable now.                                                                                                                 |
 
 ### 参见
 
@@ -866,17 +979,17 @@ Create start attribute
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::startAttribute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::startAttribute</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_attribute</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$name`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> )
 
 Starts an attribute.
 
@@ -894,6 +1007,12 @@ The attribute name.
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 范例
 
@@ -937,16 +1056,16 @@ Create start CDATA tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::startCdata</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::startCdata</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_cdata</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 Starts a CDATA.
 
@@ -961,6 +1080,12 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -979,16 +1104,16 @@ Create start comment
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::startComment</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::startComment</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_comment</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+)
 
 Starts a comment.
 
@@ -1003,6 +1128,12 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -1021,26 +1152,34 @@ Create document tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::startDocument</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$version`<span
-class="initializer"> = 1.0</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
-class="methodparam"><span class="type">string</span>
-`$standalone`</span> \]\]\] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::startDocument</span> (\[ <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$version`<span class="initializer"> = "1.0"</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$standalone`<span class="initializer"> = **`NULL`**</span></span>
+\]\]\] )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_document</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$version`<span class="initializer"> =
-1.0</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$standalone`</span> \]\]\] )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$version`<span class="initializer"> = "1.0"</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$standalone`<span class="initializer"> = **`NULL`**</span></span>
+\]\]\] )
 
 Starts a document.
 
@@ -1065,6 +1204,12 @@ The encoding of the document as part of the XML declaration.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::endDocument</span>
@@ -1081,17 +1226,17 @@ Create start DTD AttList
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::startDtdAttlist</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::startDtdAttlist</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_dtd\_attlist</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$name`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> )
 
 Starts a DTD attribute list.
 
@@ -1110,6 +1255,12 @@ The attribute list name.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::endDtdAttlist</span>
@@ -1127,8 +1278,8 @@ Create start DTD element
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::startDtdElement</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::startDtdElement</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$qualifiedName`</span> )
 
@@ -1136,9 +1287,9 @@ class="methodparam"><span class="type">string</span>
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_dtd\_element</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifiedName`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$qualifiedName`</span> )
 
 Starts a DTD element.
 
@@ -1157,6 +1308,12 @@ The qualified name of the document type to create.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::endDtdElement</span>
@@ -1174,20 +1331,20 @@ Create start DTD Entity
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::startDtdEntity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::startDtdEntity</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">bool</span>
-`$isparam`</span> )
+`$isParam`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_dtd\_entity</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$name`</span> , <span
-class="methodparam"><span class="type">bool</span> `$isparam`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> , <span class="methodparam"><span
+class="type">bool</span> `$isParam`</span> )
 
 Starts a DTD entity.
 
@@ -1202,11 +1359,17 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 `name`  
 The name of the entity.
 
-`isparam`  
+`isParam`  
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -1225,24 +1388,30 @@ Create start DTD tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::startDtd</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::startDtd</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$qualifiedName`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$publicId`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$systemId`</span>
-\]\] )
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$publicId`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$systemId`<span class="initializer"> =
+**`NULL`**</span></span> \]\] )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_dtd</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifiedName`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$publicId`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$systemId`</span> \]\] )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$qualifiedName`</span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$publicId`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$systemId`<span class="initializer"> =
+**`NULL`**</span></span> \]\] )
 
 Starts a DTD.
 
@@ -1267,6 +1436,12 @@ The external subset system identifier.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::endDtd</span>
@@ -1284,28 +1459,28 @@ Create start namespaced element tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::startElementNs</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::startElementNs</span> ( <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
 `$prefix`</span> , <span class="methodparam"><span
 class="type">string</span> `$name`</span> , <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$uri`</span> )
+`$namespace`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_element\_ns</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span class="type"><span
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
 `$prefix`</span> , <span class="methodparam"><span
 class="type">string</span> `$name`</span> , <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$uri`</span> )
+`$namespace`</span> )
 
 Starts a namespaced element.
 
@@ -1324,13 +1499,19 @@ omitted.
 `name`  
 The element name.
 
-`uri`  
-The namespace URI. If `uri` is **`NULL`**, the namespace declaration
-will be omitted.
+`namespace`  
+The namespace URI. If `namespace` is **`NULL`**, the namespace
+declaration will be omitted.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -1349,17 +1530,17 @@ Create start element tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::startElement</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::startElement</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_element</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$name`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> )
 
 Starts an element.
 
@@ -1378,6 +1559,12 @@ The element name.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::endElement</span>
@@ -1395,17 +1582,17 @@ Create start PI tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::startPi</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::startPi</span> ( <span
 class="methodparam"><span class="type">string</span> `$target`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_start\_pi</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$target`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$target`</span> )
 
 Starts a processing instruction tag.
 
@@ -1424,6 +1611,12 @@ The target of the processing instruction.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::endPi</span>
@@ -1441,17 +1634,17 @@ Write text
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::text</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::text</span> ( <span
 class="methodparam"><span class="type">string</span> `$content`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_text</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$content`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$content`</span> )
 
 Writes a text.
 
@@ -1475,6 +1668,12 @@ has to be used.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 XMLWriter::writeAttributeNs
 ===========================
 
@@ -1487,30 +1686,30 @@ Write full namespaced attribute
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::writeAttributeNs</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::writeAttributeNs</span> ( <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
 `$prefix`</span> , <span class="methodparam"><span
 class="type">string</span> `$name`</span> , <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$uri`</span> , <span class="methodparam"><span
-class="type">string</span> `$content`</span> )
+`$namespace`</span> , <span class="methodparam"><span
+class="type">string</span> `$value`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_attribute\_ns</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span class="type"><span
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
 `$prefix`</span> , <span class="methodparam"><span
 class="type">string</span> `$name`</span> , <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$uri`</span> , <span class="methodparam"><span
-class="type">string</span> `$content`</span> )
+`$namespace`</span> , <span class="methodparam"><span
+class="type">string</span> `$value`</span> )
 
 Writes a full namespaced attribute.
 
@@ -1529,16 +1728,22 @@ omitted.
 `name`  
 The attribute name.
 
-`uri`  
-The namespace URI. If `uri` is **`NULL`**, the namespace declaration
-will be omitted.
+`namespace`  
+The namespace URI. If `namespace` is **`NULL`**, the namespace
+declaration will be omitted.
 
-`content`  
+`value`  
 The attribute value.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -1559,8 +1764,8 @@ Write full attribute
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::writeAttribute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::writeAttribute</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
@@ -1569,10 +1774,10 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_attribute</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$name`</span> , <span
-class="methodparam"><span class="type">string</span> `$value`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> , <span class="methodparam"><span
+class="type">string</span> `$value`</span> )
 
 Writes a full attribute.
 
@@ -1593,6 +1798,12 @@ The value of the attribute.
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 范例
 
@@ -1640,17 +1851,17 @@ Write full CDATA tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::writeCdata</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::writeCdata</span> ( <span
 class="methodparam"><span class="type">string</span> `$content`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_cdata</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$content`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$content`</span> )
 
 Writes a full CDATA.
 
@@ -1668,6 +1879,12 @@ The contents of the CDATA.
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 范例
 
@@ -1721,17 +1938,17 @@ Write full comment tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::writeComment</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::writeComment</span> ( <span
 class="methodparam"><span class="type">string</span> `$content`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_comment</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$content`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$content`</span> )
 
 Writes a full comment.
 
@@ -1750,6 +1967,12 @@ The contents of the comment.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::startComment</span>
@@ -1767,8 +1990,8 @@ Write full DTD AttList tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::writeDtdAttlist</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::writeDtdAttlist</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$content`</span> )
@@ -1777,10 +2000,10 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_dtd\_attlist</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$name`</span> , <span
-class="methodparam"><span class="type">string</span> `$content`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> , <span class="methodparam"><span
+class="type">string</span> `$content`</span> )
 
 Writes a DTD attribute list.
 
@@ -1802,6 +2025,12 @@ The content of the DTD attribute list.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::startDtdAttlist</span>
@@ -1819,8 +2048,8 @@ Write full DTD element tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::writeDtdElement</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::writeDtdElement</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$content`</span> )
@@ -1829,10 +2058,10 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_dtd\_element</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$name`</span> , <span
-class="methodparam"><span class="type">string</span> `$content`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> , <span class="methodparam"><span
+class="type">string</span> `$content`</span> )
 
 Writes a full DTD element.
 
@@ -1854,6 +2083,12 @@ The content of the element.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::startDtdElement</span>
@@ -1871,30 +2106,43 @@ Write full DTD Entity tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::writeDtdEntity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::writeDtdEntity</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$content`</span> , <span class="methodparam"><span
-class="type">bool</span> `$pe`</span> , <span class="methodparam"><span
-class="type">string</span> `$pubid`</span> , <span
-class="methodparam"><span class="type">string</span> `$sysid`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$ndataid`</span> )
+`$content`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$isParam`<span class="initializer"> =
+**`FALSE`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$publicId`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$systemId`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$notationData`<span
+class="initializer"> = **`NULL`**</span></span> \]\]\]\] )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_dtd\_entity</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$name`</span> , <span
-class="methodparam"><span class="type">string</span> `$content`</span> ,
-<span class="methodparam"><span class="type">bool</span> `$pe`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$pubid`</span> , <span class="methodparam"><span
-class="type">string</span> `$sysid`</span> , <span
-class="methodparam"><span class="type">string</span> `$ndataid`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> , <span class="methodparam"><span
+class="type">string</span> `$content`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$isParam`<span
+class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$publicId`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$systemId`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$notationData`<span class="initializer"> = **`NULL`**</span></span>
+\]\]\]\] )
 
 Writes a full DTD entity.
 
@@ -1916,6 +2164,13 @@ The content of the entity.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 8.0.0 | `publicId`, `systemId` and `notationData` are nullable now.                                                                               |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::startDtdEntity</span>
@@ -1933,26 +2188,34 @@ Write full DTD tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::writeDtd</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::writeDtd</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$publicId`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$systemId`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$subset`</span>
-\]\]\] )
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$publicId`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$systemId`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$content`<span class="initializer"> = **`NULL`**</span></span> \]\]\] )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_dtd</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$name`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$publicId`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$systemId`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$subset`</span> \]\]\] )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$publicId`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$systemId`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$content`<span class="initializer"> = **`NULL`**</span></span> \]\]\] )
 
 Writes a full DTD.
 
@@ -1973,12 +2236,18 @@ The external subset public identifier.
 `systemId`  
 The external subset system identifier.
 
-`subset`  
+`content`  
 The content of the DTD.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -1997,31 +2266,33 @@ Write full namespaced element tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::writeElementNs</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::writeElementNs</span> ( <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
 `$prefix`</span> , <span class="methodparam"><span
 class="type">string</span> `$name`</span> , <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$uri`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$content`<span class="initializer"> =
+`$namespace`</span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$content`<span class="initializer"> =
 **`NULL`**</span></span> \] )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_element\_ns</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span class="type"><span
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
 `$prefix`</span> , <span class="methodparam"><span
 class="type">string</span> `$name`</span> , <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$uri`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$content`<span class="initializer"> =
+`$namespace`</span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$content`<span class="initializer"> =
 **`NULL`**</span></span> \] )
 
 Writes a full namespaced element tag.
@@ -2041,9 +2312,9 @@ omitted.
 `name`  
 The element name.
 
-`uri`  
-The namespace URI. If `uri` is **`NULL`**, the namespace declaration
-will be omitted.
+`namespace`  
+The namespace URI. If `namespace` is **`NULL`**, the namespace
+declaration will be omitted.
 
 `content`  
 The element contents.
@@ -2051,6 +2322,12 @@ The element contents.
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -2070,21 +2347,22 @@ Write full element tag
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::writeElement</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::writeElement</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$content`</span> \] )
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$content`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_element</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$name`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$content`</span>
-\] )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$content`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 Writes a full element tag.
 
@@ -2106,6 +2384,12 @@ The element contents.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::startElement</span>
@@ -2124,8 +2408,8 @@ Writes a PI
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::writePi</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::writePi</span> ( <span
 class="methodparam"><span class="type">string</span> `$target`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$content`</span> )
@@ -2134,10 +2418,10 @@ class="methodparam"><span class="type">string</span> `$target`</span> ,
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_pi</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$target`</span> , <span
-class="methodparam"><span class="type">string</span> `$content`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$target`</span> , <span class="methodparam"><span
+class="type">string</span> `$content`</span> )
 
 Writes a processing instruction.
 
@@ -2159,6 +2443,12 @@ The content of the processing instruction.
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="methodname">XMLWriter::startPi</span>
@@ -2176,17 +2466,17 @@ Write a raw XML text
 
 面向对象风格
 
-<span class="type">bool</span> <span
-class="methodname">XMLWriter::writeRaw</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XMLWriter::writeRaw</span> ( <span
 class="methodparam"><span class="type">string</span> `$content`</span> )
 
 过程化风格
 
 <span class="type">bool</span> <span
 class="methodname">xmlwriter\_write\_raw</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$xmlwriter`</span> , <span class="methodparam"><span
-class="type">string</span> `$content`</span> )
+class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$content`</span> )
 
 Writes a raw xml text.
 
@@ -2204,6 +2494,12 @@ The text string to write.
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                      |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 

@@ -904,16 +904,19 @@ Perform a regular expression search and replace using callbacks
 
 ### 说明
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">array</span><span class="type">null</span></span> <span
 class="methodname">preg\_replace\_callback\_array</span> ( <span
-class="methodparam"><span class="type">array</span>
-`$patterns_and_callbacks`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$subject`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$limit`<span
-class="initializer"> = -1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `&$count`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$flags`<span
-class="initializer"> = 0</span></span> \]\]\] )
+class="methodparam"><span class="type">array</span> `$pattern`</span> ,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
+`$subject`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$limit`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `&$count`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$flags`<span class="initializer"> =
+0</span></span> \]\]\] )
 
 The behavior of this function is similar to <span
 class="function">preg\_replace\_callback</span>, except that callbacks
@@ -921,7 +924,7 @@ are executed on a per-pattern basis.
 
 ### 参数
 
-`patterns_and_callbacks`  
+`pattern`  
 An associative array mapping patterns (keys) to <span
 class="type">callable</span>s (values).
 

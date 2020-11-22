@@ -328,13 +328,14 @@ class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
 `$filename`</span> )
 
-<span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">bool</span> <span
-class="methodname">xml</span> ( <span class="methodparam"><span
-class="type">string</span> `$source`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$flags`<span class="initializer"> = 0</span></span> \]\] )
+<span class="type"><span class="type">bool</span><span
+class="type">XMLReader</span></span> <span class="methodname">XML</span>
+( <span class="methodparam"><span class="type">string</span>
+`$source`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = 0</span></span> \]\] )
 
 }
 
@@ -530,9 +531,9 @@ The name of the attribute.
 
 ### 更新日志
 
-| 版本  | 说明                                         |
-|-------|----------------------------------------------|
-| 8.0.0 | This function can longer return **`FALSE`**. |
+| 版本  | 说明                                            |
+|-------|-------------------------------------------------|
+| 8.0.0 | This function can no longer return **`FALSE`**. |
 
 ### 返回值
 
@@ -616,7 +617,7 @@ and `namespace` is found or not positioned of element.
 
 | 版本  | 说明                                                                                                             |
 |-------|------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | This function can longer return **`FALSE`**.                                                                     |
+| 8.0.0 | This function can no longer return **`FALSE`**.                                                                  |
 | 5.6.0 | <span class="methodname">XMLReader::getAttributeNS</span> now returns **`NULL`** if the attribute doesn't exist. |
 
 ### 参见
@@ -722,9 +723,9 @@ String containing the prefix.
 
 ### 更新日志
 
-| 版本  | 说明                                         |
-|-------|----------------------------------------------|
-| 8.0.0 | This function can longer return **`FALSE`**. |
+| 版本  | 说明                                            |
+|-------|-------------------------------------------------|
+| 8.0.0 | This function can no longer return **`FALSE`**. |
 
 XMLReader::moveToAttribute
 ==========================
@@ -1252,14 +1253,15 @@ Set the data containing the XML to parse
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">bool</span> <span
-class="methodname">XMLReader::xml</span> ( <span
+<span class="type"><span class="type">bool</span><span
+class="type">XMLReader</span></span> <span
+class="methodname">XMLReader::XML</span> ( <span
 class="methodparam"><span class="type">string</span> `$source`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$encoding`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$flags`<span class="initializer"> =
-0</span></span> \]\] )
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = 0</span></span> \]\] )
 
 Set the data containing the XML to parse.
 
@@ -1290,7 +1292,7 @@ an **`E_DEPRECATED`** error in this case.
 
 | 版本  | 说明                                                                                                                                                              |
 |-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | <span class="methodname">XMLReader::xml</span> is now declared as static method, but can still be called on an <span class="classname">XMLReader</span> instance. |
+| 8.0.0 | <span class="methodname">XMLReader::XML</span> is now declared as static method, but can still be called on an <span class="classname">XMLReader</span> instance. |
 
 ### 参见
 

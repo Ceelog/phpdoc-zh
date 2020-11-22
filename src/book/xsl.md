@@ -55,18 +55,18 @@ XSL
 
 /\* 方法 \*/
 
-<span class="type">string</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">getParameter</span> ( <span class="methodparam"><span
-class="type">string</span> `$namespaceURI`</span> , <span
-class="methodparam"><span class="type">string</span> `$localName`</span>
-)
+class="type">string</span> `$namespace`</span> , <span
+class="methodparam"><span class="type">string</span> `$name`</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getSecurityPrefs</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">hasExsltSupport</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">hasExsltSupport</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -74,36 +74,44 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">object</span>
 `$stylesheet`</span> )
 
-<span class="type">void</span> <span
-class="methodname">registerPHPFunctions</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$restrict`</span>
-\] )
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">registerPHPFunctions</span> (\[ <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$functions`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">removeParameter</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$namespaceURI`</span> , <span class="methodparam"><span
-class="type">string</span> `$localName`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">removeParameter</span> ( <span
+class="methodparam"><span class="type">string</span> `$namespace`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setParameter</span> ( <span class="methodparam"><span
-class="type">string</span> `$namespace`</span> , <span
-class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$value`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setParameter</span> ( <span
+class="methodparam"><span class="type">string</span> `$namespace`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> , <span class="methodparam"><span
+class="type">string</span> `$value`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setProfiling</span> ( <span class="methodparam"><span
-class="type">string</span> `$filename`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setProfiling</span> ( <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$filename`</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">setSecurityPrefs</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$securityPrefs`</span> )
+class="methodparam"><span class="type">int</span> `$preferences`</span>
+)
 
-<span class="type">DOMDocument</span> <span
-class="methodname">transformToDoc</span> ( <span
-class="methodparam"><span class="type">DOMNode</span> `$doc`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">false</span></span>
+<span class="methodname">transformToDoc</span> ( <span
+class="methodparam"><span class="type">object</span> `$document`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$returnClass`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="type">int</span> <span
 class="methodname">transformToURI</span> ( <span
@@ -111,9 +119,12 @@ class="methodparam"><span class="type">DOMDocument</span> `$doc`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$uri`</span> )
 
-<span class="type">string</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span><span
+class="type">null</span></span> <span
 class="methodname">transformToXml</span> ( <span
-class="methodparam"><span class="type">object</span> `$doc`</span> )
+class="methodparam"><span class="type">object</span> `$document`</span>
+)
 
 }
 
@@ -164,21 +175,22 @@ Get value of a parameter
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">XSLTProcessor::getParameter</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$namespaceURI`</span> , <span class="methodparam"><span
-class="type">string</span> `$localName`</span> )
+class="methodparam"><span class="type">string</span> `$namespace`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> )
 
 Gets a parameter if previously set by <span
 class="function">XSLTProcessor::setParameter</span>.
 
 ### 参数
 
-`namespaceURI`  
+`namespace`  
 The namespace URI of the XSLT parameter.
 
-`localName`  
+`name`  
 The local name of the XSLT parameter.
 
 ### 返回值
@@ -221,8 +233,8 @@ Determine if PHP has EXSLT support
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">XSLTProcessor::hasExsltSupport</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XSLTProcessor::hasExsltSupport</span> ( <span
 class="methodparam">void</span> )
 
 This method determines if PHP was built with the
@@ -281,17 +293,19 @@ Enables the ability to use PHP functions as XSLT functions
 
 ### 说明
 
-<span class="type">void</span> <span
-class="methodname">XSLTProcessor::registerPHPFunctions</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$restrict`</span>
-\] )
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">XSLTProcessor::registerPHPFunctions</span> (\[
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$functions`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
 This method enables the ability to use PHP functions as XSLT functions
 within XSL stylesheets.
 
 ### 参数
 
-`restrict`  
+`functions`  
 Use this parameter to only allow certain functions to be called from
 XSLT.
 
@@ -356,21 +370,21 @@ Remove parameter
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">XSLTProcessor::removeParameter</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$namespaceURI`</span> , <span class="methodparam"><span
-class="type">string</span> `$localName`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XSLTProcessor::removeParameter</span> ( <span
+class="methodparam"><span class="type">string</span> `$namespace`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$name`</span> )
 
 Removes a parameter, if set. This will make the processor use the
 default value for the parameter as specified in the stylesheet.
 
 ### 参数
 
-`namespaceURI`  
+`namespace`  
 The namespace URI of the XSLT parameter.
 
-`localName`  
+`name`  
 The local name of the XSLT parameter.
 
 ### 返回值
@@ -389,15 +403,15 @@ Set value for a parameter
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">XSLTProcessor::setParameter</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XSLTProcessor::setParameter</span> ( <span
 class="methodparam"><span class="type">string</span> `$namespace`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$name`</span> , <span class="methodparam"><span
 class="type">string</span> `$value`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">XSLTProcessor::setParameter</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XSLTProcessor::setParameter</span> ( <span
 class="methodparam"><span class="type">string</span> `$namespace`</span>
 , <span class="methodparam"><span class="type">array</span>
 `$options`</span> )
@@ -418,8 +432,7 @@ The local name of the XSLT parameter.
 The new value of the XSLT parameter.
 
 `options`  
-An array of *name =\> value* pairs. This syntax is available since PHP
-5.1.0.
+An array of *name =\> value* pairs.
 
 ### 返回值
 
@@ -468,10 +481,11 @@ Sets profiling output file
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">XSLTProcessor::setProfiling</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-)
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">XSLTProcessor::setProfiling</span> ( <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$filename`</span> )
 
 Sets the file to output profiling information when processing a
 stylesheet.
@@ -526,14 +540,14 @@ Set security preferences
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">XSLTProcessor::setSecurityPrefs</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$securityPrefs`</span> )
+class="methodparam"><span class="type">int</span> `$preferences`</span>
+)
 
 Sets the security preferences.
 
 ### 参数
 
-`securityPrefs`  
+`preferences`  
 The new security preferences. The following constants can be ORed:
 **`XSL_SECPREF_READ_FILE`**, **`XSL_SECPREF_WRITE_FILE`**,
 **`XSL_SECPREF_CREATE_DIRECTORY`**, **`XSL_SECPREF_READ_NETWORK`**,
@@ -551,9 +565,13 @@ Transform to a DOMDocument
 
 ### 说明
 
-<span class="type">DOMDocument</span> <span
-class="methodname">XSLTProcessor::transformToDoc</span> ( <span
-class="methodparam"><span class="type">DOMNode</span> `$doc`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMDocument</span><span class="type">false</span></span>
+<span class="methodname">XSLTProcessor::transformToDoc</span> ( <span
+class="methodparam"><span class="type">object</span> `$document`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$returnClass`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 Transforms the source node to a <span
 class="classname">DOMDocument</span> applying the stylesheet given by
@@ -562,7 +580,7 @@ method.
 
 ### 参数
 
-`doc`  
+`document`  
 The node to be transformed.
 
 ### 返回值
@@ -666,9 +684,12 @@ Transform to XML
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span><span
+class="type">null</span></span> <span
 class="methodname">XSLTProcessor::transformToXml</span> ( <span
-class="methodparam"><span class="type">object</span> `$doc`</span> )
+class="methodparam"><span class="type">object</span> `$document`</span>
+)
 
 Transforms the source node to a string applying the stylesheet given by
 the <span class="function">xsltprocessor::importStylesheet</span>
@@ -676,7 +697,7 @@ method.
 
 ### 参数
 
-`doc`  
+`document`  
 The <span class="type">DOMDocument</span> or <span
 class="type">SimpleXMLElement</span> object to be transformed.
 

@@ -707,8 +707,9 @@ class="type">ReflectionProperty</span> <span
 class="methodname">getProperty</span> ( <span class="methodparam"><span
 class="type">string</span> `$name`</span> )
 
-<span class="modifier">public</span> <span
-class="type">ReflectionClassConstant</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionClassConstant</span><span
+class="type">false</span></span> <span
 class="methodname">getReflectionConstant</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
@@ -2072,8 +2073,9 @@ class's constant
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">ReflectionClassConstant</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionClassConstant</span><span
+class="type">false</span></span> <span
 class="methodname">ReflectionClass::getReflectionConstant</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
@@ -2087,7 +2089,8 @@ The class constant name.
 
 ### 返回值
 
-A <span class="classname">ReflectionClassConstant</span>.
+A <span class="classname">ReflectionClassConstant</span>,
+或者在失败时返回 **`FALSE`**.
 
 ### 参见
 
@@ -7964,8 +7967,9 @@ class="type">ReflectionProperty</span> <span
 class="methodname">ReflectionClass::getProperty</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
-<span class="modifier">public</span> <span
-class="type">ReflectionClassConstant</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionClassConstant</span><span
+class="type">false</span></span> <span
 class="methodname">ReflectionClass::getReflectionConstant</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 

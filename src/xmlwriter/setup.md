@@ -32,7 +32,7 @@ is enabled by default.
 资源类型
 --------
 
-There is one resource used by the procedural version of the XMLWriter
-extension: returned by <span
+Prior to PHP 8.0.0, there was one resource type used by the procedural
+version of the XMLWriter extension: returned by <span
 class="function">xmlwriter\_open\_memory</span> or <span
 class="function">xmlwriter\_open\_uri</span>.
