@@ -54,6 +54,9 @@ SQLite3
         an SQL query
     -   [SQLite3::querySingle](/book/sqlite3.html#SQLite3::querySingle)
         — Executes a query and returns a single result
+    -   [SQLite3::setAuthorizer](/book/sqlite3.html#SQLite3::setAuthorizer)
+        — Configures a callback to be used as an authorizer to limit
+        what a statement can do
     -   [SQLite3::version](/book/sqlite3.html#SQLite3::version) —
         Returns the SQLite3 library version as a string constant and as
         a number
@@ -331,6 +334,12 @@ class="type">string</span> `$query`</span> )
 class="methodparam"><span class="type">string</span> `$query`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
 `$entire_row`<span class="initializer"> = **`FALSE`**</span></span> \] )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setAuthorizer</span> ( <span
+class="methodparam"><span class="type"><span
+class="type">callable</span><span class="type">null</span></span>
+`$callback`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">array</span> <span
@@ -1477,6 +1486,183 @@ print_r($db->querySingle('SELECT username, email FROM user WHERE userid=1', true
     (
         [username] => Scott
         [email] => scott@example.com
+    )
+
+SQLite3::setAuthorizer
+======================
+
+Configures a callback to be used as an authorizer to limit what a
+statement can do
+
+### 说明
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SQLite3::setAuthorizer</span> ( <span
+class="methodparam"><span class="type"><span
+class="type">callable</span><span class="type">null</span></span>
+`$callback`</span> )
+
+Sets a callback that will be called by SQLite every time an action is
+performed (reading, deleting, updating, etc.). This is used when
+preparing a SQL statement from an untrusted source to ensure that the
+SQL statements do not try to access data they are not allowed to see, or
+that they do not try to execute malicious statements that damage the
+database. For example, an application may allow a user to enter
+arbitrary SQL queries for evaluation by a database. But the application
+does not want the user to be able to make arbitrary changes to the
+database. An authorizer could then be put in place while the
+user-entered SQL is being prepared that disallows everything except
+SELECT statements.
+
+The authorizer callback may be called multiple times for each statement
+prepared by SQLite. A *SELECT* or *UPDATE* query will call the
+authorizer for every column that would be read or updated.
+
+The authorizer is called with up to five parameters. The first parameter
+is always given, and is an <span class="type">int</span> (action code)
+matching a constant from *SQLite3*. The other parameters are only passed
+for some actions. The following table describes the second and third
+parameters according to the action:
+
+| Action                             | Second parameter | Third parameter                                    |
+|------------------------------------|------------------|----------------------------------------------------|
+| **`SQLite3::CREATE_INDEX`**        | Index Name       | Table Name                                         |
+| **`SQLite3::CREATE_TABLE`**        | Table Name       | **`NULL`**                                         |
+| **`SQLite3::CREATE_TEMP_INDEX`**   | Index Name       | Table Name                                         |
+| **`SQLite3::CREATE_TEMP_TABLE`**   | Table Name       | **`NULL`**                                         |
+| **`SQLite3::CREATE_TEMP_TRIGGER`** | Trigger Name     | Table Name                                         |
+| **`SQLite3::CREATE_TEMP_VIEW`**    | View Name        | **`NULL`**                                         |
+| **`SQLite3::CREATE_TRIGGER`**      | Trigger Name     | Table Name                                         |
+| **`SQLite3::CREATE_VIEW`**         | View Name        | **`NULL`**                                         |
+| **`SQLite3::DELETE`**              | Table Name       | **`NULL`**                                         |
+| **`SQLite3::DROP_INDEX`**          | Index Name       | Table Name                                         |
+| **`SQLite3::DROP_TABLE`**          | Table Name       | **`NULL`**                                         |
+| **`SQLite3::DROP_TEMP_INDEX`**     | Index Name       | Table Name                                         |
+| **`SQLite3::DROP_TEMP_TABLE`**     | Table Name       | **`NULL`**                                         |
+| **`SQLite3::DROP_TEMP_TRIGGER`**   | Trigger Name     | Table Name                                         |
+| **`SQLite3::DROP_TEMP_VIEW`**      | View Name        | **`NULL`**                                         |
+| **`SQLite3::DROP_TRIGGER`**        | Trigger Name     | Table Name                                         |
+| **`SQLite3::DROP_VIEW`**           | View Name        | **`NULL`**                                         |
+| **`SQLite3::INSERT`**              | Table Name       | **`NULL`**                                         |
+| **`SQLite3::PRAGMA`**              | Pragma Name      | First argument passed to the pragma, or **`NULL`** |
+| **`SQLite3::READ`**                | Table Name       | Column Name                                        |
+| **`SQLite3::SELECT`**              | **`NULL`**       | **`NULL`**                                         |
+| **`SQLite3::TRANSACTION`**         | Operation        | **`NULL`**                                         |
+| **`SQLite3::UPDATE`**              | Table Name       | Column Name                                        |
+| **`SQLite3::ATTACH`**              | Filename         | **`NULL`**                                         |
+| **`SQLite3::DETACH`**              | Database Name    | **`NULL`**                                         |
+| **`SQLite3::ALTER_TABLE`**         | Database Name    | Table Name                                         |
+| **`SQLite3::REINDEX`**             | Index Name       | **`NULL`**                                         |
+| **`SQLite3::ANALYZE`**             | Table Name       | **`NULL`**                                         |
+| **`SQLite3::CREATE_VTABLE`**       | Table Name       | Module Name                                        |
+| **`SQLite3::DROP_VTABLE`**         | Table Name       | Module Name                                        |
+| **`SQLite3::FUNCTION`**            | **`NULL`**       | Function Name                                      |
+| **`SQLite3::SAVEPOINT`**           | Operation        | Savepoint Name                                     |
+| **`SQLite3::RECURSIVE`**           | **`NULL`**       | **`NULL`**                                         |
+
+The 5th parameter will be the name of the database (*"main"*, *"temp"*,
+etc.) if applicable.
+
+The 6th parameter to the authorizer callback is the name of the
+inner-most trigger or view that is responsible for the access attempt or
+**`NULL`** if this access attempt is directly from top-level SQL code.
+
+When the callback returns **`SQLite3::OK`**, that means the operation
+requested is accepted. When the callback returns **`SQLite3::DENY`**,
+the call that triggered the authorizer will fail with an error message
+explaining that access is denied.
+
+If the action code is **`SQLite3::READ`** and the callback returns
+**`SQLite3::IGNORE`** then the prepared statement statement is
+constructed to substitute a **`NULL`** value in place of the table
+column that would have been read if **`SQLite3::OK`** had been returned.
+The **`SQLite3::IGNORE`** return can be used to deny an untrusted user
+access to individual columns of a table.
+
+When a table is referenced by a *SELECT* but no column values are
+extracted from that table (for example in a query like *"SELECT
+count(\*) FROM table"*) then the **`SQLite3::READ`** authorizer callback
+is invoked once for that table with a column name that is an empty
+string.
+
+If the action code is **`SQLite3::DELETE`** and the callback returns
+**`SQLite3::IGNORE`** then the DELETE operation proceeds but the
+truncate optimization is disabled and all rows are deleted individually.
+
+Only a single authorizer can be in place on a database connection at a
+time. Each call to <span
+class="methodname">SQLite3::setAuthorizer</span> overrides the previous
+call. Disable the authorizer by installing a **`NULL`** callback. The
+authorizer is disabled by default.
+
+The authorizer callback must not do anything that will modify the
+database connection that invoked the authorizer callback.
+
+Note that the authorizer is only called when a statement is prepared,
+not when it's executed.
+
+More details can be found in the
+<a href="http://sqlite.org/c3ref/set_authorizer.html" class="link external">» SQLite3 documentation</a>.
+
+### 参数
+
+`callback`  
+The <span class="type">callable</span> to be called.
+
+If **`NULL`** is passed instead, this will disable the current
+authorizer callback.
+
+### 返回值
+
+成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 错误／异常
+
+This method doesn't throw any error, but if an authorizer is enabled and
+returns an invalid value, the statement preparation will throw an error
+(or exception, depending on the use of the <span
+class="methodname">SQLite3::enableExceptions</span> method).
+
+### 范例
+
+**示例 \#1 <span class="methodname">SQLite3::setAuthorizer</span>
+example**
+
+This only allows access to reading, and only some columns of the *users*
+table will be returned. Other columns will be replaced with **`NULL`**.
+
+``` php
+<?php
+$db = new SQLite3('data.sqlite');
+$db->exec('CREATE TABLE users (id, name, password);');
+$db->exec('INSERT INTO users VALUES (1, \'Pauline\', \'Snails4eva\');');
+
+$allowed_columns = ['id', 'name'];
+
+$db->setAuthorizer(function (int $action, ...$args) use ($allowed_columns) {
+    if ($action === SQLite3::READ) {
+        list($table, $column) = $args;
+
+        if ($table === 'users' && in_array($column, $allowed_columns) {
+            return SQLite3::OK;
+        }
+
+        return SQLite3::IGNORE;
+    }
+
+    return SQLite3::DENY;
+});
+
+print_r($db->querySingle('SELECT * FROM users WHERE id = 1;'));
+```
+
+以上例程会输出：
+
+    Array
+    (
+        [id] => 1
+        [name] => Pauline
+        [password] =>
     )
 
 SQLite3::version

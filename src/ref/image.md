@@ -4655,6 +4655,33 @@ print_r(imagegetclip($im));
 
 -   <span class="function">imagesetclip</span>
 
+imagegetinterpolation
+=====================
+
+Get the interpolation method
+
+### 说明
+
+<span class="type">int</span> <span
+class="methodname">imagegetinterpolation</span> ( <span
+class="methodparam"><span class="type">GdImage</span> `$image`</span> )
+
+Gets the currently set interpolation method of the `image`.
+
+### 参数
+
+`image`  
+由图象创建函数(例如<span
+class="function">imagecreatetruecolor</span>)返回的图象资源。
+
+### 返回值
+
+Returns the interpolation method.
+
+### 参见
+
+-   <span class="function">imagesetinterpolation</span>
+
 imagegif
 ========
 
@@ -6043,6 +6070,10 @@ rendering:
 -   <span class="simpara"> <span class="function">imagerotate</span>
     </span>
 
+### 参见
+
+-   <span class="function">imagegetinterpolation</span>
+
 imagesetpixel
 =============
 
@@ -7217,6 +7248,8 @@ png2wbmp($path, './test.wbmp', $image[1], $image[0], 7);
 -   [imagegd](/ref/image.html#imagegd) — 将 GD 图像输出到浏览器或文件
 -   [imagegetclip](/ref/image.html#imagegetclip) — Get the clipping
     rectangle
+-   [imagegetinterpolation](/ref/image.html#imagegetinterpolation) — Get
+    the interpolation method
 -   [imagegif](/ref/image.html#imagegif) — 输出图象到浏览器或文件。
 -   [imagegrabscreen](/ref/image.html#imagegrabscreen) — Captures the
     whole screen

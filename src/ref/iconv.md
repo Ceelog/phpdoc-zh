@@ -225,13 +225,14 @@ Composes a *MIME* header field
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">iconv\_mime\_encode</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$field_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$field_value`</span> \[, <span
-class="methodparam"><span class="type">array</span> `$preferences`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="methodparam"><span class="type">array</span> `$options`<span
+class="initializer"> = \[\]</span></span> \] )
 
 Composes and returns a string that represents a valid *MIME* header
 field, which looks like the following:
@@ -249,11 +250,11 @@ The field name.
 `field_value`  
 The field value.
 
-`preferences`  
+`options`  
 You can control the behaviour of <span
 class="function">iconv\_mime\_encode</span> by specifying an associative
 array that contains configuration items to the optional third parameter
-`preferences`. The items supported by <span
+`options`. The items supported by <span
 class="function">iconv\_mime\_encode</span> are listed below. Note that
 item names are treated case-sensitive.
 
@@ -390,15 +391,16 @@ Finds position of first occurrence of a needle within a haystack
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">iconv\_strpos</span> ( <span
 class="methodparam"><span class="type">string</span> `$haystack`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$needle`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$offset`<span class="initializer"> =
-0</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$charset`<span class="initializer"> =
-ini\_get("iconv.internal\_encoding")</span></span> \]\] )
+0</span></span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 Finds position of first occurrence of a `needle` within a `haystack`.
 
@@ -406,7 +408,7 @@ In contrast to <span class="function">strpos</span>, the return value of
 <span class="function">iconv\_strpos</span> is the number of characters
 that appear before the needle, rather than the offset in bytes to the
 position where the needle has been found. The characters are counted on
-the basis of the specified character set `charset`.
+the basis of the specified character set `encoding`.
 
 ### 参数
 
@@ -421,8 +423,9 @@ The optional `offset` parameter specifies the position from which the
 search should be performed. If the offset is negative, it is counted
 from the end of the string.
 
-`charset`  
-If `charset` parameter is omitted, `string` are assumed to be encoded in
+`encoding`  
+If `encoding` parameter is omitted or **`NULL`**, `string` are assumed
+to be encoded in
 <a href="/iconv/setup.html#运行时配置" class="link">iconv.internal_encoding</a>.
 
 If `haystack` or `needle` is not a string, it is converted to a string
@@ -447,6 +450,7 @@ will return **`FALSE`**.
 
 | 版本  | 说明                                           |
 |-------|------------------------------------------------|
+| 8.0.0 | `encoding` is nullable now.                    |
 | 7.1.0 | Support for negative `offset`s has been added. |
 
 ### 参见
@@ -462,13 +466,14 @@ Finds the last occurrence of a needle within a haystack
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">iconv\_strrpos</span> ( <span
 class="methodparam"><span class="type">string</span> `$haystack`</span>
 , <span class="methodparam"><span class="type">string</span>
-`$needle`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$charset`<span class="initializer"> =
-ini\_get("iconv.internal\_encoding")</span></span> \] )
+`$needle`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 Finds the last occurrence of a `needle` within a `haystack`.
 
@@ -476,7 +481,7 @@ In contrast to <span class="function">strrpos</span>, the return value
 of <span class="function">iconv\_strrpos</span> is the number of
 characters that appear before the needle, rather than the offset in
 bytes to the position where the needle has been found. The characters
-are counted on the basis of the specified character set `charset`.
+are counted on the basis of the specified character set `encoding`.
 
 ### 参数
 
@@ -486,8 +491,9 @@ The entire string.
 `needle`  
 The searched substring.
 
-`charset`  
-If `charset` parameter is omitted, `string` are assumed to be encoded in
+`encoding`  
+If `encoding` parameter is omitted or **`NULL`**, `string` are assumed
+to be encoded in
 <a href="/iconv/setup.html#运行时配置" class="link">iconv.internal_encoding</a>.
 
 If `haystack` or `needle` is not a string, it is converted to a string
@@ -507,6 +513,12 @@ will return **`FALSE`**.
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
+
+### 更新日志
+
+| 版本  | 说明                        |
+|-------|-----------------------------|
+| 8.0.0 | `encoding` is nullable now. |
 
 ### 参见
 

@@ -1669,6 +1669,8 @@ MongoDB 驱动类
     The MongoDB\\Driver\\Cursor class
     -   [MongoDB\\Driver\\Cursor::\_\_construct](/set/mongodb.html#MongoDB\Driver\Cursor::__construct)
         — Create a new Cursor (not used)
+    -   [MongoDB\\Driver\\Cursor::current](/set/mongodb.html#MongoDB\Driver\Cursor::current)
+        — Returns the current element
     -   [MongoDB\\Driver\\Cursor::getId](/set/mongodb.html#MongoDB\Driver\Cursor::getId)
         — Returns the ID for this cursor
     -   [MongoDB\\Driver\\Cursor::getServer](/set/mongodb.html#MongoDB\Driver\Cursor::getServer)
@@ -1676,10 +1678,18 @@ MongoDB 驱动类
     -   [MongoDB\\Driver\\Cursor::isDead](/set/mongodb.html#MongoDB\Driver\Cursor::isDead)
         — Checks if the cursor is exhausted or may have additional
         results
+    -   [MongoDB\\Driver\\Cursor::key](/set/mongodb.html#MongoDB\Driver\Cursor::key)
+        — Returns the current result's index within the cursor
+    -   [MongoDB\\Driver\\Cursor::next](/set/mongodb.html#MongoDB\Driver\Cursor::next)
+        — Advances the cursor to the next result
+    -   [MongoDB\\Driver\\Cursor::rewind](/set/mongodb.html#MongoDB\Driver\Cursor::rewind)
+        — Rewind the cursor to the first result
     -   [MongoDB\\Driver\\Cursor::setTypeMap](/set/mongodb.html#MongoDB\Driver\Cursor::setTypeMap)
         — Sets a type map to use for BSON unserialization
     -   [MongoDB\\Driver\\Cursor::toArray](/set/mongodb.html#MongoDB\Driver\Cursor::toArray)
         — Returns an array containing all results for this cursor
+    -   [MongoDB\\Driver\\Cursor::valid](/set/mongodb.html#MongoDB\Driver\Cursor::valid)
+        — Checks if the current position in the cursor is valid
 -   [MongoDB\\Driver\\CursorId](/set/mongodb.html#MongoDB\Driver\CursorId)
     — The MongoDB\\Driver\\CursorId class
     -   [MongoDB\\Driver\\CursorId::\_\_construct](/set/mongodb.html#MongoDB\Driver\CursorId::__construct)
@@ -7625,13 +7635,19 @@ respectively.
 <span class="modifier">final</span> <span class="ooclass"> class
 **MongoDB\\Driver\\Cursor** </span> <span class="oointerface">implements
 <span class="interfacename">MongoDB\\Driver\\CursorInterface</span>
-</span> {
+</span> <span class="oointerface">, <span
+class="interfacename">Iterator</span> </span> {
 
 /\* 方法 \*/
 
 <span class="modifier">final</span> <span
 class="modifier">private</span> <span
 class="methodname">\_\_construct</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">object</span></span> <span
+class="methodname">current</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
@@ -7648,6 +7664,17 @@ class="methodparam">void</span> )
 <span class="type">bool</span> <span class="methodname">isDead</span> (
 <span class="methodparam">void</span> )
 
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">key</span> ( <span class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">next</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">rewind</span> ( <span
+class="methodparam">void</span> )
+
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">void</span> <span
 class="methodname">setTypeMap</span> ( <span class="methodparam"><span
@@ -7657,6 +7684,10 @@ class="type">array</span> `$typemap`</span> )
 <span class="type">array</span> <span class="methodname">toArray</span>
 ( <span class="methodparam">void</span> )
 
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">valid</span> ( <span
+class="methodparam">void</span> )
+
 }
 
 更新日志
@@ -7664,6 +7695,7 @@ class="type">array</span> `$typemap`</span> )
 
 | 版本               | 说明                                                                                                                                          |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongodb 1.9.0 | Implements <span class="interfacename">Iterator</span>.                                                                                       |
 | PECL mongodb 1.6.0 | Implements <span class="interfacename">MongoDB\\Driver\\CursorInterface</span>, which extends <span class="interfacename">Traversable</span>. |
 
 范例
@@ -7886,6 +7918,32 @@ constructed directly.
 -   <span
     class="function">MongoDB\\Driver\\Server::executeCommand</span>
 -   <span class="function">MongoDB\\Driver\\Server::executeQuery</span>
+
+MongoDB\\Driver\\Cursor::current
+================================
+
+Returns the current element
+
+### 说明
+
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">object</span></span> <span
+class="methodname">MongoDB\\Driver\\Cursor::current</span> ( <span
+class="methodparam">void</span> )
+
+### 参数
+
+此函数没有参数。
+
+### 返回值
+
+Returns the current result document as an array or object, depending on
+the cursor's type map. If iteration has not started or the current
+position is not valid, **`NULL`** will be returned.
+
+### 参见
+
+-   <span class="methodname">Iterator::current</span>
 
 MongoDB\\Driver\\Cursor::getId
 ==============================
@@ -8167,6 +8225,108 @@ var_dump($cursor->isDead());
 -   <a href="https://docs.mongodb.com/manual/reference/method/cursor.isExhausted/" class="link external">» cursor.isExhausted()</a>
     in the MongoDB manual
 
+MongoDB\\Driver\\Cursor::key
+============================
+
+Returns the current result's index within the cursor
+
+### 说明
+
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">MongoDB\\Driver\\Cursor::key</span> ( <span
+class="methodparam">void</span> )
+
+### 参数
+
+此函数没有参数。
+
+### 返回值
+
+The current result's numeric index within the cursor.
+
+### 参见
+
+-   <span class="methodname">Iterator::key</span>
+
+MongoDB\\Driver\\Cursor::next
+=============================
+
+Advances the cursor to the next result
+
+### 说明
+
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">MongoDB\\Driver\\Cursor::next</span> ( <span
+class="methodparam">void</span> )
+
+### 参数
+
+此函数没有参数。
+
+### 返回值
+
+Moves the current position to the next element in the cursor.
+
+### 错误／异常
+
+-   Throws <span
+    class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span>
+    on argument parsing errors.
+-   Throws <span
+    class="classname">MongoDB\\Driver\\Exception\\ConnectionException</span>
+    if connection to the server fails (for reasons other than
+    authentication).
+-   Throws <span
+    class="classname">MongoDB\\Driver\\Exception\\AuthenticationException</span>
+    if authentication is needed and fails.
+
+### 参见
+
+-   <span class="methodname">Iterator::next</span>
+
+MongoDB\\Driver\\Cursor::rewind
+===============================
+
+Rewind the cursor to the first result
+
+### 说明
+
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">MongoDB\\Driver\\Cursor::rewind</span> ( <span
+class="methodparam">void</span> )
+
+If the cursor has advanced beyond its first position, it can no longer
+be rewound.
+
+### 参数
+
+此函数没有参数。
+
+### 返回值
+
+**`NULL`**.
+
+### 错误／异常
+
+-   Throws <span
+    class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span>
+    on argument parsing errors.
+-   Throws <span
+    class="classname">MongoDB\\Driver\\Exception\\ConnectionException</span>
+    if connection to the server fails (for reasons other than
+    authentication).
+-   Throws <span
+    class="classname">MongoDB\\Driver\\Exception\\AuthenticationException</span>
+    if authentication is needed and fails.
+-   Throws <span
+    class="classname">MongoDB\\Driver\\Exception\\LogicException</span>
+    if this method is called after the cursor has advanced beyond its
+    first position.
+
+### 参见
+
+-   <span class="methodname">Iterator::rewind</span>
+
 MongoDB\\Driver\\Cursor::setTypeMap
 ===================================
 
@@ -8341,6 +8501,30 @@ var_dump($cursor->toArray());
 ### 参见
 
 -   <span class="function">MongoDB\\Driver\\Cursor::setTypeMap</span>
+
+MongoDB\\Driver\\Cursor::valid
+==============================
+
+Checks if the current position in the cursor is valid
+
+### 说明
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">MongoDB\\Driver\\Cursor::valid</span> ( <span
+class="methodparam">void</span> )
+
+### 参数
+
+此函数没有参数。
+
+### 返回值
+
+**`TRUE`** if the current cursor position is valid, **`FALSE`**
+otherwise.
+
+### 参见
+
+-   <span class="methodname">Iterator::valid</span>
 
 简介
 ----

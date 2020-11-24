@@ -123,6 +123,7 @@ PHP 手册
     -   [其他问题](/faq/misc.html) — 其他问题
 -   [附录](/appendices.html)
     -   [PHP 及其相关工程的历史](/history.html)
+    -   [Migrating from PHP 7.4.x to PHP 8.0.x](/migration80.html)
     -   [从 PHP 7.3.x 移植到 PHP 7.4.x](/migration74.html)
     -   [从 PHP 7.2.x 移植到 PHP 7.3.x](/migration73.html)
     -   [从PHP 7.1.x 移植到 PHP 7.2.x](/migration72.html)
@@ -190,7 +191,7 @@ class="surname family-name">Vrana</span> </span>
 <a href="/preface.html#contributors" class="link">其他贡献者</a> </span>
 </span>
 
-2020-11-23
+2020-11-25
 
 **Edited By**: <span class="personname fn"> <span
 class="firstname given-name">Peter</span> <span

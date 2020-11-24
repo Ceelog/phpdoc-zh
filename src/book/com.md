@@ -127,14 +127,17 @@ call its methods and access its properties.
 
 /\* 方法 \*/
 
-<span class="methodname">\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$module_name`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$server_name`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$codepage`<span class="initializer"> =
-CP\_ACP</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$typelib`</span> \]\]\] )
+class="type"><span class="type">array</span><span
+class="type">string</span><span class="type">null</span></span>
+`$server_name`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type">int</span> `$codepage`<span
+class="initializer"> = **`CP_ACP`**</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$typelib`<span
+class="initializer"> = ""</span></span> \]\]\] )
 
 }
 
@@ -223,14 +226,17 @@ com class constructor
 
 ### 说明
 
-<span class="methodname">com::\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">com::\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$module_name`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$server_name`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$codepage`<span class="initializer"> =
-CP\_ACP</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$typelib`</span> \]\]\] )
+class="type"><span class="type">array</span><span
+class="type">string</span><span class="type">null</span></span>
+`$server_name`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type">int</span> `$codepage`<span
+class="initializer"> = **`CP_ACP`**</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$typelib`<span
+class="initializer"> = ""</span></span> \]\]\] )
 
 Constructs a new com object.
 
@@ -326,12 +332,13 @@ is not supported.
 
 /\* 方法 \*/
 
-<span class="methodname">\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$assembly_name`</span> , <span class="methodparam"><span
-class="type">string</span> `$class_name`</span> \[, <span
+class="type">string</span> `$datatype_name`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$codepage`<span
-class="initializer"> = CP\_ACP</span></span> \] )
+class="initializer"> = **`CP_ACP`**</span></span> \] )
 
 }
 
@@ -368,12 +375,13 @@ dotnet class constructor
 
 ### 说明
 
-<span class="methodname">dotnet::\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">dotnet::\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$assembly_name`</span> , <span class="methodparam"><span
-class="type">string</span> `$class_name`</span> \[, <span
+class="type">string</span> `$datatype_name`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$codepage`<span
-class="initializer"> = CP\_ACP</span></span> \] )
+class="initializer"> = **`CP_ACP`**</span></span> \] )
 
 Constructs a new dotnet object.
 
@@ -383,7 +391,7 @@ Constructs a new dotnet object.
 <span class="simpara"> Specifies which assembly should be loaded.
 </span>
 
-`class_name`  
+`datatype_name`  
 <span class="simpara"> Specifices which class in that assembly to
 instantiate. </span>
 
@@ -409,13 +417,14 @@ control over the way that PHP passes values to and from COM.
 
 /\* 方法 \*/
 
-<span class="methodname">\_\_construct</span> (\[ <span
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$value`<span
 class="initializer"> = **`NULL`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$type`<span
-class="initializer"> = VT\_EMPTY</span></span> \[, <span
+class="initializer"> = **`VT_EMPTY`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$codepage`<span
-class="initializer"> = CP\_ACP</span></span> \]\]\] )
+class="initializer"> = **`CP_ACP`**</span></span> \]\]\] )
 
 }
 
@@ -453,13 +462,14 @@ variant class constructor
 
 ### 说明
 
-<span class="methodname">variant::\_\_construct</span> (\[ <span
+<span class="modifier">public</span> <span
+class="methodname">variant::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$value`<span
 class="initializer"> = **`NULL`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$type`<span
-class="initializer"> = VT\_EMPTY</span></span> \[, <span
+class="initializer"> = **`VT_EMPTY`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$codepage`<span
-class="initializer"> = CP\_ACP</span></span> \]\]\] )
+class="initializer"> = **`CP_ACP`**</span></span> \]\]\] )
 
 Constructs a new variant object.
 
@@ -505,11 +515,13 @@ and stream
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">variant</span> `$com_object`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">variant</span><span class="type">null</span></span>
+`$variant`</span> \] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">GetCurFileName</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">GetCurFileName</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -522,9 +534,9 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">LoadFromFile</span> ( <span
-class="methodparam"><span class="type">string</span> `$path`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$flags`<span
-class="initializer"> = 0</span></span> \] )
+class="methodparam"><span class="type">string</span> `$filename`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$flags`<span class="initializer"> = 0</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">LoadFromStream</span> ( <span
@@ -532,11 +544,12 @@ class="methodparam"><span class="type">resource</span> `$stream`</span>
 )
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">SaveToFile</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$filename`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
-class="methodparam"><span class="type">bool</span> `$remember`<span
-class="initializer"> = **`TRUE`**</span></span> \]\] )
+<span class="methodname">SaveToFile</span> ( <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$filename`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$remember`<span class="initializer"> =
+**`TRUE`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">SaveToStream</span> ( <span
@@ -554,23 +567,24 @@ Construct a COMPersistHelper object
 
 <span class="modifier">public</span> <span
 class="methodname">COMPersistHelper::\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">variant</span> `$com_object`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">variant</span><span class="type">null</span></span>
+`$variant`</span> \] )
 
 Constructs a persistence helper object, usually associated with a
-`com_object`.
+`variant`.
 
 ### 参数
 
-`com_object`  
+`variant`  
 <span class="simpara"> A COM object which implements <span
 class="interfacename">IDispatch</span>. To be able to successfully call
 any of <span class="classname">COMPersistHelper</span>'s methods, the
 object has to implement <span class="interfacename">IPersistFile</span>,
 <span class="interfacename">IPersistStream</span> and/or <span
 class="interfacename">IPersistStreamInit</span>. </span> <span
-class="simpara"> Passing **`NULL`** as `com_object` is only useful if
-the object is to be loaded from a stream by calling <span
+class="simpara"> Passing **`NULL`** as `variant` is only useful if the
+object is to be loaded from a stream by calling <span
 class="methodname">COMPersistHelper::LoadFromStream</span>. </span>
 
 COMPersistHelper::GetCurFileName
@@ -580,8 +594,9 @@ Get current filename
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">COMPersistHelper::GetCurFileName</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">COMPersistHelper::GetCurFileName</span> ( <span
 class="methodparam">void</span> )
 
 Retrieves the current name of the file associated with the object.
@@ -668,16 +683,16 @@ Load object from file
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">COMPersistHelper::LoadFromFile</span> ( <span
-class="methodparam"><span class="type">string</span> `$path`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$flags`<span
-class="initializer"> = 0</span></span> \] )
+class="methodparam"><span class="type">string</span> `$filename`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$flags`<span class="initializer"> = 0</span></span> \] )
 
 Opens the specified file and initializes an object from the file
 contents.
 
 ### 参数
 
-`path`  
+`filename`  
 <span class="simpara"> The name of the file from which to load the
 object. </span>
 
@@ -741,11 +756,12 @@ Save object to file
 ### 说明
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">COMPersistHelper::SaveToFile</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$filename`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
-class="methodparam"><span class="type">bool</span> `$remember`<span
-class="initializer"> = **`TRUE`**</span></span> \]\] )
+<span class="methodname">COMPersistHelper::SaveToFile</span> ( <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$filename`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$remember`<span class="initializer"> =
+**`TRUE`**</span></span> \] )
 
 Saves a copy of the object to the specified file.
 

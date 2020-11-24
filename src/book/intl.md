@@ -10203,12 +10203,12 @@ The new value of the given field.
 The new value for **`IntlCalendar::FIELD_YEAR`**.
 
 `month`  
-The new value for **`IntlCalendar::FIELD_MONTH`**.
+The new value for **`IntlCalendar::FIELD_MONTH`**. The month sequence is
+zero-based, i.e., January is represented by 0, February by 1, …,
+December is 11 and Undecember (if the calendar has it) is 12.
 
 `dayOfMonth`  
-The new value for **`IntlCalendar::FIELD_DAY_OF_MONTH`**. The month
-sequence is zero-based, i.e., January is represented by 0, February by
-1, …, December is 11 and Undecember (if the calendar has it) is 12.
+The new value for **`IntlCalendar::FIELD_DAY_OF_MONTH`**.
 
 `hour`  
 The new value for **`IntlCalendar::FIELD_HOUR_OF_DAY`**.

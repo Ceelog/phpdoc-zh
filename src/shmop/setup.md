@@ -27,5 +27,5 @@ parameter in your configure line.
 资源类型
 --------
 
-As of PHP 7.0.0 this extension defines the resource type *shmop* which
-is a handle to a shared memory block.
+Prior to PHP 8.0.0, this extension defined the resource type *shmop*
+which is a handle to a shared memory block.

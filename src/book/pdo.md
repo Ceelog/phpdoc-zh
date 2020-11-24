@@ -4292,7 +4292,7 @@ Features
 <tr class="even">
 <td>LOBs</td>
 <td>PDO_CUBRID supports BLOB/CLOB data type. The LOB in PDO is represented as a stream, so you can insert LOBs by binding a stream, and get LOBs by reading a stream returned by CUBRID PDO. For example:
-<div id="example-994" class="example">
+<div id="example-1012" class="example">
 <p><strong>示例 #1 Insert LOBs in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4308,7 +4308,7 @@ Features
 </div>
 </div>
 </div>
-<div id="example-995" class="example">
+<div id="example-1013" class="example">
 <p><strong>示例 #2 Fetch LOBs in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4349,7 +4349,7 @@ Features
 <tr class="even">
 <td>Collection Data Type</td>
 <td>PDO_CUBRID supports SET/MULTISET/SEQUENCE data type. If you don't specify data type, the default data type is char,for example:
-<div id="example-996" class="example">
+<div id="example-1014" class="example">
 <p><strong>示例 #3 Insert set in CUBRID PDO with default data type.</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4370,7 +4370,7 @@ Features
 </div>
 </div>
 </div>
-<div id="example-997" class="example">
+<div id="example-1015" class="example">
 <p><strong>示例 #4 Specify data type when insert set in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -5600,7 +5600,7 @@ your username will be UserName@12345abcde (UserName@ServerId).
 If the Oracle Database is on the same machine as PHP, the database
 software already contains the necessary libraries. When PHP is on a
 different machine, use the free
-<a href="http://www.oracle.com/technetwork/database/database-technologies/instant-client/overview/index-4369172.html" class="link external">» Oracle Instant Client</a>
+<a href="https://www.oracle.com/database/technologies/instant-client.html" class="link external">» Oracle Instant Client</a>
 libraries. For details refer to the
 <a href="/book/oci8.html#需求" class="link">OCI8 Requirements</a>
 section.

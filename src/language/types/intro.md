@@ -5,10 +5,9 @@ PHP 支持 10 种原始数据类型。
 
 四种标量类型：
 
--   <span class="simpara"> <span class="type">boolean</span>（布尔型）
+-   <span class="simpara"> <span class="type">bool</span>（布尔型）
     </span>
--   <span class="simpara"> <span class="type">integer</span>（整型）
-    </span>
+-   <span class="simpara"> <span class="type">int</span>（整型） </span>
 -   <span class="simpara"> <span
     class="type">float</span>（浮点型，也称作 <span
     class="type">double</span>) </span>
@@ -37,14 +36,8 @@ PHP 支持 10 种原始数据类型。
 
 -   <span class="simpara"> <span class="type">mixed</span>（混合类型）
     </span>
--   <span class="simpara"> <span class="type">number</span>（数字类型）
+-   <span class="simpara"> <span class="type">void</span>（无类型）
     </span>
--   <span class="simpara"> <span class="type">array\|object</span>（数组
-    \| 对象类型） </span>
--   <span class="simpara"> <span class="type">void</span> （无类型）
-    </span>
-
-以及伪变量 `$...`。
 
 可能还会读到一些关于“双精度（double）”类型的参考。实际上 double 和 float
 是相同的，由于一些历史的原因，这两个名称同时存在。

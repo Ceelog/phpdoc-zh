@@ -4339,6 +4339,175 @@ echo "<author id='$id'>
 -   <span class="function">printf</span>
 -   <span class="function">sprintf</span>
 
+str\_contains
+=============
+
+Determine if a string contains a given substring
+
+### 说明
+
+<span class="type">bool</span> <span
+class="methodname">str\_contains</span> ( <span
+class="methodparam"><span class="type">string</span> `$haystack`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$needle`</span> )
+
+Performs a case-sensitive check indicating if `needle` is contained in
+`haystack`.
+
+### 参数
+
+`haystack`  
+The string to search in.
+
+`needle`  
+The substring to search for in the `haystack`.
+
+### 返回值
+
+Returns **`TRUE`** if `needle` is in `haystack`, **`FALSE`** otherwise.
+
+### 范例
+
+**示例 \#1 Using the empty string *''***
+
+``` php
+<?php
+if (str_contains('abc', '')) {
+    echo "Checking the existence of the empty string will always return true";
+}
+?>
+```
+
+以上例程会输出：
+
+    Checking the existence of the empty string will always return true
+
+**示例 \#2 Showing case-sensitivity**
+
+``` php
+<?php
+$string = 'The lazy fox jumped over the fence';
+
+if (str_contains($string, 'lazy')) {
+    echo "The string 'lazy' was found in the string\n";
+}
+
+if (str_contains($string, 'Lazy')) {
+    echo 'The string "Lazy" was found in the string';
+} else {
+    echo '"Lazy" was not found because the case does not match';
+}
+
+?>
+```
+
+以上例程会输出：
+
+    The string 'lazy' was found in the string
+    "Lazy" was not found because the case does not match
+
+### 注释
+
+> **Note**: <span class="simpara">此函数可安全用于二进制对象。</span>
+
+### 参见
+
+-   <span class="function">str\_ends\_with</span>
+-   <span class="function">str\_starts\_with</span>
+-   <span class="function">stripos</span>
+-   <span class="function">strrpos</span>
+-   <span class="function">strripos</span>
+-   <span class="function">strstr</span>
+-   <span class="function">strpbrk</span>
+-   <span class="function">substr</span>
+-   <span class="function">preg\_match</span>
+
+str\_ends\_with
+===============
+
+Checks if a string ends with a given substring
+
+### 说明
+
+<span class="type">bool</span> <span
+class="methodname">str\_ends\_with</span> ( <span
+class="methodparam"><span class="type">string</span> `$haystack`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$needle`</span> )
+
+Performs a case-sensitive check indicating if `haystack` ends with
+`needle`.
+
+### 参数
+
+`haystack`  
+The string to search in.
+
+`needle`  
+The substring to search for in the `haystack`.
+
+### 返回值
+
+Returns **`TRUE`** if `haystack` ends with `needle`, **`FALSE`**
+otherwise.
+
+### 范例
+
+**示例 \#1 Using the empty string *''***
+
+``` php
+<?php
+if (str_ends_with('abc', '')) {
+    echo "All strings end with the empty string";
+}
+?>
+```
+
+以上例程会输出：
+
+    All strings end with the empty string
+
+**示例 \#2 Showing case-sensitivity**
+
+``` php
+<?php
+$string = 'The lazy fox jumped over the fence';
+
+if (str_ends_with($string, 'fence')) {
+    echo "The string ends with 'fence'\n";
+}
+
+if (str_ends_with($string, 'Fence')) {
+    echo 'The string ends with "fence"';
+} else {
+    echo '"fence" was not found because the case does not match';
+}
+
+?>
+```
+
+以上例程会输出：
+
+    The string ends with 'fence'
+    "fence" was not found because the case does not match
+
+### 注释
+
+> **Note**: <span class="simpara">此函数可安全用于二进制对象。</span>
+
+### 参见
+
+-   <span class="function">str\_contains</span>
+-   <span class="function">str\_starts\_with</span>
+-   <span class="function">stripos</span>
+-   <span class="function">strrpos</span>
+-   <span class="function">strripos</span>
+-   <span class="function">strstr</span>
+-   <span class="function">strpbrk</span>
+-   <span class="function">substr</span>
+-   <span class="function">preg\_match</span>
+
 str\_getcsv
 ===========
 
@@ -4880,6 +5049,91 @@ print_r($arr2);
 -   <span class="function">count\_chars</span>
 -   <span class="function">str\_word\_count</span>
 -   <a href="/control-structures/for.html" class="link">for</a>
+
+str\_starts\_with
+=================
+
+Checks if a string starts with a given substring
+
+### 说明
+
+<span class="type">bool</span> <span
+class="methodname">str\_starts\_with</span> ( <span
+class="methodparam"><span class="type">string</span> `$haystack`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$needle`</span> )
+
+Performs a case-sensitive check indicating if `haystack` begins with
+`needle`.
+
+### 参数
+
+`haystack`  
+The string to search in.
+
+`needle`  
+The substring to search for in the `haystack`.
+
+### 返回值
+
+Returns **`TRUE`** if `haystack` begins with `needle`, **`FALSE`**
+otherwise.
+
+### 范例
+
+**示例 \#1 Using the empty string *''***
+
+``` php
+<?php
+if (str_starts_with('abc', '')) {
+    echo "All strings start with the empty string";
+}
+?>
+```
+
+以上例程会输出：
+
+    All strings start with the empty string
+
+**示例 \#2 Showing case-sensitivity**
+
+``` php
+<?php
+$string = 'The lazy fox jumped over the fence';
+
+if (str_starts_with($string, 'The')) {
+    echo "The string starts with 'The'\n";
+}
+
+if (str_starts_with($string, 'the')) {
+    echo 'The string starts with "the"';
+} else {
+    echo '"the" was not found because the case does not match';
+}
+
+?>
+```
+
+以上例程会输出：
+
+    The string starts with 'The'
+    "the" was not found because the case does not match
+
+### 注释
+
+> **Note**: <span class="simpara">此函数可安全用于二进制对象。</span>
+
+### 参见
+
+-   <span class="function">str\_contains</span>
+-   <span class="function">str\_ends\_with</span>
+-   <span class="function">stripos</span>
+-   <span class="function">strrpos</span>
+-   <span class="function">strripos</span>
+-   <span class="function">strstr</span>
+-   <span class="function">strpbrk</span>
+-   <span class="function">substr</span>
+-   <span class="function">preg\_match</span>
 
 str\_word\_count
 ================
@@ -7941,6 +8195,10 @@ echo "$newtext\n";
     a string
 -   [sprintf](/ref/strings.html#sprintf) — Return a formatted string
 -   [sscanf](/ref/strings.html#sscanf) — 根据指定格式解析输入的字符
+-   [str\_contains](/ref/strings.html#str_contains) — Determine if a
+    string contains a given substring
+-   [str\_ends\_with](/ref/strings.html#str_ends_with) — Checks if a
+    string ends with a given substring
 -   [str\_getcsv](/ref/strings.html#str_getcsv) — 解析 CSV
     字符串为一个数组
 -   [str\_ireplace](/ref/strings.html#str_ireplace) — str\_replace
@@ -7952,6 +8210,8 @@ echo "$newtext\n";
 -   [str\_rot13](/ref/strings.html#str_rot13) — 对字符串执行 ROT13 转换
 -   [str\_shuffle](/ref/strings.html#str_shuffle) — 随机打乱一个字符串
 -   [str\_split](/ref/strings.html#str_split) — 将字符串转换为数组
+-   [str\_starts\_with](/ref/strings.html#str_starts_with) — Checks if a
+    string starts with a given substring
 -   [str\_word\_count](/ref/strings.html#str_word_count) —
     返回字符串中单词的使用情况
 -   [strcasecmp](/ref/strings.html#strcasecmp) —

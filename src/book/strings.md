@@ -99,6 +99,10 @@
         of a string
     -   [sprintf](/ref/strings.html#sprintf) — Return a formatted string
     -   [sscanf](/ref/strings.html#sscanf) — 根据指定格式解析输入的字符
+    -   [str\_contains](/ref/strings.html#str_contains) — Determine if a
+        string contains a given substring
+    -   [str\_ends\_with](/ref/strings.html#str_ends_with) — Checks if a
+        string ends with a given substring
     -   [str\_getcsv](/ref/strings.html#str_getcsv) — 解析 CSV
         字符串为一个数组
     -   [str\_ireplace](/ref/strings.html#str_ireplace) — str\_replace
@@ -112,6 +116,8 @@
     -   [str\_shuffle](/ref/strings.html#str_shuffle) —
         随机打乱一个字符串
     -   [str\_split](/ref/strings.html#str_split) — 将字符串转换为数组
+    -   [str\_starts\_with](/ref/strings.html#str_starts_with) — Checks
+        if a string starts with a given substring
     -   [str\_word\_count](/ref/strings.html#str_word_count) —
         返回字符串中单词的使用情况
     -   [strcasecmp](/ref/strings.html#strcasecmp) —

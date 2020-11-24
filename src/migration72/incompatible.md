@@ -211,3 +211,8 @@ class="function">date\_parse</span> and <span
 class="function">date\_parse\_from\_format</span> represents seconds
 instead of minutes now, and its sign is inverted. For instance *-120* is
 now *7200*.
+
+### Incoming Cookies
+
+As of PHP 7.2.34, the *names* of incoming cookies are no longer
+url-decoded for security reasons.

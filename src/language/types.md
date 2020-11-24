@@ -14,5 +14,6 @@
 -   [Resource 资源类型](/language/types/resource.html)
 -   [NULL](/language/types/null.html)
 -   [Callback / Callable 类型](/language/types/callable.html)
+-   [类型声明](/language/types/declarations.html)
 -   [本文档中使用的伪类型与变量](/language/pseudo-types.html)
 -   [类型转换的判别](/language/types/type-juggling.html)

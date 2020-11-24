@@ -72,9 +72,13 @@
 -   <span class="simpara">**`CURL_SSLVERSION_MAX_TLSv1_2`**</span>
 -   <span class="simpara">**`CURL_SSLVERSION_MAX_TLSv1_3`**</span>
 -   <span class="simpara">**`CURL_SSLVERSION_TLSv1_3`**</span>
+-   <span class="simpara">**`CURL_VERSION_ALTSVC`** (as of PHP
+    7.3.6)</span>
 -   <span class="simpara">**`CURL_VERSION_ASYNCHDNS`**</span>
 -   <span class="simpara">**`CURL_VERSION_BROTLI`**</span>
 -   <span class="simpara">**`CURL_VERSION_CONV`**</span>
+-   <span class="simpara">**`CURL_VERSION_CURLDEBUG`** (as of PHP
+    7.3.6)</span>
 -   <span class="simpara">**`CURL_VERSION_DEBUG`**</span>
 -   <span class="simpara">**`CURL_VERSION_GSSAPI`**</span>
 -   <span class="simpara">**`CURL_VERSION_GSSNEGOTIATE`**</span>
@@ -84,6 +88,8 @@
 -   <span class="simpara">**`CURL_VERSION_MULTI_SSL`**</span>
 -   <span class="simpara">**`CURL_VERSION_NTLM`**</span>
 -   <span class="simpara">**`CURL_VERSION_NTLM_WB`**</span>
+-   <span class="simpara">**`CURL_VERSION_PSL`** (as of PHP
+    7.3.6)</span>
 -   <span class="simpara">**`CURL_VERSION_SPNEGO`**</span>
 -   <span class="simpara">**`CURL_VERSION_SSPI`**</span>
 -   <span class="simpara">**`CURL_VERSION_TLSAUTH_SRP`**</span>

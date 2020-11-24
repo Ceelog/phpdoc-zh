@@ -43,7 +43,7 @@ databases.
 This is a general abstraction layer for several file-based databases. As
 such, functionality is limited to a common subset of features supported
 by modern databases such as
-<a href="http://www.oracle.com/us/products/database/berkeley-db/index.html" class="link external">» Oracle Berkeley DB</a>.
+<a href="https://www.oracle.com/database/berkeley-db/db.html" class="link external">» Oracle Berkeley DB</a>.
 
 安装／配置
 ==========

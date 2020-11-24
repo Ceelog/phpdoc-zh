@@ -17,7 +17,7 @@ class User {
 ```
 
 上面的例子中，会强制要求 *$user-\>id* 只能为 <span
-class="type">integer</span> 类型，同时 *$user-\>name* 只能为 <span
+class="type">int</span> 类型，同时 *$user-\>name* 只能为 <span
 class="type">string</span> 类型。
 
 #### 箭头函数

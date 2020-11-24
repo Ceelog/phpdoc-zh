@@ -152,6 +152,8 @@
         图像输出到浏览器或文件
     -   [imagegetclip](/ref/image.html#imagegetclip) — Get the clipping
         rectangle
+    -   [imagegetinterpolation](/ref/image.html#imagegetinterpolation) —
+        Get the interpolation method
     -   [imagegif](/ref/image.html#imagegif) — 输出图象到浏览器或文件。
     -   [imagegrabscreen](/ref/image.html#imagegrabscreen) — Captures
         the whole screen

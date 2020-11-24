@@ -39,32 +39,40 @@ Create or attach to a message queue
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">SysvMessageQueue</span><span
+class="type">false</span></span> <span
 class="methodname">msg\_get\_queue</span> ( <span
 class="methodparam"><span class="type">int</span> `$key`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$perms`<span
-class="initializer"> = 0666</span></span> \] )
+<span class="methodparam"><span class="type">int</span>
+`$permissions`<span class="initializer"> = 0666</span></span> \] )
 
 <span class="function">msg\_get\_queue</span> returns an id that can be
 used to access the System V message queue with the given `key`. The
-first call creates the message queue with the optional `perms`. A second
-call to <span class="function">msg\_get\_queue</span> for the same `key`
-will return a different message queue identifier, but both identifiers
-access the same underlying message queue.
+first call creates the message queue with the optional `permissions`. A
+second call to <span class="function">msg\_get\_queue</span> for the
+same `key` will return a different message queue identifier, but both
+identifiers access the same underlying message queue.
 
 ### 参数
 
 `key`  
 Message queue numeric ID
 
-`perms`  
+`permissions`  
 Queue permissions. Default to 0666. If the message queue already exists,
-the `perms` will be ignored.
+the `permissions` will be ignored.
 
 ### 返回值
 
-Returns a resource handle that can be used to access the System V
-message queue.
+Returns <span class="classname">SysvMessageQueue</span> instance that
+can be used to access the System V message queue, 或者在失败时返回
+**`FALSE`**.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                             |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | On success, this function returns a <span class="classname">SysvMessageQueue</span> instance now; previously, a <span class="type">resource</span> was returned. |
 
 ### 参见
 
@@ -111,46 +119,47 @@ Receive a message from a message queue
 
 <span class="type">bool</span> <span
 class="methodname">msg\_receive</span> ( <span class="methodparam"><span
-class="type">resource</span> `$queue`</span> , <span
+class="type">SysvMessageQueue</span> `$queue`</span> , <span
 class="methodparam"><span class="type">int</span>
-`$desiredmsgtype`</span> , <span class="methodparam"><span
-class="type">int</span> `&$msgtype`</span> , <span
-class="methodparam"><span class="type">int</span> `$maxsize`</span> ,
-<span class="methodparam"><span class="type">mixed</span>
-`&$message`</span> \[, <span class="methodparam"><span
-class="type">bool</span> `$unserialize`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$flags`<span class="initializer"> =
-0</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `&$errorcode`</span> \]\]\] )
+`$desired_message_type`</span> , <span class="methodparam"><span
+class="type">int</span> `&$received_message_type`</span> , <span
+class="methodparam"><span class="type">int</span>
+`$max_message_size`</span> , <span class="methodparam"><span
+class="type">mixed</span> `&$message`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$unserialize`<span
+class="initializer"> = **`TRUE`**</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = 0</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `&$error_code`<span
+class="initializer"> = **`NULL`**</span></span> \]\]\] )
 
 <span class="function">msg\_receive</span> will receive the first
 message from the specified `queue` of the type specified by
-`desiredmsgtype`.
+`desired_message_type`.
 
 ### 参数
 
 `queue`  
-Message queue resource handle
+The message queue.
 
-`desiredmsgtype`  
-If `desiredmsgtype` is 0, the message from the front of the queue is
-returned. If `desiredmsgtype` is greater than 0, then the first message
-of that type is returned. If `desiredmsgtype` is less than 0, the first
-message on the queue with a type less than or equal to the absolute
-value of `desiredmsgtype` will be read. If no messages match the
-criteria, your script will wait until a suitable message arrives on the
-queue. You can prevent the script from blocking by specifying
-**`MSG_IPC_NOWAIT`** in the `flags` parameter.
+`desired_message_type`  
+If `desired_message_type` is 0, the message from the front of the queue
+is returned. If `desired_message_type` is greater than 0, then the first
+message of that type is returned. If `desired_message_type` is less than
+0, the first message on the queue with a type less than or equal to the
+absolute value of `desired_message_type` will be read. If no messages
+match the criteria, your script will wait until a suitable message
+arrives on the queue. You can prevent the script from blocking by
+specifying **`MSG_IPC_NOWAIT`** in the `flags` parameter.
 
-`msgtype`  
+`received_message_type`  
 The type of the message that was received will be stored in this
 parameter.
 
-`maxsize`  
+`max_message_size`  
 The maximum size of message to be accepted is specified by the
-`maxsize`; if the message in the queue is larger than this size the
-function will fail (unless you set `flags` as described below).
+`max_message_size`; if the message in the queue is larger than this size
+the function will fail (unless you set `flags` as described below).
 
 `message`  
 The received message will be stored in `message`, unless there were
@@ -171,15 +180,15 @@ The optional `flags` allows you to pass flags to the low-level msgrcv
 system call. It defaults to 0, but you may specify one or more of the
 following values (by adding or ORing them together).
 
-|                      |                                                                                                                                                                             |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **`MSG_IPC_NOWAIT`** | If there are no messages of the `desiredmsgtype`, return immediately and do not wait. The function will fail and return an integer value corresponding to **`MSG_ENOMSG`**. |
-| **`MSG_EXCEPT`**     | Using this flag in combination with a `desiredmsgtype` greater than 0 will cause the function to receive the first message that is not equal to `desiredmsgtype`.           |
-| **`MSG_NOERROR`**    | If the message is longer than `maxsize`, setting this flag will truncate the message to `maxsize` and will not signal an error.                                             |
+|                      |                                                                                                                                                                                   |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **`MSG_IPC_NOWAIT`** | If there are no messages of the `desired_message_type`, return immediately and do not wait. The function will fail and return an integer value corresponding to **`MSG_ENOMSG`**. |
+| **`MSG_EXCEPT`**     | Using this flag in combination with a `desired_message_type` greater than 0 will cause the function to receive the first message that is not equal to `desired_message_type`.     |
+| **`MSG_NOERROR`**    | If the message is longer than `max_message_size`, setting this flag will truncate the message to `max_message_size` and will not signal an error.                                 |
 
-`errorcode`  
-If the function fails, the optional `errorcode` will be set to the value
-of the system errno variable.
+`error_code`  
+If the function fails, the optional `error_code` will be set to the
+value of the system errno variable.
 
 ### 返回值
 
@@ -189,6 +198,12 @@ Upon successful completion the message queue data structure is updated
 as follows: *msg\_lrpid* is set to the process-ID of the calling
 process, *msg\_qnum* is decremented by 1 and *msg\_rtime* is set to the
 current time.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                           |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `queue` expects a <span class="classname">SysvMessageQueue</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -206,7 +221,8 @@ Destroy a message queue
 
 <span class="type">bool</span> <span
 class="methodname">msg\_remove\_queue</span> ( <span
-class="methodparam"><span class="type">resource</span> `$queue`</span> )
+class="methodparam"><span class="type">SysvMessageQueue</span>
+`$queue`</span> )
 
 <span class="function">msg\_remove\_queue</span> destroys the message
 queue specified by the `queue`. Only use this function when all
@@ -216,11 +232,17 @@ release the system resources held by it.
 ### 参数
 
 `queue`  
-Message queue resource handle
+The message queue.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                           |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `queue` expects a <span class="classname">SysvMessageQueue</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -237,27 +259,30 @@ Send a message to a message queue
 ### 说明
 
 <span class="type">bool</span> <span class="methodname">msg\_send</span>
-( <span class="methodparam"><span class="type">resource</span>
+( <span class="methodparam"><span class="type">SysvMessageQueue</span>
 `$queue`</span> , <span class="methodparam"><span
-class="type">int</span> `$msgtype`</span> , <span
-class="methodparam"><span class="type">mixed</span> `$message`</span>
-\[, <span class="methodparam"><span class="type">bool</span>
-`$serialize`<span class="initializer"> = **`TRUE`**</span></span> \[,
-<span class="methodparam"><span class="type">bool</span>
-`$blocking`<span class="initializer"> = **`TRUE`**</span></span> \[,
-<span class="methodparam"><span class="type">int</span>
-`&$errorcode`</span> \]\]\] )
+class="type">int</span> `$message_type`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span><span
+class="type">float</span><span class="type">bool</span></span>
+`$message`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$serialize`<span class="initializer"> =
+**`TRUE`**</span></span> \[, <span class="methodparam"><span
+class="type">bool</span> `$blocking`<span class="initializer"> =
+**`TRUE`**</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `&$error_code`<span class="initializer"> =
+**`NULL`**</span></span> \]\]\] )
 
 <span class="function">msg\_send</span> sends a `message` of type
-`msgtype` (which MUST be greater than 0) to the message queue specified
-by `queue`.
+`message_type` (which MUST be greater than 0) to the message queue
+specified by `queue`.
 
 ### 参数
 
 `queue`  
-Message queue resource handle
+The message queue.
 
-`msgtype`  
+`message_type`  
 The type of the message (MUST be greater than 0)
 
 `message`  
@@ -285,10 +310,10 @@ space for your message to be sent. This is called blocking; you can
 prevent blocking by setting the optional `blocking` parameter to
 **`FALSE`**, in which case <span class="function">msg\_send</span> will
 immediately return **`FALSE`** if the message is too big for the queue,
-and set the optional `errorcode` to **`MSG_EAGAIN`**, indicating that
+and set the optional `error_code` to **`MSG_EAGAIN`**, indicating that
 you should try to send your message again a little later on.
 
-`errorcode`  
+`error_code`  
 If the function fails, the optional errorcode will be set to the value
 of the system errno variable.
 
@@ -300,6 +325,12 @@ Upon successful completion the message queue data structure is updated
 as follows: `msg_lspid` is set to the process-ID of the calling process,
 `msg_qnum` is incremented by 1 and `msg_stime` is set to the current
 time.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                           |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `queue` expects a <span class="classname">SysvMessageQueue</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -317,9 +348,9 @@ Set information in the message queue data structure
 
 <span class="type">bool</span> <span
 class="methodname">msg\_set\_queue</span> ( <span
-class="methodparam"><span class="type">resource</span> `$queue`</span> ,
-<span class="methodparam"><span class="type">array</span> `$data`</span>
-)
+class="methodparam"><span class="type">SysvMessageQueue</span>
+`$queue`</span> , <span class="methodparam"><span
+class="type">array</span> `$data`</span> )
 
 <span class="function">msg\_set\_queue</span> allows you to change the
 values of the msg\_perm.uid, msg\_perm.gid, msg\_perm.mode and
@@ -334,7 +365,7 @@ defined limit.
 ### 参数
 
 `queue`  
-Message queue resource handle
+The message queue.
 
 `data`  
 You specify the values you require by setting the value of the keys that
@@ -343,6 +374,12 @@ you require in the `data` array.
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                           |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `queue` expects a <span class="classname">SysvMessageQueue</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -358,9 +395,11 @@ Returns information from the message queue data structure
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">msg\_stat\_queue</span> ( <span
-class="methodparam"><span class="type">resource</span> `$queue`</span> )
+class="methodparam"><span class="type">SysvMessageQueue</span>
+`$queue`</span> )
 
 <span class="function">msg\_stat\_queue</span> returns the message queue
 meta data for the message queue specified by the `queue`. This is
@@ -370,12 +409,12 @@ was just received.
 ### 参数
 
 `queue`  
-Message queue resource handle
+The message queue.
 
 ### 返回值
 
-The return value is an array whose keys and values have the following
-meanings:
+On success, the return value is an array whose keys and values have the
+following meanings:
 
 |                  |                                                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------|
@@ -389,6 +428,14 @@ meanings:
 | *msg\_qbytes*    | The maximum number of bytes allowed in one message queue. On Linux, this value may be read and modified via `/proc/sys/kernel/msgmnb`. |
 | *msg\_lspid*     | The pid of the process that sent the last message to the queue.                                                                        |
 | *msg\_lrpid*     | The pid of the process that received the last message from the queue.                                                                  |
+
+Returns **`FALSE`** on failure.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                           |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `queue` expects a <span class="classname">SysvMessageQueue</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -406,8 +453,8 @@ Acquire a semaphore
 
 <span class="type">bool</span> <span
 class="methodname">sem\_acquire</span> ( <span class="methodparam"><span
-class="type">resource</span> `$sem_identifier`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$nowait`<span
+class="type">SysvSemaphore</span> `$semaphore`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$non_blocking`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
 
 <span class="function">sem\_acquire</span> by default blocks (if
@@ -422,11 +469,11 @@ will be generated.
 
 ### 参数
 
-`sem_identifier`  
-`sem_identifier` is a semaphore resource, obtained from <span
+`semaphore`  
+`semaphore` is a semaphore obtained from <span
 class="function">sem\_get</span>.
 
-`nowait`  
+`non_blocking`  
 Specifies if the process shouldn't wait for the semaphore to be
 acquired. If set to *true*, the call will return *false* immediately if
 a semaphore cannot be immediately acquired.
@@ -437,9 +484,9 @@ a semaphore cannot be immediately acquired.
 
 ### 更新日志
 
-| 版本  | 说明                               |
-|-------|------------------------------------|
-| 5.6.1 | The `$nowait` parameter was added. |
+| 版本  | 说明                                                                                                                                            |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `semaphore` expects a <span class="classname">SysvSemaphore</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -453,15 +500,16 @@ Get a semaphore id
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">SysvSemaphore</span><span
+class="type">false</span></span> <span
 class="methodname">sem\_get</span> ( <span class="methodparam"><span
 class="type">int</span> `$key`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$max_acquire`<span
 class="initializer"> = 1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$perm`<span
+class="methodparam"><span class="type">int</span> `$permissions`<span
 class="initializer"> = 0666</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$auto_release`<span
-class="initializer"> = 1</span></span> \]\]\] )
+class="methodparam"><span class="type">bool</span> `$auto_release`<span
+class="initializer"> = **`TRUE`**</span></span> \]\]\] )
 
 <span class="function">sem\_get</span> returns an id that can be used to
 access the System V semaphore with the given `key`.
@@ -481,7 +529,7 @@ If `key` is *0*, a new private semaphore is created for each call to
 The number of processes that can acquire the semaphore simultaneously is
 set to `max_acquire`.
 
-`perm`  
+`permissions`  
 The semaphore permissions. Actually this value is set only if the
 process finds it is the only process currently attached to the
 semaphore.
@@ -494,6 +542,13 @@ shutdown.
 
 Returns a positive semaphore identifier on success, or **`FALSE`** on
 error.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                          |
+|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | On success, this function returns a <span class="classname">SysvSemaphore</span> instance now; previously, a <span class="type">resource</span> was returned. |
+| 8.0.0 | The type of `auto_release` has been changed from <span class="type">int</span> to <span class="type">bool</span>.                                             |
 
 ### 注释
 
@@ -520,7 +575,7 @@ Release a semaphore
 
 <span class="type">bool</span> <span
 class="methodname">sem\_release</span> ( <span class="methodparam"><span
-class="type">resource</span> `$sem_identifier`</span> )
+class="type">SysvSemaphore</span> `$semaphore`</span> )
 
 <span class="function">sem\_release</span> releases the semaphore if it
 is currently acquired by the calling process, otherwise a warning is
@@ -531,13 +586,18 @@ class="function">sem\_acquire</span> may be called to re-acquire it.
 
 ### 参数
 
-`sem_identifier`  
-A Semaphore resource handle as returned by <span
-class="function">sem\_get</span>.
+`semaphore`  
+A Semaphore as returned by <span class="function">sem\_get</span>.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                            |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `semaphore` expects a <span class="classname">SysvSemaphore</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -553,7 +613,7 @@ Remove a semaphore
 
 <span class="type">bool</span> <span
 class="methodname">sem\_remove</span> ( <span class="methodparam"><span
-class="type">resource</span> `$sem_identifier`</span> )
+class="type">SysvSemaphore</span> `$semaphore`</span> )
 
 <span class="function">sem\_remove</span> removes the given semaphore.
 
@@ -561,13 +621,18 @@ After removing the semaphore, it is no longer accessible.
 
 ### 参数
 
-`sem_identifier`  
-A semaphore resource identifier as returned by <span
-class="function">sem\_get</span>.
+`semaphore`  
+A semaphore as returned by <span class="function">sem\_get</span>.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                            |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `semaphore` expects a <span class="classname">SysvSemaphore</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -582,68 +647,50 @@ Creates or open a shared memory segment
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">SysvSharedMemory</span><span
+class="type">false</span></span> <span
 class="methodname">shm\_attach</span> ( <span class="methodparam"><span
 class="type">int</span> `$key`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$memsize`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$perm`<span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$size`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$permissions`<span
 class="initializer"> = 0666</span></span> \]\] )
 
 <span class="function">shm\_attach</span> returns an id that can be used
 to access the System V shared memory with the given `key`, the first
-call creates the shared memory segment with `memsize` and the optional
-perm-bits `perm`.
+call creates the shared memory segment with `size` and the optional
+perm-bits `permissions`.
 
 A second call to <span class="function">shm\_attach</span> for the same
-`key` will return a different shared memory identifier, but both
-identifiers access the same underlying shared memory. `memsize` and
-`perm` will be ignored.
+`key` will return a different <span
+class="classname">SysvSharedMemory</span> instance, but both instances
+access the same underlying shared memory. `size` and `permissions` will
+be ignored.
 
 ### 参数
 
 `key`  
 A numeric shared memory segment ID
 
-`memsize`  
+`size`  
 The memory size. If not provided, default to the *sysvshm.init\_mem* in
 the `php.ini`, otherwise 10000 bytes.
 
-`perm`  
+`permissions`  
 The optional permission bits. Default to 0666.
 
 ### 返回值
 
-Returns a shared memory segment identifier.
+Returns a <span class="classname">SysvSharedMemory</span> instance on
+success, 或者在失败时返回 **`FALSE`**.
 
-### 注释
+### 更新日志
 
-> **Note**:
->
-> This function used to return an integer value prior to PHP 5.3.0. To
-> achieve the same value in a portable manner, the return value can be
-> cast to an integer like:
->
-> ``` php
-> <?php
-> // Create a temporary file and return its path
-> $tmp = tempnam('/tmp', 'PHP');
->
-> // Get the file token key
-> $key = ftok($tmp, 'a');
->
-> // Attach the SHM resource, notice the cast afterwards
-> $id = shm_attach($key);
->
-> if ($id === false) {
->     die('Unable to create the shared memory segment');
-> }
->
-> // Cast to integer, since prior to PHP 5.3.0 the resource id 
-> // is returned which can be exposed when casting a resource
-> // to an integer
-> $id = (integer) $id;
-> ?>
-> ```
+| 版本  | 说明                                                                                                                                                              |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | On success, this function returns an <span class="classname">SysvSharedMemory</span> instance now; previously, a <span class="type">resource</span> was returned. |
+| 8.0.0 | `size` is nullable now.                                                                                                                                           |
 
 ### 参见
 
@@ -659,22 +706,28 @@ Disconnects from shared memory segment
 
 <span class="type">bool</span> <span
 class="methodname">shm\_detach</span> ( <span class="methodparam"><span
-class="type">resource</span> `$shm_identifier`</span> )
+class="type">SysvSharedMemory</span> `$shm`</span> )
 
 <span class="function">shm\_detach</span> disconnects from the shared
-memory given by the `shm_identifier` created by <span
+memory given by the `shm` created by <span
 class="function">shm\_attach</span>. Remember, that shared memory still
 exist in the Unix system and the data is still present.
 
 ### 参数
 
-`shm_identifier`  
-A shared memory resource handle as returned by <span
-class="function">shm\_attach</span>
+`shm`  
+A shared memory segment obtained from <span
+class="function">shm\_attach</span>.
 
 ### 返回值
 
-<span class="function">shm\_detach</span> always returns **`TRUE`**.
+成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                         |
+|-------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `shm` expects a <span class="classname">SysvSharedMemory</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -691,26 +744,32 @@ Returns a variable from shared memory
 
 <span class="type">mixed</span> <span
 class="methodname">shm\_get\_var</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$shm_identifier`</span> , <span class="methodparam"><span
-class="type">int</span> `$variable_key`</span> )
+class="methodparam"><span class="type">SysvSharedMemory</span>
+`$shm`</span> , <span class="methodparam"><span class="type">int</span>
+`$key`</span> )
 
 <span class="function">shm\_get\_var</span> returns the variable with a
-given `variable_key`, in the given shared memory segment. The variable
-is still present in the shared memory.
+given `key`, in the given shared memory segment. The variable is still
+present in the shared memory.
 
 ### 参数
 
-`shm_identifier`  
-Shared memory segment, obtained from <span
+`shm`  
+A shared memory segment obtained from <span
 class="function">shm\_attach</span>.
 
-`variable_key`  
+`key`  
 The variable key.
 
 ### 返回值
 
 Returns the variable with the given key.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                         |
+|-------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `shm` expects a <span class="classname">SysvSharedMemory</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -726,24 +785,30 @@ Check whether a specific entry exists
 
 <span class="type">bool</span> <span
 class="methodname">shm\_has\_var</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$shm_identifier`</span> , <span class="methodparam"><span
-class="type">int</span> `$variable_key`</span> )
+class="methodparam"><span class="type">SysvSharedMemory</span>
+`$shm`</span> , <span class="methodparam"><span class="type">int</span>
+`$key`</span> )
 
 Checks whether a specific key exists inside a shared memory segment.
 
 ### 参数
 
-`shm_identifier`  
-Shared memory segment, obtained from <span
+`shm`  
+A shared memory segment obtained from <span
 class="function">shm\_attach</span>.
 
-`variable_key`  
+`key`  
 The variable key.
 
 ### 返回值
 
 Returns **`TRUE`** if the entry exists, otherwise **`FALSE`**
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                         |
+|-------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `shm` expects a <span class="classname">SysvSharedMemory</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -759,28 +824,28 @@ Inserts or updates a variable in shared memory
 
 <span class="type">bool</span> <span
 class="methodname">shm\_put\_var</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$shm_identifier`</span> , <span class="methodparam"><span
-class="type">int</span> `$variable_key`</span> , <span
-class="methodparam"><span class="type">mixed</span> `$variable`</span> )
+class="methodparam"><span class="type">SysvSharedMemory</span>
+`$shm`</span> , <span class="methodparam"><span class="type">int</span>
+`$key`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$value`</span> )
 
 <span class="function">shm\_put\_var</span> inserts or updates the
-`variable` with the given `variable_key`.
+`value` with the given `key`.
 
-Warnings (**`E_WARNING`** level) will be issued if `shm_identifier` is
-not a valid SysV shared memory index or if there was not enough shared
-memory remaining to complete your request.
+Warnings (**`E_WARNING`** level) will be issued if `shm` is not a valid
+SysV shared memory index or if there was not enough shared memory
+remaining to complete your request.
 
 ### 参数
 
-`shm_identifier`  
-A shared memory resource handle as returned by <span
-class="function">shm\_attach</span>
+`shm`  
+A shared memory segment obtained from <span
+class="function">shm\_attach</span>.
 
-`variable_key`  
+`key`  
 The variable key.
 
-`variable`  
+`value`  
 The variable. All
 <a href="/language/types.html" class="link">variable types</a> that
 <span class="function">serialize</span> supports may be used: generally
@@ -790,6 +855,12 @@ cannot be serialized.
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                         |
+|-------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `shm` expects a <span class="classname">SysvSharedMemory</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -805,25 +876,30 @@ Removes a variable from shared memory
 
 <span class="type">bool</span> <span
 class="methodname">shm\_remove\_var</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$shm_identifier`</span> , <span class="methodparam"><span
-class="type">int</span> `$variable_key`</span> )
+class="methodparam"><span class="type">SysvSharedMemory</span>
+`$shm`</span> , <span class="methodparam"><span class="type">int</span>
+`$key`</span> )
 
-Removes a variable with a given `variable_key` and frees the occupied
-memory.
+Removes a variable with a given `key` and frees the occupied memory.
 
 ### 参数
 
-`shm_identifier`  
-The shared memory identifier as returned by <span
-class="function">shm\_attach</span>
+`shm`  
+A shared memory segment obtained from <span
+class="function">shm\_attach</span>.
 
-`variable_key`  
+`key`  
 The variable key.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                         |
+|-------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `shm` expects a <span class="classname">SysvSharedMemory</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
@@ -838,20 +914,26 @@ Removes shared memory from Unix systems
 
 <span class="type">bool</span> <span
 class="methodname">shm\_remove</span> ( <span class="methodparam"><span
-class="type">resource</span> `$shm_identifier`</span> )
+class="type">SysvSharedMemory</span> `$shm`</span> )
 
 <span class="function">shm\_remove</span> removes the shared memory
-`shm_identifier`. All data will be destroyed.
+`shm`. All data will be destroyed.
 
 ### 参数
 
-`shm_identifier`  
-The shared memory identifier as returned by <span
-class="function">shm\_attach</span>
+`shm`  
+A shared memory segment obtained from <span
+class="function">shm\_attach</span>.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                         |
+|-------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `shm` expects a <span class="classname">SysvSharedMemory</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 参见
 
