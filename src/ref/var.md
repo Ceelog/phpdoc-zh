@@ -393,6 +393,57 @@ print_r(array_keys(get_defined_vars()));
 参见 <span class="function">get\_defined\_functions</span> 和 <span
 class="function">get\_defined\_constants</span>。
 
+get\_resource\_id
+=================
+
+Returns an integer identifier for the given resource
+
+### 说明
+
+<span class="type">int</span> <span
+class="methodname">get\_resource\_id</span> ( <span
+class="methodparam"><span class="type">resource</span> `$res`</span> )
+
+This function provides a type-safe way for generating the integer
+identifier for a resource.
+
+### 参数
+
+`res`  
+The evaluated resource handle.
+
+### 返回值
+
+The <span class="type">int</span> identifier for the given `res`.
+
+This function is essentially an <span class="type">int</span> cast of
+`res` to make it easier to retrieve the resource ID.
+
+### 范例
+
+**示例 \#1 <span class="function">get\_resource\_id</span> example**
+
+``` php
+<?php
+$handle = fopen('./storage/logs/lumen.log', 'rt');
+
+echo (int) $handle . "\n\n";
+
+echo get_resource_id($handle);
+
+?>
+```
+
+以上例程会输出：
+
+    698
+
+    698
+
+### 参见
+
+-   <span class="function">get\_resource\_type</span>
+
 get\_resource\_type
 ===================
 
@@ -2053,6 +2104,8 @@ classes for maximum compatibility.
 -   [floatval](/ref/var.html#floatval) — 获取变量的浮点值
 -   [get\_defined\_vars](/ref/var.html#get_defined_vars) —
     返回由所有已定义变量所组成的数组
+-   [get\_resource\_id](/ref/var.html#get_resource_id) — Returns an
+    integer identifier for the given resource
 -   [get\_resource\_type](/ref/var.html#get_resource_type) —
     返回资源（resource）类型
 -   [gettype](/ref/var.html#gettype) — 获取变量的类型

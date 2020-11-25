@@ -8,11 +8,11 @@ Incrementally deflate data
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">deflate\_add</span> ( <span class="methodparam"><span
-class="type">resource</span> `$context`</span> , <span
+class="type">DeflateContext</span> `$context`</span> , <span
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$flush_mode`<span class="initializer"> =
-ZLIB\_SYNC\_FLUSH</span></span> \] )
+**`ZLIB_SYNC_FLUSH`**</span></span> \] )
 
 Incrementally deflates data in the specified context.
 
@@ -42,6 +42,12 @@ Returns a chunk of compressed data, 或者在失败时返回 **`FALSE`**.
 If invalid arguments are given, an error of level **`E_WARNING`** is
 generated.
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                           |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `context` expects a <span class="classname">DeflateContext</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="function">deflate\_init</span>
@@ -53,12 +59,12 @@ Initialize an incremental deflate context
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
+<span class="type"><span class="type">DeflateContext</span><span
 class="type">false</span></span> <span
 class="methodname">deflate\_init</span> ( <span
 class="methodparam"><span class="type">int</span> `$encoding`</span> \[,
 <span class="methodparam"><span class="type">array</span>
-`$options`<span class="initializer"> = array()</span></span> \] )
+`$options`<span class="initializer"> = \[\]</span></span> \] )
 
 Initializes an incremental deflate context using the specified
 `encoding`.
@@ -113,6 +119,12 @@ Returns a deflate context resource (*zlib.deflate*) on success,
 If an invalid option is passed to `options` or the context couldn't be
 created, an error of level **`E_WARNING`** is generated.
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                           |
+|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | On success, this function returns a <span class="classname">DeflateContext</span> instance now; previously, a <span class="type">resource</span> was returned. |
+
 ### 参见
 
 -   <span class="function">deflate\_add</span>
@@ -127,13 +139,13 @@ Close an open gz-file pointer
 
 <span class="type">bool</span> <span class="methodname">gzclose</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$zp`</span> )
+`$stream`</span> )
 
 Closes the given gz-file pointer.
 
 ### 参数
 
-`zp`  
+`stream`  
 The gz-file pointer. It must be valid, and must point to a file
 successfully opened by <span class="function">gzopen</span>.
 
@@ -164,13 +176,14 @@ Compress a string
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gzcompress</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$level`<span
 class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$encoding`<span
-class="initializer"> = ZLIB\_ENCODING\_DEFLATE</span></span> \]\] )
+class="initializer"> = **`ZLIB_ENCODING_DEFLATE`**</span></span> \]\] )
 
 This function compresses the given string using the *ZLIB* data format.
 
@@ -227,10 +240,12 @@ Decodes a gzip compressed string
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gzdecode</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$length`</span> \] )
+class="methodparam"><span class="type">int</span> `$max_length`<span
+class="initializer"> = 0</span></span> \] )
 
 This function returns a decoded version of the input `data`.
 
@@ -239,7 +254,7 @@ This function returns a decoded version of the input `data`.
 `data`  
 The data to decode, encoded by <span class="function">gzencode</span>.
 
-`length`  
+`max_length`  
 The maximum length of data to decode.
 
 ### 返回值
@@ -257,13 +272,14 @@ Deflate a string
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gzdeflate</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$level`<span
 class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$encoding`<span
-class="initializer"> = ZLIB\_ENCODING\_RAW</span></span> \]\] )
+class="initializer"> = **`ZLIB_ENCODING_RAW`**</span></span> \]\] )
 
 This function compresses the given string using the *DEFLATE* data
 format.
@@ -314,13 +330,14 @@ Create a gzip compressed string
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gzencode</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$level`<span
 class="initializer"> = -1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$encoding_mode`<span
-class="initializer"> = FORCE\_GZIP</span></span> \]\] )
+class="methodparam"><span class="type">int</span> `$encoding`<span
+class="initializer"> = **`ZLIB_ENCODING_GZIP`**</span></span> \]\] )
 
 This function returns a compressed version of the input `data`
 compatible with the output of the **gzip** program.
@@ -339,7 +356,7 @@ The level of compression. Can be given as 0 for no compression up to 9
 for maximum compression. If not given, the default compression level
 will be the default compression level of the zlib library.
 
-`encoding_mode`  
+`encoding`  
 The encoding mode. Can be **`FORCE_GZIP`** (the default) or
 **`FORCE_DEFLATE`**.
 
@@ -388,15 +405,15 @@ Test for EOF on a gz-file pointer
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">gzeof</span> (
+<span class="type">bool</span> <span class="methodname">gzeof</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$zp`</span> )
+`$stream`</span> )
 
 Tests the given GZ file pointer for EOF.
 
 ### 参数
 
-`zp`  
+`stream`  
 The gz-file pointer. It must be valid, and must point to a file
 successfully opened by <span class="function">gzopen</span>.
 
@@ -426,8 +443,9 @@ Read entire gz-file into an array
 
 ### 说明
 
-<span class="type">array</span> <span class="methodname">gzfile</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span class="methodname">gzfile</span>
+( <span class="methodparam"><span class="type">string</span>
 `$filename`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$use_include_path`<span class="initializer"> =
 0</span></span> \] )
@@ -449,7 +467,7 @@ too.
 ### 返回值
 
 An array containing the file, one line per cell, empty lines included,
-and with newlines still attached.
+and with newlines still attached, 或者在失败时返回 **`FALSE`**.
 
 ### 范例
 
@@ -476,16 +494,17 @@ Get character from gz-file pointer
 
 ### 说明
 
-<span class="type">string</span> <span class="methodname">gzgetc</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">gzgetc</span>
 ( <span class="methodparam"><span class="type">resource</span>
-`$zp`</span> )
+`$stream`</span> )
 
 Returns a string containing a single (uncompressed) character read from
 the given gz-file pointer.
 
 ### 参数
 
-`zp`  
+`stream`  
 The gz-file pointer. It must be valid, and must point to a file
 successfully opened by <span class="function">gzopen</span>.
 
@@ -520,10 +539,12 @@ Get line from file pointer
 
 ### 说明
 
-<span class="type">string</span> <span class="methodname">gzgets</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">gzgets</span>
 ( <span class="methodparam"><span class="type">resource</span>
-`$zp`</span> \[, <span class="methodparam"><span class="type">int</span>
-`$length`</span> \] )
+`$stream`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$length`<span class="initializer"> =
+1024</span></span> \] )
 
 Gets a (uncompressed) string of up to length - 1 bytes read from the
 given file pointer. Reading ends when length - 1 bytes have been read,
@@ -531,7 +552,7 @@ on a newline, or on EOF (whichever comes first).
 
 ### 参数
 
-`zp`  
+`stream`  
 The gz-file pointer. It must be valid, and must point to a file
 successfully opened by <span class="function">gzopen</span>.
 
@@ -629,10 +650,11 @@ Inflate a deflated string
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gzinflate</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$length`<span
+class="methodparam"><span class="type">int</span> `$max_length`<span
 class="initializer"> = 0</span></span> \] )
 
 This function inflates a deflated string.
@@ -642,7 +664,7 @@ This function inflates a deflated string.
 `data`  
 The data compressed by <span class="function">gzdeflate</span>.
 
-`length`  
+`max_length`  
 The maximum length of data to decode.
 
 ### 返回值
@@ -651,7 +673,7 @@ The original uncompressed data or **`FALSE`** on error.
 
 The function will return an error if the uncompressed data is more than
 32768 times the length of the compressed input `data` or more than the
-optional parameter `length`.
+optional parameter `max_length`.
 
 ### 范例
 
@@ -679,11 +701,12 @@ Open gz-file
 
 ### 说明
 
-<span class="type">resource</span> <span
-class="methodname">gzopen</span> ( <span class="methodparam"><span
-class="type">string</span> `$filename`</span> , <span
-class="methodparam"><span class="type">string</span> `$mode`</span> \[,
-<span class="methodparam"><span class="type">int</span>
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span class="methodname">gzopen</span>
+( <span class="methodparam"><span class="type">string</span>
+`$filename`</span> , <span class="methodparam"><span
+class="type">string</span> `$mode`</span> \[, <span
+class="methodparam"><span class="type">int</span>
 `$use_include_path`<span class="initializer"> = 0</span></span> \] )
 
 Opens a gzip (.gz) file for reading or writing.
@@ -741,7 +764,7 @@ Output all remaining data on a gz-file pointer
 
 <span class="type">int</span> <span class="methodname">gzpassthru</span>
 ( <span class="methodparam"><span class="type">resource</span>
-`$zp`</span> )
+`$stream`</span> )
 
 Reads to EOF on the given gz-file pointer from the current position and
 writes the (uncompressed) results to standard output.
@@ -761,7 +784,7 @@ saves you the <span class="function">gzopen</span> call.
 
 ### 参数
 
-`zp`  
+`stream`  
 The gz-file pointer. It must be valid, and must point to a file
 successfully opened by <span class="function">gzopen</span>.
 
@@ -798,10 +821,11 @@ Binary-safe gz-file read
 
 ### 说明
 
-<span class="type">string</span> <span class="methodname">gzread</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">gzread</span>
 ( <span class="methodparam"><span class="type">resource</span>
-`$zp`</span> , <span class="methodparam"><span class="type">int</span>
-`$length`</span> )
+`$stream`</span> , <span class="methodparam"><span
+class="type">int</span> `$length`</span> )
 
 <span class="function">gzread</span> reads up to `length` bytes from the
 given gz-file pointer. Reading stops when `length` (uncompressed) bytes
@@ -809,7 +833,7 @@ have been read or EOF is reached, whichever comes first.
 
 ### 参数
 
-`zp`  
+`stream`  
 The gz-file pointer. It must be valid, and must point to a file
 successfully opened by <span class="function">gzopen</span>.
 
@@ -818,7 +842,13 @@ The number of bytes to read.
 
 ### 返回值
 
-The data that have been read.
+The data that have been read, 或者在失败时返回 **`FALSE`**.
+
+### 更新日志
+
+| 版本  | 说明                                                                            |
+|-------|---------------------------------------------------------------------------------|
+| 7.4.0 | This functions returns **`FALSE`** on failure now; previously *0* was returned. |
 
 ### 范例
 
@@ -852,14 +882,14 @@ Rewind the position of a gz-file pointer
 
 <span class="type">bool</span> <span class="methodname">gzrewind</span>
 ( <span class="methodparam"><span class="type">resource</span>
-`$zp`</span> )
+`$stream`</span> )
 
 Sets the file position indicator of the given gz-file pointer to the
 beginning of the file stream.
 
 ### 参数
 
-`zp`  
+`stream`  
 The gz-file pointer. It must be valid, and must point to a file
 successfully opened by <span class="function">gzopen</span>.
 
@@ -881,10 +911,10 @@ Seek on a gz-file pointer
 
 <span class="type">int</span> <span class="methodname">gzseek</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$zp`</span> , <span class="methodparam"><span class="type">int</span>
-`$offset`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$whence`<span class="initializer"> =
-SEEK\_SET</span></span> \] )
+`$stream`</span> , <span class="methodparam"><span
+class="type">int</span> `$offset`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$whence`<span
+class="initializer"> = **`SEEK_SET`**</span></span> \] )
 
 Sets the file position indicator for the given file pointer to the given
 offset byte into the file stream. Equivalent to calling (in C)
@@ -897,7 +927,7 @@ sequence of zeroes up to the new starting position.
 
 ### 参数
 
-`zp`  
+`stream`  
 The gz-file pointer. It must be valid, and must point to a file
 successfully opened by <span class="function">gzopen</span>.
 
@@ -942,16 +972,17 @@ Tell gz-file pointer read/write position
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">gztell</span> (
-<span class="methodparam"><span class="type">resource</span>
-`$zp`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">gztell</span>
+( <span class="methodparam"><span class="type">resource</span>
+`$stream`</span> )
 
 Gets the position of the given file pointer; i.e., its offset into the
 uncompressed file stream.
 
 ### 参数
 
-`zp`  
+`stream`  
 The gz-file pointer. It must be valid, and must point to a file
 successfully opened by <span class="function">gzopen</span>.
 
@@ -972,10 +1003,11 @@ Uncompress a compressed string
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gzuncompress</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$length`<span
+class="methodparam"><span class="type">int</span> `$max_length`<span
 class="initializer"> = 0</span></span> \] )
 
 This function uncompress a compressed string.
@@ -985,7 +1017,7 @@ This function uncompress a compressed string.
 `data`  
 The data compressed by <span class="function">gzcompress</span>.
 
-`length`  
+`max_length`  
 The maximum length of data to decode.
 
 ### 返回值
@@ -994,7 +1026,7 @@ The original uncompressed data or **`FALSE`** on error.
 
 The function will return an error if the uncompressed data is more than
 32768 times the length of the compressed input `data` or more than the
-optional parameter `length`.
+optional parameter `max_length`.
 
 ### 范例
 
@@ -1022,40 +1054,50 @@ Binary-safe gz-file write
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">gzwrite</span> (
-<span class="methodparam"><span class="type">resource</span>
-`$zp`</span> , <span class="methodparam"><span
-class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$length`</span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">gzwrite</span>
+( <span class="methodparam"><span class="type">resource</span>
+`$stream`</span> , <span class="methodparam"><span
+class="type">string</span> `$data`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$length`<span class="initializer"> = **`NULL`**</span></span> \] )
 
-<span class="function">gzwrite</span> writes the contents of `string` to
+<span class="function">gzwrite</span> writes the contents of `data` to
 the given gz-file.
 
 ### 参数
 
-`zp`  
+`stream`  
 The gz-file pointer. It must be valid, and must point to a file
 successfully opened by <span class="function">gzopen</span>.
 
-`string`  
+`data`  
 The string to write.
 
 `length`  
 The number of uncompressed bytes to write. If supplied, writing will
 stop after `length` (uncompressed) bytes have been written or the end of
-`string` is reached, whichever comes first.
+`data` is reached, whichever comes first.
 
 > **Note**:
 >
 > Note that if the `length` argument is given, then the
 > <a href="/info/setup.html#" class="link">magic_quotes_runtime</a>
 > configuration option will be ignored and no slashes will be stripped
-> from `string`.
+> from `data`.
 
 ### 返回值
 
 Returns the number of (uncompressed) bytes written to the given gz-file
-stream.
+stream, 或者在失败时返回 **`FALSE`**.
+
+### 更新日志
+
+| 版本  | 说明                                                                            |
+|-------|---------------------------------------------------------------------------------|
+| 8.0.0 | `length` is nullable now; previously, the default was *0*.                      |
+| 7.4.0 | This functions returns **`FALSE`** on failure now; previously *0* was returned. |
 
 ### 范例
 
@@ -1085,11 +1127,11 @@ Incrementally inflate encoded data
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">inflate\_add</span> ( <span class="methodparam"><span
-class="type">resource</span> `$context`</span> , <span
-class="methodparam"><span class="type">string</span>
-`$encoded_data`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$flush_mode`<span class="initializer"> =
-ZLIB\_SYNC\_FLUSH</span></span> \] )
+class="type">InflateContext</span> `$context`</span> , <span
+class="methodparam"><span class="type">string</span> `$data`</span> \[,
+<span class="methodparam"><span class="type">int</span>
+`$flush_mode`<span class="initializer"> =
+**`ZLIB_SYNC_FLUSH`**</span></span> \] )
 
 Incrementally inflates encoded data in the specified `context`.
 
@@ -1101,7 +1143,7 @@ available.
 `context`  
 A context created with <span class="function">inflate\_init</span>.
 
-`encoded_data`  
+`data`  
 A chunk of compressed data.
 
 `flush_mode`  
@@ -1123,6 +1165,12 @@ If invalid parameters are given, inflating the data requires a preset
 dictionary, but none is specified, the compressed stream is corrupt or
 has an invalid checksum, an error of level **`E_WARNING`** is generated.
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                            |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `context` expects an <span class="classname">InflateContext</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### 参见
 
 -   <span class="function">inflate\_init</span>
@@ -1134,11 +1182,10 @@ Get number of bytes read so far
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">inflate\_get\_read\_len</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$resource`</span> )
+class="methodparam"><span class="type">InflateContext</span>
+`$context`</span> )
 
 **Warning**
 
@@ -1146,11 +1193,17 @@ class="methodparam"><span class="type">resource</span>
 
 ### 参数
 
-`resource`  
+`context`  
 
 ### 返回值
 
 Returns number of bytes read so far 或者在失败时返回 **`FALSE`**.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                            |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `context` expects an <span class="classname">InflateContext</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 inflate\_get\_status
 ====================
@@ -1159,21 +1212,26 @@ Get decompression status
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">inflate\_get\_status</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$resource`</span> )
+class="methodparam"><span class="type">InflateContext</span>
+`$context`</span> )
 
 Usually returns either **`ZLIB_OK`** or **`ZLIB_STREAM_END`**.
 
 ### 参数
 
-`resource`  
+`context`  
 
 ### 返回值
 
 Returns decompression status 或者在失败时返回 **`FALSE`**.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                            |
+|-------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `context` expects an <span class="classname">InflateContext</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 inflate\_init
 =============
@@ -1182,12 +1240,12 @@ Initialize an incremental inflate context
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
+<span class="type"><span class="type">InflateContext</span><span
 class="type">false</span></span> <span
 class="methodname">inflate\_init</span> ( <span
 class="methodparam"><span class="type">int</span> `$encoding`</span> \[,
 <span class="methodparam"><span class="type">array</span>
-`$options`<span class="initializer"> = array()</span></span> \] )
+`$options`<span class="initializer"> = \[\]</span></span> \] )
 
 Initialize an incremental inflate context with the specified `encoding`.
 
@@ -1226,6 +1284,12 @@ Returns an inflate context resource (*zlib.inflate*) on success,
 
 If an invalid encoding or option is passed to `options`, or the context
 couldn't be created, an error of level **`E_WARNING`** is generated.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                            |
+|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | On success, this function returns an <span class="classname">InflateContext</span> instance now; previously, a <span class="type">resource</span> was returned. |
 
 ### 参见
 
@@ -1291,8 +1355,8 @@ Uncompress any raw/gzip/zlib encoded data
 class="type">false</span></span> <span
 class="methodname">zlib\_decode</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
-class="methodparam"><span class="type">string</span>
-`$max_decoded_len`</span> \] )
+class="methodparam"><span class="type">int</span> `$max_length`<span
+class="initializer"> = 0</span></span> \] )
 
 Uncompress any raw/gzip/zlib encoded data.
 
@@ -1304,7 +1368,7 @@ Uncompress any raw/gzip/zlib encoded data.
 
 `data`  
 
-`max_decoded_len`  
+`max_length`  
 
 ### 返回值
 
@@ -1321,7 +1385,8 @@ Compress data with the specified encoding
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">zlib\_encode</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> , <span
 class="methodparam"><span class="type">int</span> `$encoding`</span> \[,
@@ -1374,7 +1439,8 @@ Returns the coding type used for output compression
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">zlib\_get\_coding\_type</span> ( <span
 class="methodparam">void</span> )
 

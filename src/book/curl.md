@@ -86,8 +86,6 @@ Client URL 库
         — 设置被上传文件的 MIME 类型
     -   [CURLFile::setPostFilename](/class/curlfile.html#CURLFile::setPostFilename)
         — 设置 POST 请求时使用的文件名
-    -   [CURLFile::\_\_wakeup](/class/curlfile.html#CURLFile::__wakeup)
-        — 反序列化句柄
 
 简介
 ----
@@ -139,10 +137,6 @@ class="methodparam"><span class="type">string</span> `$mime`</span> )
 <span class="methodname">setPostFilename</span> ( <span
 class="methodparam"><span class="type">string</span> `$postname`</span>
 )
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">\_\_wakeup</span> ( <span
-class="methodparam">void</span> )
 
 }
 
@@ -380,26 +374,3 @@ POST 数据里使用的文件名。
 ### 返回值
 
 没有返回值。
-
-CURLFile::\_\_wakeup
-====================
-
-反序列化句柄
-
-### 说明
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">CURLFile::\_\_wakeup</span> ( <span
-class="methodparam">void</span> )
-
-### 参数
-
-此函数没有参数。
-
-### 返回值
-
-没有返回值。
-
-### 错误／异常
-
-CURLFile 对象不是从序列化数据重建的。

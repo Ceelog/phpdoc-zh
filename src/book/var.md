@@ -19,6 +19,8 @@ Variable handling
     -   [floatval](/ref/var.html#floatval) — 获取变量的浮点值
     -   [get\_defined\_vars](/ref/var.html#get_defined_vars) —
         返回由所有已定义变量所组成的数组
+    -   [get\_resource\_id](/ref/var.html#get_resource_id) — Returns an
+        integer identifier for the given resource
     -   [get\_resource\_type](/ref/var.html#get_resource_type) —
         返回资源（resource）类型
     -   [gettype](/ref/var.html#gettype) — 获取变量的类型
