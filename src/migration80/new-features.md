@@ -3,42 +3,38 @@
 
 ### PHP 核心中的新特性
 
-#### Named Arguments
+#### 命名参数
 
-#### Attributes
+#### 注解（Attributes）
 
-Support for Attributes has been added.
+新增注解的功能。
 
-#### Constructor Property Promotion
+#### 构造器属性提升（Constructor Property Promotion）
 
-Support for constructor property promotion (declaring properties in the
-constructor signature) has been added.
+新增构造器属性提升功能（在构造函数中声明类的属性）。
 
-#### Union Types
+#### 联合类型
 
-Support for
-<a href="/language/types/declarations.html#language.types.declarations.union" class="link">union types</a>
-has been added.
+新增
+<a href="/language/types/declarations.html#language.types.declarations.union" class="link">联合类型</a>。
 
-#### Match Expression
+#### Match 表达式
 
-Support for
-<a href="/control-structures/match.html" class="link"><em>match</em> expressions</a>
-has been added.
+新增
+<a href="/control-structures/match.html" class="link"><em>match</em> 表达式</a>。
 
-#### Nullsafe Operator
+#### Nullsafe 运算符
 
-Support for the nullsafe operator (*?-\>*) has been added.
+新增 Nullsafe 运算符(*?-\>*)。
 
-#### Other new Features
+#### 其他新特性
 
--   The *WeakMap* class has been added.
+-   新增 *WeakMap* 类。
 
--   The <span class="classname">ValueError</span> class has been added.
+-   新增 <span class="classname">ValueError</span> 类。
 
--   Any number of function parameters may now be replaced by a variadic
-    argument, as long as the types are compatible. For example, the
-    following code is now allowed:
+-   现在，只要类型兼容，任意数量的函数参数都可以用一个可变参数替换。
+    例如允许编写下面的代码：
 
     ``` php
     <?php
@@ -51,8 +47,8 @@ Support for the nullsafe operator (*?-\>*) has been added.
     ?>
     ```
 
--   <span class="type">static</span> (as in "late static binding") can
-    now be used as a return type:
+-   <span class="type">static</span> ("后期静态绑定"中)
+    可以作为返回类型：
 
     ``` php
     <?php
@@ -64,27 +60,24 @@ Support for the nullsafe operator (*?-\>*) has been added.
     ?>
     ```
 
--   It is now possible to fetch the class name of an object using
-    `$object::class`. The result is the same as `get_class($object)`.
+-   现在可以通过 `$object::class` 获取类名，返回的结果和
+    `get_class($object)` 一致。
 
--   <a href="/language/oop5/basic.html#language.oop5.basic.new" class="link"><em>new</em></a>
-    and
-    <a href="/language/operators/type.html" class="link"><em>instanceof</em></a>
-    can now be used with arbitrary expressions, using
-    `new (expression)(...$args)` and `$obj instanceof (expression)`.
+-   <a href="/language/oop5/basic.html#language.oop5.basic.new" class="link"><em>new</em></a>、<a href="/language/operators/type.html" class="link"><em>instanceof</em></a>
+    可用于任何表达式， 用法为 `new (expression)(...$args)` 和
+    `$obj instanceof (expression)`。
 
--   Some consistency fixes to variable syntax have been applied, for
-    example writing `Foo::BAR::$baz` is now allowed.
+-   添加对一些变量语法一致性的修复，例如现在能够编写 `Foo::BAR::$baz`。
 
--   Added <span class="interfacename">Stringable</span> interface, which
-    is automatically implemented if a class defines a
+-   添加 <span class="interfacename">Stringable</span> interface，
+    当一个类定义
     <a href="/language/oop5/magic.html#object.tostring" class="link">__toString()</a>
-    method.
+    方法后会自动实现该接口。
 
--   Traits can now define abstract private methods. Such methods must be
-    implemented by the class using the trait.
+-   Trait 可以定义私有抽象方法（abstract private method）。 类必须实现
+    trait 定义的该方法。
 
--   *throw* can now be used as an expression. That allows usages like:
+-   可作为表达式使用 *throw*。 使得可以编写以下用法：
 
     ``` php
     <?php
@@ -92,21 +85,20 @@ Support for the nullsafe operator (*?-\>*) has been added.
     $user = $session->user ?? throw new Exception('Must have user');
     ```
 
--   An optional trailing comma is now allowed in parameter lists.
+-   参数列表中的末尾逗号为可选。
 
     ``` php
     <?php
     function functionWithLongSignature(
         Type1 $parameter1,
-        Type2 $parameter2, // <-- This comma is now allowed.
+        Type2 $parameter2, // <-- 这个逗号也被允许了
     ) {
     }
     ```
 
--   It is now possible to write `catch (Exception)` to catch an
-    exception without storing it in a variable.
+-   现在允许 `catch (Exception)` 一个 exception 而无需捕获到变量中。
 
--   Support for <span class="type">mixed</span> type has been added.
+-   支持 <span class="type">mixed</span> 类型。
 
 -   Private methods declared on a parent class no longer enforce any
     inheritance rules on the methods of a child class (with the
@@ -344,10 +336,12 @@ representation, while being more memory efficient and faster.
     <span class="methodname">ZipArchive::setMtimeIndex</span> to set the
     modification time of an entry.
 
--   New <span class="methodname">ZipArchive::setProgressCallback</span>
-    to provide updates during archive close.
+-   New <span
+    class="methodname">ZipArchive::registerProgressCallback</span> to
+    provide updates during archive close.
 
--   New <span class="methodname">ZipArchive::setCancelCallback</span> to
+-   New <span
+    class="methodname">ZipArchive::registerCancelCallback</span> to
     allow cancellation during archive close.
 
 -   New <span class="methodname">ZipArchive::replaceFile</span> to

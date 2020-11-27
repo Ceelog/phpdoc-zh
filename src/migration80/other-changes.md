@@ -1,20 +1,20 @@
 其他变更
 --------
 
-### Changes in SAPI Modules
+### SAPI 模块的变更
 
 #### Apache2Handler
 
-The PHP module has been renamed from *php7\_module* to *php\_module*.
+PHP 模块从 *php7\_module* 重命名为 *php\_module*。
 
-### Changed Functions
+### Function 的变更
 
 #### Reflection
 
-<span class="methodname">ReflectionClass::getConstants</span> and <span
+可通过新参数 `filter` 来过滤 <span
+class="methodname">ReflectionClass::getConstants</span> 和 <span
 class="methodname">ReflectionClass::getReflectionConstants</span>
-results can be now filtered via a new parameter `filter`. Three new
-constants were added to be used with it:
+的返回结果。 新增三个常量，搭配使用：
 
 -   **`ReflectionClassConstant::IS_PUBLIC`**
 -   **`ReflectionClassConstant::IS_PROTECTED`**
@@ -22,9 +22,9 @@ constants were added to be used with it:
 
 #### Zip
 
--   The <span class="methodname">ZipArchive::addGlob</span> and <span
-    class="methodname">ZipArchive::addPattern</span> methods accept more
-    values in the `options` array argument:
+-   <span class="methodname">ZipArchive::addGlob</span> 和 <span
+    class="methodname">ZipArchive::addPattern</span> 方法中 `options`
+    数组参数可接受更多的值：
 
     -   *flags*
     -   *comp\_method*
@@ -32,139 +32,132 @@ constants were added to be used with it:
     -   *env\_method*
     -   *enc\_password*
 
--   <span class="methodname">ZipArchive::addEmptyDir</span>, <span
-    class="methodname">ZipArchive::addFile</span> and <span
-    class="methodname">ZipArchive::addFromString</span> methods have a
-    new `flags` argument. This allows managing name encoding
-    (**`ZipArchive::FL_ENC_*`**) and entry replacement
-    (**`ZipArchive::FL_OVERWRITE`**).
+-   <span class="methodname">ZipArchive::addEmptyDir</span>、 <span
+    class="methodname">ZipArchive::addFile</span>、 <span
+    class="methodname">ZipArchive::addFromString</span> 方法新增 `flags`
+    参数。 可用于名称编码 (**`ZipArchive::FL_ENC_*`**)
+    与条目（entry）替换 (**`ZipArchive::FL_OVERWRITE`**)。
 
--   <span class="methodname">ZipArchive::extractTo</span> now restores
-    the file modification time.
+-   <span class="methodname">ZipArchive::extractTo</span>
+    现在会储存文件的修改时间。
 
-### Other Changes to Extensions
+### 其他扩展变更
 
 #### CURL
 
--   The CURL extension now requires at least libcurl 7.29.0.
+-   现在 CURL 扩展要求 libcurl 版本至少为 7.29.0。
 
--   The deprecated parameter `version` of <span
-    class="function">curl\_version</span> has been removed.
+-   移除了 <span class="function">curl\_version</span> 废弃的参数
+    `version`。
 
-#### Date and Time
+#### 日期/时间
 
-<span class="classname">DatePeriod</span> now implements <span
-class="interfacename">IteratorAggregate</span> (instead of <span
-class="interfacename">Traversable</span>).
+现在 <span class="classname">DatePeriod</span> 实现（implements）了
+<span class="interfacename">IteratorAggregate</span> (之前是 <span
+class="interfacename">Traversable</span>)。
 
 #### DOM
 
-<span class="classname">DOMNamedNodeMap</span> and <span
-class="classname">DOMNodeList</span> now implement <span
-class="interfacename">IteratorAggregate</span> (instead of <span
-class="interfacename">Traversable</span>).
+现在 <span class="classname">DOMNamedNodeMap</span> 与 <span
+class="classname">DOMNodeList</span> 实现（implements）了 <span
+class="interfacename">IteratorAggregate</span> (之前是 <span
+class="interfacename">Traversable</span>)。
 
-#### Intl
+#### 国际化
 
-<span class="classname">IntlBreakIterator</span> and <span
-class="classname">ResourceBundle</span> now implement <span
-class="interfacename">IteratorAggregate</span> (instead of <span
-class="interfacename">Traversable</span>).
+现在 <span class="classname">IntlBreakIterator</span> 与 <span
+class="classname">ResourceBundle</span> 实现（implements）了 <span
+class="interfacename">IteratorAggregate</span> (之前是 <span
+class="interfacename">Traversable</span>)。
 
 #### Enchant
 
-The enchant extension now uses libenchant-2 by default when available.
-libenchant version 1 is still supported but is deprecated and could be
-removed in the future.
+现在环境允许时，enchant 会默认使用 libenchant-2。 仍然支持 libenchant
+1，但已经废弃，并将在未来移除。
 
 #### GD
 
--   The `num_points` parameter of <span
-    class="function">imagepolygon</span>, <span
-    class="function">imageopenpolygon</span> and <span
-    class="function">imagefilledpolygon</span> is now optional, i.e.
-    these functions may be called with either 3 or 4 arguments. If the
-    argument is omitted, it is calculated as `count($points)/2`.
+-   <span class="function">imagepolygon</span>、 <span
+    class="function">imageopenpolygon</span>、<span
+    class="function">imagefilledpolygon</span> 的参数 `num_points`
+    现在为可选参数。 这些函数可用三或四个参数去调用。 省略参数时，会按
+    `count($points)/2` 计算。
 
--   The function <span class="function">imagegetinterpolation</span> to
-    get the current interpolation method has been added.
+-   新增函数 <span
+    class="function">imagegetinterpolation</span>，可获取当前的插值（interpolation）。
 
 #### JSON
 
-The JSON extension cannot be disabled anymore and is always an integral
-part of any PHP build, similar to the date extension.
+现在无法禁用 JSON 扩展，将是任意 PHP 版本的内置功能，类似 date 扩展。
 
 #### MBString
 
-The Unicode data tables have been updated to version 13.0.0.
+更新 Unicode 数据表版本到 13.0.0。
 
 #### PDO
 
-<span class="classname">PDOStatement</span> now implements <span
-class="interfacename">IteratorAggregate</span> (instead of <span
-class="interfacename">Traversable</span>).
+现在 <span class="classname">PDOStatement</span> 实现（implements）了
+<span class="interfacename">IteratorAggregate</span> (之前是 <span
+class="interfacename">Traversable</span>)。
 
 #### LibXML
 
-The minimum required libxml version is now 2.9.0. This means that
-external entity loading is now guaranteed to be disabled by default, and
-no extra steps need to be taken to protect against XXE attacks.
+现在要求 libxml 最小版本为 2.9.0。
+这代表着确保了默认情况下禁用了外部实体加载（external entity
+loading）的功能。 无需额外步骤即可防范 XML 外部实体注入攻击（XXE
+attacks）。
 
 #### MySQLi / PDO MySQL
 
--   When mysqlnd is not used (which is the default and recommended
-    option), the minimum supported libmysqlclient version is now 5.5.
+-   未使用 mysqlnd 时（也是默认且推荐的做法）， 支持的最小
+    libmysqlclient 版本为 5.5。
 
--   <span class="classname">mysqli\_result</span> now implements <span
-    class="interfacename">IteratorAggregate</span> (instead of <span
-    class="interfacename">Traversable</span>).
+-   现在 <span class="classname">mysqli\_result</span>
+    实现（implements）了 <span
+    class="interfacename">IteratorAggregate</span> (之前是 <span
+    class="interfacename">Traversable</span>)。
 
 #### PGSQL / PDO PGSQL
 
-The PGSQL and PDO PGSQL extensions now require at least libpq 9.1.
+PGSQL 与 PDO PGSQL 扩展需要 libpq 的版本号至少为 9.1。
 
 #### Readline
 
-Calling <span class="function">readline\_completion\_function</span>
-before the interactive prompt starts (e.g. in
-<a href="/ini/core.html#ini.auto-prepend-file" class="link">auto_prepend_file</a>)
-will now override the default interactive prompt completion function.
-Previously, <span class="function">readline\_completion\_function</span>
-only worked when called after starting the interactive prompt.
+在交互提示开始之前调用 <span
+class="function">readline\_completion\_function</span> （例如在
+<a href="/ini/core.html#ini.auto-prepend-file" class="link">auto_prepend_file</a>
+中）， 将重写默认的交互输入补全函数。 之前，只有交互提示（interactive
+prompt）开始后， <span
+class="function">readline\_completion\_function</span> 才会运行。
 
 #### SimpleXML
 
-<span class="classname">SimpleXMLElement</span> now implements <span
-class="interfacename">RecursiveIterator</span> and absorbed the
-functionality of <span class="classname">SimpleXMLIterator</span>. <span
-class="classname">SimpleXMLIterator</span> is an empty extension of
-<span class="classname">SimpleXMLElement</span>.
+现在 <span class="classname">SimpleXMLElement</span>
+实现（implements）了 <span
+class="interfacename">RecursiveIterator</span> 并吸收了 <span
+class="classname">SimpleXMLIterator</span> 的功能。 <span
+class="classname">SimpleXMLIterator</span> 是 <span
+class="classname">SimpleXMLElement</span> 的一个空扩展。
 
-### Changes to INI File Handling
+### INI 文件处理的变更
 
--   com.dotnet\_version is a new INI directive to choose the version of
-    the .NET framework to use for <span class="classname">dotnet</span>
-    objects.
+-   com.dotnet\_version 是一个新的 INI 指令，用于选择 <span
+    class="classname">dotnet</span> 对象的 .NET framework 版本。
 
--   zend.exception\_string\_param\_max\_len is a new INI directive to
-    set the maximum string length in an argument of a stringified stack
-    strace.
+-   zend.exception\_string\_param\_max\_len 是一个新的 INI
+    指令，用于设置字符串化的调用栈（stack strace）的最大字符串长度。
 
 ### EBCDIC
 
-EBCDIC targets are no longer supported, though it's unlikely that they
-were still working in the first place.
+不再支持 EBCDIC targets，虽然它不太可能还在当初的地方继续运行。
 
-### Performance
+### 性能
 
--   A Just-In-Time (JIT) compiler has been added to the opcache
-    extension.
+-   opcache 扩展新增了即时编译(JIT) 支持。
 
--   <span class="function">array\_slice</span> on an array without gaps
-    will no longer scan the whole array to find the start offset. This
-    may significantly reduce the runtime of the function with large
-    offsets and small lengths.
+-   <span class="function">array\_slice</span> 用于没有空隙的数组时，
+    将不会扫描整个数组去查找开始的位移（offset）。 在 offset
+    较大、长度较小时，会显著减少函数的运行时间。
 
--   <span class="function">strtolower</span> now uses a SIMD
-    implementation when using the *"C"* **`LC_CTYPE`** locale (which is
-    the default).
+-   当本地化 **`LC_CTYPE`** 为 *"C"* 时（也是默认值）， <span
+    class="function">strtolower</span> 会使用 SIMD 的实现。
