@@ -378,7 +378,8 @@ Fetch an SNMP object
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">snmp2\_get</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>
@@ -434,7 +435,8 @@ Fetch the SNMP object which follows the given object id
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">snmp2\_getnext</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -494,7 +496,8 @@ specified one
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">snmp2\_real\_walk</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -687,7 +690,8 @@ Fetch all the SNMP objects from an agent
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">snmp2\_walk</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>
@@ -756,7 +760,8 @@ Fetch an SNMP object
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">snmp3\_get</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> , <span
 class="methodparam"><span class="type">string</span> `$sec_name`</span>
@@ -834,7 +839,8 @@ Fetch the SNMP object which follows the given object id
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">snmp3\_getnext</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -916,7 +922,8 @@ specified one
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">snmp3\_real\_walk</span> ( <span class="methodparam">
 <span class="type">string</span> `$host` </span> , <span
 class="methodparam"> <span class="type">string</span> `$sec_name`
@@ -1151,7 +1158,8 @@ Fetch all the SNMP objects from an agent
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">snmp3\_walk</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> , <span
 class="methodparam"><span class="type">string</span> `$sec_name`</span>
@@ -1278,7 +1286,8 @@ Fetch the SNMP object which follows the given object id
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">snmpgetnext</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>

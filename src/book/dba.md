@@ -430,13 +430,15 @@ Fetch data specified by key
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">dba\_fetch</span> ( <span class="methodparam"><span
 class="type">string</span> `$key`</span> , <span
 class="methodparam"><span class="type">resource</span> `$handle`</span>
 )
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">dba\_fetch</span> ( <span class="methodparam"><span
 class="type">string</span> `$key`</span> , <span
 class="methodparam"><span class="type">int</span> `$skip`</span> , <span

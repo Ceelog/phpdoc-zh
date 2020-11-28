@@ -267,18 +267,9 @@ class="initializer"> = 4730</span></span> \]\] )
 class="methodparam"><span class="type">string</span> `$servers`<span
 class="initializer"> = 127.0.0.1:4730</span></span> \] )
 
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span class="methodname">addTask</span>
-( <span class="methodparam"><span class="type">string</span>
-`$function_name`</span> , <span class="methodparam"><span
-class="type">string</span> `$workload`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `&$context`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$unique`</span> \]\] )
-
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span
-class="methodname">addTaskBackground</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">addTask</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$function_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$workload`</span> \[, <span
@@ -286,18 +277,9 @@ class="methodparam"><span class="type">mixed</span> `&$context`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$unique`</span> \]\] )
 
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span
-class="methodname">addTaskHigh</span> ( <span class="methodparam"><span
-class="type">string</span> `$function_name`</span> , <span
-class="methodparam"><span class="type">string</span> `$workload`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`&$context`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$unique`</span> \]\] )
-
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span
-class="methodname">addTaskHighBackground</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">addTaskBackground</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$function_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$workload`</span> \[, <span
@@ -305,18 +287,39 @@ class="methodparam"><span class="type">mixed</span> `&$context`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$unique`</span> \]\] )
 
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span
-class="methodname">addTaskLow</span> ( <span class="methodparam"><span
-class="type">string</span> `$function_name`</span> , <span
-class="methodparam"><span class="type">string</span> `$workload`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`&$context`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$unique`</span> \]\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">addTaskHigh</span> ( <span
+class="methodparam"><span class="type">string</span>
+`$function_name`</span> , <span class="methodparam"><span
+class="type">string</span> `$workload`</span> \[, <span
+class="methodparam"><span class="type">mixed</span> `&$context`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$unique`</span> \]\] )
 
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span
-class="methodname">addTaskLowBackground</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">addTaskHighBackground</span> ( <span
+class="methodparam"><span class="type">string</span>
+`$function_name`</span> , <span class="methodparam"><span
+class="type">string</span> `$workload`</span> \[, <span
+class="methodparam"><span class="type">mixed</span> `&$context`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$unique`</span> \]\] )
+
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">addTaskLow</span> ( <span
+class="methodparam"><span class="type">string</span>
+`$function_name`</span> , <span class="methodparam"><span
+class="type">string</span> `$workload`</span> \[, <span
+class="methodparam"><span class="type">mixed</span> `&$context`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$unique`</span> \]\] )
+
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">addTaskLowBackground</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$function_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$workload`</span> \[, <span
@@ -335,9 +338,10 @@ class="type">string</span> `&$context`</span> \] )
 <span class="methodname">clearCallbacks</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">GearmanClient</span> <span class="methodname">clone</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanClient</span><span class="type">false</span></span>
+<span class="methodname">clone</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> ( <span
@@ -640,9 +644,9 @@ Add a task to be run in parallel
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span
-class="methodname">GearmanClient::addTask</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">GearmanClient::addTask</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$function_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$workload`</span> \[, <span
@@ -766,9 +770,9 @@ Add a background task to be run in parallel
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span
-class="methodname">GearmanClient::addTaskBackground</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">GearmanClient::addTaskBackground</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$function_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$workload`</span> \[, <span
@@ -975,9 +979,9 @@ Add a high priority task to run in parallel
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span
-class="methodname">GearmanClient::addTaskHigh</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">GearmanClient::addTaskHigh</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$function_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$workload`</span> \[, <span
@@ -1073,10 +1077,10 @@ Add a high priority background task to be run in parallel
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span
-class="methodname">GearmanClient::addTaskHighBackground</span> ( <span
-class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">GearmanClient::addTaskHighBackground</span> (
+<span class="methodparam"><span class="type">string</span>
 `$function_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$workload`</span> \[, <span
 class="methodparam"><span class="type">mixed</span> `&$context`</span>
@@ -1124,9 +1128,9 @@ Add a low priority task to run in parallel
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span
-class="methodname">GearmanClient::addTaskLow</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">GearmanClient::addTaskLow</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$function_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$workload`</span> \[, <span
@@ -1222,10 +1226,10 @@ Add a low priority background task to be run in parallel
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">GearmanTask</span> <span
-class="methodname">GearmanClient::addTaskLowBackground</span> ( <span
-class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanTask</span><span class="type">false</span></span>
+<span class="methodname">GearmanClient::addTaskLowBackground</span> (
+<span class="methodparam"><span class="type">string</span>
 `$function_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$workload`</span> \[, <span
 class="methodparam"><span class="type">mixed</span> `&$context`</span>
@@ -1415,9 +1419,9 @@ Create a copy of a <span class="classname">GearmanClient</span> object
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">GearmanClient</span> <span
-class="methodname">GearmanClient::clone</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">GearmanClient</span><span class="type">false</span></span>
+<span class="methodname">GearmanClient::clone</span> ( <span
 class="methodparam">void</span> )
 
 Creates a copy of a <span class="classname">GearmanClient</span> object.
@@ -3838,11 +3842,12 @@ class="type">GearmanTask</span><span class="type">false</span></span>
 <span class="methodname">create</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">data</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">data</span> ( <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">dataSize</span> ( <span
 class="methodparam">void</span> )
 
@@ -3866,37 +3871,43 @@ class="methodparam">void</span> )
 <span class="methodname">jobHandle</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">recvData</span> ( <span
-class="methodparam"><span class="type">int</span> `$data_len`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">recvData</span> ( <span class="methodparam"><span
+class="type">int</span> `$data_len`</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">returnCode</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">sendData</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">sendWorkload</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">taskDenominator</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">taskNumerator</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">unique</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">unique</span> ( <span class="methodparam">void</span>
+)
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">uuid</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">uuid</span> ( <span class="methodparam">void</span> )
 
 }
 
@@ -3956,8 +3967,9 @@ Get data returned for a task
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">GearmanTask::data</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">GearmanTask::data</span> ( <span
 class="methodparam">void</span> )
 
 Returns data being returned for a task by a worker.
@@ -3981,7 +3993,8 @@ Get the size of returned data
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">GearmanTask::dataSize</span> ( <span
 class="methodparam">void</span> )
 
@@ -4127,8 +4140,9 @@ Read work or result data into a buffer for a task
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">GearmanTask::recvData</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">GearmanTask::recvData</span> ( <span
 class="methodparam"><span class="type">int</span> `$data_len`</span> )
 
 **Warning**
@@ -4182,7 +4196,8 @@ Send data for a task (deprecated)
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">GearmanTask::sendData</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
@@ -4211,7 +4226,8 @@ Send data for a task
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">GearmanTask::sendWorkload</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
@@ -4240,7 +4256,8 @@ Get completion percentage denominator
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">GearmanTask::taskDenominator</span> ( <span
 class="methodparam">void</span> )
 
@@ -4266,7 +4283,8 @@ Get completion percentage numerator
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">GearmanTask::taskNumerator</span> ( <span
 class="methodparam">void</span> )
 
@@ -4292,8 +4310,9 @@ Get the unique identifier for a task
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">GearmanTask::unique</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">GearmanTask::unique</span> ( <span
 class="methodparam">void</span> )
 
 Returns the unique identifier for this task. This is assigned by the
@@ -4320,8 +4339,9 @@ Get the unique identifier for a task (deprecated)
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">GearmanTask::uuid</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">GearmanTask::uuid</span> ( <span
 class="methodparam">void</span> )
 
 Returns the unique identifier for this task. This is assigned by the

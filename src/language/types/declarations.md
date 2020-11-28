@@ -11,19 +11,19 @@
 
 ### 单一类型
 
-| 类型                               | 说明                                                                                                                                                                               | 版本      |
-|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| 类/接口 名称                       | 值必须为指定类和接口的实例化对象 <a href="/language/operators/type.html" class="link"><em>instanceof</em></a>                                                                      |           |
-| <span class="type">self</span>     | The value must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the same class as the one the method is defined on. Can only be used in classes. |           |
-| <span class="type">array</span>    | 值必须为 <span class="type">array</span>。                                                                                                                                         |           |
-| <span class="type">callable</span> | The value must be a valid <span class="type">callable</span>. Cannot be used as a class property type declaration.                                                                 |           |
-| <span class="type">bool</span>     | 值必须为一个布尔值。                                                                                                                                                               |           |
-| <span class="type">float</span>    | 值必须为一个浮点数字。                                                                                                                                                             |           |
-| <span class="type">int</span>      | 值必须为一个整型数字。                                                                                                                                                             |           |
-| <span class="type">string</span>   | 值必须为一个 <span class="type">string</span>。                                                                                                                                    |           |
-| <span class="type">iterable</span> | 值必须为 <span class="type">array</span> 或 <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> <span class="classname">Traversable</span>。              | PHP 7.1.0 |
-| <span class="type">object</span>   | 值必须为<span class="type">object</span>。                                                                                                                                         | PHP 7.2.0 |
-| <span class="type">mixed</span>    | 值可以为任何类型。                                                                                                                                                                 | PHP 8.0.0 |
+| 类型                               | 说明                                                                                                                                                                  | 版本      |
+|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| 类/接口 名称                       | 值必须为指定类和接口的实例化对象 <a href="/language/operators/type.html" class="link"><em>instanceof</em></a>                                                         |           |
+| <span class="type">self</span>     | 值必定是所在方法的类的一个 <a href="/language/operators/type.html" class="link"><em>instanceof</em></a>。 只能在类的内部使用。                                        |           |
+| <span class="type">array</span>    | 值必须为 <span class="type">array</span>。                                                                                                                            |           |
+| <span class="type">callable</span> | 值必定是一个有效的 <span class="type">callable</span>。 不能用于类属性的类型声明。                                                                                    |           |
+| <span class="type">bool</span>     | 值必须为一个布尔值。                                                                                                                                                  |           |
+| <span class="type">float</span>    | 值必须为一个浮点数字。                                                                                                                                                |           |
+| <span class="type">int</span>      | 值必须为一个整型数字。                                                                                                                                                |           |
+| <span class="type">string</span>   | 值必须为一个 <span class="type">string</span>。                                                                                                                       |           |
+| <span class="type">iterable</span> | 值必须为 <span class="type">array</span> 或 <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> <span class="classname">Traversable</span>。 | PHP 7.1.0 |
+| <span class="type">object</span>   | 值必须为<span class="type">object</span>。                                                                                                                            | PHP 7.2.0 |
+| <span class="type">mixed</span>    | 值可以为任何类型。                                                                                                                                                    | PHP 8.0.0 |
 
 **Warning**
 
@@ -51,14 +51,14 @@ Output of the above example in PHP 8:
 
 #### 范例
 
-**示例 \#1 类型声明在类中的使用**
+**示例 \#1 在类中使用类型声明**
 
 ``` php
 <?php
 class C {}
 class D extends C {}
 
-// This doesn't extend C.
+// 它没有 extend C。
 class E {}
 
 function f(C $c) {
@@ -82,14 +82,14 @@ Output of the above example in PHP 8:
     #1 {main}
       thrown in - on line 8
 
-**示例 \#2 类型声明在接口中的使用**
+**示例 \#2 在接口中使用类型声明**
 
 ``` php
 <?php
 interface I { public function f(); }
 class C implements I { public function f() {} }
 
-// This doesn't implement I.
+// 它没有 implement I。
 class E {}
 
 function f(I $i) {
@@ -119,7 +119,7 @@ function sum($a, $b): float {
     return $a + $b;
 }
 
-// Note that a float will be returned.
+// 注意必须返回一个 float。
 var_dump(sum(1, 2));
 ?>
 ```
@@ -152,7 +152,7 @@ var_dump(getC());
 自 PHP 7.1.0 起，类型声明允许前置一个问号 (*?*)
 用来声明这个值允许为指定类型，或者为 **`NULL`**。
 
-**示例 \#5 允许为空的参数类型定义**
+**示例 \#5 定义可空（Nullable）的参数类型**
 
 ``` php
 <?php
@@ -173,7 +173,7 @@ f(null);
     }
     NULL
 
-**示例 \#6 允许为空的返回类型定义**
+**示例 \#6 定义可空（Nullable）的返回类型**
 
 ``` php
 <?php
@@ -228,115 +228,104 @@ function get_item(): ?string {
 
 *null* 不能作为一个独立的类型使用。
 
-#### false pseudo-type
+#### false 伪类型
 
-The *false* literal type is supported as part of unions, and is included
-as for historical reasons many internal functions return *false* instead
-of *null* for failures. A classic example of such a function is <span
-class="function">strpos</span>.
-
-**Caution**
-
-*false* cannot be used as a standalone type (including nullable
-standalone type). As such, all of *false*, *false\|null* and *?false*
-are not permitted.
+通过联合类型支持字面类型（Literal Type）*false*，
+出于历史原因，很多内部函数在失败时返回了 *false* 而不是 *null*。
+这类函数的典型例子是 <span class="function">strpos</span>。
 
 **Caution**
 
-The *true* literal type does *not* exist.
+*false* 不能单独作为类型使用（包括可空 nullable 类型）。
+因此，*false*、*false\|null*、 *?false* 都是不可以用的。
 
-#### Duplicate and redundant types
+**Caution**
 
-To catch simple bugs in union type declarations, redundant types that
-can be detected without performing class loading will result in a
-compile-time error. This includes:
+*true* 字面类型*不存在*。
 
--   <span class="simpara"> Each name-resolved type may only occur once.
-    Types such as *int\|string\|INT* result in an error. </span>
--   <span class="simpara"> If <span class="type">bool</span> is used,
-    <span class="type">false</span> cannot be used additionally. </span>
--   <span class="simpara"> If <span class="type">object</span> is used,
-    class types cannot be used additionally. </span>
--   <span class="simpara"> If <span class="type">iterable</span> is
-    used, <span class="type">array</span> and <span
-    class="classname">Traversable</span> cannot be used additionally.
-    </span>
+#### 重复冗余的类型
 
-> **Note**: <span class="simpara"> This does not guarantee that the type
-> is “minimal”, because doing so would require loading all used class
-> types. </span>
+为了能在联合类型声明中暴露简单的 bug，不需要加载 class
+就可以在编译时让重复冗余的类型产生错误。 包含：
 
-For example, if *A* and *B* are class aliases, then *A\|B* remains a
-legal union type, even though it could be reduced to either *A* or *B*.
-Similarly, if class `B extends A {}`, then *A\|B* is also a legal union
-type, even though it could be reduced to just *A*.
+-   <span class="simpara"> 解析出来的类型只能出现一次。例如这样的类型
+    *int\|string\|INT* 会导致错误。 </span>
+-   <span class="simpara"> 使用了 <span class="type">bool</span>
+    时就不能再附带使用 <span class="type">false</span>。 </span>
+-   <span class="simpara"> 使用了 <span class="type">object</span>
+    时就不能再附带使用 class 类型。 </span>
+-   <span class="simpara"> 使用了 <span class="type">iterable</span>
+    时，<span class="type">array</span>、 <span
+    class="classname">Traversable</span> 都不能再附带使用。 </span>
+
+> **Note**: <span class="simpara">
+> 不过它不能确保类型最小化，因为要达到这样的效果，还要加载使用类型的
+> class。 </span>
+
+例如，假设 *A* 和 *B* 都是一个类的别名， 而 *A\|B*
+仍然是有效的，哪怕它可以被简化为 *A* 或 *B*。 同样的，如果
+`B extends A {}`，那 *A\|B* 仍然是有效的联合类型，尽管它可以被简化为
+*A*。
 
 ``` php
 <?php
-function foo(): int|INT {} // Disallowed
-function foo(): bool|false {} // Disallowed
+function foo(): int|INT {} // 不允许
+function foo(): bool|false {} // 不允许
 
 use A as B;
-function foo(): A|B {} // Disallowed ("use" is part of name resolution)
+function foo(): A|B {} // 不允许 ("use" 是名称解析的一部分)
 
 class_alias('X', 'Y');
-function foo(): X|Y {} // Allowed (redundancy is only known at runtime)
+function foo(): X|Y {} // 允许 (运行时才能知道重复性)
 ?>
 ```
 
-### Return only types
+### 仅仅返回类型
 
 #### void
 
-*void* is a return type indicating the function does not return a value.
-Therefore it cannot be part of a union type declaration. Available as of
-PHP 7.1.0.
+*void* 是一个返回类型，用于标识函数没有返回值。
+它不能是联合类型的一部分。 PHP 7.1.0 起可用。
 
 #### static
 
-The value must be an
-<a href="/language/operators/type.html" class="link"><em>instanceof</em></a>
-the same class as the one the method is called in. Available as of PHP
-8.0.0.
+它的值必须是一个 class 的
+<a href="/language/operators/type.html" class="link"><em>instanceof</em></a>，该
+class 是调用方法所在的同一个类。 PHP 8.0.0 起有效。
 
-### Strict typing
+### 严格类型
 
-By default, PHP will coerce values of the wrong type into the expected
-scalar type declaration if possible. For example, a function that is
-given an <span class="type">int</span> for a parameter that expects a
-<span class="type">string</span> will get a variable of type <span
-class="type">string</span>.
+默认如果可能，PHP 会强制转化不合适的类型为想要的标量类型。
+比如，参数想要 <span class="type">string</span>，传入的是 <span
+class="type">int</span>， 则会获取 <span class="type">string</span>
+类型的变量。
 
-It is possible to enable strict mode on a per-file basis. In strict
-mode, only a value corresponding exactly to the type declaration will be
-accepted, otherwise a <span class="classname">TypeError</span> will be
-thrown. The only exception to this rule is that an <span
-class="type">int</span> value will pass a <span
-class="type">float</span> type declaration.
+可以按文件开启严格模式。
+在严格模式下，只能接受完全匹配的类型，否则会抛出 <span
+class="classname">TypeError</span>。 唯一的例外是 <span
+class="type">int</span> 值也可以传入声明为 <span
+class="type">float</span> 的类型。
 
 **Warning**
 
-Function calls from within internal functions will not be affected by
-the *strict\_types* declaration.
+通过内部函数调用函数时，不会受 *strict\_types* 声明影响。
 
-To enable strict mode, the
+要开启严格模式，使用
 <a href="/control-structures/declare.html" class="link"><em>declare</em></a>
-statement is used with the *strict\_types* declaration:
+开启 *strict\_types*：
 
 > **Note**:
 >
-> Strict typing applies to function calls made from *within* the file
-> with strict typing enabled, not to the functions declared within that
-> file. If a file without strict typing enabled makes a call to a
-> function that was defined in a file with strict typing, the caller's
-> preference (coercive typing) will be respected, and the value will be
-> coerced.
+> 文件开启严格类型后的*内部*调用函数将应用严格类型，
+> 而不是在声明函数的文件内开启。
+> 如果文件没有声明开启严格类型，而被调用的函数所在文件有严格类型声明，
+> 那将遵循调用者的设置（开启类型强制转化）， 值也会强制转化。
 
 > **Note**:
 >
-> Strict typing is only defined for scalar type declarations.
+> 只有为标量类型的声明开启严格类型。
 
-**示例 \#8 Strict typing for arguments values**
+**示例 \#8 参数值的严格类型**
 
 ``` php
 <?php
@@ -361,7 +350,7 @@ Output of the above example in PHP 8:
     #1 {main}
       thrown in - on line 4
 
-**示例 \#9 Coercive typing for argument values**
+**示例 \#9 参数值的类型强制转化**
 
 ``` php
 <?php
@@ -371,7 +360,7 @@ function sum(int $a, int $b) {
 
 var_dump(sum(1, 2));
 
-// These will be coerced to integers: note the output below!
+// 以下会强制转化为整型，注意以下内容输出！
 var_dump(sum(1.5, 2.5));
 ?>
 ```
@@ -381,7 +370,7 @@ var_dump(sum(1.5, 2.5));
     int(3)
     int(3)
 
-**示例 \#10 Strict typing for return values**
+**示例 \#10 返回值的严格类型**
 
 ``` php
 <?php
@@ -406,71 +395,65 @@ var_dump(sum(1, 2.5));
     #1 {main}
       thrown in - on line 5
 
-### Coercive typing with union types
+### 联合类型的内部隐式强制转化
 
-When *strict\_types* is not enabled, scalar type declarations are
-subject to limited implicit type coercions. If the exact type of the
-value is not part of the union, then the target type is chosen in the
-following order of preference:
+没有开启 *strict\_types* 时，标量类型可能会限制内部隐式类型转化。
+如果值的类型不是联合类型中的一部分，则目标类型会按以下顺序：
 
 1.  <span class="simpara"> <span class="type">int</span> </span>
 2.  <span class="simpara"> <span class="type">float</span> </span>
 3.  <span class="simpara"> <span class="type">string</span> </span>
 4.  <span class="simpara"> <span class="type">bool</span> </span>
 
-If the type both exists in the union, and the value can be coerced to
-the type under PHPs existing type checking semantics, then the type is
-chosen. Otherwise the next type is tried.
+如果类型出现在组合中，值可以按 PHP
+现有的类型语义检测进行内部隐式强制转化，则会选择该类型。
+否则会尝试下一个类型。
 
 **Caution**
 
-As an exception, if the value is a string and both int and float are
-part of the union, the preferred type is determined by the existing
-“numeric string” semantics. For example, for *"42"* <span
-class="type">int</span> is chosen, while for *"42.0"* <span
-class="type">float</span> is chosen.
+有一个例外：当值是字符串，而 int 与 float
+同时在组合中，将按现有的“数字字符串”检测语义，识别首选的类型。
+例如，*"42"* 会选择 <span class="type">int</span> 类型， 而 *"42.0"*
+会选择 <span class="type">float</span> 类型。
 
 > **Note**:
 >
-> Types that are not part of the above preference list are not eligible
-> targets for implicit coercion. In particular no implicit coercions to
-> the *null* and *false* types occur.
+> 没有出现在上面列表中的类型则不是有效的内部隐式转化目标。
+> 尤其是不会出现内部隐式转化 *null* 和 *false* 类型。
 
-**示例 \#11 Example of types being coerced into a type part of the
-union**
+**示例 \#11 类型强制转换为联合类型的例子**
 
 ``` php
 <?php
 // int|string
-42    --> 42          // exact type
-"42"  --> "42"        // exact type
-new ObjectWithToString --> "Result of __toString()"
-                      // object never compatible with int, fall back to string
-42.0  --> 42          // float compatible with int
-42.1  --> 42          // float compatible with int
-1e100 --> "1.0E+100"  // float too large for int type, fall back to string
-INF   --> "INF"       // float too large for int type, fall back to string
-true  --> 1           // bool compatible with int
-[]    --> TypeError   // array not compatible with int or string
+42    --> 42          // 类型完全匹配
+"42"  --> "42"        // 类型完全匹配
+new ObjectWithToString --> "__toString() 的结果"
+                      // object 不兼容 int，降级到 string
+42.0  --> 42          // float 与 int 兼容
+42.1  --> 42          // float 与 int 兼容
+1e100 --> "1.0E+100"  // float 比 int 大太多了，降级到 string
+INF   --> "INF"       // float 比 int 大太多了，降级到 string
+true  --> 1           // bool 与 int 兼容
+[]    --> TypeError   // array 不兼容 int 或 string
 
 // int|float|bool
-"45"    --> 45        // int numeric string
-"45.0"  --> 45.0      // float numeric string
+"45"    --> 45        // int 的数字字符串
+"45.0"  --> 45.0      // float 的数字字符串
 
-"45X"   --> true      // not numeric string, fall back to bool
-""      --> false     // not numeric string, fall back to bool
-"X"     --> true      // not numeric string, fall back to bool
-[]      --> TypeError // array not compatible with int, float or bool
+"45X"   --> true      // 不是数字字符串，降级到 bool
+""      --> false     // 不是数字字符串，降级到 bool
+"X"     --> true      // 不是数字字符串，降级到 bool
+[]      --> TypeError // array 不兼容 int、float、bool
 ?>
 ```
 
-### Misc
+### 其他
 
-**示例 \#12 Typed pass-by-reference Parameters**
+**示例 \#12 传引用参数的类型**
 
-Declared types of reference parameters are checked on function entry,
-but not when the function returns, so after the function had returned,
-the argument's type may have changed.
+仅仅会在函数入口检查传引用的参数类型，而不是在函数返回时检查。
+所以函数返回时，参数类型可能会发生变化。
 
 ``` php
 <?php
@@ -495,7 +478,7 @@ Output of the above example in PHP 8:
     #1 {main}
       thrown in - on line 2
 
-**示例 \#13 Catching <span class="classname">TypeError</span>**
+**示例 \#13 捕获 <span class="classname">TypeError</span>**
 
 ``` php
 <?php

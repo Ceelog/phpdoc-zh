@@ -667,7 +667,8 @@ Make binary diff of two strings
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">xdiff\_string\_bdiff</span> ( <span
 class="methodparam"><span class="type">string</span> `$old_data`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -702,7 +703,8 @@ Patch a string with a binary diff
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">xdiff\_string\_bpatch</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -738,7 +740,8 @@ Alias of xdiff\_string\_bdiff
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">xdiff\_string\_bdiff</span> ( <span
 class="methodparam"><span class="type">string</span> `$old_data`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -776,7 +779,8 @@ Make unified diff of two strings
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">xdiff\_string\_diff</span> ( <span
 class="methodparam"><span class="type">string</span> `$old_data`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -898,7 +902,8 @@ Alias of xdiff\_string\_bpatch
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">xdiff\_string\_patch\_binary</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -938,7 +943,8 @@ Patch a string with an unified diff
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">xdiff\_string\_patch</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1017,7 +1023,8 @@ fingerprinting algorithm
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">xdiff\_string\_bdiff</span> ( <span
 class="methodparam"><span class="type">string</span> `$old_data`</span>
 , <span class="methodparam"><span class="type">string</span>

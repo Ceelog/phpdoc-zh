@@ -111,9 +111,9 @@
         Tracing](/book/oci8.html#OCI8%20and%20DTrace%20Dynamic%20Tracing)
     -   [Supported Datatypes](/book/oci8.html#Supported%20Datatypes)
     -   [OCI8 函数](/book/oci8.html#OCI8%20函数)
-    -   [OCI-Collection](/book/oci8.html#OCI-Collection) — The
-        OCI-Collection class
-    -   [OCI-Lob](/book/oci8.html#OCI-Lob) — The OCI-Lob class
+    -   [OCICollection](/book/oci8.html#OCICollection) — The
+        OCICollection class
+    -   [OCILob](/book/oci8.html#OCILob) — The OCILob class
     -   [OCI8 Obsolete Aliases and
         Functions](/book/oci8.html#OCI8%20Obsolete%20Aliases%20and%20Functions)
 -   [Paradox](/book/paradox.html) — Paradox File Access

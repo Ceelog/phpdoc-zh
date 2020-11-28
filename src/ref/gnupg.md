@@ -307,7 +307,8 @@ Decrypts a given text
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gnupg\_decrypt</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$identifier`</span> , <span class="methodparam"><span
@@ -363,7 +364,8 @@ Decrypts and verifies a given text
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">gnupg\_decryptverify</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$identifier`</span> , <span class="methodparam"><span
@@ -427,7 +429,8 @@ Encrypts a given text
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gnupg\_encrypt</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$identifier`</span> , <span class="methodparam"><span
@@ -483,7 +486,8 @@ Encrypts and signs a given text
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gnupg\_encryptsign</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$identifier`</span> , <span class="methodparam"><span
@@ -544,7 +548,8 @@ Exports a key
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gnupg\_export</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$identifier`</span> , <span class="methodparam"><span
@@ -595,7 +600,8 @@ Returns the errortext, if a function fails
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gnupg\_geterror</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$identifier`</span> )
@@ -682,7 +688,8 @@ Imports a key
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">gnupg\_import</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$identifier`</span> , <span class="methodparam"><span
@@ -775,7 +782,8 @@ pattern
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">gnupg\_keyinfo</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$identifier`</span> , <span class="methodparam"><span
@@ -987,7 +995,8 @@ Signs a given text
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gnupg\_sign</span> ( <span class="methodparam"><span
 class="type">resource</span> `$identifier`</span> , <span
 class="methodparam"><span class="type">string</span> `$plaintext`</span>
@@ -1045,7 +1054,8 @@ Verifies a signed text
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">gnupg\_verify</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$identifier`</span> , <span class="methodparam"><span

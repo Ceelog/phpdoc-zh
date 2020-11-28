@@ -182,7 +182,8 @@ Read data from shared memory block
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">shmop\_read</span> ( <span class="methodparam"><span
 class="type">Shmop</span> `$shmop`</span> , <span
 class="methodparam"><span class="type">int</span> `$offset`</span> ,
@@ -282,7 +283,8 @@ Write data into shared memory block
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">shmop\_write</span> ( <span class="methodparam"><span
 class="type">Shmop</span> `$shmop`</span> , <span
 class="methodparam"><span class="type">string</span> `$data`</span> ,
@@ -306,12 +308,13 @@ Specifies where to start writing data inside the shared memory segment.
 
 ### 返回值
 
-The size of the written `data`, or **`FALSE`** on failure.
+The size of the written `data`.
 
 ### 更新日志
 
 | 版本  | 说明                                                                                                                                |
 |-------|-------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | Prior to PHP 8.0.0, **`FALSE`** was returned on failure.                                                                            |
 | 8.0.0 | `shmop` expects a <span class="classname">Shmop</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 范例

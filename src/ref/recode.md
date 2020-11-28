@@ -58,7 +58,8 @@ Recode a string according to a recode request
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">recode\_string</span> ( <span
 class="methodparam"><span class="type">string</span> `$request`</span> ,
 <span class="methodparam"><span class="type">string</span>

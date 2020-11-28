@@ -146,9 +146,10 @@ class="methodparam">void</span> )
 <span class="methodname">getOpt</span> ( <span class="methodparam"><span
 class="type">string</span> `$option`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getOptDoc</span> ( <span
-class="methodparam"><span class="type">string</span> `$optname`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getOptDoc</span> ( <span class="methodparam"><span
+class="type">string</span> `$optname`</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">getRelease</span> ( <span
@@ -849,13 +850,15 @@ Returns the documentation for the given option name
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">tidy::getOptDoc</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">tidy::getOptDoc</span> ( <span
 class="methodparam"><span class="type">string</span> `$optname`</span> )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">tidy\_get\_opt\_doc</span> ( <span
 class="methodparam"><span class="type">tidy</span> `$object`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1726,8 +1729,9 @@ class="type">array</span>`$child`;
 class="methodname">\_\_construct</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">tidyNode</span>
-<span class="methodname">getParent</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">tidyNode</span><span class="type">null</span></span> <span
+class="methodname">getParent</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -1826,8 +1830,9 @@ Returns the parent node of the current node
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">tidyNode</span>
-<span class="methodname">tidyNode::getParent</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">tidyNode</span><span class="type">null</span></span> <span
+class="methodname">tidyNode::getParent</span> ( <span
 class="methodparam">void</span> )
 
 Returns the parent node of the current node.

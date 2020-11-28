@@ -38,7 +38,7 @@
     -   [sapi\_windows\_cp\_conv](/ref/misc.html#sapi_windows_cp_conv) —
         Convert string from one codepage to another
     -   [sapi\_windows\_cp\_get](/ref/misc.html#sapi_windows_cp_get) —
-        Get process codepage
+        Get current codepage
     -   [sapi\_windows\_cp\_is\_utf8](/ref/misc.html#sapi_windows_cp_is_utf8)
         — Indicates whether the codepage is UTF-8 compatible
     -   [sapi\_windows\_cp\_set](/ref/misc.html#sapi_windows_cp_set) —

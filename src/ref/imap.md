@@ -74,7 +74,8 @@ Returns all IMAP alert messages that have occurred
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_alerts</span> ( <span
 class="methodparam">void</span> )
 
@@ -320,7 +321,8 @@ Check current mailbox
 
 ### 说明
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_check</span> ( <span class="methodparam"><span
 class="type">resource</span> `$imap_stream`</span> )
 
@@ -687,7 +689,8 @@ Returns all of the IMAP errors that have occurred
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_errors</span> ( <span
 class="methodparam">void</span> )
 
@@ -1116,7 +1119,8 @@ Retrieve the quota level settings, and usage statics per mailbox
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_get\_quota</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$imap_stream`</span> , <span class="methodparam"><span
@@ -1219,7 +1223,8 @@ Retrieve the quota settings per user
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_get\_quotaroot</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$imap_stream`</span> , <span class="methodparam"><span
@@ -1531,7 +1536,8 @@ Read the header of the message
 
 ### 说明
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_headerinfo</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$imap_stream`</span> , <span class="methodparam"><span
@@ -1671,7 +1677,8 @@ Gets the last IMAP error that occurred during this page request
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_last\_error</span> ( <span
 class="methodparam">void</span> )
 
@@ -2158,7 +2165,8 @@ Get information about the current mailbox
 
 ### 说明
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_mailboxmsginfo</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$imap_stream`</span> )
@@ -2352,7 +2360,8 @@ Gets the number of messages in the current mailbox
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_num\_msg</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$imap_stream`</span> )
@@ -2410,7 +2419,8 @@ Open an IMAP stream to a mailbox
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_open</span> ( <span class="methodparam"><span
 class="type">string</span> `$mailbox`</span> , <span
 class="methodparam"><span class="type">string</span> `$username`</span>
@@ -3037,7 +3047,8 @@ criteria
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_search</span> ( <span class="methodparam"><span
 class="type">resource</span> `$imap_stream`</span> , <span
 class="methodparam"><span class="type">string</span> `$criteria`</span>
@@ -3543,7 +3554,8 @@ Returns a tree of threaded message
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_thread</span> ( <span class="methodparam"><span
 class="type">resource</span> `$imap_stream`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$options`<span
@@ -3768,7 +3780,8 @@ Decodes a modified UTF-7 encoded string
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_utf7\_decode</span> ( <span
 class="methodparam"><span class="type">string</span> `$text`</span> )
 

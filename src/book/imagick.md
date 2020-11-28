@@ -1513,7 +1513,8 @@ class="methodparam">void</span> )
 class="methodname">getFilename</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span class="methodname">getFont</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">getFont</span>
 ( <span class="methodparam">void</span> )
 
 <span class="type">string</span> <span
@@ -6698,7 +6699,8 @@ Gets font
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">Imagick::getFont</span> ( <span
 class="methodparam">void</span> )
 

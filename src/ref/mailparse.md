@@ -71,7 +71,8 @@ Extracts/decodes a message section
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mailparse\_msg\_extract\_part\_file</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$mimemail`</span> , <span class="methodparam"><span
@@ -292,7 +293,8 @@ Parses a file
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">mailparse\_msg\_parse\_file</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )
@@ -361,7 +363,8 @@ Parse RFC 822 compliant addresses
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mailparse\_rfc822\_parse\_addresses</span> ( <span
 class="methodparam"><span class="type">string</span> `$addresses`</span>
 )

@@ -1743,9 +1743,9 @@ class="methodparam">void</span> )
 <span class="methodname">close</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">SQLite3Result</span> <span
-class="methodname">execute</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">SQLite3Result</span><span class="type">false</span></span>
+<span class="methodname">execute</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type"><span
@@ -2065,9 +2065,9 @@ Executes a prepared statement and returns a result set object
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">SQLite3Result</span> <span
-class="methodname">SQLite3Stmt::execute</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">SQLite3Result</span><span class="type">false</span></span>
+<span class="methodname">SQLite3Stmt::execute</span> ( <span
 class="methodparam">void</span> )
 
 Executes a prepared statement and returns a result set object.
@@ -2246,10 +2246,11 @@ class="methodparam"><span class="type">int</span>
 class="methodname">columnType</span> ( <span class="methodparam"><span
 class="type">int</span> `$column_number`</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">fetchArray</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$mode`<span
-class="initializer"> = SQLITE3\_BOTH</span></span> \] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">fetchArray</span> (\[ <span class="methodparam"><span
+class="type">int</span> `$mode`<span class="initializer"> =
+SQLITE3\_BOTH</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">finalize</span> ( <span
@@ -2326,8 +2327,9 @@ both
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">SQLite3Result::fetchArray</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">SQLite3Result::fetchArray</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$mode`<span
 class="initializer"> = SQLITE3\_BOTH</span></span> \] )
 

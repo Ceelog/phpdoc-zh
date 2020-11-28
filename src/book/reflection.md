@@ -3670,8 +3670,9 @@ class="type">ReflectionClass</span> <span
 class="methodname">getDeclaringClass</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getDocComment</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getDocComment</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -3826,9 +3827,10 @@ Gets doc comments
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">ReflectionClassConstant::getDocComment</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">ReflectionClassConstant::getDocComment</span> ( <span
+class="methodparam">void</span> )
 
 Gets doc comments from a class constant.
 
@@ -5106,8 +5108,9 @@ class="type">string</span> `$name`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$return`</span> \]
 )
 
-<span class="modifier">public</span> <span class="type">Closure</span>
-<span class="methodname">getClosure</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">Closure</span><span class="type">null</span></span> <span
+class="methodname">getClosure</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
@@ -5133,8 +5136,9 @@ class="modifier">private</span> <span class="type">void</span> <span
 class="methodname">ReflectionFunctionAbstract::\_\_clone</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">ReflectionClass</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionClass</span><span class="type">null</span></span>
+<span
 class="methodname">ReflectionFunctionAbstract::getClosureScopeClass</span>
 ( <span class="methodparam">void</span> )
 
@@ -5188,8 +5192,9 @@ class="methodname">ReflectionFunctionAbstract::getNumberOfRequiredParameters</sp
 class="methodname">ReflectionFunctionAbstract::getParameters</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">ReflectionType</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionType</span><span class="type">null</span></span>
+<span
 class="methodname">ReflectionFunctionAbstract::getReturnType</span> (
 <span class="methodparam">void</span> )
 
@@ -5435,8 +5440,9 @@ Returns a dynamically created closure for the function
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">Closure</span>
-<span class="methodname">ReflectionFunction::getClosure</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">Closure</span><span class="type">null</span></span> <span
+class="methodname">ReflectionFunction::getClosure</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -5714,9 +5720,9 @@ class="modifier">private</span> <span class="type">void</span> <span
 class="methodname">\_\_clone</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">ReflectionClass</span> <span
-class="methodname">getClosureScopeClass</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionClass</span><span class="type">null</span></span>
+<span class="methodname">getClosureScopeClass</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">object</span>
@@ -5764,9 +5770,9 @@ class="methodparam">void</span> )
 <span class="methodname">getParameters</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">ReflectionType</span> <span
-class="methodname">getReturnType</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionType</span><span class="type">null</span></span>
+<span class="methodname">getReturnType</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -5866,8 +5872,9 @@ Returns the scope associated to the closure
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">ReflectionClass</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionClass</span><span class="type">null</span></span>
+<span
 class="methodname">ReflectionFunctionAbstract::getClosureScopeClass</span>
 ( <span class="methodparam">void</span> )
 
@@ -6225,8 +6232,9 @@ Gets the specified return type of a function
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">ReflectionType</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionType</span><span class="type">null</span></span>
+<span
 class="methodname">ReflectionFunctionAbstract::getReturnType</span> (
 <span class="methodparam">void</span> )
 
@@ -6856,8 +6864,9 @@ class="modifier">private</span> <span class="type">void</span> <span
 class="methodname">ReflectionFunctionAbstract::\_\_clone</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">ReflectionClass</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionClass</span><span class="type">null</span></span>
+<span
 class="methodname">ReflectionFunctionAbstract::getClosureScopeClass</span>
 ( <span class="methodparam">void</span> )
 
@@ -6911,8 +6920,9 @@ class="methodname">ReflectionFunctionAbstract::getNumberOfRequiredParameters</sp
 class="methodname">ReflectionFunctionAbstract::getParameters</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">ReflectionType</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionType</span><span class="type">null</span></span>
+<span
 class="methodname">ReflectionFunctionAbstract::getReturnType</span> (
 <span class="methodparam">void</span> )
 
@@ -8215,8 +8225,9 @@ class="interfacename">Reflector</span> </span> {
 <span class="methodname">allowsNull</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">canBePassedByValue</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">null</span></span> <span
+class="methodname">canBePassedByValue</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span
@@ -8243,9 +8254,9 @@ class="type">ReflectionClass</span> <span
 class="methodname">getClass</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">ReflectionClass</span> <span
-class="methodname">getDeclaringClass</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionClass</span><span class="type">null</span></span>
+<span class="methodname">getDeclaringClass</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
@@ -8257,8 +8268,9 @@ class="methodparam">void</span> )
 <span class="methodname">getDefaultValue</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getDefaultValueConstantName</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">getDefaultValueConstantName</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -8269,9 +8281,9 @@ class="methodparam">void</span> )
 class="methodname">getPosition</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">ReflectionType</span> <span
-class="methodname">getType</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionType</span><span class="type">null</span></span>
+<span class="methodname">getType</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -8282,8 +8294,9 @@ class="methodparam">void</span> )
 <span class="methodname">isArray</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">isCallable</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">null</span></span> <span
+class="methodname">isCallable</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -8355,9 +8368,10 @@ Returns whether this parameter can be passed by value
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">ReflectionParameter::canBePassedByValue</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">null</span></span> <span
+class="methodname">ReflectionParameter::canBePassedByValue</span> (
+<span class="methodparam">void</span> )
 
 **Warning**
 
@@ -8607,10 +8621,10 @@ Gets declaring class
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">ReflectionClass</span> <span
-class="methodname">ReflectionParameter::getDeclaringClass</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionClass</span><span class="type">null</span></span>
+<span class="methodname">ReflectionParameter::getDeclaringClass</span> (
+<span class="methodparam">void</span> )
 
 Gets the declaring class.
 
@@ -8768,8 +8782,8 @@ or null
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">ReflectionParameter::getDefaultValueConstantName</span>
 ( <span class="methodparam">void</span> )
 
@@ -8887,9 +8901,9 @@ Gets a parameter's type
 
 ### 说明
 
-<span class="modifier">public</span> <span
-class="type">ReflectionType</span> <span
-class="methodname">ReflectionParameter::getType</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionType</span><span class="type">null</span></span>
+<span class="methodname">ReflectionParameter::getType</span> ( <span
 class="methodparam">void</span> )
 
 Gets the associated type of a parameter.
@@ -9042,8 +9056,9 @@ Returns whether parameter MUST be callable
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">ReflectionParameter::isCallable</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">null</span></span> <span
+class="methodname">ReflectionParameter::isCallable</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -10633,8 +10648,9 @@ class="type">ReflectionFunctionAbstract</span> <span
 class="methodname">getFunction</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">object</span>
-<span class="methodname">getThis</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">object</span><span class="type">null</span></span> <span
+class="methodname">getThis</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -10948,8 +10964,9 @@ Gets the *$this* value of the generator
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">object</span>
-<span class="methodname">ReflectionGenerator::getThis</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">object</span><span class="type">null</span></span> <span
+class="methodname">ReflectionGenerator::getThis</span> ( <span
 class="methodparam">void</span> )
 
 Get the *$this* value that the generator has access to.

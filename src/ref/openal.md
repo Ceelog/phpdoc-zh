@@ -5,7 +5,8 @@ Generate OpenAL buffer
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">openal\_buffer\_create</span> ( <span
 class="methodparam">void</span> )
 
@@ -165,7 +166,8 @@ Create an audio processing context
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">openal\_context\_create</span> ( <span
 class="methodparam"><span class="type">resource</span> `$device`</span>
 )
@@ -340,7 +342,8 @@ Initialize the OpenAL audio layer
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">openal\_device\_open</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$device_desc`</span> \] )
@@ -428,7 +431,8 @@ Generate a source resource
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">openal\_source\_create</span> ( <span
 class="methodparam">void</span> )
 

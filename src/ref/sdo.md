@@ -1472,7 +1472,8 @@ object
 
 ### 说明
 
-<span class="type">SDO\_Model\_Property</span> <span
+<span class="type"><span class="type">SDO\_Model\_Property</span><span
+class="type">null</span></span> <span
 class="methodname">SDO\_Model\_ReflectionDataObject::getContainmentProperty</span>
 ( <span class="methodparam">void</span> )
 
@@ -1559,7 +1560,8 @@ Get the base type for this type
 
 ### 说明
 
-<span class="type">SDO\_Model\_Type</span> <span
+<span class="type"><span class="type">SDO\_Model\_Type</span><span
+class="type">null</span></span> <span
 class="methodname">SDO\_Model\_Type::getBaseType</span> ( <span
 class="methodparam">void</span> )
 

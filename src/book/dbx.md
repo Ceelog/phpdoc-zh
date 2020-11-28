@@ -331,7 +331,8 @@ Open a connection/database
 
 ### 说明
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">dbx\_connect</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$module`</span> , <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
@@ -494,7 +495,8 @@ Escape a string so it can safely be used in an sql-statement
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">dbx\_escape\_string</span> ( <span
 class="methodparam"><span class="type">object</span>
 `$link_identifier`</span> , <span class="methodparam"><span

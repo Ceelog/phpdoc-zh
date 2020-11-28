@@ -213,7 +213,8 @@ Returns the last error of the broker
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">enchant\_broker\_get\_error</span> ( <span
 class="methodparam"><span class="type">resource</span> `$broker`</span>
 )
@@ -236,7 +237,8 @@ Create a new broker object capable of requesting
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">enchant\_broker\_init</span> ( <span
 class="methodparam">void</span> )
 
@@ -676,7 +678,8 @@ Returns the last error of the current spelling-session
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">enchant\_dict\_get\_error</span> ( <span
 class="methodparam"><span class="type">resource</span> `$dict`</span> )
 

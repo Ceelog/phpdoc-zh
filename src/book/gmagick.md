@@ -624,8 +624,8 @@ class="methodparam">void</span> )
 class="methodname">getimageiterations</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
-class="methodname">getimagematte</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getimagematte</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
@@ -2471,8 +2471,8 @@ Check if the image has a matte channel
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
-class="methodname">Gmagick::getimagematte</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Gmagick::getimagematte</span> ( <span
 class="methodparam">void</span> )
 
 Returns **`TRUE`** if the image has a matte channel, otherwise

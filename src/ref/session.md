@@ -499,7 +499,8 @@ Perform session data garbage collection
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">session\_gc</span> ( <span
 class="methodparam">void</span> )
 

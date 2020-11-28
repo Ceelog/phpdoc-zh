@@ -7646,9 +7646,9 @@ class="methodname">\_\_construct</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">object</span></span> <span
-class="methodname">current</span> ( <span
-class="methodparam">void</span> )
+class="type">array</span><span class="type">object</span><span
+class="type">null</span></span> <span class="methodname">current</span>
+( <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">MongoDB\\Driver\\CursorId</span> <span
@@ -7927,7 +7927,8 @@ Returns the current element
 ### 说明
 
 <span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">object</span></span> <span
+class="type">array</span><span class="type">object</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\Cursor::current</span> ( <span
 class="methodparam">void</span> )
 

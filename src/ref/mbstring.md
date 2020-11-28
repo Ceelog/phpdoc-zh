@@ -912,7 +912,8 @@ using a callback
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_replace\_callback</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">callable</span>
@@ -1033,7 +1034,8 @@ Replace regular expression with multibyte support
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_replace</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1135,7 +1137,8 @@ Retrieve the result from the last multibyte regular expression match
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_search\_getregs</span> ( <span
 class="methodparam">void</span> )
 
@@ -1226,7 +1229,8 @@ expression for a predefined multibyte string
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_search\_pos</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -1276,7 +1280,8 @@ Returns the matched part of a multibyte regular expression
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_search\_regs</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -1408,11 +1413,13 @@ Regular expression match with multibyte support
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">mb\_ereg</span> (
-<span class="methodparam"><span class="type">string</span>
-`$pattern`</span> , <span class="methodparam"><span
-class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$regs`</span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">mb\_ereg</span> ( <span class="methodparam"><span
+class="type">string</span> `$pattern`</span> , <span
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type">array</span>
+`&$regs`</span> \] )
 
 Executes the regular expression match with multibyte support.
 
@@ -1469,7 +1476,8 @@ Replace regular expression with multibyte support ignoring case
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_eregi\_replace</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1531,11 +1539,13 @@ Regular expression match ignoring case with multibyte support
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">mb\_eregi</span>
-( <span class="methodparam"><span class="type">string</span>
-`$pattern`</span> , <span class="methodparam"><span
-class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$regs`</span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">mb\_eregi</span> ( <span class="methodparam"><span
+class="type">string</span> `$pattern`</span> , <span
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type">array</span>
+`&$regs`</span> \] )
 
 Executes the case insensitive regular expression match with multibyte
 support.

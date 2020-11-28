@@ -293,7 +293,8 @@ Creates a database
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">dbase\_create</span> ( <span
 class="methodparam"><span class="type">string</span> `$path`</span> ,
 <span class="methodparam"><span class="type">array</span>
@@ -427,7 +428,8 @@ Gets the header info of a database
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">dbase\_get\_header\_info</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$database`</span> )
@@ -512,7 +514,8 @@ Gets a record from a database as an associative array
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">dbase\_get\_record\_with\_names</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$database`</span> , <span class="methodparam"><span
@@ -589,7 +592,8 @@ Gets a record from a database as an indexed array
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">dbase\_get\_record</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$database`</span> , <span class="methodparam"><span
@@ -644,7 +648,8 @@ Gets the number of fields of a database
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">dbase\_numfields</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$database`</span> )
@@ -700,7 +705,8 @@ Gets the number of records in a database
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">dbase\_numrecords</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$database`</span> )

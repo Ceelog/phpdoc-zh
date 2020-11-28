@@ -1000,7 +1000,8 @@ Returns a list of files in the given directory
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ftp\_mlsd</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ftp_stream`</span> , <span
 class="methodparam"><span class="type">string</span> `$directory`</span>

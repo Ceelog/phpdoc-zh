@@ -4145,8 +4145,9 @@ class="type">DateInterval</span> <span
 class="methodname">getDateInterval</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">DateTimeInterface</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DateTimeInterface</span><span
+class="type">null</span></span> <span
 class="methodname">getEndDate</span> ( <span
 class="methodparam">void</span> )
 
@@ -4384,8 +4385,9 @@ Gets the end date
 
 面向对象风格
 
-<span class="modifier">public</span> <span
-class="type">DateTimeInterface</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DateTimeInterface</span><span
+class="type">null</span></span> <span
 class="methodname">DatePeriod::getEndDate</span> ( <span
 class="methodparam">void</span> )
 

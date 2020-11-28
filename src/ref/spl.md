@@ -157,7 +157,8 @@ Return the traits used by the given class
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">class\_uses</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$class`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$autoload`<span

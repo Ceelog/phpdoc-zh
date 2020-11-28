@@ -170,8 +170,9 @@ class="initializer"> = </span> \[, <span class="type">string</span>
 class="type">string</span> `$contextEngineID`<span class="initializer">
 = </span> \]\]\]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">walk</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">walk</span> ( <span class="methodparam"><span
 class="type">string</span> `$object_id`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$suffix_as_key`<span
 class="initializer"> = **`FALSE`**</span></span> \[, <span
@@ -909,12 +910,13 @@ Fetch SNMP object subtree
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">SNMP::walk</span> ( <span
-class="methodparam"><span class="type">string</span> `$object_id`</span>
-\[, <span class="methodparam"><span class="type">bool</span>
-`$suffix_as_key`<span class="initializer"> = **`FALSE`**</span></span>
-\[, <span class="methodparam"><span class="type">int</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">SNMP::walk</span> ( <span class="methodparam"><span
+class="type">string</span> `$object_id`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$suffix_as_key`<span
+class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="methodparam"><span class="type">int</span>
 `$max_repetitions`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$non_repeaters`</span> \]\]\] )
 

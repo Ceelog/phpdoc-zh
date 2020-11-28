@@ -720,17 +720,20 @@ class="type">array</span> `&$arr`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$sort_flag`</span> \]
 )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">compare</span> ( <span class="methodparam"><span
 class="type">string</span> `$str1`</span> , <span
 class="methodparam"><span class="type">string</span> `$str2`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">Collator</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">Collator</span><span class="type">null</span></span> <span
 class="methodname">create</span> ( <span class="methodparam"><span
 class="type">string</span> `$locale`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getAttribute</span> ( <span class="methodparam"><span
 class="type">int</span> `$attr`</span> )
 
@@ -742,16 +745,18 @@ class="methodparam">void</span> )
 <span class="methodname">getErrorMessage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getLocale</span> ( <span
-class="methodparam"><span class="type">int</span> `$type`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getLocale</span> ( <span class="methodparam"><span
+class="type">int</span> `$type`</span> )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">string</span><span class="type">false</span></span> <span
 class="methodname">getSortKey</span> ( <span class="methodparam"><span
 class="type">string</span> `$str`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getStrength</span> ( <span
 class="methodparam">void</span> )
 
@@ -1081,7 +1086,8 @@ Compare two Unicode strings
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">Collator::compare</span> ( <span
 class="methodparam"><span class="type">string</span> `$str1`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1089,7 +1095,8 @@ class="methodparam"><span class="type">string</span> `$str1`</span> ,
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">collator\_compare</span> ( <span
 class="methodparam"><span class="type">Collator</span> `$coll`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1237,13 +1244,15 @@ Create a collator
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">Collator</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">Collator</span><span class="type">null</span></span> <span
 class="methodname">Collator::create</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
 过程化风格
 
-<span class="type">Collator</span> <span
+<span class="type"><span class="type">Collator</span><span
+class="type">null</span></span> <span
 class="methodname">collator\_create</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
@@ -1295,13 +1304,15 @@ Get collation attribute value
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">Collator::getAttribute</span> ( <span
 class="methodparam"><span class="type">int</span> `$attr`</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">collator\_get\_attribute</span> ( <span
 class="methodparam"><span class="type">Collator</span> `$coll`</span> ,
 <span class="methodparam"><span class="type">int</span> `$attr`</span> )
@@ -1453,8 +1464,9 @@ Get the locale name of the collator
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Collator::getLocale</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">Collator::getLocale</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> )
 
 过程化风格
@@ -1601,13 +1613,15 @@ Get current collation strength
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">Collator::getStrength</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">collator\_get\_strength</span> ( <span
 class="methodparam"><span class="type">Collator</span> `$coll`</span> )
 
@@ -2070,12 +2084,14 @@ class="methodparam"><span class="type">string</span> `$locale`</span> ,
 `$pattern`</span> \] )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">NumberFormatter</span>
-<span class="methodname">create</span> ( <span class="methodparam"><span
-class="type">string</span> `$locale`</span> , <span
-class="methodparam"><span class="type">int</span> `$style`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$pattern`</span> \] )
+class="modifier">static</span> <span class="type"><span
+class="type">NumberFormatter</span><span
+class="type">false</span></span> <span class="methodname">create</span>
+( <span class="methodparam"><span class="type">string</span>
+`$locale`</span> , <span class="methodparam"><span
+class="type">int</span> `$style`</span> \[, <span
+class="methodparam"><span class="type">string</span> `$pattern`</span>
+\] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">string</span><span class="type">false</span></span> <span
@@ -2084,13 +2100,15 @@ class="methodparam"><span class="type">float</span> `$value`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$currency`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">format</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">format</span> ( <span class="methodparam"><span
 class="type"><span class="type">int</span><span
 class="type">float</span></span> `$value`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$type`</span> \] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getAttribute</span> ( <span class="methodparam"><span
 class="type">int</span> `$attr`</span> )
 
@@ -2106,20 +2124,24 @@ class="methodparam">void</span> )
 <span class="methodname">getLocale</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$type`</span> \] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getPattern</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getPattern</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getSymbol</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getSymbol</span> ( <span class="methodparam"><span
+class="type">int</span> `$attr`</span> )
+
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getTextAttribute</span> ( <span
 class="methodparam"><span class="type">int</span> `$attr`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getTextAttribute</span> ( <span
-class="methodparam"><span class="type">int</span> `$attr`</span> )
-
-<span class="modifier">public</span> <span class="type">float</span>
-<span class="methodname">parseCurrency</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">float</span><span class="type">false</span></span> <span
+class="methodname">parseCurrency</span> ( <span
 class="methodparam"><span class="type">string</span> `$value`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `&$currency`</span> \[, <span class="methodparam"><span
@@ -2450,8 +2472,10 @@ Create a number formatter
 面向对象风格 (method)
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">NumberFormatter</span>
-<span class="methodname">NumberFormatter::create</span> ( <span
+class="modifier">static</span> <span class="type"><span
+class="type">NumberFormatter</span><span
+class="type">false</span></span> <span
+class="methodname">NumberFormatter::create</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> ,
 <span class="methodparam"><span class="type">int</span> `$style`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -2459,7 +2483,8 @@ class="methodparam"><span class="type">string</span> `$locale`</span> ,
 
 过程化风格
 
-<span class="type">NumberFormatter</span> <span
+<span class="type"><span class="type">NumberFormatter</span><span
+class="type">false</span></span> <span
 class="methodname">numfmt\_create</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> ,
 <span class="methodparam"><span class="type">int</span> `$style`</span>
@@ -2640,8 +2665,9 @@ Format a number
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">NumberFormatter::format</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">NumberFormatter::format</span> ( <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">float</span></span>
 `$value`</span> \[, <span class="methodparam"><span
@@ -2649,7 +2675,8 @@ class="type">int</span> `$type`</span> \] )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">numfmt\_format</span> ( <span
 class="methodparam"><span class="type">NumberFormatter</span>
 `$fmt`</span> , <span class="methodparam"><span class="type"><span
@@ -2726,13 +2753,15 @@ Get an attribute
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">NumberFormatter::getAttribute</span> ( <span
 class="methodparam"><span class="type">int</span> `$attr`</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">numfmt\_get\_attribute</span> ( <span
 class="methodparam"><span class="type">NumberFormatter</span>
 `$fmt`</span> , <span class="methodparam"><span class="type">int</span>
@@ -3006,8 +3035,9 @@ Get formatter pattern
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">NumberFormatter::getPattern</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">NumberFormatter::getPattern</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
@@ -3082,13 +3112,15 @@ Get a symbol value
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">NumberFormatter::getSymbol</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">NumberFormatter::getSymbol</span> ( <span
 class="methodparam"><span class="type">int</span> `$attr`</span> )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">numfmt\_get\_symbol</span> ( <span
 class="methodparam"><span class="type">NumberFormatter</span>
 `$fmt`</span> , <span class="methodparam"><span class="type">int</span>
@@ -3165,13 +3197,15 @@ Get a text attribute
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">NumberFormatter::getTextAttribute</span> (
-<span class="methodparam"><span class="type">int</span> `$attr`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">NumberFormatter::getTextAttribute</span> ( <span
+class="methodparam"><span class="type">int</span> `$attr`</span> )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">numfmt\_get\_text\_attribute</span> ( <span
 class="methodparam"><span class="type">NumberFormatter</span>
 `$fmt`</span> , <span class="methodparam"><span class="type">int</span>
@@ -3252,8 +3286,9 @@ Parse a currency number
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">float</span>
-<span class="methodname">NumberFormatter::parseCurrency</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">float</span><span class="type">false</span></span> <span
+class="methodname">NumberFormatter::parseCurrency</span> ( <span
 class="methodparam"><span class="type">string</span> `$value`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `&$currency`</span> \[, <span class="methodparam"><span
@@ -3261,7 +3296,8 @@ class="type">int</span> `&$position`</span> \] )
 
 过程化风格
 
-<span class="type">float</span> <span
+<span class="type"><span class="type">float</span><span
+class="type">false</span></span> <span
 class="methodname">numfmt\_parse\_currency</span> ( <span
 class="methodparam"><span class="type">NumberFormatter</span>
 `$fmt`</span> , <span class="methodparam"><span
@@ -3823,7 +3859,8 @@ class="type">bool</span> `$canonicalize`<span class="initializer"> =
 **`FALSE`**</span></span> \] )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">array</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span> <span
 class="methodname">getAllVariants</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
@@ -3873,17 +3910,20 @@ class="methodname">getKeywords</span> ( <span class="methodparam"><span
 class="type">string</span> `$locale`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">getPrimaryLanguage</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">getRegion</span> ( <span class="methodparam"><span
 class="type">string</span> `$locale`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">getScript</span> ( <span class="methodparam"><span
 class="type">string</span> `$locale`</span> )
 
@@ -3898,7 +3938,8 @@ class="methodparam"><span class="type">string</span> `$locale`</span>
 `$default`</span> \]\] )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">array</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span> <span
 class="methodname">parseLocale</span> ( <span class="methodparam"><span
 class="type">string</span> `$locale`</span> )
 
@@ -4245,13 +4286,15 @@ Gets the variants for the input locale
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">array</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span> <span
 class="methodname">Locale::getAllVariants</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
 过程化风格
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">null</span></span> <span
 class="methodname">locale\_get\_all\_variants</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
@@ -4874,13 +4917,15 @@ Gets the primary language for the input locale
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">Locale::getPrimaryLanguage</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">locale\_get\_primary\_language</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
@@ -4938,13 +4983,15 @@ Gets the region for the input locale
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">Locale::getRegion</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">locale\_get\_region</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
@@ -5000,13 +5047,15 @@ Gets the script for the input locale
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">Locale::getScript</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">locale\_get\_script</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
@@ -5156,13 +5205,15 @@ Returns a key-value array of locale ID subtag elements
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">array</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span> <span
 class="methodname">Locale::parseLocale</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
 过程化风格
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">null</span></span> <span
 class="methodname">locale\_parse</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> )
 
@@ -5320,7 +5371,8 @@ set of data files.
 /\* 方法 \*/
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">getRawDecomposition</span> ( <span
 class="methodparam"><span class="type">string</span> `$input`</span> )
 
@@ -5332,7 +5384,8 @@ class="methodparam"><span class="type">int</span> `$form`<span
 class="initializer"> = Normalizer::FORM\_C</span></span> \] )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">normalize</span> ( <span class="methodparam"><span
 class="type">string</span> `$input`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$form`<span
@@ -5390,13 +5443,15 @@ code point
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">Normalizer::getRawDecomposition</span> ( <span
 class="methodparam"><span class="type">string</span> `$input`</span> )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">normalizer\_get\_raw\_decomposition</span> ( <span
 class="methodparam"><span class="type">string</span> `$input`</span> )
 
@@ -5582,7 +5637,8 @@ Normalizes the input provided and returns the normalized string
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">Normalizer::normalize</span> ( <span
 class="methodparam"><span class="type">string</span> `$input`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$form`<span
@@ -5590,7 +5646,8 @@ class="initializer"> = Normalizer::FORM\_C</span></span> \] )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">normalizer\_normalize</span> ( <span
 class="methodparam"><span class="type">string</span> `$input`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$form`<span
@@ -5707,15 +5764,17 @@ class="type">string</span> `$locale`</span> , <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">formatMessage</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$pattern`</span> , <span class="methodparam"><span
 class="type">array</span> `$args`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">format</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">format</span> ( <span class="methodparam"><span
 class="type">array</span> `$args`</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -5735,15 +5794,17 @@ class="methodparam">void</span> )
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">array</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
 class="methodname">parseMessage</span> ( <span class="methodparam"><span
 class="type">string</span> `$locale`</span> , <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$source`</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">parse</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">parse</span> ( <span class="methodparam"><span
 class="type">string</span> `$value`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -5870,7 +5931,8 @@ Quick format message
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">MessageFormatter::formatMessage</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -5955,8 +6017,9 @@ Format the message
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">MessageFormatter::format</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">MessageFormatter::format</span> ( <span
 class="methodparam"><span class="type">array</span> `$args`</span> )
 
 过程化风格
@@ -6282,7 +6345,8 @@ Quick parse input string
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">array</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
 class="methodname">MessageFormatter::parseMessage</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -6291,7 +6355,8 @@ class="type">string</span> `$source`</span> )
 
 过程化风格
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">msgfmt\_parse\_message</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -6381,13 +6446,15 @@ Parse input string according to pattern
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">MessageFormatter::parse</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">MessageFormatter::parse</span> ( <span
 class="methodparam"><span class="type">string</span> `$value`</span> )
 
 过程化风格
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">msgfmt\_parse</span> ( <span
 class="methodparam"><span class="type">MessageFormatter</span>
 `$fmt`</span> , <span class="methodparam"><span
@@ -6739,14 +6806,16 @@ class="methodname">\_\_construct</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">IntlCalendar</span>
+class="modifier">static</span> <span class="type"><span
+class="type">IntlCalendar</span><span class="type">null</span></span>
 <span class="methodname">createInstance</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$timeZone`<span
 class="initializer"> = NULL</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$locale`<span
 class="initializer"> = ""</span></span> \]\] )
 
-<span class="type">IntlCalendar</span> <span
+<span class="type"><span class="type">IntlCalendar</span><span
+class="type">null</span></span> <span
 class="methodname">intlcal\_create\_instance</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$timeZone`<span
 class="initializer"> = NULL</span></span> \[, <span
@@ -6779,11 +6848,13 @@ class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 `$field`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">IntlCalendar</span>
+class="modifier">static</span> <span class="type"><span
+class="type">IntlCalendar</span><span class="type">null</span></span>
 <span class="methodname">fromDateTime</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$dateTime`</span> )
 
-<span class="type">IntlCalendar</span> <span
+<span class="type"><span class="type">IntlCalendar</span><span
+class="type">null</span></span> <span
 class="methodname">intlcal\_from\_date\_time</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$dateTime`</span> )
 
@@ -7191,11 +7262,13 @@ class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">mixed</span>
 `$timeZone`</span> )
 
-<span class="modifier">public</span> <span class="type">DateTime</span>
-<span class="methodname">toDateTime</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DateTime</span><span class="type">false</span></span> <span
+class="methodname">toDateTime</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">DateTime</span> <span
+<span class="type"><span class="type">DateTime</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_to\_date\_time</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 )
@@ -7810,7 +7883,8 @@ Create a new IntlCalendar
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">IntlCalendar</span>
+class="modifier">static</span> <span class="type"><span
+class="type">IntlCalendar</span><span class="type">null</span></span>
 <span class="methodname">IntlCalendar::createInstance</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$timeZone`<span
 class="initializer"> = NULL</span></span> \[, <span
@@ -7819,7 +7893,8 @@ class="initializer"> = ""</span></span> \]\] )
 
 过程化风格
 
-<span class="type">IntlCalendar</span> <span
+<span class="type"><span class="type">IntlCalendar</span><span
+class="type">null</span></span> <span
 class="methodname">intlcal\_create\_instance</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$timeZone`<span
 class="initializer"> = NULL</span></span> \[, <span
@@ -8096,13 +8171,15 @@ Create an IntlCalendar from a DateTime object or string
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">IntlCalendar</span>
+class="modifier">static</span> <span class="type"><span
+class="type">IntlCalendar</span><span class="type">null</span></span>
 <span class="methodname">IntlCalendar::fromDateTime</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$dateTime`</span> )
 
 过程化风格
 
-<span class="type">IntlCalendar</span> <span
+<span class="type"><span class="type">IntlCalendar</span><span
+class="type">null</span></span> <span
 class="methodname">intlcal\_from\_date\_time</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$dateTime`</span> )
 
@@ -10730,13 +10807,15 @@ Convert an IntlCalendar into a DateTime object
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">DateTime</span>
-<span class="methodname">IntlCalendar::toDateTime</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DateTime</span><span class="type">false</span></span> <span
+class="methodname">IntlCalendar::toDateTime</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
-<span class="type">DateTime</span> <span
+<span class="type"><span class="type">DateTime</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_to\_date\_time</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 )
@@ -11014,14 +11093,16 @@ class="methodname">IntlCalendar::\_\_construct</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">IntlCalendar</span>
+class="modifier">static</span> <span class="type"><span
+class="type">IntlCalendar</span><span class="type">null</span></span>
 <span class="methodname">IntlCalendar::createInstance</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$timeZone`<span
 class="initializer"> = NULL</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$locale`<span
 class="initializer"> = ""</span></span> \]\] )
 
-<span class="type">IntlCalendar</span> <span
+<span class="type"><span class="type">IntlCalendar</span><span
+class="type">null</span></span> <span
 class="methodname">intlcal\_create\_instance</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$timeZone`<span
 class="initializer"> = NULL</span></span> \[, <span
@@ -11055,11 +11136,13 @@ class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 `$field`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">IntlCalendar</span>
+class="modifier">static</span> <span class="type"><span
+class="type">IntlCalendar</span><span class="type">null</span></span>
 <span class="methodname">IntlCalendar::fromDateTime</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$dateTime`</span> )
 
-<span class="type">IntlCalendar</span> <span
+<span class="type"><span class="type">IntlCalendar</span><span
+class="type">null</span></span> <span
 class="methodname">intlcal\_from\_date\_time</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$dateTime`</span> )
 
@@ -11468,11 +11551,13 @@ class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 , <span class="methodparam"><span class="type">mixed</span>
 `$timeZone`</span> )
 
-<span class="modifier">public</span> <span class="type">DateTime</span>
-<span class="methodname">IntlCalendar::toDateTime</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DateTime</span><span class="type">false</span></span> <span
+class="methodname">IntlCalendar::toDateTime</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">DateTime</span> <span
+<span class="type"><span class="type">DateTime</span><span
+class="type">false</span></span> <span
 class="methodname">intlcal\_to\_date\_time</span> ( <span
 class="methodparam"><span class="type">IntlCalendar</span> `$cal`</span>
 )
@@ -11734,7 +11819,8 @@ class="methodname">getTZDataVersion</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">IntlTimeZone</span>
+class="modifier">static</span> <span class="type"><span
+class="type">IntlTimeZone</span><span class="type">null</span></span>
 <span class="methodname">getUnknown</span> ( <span
 class="methodparam">void</span> )
 
@@ -12496,13 +12582,15 @@ Get the "unknown" time zone
 面向对象风格 (method):
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">IntlTimeZone</span>
+class="modifier">static</span> <span class="type"><span
+class="type">IntlTimeZone</span><span class="type">null</span></span>
 <span class="methodname">IntlTimeZone::getUnknown</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格:
 
-<span class="type">IntlTimeZone</span> <span
+<span class="type"><span class="type">IntlTimeZone</span><span
+class="type">null</span></span> <span
 class="methodname">intltz\_get\_unknown</span> ( <span
 class="methodparam">void</span> )
 
@@ -12704,22 +12792,23 @@ class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = ""</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span
-class="type">IntlDateFormatter</span> <span
-class="methodname">create</span> ( <span class="methodparam"><span
-class="type">string</span> `$locale`</span> , <span
-class="methodparam"><span class="type">int</span> `$datetype`</span> ,
-<span class="methodparam"><span class="type">int</span>
-`$timetype`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$timezone`<span class="initializer"> =
-NULL</span></span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$calendar`<span class="initializer"> =
-NULL</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$pattern`<span class="initializer"> =
-""</span></span> \]\]\] )
+class="modifier">static</span> <span class="type"><span
+class="type">IntlDateFormatter</span><span
+class="type">false</span></span> <span class="methodname">create</span>
+( <span class="methodparam"><span class="type">string</span>
+`$locale`</span> , <span class="methodparam"><span
+class="type">int</span> `$datetype`</span> , <span
+class="methodparam"><span class="type">int</span> `$timetype`</span> \[,
+<span class="methodparam"><span class="type">mixed</span>
+`$timezone`<span class="initializer"> = NULL</span></span> \[, <span
+class="methodparam"><span class="type">mixed</span> `$calendar`<span
+class="initializer"> = NULL</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$pattern`<span
+class="initializer"> = ""</span></span> \]\]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">format</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">format</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$value`</span> )
 
 <span class="modifier">public</span> <span
@@ -12784,7 +12873,8 @@ class="methodparam"><span class="type">string</span> `$value`</span> \[,
 <span class="methodparam"><span class="type">int</span>
 `&$position`</span> \] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">parse</span> ( <span class="methodparam"><span
 class="type">string</span> `$value`</span> \[, <span
 class="methodparam"><span class="type">int</span> `&$position`</span> \]
@@ -12871,8 +12961,9 @@ Create a date formatter
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span
-class="type">IntlDateFormatter</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">IntlDateFormatter</span><span
+class="type">false</span></span> <span
 class="methodname">IntlDateFormatter::create</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> ,
 <span class="methodparam"><span class="type">int</span>
@@ -12902,7 +12993,8 @@ class="initializer"> = ""</span></span> \]\]\] )
 
 过程化风格
 
-<span class="type">IntlDateFormatter</span> <span
+<span class="type"><span class="type">IntlDateFormatter</span><span
+class="type">false</span></span> <span
 class="methodname">datefmt\_create</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> ,
 <span class="methodparam"><span class="type">int</span>
@@ -13066,13 +13158,15 @@ Format the date/time value as a string
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">IntlDateFormatter::format</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">IntlDateFormatter::format</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">datefmt\_format</span> ( <span
 class="methodparam"><span class="type">IntlDateFormatter</span>
 `$fmt`</span> , <span class="methodparam"><span
@@ -14564,7 +14658,8 @@ Parse string to a timestamp value
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlDateFormatter::parse</span> ( <span
 class="methodparam"><span class="type">string</span> `$value`</span> \[,
 <span class="methodparam"><span class="type">int</span>
@@ -14572,7 +14667,8 @@ class="methodparam"><span class="type">string</span> `$value`</span> \[,
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">datefmt\_parse</span> ( <span
 class="methodparam"><span class="type">IntlDateFormatter</span>
 `$fmt`</span> , <span class="methodparam"><span
@@ -15280,7 +15376,8 @@ class="methodname">count</span> ( <span class="methodparam">void</span>
 )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">ResourceBundle</span>
+class="modifier">static</span> <span class="type"><span
+class="type">ResourceBundle</span><span class="type">null</span></span>
 <span class="methodname">create</span> ( <span class="methodparam"><span
 class="type">string</span> `$locale`</span> , <span
 class="methodparam"><span class="type">string</span>
@@ -15393,7 +15490,8 @@ Create a resource bundle
 面向对象风格 (method)
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">ResourceBundle</span>
+class="modifier">static</span> <span class="type"><span
+class="type">ResourceBundle</span><span class="type">null</span></span>
 <span class="methodname">ResourceBundle::create</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -15402,7 +15500,8 @@ class="type">bool</span> `$fallback`</span> \] )
 
 过程化风格
 
-<span class="type">ResourceBundle</span> <span
+<span class="type"><span class="type">ResourceBundle</span><span
+class="type">null</span></span> <span
 class="methodname">resourcebundle\_create</span> ( <span
 class="methodparam"><span class="type">string</span> `$locale`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -16084,30 +16183,34 @@ class="methodname">\_\_construct</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">Transliterator</span>
+class="modifier">static</span> <span class="type"><span
+class="type">Transliterator</span><span class="type">null</span></span>
 <span class="methodname">create</span> ( <span class="methodparam"><span
 class="type">string</span> `$id`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$direction`</span> \]
 )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">Transliterator</span>
+class="modifier">static</span> <span class="type"><span
+class="type">Transliterator</span><span class="type">null</span></span>
 <span class="methodname">createFromRules</span> ( <span
 class="methodparam"><span class="type">string</span> `$rules`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$direction`</span> \] )
 
-<span class="modifier">public</span> <span
-class="type">Transliterator</span> <span
-class="methodname">createInverse</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">Transliterator</span><span class="type">null</span></span>
+<span class="methodname">createInverse</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getErrorCode</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getErrorMessage</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getErrorMessage</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
@@ -16185,7 +16288,8 @@ Create a transliterator
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">Transliterator</span>
+class="modifier">static</span> <span class="type"><span
+class="type">Transliterator</span><span class="type">null</span></span>
 <span class="methodname">Transliterator::create</span> ( <span
 class="methodparam"><span class="type">string</span> `$id`</span> \[,
 <span class="methodparam"><span class="type">int</span>
@@ -16193,7 +16297,8 @@ class="methodparam"><span class="type">string</span> `$id`</span> \[,
 
 过程化风格
 
-<span class="type">Transliterator</span> <span
+<span class="type"><span class="type">Transliterator</span><span
+class="type">null</span></span> <span
 class="methodname">transliterator\_create</span> ( <span
 class="methodparam"><span class="type">string</span> `$id`</span> \[,
 <span class="methodparam"><span class="type">int</span>
@@ -16240,7 +16345,8 @@ Create transliterator from rules
 面向对象风格
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">Transliterator</span>
+class="modifier">static</span> <span class="type"><span
+class="type">Transliterator</span><span class="type">null</span></span>
 <span class="methodname">Transliterator::createFromRules</span> ( <span
 class="methodparam"><span class="type">string</span> `$rules`</span> \[,
 <span class="methodparam"><span class="type">string</span>
@@ -16248,7 +16354,8 @@ class="methodparam"><span class="type">string</span> `$rules`</span> \[,
 
 过程化风格
 
-<span class="type">Transliterator</span> <span
+<span class="type"><span class="type">Transliterator</span><span
+class="type">null</span></span> <span
 class="methodname">transliterator\_create\_from\_rules</span> ( <span
 class="methodparam"><span class="type">string</span> `$id`</span> \[,
 <span class="methodparam"><span class="type">int</span>
@@ -16294,14 +16401,15 @@ Create an inverse transliterator
 
 面向对象风格
 
-<span class="modifier">public</span> <span
-class="type">Transliterator</span> <span
-class="methodname">Transliterator::createInverse</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">Transliterator</span><span class="type">null</span></span>
+<span class="methodname">Transliterator::createInverse</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
-<span class="type">Transliterator</span> <span
+<span class="type"><span class="type">Transliterator</span><span
+class="type">null</span></span> <span
 class="methodname">transliterator\_create\_inverse</span> ( <span
 class="methodparam">void</span> )
 
@@ -16337,13 +16445,15 @@ Get last error code
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">Transliterator::getErrorCode</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">transliterator\_get\_error\_code</span> ( <span
 class="methodparam"><span class="type">Transliterator</span>
 `$trans`</span> )
@@ -16379,13 +16489,15 @@ Get last error message
 
 面向对象风格
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Transliterator::getErrorMessage</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">Transliterator::getErrorMessage</span> ( <span
 class="methodparam">void</span> )
 
 过程化风格
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">transliterator\_get\_error\_message</span> ( <span
 class="methodparam"><span class="type">Transliterator</span>
 `$trans`</span> )
@@ -20922,7 +21034,8 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">int</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">int</span><span class="type">null</span></span> <span
 class="methodname">charFromName</span> ( <span class="methodparam"><span
 class="type">string</span> `$characterName`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$nameChoice`<span
@@ -20935,7 +21048,8 @@ class="methodname">charMirror</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$codepoint`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">charName</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$codepoint`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$nameChoice`<span
@@ -20953,7 +21067,8 @@ class="methodname">chr</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$codepoint`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">int</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">digit</span> ( <span class="methodparam"><span
 class="type">string</span> `$codepoint`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$radix`<span
@@ -21043,7 +21158,8 @@ class="methodname">getPropertyEnum</span> ( <span
 class="methodparam"><span class="type">string</span> `$alias`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">getPropertyName</span> ( <span
 class="methodparam"><span class="type">int</span> `$property`</span> \[,
 <span class="methodparam"><span class="type">int</span>
@@ -21058,7 +21174,8 @@ class="methodparam"><span class="type">int</span> `$property`</span> ,
 `$name`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">getPropertyValueName</span> ( <span
 class="methodparam"><span class="type">int</span> `$property`</span> ,
 <span class="methodparam"><span class="type">int</span> `$value`</span>
@@ -22674,7 +22791,8 @@ Find Unicode character by name and return its code point value
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">int</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">int</span><span class="type">null</span></span> <span
 class="methodname">IntlChar::charFromName</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$characterName`</span> \[, <span class="methodparam"><span
@@ -22804,7 +22922,8 @@ Retrieve the name of a Unicode character
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">IntlChar::charName</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -23008,7 +23127,8 @@ Get the decimal digit value of a code point for a given radix
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">int</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">IntlChar::digit</span> ( <span
 class="methodparam"><span class="type">string</span> `$codepoint`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -23835,7 +23955,8 @@ Get the Unicode name for a property
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">IntlChar::getPropertyName</span> ( <span
 class="methodparam"><span class="type">int</span> `$property`</span> \[,
 <span class="methodparam"><span class="type">int</span>
@@ -23985,7 +24106,8 @@ Get the Unicode name for a property value
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">IntlChar::getPropertyValueName</span> ( <span
 class="methodparam"><span class="type">int</span> `$property`</span> ,
 <span class="methodparam"><span class="type">int</span> `$value`</span>

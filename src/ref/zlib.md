@@ -595,7 +595,8 @@ Get line from gz-file pointer and strip HTML tags
 
 ### 说明
 
-<span class="type">string</span> <span class="methodname">gzgetss</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">gzgetss</span>
 ( <span class="methodparam"><span class="type">resource</span>
 `$zp`</span> , <span class="methodparam"><span class="type">int</span>
 `$length`</span> \[, <span class="methodparam"><span
@@ -762,9 +763,10 @@ Output all remaining data on a gz-file pointer
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">gzpassthru</span>
-( <span class="methodparam"><span class="type">resource</span>
-`$stream`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">gzpassthru</span> ( <span class="methodparam"><span
+class="type">resource</span> `$stream`</span> )
 
 Reads to EOF on the given gz-file pointer from the current position and
 writes the (uncompressed) results to standard output.
@@ -1182,7 +1184,8 @@ Get number of bytes read so far
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">inflate\_get\_read\_len</span> ( <span
 class="methodparam"><span class="type">InflateContext</span>
 `$context`</span> )
@@ -1212,7 +1215,8 @@ Get decompression status
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">inflate\_get\_status</span> ( <span
 class="methodparam"><span class="type">InflateContext</span>
 `$context`</span> )

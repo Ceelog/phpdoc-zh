@@ -72,8 +72,9 @@ class="methodparam"><span class="type">object</span> `$object`</span> )
 <span class="methodname">Weakref::acquire</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">object</span>
-<span class="methodname">Weakref::get</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">object</span><span class="type">null</span></span> <span
+class="methodname">Weakref::get</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -318,8 +319,9 @@ Returns the object pointed to by the weak reference
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">object</span>
-<span class="methodname">Weakref::get</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">object</span><span class="type">null</span></span> <span
+class="methodname">Weakref::get</span> ( <span
 class="methodparam">void</span> )
 
 Returns the object pointed to by the weak reference.

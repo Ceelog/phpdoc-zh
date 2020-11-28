@@ -794,7 +794,8 @@ class="type">int</span> `$key`</span> )
 <span class="methodname">exists</span> ( <span class="methodparam"><span
 class="type">int</span> `$key`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">null</span></span> <span
 class="methodname">get</span> ( <span class="methodparam"><span
 class="type">int</span> `$key`</span> )
 
@@ -1124,7 +1125,8 @@ This method retrieves a value from the hash by its key
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">null</span></span> <span
 class="methodname">QuickHashIntHash::get</span> ( <span
 class="methodparam"><span class="type">int</span> `$key`</span> )
 

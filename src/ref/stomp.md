@@ -5,7 +5,8 @@ Returns a string description of the last connect error
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">stomp\_connect\_error</span> ( <span
 class="methodparam">void</span> )
 
