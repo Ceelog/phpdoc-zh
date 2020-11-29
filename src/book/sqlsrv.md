@@ -833,8 +833,7 @@ Returns information about the client and specified connection
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">sqlsrv\_client\_info</span> ( <span
 class="methodparam"><span class="type">resource</span> `$conn`</span> )
 
@@ -1070,8 +1069,7 @@ Opens a connection to a Microsoft SQL Server database
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">sqlsrv\_connect</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$serverName`</span> \[, <span class="methodparam"><span
@@ -1353,8 +1351,7 @@ Returns a row as an array
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span><span class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">sqlsrv\_fetch\_array</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2493,8 +2490,7 @@ DELETE query executed
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">sqlsrv\_rows\_affected</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span> )
 

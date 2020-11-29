@@ -719,6 +719,8 @@ String containing the prefix.
 
 ### 返回值
 
+成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
 ### 更新日志
 
 | 版本  | 说明                                            |

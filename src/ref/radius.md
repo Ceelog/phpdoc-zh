@@ -5,8 +5,7 @@ Creates a Radius handle for accounting
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">radius\_acct\_open</span> ( <span
 class="methodparam">void</span> )
 
@@ -108,8 +107,7 @@ Creates a Radius handle for authentication
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">radius\_auth\_open</span> ( <span
 class="methodparam">void</span> )
 
@@ -378,8 +376,7 @@ Derives mppe-keys from mangled data
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">radius\_demangle\_mppe\_key</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$radius_handle`</span> , <span class="methodparam"><span
@@ -401,8 +398,7 @@ Demangles data
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">radius\_demangle</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$radius_handle`</span> , <span class="methodparam"><span
@@ -584,8 +580,7 @@ Extracts a vendor specific attribute
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">radius\_get\_vendor\_attr</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
@@ -1209,8 +1204,7 @@ Returns the request authenticator
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">radius\_request\_authenticator</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$radius_handle`</span> )
@@ -1269,8 +1263,7 @@ Sends the request and waits for a reply
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">radius\_send\_request</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$radius_handle`</span> )
@@ -1302,8 +1295,7 @@ Returns the shared secret
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">radius\_server\_secret</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$radius_handle`</span> )

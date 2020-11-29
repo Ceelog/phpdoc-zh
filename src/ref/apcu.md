@@ -769,8 +769,7 @@ Retrieves APCu Shared Memory Allocation information
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">apcu\_sma\_info</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$limited`<span
 class="initializer"> = **`FALSE`**</span></span> \] )

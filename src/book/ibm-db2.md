@@ -716,8 +716,7 @@ Returns an object with properties that describe the DB2 database client
 
 ### 说明
 
-<span class="type"><span class="type">object</span><span
-class="type">false</span></span> <span
+<span class="type">object</span> <span
 class="methodname">db2\_client\_info</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> )
@@ -1098,8 +1097,7 @@ attempt
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">db2\_conn\_error</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \] )
@@ -1169,8 +1167,7 @@ Returns the last connection error message and SQLCODE value
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">db2\_conn\_errormsg</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \] )
@@ -1237,8 +1234,7 @@ Returns a connection to a database
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">db2\_connect</span> ( <span class="methodparam"><span
 class="type">string</span> `$database`</span> , <span
 class="methodparam"><span class="type">string</span> `$username`</span>
@@ -1788,8 +1784,7 @@ Executes an SQL statement directly
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">db2\_exec</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection`</span> , <span
 class="methodparam"><span class="type">string</span> `$statement`</span>
@@ -2370,8 +2365,7 @@ result set
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">db2\_fetch\_array</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2470,8 +2464,7 @@ set
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">db2\_fetch\_assoc</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2570,8 +2563,7 @@ a row in a result set
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">db2\_fetch\_both</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2676,8 +2668,7 @@ row
 
 ### 说明
 
-<span class="type"><span class="type">object</span><span
-class="type">false</span></span> <span
+<span class="type">object</span> <span
 class="methodname">db2\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2890,8 +2881,7 @@ Returns the maximum number of bytes required to display a column
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">db2\_field\_display\_size</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
@@ -2933,8 +2923,7 @@ Returns the name of the column in the result set
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">db2\_field\_name</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
@@ -2974,8 +2963,7 @@ Returns the position of the named column in a result set
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">db2\_field\_num</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
@@ -3015,8 +3003,7 @@ Returns the precision of the indicated column in a result set
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">db2\_field\_precision</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
@@ -3056,8 +3043,7 @@ Returns the scale of the indicated column in a result set
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">db2\_field\_scale</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
@@ -3097,8 +3083,7 @@ Returns the data type of the indicated column in a result set
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">db2\_field\_type</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
@@ -3139,8 +3124,7 @@ result set
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">db2\_field\_width</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
@@ -3640,8 +3624,7 @@ Gets a user defined size of LOB files with each invocation
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">db2\_lob\_read</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span> ,
 <span class="methodparam"><span class="type">int</span> `$colnum`</span>
@@ -3769,8 +3752,7 @@ Requests the next result set from a stored procedure
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">db2\_next\_result</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span> )
 
@@ -3894,8 +3876,7 @@ Returns the number of fields contained in a result set
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">db2\_num\_fields</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span> )
 
@@ -3956,8 +3937,7 @@ Returns the number of rows affected by an SQL statement
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">db2\_num\_rows</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stmt`</span> )
 
@@ -4068,8 +4048,7 @@ Returns a persistent connection to a database
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">db2\_pconnect</span> ( <span
 class="methodparam"><span class="type">string</span> `$database`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -4443,8 +4422,7 @@ Prepares an SQL statement to be executed
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">db2\_prepare</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection`</span> , <span
 class="methodparam"><span class="type">string</span> `$statement`</span>
@@ -5000,8 +4978,7 @@ Returns an object with properties that describe the DB2 database server
 
 ### 说明
 
-<span class="type"><span class="type">object</span><span
-class="type">false</span></span> <span
+<span class="type">object</span> <span
 class="methodname">db2\_server\_info</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> )

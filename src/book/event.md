@@ -480,8 +480,7 @@ class="methodparam"> <span class="type">callable</span> `$cb` </span>
 </span> \] )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">Event</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">Event</span> <span
 class="methodname">signal</span> ( <span class="methodparam"> <span
 class="type">EventBase</span> `$base` </span> , <span
 class="methodparam"> <span class="type">int</span> `$signum` </span> ,
@@ -490,8 +489,7 @@ class="methodparam"> <span class="type">int</span> `$signum` </span> ,
 `$arg` </span> \] )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">Event</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">Event</span> <span
 class="methodname">timer</span> ( <span class="methodparam"> <span
 class="type">EventBase</span> `$base` </span> , <span
 class="methodparam"> <span class="type">callable</span> `$cb` </span>
@@ -1002,8 +1000,7 @@ Constructs signal event object
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">Event</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">Event</span> <span
 class="methodname">Event::signal</span> ( <span class="methodparam">
 <span class="type">EventBase</span> `$base` </span> , <span
 class="methodparam"> <span class="type">int</span> `$signum` </span> ,
@@ -1048,8 +1045,7 @@ Constructs timer event object
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">Event</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">Event</span> <span
 class="methodname">Event::timer</span> ( <span class="methodparam">
 <span class="type">EventBase</span> `$base` </span> , <span
 class="methodparam"> <span class="type">callable</span> `$cb` </span>
@@ -1133,7 +1129,7 @@ Otherwise, it will lead to unpredictable results!
 class="methodname">\_\_construct</span> (\[ <span class="methodparam">
 <span class="type">EventConfig</span> `$cfg` </span> \] )
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">dispatch</span> ( <span
 class="methodparam">void</span> )
 
@@ -1153,9 +1149,8 @@ class="methodparam">void</span> )
 <span class="methodname">getMethod</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">float</span><span class="type">null</span></span> <span
-class="methodname">getTimeOfDayCached</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getTimeOfDayCached</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -1260,7 +1255,7 @@ Dispatch pending events
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">EventBase::dispatch</span> ( <span
 class="methodparam">void</span> )
 
@@ -1453,9 +1448,8 @@ Returns the current event base time
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">float</span><span class="type">null</span></span> <span
-class="methodname">EventBase::getTimeOfDayCached</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">EventBase::getTimeOfDayCached</span> ( <span
 class="methodparam">void</span> )
 
 On success returns the current time(as returned by *gettimeofday()* ),
@@ -1736,26 +1730,22 @@ class="methodparam">void</span> )
 class="methodparam"> <span class="type">EventBuffer</span> `$buf`
 </span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">pullup</span> ( <span class="methodparam"> <span
-class="type">int</span> `$size` </span> )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">pullup</span> ( <span class="methodparam">
+<span class="type">int</span> `$size` </span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">read</span> ( <span class="methodparam"> <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">read</span> ( <span class="methodparam"> <span
 class="type">int</span> `$max_bytes` </span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">read</span> ( <span class="methodparam"> <span
 class="type">mixed</span> `$fd` </span> , <span class="methodparam">
 <span class="type">int</span> `$howmuch` </span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">readLine</span> ( <span class="methodparam"> <span
-class="type">int</span> `$eol_style` </span> )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">readLine</span> ( <span class="methodparam">
+<span class="type">int</span> `$eol_style` </span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">search</span> ( <span class="methodparam">
@@ -1772,11 +1762,11 @@ class="initializer"> = -1</span> </span> \[, <span class="methodparam">
 class="type">int</span> `$eol_style` <span class="initializer"> =
 **`EventBuffer::EOL_ANY`** </span> </span> \]\] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">substr</span> ( <span class="methodparam"> <span
-class="type">int</span> `$start` </span> \[, <span class="methodparam">
-<span class="type">int</span> `$length` </span> \] )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">substr</span> ( <span class="methodparam">
+<span class="type">int</span> `$start` </span> \[, <span
+class="methodparam"> <span class="type">int</span> `$length` </span> \]
+)
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">unfreeze</span> ( <span class="methodparam">
@@ -1786,8 +1776,7 @@ class="type">int</span> `$start` </span> \[, <span class="methodparam">
 <span class="methodname">unlock</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">write</span> ( <span class="methodparam"> <span
 class="type">mixed</span> `$fd` </span> \[, <span class="methodparam">
 <span class="type">int</span> `$howmuch` </span> \] )
@@ -2201,9 +2190,8 @@ Linearizes data within buffer and returns it's contents as a string
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">EventBuffer::pullup</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">EventBuffer::pullup</span> ( <span
 class="methodparam"> <span class="type">int</span> `$size` </span> )
 
 "Linearizes" the first `size` bytes of the buffer, copying or moving
@@ -2243,10 +2231,10 @@ Read data from an evbuffer and drain the bytes read
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">EventBuffer::read</span> ( <span class="methodparam">
-<span class="type">int</span> `$max_bytes` </span> )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">EventBuffer::read</span> ( <span
+class="methodparam"> <span class="type">int</span> `$max_bytes` </span>
+)
 
 Read the first `max_bytes` from the buffer and drain the bytes read. If
 more `max_bytes` are requested than are available in the buffer, it only
@@ -2282,8 +2270,7 @@ Read data from a file onto the end of the buffer
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">EventBuffer::read</span> ( <span class="methodparam">
 <span class="type">mixed</span> `$fd` </span> , <span
 class="methodparam"> <span class="type">int</span> `$howmuch` </span> )
@@ -2317,9 +2304,8 @@ Extracts a line from the front of the buffer
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">EventBuffer::readLine</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">EventBuffer::readLine</span> ( <span
 class="methodparam"> <span class="type">int</span> `$eol_style` </span>
 )
 
@@ -2488,9 +2474,8 @@ Substracts a portion of the buffer data
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">EventBuffer::substr</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">EventBuffer::substr</span> ( <span
 class="methodparam"> <span class="type">int</span> `$start` </span> \[,
 <span class="methodparam"> <span class="type">int</span> `$length`
 </span> \] )
@@ -2575,8 +2560,7 @@ Write contents of the buffer to a file or socket
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">EventBuffer::write</span> ( <span
 class="methodparam"> <span class="type">mixed</span> `$fd` </span> \[,
 <span class="methodparam"> <span class="type">int</span> `$howmuch`
@@ -2802,9 +2786,8 @@ class="methodparam"> <span class="type">int</span> `$events` </span> ,
 </span> , <span class="methodparam"> <span class="type">int</span>
 `$highmark` </span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">sslError</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">sslError</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
@@ -2819,19 +2802,16 @@ class="methodparam"> <span class="type">int</span> `$state` </span> \[,
 <span class="methodparam"> <span class="type">int</span> `$options`
 <span class="initializer"> = 0</span> </span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">sslGetCipherInfo</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">sslGetCipherInfo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">sslGetCipherName</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">sslGetCipherName</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">sslGetCipherVersion</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">sslGetCipherVersion</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -3893,9 +3873,8 @@ Returns most recent OpenSSL error reported on the buffer event
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">EventBufferEvent::sslError</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">EventBufferEvent::sslError</span> ( <span
 class="methodparam">void</span> )
 
 Returns most recent OpenSSL error reported on the buffer event.
@@ -4152,10 +4131,9 @@ Returns a textual description of the cipher
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">EventBufferEvent::sslGetCipherInfo</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">EventBufferEvent::sslGetCipherInfo</span> (
+<span class="methodparam">void</span> )
 
 Retrieves description of the current cipher by means of the
 *SSL\_CIPHER\_description* SSL API function (see
@@ -4182,10 +4160,9 @@ Returns the current cipher name of the SSL connection
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">EventBufferEvent::sslGetCipherName</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">EventBufferEvent::sslGetCipherName</span> (
+<span class="methodparam">void</span> )
 
 Retrieves name of cipher used by current SSL connection.
 
@@ -4210,10 +4187,9 @@ Returns version of cipher used by current SSL connection
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">EventBufferEvent::sslGetCipherVersion</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">EventBufferEvent::sslGetCipherVersion</span> (
+<span class="methodparam">void</span> )
 
 Retrieves version of cipher used by current SSL connection.
 
@@ -4430,7 +4406,7 @@ class="methodparam">void</span> )
 <span class="methodname">requireFeatures</span> ( <span
 class="methodparam"> <span class="type">int</span> `$feature` </span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setMaxDispatchInterval</span> ( <span
 class="methodparam"> <span class="type">int</span> `$max_interval`
 </span> , <span class="methodparam"> <span class="type">int</span>
@@ -4604,7 +4580,7 @@ Prevents priority inversion
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">EventConfig::setMaxDispatchInterval</span> (
 <span class="methodparam"> <span class="type">int</span> `$max_interval`
 </span> , <span class="methodparam"> <span class="type">int</span>
@@ -5005,7 +4981,7 @@ Represents HTTP server.
 <span class="methodname">addServerAlias</span> ( <span
 class="methodparam"> <span class="type">string</span> `$alias` </span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">bind</span> ( <span class="methodparam"> <span
 class="type">string</span> `$address` </span> , <span
 class="methodparam"> <span class="type">int</span> `$port` </span> )
@@ -5024,14 +5000,14 @@ class="methodparam"> <span class="type">string</span> `$alias` </span> )
 <span class="methodname">setAllowedMethods</span> ( <span
 class="methodparam"> <span class="type">int</span> `$methods` </span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setCallback</span> ( <span class="methodparam">
 <span class="type">string</span> `$path` </span> , <span
 class="methodparam"> <span class="type">string</span> `$cb` </span> \[,
 <span class="methodparam"> <span class="type">string</span> `$arg`
 </span> \] )
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setDefaultCallback</span> ( <span
 class="methodparam"> <span class="type">string</span> `$cb` </span> \[,
 <span class="methodparam"> <span class="type">string</span> `$arg`
@@ -5228,7 +5204,7 @@ Binds an HTTP server on the specified address and port
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">EventHttp::bind</span> ( <span
 class="methodparam"> <span class="type">string</span> `$address` </span>
 , <span class="methodparam"> <span class="type">int</span> `$port`
@@ -5554,7 +5530,7 @@ Sets a callback for specified URI
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">EventHttp::setCallback</span> ( <span
 class="methodparam"> <span class="type">string</span> `$path` </span> ,
 <span class="methodparam"> <span class="type">string</span> `$cb`
@@ -5710,7 +5686,7 @@ callbacks
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">EventHttp::setDefaultCallback</span> ( <span
 class="methodparam"> <span class="type">string</span> `$cb` </span> \[,
 <span class="methodparam"> <span class="type">string</span> `$arg`
@@ -5872,8 +5848,7 @@ class="type">int</span> `$port` </span> \[, <span class="methodparam">
 <span class="type">EventSslContext</span> `$ctx` <span
 class="initializer"> = **`NULL`**</span> </span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">EventBase</span><span class="type">false</span></span>
+<span class="modifier">public</span> <span class="type">EventBase</span>
 <span class="methodname">getBase</span> ( <span
 class="methodparam">void</span> )
 
@@ -5983,8 +5958,7 @@ Returns event base associated with the connection
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">EventBase</span><span class="type">false</span></span>
+<span class="modifier">public</span> <span class="type">EventBase</span>
 <span class="methodname">EventHttpConnection::getBase</span> ( <span
 class="methodparam">void</span> )
 
@@ -6490,11 +6464,10 @@ class="methodname">\_\_construct</span> ( <span class="methodparam">
 class="methodparam"> <span class="type">mixed</span> `$data` <span
 class="initializer"> = **`NULL`**</span> </span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">findHeader</span> ( <span class="methodparam"> <span
-class="type">string</span> `$key` </span> , <span class="methodparam">
-<span class="type">string</span> `$type` </span> )
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">findHeader</span> ( <span class="methodparam">
+<span class="type">string</span> `$key` </span> , <span
+class="methodparam"> <span class="type">string</span> `$type` </span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">free</span> ( <span
@@ -6825,9 +6798,8 @@ Finds the value belonging a header
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">EventHttpRequest::findHeader</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">EventHttpRequest::findHeader</span> ( <span
 class="methodparam"> <span class="type">string</span> `$key` </span> ,
 <span class="methodparam"> <span class="type">string</span> `$type`
 </span> )
@@ -8229,8 +8201,7 @@ class="methodparam"> <span class="type">mixed</span> `$socket` </span>
 \] )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">getSocketFd</span> ( <span class="methodparam"> <span
 class="type">mixed</span> `$socket` </span> )
 
@@ -8436,8 +8407,7 @@ Returns numeric file descriptor of a socket, or stream
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">EventUtil::getSocketFd</span> ( <span
 class="methodparam"> <span class="type">mixed</span> `$socket` </span> )
 

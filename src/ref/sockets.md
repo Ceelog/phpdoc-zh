@@ -5,8 +5,7 @@ Accepts a connection on a socket
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">socket\_accept</span> ( <span
 class="methodparam"><span class="type">resource</span> `$socket`</span>
 )
@@ -59,8 +58,7 @@ Create and bind to a socket from a given addrinfo
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">null</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">socket\_addrinfo\_bind</span> ( <span
 class="methodparam"><span class="type">resource</span> `$addr`</span> )
 
@@ -92,8 +90,7 @@ Create and connect to a socket from a given addrinfo
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">null</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">socket\_addrinfo\_connect</span> ( <span
 class="methodparam"><span class="type">resource</span> `$addr`</span> )
 
@@ -442,8 +439,7 @@ Opens a socket on port to accept connections
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">socket\_create\_listen</span> ( <span
 class="methodparam"><span class="type">int</span> `$port`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$backlog`<span
@@ -1098,8 +1094,7 @@ Import a stream
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">null</span><span class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">socket\_import\_stream</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stream`</span>
 )
@@ -1260,8 +1255,7 @@ Reads a maximum of length bytes from a socket
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">socket\_read</span> ( <span class="methodparam"><span
 class="type">resource</span> `$socket`</span> , <span
 class="methodparam"><span class="type">int</span> `$length`</span> \[,
@@ -1459,8 +1453,7 @@ Receives data from a socket whether or not it is connection-oriented
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">socket\_recvfrom</span> ( <span
 class="methodparam"><span class="type">resource</span> `$socket`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -1599,8 +1592,7 @@ specified timeout
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">socket\_select</span> ( <span
 class="methodparam"><span class="type">array</span> `&$read`</span> ,
 <span class="methodparam"><span class="type">array</span>
@@ -1761,8 +1753,7 @@ Sends data to a connected socket
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">socket\_send</span> ( <span class="methodparam"><span
 class="type">resource</span> `$socket`</span> , <span
 class="methodparam"><span class="type">string</span> `$buf`</span> ,
@@ -1850,8 +1841,7 @@ Sends a message to a socket, whether it is connected or not
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">socket\_sendto</span> ( <span
 class="methodparam"><span class="type">resource</span> `$socket`</span>
 , <span class="methodparam"><span class="type">string</span>

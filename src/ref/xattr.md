@@ -5,8 +5,7 @@ Get an extended attribute
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">xattr\_get</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> , <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,

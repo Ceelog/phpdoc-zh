@@ -1875,8 +1875,7 @@ Returns terminals description
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ncurses\_longname</span> ( <span
 class="methodparam">void</span> )
 
@@ -3710,8 +3709,7 @@ Returns terminals (short)-name
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ncurses\_termname</span> ( <span
 class="methodparam">void</span> )
 

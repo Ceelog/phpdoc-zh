@@ -81,12 +81,11 @@ Gets the timestamp of the first sample from rrd file
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">rrd\_first</span> ( <span class="methodparam"><span
-class="type">string</span> `$file`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$raaindex`<span
-class="initializer"> = 0</span></span> \] )
+<span class="type">int</span> <span class="methodname">rrd\_first</span>
+( <span class="methodparam"><span class="type">string</span>
+`$file`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$raaindex`<span class="initializer"> =
+0</span></span> \] )
 
 Returns the first data sample from the specified RRA of the RRD file.
 
@@ -109,8 +108,7 @@ Creates image from a data
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">rrd\_graph</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> , <span
 class="methodparam"><span class="type">array</span> `$options`</span> )
@@ -140,8 +138,7 @@ Gets information about rrd file
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">rrd\_info</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> )
 
@@ -187,8 +184,7 @@ Gets information about last updated data
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">rrd\_lastupdate</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )
@@ -320,8 +316,7 @@ Exports the information about RRD database
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">rrd\_xport</span> ( <span class="methodparam"><span
 class="type">array</span> `$options`</span> )
 

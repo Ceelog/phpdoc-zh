@@ -15,15 +15,15 @@ web 页面，但 PHP 的用途远不只于此。
 在手册的首页上仅突出了目前最活跃的人员，但还有更多的贡献者正在帮助我们工作或在过去给项目提供过巨大的帮助。有许多不知名的人帮助在手册中写下用户评论，并不断地包含在参考中，也很感谢他们的努力。下面所提供的列表均以字母顺序排序。
 
 下列人员曾经或者目前正在为本手册添砖加瓦： Bill Abt, Jouni Ahto,
-Alexander Aulbach, Christoph Michael Becker, Daniel Beckham, Stig
-Bakken, Nilgün Belma Bugüner, Jesus M. Castagnetto, Ron Chmara, Sean
-Coates, John Coggeshall, Simone Cortesi, Peter Cowburn, Daniel Egeberg,
-Markus Fischer, Wez Furlong, Sara Golemon, Rui Hirokawa, Brad House,
-Pierre-Alain Joye, Etienne Kneuss, Moriyoshi Koizumi, Rasmus Lerdorf,
-Andrew Lindeman, Stanislav Malyshev, Justin Martin, Rafael Martinez,
-Rick McGuire, Moacir de Oliveira Miranda Júnior, Kalle Sommer Nielsen,
-Yasuo Ohgaki, Philip Olson, Richard Quadling, Derick Rethans, Rob
-Richards, Sander Roobol, Egon Schmid, Thomas Schoefbeck, Sascha
+Alexander Aulbach, Stig Bakken, George Peter Banyard, Christoph M.
+Becker, Daniel Beckham, Nilgün Belma Bugüner, Jesus M. Castagnetto, Ron
+Chmara, Sean Coates, John Coggeshall, Simone Cortesi, Peter Cowburn,
+Daniel Egeberg, Markus Fischer, Wez Furlong, Sara Golemon, Rui Hirokawa,
+Brad House, Pierre-Alain Joye, Etienne Kneuss, Moriyoshi Koizumi, Rasmus
+Lerdorf, Andrew Lindeman, Stanislav Malyshev, Justin Martin, Rafael
+Martinez, Rick McGuire, Moacir de Oliveira Miranda Júnior, Kalle Sommer
+Nielsen, Yasuo Ohgaki, Philip Olson, Richard Quadling, Derick Rethans,
+Rob Richards, Sander Roobol, Egon Schmid, Thomas Schoefbeck, Sascha
 Schumann, Dan Scott, Masahiro Takagi, Yannick Torres, Michael Wallner,
 Lars Torben Wilson, Jim Winstead, Jeroen van Wolffelaar 和 Andrei
 Zmievski.

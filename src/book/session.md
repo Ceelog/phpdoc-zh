@@ -170,28 +170,26 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">destroy</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$session_id`</span> )
+class="methodparam"><span class="type">string</span> `$id`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">bool</span></span> <span
 class="methodname">gc</span> ( <span class="methodparam"><span
-class="type">int</span> `$maxlifetime`</span> )
+class="type">int</span> `$max_lifetime`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">open</span> ( <span class="methodparam"><span
-class="type">string</span> `$save_path`</span> , <span
-class="methodparam"><span class="type">string</span>
-`$session_name`</span> )
+class="type">string</span> `$path`</span> , <span
+class="methodparam"><span class="type">string</span> `$name`</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">read</span> ( <span class="methodparam"><span
-class="type">string</span> `$session_id`</span> )
+class="type">string</span> `$id`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">write</span> ( <span class="methodparam"><span
-class="type">string</span> `$session_id`</span> , <span
-class="methodparam"><span class="type">string</span>
-`$session_data`</span> )
+class="type">string</span> `$id`</span> , <span
+class="methodparam"><span class="type">string</span> `$data`</span> )
 
 }
 
@@ -390,8 +388,7 @@ Destroy a session
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">SessionHandler::destroy</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$session_id`</span> )
+class="methodparam"><span class="type">string</span> `$id`</span> )
 
 Destroys a session. Called internally by PHP with <span
 class="function">session\_regenerate\_id</span> (assuming the `$destroy`
@@ -414,7 +411,7 @@ class="function">SessionHandlerInterface::destroy</span>.
 
 ### 参数
 
-`session_id`  
+`id`  
 The session ID being destroyed.
 
 ### 返回值
@@ -428,9 +425,10 @@ Cleanup old sessions
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">bool</span></span> <span
 class="methodname">SessionHandler::gc</span> ( <span
-class="methodparam"><span class="type">int</span> `$maxlifetime`</span>
+class="methodparam"><span class="type">int</span> `$max_lifetime`</span>
 )
 
 Cleans up expired sessions. Called randomly by PHP internally when a
@@ -456,13 +454,21 @@ class="function">SessionHandlerInterface::gc</span>.
 
 ### 参数
 
-`maxlifetime`  
-Sessions that have not updated for the last `maxlifetime` seconds will
+`max_lifetime`  
+Sessions that have not updated for the last `max_lifetime` seconds will
 be removed.
 
 ### 返回值
 
-会话存储的返回值（通常成功返回 0，失败返回 1）。
+Returns the number of deleted sessions on success, 或者在失败时返回
+**`FALSE`**. Note this value is returned internally to PHP for
+processing.
+
+### 更新日志
+
+| 版本  | 说明                                                                |
+|-------|---------------------------------------------------------------------|
+| 7.1.0 | Prior to this version, the function returned **`TRUE`** on success. |
 
 SessionHandler::open
 ====================
@@ -473,9 +479,9 @@ Initialize session
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">SessionHandler::open</span> ( <span
-class="methodparam"><span class="type">string</span> `$save_path`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$session_name`</span> )
+class="methodparam"><span class="type">string</span> `$path`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$name`</span> )
 
 Create new session, or re-initialize existing session. Called internally
 by PHP when a session starts either automatically or when <span
@@ -497,10 +503,10 @@ class="function">SessionHandlerInterface::open</span>.
 
 ### 参数
 
-`save_path`  
+`path`  
 The path where to store/retrieve the session.
 
-`session_name`  
+`name`  
 The session name.
 
 ### 返回值
@@ -522,8 +528,7 @@ Read session data
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">SessionHandler::read</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$session_id`</span> )
+class="methodparam"><span class="type">string</span> `$id`</span> )
 
 Reads the session data from the session storage, and returns the result
 back to PHP for internal processing. This method is called automatically
@@ -548,7 +553,7 @@ class="function">SessionHandlerInterface::read</span>.
 
 ### 参数
 
-`session_id`  
+`id`  
 The session id to read data for.
 
 ### 返回值
@@ -572,9 +577,9 @@ Write session data
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">SessionHandler::write</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$session_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$session_data`</span> )
+class="methodparam"><span class="type">string</span> `$id`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$data`</span> )
 
 Writes the session data to the session storage. Called by normal PHP
 shutdown, by <span class="function">session\_write\_close</span>, or
@@ -599,10 +604,10 @@ class="function">SessionHandlerInterface::write</span>.
 
 ### 参数
 
-`session_id`  
+`id`  
 The session id.
 
-`session_data`  
+`data`  
 The encoded session data. This data is the result of the PHP internally
 encoding the `$_SESSION` superglobal to a serialized string and passing
 it as this parameter. Please note sessions use an alternative
@@ -647,31 +652,30 @@ class="methodname">close</span> ( <span class="methodparam">void</span>
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">bool</span> <span
 class="methodname">destroy</span> ( <span class="methodparam"><span
-class="type">string</span> `$session_id`</span> )
+class="type">string</span> `$id`</span> )
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span class="type">int</span> <span
+class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">bool</span></span> <span
 class="methodname">gc</span> ( <span class="methodparam"><span
-class="type">int</span> `$maxlifetime`</span> )
+class="type">int</span> `$max_lifetime`</span> )
 
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">bool</span> <span
 class="methodname">open</span> ( <span class="methodparam"><span
-class="type">string</span> `$save_path`</span> , <span
-class="methodparam"><span class="type">string</span>
-`$session_name`</span> )
+class="type">string</span> `$path`</span> , <span
+class="methodparam"><span class="type">string</span> `$name`</span> )
 
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">string</span> <span
 class="methodname">read</span> ( <span class="methodparam"><span
-class="type">string</span> `$session_id`</span> )
+class="type">string</span> `$id`</span> )
 
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">bool</span> <span
 class="methodname">write</span> ( <span class="methodparam"><span
-class="type">string</span> `$session_id`</span> , <span
-class="methodparam"><span class="type">string</span>
-`$session_data`</span> )
+class="type">string</span> `$id`</span> , <span
+class="methodparam"><span class="type">string</span> `$data`</span> )
 
 }
 
@@ -790,8 +794,7 @@ Destroy a session
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">bool</span> <span
 class="methodname">SessionHandlerInterface::destroy</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$session_id`</span> )
+class="methodparam"><span class="type">string</span> `$id`</span> )
 
 Destroys a session. Called by <span
 class="function">session\_regenerate\_id</span> (with $destroy =
@@ -800,7 +803,7 @@ class="function">session\_regenerate\_id</span> (with $destroy =
 
 ### 参数
 
-`session_id`  
+`id`  
 The session ID being destroyed.
 
 ### 返回值
@@ -815,9 +818,10 @@ Cleanup old sessions
 ### 说明
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span class="type">int</span> <span
+class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">bool</span></span> <span
 class="methodname">SessionHandlerInterface::gc</span> ( <span
-class="methodparam"><span class="type">int</span> `$maxlifetime`</span>
+class="methodparam"><span class="type">int</span> `$max_lifetime`</span>
 )
 
 Cleans up expired sessions. Called by <span
@@ -830,13 +834,21 @@ settings.
 
 ### 参数
 
-`maxlifetime`  
-Sessions that have not updated for the last `maxlifetime` seconds will
+`max_lifetime`  
+Sessions that have not updated for the last `max_lifetime` seconds will
 be removed.
 
 ### 返回值
 
-会话存储的返回值（通常成功返回 0，失败返回 1）。
+Returns the number of deleted sessions on success, 或者在失败时返回
+**`FALSE`**. Note this value is returned internally to PHP for
+processing.
+
+### 更新日志
+
+| 版本  | 说明                                                                |
+|-------|---------------------------------------------------------------------|
+| 7.1.0 | Prior to this version, the function returned **`TRUE`** on success. |
 
 SessionHandlerInterface::open
 =============================
@@ -848,9 +860,9 @@ Initialize session
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">bool</span> <span
 class="methodname">SessionHandlerInterface::open</span> ( <span
-class="methodparam"><span class="type">string</span> `$save_path`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$session_name`</span> )
+class="methodparam"><span class="type">string</span> `$path`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$name`</span> )
 
 Re-initialize existing session, or creates a new one. Called when a
 session starts or when <span class="function">session\_start</span> is
@@ -858,10 +870,10 @@ invoked.
 
 ### 参数
 
-`save_path`  
+`path`  
 The path where to store/retrieve the session.
 
-`session_name`  
+`name`  
 The session name.
 
 ### 返回值
@@ -885,8 +897,7 @@ Read session data
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">string</span> <span
 class="methodname">SessionHandlerInterface::read</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$session_id`</span> )
+class="methodparam"><span class="type">string</span> `$id`</span> )
 
 Reads the session data from the session storage, and returns the
 results. Called right after the session starts or when <span
@@ -912,7 +923,7 @@ class="function">session\_decode</span>.
 
 ### 参数
 
-`session_id`  
+`id`  
 The session id.
 
 ### 返回值
@@ -937,9 +948,9 @@ Write session data
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">bool</span> <span
 class="methodname">SessionHandlerInterface::write</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$session_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$session_data`</span> )
+class="methodparam"><span class="type">string</span> `$id`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$data`</span> )
 
 Writes the session data to the session storage. Called by <span
 class="function">session\_write\_close</span>, when <span
@@ -961,10 +972,10 @@ class="function">session\_write\_close</span>
 
 ### 参数
 
-`session_id`  
+`id`  
 The session id.
 
-`session_data`  
+`data`  
 The encoded session data. This data is the result of the PHP internally
 encoding the `$_SESSION` superglobal to a serialized string and passing
 it as this parameter. Please note sessions use an alternative

@@ -1434,8 +1434,7 @@ Escape a literal for insertion into a text field
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">pg\_escape\_literal</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \], <span class="methodparam"><span
@@ -1613,8 +1612,7 @@ Fetches all rows in a particular result column as an array
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">pg\_fetch\_all\_columns</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2297,8 +2295,7 @@ Returns the type ID (OID) for the corresponding field number
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">pg\_field\_type\_oid</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -3388,8 +3385,7 @@ Looks up a current parameter setting of the server
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">pg\_parameter\_status</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \], <span class="methodparam"><span
@@ -3901,8 +3897,7 @@ Returns an individual field of an error report
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">pg\_result\_error\_field</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -4780,8 +4775,7 @@ available)
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">pg\_version</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \] )

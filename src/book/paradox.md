@@ -718,8 +718,7 @@ Inserts record into paradox database
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">px\_insert\_record</span> ( <span
 class="methodparam"><span class="type">resource</span> `$pxdoc`</span> ,
 <span class="methodparam"><span class="type">array</span> `$data`</span>
@@ -821,9 +820,9 @@ Create a new paradox object
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span class="methodname">px\_new</span>
-( <span class="methodparam">void</span> )
+<span class="type">resource</span> <span
+class="methodname">px\_new</span> ( <span
+class="methodparam">void</span> )
 
 Create a new paradox object. You will have to call this function before
 any further functions. <span class="function">px\_new</span> does not
@@ -1161,7 +1160,7 @@ Sets the name of a table (deprecated)
 
 ### 说明
 
-<span class="type"><span class="type">null</span><span
+<span class="type"><span class="type">void</span><span
 class="type">false</span></span> <span
 class="methodname">px\_set\_tablename</span> ( <span
 class="methodparam"><span class="type">resource</span> `$pxdoc`</span> ,

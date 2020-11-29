@@ -2885,8 +2885,7 @@ Query language and locale information
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">nl\_langinfo</span> ( <span class="methodparam"><span
 class="type">int</span> `$item`</span> )
 

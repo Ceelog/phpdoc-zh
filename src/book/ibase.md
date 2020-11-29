@@ -1542,8 +1542,7 @@ Get len bytes data from open blob
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ibase\_blob\_get</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$blob_handle`</span> , <span class="methodparam"><span
@@ -1601,15 +1600,13 @@ Create blob, copy file in it, and close it
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ibase\_blob\_import</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
 class="type">resource</span> `$file_handle`</span> )
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ibase\_blob\_import</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$file_handle`</span> )
@@ -1843,8 +1840,7 @@ Open a connection to a database
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ibase\_connect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$database`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -2028,8 +2024,7 @@ Return an error code
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">ibase\_errcode</span> ( <span
 class="methodparam">void</span> )
 
@@ -2052,8 +2047,7 @@ Return error messages
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ibase\_errmsg</span> ( <span
 class="methodparam">void</span> )
 
@@ -2076,8 +2070,7 @@ Execute a previously prepared query
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">bool</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ibase\_execute</span> ( <span
 class="methodparam"><span class="type">resource</span> `$query`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
@@ -2147,8 +2140,7 @@ Fetch a result row from a query as an associative array
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">ibase\_fetch\_assoc</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2194,8 +2186,7 @@ Get an object from a InterBase database
 
 ### 说明
 
-<span class="type"><span class="type">object</span><span
-class="type">false</span></span> <span
+<span class="type">object</span> <span
 class="methodname">ibase\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$result_id`</span> \[, <span class="methodparam"><span
@@ -2254,8 +2245,7 @@ Fetch a row from an InterBase database
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">ibase\_fetch\_row</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$result_identifier`</span> \[, <span class="methodparam"><span
@@ -2682,8 +2672,7 @@ Open a persistent connection to an InterBase database
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ibase\_pconnect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$database`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -2764,20 +2753,17 @@ execution
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ibase\_prepare</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> )
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ibase\_prepare</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
 class="type">string</span> `$query`</span> )
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ibase\_prepare</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -2812,8 +2798,7 @@ Execute a query on an InterBase database
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">bool</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ibase\_query</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> \], <span class="methodparam"><span
@@ -3369,15 +3354,13 @@ Begin a transaction
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ibase\_trans</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$trans_args`</span>
 \[, <span class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> \]\] )
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ibase\_trans</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> \[, <span class="methodparam"><span

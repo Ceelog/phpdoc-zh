@@ -47,8 +47,7 @@ Initialize an inotify instance
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">inotify\_init</span> ( <span
 class="methodparam">void</span> )
 
@@ -163,8 +162,7 @@ Read events from an inotify instance
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">inotify\_read</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$inotify_instance`</span> )

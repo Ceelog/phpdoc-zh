@@ -235,10 +235,11 @@ Create new session id
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">session\_create\_id</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$prefix`</span> \]
-)
+class="methodparam"><span class="type">string</span> `$prefix`<span
+class="initializer"> = ""</span></span> \] )
 
 <span class="function">session\_create\_id</span> is used to create new
 session id for the current session. It returns collision free session
@@ -263,7 +264,7 @@ range *a-z A-Z 0-9 , (comma) and - (minus)* are allowed.
 
 <span class="function">session\_create\_id</span> returns new collision
 free session id for the current session. If it is used without active
-session, it omits collision check.
+session, it omits collision check. On failure, **`FALSE`** is returned.
 
 ### 范例
 

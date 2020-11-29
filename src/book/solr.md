@@ -1080,9 +1080,8 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">string</span> `$fieldName`</span>
 )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">float</span><span class="type">false</span></span> <span
-class="methodname">getBoost</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getBoost</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -1093,15 +1092,13 @@ class="methodparam">void</span> )
 class="methodname">getChildDocumentsCount</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">SolrDocumentField</span><span
-class="type">false</span></span> <span
+<span class="modifier">public</span> <span
+class="type">SolrDocumentField</span> <span
 class="methodname">getField</span> ( <span class="methodparam"><span
 class="type">string</span> `$fieldName`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">float</span><span class="type">false</span></span> <span
-class="methodname">getFieldBoost</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getFieldBoost</span> ( <span
 class="methodparam"><span class="type">string</span> `$fieldName`</span>
 )
 
@@ -1110,9 +1107,8 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getFieldCount</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">getFieldNames</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getFieldNames</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -1146,9 +1142,8 @@ class="type">int</span> `$sortOrderBy`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$sortDirection`<span
 class="initializer"> = SolrInputDocument::SORT\_ASC</span></span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">toArray</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">toArray</span> ( <span
 class="methodparam">void</span> )
 
 }
@@ -1569,9 +1564,8 @@ Retrieves the current boost value for the document
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">float</span><span class="type">false</span></span> <span
-class="methodname">SolrInputDocument::getBoost</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">SolrInputDocument::getBoost</span> ( <span
 class="methodparam">void</span> )
 
 Retrieves the current boost value for the document.
@@ -1644,9 +1638,8 @@ Retrieves a field by name
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">SolrDocumentField</span><span
-class="type">false</span></span> <span
+<span class="modifier">public</span> <span
+class="type">SolrDocumentField</span> <span
 class="methodname">SolrInputDocument::getField</span> ( <span
 class="methodparam"><span class="type">string</span> `$fieldName`</span>
 )
@@ -1670,9 +1663,8 @@ Retrieves the boost value for a particular field
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">float</span><span class="type">false</span></span> <span
-class="methodname">SolrInputDocument::getFieldBoost</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">SolrInputDocument::getFieldBoost</span> ( <span
 class="methodparam"><span class="type">string</span> `$fieldName`</span>
 )
 
@@ -1717,9 +1709,8 @@ Returns an array containing all the fields in the document
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">SolrInputDocument::getFieldNames</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrInputDocument::getFieldNames</span> ( <span
 class="methodparam">void</span> )
 
 Returns an array containing all the fields in the document.
@@ -1909,9 +1900,8 @@ Returns an array representation of the input document
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">SolrInputDocument::toArray</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrInputDocument::toArray</span> ( <span
 class="methodparam">void</span> )
 
 Returns an array representation of the input document.
@@ -2016,14 +2006,12 @@ class="methodparam">void</span> )
 class="methodname">getChildDocumentsCount</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">SolrDocumentField</span><span
-class="type">false</span></span> <span
+<span class="modifier">public</span> <span
+class="type">SolrDocumentField</span> <span
 class="methodname">getField</span> ( <span class="methodparam"><span
 class="type">string</span> `$fieldName`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getFieldCount</span> ( <span
 class="methodparam">void</span> )
 
@@ -2031,9 +2019,8 @@ class="methodparam">void</span> )
 <span class="methodname">getFieldNames</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">SolrInputDocument</span><span
-class="type">null</span></span> <span
+<span class="modifier">public</span> <span
+class="type">SolrInputDocument</span> <span
 class="methodname">getInputDocument</span> ( <span
 class="methodparam">void</span> )
 
@@ -2402,9 +2389,8 @@ Retrieves a field by name
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">SolrDocumentField</span><span
-class="type">false</span></span> <span
+<span class="modifier">public</span> <span
+class="type">SolrDocumentField</span> <span
 class="methodname">SolrDocument::getField</span> ( <span
 class="methodparam"><span class="type">string</span> `$fieldName`</span>
 )
@@ -2427,8 +2413,7 @@ Returns the number of fields in this document
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrDocument::getFieldCount</span> ( <span
 class="methodparam">void</span> )
 
@@ -2471,9 +2456,8 @@ Returns a SolrInputDocument equivalent of the object
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">SolrInputDocument</span><span
-class="type">null</span></span> <span
+<span class="modifier">public</span> <span
+class="type">SolrInputDocument</span> <span
 class="methodname">SolrDocument::getInputDocument</span> ( <span
 class="methodparam">void</span> )
 
@@ -6152,12 +6136,11 @@ class="interfacename">Serializable</span> </span> {
 `$name`</span> , <span class="methodparam"><span
 class="type">string</span> `$value`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">SolrParams</span><span class="type">false</span></span>
-<span class="methodname">addParam</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$value`</span> )
+<span class="modifier">public</span> <span
+class="type">SolrParams</span> <span class="methodname">addParam</span>
+( <span class="methodparam"><span class="type">string</span>
+`$name`</span> , <span class="methodparam"><span
+class="type">string</span> `$value`</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">mixed</span> <span class="methodname">get</span> (
@@ -6190,16 +6173,14 @@ class="methodparam">void</span> )
 `$name`</span> , <span class="methodparam"><span
 class="type">string</span> `$value`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">SolrParams</span><span class="type">false</span></span>
-<span class="methodname">setParam</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$value`</span> )
+<span class="modifier">public</span> <span
+class="type">SolrParams</span> <span class="methodname">setParam</span>
+( <span class="methodparam"><span class="type">string</span>
+`$name`</span> , <span class="methodparam"><span
+class="type">string</span> `$value`</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">toString</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$url_encode`<span class="initializer"> =
 **`FALSE`**</span></span> \] )
@@ -6246,9 +6227,9 @@ Adds a parameter to the object
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">SolrParams</span><span class="type">false</span></span>
-<span class="methodname">SolrParams::addParam</span> ( <span
+<span class="modifier">public</span> <span
+class="type">SolrParams</span> <span
+class="methodname">SolrParams::addParam</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
@@ -6417,9 +6398,9 @@ Sets the parameter to the specified value
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">SolrParams</span><span class="type">false</span></span>
-<span class="methodname">SolrParams::setParam</span> ( <span
+<span class="modifier">public</span> <span
+class="type">SolrParams</span> <span
+class="methodname">SolrParams::setParam</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
@@ -6465,8 +6446,7 @@ Returns all the name-value pair parameters in the object
 ### 说明
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">SolrParams::toString</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$url_encode`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
@@ -6541,9 +6521,9 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">SolrParams</span><span class="type">false</span></span>
-<span class="methodname">SolrParams::addParam</span> ( <span
+<span class="modifier">public</span> <span
+class="type">SolrParams</span> <span
+class="methodname">SolrParams::addParam</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
@@ -6582,16 +6562,15 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">SolrParams</span><span class="type">false</span></span>
-<span class="methodname">SolrParams::setParam</span> ( <span
+<span class="modifier">public</span> <span
+class="type">SolrParams</span> <span
+class="methodname">SolrParams::setParam</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">SolrParams::toString</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$url_encode`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
@@ -6803,106 +6782,88 @@ class="methodparam">void</span> )
 <span class="methodname">getExpandSortFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getFacet</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getFacet</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getFacetDateEnd</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFacetDateEnd</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getFacetDateFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getFacetDateFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getFacetDateGap</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFacetDateGap</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getFacetDateHardEnd</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFacetDateHardEnd</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getFacetDateOther</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getFacetDateOther</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getFacetDateStart</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFacetDateStart</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getFacetFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getFacetFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getFacetLimit</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getFacetMethod</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFacetMethod</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getFacetMinCount</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getFacetMissing</span> (\[ <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getFacetMissing</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getFacetOffset</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getFacetPrefix</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFacetPrefix</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getFacetQueries</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getFacetQueries</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getFacetSort</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getFilterQueries</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getFilterQueries</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -6957,257 +6918,208 @@ class="methodparam">void</span> )
 <span class="methodname">getGroupTruncate</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getHighlight</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getHighlight</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getHighlightAlternateField</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getHighlightAlternateField</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getHighlightFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getHighlightFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getHighlightFormatter</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getHighlightFormatter</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getHighlightFragmenter</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getHighlightFragmenter</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getHighlightFragsize</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getHighlightHighlightMultiTerm</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getHighlightHighlightMultiTerm</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getHighlightMaxAlternateFieldLength</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getHighlightMaxAnalyzedChars</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getHighlightMergeContiguous</span> (\[ <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getHighlightMergeContiguous</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getHighlightRegexMaxAnalyzedChars</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getHighlightRegexPattern</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getHighlightRegexPattern</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">float</span><span class="type">null</span></span> <span
-class="methodname">getHighlightRegexSlop</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getHighlightRegexSlop</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getHighlightRequireFieldMatch</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getHighlightRequireFieldMatch</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getHighlightSimplePost</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getHighlightSimplePost</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getHighlightSimplePre</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getHighlightSimplePre</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getHighlightSnippets</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getHighlightUsePhraseHighlighter</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getHighlightUsePhraseHighlighter</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getMlt</span> ( <span class="methodparam">void</span>
-)
-
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getMltBoost</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getMlt</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getMltBoost</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getMltCount</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getMltFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getMltFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getMltMaxNumQueryTerms</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getMltMaxNumTokens</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getMltMaxWordLength</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getMltMinDocFrequency</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getMltMinTermFrequency</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getMltMinWordLength</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getMltQueryFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getMltQueryFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getQuery</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getQuery</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getRows</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getSortFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getSortFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getStart</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getStats</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getStats</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getStatsFacets</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getStatsFacets</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getStatsFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getStatsFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getTerms</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getTerms</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getTermsField</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getTermsField</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getTermsIncludeLowerBound</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getTermsIncludeLowerBound</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getTermsIncludeUpperBound</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getTermsIncludeUpperBound</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getTermsLimit</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getTermsLowerBound</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getTermsLowerBound</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getTermsMaxCount</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getTermsMinCount</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getTermsPrefix</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getTermsPrefix</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">getTermsReturnRaw</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getTermsReturnRaw</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getTermsSort</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getTermsUpperBound</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getTermsUpperBound</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getTimeAllowed</span> ( <span
 class="methodparam">void</span> )
 
@@ -8754,9 +8666,8 @@ Returns the value of the facet parameter
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacet</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getFacet</span> ( <span
 class="methodparam">void</span> )
 
 Returns the value of the facet parameter.
@@ -8776,9 +8687,8 @@ Returns the value for the facet.date.end parameter
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetDateEnd</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getFacetDateEnd</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
@@ -8801,9 +8711,8 @@ Returns all the facet.date fields
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetDateFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getFacetDateFields</span> ( <span
 class="methodparam">void</span> )
 
 Returns all the facet.date fields
@@ -8824,9 +8733,8 @@ Returns the value of the facet.date.gap parameter
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetDateGap</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getFacetDateGap</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
@@ -8849,9 +8757,8 @@ Returns the value of the facet.date.hardend parameter
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetDateHardEnd</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getFacetDateHardEnd</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
@@ -8874,9 +8781,8 @@ Returns the value for the facet.date.other parameter
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetDateOther</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getFacetDateOther</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
@@ -8901,9 +8807,8 @@ on this field
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetDateStart</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getFacetDateStart</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
@@ -8926,9 +8831,8 @@ Returns all the facet fields
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getFacetFields</span> ( <span
 class="methodparam">void</span> )
 
 Returns all the facet fields
@@ -8949,8 +8853,7 @@ for the facet fields
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getFacetLimit</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
@@ -8974,9 +8877,8 @@ Returns the value of the facet.method parameter
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetMethod</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getFacetMethod</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
@@ -9000,8 +8902,7 @@ response
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getFacetMinCount</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
@@ -9025,9 +8926,8 @@ Returns the current state of the facet.missing parameter
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetMissing</span> (\[ <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getFacetMissing</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
@@ -9050,8 +8950,7 @@ Returns an offset into the list of constraints to be used for pagination
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getFacetOffset</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
@@ -9075,9 +8974,8 @@ Returns the facet prefix
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetPrefix</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getFacetPrefix</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
@@ -9099,9 +8997,8 @@ Returns all the facet queries
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetQueries</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getFacetQueries</span> ( <span
 class="methodparam">void</span> )
 
 Returns all the facet queries
@@ -9121,8 +9018,7 @@ Returns the facet sort type
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getFacetSort</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
@@ -9147,9 +9043,8 @@ Returns the list of fields that will be returned in the response
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getFields</span> ( <span
 class="methodparam">void</span> )
 
 Returns the list of fields that will be returned in the response
@@ -9169,9 +9064,8 @@ Returns an array of filter queries
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFilterQueries</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getFilterQueries</span> ( <span
 class="methodparam">void</span> )
 
 Returns an array of filter queries. These are queries that can be used
@@ -9494,9 +9388,8 @@ Returns the state of the hl parameter
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlight</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getHighlight</span> ( <span
 class="methodparam">void</span> )
 
 Returns a boolean indicating whether or not to enable highlighted
@@ -9517,10 +9410,9 @@ Returns the highlight field to use as backup or default
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightAlternateField</span> (\[
-<span class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getHighlightAlternateField</span>
+(\[ <span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
 Returns the highlight field to use as backup or default. It accepts an
@@ -9543,9 +9435,8 @@ for
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getHighlightFields</span> ( <span
 class="methodparam">void</span> )
 
 Returns all the fields that Solr should generate highlighted snippets
@@ -9566,10 +9457,9 @@ Returns the formatter for the highlighted output
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightFormatter</span> (\[ <span
-class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getHighlightFormatter</span> (\[
+<span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
 Returns the formatter for the highlighted output
@@ -9590,10 +9480,9 @@ Returns the text snippet generator for highlighted text
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightFragmenter</span> (\[ <span
-class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getHighlightFragmenter</span> (\[
+<span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
 Returns the text snippet generator for highlighted text. Accepts an
@@ -9616,8 +9505,7 @@ highlighting
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getHighlightFragsize</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
@@ -9643,8 +9531,8 @@ range/wildcard/fuzzy/prefix queries
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span
 class="methodname">SolrQuery::getHighlightHighlightMultiTerm</span> (
 <span class="methodparam">void</span> )
 
@@ -9666,8 +9554,7 @@ Returns the maximum number of characters of the field to return
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getHighlightMaxAlternateFieldLength</span>
 (\[ <span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
@@ -9691,8 +9578,7 @@ suitable snippets
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getHighlightMaxAnalyzedChars</span> (
 <span class="methodparam">void</span> )
 
@@ -9715,10 +9601,9 @@ fragment
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightMergeContiguous</span> (\[
-<span class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getHighlightMergeContiguous</span>
+(\[ <span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
 Returns whether or not the collapse contiguous fragments into a single
@@ -9741,8 +9626,7 @@ regex fragmenter
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getHighlightRegexMaxAnalyzedChars</span> (
 <span class="methodparam">void</span> )
 
@@ -9764,10 +9648,9 @@ Returns the regular expression for fragmenting
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightRegexPattern</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getHighlightRegexPattern</span> (
+<span class="methodparam">void</span> )
 
 Returns the regular expression used for fragmenting
 
@@ -9786,9 +9669,8 @@ Returns the deviation factor from the ideal fragment size
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">float</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightRegexSlop</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">SolrQuery::getHighlightRegexSlop</span> ( <span
 class="methodparam">void</span> )
 
 Returns the factor by which the regex fragmenter can deviate from the
@@ -9810,10 +9692,9 @@ particular field
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightRequireFieldMatch</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getHighlightRequireFieldMatch</span>
+( <span class="methodparam">void</span> )
 
 Returns if a field will only be highlighted if the query matched in this
 particular field.
@@ -9833,10 +9714,9 @@ Returns the text which appears after a highlighted term
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightSimplePost</span> (\[ <span
-class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getHighlightSimplePost</span> (\[
+<span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
 Returns the text which appears after a highlighted term. Accepts an
@@ -9858,10 +9738,9 @@ Returns the text which appears before a highlighted term
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightSimplePre</span> (\[ <span
-class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getHighlightSimplePre</span> (\[
+<span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
 Returns the text which appears before a highlighted term. Accepts an
@@ -9883,8 +9762,7 @@ Returns the maximum number of highlighted snippets to generate per field
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getHighlightSnippets</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
@@ -9908,8 +9786,8 @@ Returns the state of the hl.usePhraseHighlighter parameter
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span
 class="methodname">SolrQuery::getHighlightUsePhraseHighlighter</span> (
 <span class="methodparam">void</span> )
 
@@ -9931,9 +9809,8 @@ Returns whether or not MoreLikeThis results should be enabled
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getMlt</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getMlt</span> ( <span
 class="methodparam">void</span> )
 
 Returns whether or not MoreLikeThis results should be enabled
@@ -9954,9 +9831,8 @@ relevance
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getMltBoost</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getMltBoost</span> ( <span
 class="methodparam">void</span> )
 
 Returns whether or not the query will be boosted by the interesting term
@@ -9977,8 +9853,7 @@ Returns the number of similar documents to return for each result
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltCount</span> ( <span
 class="methodparam">void</span> )
 
@@ -9999,9 +9874,8 @@ Returns all the fields to use for similarity
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getMltFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getMltFields</span> ( <span
 class="methodparam">void</span> )
 
 Returns all the fields to use for similarity
@@ -10022,8 +9896,7 @@ generated query
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltMaxNumQueryTerms</span> ( <span
 class="methodparam">void</span> )
 
@@ -10046,8 +9919,7 @@ that is not stored with TermVector support
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltMaxNumTokens</span> ( <span
 class="methodparam">void</span> )
 
@@ -10069,8 +9941,7 @@ Returns the maximum word length above which words will be ignored
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltMaxWordLength</span> ( <span
 class="methodparam">void</span> )
 
@@ -10092,8 +9963,7 @@ not occur in at least this many docs
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltMinDocFrequency</span> ( <span
 class="methodparam">void</span> )
 
@@ -10116,8 +9986,7 @@ document
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltMinTermFrequency</span> ( <span
 class="methodparam">void</span> )
 
@@ -10139,8 +10008,7 @@ Returns the minimum word length below which words will be ignored
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltMinWordLength</span> ( <span
 class="methodparam">void</span> )
 
@@ -10161,9 +10029,8 @@ Returns the query fields and their boosts
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getMltQueryFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getMltQueryFields</span> ( <span
 class="methodparam">void</span> )
 
 Returns the query fields and their boosts
@@ -10183,9 +10050,8 @@ Returns the main query
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getQuery</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getQuery</span> ( <span
 class="methodparam">void</span> )
 
 Returns the main search query
@@ -10205,8 +10071,7 @@ Returns the maximum number of documents
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getRows</span> ( <span
 class="methodparam">void</span> )
 
@@ -10228,9 +10093,8 @@ Returns all the sort fields
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getSortFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getSortFields</span> ( <span
 class="methodparam">void</span> )
 
 Returns all the sort fields
@@ -10251,8 +10115,7 @@ Returns the offset in the complete result set
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getStart</span> ( <span
 class="methodparam">void</span> )
 
@@ -10274,9 +10137,8 @@ Returns whether or not stats is enabled
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getStats</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getStats</span> ( <span
 class="methodparam">void</span> )
 
 Returns whether or not stats is enabled
@@ -10296,9 +10158,8 @@ Returns all the stats facets that were set
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getStatsFacets</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getStatsFacets</span> ( <span
 class="methodparam">void</span> )
 
 Returns all the stats facets that were set
@@ -10318,9 +10179,8 @@ Returns all the statistics fields
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getStatsFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getStatsFields</span> ( <span
 class="methodparam">void</span> )
 
 Returns all the statistics fields
@@ -10340,9 +10200,8 @@ Returns whether or not the TermsComponent is enabled
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTerms</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getTerms</span> ( <span
 class="methodparam">void</span> )
 
 Returns whether or not the TermsComponent is enabled
@@ -10362,9 +10221,8 @@ Returns the field from which the terms are retrieved
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsField</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getTermsField</span> ( <span
 class="methodparam">void</span> )
 
 Returns the field from which the terms are retrieved
@@ -10384,10 +10242,9 @@ Returns whether or not to include the lower bound in the result set
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsIncludeLowerBound</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getTermsIncludeLowerBound</span> (
+<span class="methodparam">void</span> )
 
 Returns whether or not to include the lower bound in the result set
 
@@ -10406,10 +10263,9 @@ Returns whether or not to include the upper bound term in the result set
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsIncludeUpperBound</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getTermsIncludeUpperBound</span> (
+<span class="methodparam">void</span> )
 
 Returns whether or not to include the upper bound term in the result set
 
@@ -10428,8 +10284,7 @@ Returns the maximum number of terms Solr should return
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getTermsLimit</span> ( <span
 class="methodparam">void</span> )
 
@@ -10450,9 +10305,8 @@ Returns the term to start at
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsLowerBound</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getTermsLowerBound</span> ( <span
 class="methodparam">void</span> )
 
 Returns the term to start at
@@ -10472,8 +10326,7 @@ Returns the maximum document frequency
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getTermsMaxCount</span> ( <span
 class="methodparam">void</span> )
 
@@ -10494,8 +10347,7 @@ Returns the minimum document frequency to return in order to be included
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getTermsMinCount</span> ( <span
 class="methodparam">void</span> )
 
@@ -10516,9 +10368,8 @@ Returns the term prefix
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsPrefix</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getTermsPrefix</span> ( <span
 class="methodparam">void</span> )
 
 Returns the prefix to which matching terms must be restricted. This will
@@ -10539,9 +10390,8 @@ Whether or not to return raw characters
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsReturnRaw</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getTermsReturnRaw</span> ( <span
 class="methodparam">void</span> )
 
 Returns a boolean indicating whether or not to return the raw characters
@@ -10562,8 +10412,7 @@ Returns an integer indicating how terms are sorted
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getTermsSort</span> ( <span
 class="methodparam">void</span> )
 
@@ -10586,9 +10435,8 @@ Returns the term to stop at
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsUpperBound</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getTermsUpperBound</span> ( <span
 class="methodparam">void</span> )
 
 Returns the term to stop at
@@ -10608,8 +10456,7 @@ Returns the time in milliseconds allowed for the query to finish
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getTimeAllowed</span> ( <span
 class="methodparam">void</span> )
 
@@ -13250,106 +13097,88 @@ class="methodparam">void</span> )
 <span class="methodname">SolrQuery::getExpandSortFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacet</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getFacet</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetDateEnd</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getFacetDateEnd</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetDateFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getFacetDateFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetDateGap</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getFacetDateGap</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetDateHardEnd</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getFacetDateHardEnd</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetDateOther</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getFacetDateOther</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetDateStart</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getFacetDateStart</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getFacetFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getFacetLimit</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetMethod</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getFacetMethod</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getFacetMinCount</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetMissing</span> (\[ <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getFacetMissing</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getFacetOffset</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetPrefix</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getFacetPrefix</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFacetQueries</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getFacetQueries</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getFacetSort</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getFilterQueries</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getFilterQueries</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -13404,257 +13233,210 @@ class="methodparam">void</span> )
 <span class="methodname">SolrQuery::getGroupTruncate</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlight</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getHighlight</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightAlternateField</span> (\[
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getHighlightAlternateField</span>
+(\[ <span class="methodparam"><span class="type">string</span>
+`$field_override`</span> \] )
+
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getHighlightFields</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getHighlightFormatter</span> (\[
 <span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightFields</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightFormatter</span> (\[ <span
-class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getHighlightFragmenter</span> (\[
+<span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightFragmenter</span> (\[ <span
-class="methodparam"><span class="type">string</span>
-`$field_override`</span> \] )
-
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getHighlightFragsize</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span
 class="methodname">SolrQuery::getHighlightHighlightMultiTerm</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getHighlightMaxAlternateFieldLength</span>
 (\[ <span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getHighlightMaxAnalyzedChars</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightMergeContiguous</span> (\[
-<span class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getHighlightMergeContiguous</span>
+(\[ <span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getHighlightRegexMaxAnalyzedChars</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightRegexPattern</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type"><span
-class="type">float</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightRegexSlop</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightRequireFieldMatch</span> (
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getHighlightRegexPattern</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightSimplePost</span> (\[ <span
-class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">SolrQuery::getHighlightRegexSlop</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getHighlightRequireFieldMatch</span>
+( <span class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getHighlightSimplePost</span> (\[
+<span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getHighlightSimplePre</span> (\[ <span
-class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getHighlightSimplePre</span> (\[
+<span class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getHighlightSnippets</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$field_override`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span
 class="methodname">SolrQuery::getHighlightUsePhraseHighlighter</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getMlt</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getMlt</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getMltBoost</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getMltBoost</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltCount</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getMltFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getMltFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltMaxNumQueryTerms</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltMaxNumTokens</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltMaxWordLength</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltMinDocFrequency</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltMinTermFrequency</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getMltMinWordLength</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getMltQueryFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getMltQueryFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getQuery</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getQuery</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getRows</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getSortFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getSortFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getStart</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getStats</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getStats</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getStatsFacets</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getStatsFacets</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getStatsFields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SolrQuery::getStatsFields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTerms</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getTerms</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsField</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getTermsField</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsIncludeLowerBound</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getTermsIncludeLowerBound</span> (
+<span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsIncludeUpperBound</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getTermsIncludeUpperBound</span> (
+<span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getTermsLimit</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsLowerBound</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getTermsLowerBound</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getTermsMaxCount</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getTermsMinCount</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsPrefix</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getTermsPrefix</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsReturnRaw</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SolrQuery::getTermsReturnRaw</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getTermsSort</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">SolrQuery::getTermsUpperBound</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SolrQuery::getTermsUpperBound</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SolrQuery::getTimeAllowed</span> ( <span
 class="methodparam">void</span> )
 

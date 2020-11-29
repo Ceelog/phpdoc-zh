@@ -21,5 +21,7 @@ Windows 专用扩展
     -   [简介](/intro/win32service.html)
     -   [安装／配置](/win32service/setup.html)
     -   [预定义常量](/win32service/constants.html)
+    -   [Win32ServiceException](/class/win32serviceexception.html) — The
+        Win32ServiceException class
     -   [范例](/win32service/examples.html)
     -   [win32service 函数](/ref/win32service.html)

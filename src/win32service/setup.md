@@ -13,8 +13,8 @@
 需求
 ----
 
-Windows NT, Windows 2000, Windows XP or Windows Server 2003. Any version
-of Windows derived from Windows NT should be compatible.
+The versions of Windows supported are the same as the Visual C++
+redistributable package used to build PHP.
 
 安装
 ----

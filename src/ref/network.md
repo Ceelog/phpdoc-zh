@@ -1580,8 +1580,7 @@ representation
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">inet\_pton</span> ( <span class="methodparam"><span
 class="type">string</span> `$address`</span> )
 

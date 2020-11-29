@@ -114,8 +114,7 @@ This function was *REMOVED* in PHP 7.4.0.
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">wddx\_packet\_start</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$comment`</span>
 \] )
@@ -144,8 +143,7 @@ This function was *REMOVED* in PHP 7.4.0.
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">wddx\_serialize\_value</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$var`</span> \[,
 <span class="methodparam"><span class="type">string</span>
@@ -176,8 +174,7 @@ This function was *REMOVED* in PHP 7.4.0.
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">wddx\_serialize\_vars</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$var_name`</span> ,
 <span class="methodparam"><span class="type">mixed</span>

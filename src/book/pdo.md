@@ -6130,9 +6130,8 @@ Get asynchronous notification
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">PDO::pgsqlGetNotify</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">PDO::pgsqlGetNotify</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$result_type`<span
 class="initializer"> = **`PDO::FETCH_USE_DEFAULT`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
@@ -6179,9 +6178,8 @@ Creates a new large object
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">PDO::pgsqlLOBCreate</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">PDO::pgsqlLOBCreate</span> ( <span
 class="methodparam">void</span> )
 
 <span class="function">PDO::pgsqlLOBCreate</span> creates a large object

@@ -95,6 +95,10 @@
 |--------------------------------------------|------------|-------------------------------------------------------------------|
 | **`WIN32_SERVICE_RUNS_IN_SYSTEM_PROCESS`** | 0x00000001 | The service runs in a system process that must always be running. |
 
+> **Note**:
+>
+> These constants are no longer in use as of Win32Service 1.0.0.
+
 | Constant                                            | Value      | Description                                                                                                                                                                                                                                   |
 |-----------------------------------------------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **`WIN32_ERROR_ACCESS_DENIED`**                     | 0x00000005 | The handle to the SCM database does not have the appropriate access rights.                                                                                                                                                                   |

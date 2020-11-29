@@ -4857,8 +4857,7 @@ Captures the whole screen
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">imagegrabscreen</span> ( <span
 class="methodparam">void</span> )
 
@@ -4898,8 +4897,7 @@ Captures a window
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">imagegrabwindow</span> ( <span
 class="methodparam"><span class="type">int</span>
 `$window_handle`</span> \[, <span class="methodparam"><span

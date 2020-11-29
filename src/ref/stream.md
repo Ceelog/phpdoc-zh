@@ -588,8 +588,7 @@ Attach a filter to a stream
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">stream\_filter\_append</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stream`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -704,8 +703,7 @@ Attach a filter to a stream
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">stream\_filter\_prepend</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stream`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -1698,8 +1696,7 @@ streams with a timeout specified by tv\_sec and tv\_usec
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">stream\_select</span> ( <span
 class="methodparam"><span class="type">array</span> `&$read`</span> ,
 <span class="methodparam"><span class="type">array</span>
@@ -2189,8 +2186,7 @@ Open Internet or Unix domain socket connection
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">stream\_socket\_client</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$remote_socket`</span> \[, <span class="methodparam"><span
@@ -2753,8 +2749,7 @@ Create an Internet or Unix domain server socket
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">stream\_socket\_server</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$local_socket`</span> \[, <span class="methodparam"><span

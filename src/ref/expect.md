@@ -102,8 +102,7 @@ Execute command via Bourne shell, and open the PTY stream to the process
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">expect\_popen</span> ( <span
 class="methodparam"><span class="type">string</span> `$command`</span> )
 

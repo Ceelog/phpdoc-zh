@@ -33,8 +33,7 @@ Add entries to LDAP directory
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_add\_ext</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -161,8 +160,7 @@ Bind to LDAP directory
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_bind\_ext</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> \[, <span class="methodparam"><span
@@ -406,8 +404,7 @@ Connect to an LDAP server
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_connect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$ldap_uri`<span
 class="initializer"> = **`NULL`**</span></span> \] )
@@ -418,8 +415,7 @@ The *following* signature is still supported for backwards
 compatibility, but is considered deprecated and should not be used
 anymore!
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_connect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$host`<span
 class="initializer"> = **`NULL`**</span></span> \[, <span
@@ -681,8 +677,7 @@ Count the number of entries in a search
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">ldap\_count\_entries</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -734,8 +729,7 @@ Delete an entry from a directory
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_delete\_ext</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -1120,8 +1114,7 @@ Refresh extended operation helper
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">ldap\_exop\_refresh</span> ( <span
 class="methodparam"><span class="type">resource</span> `$link`</span> ,
 <span class="methodparam"><span class="type">string</span> `$dn`</span>
@@ -1165,8 +1158,7 @@ WHOAMI extended operation helper
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ldap\_exop\_whoami</span> ( <span
 class="methodparam"><span class="type">resource</span> `$link`</span> )
 
@@ -1336,8 +1328,7 @@ Return first attribute
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ldap\_first\_attribute</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -1387,8 +1378,7 @@ Return first result id
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_first\_entry</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -1473,8 +1463,7 @@ Get attributes from a search result entry
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">ldap\_get\_attributes</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -1546,8 +1535,7 @@ Get the DN of a result entry
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ldap\_get\_dn</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -1574,8 +1562,7 @@ Get all result entries
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">ldap\_get\_entries</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -1718,8 +1705,7 @@ Get all binary values from a result entry
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">ldap\_get\_values\_len</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -1761,8 +1747,7 @@ Get all values from a result entry
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">ldap\_get\_values</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -1845,8 +1830,7 @@ Single-level search
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_list</span> ( <span class="methodparam"><span
 class="type">resource</span> `$link_identifier`</span> , <span
 class="methodparam"><span class="type">string</span> `$base_dn`</span> ,
@@ -1983,8 +1967,7 @@ Add attribute values to current attributes
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_mod\_add\_ext</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -2075,8 +2058,7 @@ Delete attribute values from current attributes
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_mod\_del\_ext</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -2161,8 +2143,7 @@ Replace attribute values with new ones
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_mod\_replace\_ext</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -2444,8 +2425,7 @@ Get the next attribute in result
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ldap\_next\_attribute</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -2489,8 +2469,7 @@ Get next result entry
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_next\_entry</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -2685,8 +2664,7 @@ Read an entry
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_read</span> ( <span class="methodparam"><span
 class="type">resource</span> `$link_identifier`</span> , <span
 class="methodparam"><span class="type">string</span> `$base_dn`</span> ,
@@ -2798,8 +2776,7 @@ Modify the name of an entry
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_rename\_ext</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -2945,8 +2922,7 @@ Search LDAP tree
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ldap\_search</span> ( <span class="methodparam"><span
 class="type">resource</span> `$link_identifier`</span> , <span
 class="methodparam"><span class="type">string</span> `$base_dn`</span> ,

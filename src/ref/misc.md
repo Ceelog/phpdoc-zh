@@ -1072,8 +1072,7 @@ Convert string from one codepage to another
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span
+<span class="type">string</span> <span
 class="methodname">sapi\_windows\_cp\_conv</span> ( <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">string</span></span>

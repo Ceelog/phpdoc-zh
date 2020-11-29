@@ -5,8 +5,7 @@ LZF compression
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">lzf\_compress</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
@@ -33,8 +32,7 @@ LZF decompression
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">lzf\_decompress</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 

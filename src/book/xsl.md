@@ -113,8 +113,7 @@ class="methodparam"><span class="type">object</span> `$document`</span>
 class="type">string</span><span class="type">null</span></span>
 `$returnClass`<span class="initializer"> = **`NULL`**</span></span> \] )
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">transformToURI</span> ( <span
 class="methodparam"><span class="type">DOMDocument</span> `$doc`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -628,8 +627,7 @@ Transform to URI
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">XSLTProcessor::transformToURI</span> ( <span
 class="methodparam"><span class="type">DOMDocument</span> `$doc`</span>
 , <span class="methodparam"><span class="type">string</span>

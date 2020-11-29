@@ -235,13 +235,12 @@ Class for exporting data from RRD database to image file.
 class="methodname">\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$path`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">save</span> ( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">save</span> ( <span
+class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">saveVerbose</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">saveVerbose</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
@@ -280,9 +279,8 @@ Saves the result of query into image
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">RRDGraph::save</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">RRDGraph::save</span> ( <span
 class="methodparam">void</span> )
 
 Saves the result of RRD database query into image defined by <span
@@ -305,9 +303,8 @@ information about generated graph
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">RRDGraph::saveVerbose</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">RRDGraph::saveVerbose</span> ( <span
 class="methodparam">void</span> )
 
 Saves the RRD database query into image file defined by method <span

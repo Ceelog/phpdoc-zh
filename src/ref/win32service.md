@@ -5,7 +5,7 @@ Resumes a paused service
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type">void</span> <span
 class="methodname">win32\_continue\_service</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$servicename`</span> \[, <span class="methodparam"><span
@@ -24,15 +24,28 @@ Optional machine name. If omitted, the local machine is used.
 
 ### 返回值
 
-成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
+没有返回值。
+
+Prior to version 1.0.0, 成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
 **`FALSE`**，或失败时返回一个
 <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 错误码</a>。
 
+### 错误／异常
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`servicename` parameter is empty.
+
+A <span class="classname">Win32ServiceException</span> is thrown on
+error.
+
 ### 更新日志
 
-| 版本                    | 说明                                                                                              |
-|-------------------------|---------------------------------------------------------------------------------------------------|
-| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
+| 版本                    | 说明                                                                                                                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                            |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned. |
+| PECL win32service 1.0.0 | The return type is now <span class="type">void</span>, previously it was <span class="type">mixed</span>.                                                                                         |
+| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account.                                                                                                 |
 
 ### 参见
 
@@ -49,7 +62,7 @@ Creates a new service entry in the SCM database
 
 ### 说明
 
-<span class="type">mixed</span> <span
+<span class="type">void</span> <span
 class="methodname">win32\_create\_service</span> ( <span
 class="methodparam"><span class="type">array</span> `$details`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -192,9 +205,49 @@ omitted, it will use the local machine.
 
 ### 返回值
 
-成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
+没有返回值。
+
+Prior to version 1.0.0, 成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
 **`FALSE`**，或失败时返回一个
 <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 错误码</a>。
+
+### 错误／异常
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`service` parameter is empty.
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`path` parameter is missing or empty.
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`svc_type` parameter is wrong.
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`start_type` parameter is wrong.
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`error_control` parameter is wrong.
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`base_priority` parameter is wrong.
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`recovery_delay` parameter is not between 0 and PHP\_INT\_MAX.
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`recovery_action_1` parameter is wrong.
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`recovery_action_2` parameter is wrong.
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`recovery_action_3` parameter is wrong.
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`recovery_reset_period` parameter is not between 0 and PHP\_INT\_MAX.
+
+A <span class="classname">Win32ServiceException</span> is thrown on
+error.
 
 ### 范例
 
@@ -262,6 +315,9 @@ debug_zval_dump($x);
 
 | 版本                    | 说明                                                                                                                                                                                                                       |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                                                     |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned.                          |
+| PECL win32service 1.0.0 | The return type is now <span class="type">void</span>, previously it was <span class="type">mixed</span>.                                                                                                                  |
 | PECL win32service 0.4.0 | The `dependencies`, `recovery_delay`, `recovery_action_1`, `recovery_action_2`, `recovery_action_3`, `recovery_reset_period`, `recovery_enabled`, `recovery_reboot_msg` and `recovery_command` parameters have been added. |
 
 ### 参见
@@ -278,7 +334,7 @@ Deletes a service entry from the SCM database
 
 ### 说明
 
-<span class="type">mixed</span> <span
+<span class="type">void</span> <span
 class="methodname">win32\_delete\_service</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$servicename`</span> \[, <span class="methodparam"><span
@@ -303,9 +359,19 @@ The optional machine name. If omitted, the local machine will be used.
 
 ### 返回值
 
-成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
+没有返回值。
+
+Prior to version 1.0.0, 成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
 **`FALSE`**，或失败时返回一个
 <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 错误码</a>。
+
+### 错误／异常
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`servicename` parameter is empty.
+
+A <span class="classname">Win32ServiceException</span> is thrown on
+error.
 
 ### 范例
 
@@ -319,6 +385,14 @@ Deletes the dummyphp service.
 win32_delete_service('dummyphp');
 ?>
 ```
+
+### 更新日志
+
+| 版本                    | 说明                                                                                                                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                            |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned. |
+| PECL win32service 1.0.0 | The return type is now <span class="type">void</span>, previously it was <span class="type">mixed</span>.                                                                                         |
 
 ### 参见
 
@@ -350,21 +424,37 @@ SAPI this function is disabled.
 Returns a control constant which will be one of the
 <a href="/win32service/constants.html#Win32Service%20Service%20Control%20Message%20Constants" class="link">Win32Service Service Control Message Constants</a>:
 **`WIN32_SERVICE_CONTROL_CONTINUE`**,
+**`WIN32_SERVICE_CONTROL_DEVICEEVENT`**,
+**`WIN32_SERVICE_CONTROL_HARDWAREPROFILECHANGE`**,
 **`WIN32_SERVICE_CONTROL_INTERROGATE`**,
+**`WIN32_SERVICE_CONTROL_NETBINDADD`**,
+**`WIN32_SERVICE_CONTROL_NETBINDDISABLE`**,
+**`WIN32_SERVICE_CONTROL_NETBINDENABLE`**,
+**`WIN32_SERVICE_CONTROL_NETBINDREMOVE`**,
+**`WIN32_SERVICE_CONTROL_PARAMCHANGE`**,
 **`WIN32_SERVICE_CONTROL_PAUSE`**,
+**`WIN32_SERVICE_CONTROL_POWEREVENT`**,
 **`WIN32_SERVICE_CONTROL_PRESHUTDOWN`**,
+**`WIN32_SERVICE_CONTROL_SESSIONCHANGE`**,
 **`WIN32_SERVICE_CONTROL_SHUTDOWN`**, **`WIN32_SERVICE_CONTROL_STOP`**.
+
+If the value is between 128 and 255, the control code is custom.
 
 ### 错误／异常
 
-If SAPI is not *"cli"*, this function emits an **`E_ERROR`** level
-error.
+Prior to version 1.0.0, if the SAPI is not *"cli"*, this function emits
+an **`E_ERROR`** level error.
+
+As of version 1.0.0, will throw a <span
+class="classname">Win32ServiceException</span> if SAPI is not *"cli"*
 
 ### 更新日志
 
-| 版本                    | 说明                                          |
-|-------------------------|-----------------------------------------------|
-| PECL win32service 0.2.0 | This function works only in the *"cli"* SAPI. |
+| 版本                    | 说明                                                                                                                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                            |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned. |
+| PECL win32service 0.2.0 | This function works only in the *"cli"* SAPI.                                                                                                                                                     |
 
 ### 参见
 
@@ -382,7 +472,7 @@ Pauses a service
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type">void</span> <span
 class="methodname">win32\_pause\_service</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$servicename`</span> \[, <span class="methodparam"><span
@@ -401,15 +491,28 @@ Optional machine name. If omitted, the local machine is used.
 
 ### 返回值
 
-成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
+没有返回值。
+
+Prior to version 1.0.0, 成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
 **`FALSE`**，或失败时返回一个
 <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 错误码</a>。
 
+### 错误／异常
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`servicename` parameter is empty.
+
+A <span class="classname">Win32ServiceException</span> is thrown on
+error.
+
 ### 更新日志
 
-| 版本                    | 说明                                                                                              |
-|-------------------------|---------------------------------------------------------------------------------------------------|
-| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
+| 版本                    | 说明                                                                                                                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                            |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned. |
+| PECL win32service 1.0.0 | The return type is now <span class="type">void</span>, previously it was <span class="type">mixed</span>.                                                                                         |
+| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account.                                                                                                 |
 
 ### 参见
 
@@ -426,7 +529,7 @@ Queries the status of a service
 
 ### 说明
 
-<span class="type">mixed</span> <span
+<span class="type">array</span> <span
 class="methodname">win32\_query\_service\_status</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$servicename`</span> \[, <span class="methodparam"><span
@@ -445,8 +548,9 @@ The optional machine name. If omitted, the local machine will be used.
 
 ### 返回值
 
-Returns an array consisting of the following information on
-success，参数错误时返回 **`FALSE`**，或失败时返回一个
+Returns an array consisting of the following information on success
+
+Prior version 1.0.0，参数错误时返回 **`FALSE`**，或失败时返回一个
 <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 错误码</a>。
 
 `ServiceType`  
@@ -492,6 +596,19 @@ The Windows process identifier. If 0, the process is not running.
 The dwServiceFlags. See
 <a href="/win32service/constants.html#Win32Service%20Service%20Flag%20Constants" class="link">Win32Service Service Service Flag Constants</a>.
 
+### 错误／异常
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`servicename` parameter is empty.
+
+### 更新日志
+
+| 版本                    | 说明                                                                                                                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                            |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned. |
+| PECL win32service 1.0.0 | The return type is now <span class="type">array</span>, previously it was <span class="type">mixed</span>.                                                                                        |
+
 ### 参见
 
 -   <a href="/win32service/constants.html" class="link">Win32Service Predefined Constants</a>
@@ -503,7 +620,7 @@ Send a custom control to the service
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type">void</span> <span
 class="methodname">win32\_send\_custom\_control</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$servicename`</span> , <span class="methodparam"><span
@@ -528,14 +645,33 @@ Optional machine name. If omitted, the local machine is used.
 
 ### 返回值
 
-成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
+没有返回值。
+
+Prior to version 1.0.0, 成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
 **`FALSE`**，或失败时返回一个
 <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 错误码</a>。
 
 ### 错误／异常
 
-If the control value is not between 128 and 255, this function emits an
-**`E_ERROR`** level error.
+Prior to version 1.0.0, if the control value is not between 128 and 255,
+this function emits an **`E_ERROR`** level error.
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`servicename` parameter is empty.
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`control` parameter is not between 128 and 255.
+
+A <span class="classname">Win32ServiceException</span> is thrown on
+error.
+
+### 更新日志
+
+| 版本                    | 说明                                                                                                                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                            |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned. |
+| PECL win32service 1.0.0 | The return type is now <span class="type">void</span>, previously it was <span class="type">mixed</span>.                                                                                         |
 
 ### 参见
 
@@ -579,8 +715,18 @@ Return the current or old exit code.
 
 ### 错误／异常
 
-If SAPI is not *"cli"*, this function emits an **`E_ERROR`** level
-error.
+Prior to version 1.0.0, if the SAPI is not *"cli"*, this function emits
+an **`E_ERROR`** level error.
+
+As of version 1.0.0, will throw a <span
+class="classname">Win32ServiceException</span> if SAPI is not *"cli"*
+
+### 更新日志
+
+| 版本                    | 说明                                                                                                                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                            |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned. |
 
 ### 参见
 
@@ -621,8 +767,18 @@ Return the current or old exit mode.
 
 ### 错误／异常
 
-If SAPI is not *"cli"*, this function emits an **`E_ERROR`** level
-error.
+Prior to version 1.0.0, if the SAPI is not *"cli"*, this function emits
+an **`E_ERROR`** level error.
+
+As of version 1.0.0, will throw a <span
+class="classname">Win32ServiceException</span> if SAPI is not *"cli"*
+
+### 更新日志
+
+| 版本                    | 说明                                                                                                                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                            |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned. |
 
 ### 参见
 
@@ -638,7 +794,7 @@ Update the service status
 
 ### 说明
 
-<span class="type">bool</span> <span
+<span class="type">void</span> <span
 class="methodname">win32\_set\_service\_status</span> ( <span
 class="methodparam"><span class="type">int</span> `$status`</span> \[,
 <span class="methodparam"><span class="type">int</span>
@@ -673,19 +829,28 @@ The `checkpoint` is only valid when the `status` is one of
 
 ### 返回值
 
-成功时返回 **`TRUE`**，参数错误时返回 **`FALSE`**，或失败时返回一个
+没有返回值。
+
+Prior to version 1.0.0, 成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
+**`FALSE`**，或失败时返回一个
 <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 错误码</a>。
 
 ### 错误／异常
 
-If SAPI is not *"cli"*, this function emits an **`E_ERROR`** level
-error.
+Prior to version 1.0.0, if the SAPI is not *"cli"*, this function emits
+an **`E_ERROR`** level error.
+
+As of version 1.0.0, will throw a <span
+class="classname">Win32ServiceException</span> if SAPI is not *"cli"*
 
 ### 更新日志
 
-| 版本                    | 说明                                          |
-|-------------------------|-----------------------------------------------|
-| PECL win32service 0.2.0 | This function works only in the *"cli"* SAPI. |
+| 版本                    | 说明                                                                                                                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                            |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned. |
+| PECL win32service 1.0.0 | The return type is now <span class="type">void</span>, previously it was <span class="type">mixed</span>.                                                                                         |
+| PECL win32service 0.2.0 | This function works only in the *"cli"* SAPI.                                                                                                                                                     |
 
 ### 参见
 
@@ -704,7 +869,7 @@ with the given name
 
 ### 说明
 
-<span class="type">mixed</span> <span
+<span class="type">void</span> <span
 class="methodname">win32\_start\_service\_ctrl\_dispatcher</span> (
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> \[, <span class="methodparam"><span
@@ -747,13 +912,19 @@ details.
 
 ### 返回值
 
-成功时返回 **`TRUE`**，参数错误时返回 **`FALSE`**，或失败时返回一个
+没有返回值。
+
+Prior to version 1.0.0, 成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
+**`FALSE`**，或失败时返回一个
 <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 错误码</a>。
 
 ### 错误／异常
 
-If SAPI is not *"cli"*, this function emits an **`E_ERROR`** level
-error.
+Prior to version 1.0.0, if the SAPI is not *"cli"*, this function emits
+an **`E_ERROR`** level error.
+
+As of version 1.0.0, will throw a <span
+class="classname">Win32ServiceException</span> if SAPI is not *"cli"*
 
 ### 范例
 
@@ -784,10 +955,13 @@ while (WIN32_SERVICE_CONTROL_STOP != win32_get_last_control_message()) {
 
 ### 更新日志
 
-| 版本                    | 说明                                          |
-|-------------------------|-----------------------------------------------|
-| PECL win32service 0.4.0 | The parameter `gracefulMode` has been added.  |
-| PECL win32service 0.2.0 | This function works only in the *"cli"* SAPI. |
+| 版本                    | 说明                                                                                                                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                            |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned. |
+| PECL win32service 1.0.0 | The return type is now <span class="type">void</span>, previously it was <span class="type">mixed</span>.                                                                                         |
+| PECL win32service 0.4.0 | The parameter `gracefulMode` has been added.                                                                                                                                                      |
+| PECL win32service 0.2.0 | This function works only in the *"cli"* SAPI.                                                                                                                                                     |
 
 ### 参见
 
@@ -804,7 +978,7 @@ Starts a service
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type">void</span> <span
 class="methodname">win32\_start\_service</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$servicename`</span> \[, <span class="methodparam"><span
@@ -823,15 +997,28 @@ Optional machine name. If omitted, the local machine is used.
 
 ### 返回值
 
-成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
+没有返回值。
+
+Prior to version 1.0.0, 成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
 **`FALSE`**，或失败时返回一个
 <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 错误码</a>。
 
+### 错误／异常
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`servicename` parameter is empty.
+
+A <span class="classname">Win32ServiceException</span> is thrown on
+error.
+
 ### 更新日志
 
-| 版本                    | 说明                                                                                              |
-|-------------------------|---------------------------------------------------------------------------------------------------|
-| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
+| 版本                    | 说明                                                                                                                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                            |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned. |
+| PECL win32service 1.0.0 | The return type is now <span class="type">void</span>, previously it was <span class="type">mixed</span>.                                                                                         |
+| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account.                                                                                                 |
 
 ### 参见
 
@@ -848,7 +1035,7 @@ Stops a service
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type">void</span> <span
 class="methodname">win32\_stop\_service</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$servicename`</span> \[, <span class="methodparam"><span
@@ -867,15 +1054,28 @@ Optional machine name. If omitted, the local machine is used.
 
 ### 返回值
 
-成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
+没有返回值。
+
+Prior to version 1.0.0, 成功时返回 **`WIN32_NO_ERROR`**，参数错误时返回
 **`FALSE`**，或失败时返回一个
 <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 错误码</a>。
 
+### 错误／异常
+
+A <span class="classname">ValueError</span> is thrown if the; value of
+`servicename` parameter is empty.
+
+A <span class="classname">Win32ServiceException</span> is thrown on
+error.
+
 ### 更新日志
 
-| 版本                    | 说明                                                                                              |
-|-------------------------|---------------------------------------------------------------------------------------------------|
-| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
+| 版本                    | 说明                                                                                                                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 1.0.0 | Throws a <span class="classname">ValueError</span> on invalid data in parameters, previously **`FALSE`** was returned.                                                                            |
+| PECL win32service 1.0.0 | Throws a <span class="classname">Win32ServiceException</span> on error, previously a <a href="/win32service/constants.html#Win32%20Error%20Codes" class="link">Win32 Error Code</a> was returned. |
+| PECL win32service 1.0.0 | The return type is now <span class="type">void</span>, previously it was <span class="type">mixed</span>.                                                                                         |
+| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account.                                                                                                 |
 
 ### 参见
 

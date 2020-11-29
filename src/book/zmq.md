@@ -812,9 +812,8 @@ class="methodparam"><span class="type">string</span> `$dsn`</span> )
 <span class="methodname">getEndpoints</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getPersistentId</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getPersistentId</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -1093,9 +1092,8 @@ Get the persistent id
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">ZMQSocket::getPersistentId</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ZMQSocket::getPersistentId</span> ( <span
 class="methodparam">void</span> )
 
 Returns the persistent id of the socket.

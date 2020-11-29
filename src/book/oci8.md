@@ -4364,8 +4364,7 @@ Returns the next row from a query as an associative or numeric array
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">oci\_fetch\_array</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> \[, <span class="methodparam"><span
@@ -4934,8 +4933,7 @@ Returns the next row from a query as an associative array
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">oci\_fetch\_assoc</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -5009,8 +5007,7 @@ Returns the next row from a query as an object
 
 ### 说明
 
-<span class="type"><span class="type">object</span><span
-class="type">false</span></span> <span
+<span class="type">object</span> <span
 class="methodname">oci\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -5181,8 +5178,7 @@ Returns the next row from a query as a numeric array
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">oci\_fetch\_row</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -5733,8 +5729,7 @@ resource that has Oracle Database Implicit Result Sets
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource </span> <span
 class="methodname">oci\_get\_implicit\_resultset</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -8310,12 +8305,10 @@ class="methodparam"><span class="type">mixed</span> `$value`</span> )
 ( <span class="methodparam"><span class="type">int</span>
 `$index`</span> )
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">max</span> (
+<span class="type">int</span> <span class="methodname">max</span> (
 <span class="methodparam">void</span> )
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">size</span> (
+<span class="type">int</span> <span class="methodname">size</span> (
 <span class="methodparam">void</span> )
 
 <span class="type">bool</span> <span class="methodname">trim</span> (
@@ -8495,8 +8488,7 @@ Returns the maximum number of elements in the collection
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">OCICollection::max</span> ( <span
 class="methodparam">void</span> )
 
@@ -8525,8 +8517,7 @@ Returns size of the collection
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">OCICollection::size</span> ( <span
 class="methodparam">void</span> )
 
@@ -8637,8 +8628,7 @@ class="methodparam">void</span> )
 <span class="methodparam"><span class="type">string</span>
 `$filename`</span> )
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">load</span> (
+<span class="type">string</span> <span class="methodname">load</span> (
 <span class="methodparam">void</span> )
 
 <span class="type"><span class="type">string</span><span
@@ -8668,8 +8658,7 @@ class="type">bool</span> `$on_off`</span> )
 class="type">false</span></span> <span class="methodname">size</span> (
 <span class="methodparam">void</span> )
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">tell</span> (
+<span class="type">int</span> <span class="methodname">tell</span> (
 <span class="methodparam">void</span> )
 
 <span class="type">bool</span> <span
@@ -9015,8 +9004,7 @@ Returns large object's contents
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">OCILob::load</span> ( <span
 class="methodparam">void</span> )
 
@@ -9279,8 +9267,7 @@ Returns the current position of internal pointer of large object
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">OCILob::tell</span> ( <span
 class="methodparam">void</span> )
 

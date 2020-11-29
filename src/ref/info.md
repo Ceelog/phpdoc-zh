@@ -357,8 +357,7 @@ Returns the current process title
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cli\_get\_process\_title</span> ( <span
 class="methodparam">void</span> )
 

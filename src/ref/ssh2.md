@@ -298,8 +298,7 @@ Connect to an SSH server
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">ssh2\_connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$port`<span

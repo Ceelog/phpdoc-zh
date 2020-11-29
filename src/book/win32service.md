@@ -34,6 +34,8 @@ win32service
         action](/win32service/constants.html#Win32%20Recovery%20action)
     -   [Win32 Service
         informations](/win32service/constants.html#Win32%20Service%20informations)
+-   [Win32ServiceException](/class/win32serviceexception.html) — The
+    Win32ServiceException class
 -   [范例](/win32service/examples.html)
 -   [win32service 函数](/ref/win32service.html)
     -   [win32\_continue\_service](/ref/win32service.html#win32_continue_service)
@@ -63,3 +65,82 @@ win32service
         — Starts a service
     -   [win32\_stop\_service](/ref/win32service.html#win32_stop_service)
         — Stops a service
+
+简介
+----
+
+The exception replaces the old mechanism where the error value needed to
+be compared to constants to detect which error was emitted. The
+Exception code is equal to the value of the error value and the
+exception message is based on the corresponding constant name.
+
+类摘要
+------
+
+**Win32ServiceException**
+
+<span class="ooclass"> class **Win32ServiceException** </span> <span
+class="ooclass"> <span class="modifier">extends</span> **Exception**
+</span> {
+
+/\* 继承的属性 \*/
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
+
+/\* 继承的方法 \*/
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Exception::getMessage</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">Throwable</span> <span
+class="methodname">Exception::getPrevious</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Exception::getCode</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Exception::getFile</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Exception::getLine</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">array</span> <span
+class="methodname">Exception::getTrace</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Exception::getTraceAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Exception::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span
+class="modifier">private</span> <span class="type">void</span> <span
+class="methodname">Exception::\_\_clone</span> ( <span
+class="methodparam">void</span> )
+
+}

@@ -755,14 +755,12 @@ Gets previously set hook on function or method
 
 ### 说明
 
-<span class="type"><span class="type">Closure</span><span
-class="type">null</span></span> <span
+<span class="type">Closure</span> <span
 class="methodname">uopz\_get\_hook</span> ( <span
 class="methodparam"><span class="type">string</span> `$function`</span>
 )
 
-<span class="type"><span class="type">Closure</span><span
-class="type">null</span></span> <span
+<span class="type">Closure</span> <span
 class="methodname">uopz\_get\_hook</span> ( <span
 class="methodparam"><span class="type">string</span> `$class`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -981,15 +979,13 @@ Gets the static variables from function or method scope
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">uopz\_get\_static</span> ( <span
 class="methodparam"><span class="type">string</span> `$class`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$function`</span> )
 
-<span class="type"><span class="type">array</span><span
-class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">uopz\_get\_static</span> ( <span
 class="methodparam"><span class="type">string</span> `$function`</span>
 )

@@ -182,8 +182,7 @@ Read data from shared memory block
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">shmop\_read</span> ( <span class="methodparam"><span
 class="type">Shmop</span> `$shmop`</span> , <span
 class="methodparam"><span class="type">int</span> `$offset`</span> ,
@@ -283,8 +282,7 @@ Write data into shared memory block
 
 ### 说明
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">shmop\_write</span> ( <span class="methodparam"><span
 class="type">Shmop</span> `$shmop`</span> , <span
 class="methodparam"><span class="type">string</span> `$data`</span> ,
