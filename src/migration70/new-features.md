@@ -3,7 +3,7 @@
 
 ### 标量类型声明
 
-标量<a href="/functions/arguments.html#functions.arguments.type-declaration" class="link">类型声明</a>
+标量<a href="/language/types/declarations.html" class="link">类型声明</a>
 有两种模式: 强制 (默认) 和 严格模式。
 现在可以使用下列类型参数（无论用强制模式还是严格模式）： 字符串(<span
 class="type">string</span>), 整数 (*int*), 浮点数 (<span
@@ -30,16 +30,16 @@ var_dump(sumOfInts(2, '3', 4.1));
 <a href="/control-structures/declare.html" class="link"><em>declare</em></a>
 声明指令必须放在文件的顶部。这意味着严格声明标量是基于文件可配的。
 这个指令不仅影响参数的类型声明，也影响到函数的返回值声明（参见
-<a href="/functions/returning-values.html#functions.returning-values.type-declaration" class="link">返回值类型声明</a>,
+<a href="/language/types/declarations.html" class="link">返回值类型声明</a>,
 内置的PHP函数以及扩展中加载的PHP函数）
 
-完整的标量类型声明文档和示例参见<a href="/functions/arguments.html#functions.arguments.type-declaration" class="link">类型声明</a>章节。
+完整的标量类型声明文档和示例参见<a href="/language/types/declarations.html" class="link">类型声明</a>章节。
 
 ### 返回值类型声明
 
 PHP 7
-增加了对<a href="/functions/returning-values.html#functions.returning-values.type-declaration" class="link">返回类型声明</a>的支持。
-类似于<a href="/functions/arguments.html#functions.arguments.type-declaration" class="link">参数类型声明</a>，返回类型声明指明了函数返回值的类型。可用的<a href="/functions/arguments.html#functions.arguments.type-declaration.types" class="link">类型</a>与参数声明中可用的类型相同。
+增加了对<a href="/language/types/declarations.html" class="link">返回类型声明</a>的支持。
+类似于<a href="/language/types/declarations.html" class="link">参数类型声明</a>，返回类型声明指明了函数返回值的类型。可用的<a href="/language/types/declarations.html" class="link">类型</a>与参数声明中可用的类型相同。
 
 ``` php
 <?php
@@ -64,7 +64,7 @@ print_r(arraysSum([1,2,3], [4,5,6], [7,8,9]));
     )
 
 完整的标量类型声明文档和示例可参见
-<a href="/functions/returning-values.html#functions.returning-values.type-declaration" class="link">返回值类型声明</a>.
+<a href="/language/types/declarations.html" class="link">返回值类型声明</a>.
 
 ### null合并运算符
 

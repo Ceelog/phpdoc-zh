@@ -28,7 +28,9 @@ PHP 代码的关键。
 > 类型的变量，那么函数的返回值是不确定的。在这种情况下，通常函数会返回
 > **`NULL`**。但这仅仅是一个惯例，并不一定如此。 </span>
 
-参见 <span
-class="function">function\_exists</span>，<a href="/funcref.html" class="link">函数参考</a>，<span
-class="function">get\_extension\_funcs</span> 和 <span
-class="function">dl</span>。
+### 参见
+
+-   <span class="function">function\_exists</span>
+-   <a href="/funcref.html" class="link">the function reference</a>
+-   <span class="function">get\_extension\_funcs</span>
+-   <span class="function">dl</span>

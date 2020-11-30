@@ -31,6 +31,8 @@ APC User Cache
     -   [apcu\_fetch](/ref/apcu.html#apcu_fetch) — Fetch a stored
         variable from the cache
     -   [apcu\_inc](/ref/apcu.html#apcu_inc) — Increase a stored number
+    -   [apcu\_key\_info](/ref/apcu.html#apcu_key_info) — Get detailed
+        information about the cache key
     -   [apcu\_sma\_info](/ref/apcu.html#apcu_sma_info) — Retrieves APCu
         Shared Memory Allocation information
     -   [apcu\_store](/ref/apcu.html#apcu_store) — Cache a variable in

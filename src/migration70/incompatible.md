@@ -430,12 +430,12 @@ var_dump($int); // int(65535)
 
 #### <span class="function">call\_user\_method</span> and <span class="function">call\_user\_method\_array</span>
 
-这两个函数从PHP 4.1.0开始被废弃，应该使用<span
+这两个函数从PHP 4.1.0 开始被废弃，应该使用 <span
 class="function">call\_user\_func</span> 和 <span
 class="function">call\_user\_func\_array</span>。 你也可以考虑使用
 <a href="/functions/variable-functions.html" class="link">变量函数</a>
 或者
-<a href="/functions/arguments.html#functions.variable-arg-list.new" class="link"><em>...</em></a>
+<a href="/functions/arguments.html#functions.variable-arg-list" class="link"><em>...</em></a>
 操作符。
 
 #### 所有的 ereg\* 函数

@@ -20,6 +20,26 @@ function takes_array($input)
 ?>
 ```
 
+从 PHP 8.0.0
+开始，函数参数列表可以包含一个尾部的逗号，这个逗号将被忽略。这在参数列表较长或包含较长的变量名的情况下特别有用，这样可以方便地垂直列出参数。
+
+**示例 \#2 Function Argument List with trailing Comma**
+
+``` php
+<?php
+function takes_many_args(
+    $first_arg,
+    $second_arg,
+    $a_very_long_argument_name,
+    $arg_with_default = 5,
+    $again = 'a default string', // 在 8.0.0 之前，这个尾部的逗号是不允许的。
+)
+{
+    // ...
+}
+?>
+```
+
 ### 通过引用传递参数
 
 默认情况下，函数参数通过值传递（因而即使在函数内部改变参数的值，它并不会改变函数外部的值）。如果希望允许函数修改它的参数值，必须通过引用传递参数。
@@ -27,7 +47,7 @@ function takes_array($input)
 如果想要函数的一个参数总是通过引用传递，可以在函数定义中该参数的前面加上符号
 &：
 
-**示例 \#2 用引用传递函数参数**
+**示例 \#3 用引用传递函数参数**
 
 ``` php
 <?php
@@ -45,7 +65,7 @@ echo $str;    // outputs 'This is a string, and something extra.'
 
 函数可以定义 C++ 风格的标量参数默认值，如下所示：
 
-**示例 \#3 在函数中使用默认参数**
+**示例 \#4 在函数中使用默认参数**
 
 ``` php
 <?php
@@ -68,7 +88,7 @@ echo makecoffee("espresso");
 PHP 还允许使用数组 <span class="type">array</span> 和特殊类型 **`NULL`**
 作为默认参数，例如：
 
-**示例 \#4 使用非标量类型作为默认参数**
+**示例 \#5 使用非标量类型作为默认参数**
 
 ``` php
 <?php
@@ -86,7 +106,7 @@ echo makecoffee(array("cappuccino", "lavazza"), "teapot");
 
 注意当使用默认参数时，任何默认参数必须放在任何非默认参数的右侧；否则，函数将不会按照预期的情况工作。考虑下面的代码片断：
 
-**示例 \#5 函数默认参数的不正确用法**
+**示例 \#6 函数默认参数的不正确用法**
 
 ``` php
 <?php
@@ -107,7 +127,7 @@ echo makeyogurt("raspberry");   // won't work as expected
 
 现在，比较上面的例子和这个例子：
 
-**示例 \#6 函数默认参数正确的用法**
+**示例 \#7 函数默认参数正确的用法**
 
 ``` php
 <?php
@@ -124,285 +144,21 @@ echo makeyogurt("raspberry");   // works as expected
 
     Making a bowl of acidophilus raspberry.
 
-> **Note**: <span class="simpara"> 自 PHP 5
-> 起，传引用的参数也可以有默认值。 </span>
-
-### 类型声明
-
-> **Note**:
->
-> 在 PHP 5 中，类型声明也被称为类型提示。
-
-类型声明允许函数在调用时要求参数为特定类型。
-如果给出的值类型不对，那么将会产生一个错误： 在 PHP 5
-中，这将是一个可恢复的致命错误，而在 PHP 7 中将会抛出一个 <span
-class="classname">TypeError</span> 异常。
-
-为了指定一个类型声明，类型应该加到参数名前。这个声明可以通过将参数的默认值设为
-**`NULL`** 来实现允许传递 **`NULL`**。
-
-#### 有效类型
-
-| 类型                               | 描述                                                                                                                                                                       | 最小可用 PHP 版本 |
-|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| Class/interface name               | 参数为指定类或接口的 <a href="/language/operators/type.html" class="link"><em>instanceof</em></a>。                                                                        | PHP 5.0.0         |
-| *self*                             | 参数为当前类的 <a href="/language/operators/type.html" class="link"><em>instanceof</em></a>。可以为类或接口。                                                              | PHP 5.0.0         |
-| <span class="type">array</span>    | 参数必须为 <span class="type">array</span>。                                                                                                                               | PHP 5.1.0         |
-| <span class="type">callable</span> | 参数必须为有效的 <span class="type">callable</span>。                                                                                                                      | PHP 5.4.0         |
-| <span class="type">bool</span>     | 参数必须为 <span class="type">boolean</span> 值。                                                                                                                          | PHP 7.0.0         |
-| <span class="type">float</span>    | 参数必须为 <span class="type">float</span> 浮点数。                                                                                                                        | PHP 7.0.0         |
-| <span class="type">int</span>      | 参数必须为 <span class="type">integer</span>。                                                                                                                             | PHP 7.0.0         |
-| <span class="type">string</span>   | 参数必须为 <span class="type">string</span>。                                                                                                                              | PHP 7.0.0         |
-| *iterable*                         | 参数必须为 <span class="type">array</span> 或 <span class="classname">Traversable</span> 的 <a href="/language/operators/type.html" class="link"><em>instanceof</em></a>。 | PHP 7.1.0         |
-| *object*                           | 参数必须为 <span class="type">object</span>。                                                                                                                              | PHP 7.2.0         |
-
-**Warning**
-
-Aliases for the above scalar types are not supported. Instead, they are
-treated as class or interface names. For example, using *boolean* as a
-parameter or return type will require an argument or return value that
-is an
-<a href="/language/operators/type.html" class="link"><em>instanceof</em></a>
-the class or interface *boolean*, rather than of type <span
-class="type">bool</span>:
-
-``` php
-<?php
- function test(boolean $param) {}
- test(true);
- ?>
-```
-
-以上例程会输出：
-
-     Fatal error: Uncaught TypeError: Argument 1 passed to test() must be an instance of boolean, boolean given, called in - on line 1 and defined in -:1
-     
-
-#### 范例
-
-**示例 \#7 基类类型声明**
-
-``` php
-<?php
-class C {}
-class D extends C {}
-
-// This doesn't extend C.
-class E {}
-
-function f(C $c) {
-    echo get_class($c)."\n";
-}
-
-f(new C);
-f(new D);
-f(new E);
-?>
-```
-
-以上例程会输出：
-
-    C
-    D
-
-    Fatal error: Uncaught TypeError: Argument 1 passed to f() must be an instance of C, instance of E given, called in - on line 14 and defined in -:8
-    Stack trace:
-    #0 -(14): f(Object(E))
-    #1 {main}
-      thrown in - on line 8
-
-**示例 \#8 接口类类型声明**
-
-``` php
-<?php
-interface I { public function f(); }
-class C implements I { public function f() {} }
-
-// This doesn't implement I.
-class E {}
-
-function f(I $i) {
-    echo get_class($i)."\n";
-}
-
-f(new C);
-f(new E);
-?>
-```
-
-以上例程会输出：
-
-    C
-
-    Fatal error: Uncaught TypeError: Argument 1 passed to f() must implement interface I, instance of E given, called in - on line 13 and defined in -:8
-    Stack trace:
-    #0 -(13): f(Object(E))
-    #1 {main}
-      thrown in - on line 8
-
-**示例 \#9 Typed pass-by-reference Parameters**
-
-Declared types of reference parameters are checked on function entry,
-but not when the function returns, so after the function had returned,
-the argument's type may have changed.
-
-``` php
-<?php
-function array_baz(array &$param)
-{
-    $param = 1;
-}
-$var = [];
-array_baz($var);
-var_dump($var);
-array_baz($var);
-?>
-```
-
-以上例程的输出类似于：
-
-    int(1)
-
-    Fatal error: Uncaught TypeError: Argument 1 passed to array_baz() must be of the type array, int given, called in %s on line %d
-
-**示例 \#10 可空类型声明**
-
-``` php
-<?php
-class C {}
-
-function f(C $c = null) {
-    var_dump($c);
-}
-
-f(new C);
-f(null);
-?>
-```
-
-以上例程会输出：
-
-    object(C)#1 (0) {
-    }
-    NULL
-
-#### 严格类型声明
-
-默认情况下，如果能做到的话，PHP
-将会强迫错误类型的值转为函数期望的标量类型。
-例如，一个函数的一个参数期望是 <span
-class="type">string</span>，但传入的是 <span
-class="type">integer</span>，最终函数得到的将会是一个 <span
-class="type">string</span> 类型的值。
-
-可以基于每一个文件开启严格模式。在严格模式中，只有一个与类型声明完全相符的变量才会被接受，否则将会抛出一个
-<span class="classname">TypeError</span>。唯一的一个例外是可以将 <span
-class="type">integer</span> 传给一个期望 <span class="type">float</span>
-的函数。
-
-使用
-<a href="/control-structures/declare.html" class="link"><em>declare</em></a>
-语句和 *strict\_types* 声明来启用严格模式：
-
-**Caution**
-
-启用严格模式同时也会影响
-<a href="/functions/returning-values.html#functions.returning-values.type-declaration" class="link">返回值类型声明</a>。
-
-> **Note**:
->
-> 严格类型适用于在 *启用严格模式的文件内*
-> 的函数调用，而不是在那个文件内声明的函数。
-> 一个没有启用严格模式的文件内调用了一个在启用严格模式的文件中定义的函数，那么将会遵循调用者的偏好（弱类型），而这个值将会被转换。
-
-> **Note**:
->
-> 严格类型仅用于标量类型声明，也正是因为如此，这需要 PHP 7.0.0
-> 或更新版本，因为标量类型声明也是在那个版本中添加的。
-
-**示例 \#11 严格类型**
-
-``` php
-<?php
-declare(strict_types=1);
-
-function sum(int $a, int $b) {
-    return $a + $b;
-}
-
-var_dump(sum(1, 2));
-var_dump(sum(1.5, 2.5));
-?>
-```
-
-以上例程会输出：
-
-    int(3)
-
-    Fatal error: Uncaught TypeError: Argument 1 passed to sum() must be of the type integer, float given, called in - on line 9 and defined in -:4
-    Stack trace:
-    #0 -(9): sum(1.5, 2.5)
-    #1 {main}
-      thrown in - on line 4
-
-**示例 \#12 弱类型转换**
-
-``` php
-<?php
-function sum(int $a, int $b) {
-    return $a + $b;
-}
-
-var_dump(sum(1, 2));
-
-// These will be coerced to integers: note the output below!
-var_dump(sum(1.5, 2.5));
-?>
-```
-
-以上例程会输出：
-
-    int(3)
-    int(3)
-
-**示例 \#13 捕捉 <span class="classname">TypeError</span>**
-
-``` php
-<?php
-declare(strict_types=1);
-
-function sum(int $a, int $b) {
-    return $a + $b;
-}
-
-try {
-    var_dump(sum(1, 2));
-    var_dump(sum(1.5, 2.5));
-} catch (TypeError $e) {
-    echo 'Error: '.$e->getMessage();
-}
-?>
-```
-
-以上例程会输出：
-
-    int(3)
-    Error: Argument 1 passed to sum() must be of the type integer, float given, called in - on line 10
+> **Note**: <span class="simpara"> 传引用的参数也可以有默认值。 </span>
 
 ### 可变数量的参数列表
 
-PHP 在用户自定义函数中支持可变数量的参数列表。在 PHP 5.6
-及以上的版本中，由 *...* 语法实现；在 PHP 5.5 及更早版本中，使用函数
-<span class="function">func\_num\_args</span>，<span
-class="function">func\_get\_arg</span>，和 <span
-class="function">func\_get\_args</span> 。
+PHP 在用户自定义函数中支持可变数量的参数列表。由 *...* 语法实现。
 
-#### *...* in PHP 5.6+
+> **Note**: <span class="simpara"> 还可以使用以下函数来获取可变参数
+> <span class="function">func\_num\_args</span>、 <span
+> class="function">func\_get\_arg</span> 和 <span
+> class="function">func\_get\_args</span>，不建议使用此方式，请使用
+> *...* 来替代。 </span>
 
-PHP 5.6 之后的版本中，包含 *...*
-的参数，会转换为指定参数变量的一个数组，见以下示例：
+包含 *...* 的参数，会转换为指定参数变量的一个数组，见以下示例：
 
-**示例 \#14 使用 *...* 来访问变量参数**
+**示例 \#8 使用 *...* 来访问变量参数**
 
 ``` php
 <?php
@@ -425,7 +181,7 @@ echo sum(1, 2, 3, 4);
 也可以使用 *...* 语法来传递 <span class="type">array</span> 或 <span
 class="classname">Traversable</span> 做为参数到函数中：
 
-**示例 \#15 使用 *...* 来传递参数**
+**示例 \#9 使用 *...* 来传递参数**
 
 ``` php
 <?php
@@ -445,16 +201,15 @@ echo add(...$a);
     3
     3
 
-You may specify normal positional arguments before the *...* token. In
-this case, only the trailing arguments that don't match a positional
-argument will be added to the array generated by *...*.
+你可以在 *...*
+前指定正常的位置参数。在这种情况下，只有不符合位置参数的尾部参数才会被添加到
+*...* 生成的数组中。
 
-It is also possible to add a
-<a href="/language/oop5/typehinting.html" class="link">type hint</a>
-before the *...* token. If this is present, then all arguments captured
-by *...* must be objects of the hinted class.
+你也可以在 *...* 标记前添加一个
+<a href="/language/types/declarations.html" class="link">类型声明</a>。如果存在这种情况，那么
+*...* 捕获的所有参数必须是提示类的对象。
 
-**示例 \#16 输入提示的变量参数**
+**示例 \#10 输入提示的变量参数**
 
 ``` php
 <?php
@@ -480,9 +235,9 @@ echo total_intervals('d', null);
     3 days
     Catchable fatal error: Argument 2 passed to total_intervals() must be an instance of DateInterval, null given, called in - on line 14 and defined in - on line 2
 
-Finally, you may also pass variable arguments
-<a href="/functions/arguments.html#functions.arguments.by-reference" class="link">by reference</a>
-by prefixing the *...* with an ampersand (*&*).
+最后，你还可以给参数传递
+<a href="/functions/arguments.html#functions.arguments.by-reference" class="link">引用变量</a>，通过在
+*...* 前加上一个 (*&*) 符号来实现。
 
 #### 旧版本的 PHP
 
@@ -491,9 +246,9 @@ class="function">func\_num\_args</span>, <span
 class="function">func\_get\_arg</span> 和 <span
 class="function">func\_get\_args</span> 函数。
 
-上面的第一个例子在 PHP 5.5 和更早的版本中的实现如下：
+上面的第一个例子在早期 PHP 版本中的实现如下：
 
-**示例 \#17 在 PHP 5.5 和更早的版本中访问可变参数**
+**示例 \#11 在 PHP 早期版本中访问可变参数**
 
 ``` php
 <?php

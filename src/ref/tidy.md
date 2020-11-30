@@ -64,14 +64,14 @@ specified document
 
 <span class="type">int</span> <span
 class="methodname">tidy\_access\_count</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 <span class="function">tidy\_access\_count</span> returns the number of
 accessibility warnings found for the specified document.
 
 ### 参数
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> 对象。
 
 ### 返回值
@@ -133,14 +133,14 @@ specified document
 
 <span class="type">int</span> <span
 class="methodname">tidy\_config\_count</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 Returns the number of errors encountered in the configuration of the
-specified tidy `object`.
+specified tidy `tidy`.
 
 ### 参数
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> 对象。
 
 ### 返回值
@@ -173,14 +173,14 @@ Returns the Number of Tidy errors encountered for specified document
 
 <span class="type">int</span> <span
 class="methodname">tidy\_error\_count</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 Returns the number of Tidy errors encountered for the specified
 document.
 
 ### 参数
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> 对象。
 
 ### 返回值
@@ -228,13 +228,13 @@ Return a string representing the parsed tidy markup
 
 <span class="type">string</span> <span
 class="methodname">tidy\_get\_output</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 Gets a string with the repaired html.
 
 ### 参数
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> 对象。
 
 ### 返回值
@@ -278,14 +278,14 @@ Returns the Number of Tidy warnings encountered for specified document
 
 <span class="type">int</span> <span
 class="methodname">tidy\_warning\_count</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 Returns the number of Tidy warnings encountered for the specified
 document.
 
 ### 参数
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> 对象。
 
 ### 返回值

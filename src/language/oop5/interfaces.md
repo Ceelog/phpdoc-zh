@@ -184,4 +184,4 @@ class b implements a
 
 接口加上类型约束，提供了一种很好的方式来确保某个对象包含有某些方法。参见
 <a href="/language/operators/type.html" class="link">instanceof</a>
-操作符和<a href="/language/oop5/typehinting.html" class="link">类型约束</a>。
+操作符和<a href="/language/types/declarations.html" class="link">类型声明</a>。
