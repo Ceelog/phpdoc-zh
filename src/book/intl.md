@@ -22487,7 +22487,7 @@ processes that do not accept newer characters.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -22557,7 +22557,7 @@ and a Numeric\_Type of Decimal.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -22613,7 +22613,7 @@ used in the
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -22759,7 +22759,7 @@ without glyph selection capabilities.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -22769,9 +22769,9 @@ Returns another Unicode code point that may serve as a mirror-image
 substitute, or `codepoint` itself if there is no such mapping or
 `codepoint` does not have the *Bidi\_Mirrored* property.
 
-The return type will be <span class="type">integer</span> unless the
-code point was passed as a UTF-8 <span class="type">string</span>, in
-which case a <span class="type">string</span> will be returned.
+The return type will be <span class="type">int</span> unless the code
+point was passed as a UTF-8 <span class="type">string</span>, in which
+case a <span class="type">string</span> will be returned.
 
 ### 范例
 
@@ -22822,7 +22822,7 @@ modern names and if ICU contains the data for them.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -22883,7 +22883,7 @@ Returns the general category value for the code point.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -22966,7 +22966,7 @@ This function compliments <span class="function">IntlChar::ord</span>.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -23037,7 +23037,7 @@ is true:
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -23269,7 +23269,7 @@ returned.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -23374,7 +23374,7 @@ itself is returned.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -23383,9 +23383,9 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 Returns the paired bracket code point, or `codepoint` itself if there is
 no such mapping.
 
-The return type will be <span class="type">integer</span> unless the
-code point was passed as a UTF-8 <span class="type">string</span>, in
-which case a <span class="type">string</span> will be returned.
+The return type will be <span class="type">int</span> unless the code
+point was passed as a UTF-8 <span class="type">string</span>, in which
+case a <span class="type">string</span> will be returned.
 
 ### 范例
 
@@ -23427,7 +23427,7 @@ Returns the Unicode allocation block that contains the character.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -23472,7 +23472,7 @@ Returns the combining class of the code point.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -23516,7 +23516,7 @@ Gets the FC\_NFKC\_Closure property string for a character.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -23669,7 +23669,7 @@ for a code point. Also returns binary and mask property values.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -23738,7 +23738,7 @@ Database, this function will return **`IntlChar::NO_NUMERIC_VALUE`**.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24153,7 +24153,7 @@ For names of Unicode properties see the UCD file PropertyAliases.txt.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24217,7 +24217,7 @@ Determines whether the specified code point is an alphanumeric character
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24268,7 +24268,7 @@ Determines whether the specified code point is a letter character.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24328,7 +24328,7 @@ Determines whether the specified code point is a base character.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24388,7 +24388,7 @@ The following are equivalent definitions:
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24448,7 +24448,7 @@ A control character is one of the following:
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24508,7 +24508,7 @@ means that it is assigned a character.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24566,7 +24566,7 @@ Numeric\_Type of Decimal.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24622,7 +24622,7 @@ Determines whether the specified code point is a "graphic" character
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24678,7 +24678,7 @@ U+007F..U+009F).
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24740,7 +24740,7 @@ marks), "Pc" (connecting punctuation), and u\_isIDIgnorable(c).
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24799,7 +24799,7 @@ Version 3.0, chapter 5.16 Identifiers).
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24855,7 +24855,7 @@ Determines whether the specified code point is an ISO control code.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24908,7 +24908,7 @@ In addition to <span class="function">IntlChar::isIDPart</span>,
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -24969,7 +24969,7 @@ symbols) and "Pc" (connecting punctuation).
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25026,7 +25026,7 @@ which does not include control codes (e.g., TAB or Line Feed).
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25088,7 +25088,7 @@ Determines whether the specified code point has the general category
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25148,7 +25148,7 @@ Right-To-Left contexts and need to be displayed with a "mirrored" glyph.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25200,7 +25200,7 @@ Determines whether the specified code point is a printable character.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25254,7 +25254,7 @@ Determines whether the specified code point is a punctuation character.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25300,7 +25300,7 @@ Determines if the specified character is a space character or not.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25357,7 +25357,7 @@ Determines whether the specified code point is a titlecase letter.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25415,7 +25415,7 @@ IntlChar::PROPERTY\_ALPHABETIC)*
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25474,7 +25474,7 @@ IntlChar::PROPERTY\_LOWERCASE)*
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25536,7 +25536,7 @@ Determines whether the specified code point has the general category
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25601,7 +25601,7 @@ IntlChar::PROPERTY\_UPPERCASE)*
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25665,7 +25665,7 @@ IntlChar::PROPERTY\_WHITE\_SPACE)*
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25739,7 +25739,7 @@ if it satisfies one of the following criteria:
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25801,7 +25801,7 @@ This is equivalent to *IntlChar::digit($codepoint, 16) \>= 0*.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25916,7 +25916,7 @@ returned.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25925,9 +25925,9 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 Returns the Simple\_Lowercase\_Mapping of the code point, if any;
 otherwise the code point itself.
 
-The return type will be <span class="type">integer</span> unless the
-code point was passed as a UTF-8 <span class="type">string</span>, in
-which case a <span class="type">string</span> will be returned.
+The return type will be <span class="type">int</span> unless the code
+point was passed as a UTF-8 <span class="type">string</span>, in which
+case a <span class="type">string</span> will be returned.
 
 ### 范例
 
@@ -25981,7 +25981,7 @@ returned.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -25990,9 +25990,9 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 Returns the Simple\_Titlecase\_Mapping of the code point, if any;
 otherwise the code point itself.
 
-The return type will be <span class="type">integer</span> unless the
-code point was passed as a UTF-8 <span class="type">string</span>, in
-which case a <span class="type">string</span> will be returned.
+The return type will be <span class="type">int</span> unless the code
+point was passed as a UTF-8 <span class="type">string</span>, in which
+case a <span class="type">string</span> will be returned.
 
 ### 范例
 
@@ -26045,7 +26045,7 @@ character has no uppercase equivalent, the character itself is returned.
 ### 参数
 
 `codepoint`  
-The <span class="type">integer</span> codepoint value (e.g. *0x2603* for
+The <span class="type">int</span> codepoint value (e.g. *0x2603* for
 *U+2603 SNOWMAN*), or the character encoded as a UTF-8 <span
 class="type">string</span> (e.g. *"\\u{2603}"*)
 
@@ -26054,9 +26054,9 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 Returns the Simple\_Uppercase\_Mapping of the code point, if any;
 otherwise the code point itself.
 
-The return type will be <span class="type">integer</span> unless the
-code point was passed as a UTF-8 <span class="type">string</span>, in
-which case a <span class="type">string</span> will be returned.
+The return type will be <span class="type">int</span> unless the code
+point was passed as a UTF-8 <span class="type">string</span>, in which
+case a <span class="type">string</span> will be returned.
 
 ### 范例
 

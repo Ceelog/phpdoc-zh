@@ -3442,13 +3442,15 @@ The password for `username`.
 要使用 Easy Connect 命名方法，PHP 必须与 Oracle 10*g*
 或更高版本的客户端库进行链接。Oracle 10*g* 的 Easy Connect
 串格式：*\[//\]host\_name\[:port\]\[/service\_name\]*。Oracle 11*g*
-则为：*\[//\]host\_name\[:port\]\[/service\_name\]\[:server\_type\]\[/instance\_name\]*。服务名可在数据库服务器机器上运行
-Oracle 实用程序 *lsnrctl status* 找到。
+则为：*\[//\]host\_name\[:port\]\[/service\_name\]\[:server\_type\]\[/instance\_name\]*。
+在 Oracle 19c 加入类更多选项，例如 timeout 和 keep-alive 设置。 请参考
+Oracle 文档。 服务名可在数据库服务器机器上运行 Oracle 实用程序 *lsnrctl
+status* 找到。
 
 `tnsnames.ora` 文件可在 Oracle Net 查找路径中，此路径包括
-`$ORACLE_HOME/network/admin` 和 `/etc`。 另一种方法是设置 *TNS\_ADMIN*
-以便通过 `$TNS_ADMIN/tnsnames.ora` 来读取。表确认 web
-守护进程可读取此文件。
+`/your/path/to/instantclient/network/admin`、`$ORACLE_HOME/network/admin`
+、`/etc`。 另一种方法是设置 *TNS\_ADMIN* 以便通过
+`$TNS_ADMIN/tnsnames.ora` 来读取。表确认 web 守护进程可读取此文件。
 
 `character_set`  
 使用 Oracle
@@ -6266,13 +6268,15 @@ The password for `username`.
 要使用 Easy Connect 命名方法，PHP 必须与 Oracle 10*g*
 或更高版本的客户端库进行链接。Oracle 10*g* 的 Easy Connect
 串格式：*\[//\]host\_name\[:port\]\[/service\_name\]*。Oracle 11*g*
-则为：*\[//\]host\_name\[:port\]\[/service\_name\]\[:server\_type\]\[/instance\_name\]*。服务名可在数据库服务器机器上运行
-Oracle 实用程序 *lsnrctl status* 找到。
+则为：*\[//\]host\_name\[:port\]\[/service\_name\]\[:server\_type\]\[/instance\_name\]*。
+在 Oracle 19c 加入类更多选项，例如 timeout 和 keep-alive 设置。 请参考
+Oracle 文档。 服务名可在数据库服务器机器上运行 Oracle 实用程序 *lsnrctl
+status* 找到。
 
 `tnsnames.ora` 文件可在 Oracle Net 查找路径中，此路径包括
-`$ORACLE_HOME/network/admin` 和 `/etc`。 另一种方法是设置 *TNS\_ADMIN*
-以便通过 `$TNS_ADMIN/tnsnames.ora` 来读取。表确认 web
-守护进程可读取此文件。
+`/your/path/to/instantclient/network/admin`、`$ORACLE_HOME/network/admin`
+、`/etc`。 另一种方法是设置 *TNS\_ADMIN* 以便通过
+`$TNS_ADMIN/tnsnames.ora` 来读取。表确认 web 守护进程可读取此文件。
 
 `character_set`  
 使用 Oracle
@@ -6952,13 +6956,15 @@ The password for `username`.
 要使用 Easy Connect 命名方法，PHP 必须与 Oracle 10*g*
 或更高版本的客户端库进行链接。Oracle 10*g* 的 Easy Connect
 串格式：*\[//\]host\_name\[:port\]\[/service\_name\]*。Oracle 11*g*
-则为：*\[//\]host\_name\[:port\]\[/service\_name\]\[:server\_type\]\[/instance\_name\]*。服务名可在数据库服务器机器上运行
-Oracle 实用程序 *lsnrctl status* 找到。
+则为：*\[//\]host\_name\[:port\]\[/service\_name\]\[:server\_type\]\[/instance\_name\]*。
+在 Oracle 19c 加入类更多选项，例如 timeout 和 keep-alive 设置。 请参考
+Oracle 文档。 服务名可在数据库服务器机器上运行 Oracle 实用程序 *lsnrctl
+status* 找到。
 
 `tnsnames.ora` 文件可在 Oracle Net 查找路径中，此路径包括
-`$ORACLE_HOME/network/admin` 和 `/etc`。 另一种方法是设置 *TNS\_ADMIN*
-以便通过 `$TNS_ADMIN/tnsnames.ora` 来读取。表确认 web
-守护进程可读取此文件。
+`/your/path/to/instantclient/network/admin`、`$ORACLE_HOME/network/admin`
+、`/etc`。 另一种方法是设置 *TNS\_ADMIN* 以便通过
+`$TNS_ADMIN/tnsnames.ora` 来读取。表确认 web 守护进程可读取此文件。
 
 `character_set`  
 使用 Oracle

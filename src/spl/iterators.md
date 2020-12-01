@@ -2012,8 +2012,7 @@ user-defined comparison function.
 
 `cmp_function`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -2053,8 +2052,7 @@ function.
 
 `cmp_function`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span

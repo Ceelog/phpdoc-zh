@@ -4511,7 +4511,7 @@ class="methodname">MongoDB\\Driver\\Manager::executeQuery</span>.
 
 ### 参数
 
-`filter` (<span class="type">array\|object</span>)  
+`filter` (<span class="type"><span class="type">array</span><span class="type">object</span></span>)  
 The
 <a href="https://docs.mongodb.com/manual/tutorial/query-documents/" class="link external">» query predicate</a>.
 An empty predicate will match all documents in the collection.
@@ -4570,7 +4570,7 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="odd">
 <td>collation</td>
-<td><span class="type">array|object</span></td>
+<td><span class="type"><span class="type">array</span><span class="type">object</span></span></td>
 <td><p><a href="https://docs.mongodb.com/master/reference/collation/" class="link external">» Collation</a> allows users to specify language-specific rules for string comparison, such as rules for lettercase and accent marks. When specifying collation, the <em>"locale"</em> field is mandatory; all other collation fields are optional. For descriptions of the fields, see <a href="https://docs.mongodb.com/master/reference/collation/#collation-document" class="link external">» Collation Document</a>.</p>
 <p>If the collation is unspecified but the collection has a default collation, the operation uses the collation specified for the collection. If no collation is specified for the collection or for the operation, MongoDB uses the simple binary comparison used in prior versions for string comparisons.</p>
 <p>This option is available in MongoDB 3.4+ and will result in an exception at execution time if specified for an older server version.</p></td>
@@ -5219,7 +5219,7 @@ class="classname">MongoDB\\Driver\\BulkWrite</span>.
 
 ### 参数
 
-`filter` (<span class="type">array\|object</span>)  
+`filter` (<span class="type"><span class="type">array</span><span class="type">object</span></span>)  
 The
 <a href="https://docs.mongodb.com/manual/tutorial/query-documents/" class="link external">» query predicate</a>.
 An empty predicate will match all documents in the collection.
@@ -5258,7 +5258,7 @@ An empty predicate will match all documents in the collection.
 <tbody>
 <tr class="odd">
 <td>collation</td>
-<td><span class="type">array|object</span></td>
+<td><span class="type"><span class="type">array</span><span class="type">object</span></span></td>
 <td><p><a href="https://docs.mongodb.com/master/reference/collation/" class="link external">» Collation</a> allows users to specify language-specific rules for string comparison, such as rules for lettercase and accent marks. When specifying collation, the <em>"locale"</em> field is mandatory; all other collation fields are optional. For descriptions of the fields, see <a href="https://docs.mongodb.com/master/reference/collation/#collation-document" class="link external">» Collation Document</a>.</p>
 <p>If the collation is unspecified but the collection has a default collation, the operation uses the collation specified for the collection. If no collation is specified for the collection or for the operation, MongoDB uses the simple binary comparison used in prior versions for string comparisons.</p>
 <p>This option is available in MongoDB 3.4+ and will result in an exception at execution time if specified for an older server version.</p></td>
@@ -5425,7 +5425,7 @@ class="classname">MongoDB\\Driver\\BulkWrite</span>.
 
 ### 参数
 
-`filter` (<span class="type">array\|object</span>)  
+`filter` (<span class="type"><span class="type">array</span><span class="type">object</span></span>)  
 The
 <a href="https://docs.mongodb.com/manual/tutorial/query-documents/" class="link external">» query predicate</a>.
 An empty predicate will match all documents in the collection.
@@ -5476,7 +5476,7 @@ replacement document (i.e. *only* *field:value* expressions), or an
 </tr>
 <tr class="even">
 <td>collation</td>
-<td><span class="type">array|object</span></td>
+<td><span class="type"><span class="type">array</span><span class="type">object</span></span></td>
 <td><p><a href="https://docs.mongodb.com/master/reference/collation/" class="link external">» Collation</a> allows users to specify language-specific rules for string comparison, such as rules for lettercase and accent marks. When specifying collation, the <em>"locale"</em> field is mandatory; all other collation fields are optional. For descriptions of the fields, see <a href="https://docs.mongodb.com/master/reference/collation/#collation-document" class="link external">» Collation Document</a>.</p>
 <p>If the collation is unspecified but the collection has a default collation, the operation uses the collation specified for the collection. If no collation is specified for the collection or for the operation, MongoDB uses the simple binary comparison used in prior versions for string comparisons.</p>
 <p>This option is available in MongoDB 3.4+ and will result in an exception at execution time if specified for an older server version.</p></td>

@@ -193,8 +193,7 @@ bit.
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -355,8 +354,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -559,8 +557,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -658,8 +655,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -939,8 +935,7 @@ first character is "0", octal is assumed, otherwise decimal is assumed.
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 注释
 
@@ -1100,8 +1095,7 @@ Should be odd and must be positive.
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -1182,8 +1176,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 参见
 
@@ -1219,8 +1212,7 @@ Should be odd and must be positive.
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -1271,8 +1263,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -1318,8 +1309,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -1450,8 +1440,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -2165,8 +2154,7 @@ True to set the bit (set it to 1/on); false to clear the bit (set it to
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -2458,8 +2446,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 范例
 
@@ -2557,8 +2544,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-PHP 5.5 之前，返回 GMP 数值<span class="type">资源</span>，PHP 5.6
-之后，返回 <span class="classname">GMP</span> 对象。
+<span class="classname">GMP</span> 对象。
 
 ### 范例
 

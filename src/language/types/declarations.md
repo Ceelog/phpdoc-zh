@@ -39,7 +39,7 @@
 ?>
 ```
 
-Output of the above example in PHP 8:
+以上例程在 PHP 8 中的输出：
 
     Warning: "boolean" will be interpreted as a class name. Did you mean "bool"? Write "\boolean" to suppress this warning in /in/9YrUX on line 2
 
@@ -71,7 +71,7 @@ f(new E);
 ?>
 ```
 
-Output of the above example in PHP 8:
+以上例程在 PHP 8 中的输出：
 
     C
     D
@@ -101,7 +101,7 @@ f(new E);
 ?>
 ```
 
-Output of the above example in PHP 8:
+以上例程在 PHP 8 中的输出：
 
     C
 
@@ -340,7 +340,7 @@ var_dump(sum(1.5, 2.5));
 ?>
 ```
 
-Output of the above example in PHP 8:
+以上例程在 PHP 8 中的输出：
 
     int(3)
 
@@ -468,7 +468,7 @@ array_baz($var);
 ?>
 ```
 
-Output of the above example in PHP 8:
+以上例程在 PHP 8 中的输出：
 
     int(1)
 
@@ -497,7 +497,7 @@ try {
 ?>
 ```
 
-Output of the above example in PHP 8:
+以上例程在 PHP 8 中的输出：
 
     int(3)
     Error: sum(): Argument #1 ($a) must be of type int, float given, called in - on line 10

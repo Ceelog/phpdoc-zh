@@ -192,17 +192,11 @@ static 方法可以实例化一个类。 由于它们位于同一个定义的 cl
 
 三个 static 方法展示了对象以不同方式的实例化方式。
 
--   `fromBasicData()` takes the exact parameters that are needed, then
-    creates the object by calling the constructor and returning the
-    result.
--   `fromJson()` accepts a JSON string and does some pre-processing on
-    it itself to convert it into the format desired by the constructor.
-    It then returns the new object.
--   `fromXml()` accepts an XML string, preprocesses it, and then creates
-    a bare object. The constructor is still called, but as all of the
-    parameters are optional the method skips them. It then assigns
-    values to the object properties directly before returning the
-    result.
+-   `fromBasicData()` 把所需的全部参数传入构造器，创建对象并返回结果。
+-   `fromJson()` 接受 JSON
+    字符串，，预处理成构造器所需的格式，然后返回新的对象。
+-   `fromXml()` 接受 XML 字符串并解析，然后创建一个单纯的对象。
+    由于参数都是可选的，使得可以忽略所有参数去调用构造器。然后为对象的属性赋值后返回结果。
 
 在以上三个例子中，`static` 关键词会被翻译成代码所在类的类名。
 这个例子中是 `Product`。

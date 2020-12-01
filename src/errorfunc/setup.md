@@ -127,7 +127,7 @@ display\_startup\_errors 设置为关闭。
 会添加有关错误源的信息。默认值为1024，如果设置为0表示不限长度。该长度设置对记录的错误，显示的错误，以及
 `$php_errormsg`都会有限制作用。
 
-<span class="simpara">当使用 <span class="type">integer</span> 时,
+<span class="simpara">当使用 <span class="type">int</span> 时,
 其值以字节来衡量。还可以使用在<a href="/faq/using.html#faq.using.shorthandbytes" class="link">FAQ</a>中描述的速记符。</span>
 
 `ignore_repeated_errors` <span class="type">boolean</span>  

@@ -702,8 +702,7 @@ class="function">array\_diff</span> 不同的是键名也用于比较。
 
 `key_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -810,8 +809,7 @@ More arrays to compare against
 
 `key_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -1550,8 +1548,7 @@ Variable list of array arguments to compare values against.
 
 `key_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -1625,8 +1622,7 @@ Variable list of array arguments to compare keys against.
 
 `key_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -3910,8 +3906,7 @@ class="methodparam"><span class="type">callable</span>
 
 `value_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4027,8 +4022,7 @@ class="function">array\_udiff</span> 不同的是键名也用于比较。
 
 `value_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4152,8 +4146,7 @@ class="function">array\_diff</span>
 回调对照函数。
 
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4353,8 +4346,7 @@ class="methodparam"><span class="type">callable</span>
 
 `value_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4422,8 +4414,7 @@ class="type">callable</span> `$key_compare_func`</span> )
 
 `value_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4498,8 +4489,7 @@ class="methodparam"><span class="type">callable</span>
 
 `value_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -7185,8 +7175,7 @@ class="type">callable</span> `$key_compare_func`</span> )
 
 `key_compare_func`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -7261,8 +7250,7 @@ class="type">callable</span> `$value_compare_func`</span> )
 
 `cmp_function`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span

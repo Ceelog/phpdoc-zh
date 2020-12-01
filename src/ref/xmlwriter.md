@@ -26,8 +26,8 @@ Ends the current attribute.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -37,9 +37,9 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -76,8 +76,8 @@ Ends the current CDATA section.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -87,9 +87,9 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -124,8 +124,8 @@ Ends the current comment.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -135,9 +135,9 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -172,8 +172,8 @@ Ends the current document.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -183,9 +183,9 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -219,8 +219,8 @@ Ends the current DTD attribute list.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -230,9 +230,9 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -267,8 +267,8 @@ Ends the current DTD element.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -278,9 +278,9 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -315,8 +315,8 @@ Ends the current DTD entity.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -326,9 +326,9 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -363,16 +363,16 @@ Ends the DTD of the document.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 返回值
 
@@ -411,8 +411,8 @@ Ends the current element.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -422,9 +422,9 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -459,8 +459,8 @@ Ends the current processing instruction.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -470,9 +470,9 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -511,8 +511,8 @@ Flushes the current buffer.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -527,10 +527,10 @@ return the number of written bytes.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
-| 8.0.0 | This function can no longer return **`FALSE`**.                                                                                           |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
+| 8.0.0 | This function can no longer return **`FALSE`**.                                                                      |
 
 XMLWriter::fullEndElement
 =========================
@@ -561,8 +561,8 @@ empty.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -572,9 +572,9 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -726,8 +726,8 @@ Returns the current buffer.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -740,9 +740,9 @@ Returns the current buffer as a string.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -779,8 +779,8 @@ the resulting xml.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -793,9 +793,9 @@ The indentation string.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 注释
 
@@ -836,8 +836,8 @@ Toggles indentation on or off.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -850,9 +850,9 @@ Whether indentation is enabled.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 范例
 
@@ -934,8 +934,8 @@ Starts a namespaced attribute.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -955,10 +955,10 @@ declaration will be omitted.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
-| 8.0.0 | `prefix` is nullable now.                                                                                                                 |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
+| 8.0.0 | `prefix` is nullable now.                                                                                            |
 
 ### 参见
 
@@ -996,8 +996,8 @@ Starts an attribute.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1010,9 +1010,9 @@ The attribute name.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 范例
 
@@ -1072,8 +1072,8 @@ Starts a CDATA.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1083,9 +1083,9 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -1120,8 +1120,8 @@ Starts a comment.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1131,9 +1131,9 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -1186,8 +1186,8 @@ Starts a document.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1206,9 +1206,9 @@ The encoding of the document as part of the XML declaration.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -1243,8 +1243,8 @@ Starts a DTD attribute list.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1257,9 +1257,9 @@ The attribute list name.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -1296,8 +1296,8 @@ Starts a DTD element.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1310,9 +1310,9 @@ The qualified name of the document type to create.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -1351,8 +1351,8 @@ Starts a DTD entity.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1367,9 +1367,9 @@ The name of the entity.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -1418,8 +1418,8 @@ Starts a DTD.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1438,9 +1438,9 @@ The external subset system identifier.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -1487,8 +1487,8 @@ Starts a namespaced element.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1509,9 +1509,9 @@ declaration will be omitted.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -1547,8 +1547,8 @@ Starts an element.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1561,9 +1561,9 @@ The element name.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -1599,8 +1599,8 @@ Starts a processing instruction tag.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1613,9 +1613,9 @@ The target of the processing instruction.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -1651,8 +1651,8 @@ Writes a text.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1670,9 +1670,9 @@ has to be used.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 XMLWriter::writeAttributeNs
 ===========================
@@ -1716,8 +1716,8 @@ Writes a full namespaced attribute.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1741,9 +1741,9 @@ The attribute value.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -1784,8 +1784,8 @@ Writes a full attribute.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1801,9 +1801,9 @@ The value of the attribute.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 范例
 
@@ -1868,8 +1868,8 @@ Writes a full CDATA.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1882,9 +1882,9 @@ The contents of the CDATA.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 范例
 
@@ -1955,8 +1955,8 @@ Writes a full comment.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -1969,9 +1969,9 @@ The contents of the comment.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -2010,8 +2010,8 @@ Writes a DTD attribute list.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -2027,9 +2027,9 @@ The content of the DTD attribute list.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -2068,8 +2068,8 @@ Writes a full DTD element.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -2085,9 +2085,9 @@ The content of the element.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -2149,8 +2149,8 @@ Writes a full DTD entity.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -2166,10 +2166,10 @@ The content of the entity.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
-| 8.0.0 | `publicId`, `systemId` and `notationData` are nullable now.                                                                               |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
+| 8.0.0 | `publicId`, `systemId` and `notationData` are nullable now.                                                          |
 
 ### 参见
 
@@ -2222,8 +2222,8 @@ Writes a full DTD.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -2245,9 +2245,9 @@ The content of the DTD.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -2300,8 +2300,8 @@ Writes a full namespaced element tag.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -2325,9 +2325,9 @@ The element contents.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -2369,8 +2369,8 @@ Writes a full element tag.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -2386,9 +2386,9 @@ The element contents.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -2428,8 +2428,8 @@ Writes a processing instruction.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -2445,9 +2445,9 @@ The content of the processing instruction.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 
@@ -2483,8 +2483,8 @@ Writes a raw xml text.
 ### 参数
 
 ` xmlwriter`  
-仅用于过程调用。被修改的 XMLWriter <span
-class="type">resource</span>。此资源来自于对 <span
+仅用于过程调用。被修改的 <span class="classname">XMLWriter</span>
+实例对象。此资源来自于对 <span
 class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
@@ -2497,9 +2497,9 @@ The text string to write.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                      |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 版本  | 说明                                                                                                                 |
+|-------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
 
 ### 参见
 

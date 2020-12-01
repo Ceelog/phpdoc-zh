@@ -1023,9 +1023,9 @@ device.
 
 `fd`  
 The file descriptor, which is expected to be either a file <span
-class="type">resource</span> or an <span class="type">integer</span>. An
-<span class="type">integer</span> will be assumed to be a file
-descriptor that can be passed directly to the underlying system call.
+class="type">resource</span> or an <span class="type">int</span>. An
+<span class="type">int</span> will be assumed to be a file descriptor
+that can be passed directly to the underlying system call.
 
 In almost all cases, you will want to provide a file <span
 class="type">resource</span>.
@@ -1569,9 +1569,9 @@ current terminal device that is open on the file descriptor `fd`.
 
 `fd`  
 The file descriptor, which is expected to be either a file <span
-class="type">resource</span> or an <span class="type">integer</span>. An
-<span class="type">integer</span> will be assumed to be a file
-descriptor that can be passed directly to the underlying system call.
+class="type">resource</span> or an <span class="type">int</span>. An
+<span class="type">int</span> will be assumed to be a file descriptor
+that can be passed directly to the underlying system call.
 
 In almost all cases, you will want to provide a file <span
 class="type">resource</span>.

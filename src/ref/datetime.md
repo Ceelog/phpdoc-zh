@@ -1189,7 +1189,7 @@ class="function">gmdate</span> 函数时， *Z* 格式永远返回 *0*。
 > class="function">date\_create</span> 函数创建时间戳时才是有用的。
 
 `timestamp`  
-可选的 `timestamp` 参数是一个 <span class="type">integer</span> 的 Unix
+可选的 `timestamp` 参数是一个 <span class="type">int</span> 的 Unix
 时间戳，如未指定，参数值默认为当前本地时间。也就是说，其值默认为 <span
 class="function">time</span> 的返回值。
 
@@ -1350,7 +1350,7 @@ class="type">array</span>。如果没有给出时间戳则认为是当前本地�
 ### 参数
 
 `timestamp`  
-可选的 `timestamp` 参数是一个 <span class="type">integer</span> 的 Unix
+可选的 `timestamp` 参数是一个 <span class="type">int</span> 的 Unix
 时间戳，如未指定，参数值默认为当前本地时间。也就是说，其值默认为 <span
 class="function">time</span> 的返回值。
 
@@ -1662,7 +1662,7 @@ false</span></span> \]\] )
 ### 参数
 
 `timestamp`  
-可选的 `timestamp` 参数是一个 <span class="type">integer</span> 的 Unix
+可选的 `timestamp` 参数是一个 <span class="type">int</span> 的 Unix
 时间戳，如未指定，参数值默认为当前本地时间。也就是说，其值默认为 <span
 class="function">time</span> 的返回值。
 
@@ -2074,7 +2074,7 @@ Solaris 的一周似乎从星期天开始并作为 1。所以 %u
 *仅针对 Mac OS X：*这个函数里 *%P* 修饰符还不能支持 Mac OS X。
 
 `timestamp`  
-可选的 `timestamp` 参数是一个 <span class="type">integer</span> 的 Unix
+可选的 `timestamp` 参数是一个 <span class="type">int</span> 的 Unix
 时间戳，如未指定，参数值默认为当前本地时间。也就是说，其值默认为 <span
 class="function">time</span> 的返回值。
 

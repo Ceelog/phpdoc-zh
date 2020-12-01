@@ -5,7 +5,7 @@ Add variables to a WDDX packet with the specified ID
 
 **Warning**
 
-This function was *REMOVED* in PHP 7.4.0.
+该函数已在 PHP 7.4.0 中 *移除*。
 
 ### 说明
 
@@ -44,7 +44,7 @@ Unserializes a WDDX packet
 
 **Warning**
 
-This function was *REMOVED* in PHP 7.4.0.
+该函数已在 PHP 7.4.0 中 *移除*。
 
 ### 说明
 
@@ -82,7 +82,7 @@ Ends a WDDX packet with the specified ID
 
 **Warning**
 
-This function was *REMOVED* in PHP 7.4.0.
+该函数已在 PHP 7.4.0 中 *移除*。
 
 ### 说明
 
@@ -110,7 +110,7 @@ Starts a new WDDX packet with structure inside it
 
 **Warning**
 
-This function was *REMOVED* in PHP 7.4.0.
+该函数已在 PHP 7.4.0 中 *移除*。
 
 ### 说明
 
@@ -139,7 +139,7 @@ Serialize a single value into a WDDX packet
 
 **Warning**
 
-This function was *REMOVED* in PHP 7.4.0.
+该函数已在 PHP 7.4.0 中 *移除*。
 
 ### 说明
 
@@ -170,7 +170,7 @@ Serialize variables into a WDDX packet
 
 **Warning**
 
-This function was *REMOVED* in PHP 7.4.0.
+该函数已在 PHP 7.4.0 中 *移除*。
 
 ### 说明
 

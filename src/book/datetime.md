@@ -333,7 +333,7 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">DateTime</span>
 <span class="methodname">modify</span> ( <span class="methodparam"><span
-class="type">string</span> `$modify`</span> )
+class="type">string</span> `$modifier`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">DateTime</span> <span
@@ -350,8 +350,8 @@ class="methodparam"><span class="type">int</span> `$month`</span> ,
 <span class="methodname">setISODate</span> ( <span
 class="methodparam"><span class="type">int</span> `$year`</span> , <span
 class="methodparam"><span class="type">int</span> `$week`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$day`<span
-class="initializer"> = 1</span></span> \] )
+<span class="methodparam"><span class="type">int</span>
+`$dayOfWeek`<span class="initializer"> = 1</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">DateTime</span>
 <span class="methodname">setTime</span> ( <span
@@ -359,7 +359,7 @@ class="methodparam"><span class="type">int</span> `$hour`</span> , <span
 class="methodparam"><span class="type">int</span> `$minute`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$second`<span
 class="initializer"> = 0</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$microseconds`<span
+class="methodparam"><span class="type">int</span> `$microsecond`<span
 class="initializer"> = 0</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">DateTime</span>
@@ -1027,16 +1027,19 @@ date\_modify
 
 <span class="modifier">public</span> <span class="type">DateTime</span>
 <span class="methodname">DateTime::modify</span> ( <span
-class="methodparam"><span class="type">string</span> `$modify`</span> )
+class="methodparam"><span class="type">string</span> `$modifier`</span>
+)
 
 过程化风格
 
 <span class="type">DateTime</span> <span
 class="methodname">date\_modify</span> ( <span class="methodparam"><span
 class="type">DateTime</span> `$object`</span> , <span
-class="methodparam"><span class="type">string</span> `$modify`</span> )
+class="methodparam"><span class="type">string</span> `$modifier`</span>
+)
 
-修改一个日期时间对象的值。 支持 <span class="function">strtotime</span>
+修改一个日期时间对象的值。 支持 <span
+class="function">DateTimeImmutable::\_\_construct</span>
 函数所允许的字符串。
 
 ### 参数
@@ -1045,20 +1048,13 @@ class="methodparam"><span class="type">string</span> `$modify`</span> )
 仅过程化风格：由 <span class="function">date\_create</span> 返回的 <span
 class="classname">DateTime</span> 类型的对象。此函数会修改这个对象。
 
-`modify`  
+`modifier`  
 日期/时间字符串。正确格式的说明详见
 <a href="/datetime/formats.html" class="link">日期与时间格式</a>。
 
 ### 返回值
 
 返回被修改的 DateTime 对象， 或者在失败时返回 **`FALSE`**.
-
-### 更新日志
-
-| 版本  | 说明                                                                    |
-|-------|-------------------------------------------------------------------------|
-| 5.3.6 | 支持绝对的日期时间作为变化量， 在之前的版本中，仅支持相对变化量。       |
-| 5.3.0 | 将返回值从**`NULL`**改为 <span class="classname">DateTime</span> 类型。 |
 
 ### 范例
 
@@ -1190,12 +1186,6 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 
 返回被修改的 DateTime 对象， 或者在失败时返回 **`FALSE`**.
 
-### 更新日志
-
-| 版本  | 说明                                                                    |
-|-------|-------------------------------------------------------------------------|
-| 5.3.0 | 将返回值从**`NULL`**改为 <span class="classname">DateTime</span> 类型。 |
-
 ### 范例
 
 **示例 \#1 <span class="function">DateTime::setDate</span> 例程**
@@ -1268,8 +1258,8 @@ date\_isodate\_set
 <span class="methodname">DateTime::setISODate</span> ( <span
 class="methodparam"><span class="type">int</span> `$year`</span> , <span
 class="methodparam"><span class="type">int</span> `$week`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$day`<span
-class="initializer"> = 1</span></span> \] )
+<span class="methodparam"><span class="type">int</span>
+`$dayOfWeek`<span class="initializer"> = 1</span></span> \] )
 
 过程化风格
 
@@ -1278,8 +1268,8 @@ class="methodname">date\_isodate\_set</span> ( <span
 class="methodparam"><span class="type">DateTime</span> `$object`</span>
 , <span class="methodparam"><span class="type">int</span> `$year`</span>
 , <span class="methodparam"><span class="type">int</span> `$week`</span>
-\[, <span class="methodparam"><span class="type">int</span> `$day`<span
-class="initializer"> = 1</span></span> \] )
+\[, <span class="methodparam"><span class="type">int</span>
+`$dayOfWeek`<span class="initializer"> = 1</span></span> \] )
 
 以 ISO 8601 规范的格式设置日期，
 使用周和日的偏移量作为参数，而不是使用月和日。
@@ -1296,18 +1286,12 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 `week`  
 周。
 
-`day`  
+`dayOfWeek`  
 从周的第一天计算，日在一周内的偏移量。
 
 ### 返回值
 
 返回被修改的 DateTime 对象， 或者在失败时返回 **`FALSE`**.
-
-### 更新日志
-
-| 版本  | 说明                                                                    |
-|-------|-------------------------------------------------------------------------|
-| 5.3.0 | 将返回值从**`NULL`**改为 <span class="classname">DateTime</span> 类型。 |
 
 ### 范例
 
@@ -1406,7 +1390,7 @@ class="methodparam"><span class="type">int</span> `$hour`</span> , <span
 class="methodparam"><span class="type">int</span> `$minute`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$second`<span
 class="initializer"> = 0</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$microseconds`<span
+class="methodparam"><span class="type">int</span> `$microsecond`<span
 class="initializer"> = 0</span></span> \]\] )
 
 过程化风格
@@ -1419,7 +1403,7 @@ class="methodparam"><span class="type">DateTime</span> `$object`</span>
 `$minute`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$second`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$microseconds`<span class="initializer"> =
+class="type">int</span> `$microsecond`<span class="initializer"> =
 0</span></span> \]\] )
 
 设置 DateTime 对象的时间。
@@ -1439,7 +1423,7 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 `second`  
 秒。
 
-`microseconds`  
+`microsecond`  
 微秒。
 
 ### 返回值
@@ -1448,10 +1432,9 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 
 ### 更新日志
 
-| 版本  | 说明                                                                    |
-|-------|-------------------------------------------------------------------------|
-| 7.1.0 | 新增 `microseconds` 参数。                                              |
-| 5.3.0 | 将返回值从**`NULL`**改为 <span class="classname">DateTime</span> 类型。 |
+| 版本  | 说明                      |
+|-------|---------------------------|
+| 7.1.0 | 新增 `microsecond` 参数。 |
 
 ### 范例
 
@@ -1659,12 +1642,6 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 ### 返回值
 
 返回被修改的 DateTime 对象， 或者在失败时返回 **`FALSE`**.
-
-### 更新日志
-
-| 版本  | 说明                                                                    |
-|-------|-------------------------------------------------------------------------|
-| 5.3.0 | 将返回值从**`NULL`**改为 <span class="classname">DateTime</span> 类型。 |
 
 ### 范例
 

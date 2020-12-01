@@ -42,5 +42,6 @@ the **--with-enchant\[=dir\]** option when compiling PHP.
 资源类型
 --------
 
-There are two types of resources in this extension. The first one is the
-broker (backends manager) and the second is for the dictionary.
+Prior to PHP 8.0.0, there are two types of resources in this extension.
+The first one is the broker (backends manager) and the second is for the
+dictionary.

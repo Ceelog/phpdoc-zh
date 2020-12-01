@@ -272,7 +272,7 @@ Handling of LONG fields. Specifies the number of bytes returned to
 variables. See <span class="function">odbc\_longreadlen</span> for
 details.
 
-<span class="simpara">当使用 <span class="type">integer</span> 时,
+<span class="simpara">当使用 <span class="type">int</span> 时,
 其值以字节来衡量。还可以使用在<a href="/faq/using.html#faq.using.shorthandbytes" class="link">FAQ</a>中描述的速记符。</span>
 
 `odbc.defaultbinmode` <span class="type">int</span>  
@@ -649,15 +649,15 @@ ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 The catalog ('qualifier' in ODBC 2 parlance).
 
 `schema`  
-The schema ('owner' in ODBC 2 parlance). 此参数接受下列查询模式："%"
-来匹配零到多个字符，"\_" 来匹配单个字符。
+The schema ('owner' in ODBC 2 parlance). 此参数接受下列查询模式： *%*
+来匹配零到多个字符， *\_* 来匹配单个字符。
 
 `table_name`  
-The table name. 此参数接受下列查询模式："%" 来匹配零到多个字符，"\_"
+The table name. 此参数接受下列查询模式： *%* 来匹配零到多个字符， *\_*
 来匹配单个字符。
 
 `column_name`  
-The column name. 此参数接受下列查询模式："%" 来匹配零到多个字符，"\_"
+The column name. 此参数接受下列查询模式： *%* 来匹配零到多个字符， *\_*
 来匹配单个字符。
 
 ### 返回值
@@ -740,15 +740,15 @@ ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 The catalog ('qualifier' in ODBC 2 parlance).
 
 `schema`  
-The schema ('owner' in ODBC 2 parlance). 此参数接受下列查询模式："%"
-来匹配零到多个字符，"\_" 来匹配单个字符。
+The schema ('owner' in ODBC 2 parlance). 此参数接受下列查询模式： *%*
+来匹配零到多个字符， *\_* 来匹配单个字符。
 
 `table_name`  
-The table name. 此参数接受下列查询模式："%" 来匹配零到多个字符，"\_"
+The table name. 此参数接受下列查询模式： *%* 来匹配零到多个字符， *\_*
 来匹配单个字符。
 
 `column_name`  
-The column name. 此参数接受下列查询模式："%" 来匹配零到多个字符，"\_"
+The column name. 此参数接受下列查询模式： *%* 来匹配零到多个字符， *\_*
 来匹配单个字符。
 
 ### 返回值
@@ -2118,15 +2118,15 @@ ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 The catalog ('qualifier' in ODBC 2 parlance).
 
 `schema`  
-The schema ('owner' in ODBC 2 parlance). 此参数接受下列查询模式："%"
-来匹配零到多个字符，"\_" 来匹配单个字符。
+The schema ('owner' in ODBC 2 parlance). 此参数接受下列查询模式： *%*
+来匹配零到多个字符， *\_* 来匹配单个字符。
 
 `proc`  
-The proc. 此参数接受下列查询模式："%" 来匹配零到多个字符，"\_"
+The proc. 此参数接受下列查询模式： *%* 来匹配零到多个字符， *\_*
 来匹配单个字符。
 
 `column`  
-The column. 此参数接受下列查询模式："%" 来匹配零到多个字符，"\_"
+The column. 此参数接受下列查询模式： *%* 来匹配零到多个字符， *\_*
 来匹配单个字符。
 
 ### 返回值
@@ -2240,11 +2240,11 @@ ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 The catalog ('qualifier' in ODBC 2 parlance).
 
 `schema`  
-The schema ('owner' in ODBC 2 parlance). 此参数接受下列查询模式："%"
-来匹配零到多个字符，"\_" 来匹配单个字符。
+The schema ('owner' in ODBC 2 parlance). 此参数接受下列查询模式： *%*
+来匹配零到多个字符， *\_* 来匹配单个字符。
 
 `name`  
-The name. 此参数接受下列查询模式："%" 来匹配零到多个字符，"\_"
+The name. 此参数接受下列查询模式： *%* 来匹配零到多个字符， *\_*
 来匹配单个字符。
 
 ### 返回值
@@ -2702,11 +2702,11 @@ ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 The catalog ('qualifier' in ODBC 2 parlance).
 
 `schema`  
-The schema ('owner' in ODBC 2 parlance). 此参数接受下列查询模式："%"
-来匹配零到多个字符，"\_" 来匹配单个字符。
+The schema ('owner' in ODBC 2 parlance). 此参数接受下列查询模式： *%*
+来匹配零到多个字符， *\_* 来匹配单个字符。
 
 `name`  
-The name. 此参数接受下列查询模式："%" 来匹配零到多个字符，"\_"
+The name. 此参数接受下列查询模式： *%* 来匹配零到多个字符， *\_*
 来匹配单个字符。
 
 ### 返回值
@@ -2806,11 +2806,11 @@ ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 The catalog ('qualifier' in ODBC 2 parlance).
 
 `schema`  
-The schema ('owner' in ODBC 2 parlance). 此参数接受下列查询模式："%"
-来匹配零到多个字符，"\_" 来匹配单个字符。
+The schema ('owner' in ODBC 2 parlance). 此参数接受下列查询模式： *%*
+来匹配零到多个字符， *\_* 来匹配单个字符。
 
 `name`  
-The name. 此参数接受下列查询模式："%" 来匹配零到多个字符，"\_"
+The name. 此参数接受下列查询模式： *%* 来匹配零到多个字符， *\_*
 来匹配单个字符。
 
 `types`  

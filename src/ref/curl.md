@@ -13,7 +13,7 @@ class="type">resource</span> `$ch`</span> )
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 ### 返回值
@@ -61,7 +61,7 @@ class="methodparam"><span class="type">resource</span> `$ch`</span> )
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 ### 返回值
@@ -108,7 +108,7 @@ class="type">resource</span> `$ch`</span> )
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 ### 返回值
@@ -159,7 +159,7 @@ class="type">resource</span> `$ch`</span> )
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 ### 返回值
@@ -212,7 +212,7 @@ class="methodparam"><span class="type">string</span> `$str`</span> )
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 `str`  
@@ -271,7 +271,7 @@ class="type">resource</span> `$ch`</span> )
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 ### 返回值
@@ -346,7 +346,7 @@ class="initializer"> = 0</span></span> \] )
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 `opt`  
@@ -538,11 +538,11 @@ class="methodparam"><span class="type">resource</span> `$mh`</span> ,
 
 ### 参数
 
-`mh`  
+`multi_handle`  
 由 <span class="function">curl\_multi\_init</span> 返回的 cURL
 多个句柄。
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 ### 返回值
@@ -609,7 +609,7 @@ class="methodparam"><span class="type">resource</span> `$mh`</span> )
 
 ### 参数
 
-`mh`  
+`multi_handle`  
 由 <span class="function">curl\_multi\_init</span> 返回的 cURL
 多个句柄。
 
@@ -676,7 +676,7 @@ class="methodparam"><span class="type">resource</span> `$mh`</span> )
 
 ### 参数
 
-`mh`  
+`multi_handle`  
 由 <span class="function">curl\_multi\_init</span> 返回的 cURL
 多个句柄。
 
@@ -706,7 +706,7 @@ class="methodparam"><span class="type">resource</span> `$mh`</span> ,
 
 ### 参数
 
-`mh`  
+`multi_handle`  
 由 <span class="function">curl\_multi\_init</span> 返回的 cURL
 多个句柄。
 
@@ -793,7 +793,7 @@ class="methodparam"><span class="type">resource</span> `$ch`</span> )
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 ### 返回值
@@ -830,7 +830,7 @@ class="function">curl\_multi\_remove\_handle</span>后将不会存在。
 
 ### 参数
 
-`mh`  
+`multi_handle`  
 由 <span class="function">curl\_multi\_init</span> 返回的 cURL
 多个句柄。
 
@@ -1009,11 +1009,11 @@ class="function">curl\_exec</span>执行这个句柄。如果要移除的句柄�
 
 ### 参数
 
-`mh`  
+`multi_handle`  
 由 <span class="function">curl\_multi\_init</span> 返回的 cURL
 多个句柄。
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 ### 返回值
@@ -1043,7 +1043,7 @@ class="methodparam"><span class="type">resource</span> `$mh`</span> \[,
 
 ### 参数
 
-`mh`  
+`multi_handle`  
 由 <span class="function">curl\_multi\_init</span> 返回的 cURL
 多个句柄。
 
@@ -1173,7 +1173,7 @@ class="methodparam"><span class="type">int</span> `$bitmask`</span> )
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 `bitmask`  
@@ -1198,7 +1198,7 @@ class="type">resource</span> `$ch`</span> )
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 ### 返回值
@@ -1259,7 +1259,7 @@ class="function">curl\_setopt</span>。
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 `options`  
@@ -1345,7 +1345,7 @@ class="methodparam"><span class="type">int</span> `$option`</span> ,
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 `option`  
@@ -2561,7 +2561,7 @@ class="methodparam"><span class="type">resource</span> `$ch`</span> ,
 
 ### 参数
 
-`ch`  
+`handle`  
 由 <span class="function">curl\_init</span> 返回的 cURL 句柄。
 
 `str`  

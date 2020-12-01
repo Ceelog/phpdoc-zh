@@ -5,11 +5,10 @@ Enumerates the Enchant providers
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">enchant\_broker\_describe</span> ( <span
-class="methodparam"><span class="type">resource</span> `$broker`</span>
-)
+class="methodparam"><span class="type">EnchantBroker</span>
+`$broker`</span> )
 
 Enumerates the Enchant providers and tells you some rudimentary
 information about them. The same info is provided through phpinfo().
@@ -17,12 +16,20 @@ information about them. The same info is provided through phpinfo().
 ### 参数
 
 `broker`  
-Broker resource
+An Enchant broker returned by <span
+class="function">enchant\_broker\_init</span>.
 
 ### 返回值
 
 Returns an <span class="type">array</span> of available Enchant
-providers with their details, 或者在失败时返回 **`FALSE`**.
+providers with their details.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                               |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
+| 8.0.0 | Prior to this version, the function returned **`FALSE`** on failure.                                                                                                               |
 
 ### 范例
 
@@ -82,16 +89,17 @@ Whether a dictionary exists or not. Using non-empty tag
 
 <span class="type">bool</span> <span
 class="methodname">enchant\_broker\_dict\_exists</span> ( <span
-class="methodparam"><span class="type">resource</span> `$broker`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$tag`</span> )
+class="methodparam"><span class="type">EnchantBroker</span>
+`$broker`</span> , <span class="methodparam"><span
+class="type">string</span> `$tag`</span> )
 
 Tells if a dictionary exists or not, using a non-empty tags
 
 ### 参数
 
 `broker`  
-Broker resource
+An Enchant broker returned by <span
+class="function">enchant\_broker\_init</span>.
 
 `tag`  
 non-empty tag in the LOCALE format, ex: us\_US, ch\_DE, etc.
@@ -99,6 +107,12 @@ non-empty tag in the LOCALE format, ex: us\_US, ch\_DE, etc.
 ### 返回值
 
 Returns **`TRUE`** when the tag exist or **`FALSE`** when not.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                               |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 ### 范例
 
@@ -128,18 +142,27 @@ Free a dictionary resource
 
 <span class="type">bool</span> <span
 class="methodname">enchant\_broker\_free\_dict</span> ( <span
-class="methodparam"><span class="type">resource</span> `$dict`</span> )
+class="methodparam"><span class="type">EnchantDictionary</span>
+`$dictionary`</span> )
 
 Free a dictionary resource.
 
 ### 参数
 
-`dict`  
-Dictionary resource.
+`dictionary`  
+An Enchant dictionary returned by <span
+class="function">enchant\_broker\_request\_dict</span> or <span
+class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                             |
+|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `dictionary` expects a <span class="classname">EnchantDictionary</span> now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 ### 参见
 
@@ -155,19 +178,26 @@ Free the broker resource and its dictionaries
 
 <span class="type">bool</span> <span
 class="methodname">enchant\_broker\_free</span> ( <span
-class="methodparam"><span class="type">resource</span> `$broker`</span>
-)
+class="methodparam"><span class="type">EnchantBroker</span>
+`$broker`</span> )
 
 Free a broker resource with all its dictionaries.
 
 ### 参数
 
 `broker`  
-Broker resource
+An Enchant broker returned by <span
+class="function">enchant\_broker\_init</span>.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                               |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 ### 参见
 
@@ -180,20 +210,22 @@ Get the directory path for a given backend
 
 ### 说明
 
-<span class="type">bool</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">enchant\_broker\_get\_dict\_path</span> ( <span
-class="methodparam"><span class="type">resource</span> `$broker`</span>
-, <span class="methodparam"><span class="type">int</span>
-`$dict_type`</span> )
+class="methodparam"><span class="type">EnchantBroker</span>
+`$broker`</span> , <span class="methodparam"><span
+class="type">int</span> `$type`</span> )
 
 Get the directory path for a given backend.
 
 ### 参数
 
 `broker`  
-Broker resource.
+An Enchant broker returned by <span
+class="function">enchant\_broker\_init</span>.
 
-`dict_type`  
+`type`  
 The type of the dictionaries, i.e. **`ENCHANT_MYSPELL`** or
 **`ENCHANT_ISPELL`**.
 
@@ -201,6 +233,12 @@ The type of the dictionaries, i.e. **`ENCHANT_MYSPELL`** or
 
 Returns the path of the dictionary directory on success 或者在失败时返回
 **`FALSE`**.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                               |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 ### 参见
 
@@ -213,21 +251,29 @@ Returns the last error of the broker
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">enchant\_broker\_get\_error</span> ( <span
-class="methodparam"><span class="type">resource</span> `$broker`</span>
-)
+class="methodparam"><span class="type">EnchantBroker</span>
+`$broker`</span> )
 
 Returns the last error which occurred in this broker.
 
 ### 参数
 
 `broker`  
-Broker resource.
+An Enchant broker returned by <span
+class="function">enchant\_broker\_init</span>.
 
 ### 返回值
 
 Return the msg string if an error was found or **`FALSE`**
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                               |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 enchant\_broker\_init
 =====================
@@ -236,7 +282,8 @@ Create a new broker object capable of requesting
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">EnchantBroker</span><span
+class="type">false</span></span> <span
 class="methodname">enchant\_broker\_init</span> ( <span
 class="methodparam">void</span> )
 
@@ -245,6 +292,12 @@ class="methodparam">void</span> )
 ### 返回值
 
 Returns a broker resource on success or **`FALSE`**.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                               |
+|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | On success, this function returns an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was retured. |
 
 ### 参见
 
@@ -257,22 +310,30 @@ Returns a list of available dictionaries
 
 ### 说明
 
-<span class="type">mixed</span> <span
+<span class="type">array</span> <span
 class="methodname">enchant\_broker\_list\_dicts</span> ( <span
-class="methodparam"><span class="type">resource</span> `$broker`</span>
-)
+class="methodparam"><span class="type">EnchantBroker</span>
+`$broker`</span> )
 
 Returns a list of available dictionaries with their details.
 
 ### 参数
 
 `broker`  
-Broker resource
+An Enchant broker returned by <span
+class="function">enchant\_broker\_init</span>.
 
 ### 返回值
 
 Returns an <span class="type">array</span> of available dictionaries
-with their details, 或者在失败时返回 **`FALSE`**.
+with their details.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                               |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
+| 8.0.0 | Prior to this version, the function returned **`FALSE`** on failure.                                                                                                               |
 
 ### 范例
 
@@ -351,12 +412,12 @@ Create a new dictionary using a tag
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
+<span class="type"><span class="type">EnchantDictionary</span><span
 class="type">false</span></span> <span
 class="methodname">enchant\_broker\_request\_dict</span> ( <span
-class="methodparam"><span class="type">resource</span> `$broker`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$tag`</span> )
+class="methodparam"><span class="type">EnchantBroker</span>
+`$broker`</span> , <span class="methodparam"><span
+class="type">string</span> `$tag`</span> )
 
 create a new dictionary using tag, the non-empty language tag you wish
 to request a dictionary for ("en\_US", "de\_DE", ...)
@@ -364,7 +425,8 @@ to request a dictionary for ("en\_US", "de\_DE", ...)
 ### 参数
 
 `broker`  
-Broker resource
+An Enchant broker returned by <span
+class="function">enchant\_broker\_init</span>.
 
 `tag`  
 A tag describing the locale, for example en\_US, de\_DE
@@ -372,6 +434,13 @@ A tag describing the locale, for example en\_US, de\_DE
 ### 返回值
 
 Returns a dictionary resource on success 或者在失败时返回 **`FALSE`**.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                                   |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected.                     |
+| 8.0.0 | On success, this function returns an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was retured. |
 
 ### 范例
 
@@ -404,12 +473,12 @@ Creates a dictionary using a PWL file
 
 ### 说明
 
-<span class="type"><span class="type">resource</span><span
+<span class="type"><span class="type">EnchantDictionary</span><span
 class="type">false</span></span> <span
 class="methodname">enchant\_broker\_request\_pwl\_dict</span> ( <span
-class="methodparam"><span class="type">resource</span> `$broker`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$filename`</span> )
+class="methodparam"><span class="type">EnchantBroker</span>
+`$broker`</span> , <span class="methodparam"><span
+class="type">string</span> `$filename`</span> )
 
 Creates a dictionary using a PWL file. A PWL file is personal word file
 one word per line.
@@ -417,7 +486,8 @@ one word per line.
 ### 参数
 
 `broker`  
-Broker resource
+An Enchant broker returned by <span
+class="function">enchant\_broker\_init</span>.
 
 `filename`  
 Path to the PWL file. If there is no such file, a new one will be
@@ -426,6 +496,13 @@ created if possible.
 ### 返回值
 
 Returns a dictionary resource on success 或者在失败时返回 **`FALSE`**.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                                   |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected.                     |
+| 8.0.0 | On success, this function returns an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was retured. |
 
 ### 参见
 
@@ -442,28 +519,35 @@ Set the directory path for a given backend
 
 <span class="type">bool</span> <span
 class="methodname">enchant\_broker\_set\_dict\_path</span> ( <span
-class="methodparam"><span class="type">resource</span> `$broker`</span>
-, <span class="methodparam"><span class="type">int</span>
-`$dict_type`</span> , <span class="methodparam"><span
-class="type">string</span> `$value`</span> )
+class="methodparam"><span class="type">EnchantBroker</span>
+`$broker`</span> , <span class="methodparam"><span
+class="type">int</span> `$type`</span> , <span class="methodparam"><span
+class="type">string</span> `$path`</span> )
 
 Set the directory path for a given backend.
 
 ### 参数
 
 `broker`  
-Broker resource.
+An Enchant broker returned by <span
+class="function">enchant\_broker\_init</span>.
 
-`dict_type`  
+`type`  
 The type of the dictionaries, i.e. **`ENCHANT_MYSPELL`** or
 **`ENCHANT_ISPELL`**.
 
-`value`  
+`path`  
 The path of the dictionary directory.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                               |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 ### 参见
 
@@ -478,10 +562,11 @@ Declares a preference of dictionaries to use for the language
 
 <span class="type">bool</span> <span
 class="methodname">enchant\_broker\_set\_ordering</span> ( <span
-class="methodparam"><span class="type">resource</span> `$broker`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$tag`</span> , <span class="methodparam"><span
-class="type">string</span> `$ordering`</span> )
+class="methodparam"><span class="type">EnchantBroker</span>
+`$broker`</span> , <span class="methodparam"><span
+class="type">string</span> `$tag`</span> , <span
+class="methodparam"><span class="type">string</span> `$ordering`</span>
+)
 
 Declares a preference of dictionaries to use for the language
 described/referred to by 'tag'. The ordering is a comma delimited list
@@ -492,7 +577,8 @@ not explicitly declare an ordering.
 ### 参数
 
 `broker`  
-Broker resource
+An Enchant broker returned by <span
+class="function">enchant\_broker\_init</span>.
 
 `tag`  
 Language tag. The special "\*" tag can be used as a language tag to
@@ -506,6 +592,12 @@ Comma delimited list of provider names
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                               |
+|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
+
 enchant\_dict\_add\_to\_personal
 ================================
 
@@ -515,16 +607,18 @@ Add a word to personal word list
 
 <span class="type">void</span> <span
 class="methodname">enchant\_dict\_add\_to\_personal</span> ( <span
-class="methodparam"><span class="type">resource</span> `$dict`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$word`</span> )
+class="methodparam"><span class="type">EnchantDictionary</span>
+`$dictionary`</span> , <span class="methodparam"><span
+class="type">string</span> `$word`</span> )
 
 Add a word to personal word list of the given dictionary.
 
 ### 参数
 
-`dict`  
-Dictionary resource
+`dictionary`  
+An Enchant dictionary returned by <span
+class="function">enchant\_broker\_request\_dict</span> or <span
+class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 `word`  
 The word to add
@@ -532,6 +626,12 @@ The word to add
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                       |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `dictionary` expects an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 **示例 \#1 Adding a word to a PWL**
 
@@ -565,17 +665,19 @@ Add 'word' to this spell-checking session
 
 <span class="type">void</span> <span
 class="methodname">enchant\_dict\_add\_to\_session</span> ( <span
-class="methodparam"><span class="type">resource</span> `$dict`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$word`</span> )
+class="methodparam"><span class="type">EnchantDictionary</span>
+`$dictionary`</span> , <span class="methodparam"><span
+class="type">string</span> `$word`</span> )
 
 Add a word to the given dictionary. It will be added only for the active
 spell-checking session.
 
 ### 参数
 
-`dict`  
-Dictionary resource
+`dictionary`  
+An Enchant dictionary returned by <span
+class="function">enchant\_broker\_request\_dict</span> or <span
+class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 `word`  
 The word to add
@@ -583,6 +685,12 @@ The word to add
 ### 返回值
 
 没有返回值。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                       |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `dictionary` expects an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 ### 参见
 
@@ -597,17 +705,19 @@ Check whether a word is correctly spelled or not
 
 <span class="type">bool</span> <span
 class="methodname">enchant\_dict\_check</span> ( <span
-class="methodparam"><span class="type">resource</span> `$dict`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$word`</span> )
+class="methodparam"><span class="type">EnchantDictionary</span>
+`$dictionary`</span> , <span class="methodparam"><span
+class="type">string</span> `$word`</span> )
 
 If the word is correctly spelled return **`TRUE`**, otherwise return
 **`FALSE`**
 
 ### 参数
 
-`dict`  
-Dictionary resource
+`dictionary`  
+An Enchant dictionary returned by <span
+class="function">enchant\_broker\_request\_dict</span> or <span
+class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 `word`  
 The word to check
@@ -616,6 +726,12 @@ The word to check
 
 Returns **`TRUE`** if the word is spelled correctly, **`FALSE`** if not.
 
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                       |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `dictionary` expects an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
+
 enchant\_dict\_describe
 =======================
 
@@ -623,20 +739,30 @@ Describes an individual dictionary
 
 ### 说明
 
-<span class="type">mixed</span> <span
+<span class="type">array</span> <span
 class="methodname">enchant\_dict\_describe</span> ( <span
-class="methodparam"><span class="type">resource</span> `$dict`</span> )
+class="methodparam"><span class="type">EnchantDictionary</span>
+`$dictionary`</span> )
 
 Returns the details of the dictionary.
 
 ### 参数
 
-`dict`  
-Dictionary resource
+`dictionary`  
+An Enchant dictionary returned by <span
+class="function">enchant\_broker\_request\_dict</span> or <span
+class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                       |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `dictionary` expects an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
+| 8.0.0 | Prior to this version, the function returned **`FALSE`** on failure.                                                                                                                       |
 
 ### 范例
 
@@ -676,20 +802,30 @@ Returns the last error of the current spelling-session
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">enchant\_dict\_get\_error</span> ( <span
-class="methodparam"><span class="type">resource</span> `$dict`</span> )
+class="methodparam"><span class="type">EnchantDictionary</span>
+`$dictionary`</span> )
 
 Returns the last error of the current spelling-session
 
 ### 参数
 
-`dict`  
-Dictinaray resource
+`dictionary`  
+An Enchant dictionary returned by <span
+class="function">enchant\_broker\_request\_dict</span> or <span
+class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 ### 返回值
 
 Returns the error message as string or **`FALSE`** if no error occurred.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                       |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `dictionary` expects an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 enchant\_dict\_is\_in\_session
 ==============================
@@ -700,16 +836,18 @@ Whether or not 'word' exists in this spelling-session
 
 <span class="type">bool</span> <span
 class="methodname">enchant\_dict\_is\_in\_session</span> ( <span
-class="methodparam"><span class="type">resource</span> `$dict`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$word`</span> )
+class="methodparam"><span class="type">EnchantDictionary</span>
+`$dictionary`</span> , <span class="methodparam"><span
+class="type">string</span> `$word`</span> )
 
 Tells whether or not a word already exists in the current session.
 
 ### 参数
 
-`dict`  
-Dictionary resource
+`dictionary`  
+An Enchant dictionary returned by <span
+class="function">enchant\_broker\_request\_dict</span> or <span
+class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 `word`  
 The word to lookup
@@ -717,6 +855,12 @@ The word to lookup
 ### 返回值
 
 Returns **`TRUE`** if the word exists or **`FALSE`**
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                       |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `dictionary` expects an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 ### 参见
 
@@ -731,10 +875,11 @@ Check the word is correctly spelled and provide suggestions
 
 <span class="type">bool</span> <span
 class="methodname">enchant\_dict\_quick\_check</span> ( <span
-class="methodparam"><span class="type">resource</span> `$dict`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$word`</span> \[, <span class="methodparam"><span
-class="type">array</span> `&$suggestions`</span> \] )
+class="methodparam"><span class="type">EnchantDictionary</span>
+`$dictionary`</span> , <span class="methodparam"><span
+class="type">string</span> `$word`</span> \[, <span
+class="methodparam"><span class="type">array</span> `&$suggestions`<span
+class="initializer"> = **`NULL`**</span></span> \] )
 
 If the word is correctly spelled return **`TRUE`**, otherwise return
 **`FALSE`**, if suggestions variable is provided, fill it with spelling
@@ -742,8 +887,10 @@ alternatives.
 
 ### 参数
 
-`dict`  
-Dictionary resource
+`dictionary`  
+An Enchant dictionary returned by <span
+class="function">enchant\_broker\_request\_dict</span> or <span
+class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 `word`  
 The word to check
@@ -755,6 +902,12 @@ array of suggestions.
 ### 返回值
 
 Returns **`TRUE`** if the word is correctly spelled or **`FALSE`**
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                       |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `dictionary` expects an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 ### 范例
 
@@ -819,10 +972,10 @@ Add a correction for a word
 
 <span class="type">void</span> <span
 class="methodname">enchant\_dict\_store\_replacement</span> ( <span
-class="methodparam"><span class="type">resource</span> `$dict`</span> ,
-<span class="methodparam"><span class="type">string</span> `$mis`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$cor`</span> )
+class="methodparam"><span class="type">EnchantDictionary</span>
+`$dictionary`</span> , <span class="methodparam"><span
+class="type">string</span> `$misspelled`</span> , <span
+class="methodparam"><span class="type">string</span> `$correct`</span> )
 
 Add a correction for 'mis' using 'cor'. Notes that you replaced @mis
 with @cor, so it's possibly more likely that future occurrences of @mis
@@ -831,18 +984,26 @@ list.
 
 ### 参数
 
-`dict`  
-Dictionary resource
+`dictionary`  
+An Enchant dictionary returned by <span
+class="function">enchant\_broker\_request\_dict</span> or <span
+class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
-`mis`  
+`misspelled`  
 The work to fix
 
-`cor`  
+`correct`  
 The correct word
 
 ### 返回值
 
 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                       |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `dictionary` expects an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 enchant\_dict\_suggest
 ======================
@@ -853,14 +1014,16 @@ Will return a list of values if any of those pre-conditions are not met
 
 <span class="type">array</span> <span
 class="methodname">enchant\_dict\_suggest</span> ( <span
-class="methodparam"><span class="type">resource</span> `$dict`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$word`</span> )
+class="methodparam"><span class="type">EnchantDictionary</span>
+`$dictionary`</span> , <span class="methodparam"><span
+class="type">string</span> `$word`</span> )
 
 ### 参数
 
-`dict`  
-Dictionary resource
+`dictionary`  
+An Enchant dictionary returned by <span
+class="function">enchant\_broker\_request\_dict</span> or <span
+class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 `word`  
 Word to use for the suggestions.
@@ -868,6 +1031,12 @@ Word to use for the suggestions.
 ### 返回值
 
 Will returns an array of suggestions if the word is bad spelled.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                                                                                                       |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | `dictionary` expects an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
 
 ### 范例
 

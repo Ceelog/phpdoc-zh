@@ -14851,7 +14851,7 @@ Stop embedded server
 
 **Warning**
 
-This function was *REMOVED* in PHP 7.4.0.
+该函数已在 PHP 7.4.0 中 *移除*。
 
 ### 说明
 
@@ -14881,7 +14881,7 @@ Initialize and start embedded server
 
 **Warning**
 
-This function was *REMOVED* in PHP 7.4.0.
+该函数已在 PHP 7.4.0 中 *移除*。
 
 ### 说明
 

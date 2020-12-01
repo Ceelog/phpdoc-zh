@@ -210,7 +210,7 @@ Apache 子程序退出.这样的超时会导致 Apache 1 内部的 longjmp()
 <span class="function">memory\_get\_usage</span> 和 <span
 class="function">memory\_get\_peak\_usage</span>，也会需要这个编译参数。
 
-<span class="simpara">当使用 <span class="type">integer</span> 时,
+<span class="simpara">当使用 <span class="type">int</span> 时,
 其值以字节来衡量。还可以使用在<a href="/faq/using.html#faq.using.shorthandbytes" class="link">FAQ</a>中描述的速记符。</span>
 
 请参阅：<a href="/info/setup.html#" class="link">max_execution_time</a>。
@@ -400,7 +400,7 @@ larger than
 </span> <span class="simpara"> Generally speaking,
 <a href="/ini/core.html#ini.memory-limit" class="link">memory_limit</a>
 should be larger than `post_max_size`. </span> <span
-class="simpara">当使用 <span class="type">integer</span> 时,
+class="simpara">当使用 <span class="type">int</span> 时,
 其值以字节来衡量。还可以使用在<a href="/faq/using.html#faq.using.shorthandbytes" class="link">FAQ</a>中描述的速记符。</span>
 <span class="simpara"> If the size of post data is greater than
 post\_max\_size, the `$_POST` and `$_FILES`
@@ -492,8 +492,7 @@ is used.
 
 `always_populate_raw_post_data` <span class="type">mixed</span>  
 **Warning**
-This feature was *DEPRECATED* in PHP 5.6.0, and *REMOVED* as of PHP
-7.0.0.
+该功能已在 PHP 5.6.0 中 *废弃* ，并在 PHP 7.0.0 中 *移除*。
 
 If set to **`TRUE`**, PHP will always populate the `$HTTP_RAW_POST_DATA`
 containing the raw POST data. Otherwise, the variable is populated only
@@ -803,7 +802,7 @@ to succeed.
 `upload_max_filesize` <span class="type">integer</span>  
 The maximum size of an uploaded file.
 
-<span class="simpara">当使用 <span class="type">integer</span> 时,
+<span class="simpara">当使用 <span class="type">int</span> 时,
 其值以字节来衡量。还可以使用在<a href="/faq/using.html#faq.using.shorthandbytes" class="link">FAQ</a>中描述的速记符。</span>
 
 `max_file_uploads` <span class="type">integer</span>  

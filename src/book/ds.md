@@ -2411,8 +2411,7 @@ Sorts the sequence in-place, using an optional `comparator` function.
 
 `comparator`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -2499,8 +2498,7 @@ Returns a sorted copy, using an optional `comparator` function.
 
 `comparator`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4445,8 +4443,7 @@ Sorts the vector in-place, using an optional `comparator` function.
 
 `comparator`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4533,8 +4530,7 @@ Returns a sorted copy, using an optional `comparator` function.
 
 `comparator`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -6523,8 +6519,7 @@ Sorts the deque in-place, using an optional `comparator` function.
 
 `comparator`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -6610,8 +6605,7 @@ Returns a sorted copy, using an optional `comparator` function.
 
 `comparator`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -7952,8 +7946,7 @@ Sorts the map in-place by key, using an optional `comparator` function.
 
 `comparator`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -8067,8 +8060,7 @@ Returns a copy sorted by key, using an optional `comparator` function.
 
 `comparator`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -9164,8 +9156,7 @@ function.
 
 `comparator`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -9277,8 +9268,7 @@ Returns a copy, sorted by value using an optional `comparator` function.
 
 `comparator`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -11414,8 +11404,7 @@ Sorts the set in-place, using an optional `comparator` function.
 
 `comparator`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -11501,8 +11490,7 @@ Returns a sorted copy, using an optional `comparator` function.
 
 `comparator`  
 在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于
-0 的整数。注意：在 PHP 7.0.0 之前的版本中，整数的区间为 -2147483648 to
-2147483647。
+0 的整数。
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span

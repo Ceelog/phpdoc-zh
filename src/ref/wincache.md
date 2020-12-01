@@ -259,7 +259,7 @@ Retrieves information about opcode cache content and its usage.
 
 **Warning**
 
-This function was *REMOVED* in PHP 7.0.0.
+该函数已在 PHP 7.0.0 中 *移除*。
 
 ### 参数
 
@@ -391,7 +391,7 @@ The array returned by this function contains the following elements:
 
 **Warning**
 
-This function was *REMOVED* in PHP 7.0.0.
+该函数已在 PHP 7.0.0 中 *移除*。
 
 ### 范例
 
