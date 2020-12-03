@@ -1067,16 +1067,16 @@
 class="oointerface">implements <span
 class="interfacename">Iterator</span> </span> {
 
-<span class="type">bool</span> <span
-class="methodname">adaptiveBlurImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">adaptiveBlurImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">adaptiveResizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">adaptiveResizeImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
@@ -1084,44 +1084,44 @@ class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">bool</span> `$legacy`<span
 class="initializer"> = **`FALSE`**</span></span> \]\] )
 
-<span class="type">bool</span> <span
-class="methodname">adaptiveSharpenImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">adaptiveSharpenImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">adaptiveThresholdImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">adaptiveThresholdImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$offset`</span> )
 
-<span class="type">bool</span> <span class="methodname">addImage</span>
-( <span class="methodparam"><span class="type">Imagick</span>
-`$source`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">addImage</span> ( <span
+class="methodparam"><span class="type">Imagick</span> `$source`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">addNoiseImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">addNoiseImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$noise_type`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">affineTransformImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">affineTransformImage</span> ( <span
 class="methodparam"><span class="type">ImagickDraw</span>
 `$matrix`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">animateImages</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">animateImages</span> ( <span
 class="methodparam"><span class="type">string</span> `$x_server`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">annotateImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">annotateImage</span> ( <span
 class="methodparam"><span class="type">ImagickDraw</span>
 `$draw_settings`</span> , <span class="methodparam"><span
 class="type">float</span> `$x`</span> , <span class="methodparam"><span
@@ -1129,21 +1129,21 @@ class="type">float</span> `$y`</span> , <span class="methodparam"><span
 class="type">float</span> `$angle`</span> , <span
 class="methodparam"><span class="type">string</span> `$text`</span> )
 
-<span class="type">Imagick</span> <span
-class="methodname">appendImages</span> ( <span class="methodparam"><span
-class="type">bool</span> `$stack`</span> )
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">appendImages</span> ( <span
+class="methodparam"><span class="type">bool</span> `$stack`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">autoLevelImage</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">Imagick</span> <span
-class="methodname">averageImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">averageImages</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">blackThresholdImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">blackThresholdImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$threshold`</span>
 )
 
@@ -1152,18 +1152,19 @@ class="methodparam"><span class="type">mixed</span> `$threshold`</span>
 class="methodparam"><span class="type">float</span> `$factor`<span
 class="initializer"> = 1.5</span></span> \] )
 
-<span class="type">bool</span> <span class="methodname">blurImage</span>
-( <span class="methodparam"><span class="type">float</span>
-`$radius`</span> , <span class="methodparam"><span
-class="type">float</span> `$sigma`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$channel`</span> \] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">blurImage</span> ( <span
+class="methodparam"><span class="type">float</span> `$radius`</span> ,
+<span class="methodparam"><span class="type">float</span>
+`$sigma`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$channel`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">borderImage</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$bordercolor`</span> , <span
-class="methodparam"><span class="type">int</span> `$width`</span> ,
-<span class="methodparam"><span class="type">int</span> `$height`</span>
-)
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">borderImage</span> ( <span
+class="methodparam"><span class="type">mixed</span>
+`$bordercolor`</span> , <span class="methodparam"><span
+class="type">int</span> `$width`</span> , <span
+class="methodparam"><span class="type">int</span> `$height`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">brightnessContrastImage</span> ( <span
@@ -1173,29 +1174,31 @@ class="methodparam"><span class="type">float</span> `$brightness`</span>
 class="type">int</span> `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">charcoalImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">charcoalImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> )
 
-<span class="type">bool</span> <span class="methodname">chopImage</span>
-( <span class="methodparam"><span class="type">int</span>
-`$width`</span> , <span class="methodparam"><span
-class="type">int</span> `$height`</span> , <span
-class="methodparam"><span class="type">int</span> `$x`</span> , <span
-class="methodparam"><span class="type">int</span> `$y`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">chopImage</span> ( <span
+class="methodparam"><span class="type">int</span> `$width`</span> ,
+<span class="methodparam"><span class="type">int</span> `$height`</span>
+, <span class="methodparam"><span class="type">int</span> `$x`</span> ,
+<span class="methodparam"><span class="type">int</span> `$y`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">clampImage</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span class="methodname">clear</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">clear</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">clipImage</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">clipImage</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">clipImagePath</span> ( <span
@@ -1203,27 +1206,29 @@ class="methodparam"><span class="type">string</span> `$pathname`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$inside`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">clipPathImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">clipPathImage</span> ( <span
 class="methodparam"><span class="type">string</span> `$pathname`</span>
 , <span class="methodparam"><span class="type">bool</span>
 `$inside`</span> )
 
-<span class="type">Imagick</span> <span class="methodname">clone</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">clone</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">clutImage</span>
-( <span class="methodparam"><span class="type">Imagick</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">clutImage</span> ( <span
+class="methodparam"><span class="type">Imagick</span>
 `$lookup_table`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">Imagick</span> <span
-class="methodname">coalesceImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">coalesceImages</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">colorFloodfillImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">colorFloodfillImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fill`</span> ,
 <span class="methodparam"><span class="type">float</span> `$fuzz`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -1231,8 +1236,8 @@ class="methodparam"><span class="type">mixed</span> `$fill`</span> ,
 class="type">int</span> `$x`</span> , <span class="methodparam"><span
 class="type">int</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">colorizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">colorizeImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$colorize`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$opacity`</span> \[, <span class="methodparam"><span
@@ -1244,28 +1249,28 @@ class="type">bool</span> `$legacy`<span class="initializer"> =
 class="methodparam"><span class="type">array</span> `$color_matrix`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> )
 
-<span class="type">Imagick</span> <span
-class="methodname">combineImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">combineImages</span> ( <span
 class="methodparam"><span class="type">int</span> `$channelType`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">commentImage</span> ( <span class="methodparam"><span
-class="type">string</span> `$comment`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">commentImage</span> ( <span
+class="methodparam"><span class="type">string</span> `$comment`</span> )
 
-<span class="type">array</span> <span
-class="methodname">compareImageChannels</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">compareImageChannels</span> ( <span
 class="methodparam"><span class="type">Imagick</span> `$image`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$channelType`</span> , <span class="methodparam"><span
 class="type">int</span> `$metricType`</span> )
 
-<span class="type">Imagick</span> <span
-class="methodname">compareImageLayers</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">compareImageLayers</span> ( <span
 class="methodparam"><span class="type">int</span> `$method`</span> )
 
-<span class="type">array</span> <span
-class="methodname">compareImages</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">compareImages</span> ( <span
 class="methodparam"><span class="type">Imagick</span> `$compare`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$metric`</span> )
@@ -1280,23 +1285,24 @@ class="methodparam"><span class="type">int</span> `$y`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_ALL</span></span> \] )
 
-<span class="methodname">\_\_construct</span> (\[ <span
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$files`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">contrastImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">contrastImage</span> ( <span
 class="methodparam"><span class="type">bool</span> `$sharpen`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">contrastStretchImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">contrastStretchImage</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$black_point`</span> , <span class="methodparam"><span
 class="type">float</span> `$white_point`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">convolveImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">convolveImage</span> ( <span
 class="methodparam"><span class="type">array</span> `$kernel`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
@@ -1319,25 +1325,25 @@ class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 )
 
-<span class="type">Imagick</span> <span
-class="methodname">current</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">current</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">cycleColormapImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">cycleColormapImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$displace`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">decipherImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">decipherImage</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$passphrase`</span> )
 
-<span class="type">Imagick</span> <span
-class="methodname">deconstructImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">deconstructImages</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">deleteImageArtifact</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">deleteImageArtifact</span> ( <span
 class="methodparam"><span class="type">string</span> `$artifact`</span>
 )
 
@@ -1350,57 +1356,60 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 class="methodparam"><span class="type">float</span> `$threshold`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">despeckleImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">despeckleImage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">destroy</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">destroy</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">displayImage</span> ( <span class="methodparam"><span
-class="type">string</span> `$servername`</span> )
-
-<span class="type">bool</span> <span
-class="methodname">displayImages</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">displayImage</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$servername`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">distortImage</span> ( <span class="methodparam"><span
-class="type">int</span> `$method`</span> , <span
-class="methodparam"><span class="type">array</span> `$arguments`</span>
-, <span class="methodparam"><span class="type">bool</span>
-`$bestfit`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">displayImages</span> ( <span
+class="methodparam"><span class="type">string</span>
+`$servername`</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">distortImage</span> ( <span
+class="methodparam"><span class="type">int</span> `$method`</span> ,
+<span class="methodparam"><span class="type">array</span>
+`$arguments`</span> , <span class="methodparam"><span
+class="type">bool</span> `$bestfit`</span> )
 
 <span class="type">bool</span> <span class="methodname">drawImage</span>
 ( <span class="methodparam"><span class="type">ImagickDraw</span>
 `$draw`</span> )
 
-<span class="type">bool</span> <span class="methodname">edgeImage</span>
-( <span class="methodparam"><span class="type">float</span>
-`$radius`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">edgeImage</span> ( <span
+class="methodparam"><span class="type">float</span> `$radius`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">embossImage</span> ( <span class="methodparam"><span
-class="type">float</span> `$radius`</span> , <span
-class="methodparam"><span class="type">float</span> `$sigma`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">embossImage</span> ( <span
+class="methodparam"><span class="type">float</span> `$radius`</span> ,
+<span class="methodparam"><span class="type">float</span>
+`$sigma`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">encipherImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">encipherImage</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$passphrase`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">enhanceImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">enhanceImage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">equalizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">equalizeImage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">evaluateImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">evaluateImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$op`</span> , <span
 class="methodparam"><span class="type">float</span> `$constant`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -1417,11 +1426,11 @@ class="methodparam"><span class="type">int</span> `$width`</span> ,
 `$map`</span> , <span class="methodparam"><span class="type">int</span>
 `$STORAGE`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">extentImage</span> ( <span class="methodparam"><span
-class="type">int</span> `$width`</span> , <span
-class="methodparam"><span class="type">int</span> `$height`</span> ,
-<span class="methodparam"><span class="type">int</span> `$x`</span> ,
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">extentImage</span> ( <span
+class="methodparam"><span class="type">int</span> `$width`</span> ,
+<span class="methodparam"><span class="type">int</span> `$height`</span>
+, <span class="methodparam"><span class="type">int</span> `$x`</span> ,
 <span class="methodparam"><span class="type">int</span> `$y`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -1430,15 +1439,16 @@ class="type">ImagickKernel</span> `$ImagickKernel`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_UNDEFINED</span></span> \] )
 
-<span class="type">Imagick</span> <span
-class="methodname">flattenImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">flattenImages</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">flipImage</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">flipImage</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">floodFillPaintImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">floodFillPaintImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fill`</span> ,
 <span class="methodparam"><span class="type">float</span> `$fuzz`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -1449,19 +1459,21 @@ class="type">bool</span> `$invert`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span class="methodname">flopImage</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">flopImage</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">forwardFourierTransformimage</span> ( <span
 class="methodparam"><span class="type">bool</span> `$magnitude`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">frameImage</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$matte_color`</span> , <span
-class="methodparam"><span class="type">int</span> `$width`</span> ,
-<span class="methodparam"><span class="type">int</span> `$height`</span>
-, <span class="methodparam"><span class="type">int</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">frameImage</span> ( <span
+class="methodparam"><span class="type">mixed</span>
+`$matte_color`</span> , <span class="methodparam"><span
+class="type">int</span> `$width`</span> , <span
+class="methodparam"><span class="type">int</span> `$height`</span> ,
+<span class="methodparam"><span class="type">int</span>
 `$inner_bevel`</span> , <span class="methodparam"><span
 class="type">int</span> `$outer_bevel`</span> )
 
@@ -1473,70 +1485,73 @@ class="methodparam"><span class="type">int</span> `$function`</span> ,
 class="type">int</span> `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">Imagick</span> <span
-class="methodname">fxImage</span> ( <span class="methodparam"><span
-class="type">string</span> `$expression`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$channel`<span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">fxImage</span> ( <span
+class="methodparam"><span class="type">string</span>
+`$expression`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$channel`<span class="initializer"> =
+Imagick::CHANNEL\_DEFAULT</span></span> \] )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">gammaImage</span> ( <span
+class="methodparam"><span class="type">float</span> `$gamma`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">gammaImage</span> ( <span class="methodparam"><span
-class="type">float</span> `$gamma`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$channel`<span
-class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
-
-<span class="type">bool</span> <span
-class="methodname">gaussianBlurImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">gaussianBlurImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getColorspace</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getCompression</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getCompressionQuality</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">getCopyright</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getCopyright</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">getFilename</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFilename</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span class="methodname">getFont</span>
-( <span class="methodparam">void</span> )
-
-<span class="type">string</span> <span
-class="methodname">getFormat</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFont</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span class="methodname">getGravity</span>
-( <span class="methodparam">void</span> )
-
-<span class="type">string</span> <span
-class="methodname">getHomeURL</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFormat</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">Imagick</span> <span
-class="methodname">getImage</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getGravity</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getHomeURL</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">getImage</span> ( <span
 class="methodparam">void</span> )
 
 <span class="type">int</span> <span
 class="methodname">getImageAlphaChannel</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">getImageArtifact</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getImageArtifact</span> ( <span
 class="methodparam"><span class="type">string</span> `$artifact`</span>
 )
 
@@ -1544,43 +1559,45 @@ class="methodparam"><span class="type">string</span> `$artifact`</span>
 <span class="methodname">getImageAttribute</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> )
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">getImageBackgroundColor</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">getImageBlob</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getImageBlob</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">getImageBluePrimary</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageBluePrimary</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">getImageBorderColor</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageChannelDepth</span> ( <span
 class="methodparam"><span class="type">int</span> `$channel`</span> )
 
-<span class="type">float</span> <span
-class="methodname">getImageChannelDistortion</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getImageChannelDistortion</span> ( <span
 class="methodparam"><span class="type">Imagick</span>
 `$reference`</span> , <span class="methodparam"><span
 class="type">int</span> `$channel`</span> , <span
 class="methodparam"><span class="type">int</span> `$metric`</span> )
 
-<span class="type">float</span> <span
-class="methodname">getImageChannelDistortions</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getImageChannelDistortions</span> ( <span
 class="methodparam"><span class="type">Imagick</span>
 `$reference`</span> , <span class="methodparam"><span
 class="type">int</span> `$metric`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">array</span> <span
-class="methodname">getImageChannelExtrema</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageChannelExtrema</span> ( <span
 class="methodparam"><span class="type">int</span> `$channel`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -1588,117 +1605,118 @@ class="methodparam"><span class="type">int</span> `$channel`</span> )
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">array</span> <span
-class="methodname">getImageChannelMean</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageChannelMean</span> ( <span
 class="methodparam"><span class="type">int</span> `$channel`</span> )
 
-<span class="type">array</span> <span
-class="methodname">getImageChannelRange</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageChannelRange</span> ( <span
 class="methodparam"><span class="type">int</span> `$channel`</span> )
 
-<span class="type">array</span> <span
-class="methodname">getImageChannelStatistics</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageChannelStatistics</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">Imagick</span> <span
-class="methodname">getImageClipMask</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">getImageClipMask</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">getImageColormapColor</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageColors</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageColorspace</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageCompose</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageCompression</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageCompressionQuality</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageDelay</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageDepth</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageDispose</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">float</span> <span
-class="methodname">getImageDistortion</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getImageDistortion</span> ( <span
 class="methodparam"><span class="type">MagickWand</span>
 `$reference`</span> , <span class="methodparam"><span
 class="type">int</span> `$metric`</span> )
 
-<span class="type">array</span> <span
-class="methodname">getImageExtrema</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageExtrema</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">getImageFilename</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getImageFilename</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">getImageFormat</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getImageFormat</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">float</span> <span
-class="methodname">getImageGamma</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getImageGamma</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">getImageGeometry</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageGeometry</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageGravity</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">getImageGreenPrimary</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageGreenPrimary</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageHeight</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">getImageHistogram</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageHistogram</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageIndex</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageInterlaceScheme</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageInterpolateMethod</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageIterations</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageLength</span> ( <span
 class="methodparam">void</span> )
 
@@ -1706,11 +1724,12 @@ class="methodparam">void</span> )
 class="methodname">getImageMagickLicense</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">getImageMatte</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getImageMatte</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">getImageMatteColor</span> ( <span
 class="methodparam">void</span> )
 
@@ -1718,55 +1737,56 @@ class="methodparam">void</span> )
 <span class="methodname">getImageMimeType</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageOrientation</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">getImagePage</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImagePage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">getImagePixelColor</span> ( <span
 class="methodparam"><span class="type">int</span> `$x`</span> , <span
 class="methodparam"><span class="type">int</span> `$y`</span> )
 
-<span class="type">string</span> <span
-class="methodname">getImageProfile</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getImageProfile</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
-<span class="type">array</span> <span
-class="methodname">getImageProfiles</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageProfiles</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$include_values`<span class="initializer"> = **`TRUE`**</span></span>
 \]\] )
 
-<span class="type">array</span> <span
-class="methodname">getImageProperties</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageProperties</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$include_values`<span class="initializer"> = **`TRUE`**</span></span>
 \]\] )
 
-<span class="type">string</span> <span
-class="methodname">getImageProperty</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getImageProperty</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
-<span class="type">array</span> <span
-class="methodname">getImageRedPrimary</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageRedPrimary</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">Imagick</span> <span
-class="methodname">getImageRegion</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">getImageRegion</span> ( <span
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 , <span class="methodparam"><span class="type">int</span> `$x`</span> ,
 <span class="methodparam"><span class="type">int</span> `$y`</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageRenderingIntent</span> ( <span
 class="methodparam">void</span> )
 
@@ -1774,31 +1794,31 @@ class="methodparam">void</span> )
 class="methodname">getImageResolution</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">getImagesBlob</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getImagesBlob</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageScene</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">getImageSignature</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getImageSignature</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageSize</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageTicksPerSecond</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">float</span> <span
-class="methodname">getImageTotalInkDensity</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getImageTotalInkDensity</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageType</span> ( <span
 class="methodparam">void</span> )
 
@@ -1806,54 +1826,57 @@ class="methodparam">void</span> )
 class="methodname">getImageUnits</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageVirtualPixelMethod</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">getImageWhitePoint</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getImageWhitePoint</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getImageWidth</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getInterlaceScheme</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getIteratorIndex</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getNumberImages</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">getOption</span> ( <span class="methodparam"><span
-class="type">string</span> `$key`</span> )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getOption</span> ( <span
+class="methodparam"><span class="type">string</span> `$key`</span> )
 
-<span class="type">string</span> <span
-class="methodname">getPackageName</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getPackageName</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span class="methodname">getPage</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getPage</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">ImagickPixelIterator</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixelIterator</span> <span
 class="methodname">getPixelIterator</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">ImagickPixelIterator</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixelIterator</span> <span
 class="methodname">getPixelRegionIterator</span> ( <span
 class="methodparam"><span class="type">int</span> `$x`</span> , <span
 class="methodparam"><span class="type">int</span> `$y`</span> , <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span> )
 
-<span class="type">float</span> <span
-class="methodname">getPointSize</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getPointSize</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
@@ -1861,12 +1884,12 @@ class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">getQuantum</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">getQuantumDepth</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getQuantumDepth</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">getQuantumRange</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getQuantumRange</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
@@ -1874,31 +1897,32 @@ class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">getRegistry</span> ( <span class="methodparam"><span
 class="type">string</span> `$key`</span> )
 
-<span class="type">string</span> <span
-class="methodname">getReleaseDate</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getReleaseDate</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getResource</span> ( <span class="methodparam"><span
 class="type">int</span> `$type`</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getResourceLimit</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> )
 
-<span class="type">array</span> <span
-class="methodname">getSamplingFactors</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getSamplingFactors</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span class="methodname">getSize</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getSize</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getSizeOffset</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">getVersion</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getVersion</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -1907,12 +1931,12 @@ class="methodparam"><span class="type">Imagick</span> `$clut`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">hasNextImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">hasNextImage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">hasPreviousImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">hasPreviousImage</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type"><span
@@ -1921,15 +1945,15 @@ class="methodname">identifyFormat</span> ( <span
 class="methodparam"><span class="type">string</span> `$embedText`</span>
 )
 
-<span class="type">array</span> <span
-class="methodname">identifyImage</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">identifyImage</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$appendRawOutput`<span class="initializer"> = **`FALSE`**</span></span>
 \] )
 
-<span class="type">bool</span> <span
-class="methodname">implodeImage</span> ( <span class="methodparam"><span
-class="type">float</span> `$radius`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">implodeImage</span> ( <span
+class="methodparam"><span class="type">float</span> `$radius`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">importImagePixels</span> ( <span
@@ -1948,27 +1972,27 @@ class="methodparam"><span class="type">Imagick</span>
 `$complement`</span> , <span class="methodparam"><span
 class="type">bool</span> `$magnitude`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">labelImage</span> ( <span class="methodparam"><span
-class="type">string</span> `$label`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">labelImage</span> ( <span
+class="methodparam"><span class="type">string</span> `$label`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">levelImage</span> ( <span class="methodparam"><span
-class="type">float</span> `$blackPoint`</span> , <span
-class="methodparam"><span class="type">float</span> `$gamma`</span> ,
-<span class="methodparam"><span class="type">float</span>
-`$whitePoint`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$channel`<span class="initializer"> =
-Imagick::CHANNEL\_DEFAULT</span></span> \] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">levelImage</span> ( <span
+class="methodparam"><span class="type">float</span> `$blackPoint`</span>
+, <span class="methodparam"><span class="type">float</span>
+`$gamma`</span> , <span class="methodparam"><span
+class="type">float</span> `$whitePoint`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$channel`<span
+class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">linearStretchImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">linearStretchImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$blackPoint`</span>
 , <span class="methodparam"><span class="type">float</span>
 `$whitePoint`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">liquidRescaleImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">liquidRescaleImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 , <span class="methodparam"><span class="type">float</span>
@@ -1980,17 +2004,18 @@ class="modifier">static</span> <span class="type">array</span> <span
 class="methodname">listRegistry</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">magnifyImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">magnifyImage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">mapImage</span>
-( <span class="methodparam"><span class="type">Imagick</span>
-`$map`</span> , <span class="methodparam"><span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mapImage</span> ( <span
+class="methodparam"><span class="type">Imagick</span> `$map`</span> ,
+<span class="methodparam"><span class="type">bool</span>
 `$dither`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">matteFloodfillImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">matteFloodfillImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$alpha`</span> ,
 <span class="methodparam"><span class="type">float</span> `$fuzz`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -1998,38 +2023,39 @@ class="methodparam"><span class="type">float</span> `$alpha`</span> ,
 class="type">int</span> `$x`</span> , <span class="methodparam"><span
 class="type">int</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">medianFilterImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">medianFilterImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> )
 
-<span class="type">Imagick</span> <span
-class="methodname">mergeImageLayers</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">mergeImageLayers</span> ( <span
 class="methodparam"><span class="type">int</span> `$layer_method`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">minifyImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">minifyImage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">modulateImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">modulateImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$brightness`</span>
 , <span class="methodparam"><span class="type">float</span>
 `$saturation`</span> , <span class="methodparam"><span
 class="type">float</span> `$hue`</span> )
 
-<span class="type">Imagick</span> <span
-class="methodname">montageImage</span> ( <span class="methodparam"><span
-class="type">ImagickDraw</span> `$draw`</span> , <span
-class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">montageImage</span> ( <span
+class="methodparam"><span class="type">ImagickDraw</span> `$draw`</span>
+, <span class="methodparam"><span class="type">string</span>
 `$tile_geometry`</span> , <span class="methodparam"><span
 class="type">string</span> `$thumbnail_geometry`</span> , <span
 class="methodparam"><span class="type">int</span> `$mode`</span> , <span
 class="methodparam"><span class="type">string</span> `$frame`</span> )
 
-<span class="type">Imagick</span> <span
-class="methodname">morphImages</span> ( <span class="methodparam"><span
-class="type">int</span> `$number_frames`</span> )
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">morphImages</span> ( <span
+class="methodparam"><span class="type">int</span>
+`$number_frames`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">morphology</span> ( <span
@@ -2041,12 +2067,12 @@ class="methodparam"><span class="type">ImagickKernel</span>
 class="type">int</span> `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">Imagick</span> <span
-class="methodname">mosaicImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">mosaicImages</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">motionBlurImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">motionBlurImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> , <span class="methodparam"><span
@@ -2054,10 +2080,10 @@ class="type">float</span> `$angle`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">negateImage</span> ( <span class="methodparam"><span
-class="type">bool</span> `$gray`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$channel`<span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">negateImage</span> ( <span
+class="methodparam"><span class="type">bool</span> `$gray`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
 <span class="type">bool</span> <span class="methodname">newImage</span>
@@ -2067,27 +2093,28 @@ class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 `$background`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$format`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">newPseudoImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">newPseudoImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$pseudoString`</span> )
 
-<span class="type">bool</span> <span class="methodname">nextImage</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">nextImage</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">normalizeImage</span> (\[ <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">normalizeImage</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">oilPaintImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">oilPaintImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">opaquePaintImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">opaquePaintImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$target`</span> ,
 <span class="methodparam"><span class="type">mixed</span> `$fill`</span>
 , <span class="methodparam"><span class="type">float</span>
@@ -2096,19 +2123,19 @@ class="type">bool</span> `$invert`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">optimizeImageLayers</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">optimizeImageLayers</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">orderedPosterizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">orderedPosterizeImage</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$threshold_map`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">paintFloodfillImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">paintFloodfillImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fill`</span> ,
 <span class="methodparam"><span class="type">float</span> `$fuzz`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -2118,8 +2145,8 @@ class="type">int</span> `$y`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">paintOpaqueImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">paintOpaqueImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$target`</span> ,
 <span class="methodparam"><span class="type">mixed</span> `$fill`</span>
 , <span class="methodparam"><span class="type">float</span>
@@ -2127,54 +2154,56 @@ class="methodparam"><span class="type">mixed</span> `$target`</span> ,
 class="type">int</span> `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">paintTransparentImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">paintTransparentImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$target`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$alpha`</span> , <span class="methodparam"><span
 class="type">float</span> `$fuzz`</span> )
 
-<span class="type">bool</span> <span class="methodname">pingImage</span>
-( <span class="methodparam"><span class="type">string</span>
-`$filename`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pingImage</span> ( <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+)
 
-<span class="type">bool</span> <span
-class="methodname">pingImageBlob</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pingImageBlob</span> ( <span
 class="methodparam"><span class="type">string</span> `$image`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pingImageFile</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pingImageFile</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$filehandle`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$fileName`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">polaroidImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">polaroidImage</span> ( <span
 class="methodparam"><span class="type">ImagickDraw</span>
 `$properties`</span> , <span class="methodparam"><span
 class="type">float</span> `$angle`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">posterizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">posterizeImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$levels`</span> ,
 <span class="methodparam"><span class="type">bool</span>
 `$dither`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">previewImages</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">previewImages</span> ( <span
 class="methodparam"><span class="type">int</span> `$preview`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">previousImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">previousImage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">profileImage</span> ( <span class="methodparam"><span
-class="type">string</span> `$name`</span> , <span
-class="methodparam"><span class="type">string</span> `$profile`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">profileImage</span> ( <span
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$profile`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">quantizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">quantizeImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$numberColors`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$colorspace`</span> , <span class="methodparam"><span
@@ -2183,8 +2212,8 @@ class="methodparam"><span class="type">bool</span> `$dither`</span> ,
 <span class="methodparam"><span class="type">bool</span>
 `$measureError`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">quantizeImages</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">quantizeImages</span> ( <span
 class="methodparam"><span class="type">int</span> `$numberColors`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$colorspace`</span> , <span class="methodparam"><span
@@ -2193,50 +2222,51 @@ class="methodparam"><span class="type">bool</span> `$dither`</span> ,
 <span class="methodparam"><span class="type">bool</span>
 `$measureError`</span> )
 
-<span class="type">array</span> <span
-class="methodname">queryFontMetrics</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">queryFontMetrics</span> ( <span
 class="methodparam"><span class="type">ImagickDraw</span>
 `$properties`</span> , <span class="methodparam"><span
 class="type">string</span> `$text`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$multiline`</span>
 \] )
 
-<span class="type">array</span> <span
-class="methodname">queryFonts</span> (\[ <span class="methodparam"><span
-class="type">string</span> `$pattern`<span class="initializer"> =
-"\*"</span></span> \] )
-
-<span class="type">array</span> <span
-class="methodname">queryFormats</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">queryFonts</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">radialBlurImage</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">queryFormats</span> (\[ <span
+class="methodparam"><span class="type">string</span> `$pattern`<span
+class="initializer"> = "\*"</span></span> \] )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">radialBlurImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$angle`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">raiseImage</span> ( <span class="methodparam"><span
-class="type">int</span> `$width`</span> , <span
-class="methodparam"><span class="type">int</span> `$height`</span> ,
-<span class="methodparam"><span class="type">int</span> `$x`</span> ,
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">raiseImage</span> ( <span
+class="methodparam"><span class="type">int</span> `$width`</span> ,
+<span class="methodparam"><span class="type">int</span> `$height`</span>
+, <span class="methodparam"><span class="type">int</span> `$x`</span> ,
 <span class="methodparam"><span class="type">int</span> `$y`</span> ,
 <span class="methodparam"><span class="type">bool</span> `$raise`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">randomThresholdImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">randomThresholdImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$low`</span> ,
 <span class="methodparam"><span class="type">float</span> `$high`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span class="methodname">readImage</span>
-( <span class="methodparam"><span class="type">string</span>
-`$filename`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">readImage</span> ( <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+)
 
 <span class="type">bool</span> <span
 class="methodname">readImageBlob</span> ( <span
@@ -2244,8 +2274,8 @@ class="methodparam"><span class="type">string</span> `$image`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$filename`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">readImageFile</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">readImageFile</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$filehandle`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$fileName`<span class="initializer"> =
@@ -2256,12 +2286,12 @@ class="type">string</span> `$fileName`<span class="initializer"> =
 class="methodparam"><span class="type">array</span> `$filenames`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">recolorImage</span> ( <span class="methodparam"><span
-class="type">array</span> `$matrix`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">recolorImage</span> ( <span
+class="methodparam"><span class="type">array</span> `$matrix`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">reduceNoiseImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">reduceNoiseImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -2270,19 +2300,20 @@ class="methodparam"><span class="type">Imagick</span>
 `$replacement`</span> , <span class="methodparam"><span
 class="type">int</span> `$DITHER`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">removeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">removeImage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">removeImageProfile</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">removeImageProfile</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
-<span class="type">bool</span> <span class="methodname">render</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">render</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">resampleImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">resampleImage</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$x_resolution`</span> , <span class="methodparam"><span
 class="type">float</span> `$y_resolution`</span> , <span
@@ -2290,29 +2321,32 @@ class="methodparam"><span class="type">int</span> `$filter`</span> ,
 <span class="methodparam"><span class="type">float</span> `$blur`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">resetImagePage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">resetImagePage</span> ( <span
 class="methodparam"><span class="type">string</span> `$page`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">resizeImage</span> ( <span class="methodparam"><span
-class="type">int</span> `$columns`</span> , <span
-class="methodparam"><span class="type">int</span> `$rows`</span> , <span
-class="methodparam"><span class="type">int</span> `$filter`</span> ,
-<span class="methodparam"><span class="type">float</span> `$blur`</span>
-\[, <span class="methodparam"><span class="type">bool</span>
-`$bestfit`<span class="initializer"> = **`FALSE`**</span></span> \[,
-<span class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">resizeImage</span> ( <span
+class="methodparam"><span class="type">int</span> `$columns`</span> ,
+<span class="methodparam"><span class="type">int</span> `$rows`</span> ,
+<span class="methodparam"><span class="type">int</span> `$filter`</span>
+, <span class="methodparam"><span class="type">float</span>
+`$blur`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$bestfit`<span class="initializer"> =
+**`FALSE`**</span></span> \[, <span class="methodparam"><span
+class="type">bool</span> `$legacy`<span class="initializer"> =
+**`FALSE`**</span></span> \]\] )
 
-<span class="type">bool</span> <span class="methodname">rollImage</span>
-( <span class="methodparam"><span class="type">int</span> `$x`</span> ,
-<span class="methodparam"><span class="type">int</span> `$y`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">rollImage</span> ( <span
+class="methodparam"><span class="type">int</span> `$x`</span> , <span
+class="methodparam"><span class="type">int</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">rotateImage</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$background`</span> , <span
-class="methodparam"><span class="type">float</span> `$degrees`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">rotateImage</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$background`</span>
+, <span class="methodparam"><span class="type">float</span>
+`$degrees`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">rotationalBlurImage</span> ( <span
@@ -2320,27 +2354,28 @@ class="methodparam"><span class="type">float</span> `$angle`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">roundCorners</span> ( <span class="methodparam"><span
-class="type">float</span> `$x_rounding`</span> , <span
-class="methodparam"><span class="type">float</span> `$y_rounding`</span>
-\[, <span class="methodparam"><span class="type">float</span>
-`$stroke_width`<span class="initializer"> = 10</span></span> \[, <span
-class="methodparam"><span class="type">float</span> `$displace`<span
-class="initializer"> = 5</span></span> \[, <span
-class="methodparam"><span class="type">float</span>
-`$size_correction`<span class="initializer"> = -6</span></span> \]\]\] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">roundCorners</span> ( <span
+class="methodparam"><span class="type">float</span> `$x_rounding`</span>
+, <span class="methodparam"><span class="type">float</span>
+`$y_rounding`</span> \[, <span class="methodparam"><span
+class="type">float</span> `$stroke_width`<span class="initializer"> =
+10</span></span> \[, <span class="methodparam"><span
+class="type">float</span> `$displace`<span class="initializer"> =
+5</span></span> \[, <span class="methodparam"><span
+class="type">float</span> `$size_correction`<span class="initializer"> =
+-6</span></span> \]\]\] )
 
-<span class="type">bool</span> <span
-class="methodname">sampleImage</span> ( <span class="methodparam"><span
-class="type">int</span> `$columns`</span> , <span
-class="methodparam"><span class="type">int</span> `$rows`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">sampleImage</span> ( <span
+class="methodparam"><span class="type">int</span> `$columns`</span> ,
+<span class="methodparam"><span class="type">int</span> `$rows`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">scaleImage</span> ( <span class="methodparam"><span
-class="type">int</span> `$cols`</span> , <span class="methodparam"><span
-class="type">int</span> `$rows`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$bestfit`<span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">scaleImage</span> ( <span
+class="methodparam"><span class="type">int</span> `$cols`</span> , <span
+class="methodparam"><span class="type">int</span> `$rows`</span> \[,
+<span class="methodparam"><span class="type">bool</span> `$bestfit`<span
 class="initializer"> = **`FALSE`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$legacy`<span
 class="initializer"> = **`FALSE`**</span></span> \]\] )
@@ -2363,63 +2398,65 @@ class="type">float</span> `$threshold`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">separateImageChannel</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">separateImageChannel</span> ( <span
 class="methodparam"><span class="type">int</span> `$channel`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">sepiaToneImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">sepiaToneImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$threshold`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">setBackgroundColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setBackgroundColor</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$background`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">setColorspace</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setColorspace</span> ( <span
 class="methodparam"><span class="type">int</span> `$COLORSPACE`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setCompression</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setCompression</span> ( <span
 class="methodparam"><span class="type">int</span> `$compression`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">setCompressionQuality</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setCompressionQuality</span> ( <span
 class="methodparam"><span class="type">int</span> `$quality`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setFilename</span> ( <span class="methodparam"><span
-class="type">string</span> `$filename`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFilename</span> ( <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+)
 
-<span class="type">bool</span> <span
-class="methodname">setFirstIterator</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFirstIterator</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">setFont</span> (
-<span class="methodparam"><span class="type">string</span>
-`$font`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFont</span> ( <span
+class="methodparam"><span class="type">string</span> `$font`</span> )
 
-<span class="type">bool</span> <span class="methodname">setFormat</span>
-( <span class="methodparam"><span class="type">string</span>
-`$format`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFormat</span> ( <span
+class="methodparam"><span class="type">string</span> `$format`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setGravity</span> ( <span class="methodparam"><span
-class="type">int</span> `$gravity`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setGravity</span> ( <span
+class="methodparam"><span class="type">int</span> `$gravity`</span> )
 
-<span class="type">bool</span> <span class="methodname">setImage</span>
-( <span class="methodparam"><span class="type">Imagick</span>
-`$replace`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImage</span> ( <span
+class="methodparam"><span class="type">Imagick</span> `$replace`</span>
+)
 
-<span class="type">bool</span> <span
-class="methodname">setImageAlphaChannel</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageAlphaChannel</span> ( <span
 class="methodparam"><span class="type">int</span> `$mode`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageArtifact</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageArtifact</span> ( <span
 class="methodparam"><span class="type">string</span> `$artifact`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
@@ -2430,51 +2467,51 @@ class="methodparam"><span class="type">string</span> `$key`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageBackgroundColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageBackgroundColor</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$background`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">setImageBias</span> ( <span class="methodparam"><span
-class="type">float</span> `$bias`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageBias</span> ( <span
+class="methodparam"><span class="type">float</span> `$bias`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setImageBiasQuantum</span> ( <span
 class="methodparam"><span class="type">string</span> `$bias`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageBluePrimary</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageBluePrimary</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageBorderColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageBorderColor</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$border`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageChannelDepth</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageChannelDepth</span> ( <span
 class="methodparam"><span class="type">int</span> `$channel`</span> ,
 <span class="methodparam"><span class="type">int</span> `$depth`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">setImageClipMask</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageClipMask</span> ( <span
 class="methodparam"><span class="type">Imagick</span>
 `$clip_mask`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageColormapColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageColormapColor</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">ImagickPixel</span>
 `$color`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageColorspace</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageColorspace</span> ( <span
 class="methodparam"><span class="type">int</span> `$colorspace`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageCompose</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageCompose</span> ( <span
 class="methodparam"><span class="type">int</span> `$compose`</span> )
 
 <span class="type">bool</span> <span
@@ -2486,25 +2523,25 @@ class="methodparam"><span class="type">int</span> `$compression`</span>
 class="methodname">setImageCompressionQuality</span> ( <span
 class="methodparam"><span class="type">int</span> `$quality`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageDelay</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageDelay</span> ( <span
 class="methodparam"><span class="type">int</span> `$delay`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageDepth</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageDepth</span> ( <span
 class="methodparam"><span class="type">int</span> `$depth`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageDispose</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageDispose</span> ( <span
 class="methodparam"><span class="type">int</span> `$dispose`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageExtent</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageExtent</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageFilename</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageFilename</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )
 
@@ -2512,142 +2549,144 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 class="methodname">setImageFormat</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageGamma</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageGamma</span> ( <span
 class="methodparam"><span class="type">float</span> `$gamma`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageGravity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageGravity</span> ( <span
 class="methodparam"><span class="type">int</span> `$gravity`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageGreenPrimary</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageGreenPrimary</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageInterlaceScheme</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageInterlaceScheme</span> ( <span
 class="methodparam"><span class="type">int</span>
 `$interlace_scheme`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageInterpolateMethod</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageInterpolateMethod</span> ( <span
 class="methodparam"><span class="type">int</span> `$method`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageIterations</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageIterations</span> ( <span
 class="methodparam"><span class="type">int</span> `$iterations`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageMatte</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageMatte</span> ( <span
 class="methodparam"><span class="type">bool</span> `$matte`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageMatteColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageMatteColor</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$matte`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageOpacity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageOpacity</span> ( <span
 class="methodparam"><span class="type">float</span> `$opacity`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageOrientation</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageOrientation</span> ( <span
 class="methodparam"><span class="type">int</span> `$orientation`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">setImagePage</span> ( <span class="methodparam"><span
-class="type">int</span> `$width`</span> , <span
-class="methodparam"><span class="type">int</span> `$height`</span> ,
-<span class="methodparam"><span class="type">int</span> `$x`</span> ,
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImagePage</span> ( <span
+class="methodparam"><span class="type">int</span> `$width`</span> ,
+<span class="methodparam"><span class="type">int</span> `$height`</span>
+, <span class="methodparam"><span class="type">int</span> `$x`</span> ,
 <span class="methodparam"><span class="type">int</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageProfile</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageProfile</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$profile`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageProperty</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageProperty</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageRedPrimary</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageRedPrimary</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageRenderingIntent</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageRenderingIntent</span> ( <span
 class="methodparam"><span class="type">int</span>
 `$rendering_intent`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageResolution</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageResolution</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$x_resolution`</span> , <span class="methodparam"><span
 class="type">float</span> `$y_resolution`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageScene</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageScene</span> ( <span
 class="methodparam"><span class="type">int</span> `$scene`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageTicksPerSecond</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageTicksPerSecond</span> ( <span
 class="methodparam"><span class="type">int</span>
 `$ticks_per_second`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageType</span> ( <span class="methodparam"><span
-class="type">int</span> `$image_type`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageType</span> ( <span
+class="methodparam"><span class="type">int</span> `$image_type`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageUnits</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageUnits</span> ( <span
 class="methodparam"><span class="type">int</span> `$units`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageVirtualPixelMethod</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageVirtualPixelMethod</span> ( <span
 class="methodparam"><span class="type">int</span> `$method`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setImageWhitePoint</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setImageWhitePoint</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setInterlaceScheme</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setInterlaceScheme</span> ( <span
 class="methodparam"><span class="type">int</span>
 `$interlace_scheme`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setIteratorIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setIteratorIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setLastIterator</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setLastIterator</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">setOption</span>
-( <span class="methodparam"><span class="type">string</span>
-`$key`</span> , <span class="methodparam"><span
-class="type">string</span> `$value`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setOption</span> ( <span
+class="methodparam"><span class="type">string</span> `$key`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$value`</span> )
 
-<span class="type">bool</span> <span class="methodname">setPage</span> (
-<span class="methodparam"><span class="type">int</span> `$width`</span>
-, <span class="methodparam"><span class="type">int</span>
-`$height`</span> , <span class="methodparam"><span
-class="type">int</span> `$x`</span> , <span class="methodparam"><span
-class="type">int</span> `$y`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setPage</span> ( <span
+class="methodparam"><span class="type">int</span> `$width`</span> ,
+<span class="methodparam"><span class="type">int</span> `$height`</span>
+, <span class="methodparam"><span class="type">int</span> `$x`</span> ,
+<span class="methodparam"><span class="type">int</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setPointSize</span> ( <span class="methodparam"><span
-class="type">float</span> `$point_size`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setPointSize</span> ( <span
+class="methodparam"><span class="type">float</span> `$point_size`</span>
+)
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setProgressMonitor</span> ( <span
@@ -2660,72 +2699,74 @@ class="methodname">setRegistry</span> ( <span class="methodparam"><span
 class="type">string</span> `$key`</span> , <span
 class="methodparam"><span class="type">string</span> `$value`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setResolution</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setResolution</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$x_resolution`</span> , <span class="methodparam"><span
 class="type">float</span> `$y_resolution`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setResourceLimit</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setResourceLimit</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> , <span
 class="methodparam"><span class="type">int</span> `$limit`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setSamplingFactors</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setSamplingFactors</span> ( <span
 class="methodparam"><span class="type">array</span> `$factors`</span> )
 
-<span class="type">bool</span> <span class="methodname">setSize</span> (
-<span class="methodparam"><span class="type">int</span>
-`$columns`</span> , <span class="methodparam"><span
-class="type">int</span> `$rows`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setSize</span> ( <span
+class="methodparam"><span class="type">int</span> `$columns`</span> ,
+<span class="methodparam"><span class="type">int</span> `$rows`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setSizeOffset</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setSizeOffset</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span> ,
 <span class="methodparam"><span class="type">int</span> `$offset`</span>
 )
 
-<span class="type">bool</span> <span class="methodname">setType</span> (
-<span class="methodparam"><span class="type">int</span>
-`$image_type`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setType</span> ( <span
+class="methodparam"><span class="type">int</span> `$image_type`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">shadeImage</span> ( <span class="methodparam"><span
-class="type">bool</span> `$gray`</span> , <span
-class="methodparam"><span class="type">float</span> `$azimuth`</span> ,
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">shadeImage</span> ( <span
+class="methodparam"><span class="type">bool</span> `$gray`</span> ,
 <span class="methodparam"><span class="type">float</span>
-`$elevation`</span> )
+`$azimuth`</span> , <span class="methodparam"><span
+class="type">float</span> `$elevation`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">shadowImage</span> ( <span class="methodparam"><span
-class="type">float</span> `$opacity`</span> , <span
-class="methodparam"><span class="type">float</span> `$sigma`</span> ,
-<span class="methodparam"><span class="type">int</span> `$x`</span> ,
-<span class="methodparam"><span class="type">int</span> `$y`</span> )
-
-<span class="type">bool</span> <span
-class="methodname">sharpenImage</span> ( <span class="methodparam"><span
-class="type">float</span> `$radius`</span> , <span
-class="methodparam"><span class="type">float</span> `$sigma`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$channel`<span
-class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
-
-<span class="type">bool</span> <span
-class="methodname">shaveImage</span> ( <span class="methodparam"><span
-class="type">int</span> `$columns`</span> , <span
-class="methodparam"><span class="type">int</span> `$rows`</span> )
-
-<span class="type">bool</span> <span
-class="methodname">shearImage</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$background`</span> , <span
-class="methodparam"><span class="type">float</span> `$x_shear`</span> ,
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">shadowImage</span> ( <span
+class="methodparam"><span class="type">float</span> `$opacity`</span> ,
 <span class="methodparam"><span class="type">float</span>
-`$y_shear`</span> )
+`$sigma`</span> , <span class="methodparam"><span
+class="type">int</span> `$x`</span> , <span class="methodparam"><span
+class="type">int</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">sigmoidalContrastImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">sharpenImage</span> ( <span
+class="methodparam"><span class="type">float</span> `$radius`</span> ,
+<span class="methodparam"><span class="type">float</span>
+`$sigma`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$channel`<span class="initializer"> =
+Imagick::CHANNEL\_DEFAULT</span></span> \] )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">shaveImage</span> ( <span
+class="methodparam"><span class="type">int</span> `$columns`</span> ,
+<span class="methodparam"><span class="type">int</span> `$rows`</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">shearImage</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$background`</span>
+, <span class="methodparam"><span class="type">float</span>
+`$x_shear`</span> , <span class="methodparam"><span
+class="type">float</span> `$y_shear`</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">sigmoidalContrastImage</span> ( <span
 class="methodparam"><span class="type">bool</span> `$sharpen`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$alpha`</span> , <span class="methodparam"><span
@@ -2733,12 +2774,12 @@ class="type">float</span> `$beta`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">sketchImage</span> ( <span class="methodparam"><span
-class="type">float</span> `$radius`</span> , <span
-class="methodparam"><span class="type">float</span> `$sigma`</span> ,
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">sketchImage</span> ( <span
+class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
-`$angle`</span> )
+`$sigma`</span> , <span class="methodparam"><span
+class="type">float</span> `$angle`</span> )
 
 <span class="modifier">public</span> <span class="type">Imagick</span>
 <span class="methodname">smushImages</span> ( <span
@@ -2746,8 +2787,8 @@ class="methodparam"><span class="type">bool</span> `$stack`</span> ,
 <span class="methodparam"><span class="type">int</span> `$offset`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">solarizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">solarizeImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$threshold`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -2758,16 +2799,16 @@ class="type">array</span> `$arguments`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">spliceImage</span> ( <span class="methodparam"><span
-class="type">int</span> `$width`</span> , <span
-class="methodparam"><span class="type">int</span> `$height`</span> ,
-<span class="methodparam"><span class="type">int</span> `$x`</span> ,
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">spliceImage</span> ( <span
+class="methodparam"><span class="type">int</span> `$width`</span> ,
+<span class="methodparam"><span class="type">int</span> `$height`</span>
+, <span class="methodparam"><span class="type">int</span> `$x`</span> ,
 <span class="methodparam"><span class="type">int</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">spreadImage</span> ( <span class="methodparam"><span
-class="type">float</span> `$radius`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">spreadImage</span> ( <span
+class="methodparam"><span class="type">float</span> `$radius`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">statisticImage</span> ( <span
@@ -2778,14 +2819,16 @@ class="methodparam"><span class="type">int</span> `$width`</span> ,
 `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">Imagick</span> <span
-class="methodname">steganoImage</span> ( <span class="methodparam"><span
-class="type">Imagick</span> `$watermark_wand`</span> , <span
-class="methodparam"><span class="type">int</span> `$offset`</span> )
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">steganoImage</span> ( <span
+class="methodparam"><span class="type">Imagick</span>
+`$watermark_wand`</span> , <span class="methodparam"><span
+class="type">int</span> `$offset`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">stereoImage</span> ( <span class="methodparam"><span
-class="type">Imagick</span> `$offset_wand`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">stereoImage</span> ( <span
+class="methodparam"><span class="type">Imagick</span>
+`$offset_wand`</span> )
 
 <span class="type">bool</span> <span
 class="methodname">stripImage</span> ( <span
@@ -2806,15 +2849,15 @@ class="type">float</span> `$degrees`</span> )
 class="methodname">textureImage</span> ( <span class="methodparam"><span
 class="type">Imagick</span> `$texture_wand`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">thresholdImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">thresholdImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$threshold`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">thumbnailImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">thumbnailImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
@@ -2824,53 +2867,54 @@ class="initializer"> = **`FALSE`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$legacy`<span
 class="initializer"> = **`FALSE`**</span></span> \]\]\] )
 
-<span class="type">bool</span> <span class="methodname">tintImage</span>
-( <span class="methodparam"><span class="type">mixed</span>
-`$tint`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$opacity`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">tintImage</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$tint`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$opacity`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$legacy`<span class="initializer"> =
+**`FALSE`**</span></span> \] )
 
-<span class="type">string</span> <span
-class="methodname">\_\_toString</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">\_\_toString</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">Imagick</span> <span
-class="methodname">transformImage</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">transformImage</span> ( <span
 class="methodparam"><span class="type">string</span> `$crop`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$geometry`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">transformImageColorspace</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">transformImageColorspace</span> ( <span
 class="methodparam"><span class="type">int</span> `$colorspace`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">transparentPaintImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">transparentPaintImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$target`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$alpha`</span> , <span class="methodparam"><span
 class="type">float</span> `$fuzz`</span> , <span
 class="methodparam"><span class="type">bool</span> `$invert`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">transposeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">transposeImage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">transverseImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">transverseImage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">trimImage</span>
-( <span class="methodparam"><span class="type">float</span>
-`$fuzz`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">trimImage</span> ( <span
+class="methodparam"><span class="type">float</span> `$fuzz`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">uniqueImageColors</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">uniqueImageColors</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">unsharpMaskImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">unsharpMaskImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> , <span class="methodparam"><span
@@ -2880,24 +2924,26 @@ class="methodparam"><span class="type">float</span> `$threshold`</span>
 `$channel`<span class="initializer"> =
 Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
-<span class="type">bool</span> <span class="methodname">valid</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">valid</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">vignetteImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">vignetteImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$blackPoint`</span>
 , <span class="methodparam"><span class="type">float</span>
 `$whitePoint`</span> , <span class="methodparam"><span
 class="type">int</span> `$x`</span> , <span class="methodparam"><span
 class="type">int</span> `$y`</span> )
 
-<span class="type">bool</span> <span class="methodname">waveImage</span>
-( <span class="methodparam"><span class="type">float</span>
-`$amplitude`</span> , <span class="methodparam"><span
-class="type">float</span> `$length`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">waveImage</span> ( <span
+class="methodparam"><span class="type">float</span> `$amplitude`</span>
+, <span class="methodparam"><span class="type">float</span>
+`$length`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">whiteThresholdImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">whiteThresholdImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$threshold`</span>
 )
 
@@ -2906,19 +2952,20 @@ class="methodname">writeImage</span> (\[ <span class="methodparam"><span
 class="type">string</span> `$filename`<span class="initializer"> =
 NULL</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">writeImageFile</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">writeImageFile</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$filehandle`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$format`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">writeImages</span> ( <span class="methodparam"><span
-class="type">string</span> `$filename`</span> , <span
-class="methodparam"><span class="type">bool</span> `$adjoin`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">writeImages</span> ( <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+, <span class="methodparam"><span class="type">bool</span>
+`$adjoin`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">writeImagesFile</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">writeImagesFile</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$filehandle`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$format`</span> \] )
@@ -3050,8 +3097,8 @@ Adds adaptive blur filter to image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::adaptiveBlurImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::adaptiveBlurImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> \[, <span class="methodparam"><span
@@ -3124,8 +3171,8 @@ Adaptively resize image with data dependent triangulation
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::adaptiveResizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::adaptiveResizeImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
@@ -3210,8 +3257,8 @@ Adaptively sharpen the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::adaptiveSharpenImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::adaptiveSharpenImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> \[, <span class="methodparam"><span
@@ -3274,8 +3321,8 @@ Selects a threshold for each pixel based on a range of intensity
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::adaptiveThresholdImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::adaptiveThresholdImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -3326,8 +3373,8 @@ Adds new image to Imagick object image list
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::addImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::addImage</span> ( <span
 class="methodparam"><span class="type">Imagick</span> `$source`</span> )
 
 Adds new image to Imagick object from the current position of the source
@@ -3354,8 +3401,8 @@ Adds random noise to the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::addNoiseImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::addNoiseImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$noise_type`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$channel`<span class="initializer"> =
@@ -3403,8 +3450,8 @@ Transforms an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::affineTransformImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::affineTransformImage</span> ( <span
 class="methodparam"><span class="type">ImagickDraw</span>
 `$matrix`</span> )
 
@@ -3455,8 +3502,8 @@ Animates an image or images
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::animateImages</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::animateImages</span> ( <span
 class="methodparam"><span class="type">string</span> `$x_server`</span>
 )
 
@@ -3484,8 +3531,8 @@ Annotates an image with text
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::annotateImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::annotateImage</span> ( <span
 class="methodparam"><span class="type">ImagickDraw</span>
 `$draw_settings`</span> , <span class="methodparam"><span
 class="type">float</span> `$x`</span> , <span class="methodparam"><span
@@ -3564,8 +3611,8 @@ Append a set of images
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::appendImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::appendImages</span> ( <span
 class="methodparam"><span class="type">bool</span> `$stack`</span> )
 
 Append a set of images into one larger image.
@@ -3667,8 +3714,8 @@ Average a set of images
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::averageImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::averageImages</span> ( <span
 class="methodparam">void</span> )
 
 Average a set of images.
@@ -3688,8 +3735,8 @@ Forces all pixels below the threshold into black
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::blackThresholdImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::blackThresholdImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$threshold`</span>
 )
 
@@ -3774,8 +3821,8 @@ Adds blur filter to image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::blurImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::blurImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> \[, <span class="methodparam"><span
@@ -3837,8 +3884,8 @@ Surrounds the image with a border
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::borderImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::borderImage</span> ( <span
 class="methodparam"><span class="type">mixed</span>
 `$bordercolor`</span> , <span class="methodparam"><span
 class="type">int</span> `$width`</span> , <span
@@ -3939,8 +3986,8 @@ Simulates a charcoal drawing
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::charcoalImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::charcoalImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> )
@@ -3982,8 +4029,8 @@ Removes a region of an image and trims
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::chopImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::chopImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 , <span class="methodparam"><span class="type">int</span> `$x`</span> ,
@@ -4075,8 +4122,8 @@ Clears all resources associated to Imagick object
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::clear</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::clear</span> ( <span
 class="methodparam">void</span> )
 
 Clears all resources associated to Imagick object
@@ -4092,8 +4139,8 @@ Clips along the first path from the 8BIM profile
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::clipImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::clipImage</span> ( <span
 class="methodparam">void</span> )
 
 Clips along the first path from the 8BIM profile, if present.
@@ -4142,8 +4189,8 @@ Clips along the named paths from the 8BIM profile
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::clipPathImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::clipPathImage</span> ( <span
 class="methodparam"><span class="type">string</span> `$pathname`</span>
 , <span class="methodparam"><span class="type">bool</span>
 `$inside`</span> )
@@ -4176,8 +4223,8 @@ Makes an exact copy of the Imagick object
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::clone</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::clone</span> ( <span
 class="methodparam">void</span> )
 
 Makes an exact copy of the Imagick object.
@@ -4219,8 +4266,8 @@ Replaces colors in the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::clutImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::clutImage</span> ( <span
 class="methodparam"><span class="type">Imagick</span>
 `$lookup_table`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$channel`<span class="initializer"> =
@@ -4273,8 +4320,8 @@ Composites a set of images
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::coalesceImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::coalesceImages</span> ( <span
 class="methodparam">void</span> )
 
 Composites a set of images while respecting any page offsets and
@@ -4303,8 +4350,8 @@ Changes the color value of any pixel that matches target
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::colorFloodfillImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::colorFloodfillImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fill`</span> ,
 <span class="methodparam"><span class="type">float</span> `$fuzz`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -4355,8 +4402,8 @@ Blends the fill color with the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::colorizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::colorizeImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$colorize`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$opacity`</span> \[, <span class="methodparam"><span
@@ -4478,8 +4525,8 @@ Combines one or more images into a single image
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::combineImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::combineImages</span> ( <span
 class="methodparam"><span class="type">int</span> `$channelType`</span>
 )
 
@@ -4511,8 +4558,8 @@ Adds a comment to your image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::commentImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::commentImage</span> ( <span
 class="methodparam"><span class="type">string</span> `$comment`</span> )
 
 Adds a comment to your image.
@@ -4561,8 +4608,8 @@ Returns the difference in one or more images
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::compareImageChannels</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::compareImageChannels</span> ( <span
 class="methodparam"><span class="type">Imagick</span> `$image`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$channelType`</span> , <span class="methodparam"><span
@@ -4600,8 +4647,8 @@ Returns the maximum bounding region between images
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::compareImageLayers</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::compareImageLayers</span> ( <span
 class="methodparam"><span class="type">int</span> `$method`</span> )
 
 Compares each image with the next in a sequence and returns the maximum
@@ -4654,8 +4701,8 @@ Compares an image to a reconstructed image
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::compareImages</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::compareImages</span> ( <span
 class="methodparam"><span class="type">Imagick</span> `$compare`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$metric`</span> )
@@ -4754,7 +4801,8 @@ The Imagick constructor
 
 ### 说明
 
-<span class="methodname">Imagick::\_\_construct</span> (\[ <span
+<span class="modifier">public</span> <span
+class="methodname">Imagick::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$files`</span> \] )
 
 Creates an Imagick instance for a specified image or set of images.
@@ -4780,8 +4828,8 @@ Change the contrast of the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::contrastImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::contrastImage</span> ( <span
 class="methodparam"><span class="type">bool</span> `$sharpen`</span> )
 
 Enhances the intensity differences between the lighter and darker
@@ -4827,8 +4875,8 @@ Enhances the contrast of a color image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::contrastStretchImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::contrastStretchImage</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$black_point`</span> , <span class="methodparam"><span
 class="type">float</span> `$white_point`</span> \[, <span
@@ -4864,8 +4912,8 @@ Applies a custom convolution kernel to the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::convolveImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::convolveImage</span> ( <span
 class="methodparam"><span class="type">array</span> `$kernel`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
@@ -5028,8 +5076,8 @@ Returns a reference to the current Imagick object
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::current</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::current</span> ( <span
 class="methodparam">void</span> )
 
 Returns reference to the current imagick object with image pointer at
@@ -5050,8 +5098,8 @@ Displaces an image's colormap
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::cycleColormapImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::cycleColormapImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$displace`</span> )
 
 Displaces an image's colormap by a given number of positions. If you
@@ -5078,8 +5126,8 @@ Deciphers an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::decipherImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::decipherImage</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$passphrase`</span> )
 
@@ -5107,8 +5155,8 @@ Returns certain pixel differences between images
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::deconstructImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::deconstructImages</span> ( <span
 class="methodparam">void</span> )
 
 Compares each image with the next in a sequence and returns the maximum
@@ -5129,8 +5177,8 @@ Delete image artifact
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::deleteImageArtifact</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::deleteImageArtifact</span> ( <span
 class="methodparam"><span class="type">string</span> `$artifact`</span>
 )
 
@@ -5242,8 +5290,8 @@ Reduces the speckle noise in an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::despeckleImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::despeckleImage</span> ( <span
 class="methodparam">void</span> )
 
 Reduces the speckle noise in an image while preserving the edges of the
@@ -5280,8 +5328,8 @@ Destroys the Imagick object
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::destroy</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::destroy</span> ( <span
 class="methodparam">void</span> )
 
 Destroys the Imagick object and frees all resources associated with it.
@@ -5299,8 +5347,8 @@ Displays an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::displayImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::displayImage</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$servername`</span> )
 
@@ -5326,8 +5374,8 @@ Displays an image or image sequence
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::displayImages</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::displayImages</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$servername`</span> )
 
@@ -5353,8 +5401,8 @@ Distorts an image using various distortion methods
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::distortImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::distortImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$method`</span> ,
 <span class="methodparam"><span class="type">array</span>
 `$arguments`</span> , <span class="methodparam"><span
@@ -5478,8 +5526,8 @@ Enhance edges within the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::edgeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::edgeImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> )
 
 Enhance edges within the image with a convolution filter of the given
@@ -5521,8 +5569,8 @@ Returns a grayscale image with a three-dimensional effect
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::embossImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::embossImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> )
@@ -5571,8 +5619,8 @@ Enciphers an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::encipherImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::encipherImage</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$passphrase`</span> )
 
@@ -5601,8 +5649,8 @@ Improves the quality of a noisy image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::enhanceImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::enhanceImage</span> ( <span
 class="methodparam">void</span> )
 
 Applies a digital filter that improves the quality of a noisy image.
@@ -5638,8 +5686,8 @@ Equalizes the image histogram
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::equalizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::equalizeImage</span> ( <span
 class="methodparam">void</span> )
 
 Equalizes the image histogram.
@@ -5675,8 +5723,8 @@ Applies an expression to an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::evaluateImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::evaluateImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$op`</span> , <span
 class="methodparam"><span class="type">float</span> `$constant`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -5840,8 +5888,8 @@ Set image size
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::extentImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::extentImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 , <span class="methodparam"><span class="type">int</span> `$x`</span> ,
@@ -5963,8 +6011,8 @@ Merges a sequence of images
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::flattenImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::flattenImages</span> ( <span
 class="methodparam">void</span> )
 
 Merges a sequence of images. This is useful for combining Photoshop
@@ -5985,8 +6033,8 @@ Creates a vertical mirror image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::flipImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::flipImage</span> ( <span
 class="methodparam">void</span> )
 
 Creates a vertical mirror image by reflecting the pixels around the
@@ -6023,8 +6071,8 @@ Changes the color value of any pixel that matches target
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::floodFillPaintImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::floodFillPaintImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fill`</span> ,
 <span class="methodparam"><span class="type">float</span> `$fuzz`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -6125,8 +6173,8 @@ Creates a vertical mirror image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::flopImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::flopImage</span> ( <span
 class="methodparam">void</span> )
 
 Creates a vertical mirror image by reflecting the pixels around the
@@ -6251,8 +6299,8 @@ Adds a simulated three-dimensional border
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::frameImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::frameImage</span> ( <span
 class="methodparam"><span class="type">mixed</span>
 `$matte_color`</span> , <span class="methodparam"><span
 class="type">int</span> `$width`</span> , <span
@@ -6436,8 +6484,8 @@ Evaluate expression for each pixel in the image
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::fxImage</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::fxImage</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$expression`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$channel`<span class="initializer"> =
@@ -6494,8 +6542,8 @@ Gamma-corrects an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::gammaImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::gammaImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$gamma`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
@@ -6548,8 +6596,8 @@ Blurs an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::gaussianBlurImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::gaussianBlurImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> \[, <span class="methodparam"><span
@@ -6606,7 +6654,7 @@ Gets the colorspace
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getColorspace</span> ( <span
 class="methodparam">void</span> )
 
@@ -6625,7 +6673,7 @@ Gets the object compression type
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getCompression</span> ( <span
 class="methodparam">void</span> )
 
@@ -6642,7 +6690,7 @@ Gets the object compression quality
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getCompressionQuality</span> ( <span
 class="methodparam">void</span> )
 
@@ -6659,8 +6707,8 @@ Returns the ImageMagick API copyright as a string
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getCopyright</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getCopyright</span> ( <span
 class="methodparam">void</span> )
 
 Returns the ImageMagick API copyright as a string.
@@ -6677,8 +6725,8 @@ The filename associated with an image sequence
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getFilename</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getFilename</span> ( <span
 class="methodparam">void</span> )
 
 Returns the filename associated with an image sequence.
@@ -6698,8 +6746,8 @@ Gets font
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getFont</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getFont</span> ( <span
 class="methodparam">void</span> )
 
 Returns the objects font property. 此方法在Imagick基于ImageMagick
@@ -6723,8 +6771,8 @@ Returns the format of the Imagick object
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getFormat</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getFormat</span> ( <span
 class="methodparam">void</span> )
 
 Returns the format of the Imagick object.
@@ -6744,7 +6792,7 @@ Gets the gravity
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getGravity</span> ( <span
 class="methodparam">void</span> )
 
@@ -6763,8 +6811,8 @@ Returns the ImageMagick home URL
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getHomeURL</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getHomeURL</span> ( <span
 class="methodparam">void</span> )
 
 Returns the ImageMagick home URL.
@@ -6780,8 +6828,8 @@ Returns a new Imagick object
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::getImage</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::getImage</span> ( <span
 class="methodparam">void</span> )
 
 Returns a new Imagick object with the current image sequence.
@@ -6825,8 +6873,8 @@ Get image artifact
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getImageArtifact</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getImageArtifact</span> ( <span
 class="methodparam"><span class="type">string</span> `$artifact`</span>
 )
 
@@ -6884,7 +6932,8 @@ Returns the image background color
 
 ### 说明
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">Imagick::getImageBackgroundColor</span> ( <span
 class="methodparam">void</span> )
 
@@ -6905,8 +6954,8 @@ Returns the image sequence as a blob
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getImageBlob</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getImageBlob</span> ( <span
 class="methodparam">void</span> )
 
 Implements direct to memory image formats. It returns the image sequence
@@ -6929,8 +6978,8 @@ Returns the chromaticy blue primary point
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageBluePrimary</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageBluePrimary</span> ( <span
 class="methodparam">void</span> )
 
 Returns the chromaticity blue primary point for the image.
@@ -6958,7 +7007,8 @@ Returns the image border color
 
 ### 说明
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">Imagick::getImageBorderColor</span> ( <span
 class="methodparam">void</span> )
 
@@ -6979,7 +7029,7 @@ Gets the depth for a particular image channel
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageChannelDepth</span> ( <span
 class="methodparam"><span class="type">int</span> `$channel`</span> )
 
@@ -7005,9 +7055,9 @@ Compares image channels of an image to a reconstructed image
 
 ### 说明
 
-<span class="type">float</span> <span
-class="methodname">Imagick::getImageChannelDistortion</span> ( <span
-class="methodparam"><span class="type">Imagick</span>
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">Imagick::getImageChannelDistortion</span> (
+<span class="methodparam"><span class="type">Imagick</span>
 `$reference`</span> , <span class="methodparam"><span
 class="type">int</span> `$channel`</span> , <span
 class="methodparam"><span class="type">int</span> `$metric`</span> )
@@ -7045,9 +7095,9 @@ Gets channel distortions
 
 ### 说明
 
-<span class="type">float</span> <span
-class="methodname">Imagick::getImageChannelDistortions</span> ( <span
-class="methodparam"><span class="type">Imagick</span>
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">Imagick::getImageChannelDistortions</span> (
+<span class="methodparam"><span class="type">Imagick</span>
 `$reference`</span> , <span class="methodparam"><span
 class="type">int</span> `$metric`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$channel`<span
@@ -7092,8 +7142,8 @@ Gets the extrema for one or more image channels
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageChannelExtrema</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageChannelExtrema</span> ( <span
 class="methodparam"><span class="type">int</span> `$channel`</span> )
 
 Gets the extrema for one or more image channels. Return value is an
@@ -7154,8 +7204,8 @@ Gets the mean and standard deviation
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageChannelMean</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageChannelMean</span> ( <span
 class="methodparam"><span class="type">int</span> `$channel`</span> )
 
 Gets the mean and standard deviation of one or more image channels.
@@ -7185,8 +7235,8 @@ Gets channel range
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageChannelRange</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageChannelRange</span> ( <span
 class="methodparam"><span class="type">int</span> `$channel`</span> )
 
 Gets the range for one or more image channels.
@@ -7216,9 +7266,9 @@ Returns statistics for each channel in the image
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageChannelStatistics</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageChannelStatistics</span> (
+<span class="methodparam">void</span> )
 
 Returns statistics for each channel in the image. The statistics include
 the channel depth, its minima and maxima, the mean, and the standard
@@ -7239,8 +7289,8 @@ Gets image clip mask
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::getImageClipMask</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::getImageClipMask</span> ( <span
 class="methodparam">void</span> )
 
 Returns the image clip mask. The clip mask is an Imagick object
@@ -7262,7 +7312,8 @@ Returns the color of the specified colormap index
 
 ### 说明
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">Imagick::getImageColormapColor</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
@@ -7288,7 +7339,7 @@ Gets the number of unique colors in the image
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageColors</span> ( <span
 class="methodparam">void</span> )
 
@@ -7306,7 +7357,7 @@ Gets the image colorspace
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageColorspace</span> ( <span
 class="methodparam">void</span> )
 
@@ -7324,7 +7375,7 @@ Returns the composite operator associated with the image
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageCompose</span> ( <span
 class="methodparam">void</span> )
 
@@ -7341,7 +7392,7 @@ Gets the current image's compression type
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageCompression</span> ( <span
 class="methodparam">void</span> )
 
@@ -7358,7 +7409,7 @@ Gets the current image's compression quality
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageCompressionQuality</span> ( <span
 class="methodparam">void</span> )
 
@@ -7375,7 +7426,7 @@ Gets the image delay
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageDelay</span> ( <span
 class="methodparam">void</span> )
 
@@ -7396,7 +7447,7 @@ Gets the image depth
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageDepth</span> ( <span
 class="methodparam">void</span> )
 
@@ -7413,7 +7464,7 @@ Gets the image disposal method
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageDispose</span> ( <span
 class="methodparam">void</span> )
 
@@ -7434,8 +7485,8 @@ Compares an image to a reconstructed image
 
 ### 说明
 
-<span class="type">float</span> <span
-class="methodname">Imagick::getImageDistortion</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">Imagick::getImageDistortion</span> ( <span
 class="methodparam"><span class="type">MagickWand</span>
 `$reference`</span> , <span class="methodparam"><span
 class="type">int</span> `$metric`</span> )
@@ -7472,8 +7523,8 @@ Gets the extrema for the image
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageExtrema</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageExtrema</span> ( <span
 class="methodparam">void</span> )
 
 Gets the extrema for the image. Returns an associative array with the
@@ -7494,8 +7545,8 @@ Returns the filename of a particular image in a sequence
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getImageFilename</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getImageFilename</span> ( <span
 class="methodparam">void</span> )
 
 Returns the filename of a particular image in a sequence.
@@ -7515,8 +7566,8 @@ Returns the format of a particular image in a sequence
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getImageFormat</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getImageFormat</span> ( <span
 class="methodparam">void</span> )
 
 Returns the format of a particular image in a sequence.
@@ -7536,8 +7587,8 @@ Gets the image gamma
 
 ### 说明
 
-<span class="type">float</span> <span
-class="methodname">Imagick::getImageGamma</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">Imagick::getImageGamma</span> ( <span
 class="methodparam">void</span> )
 
 Gets the image gamma.
@@ -7557,8 +7608,8 @@ Gets the width and height as an associative array
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageGeometry</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageGeometry</span> ( <span
 class="methodparam">void</span> )
 
 Returns the width and height as an associative array.
@@ -7593,7 +7644,7 @@ Gets the image gravity
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageGravity</span> ( <span
 class="methodparam">void</span> )
 
@@ -7614,8 +7665,8 @@ Returns the chromaticy green primary point
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageGreenPrimary</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageGreenPrimary</span> ( <span
 class="methodparam">void</span> )
 
 Returns the chromaticity green primary point. Returns an array with the
@@ -7637,7 +7688,7 @@ Returns the image height
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageHeight</span> ( <span
 class="methodparam">void</span> )
 
@@ -7658,8 +7709,8 @@ Gets the image histogram
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageHistogram</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageHistogram</span> ( <span
 class="methodparam">void</span> )
 
 Returns the image histogram as an array of ImagickPixel objects.
@@ -7778,7 +7829,7 @@ Gets the index of the current active image
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageIndex</span> ( <span
 class="methodparam">void</span> )
 
@@ -7801,7 +7852,7 @@ Gets the image interlace scheme
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageInterlaceScheme</span> ( <span
 class="methodparam">void</span> )
 
@@ -7819,7 +7870,7 @@ Returns the interpolation method
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageInterpolateMethod</span> ( <span
 class="methodparam">void</span> )
 
@@ -7841,7 +7892,7 @@ Gets the image iterations
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageIterations</span> ( <span
 class="methodparam">void</span> )
 
@@ -7862,7 +7913,7 @@ Returns the image length in bytes
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageLength</span> ( <span
 class="methodparam">void</span> )
 
@@ -7914,8 +7965,8 @@ Return if the image has a matte channel
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::getImageMatte</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::getImageMatte</span> ( <span
 class="methodparam">void</span> )
 
 Returns **`TRUE`** if the image has a matte channel otherwise false.
@@ -7936,7 +7987,8 @@ Returns the image matte color
 
 ### 说明
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">Imagick::getImageMatteColor</span> ( <span
 class="methodparam">void</span> )
 
@@ -7976,7 +8028,7 @@ Gets the image orientation
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageOrientation</span> ( <span
 class="methodparam">void</span> )
 
@@ -7998,8 +8050,8 @@ Returns the page geometry
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImagePage</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImagePage</span> ( <span
 class="methodparam">void</span> )
 
 Returns the page geometry associated with the image in an array with the
@@ -8021,7 +8073,8 @@ Returns the color of the specified pixel
 
 ### 说明
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">Imagick::getImagePixelColor</span> ( <span
 class="methodparam"><span class="type">int</span> `$x`</span> , <span
 class="methodparam"><span class="type">int</span> `$y`</span> )
@@ -8051,8 +8104,8 @@ Returns the named image profile
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getImageProfile</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getImageProfile</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 Returns the named image profile.
@@ -8077,8 +8130,8 @@ Returns the image profiles
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageProfiles</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageProfiles</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
@@ -8109,8 +8162,8 @@ Returns the image properties
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageProperties</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageProperties</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
@@ -8166,8 +8219,8 @@ Returns the named image property
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getImageProperty</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getImageProperty</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 Returns the named image property. 此方法在Imagick基于ImageMagick
@@ -8211,8 +8264,8 @@ Returns the chromaticity red primary point
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageRedPrimary</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageRedPrimary</span> ( <span
 class="methodparam">void</span> )
 
 Returns the chromaticity red primary point as an array with the keys "x"
@@ -8234,8 +8287,8 @@ Extracts a region of the image
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::getImageRegion</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::getImageRegion</span> ( <span
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 , <span class="methodparam"><span class="type">int</span> `$x`</span> ,
@@ -8272,7 +8325,7 @@ Gets the image rendering intent
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageRenderingIntent</span> ( <span
 class="methodparam">void</span> )
 
@@ -8315,8 +8368,8 @@ Returns all image sequences as a blob
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getImagesBlob</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getImagesBlob</span> ( <span
 class="methodparam">void</span> )
 
 Implements direct to memory image formats. It returns all image
@@ -8336,7 +8389,7 @@ Gets the image scene
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageScene</span> ( <span
 class="methodparam">void</span> )
 
@@ -8357,8 +8410,8 @@ Generates an SHA-256 message digest
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getImageSignature</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getImageSignature</span> ( <span
 class="methodparam">void</span> )
 
 Generates an SHA-256 message digest for the image pixel stream.
@@ -8382,7 +8435,7 @@ Returns the image length in bytes
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageSize</span> ( <span
 class="methodparam">void</span> )
 
@@ -8400,7 +8453,7 @@ Gets the image ticks-per-second
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageTicksPerSecond</span> ( <span
 class="methodparam">void</span> )
 
@@ -8421,8 +8474,8 @@ Gets the image total ink density
 
 ### 说明
 
-<span class="type">float</span> <span
-class="methodname">Imagick::getImageTotalInkDensity</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">Imagick::getImageTotalInkDensity</span> ( <span
 class="methodparam">void</span> )
 
 Gets the image total ink density.
@@ -8439,7 +8492,7 @@ Gets the potential image type
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageType</span> ( <span
 class="methodparam">void</span> )
 
@@ -8495,7 +8548,7 @@ Returns the virtual pixel method
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageVirtualPixelMethod</span> ( <span
 class="methodparam">void</span> )
 
@@ -8516,8 +8569,8 @@ Returns the chromaticity white point
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getImageWhitePoint</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getImageWhitePoint</span> ( <span
 class="methodparam">void</span> )
 
 Returns the chromaticity white point as an associative array with the
@@ -8539,7 +8592,7 @@ Returns the image width
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getImageWidth</span> ( <span
 class="methodparam">void</span> )
 
@@ -8560,7 +8613,7 @@ Gets the object interlace scheme
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getInterlaceScheme</span> ( <span
 class="methodparam">void</span> )
 
@@ -8582,7 +8635,7 @@ Gets the index of the current active image
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getIteratorIndex</span> ( <span
 class="methodparam">void</span> )
 
@@ -8629,7 +8682,7 @@ Returns the number of images in the object
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getNumberImages</span> ( <span
 class="methodparam">void</span> )
 
@@ -8650,8 +8703,8 @@ Returns a value associated with the specified key
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getOption</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getOption</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> )
 
 Returns a value associated within the object for the specified key.
@@ -8676,8 +8729,8 @@ Returns the ImageMagick package name
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getPackageName</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getPackageName</span> ( <span
 class="methodparam">void</span> )
 
 Returns the ImageMagick package name.
@@ -8697,8 +8750,8 @@ Returns the page geometry
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getPage</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getPage</span> ( <span
 class="methodparam">void</span> )
 
 Returns the page geometry associated with the Imagick object in an
@@ -8717,7 +8770,8 @@ Returns a MagickPixelIterator
 
 ### 说明
 
-<span class="type">ImagickPixelIterator</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixelIterator</span> <span
 class="methodname">Imagick::getPixelIterator</span> ( <span
 class="methodparam">void</span> )
 
@@ -8765,7 +8819,8 @@ Get an ImagickPixelIterator for an image section
 
 ### 说明
 
-<span class="type">ImagickPixelIterator</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixelIterator</span> <span
 class="methodname">Imagick::getPixelRegionIterator</span> ( <span
 class="methodparam"><span class="type">int</span> `$x`</span> , <span
 class="methodparam"><span class="type">int</span> `$y`</span> , <span
@@ -8827,8 +8882,8 @@ Gets point size
 
 ### 说明
 
-<span class="type">float</span> <span
-class="methodname">Imagick::getPointSize</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">Imagick::getPointSize</span> ( <span
 class="methodparam">void</span> )
 
 Returns the objects point size property. 此方法在Imagick基于ImageMagick
@@ -8869,8 +8924,8 @@ Gets the quantum depth
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getQuantumDepth</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getQuantumDepth</span> ( <span
 class="methodparam">void</span> )
 
 Returns the Imagick quantum depth as a string.
@@ -8890,8 +8945,8 @@ Returns the Imagick quantum range
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getQuantumRange</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getQuantumRange</span> ( <span
 class="methodparam">void</span> )
 
 Returns the quantum range for the Imagick instance.
@@ -8934,8 +8989,8 @@ Returns the ImageMagick release date
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::getReleaseDate</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::getReleaseDate</span> ( <span
 class="methodparam">void</span> )
 
 Returns the ImageMagick release date as a string.
@@ -8955,7 +9010,7 @@ Returns the specified resource's memory usage
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getResource</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> )
 
@@ -8982,7 +9037,7 @@ Returns the specified resource limit
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getResourceLimit</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> )
 
@@ -9014,8 +9069,8 @@ Gets the horizontal and vertical sampling factor
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getSamplingFactors</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getSamplingFactors</span> ( <span
 class="methodparam">void</span> )
 
 Gets the horizontal and vertical sampling factor.
@@ -9036,8 +9091,8 @@ Returns the size associated with the Imagick object
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getSize</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getSize</span> ( <span
 class="methodparam">void</span> )
 
 Get the size in pixels associated with the Imagick object, previously
@@ -9093,7 +9148,7 @@ Returns the size offset
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">Imagick::getSizeOffset</span> ( <span
 class="methodparam">void</span> )
 
@@ -9115,8 +9170,8 @@ Returns the ImageMagick API version
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::getVersion</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::getVersion</span> ( <span
 class="methodparam">void</span> )
 
 Returns the ImageMagick API version as a string and as a number.
@@ -9190,8 +9245,8 @@ Checks if the object has more images
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::hasNextImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::hasNextImage</span> ( <span
 class="methodparam">void</span> )
 
 Returns **`TRUE`** if the object has more images when traversing the
@@ -9209,8 +9264,8 @@ Checks if the object has a previous image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::hasPreviousImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::hasPreviousImage</span> ( <span
 class="methodparam">void</span> )
 
 Returns **`TRUE`** if the object has more images when traversing the
@@ -9268,8 +9323,8 @@ Identifies an image and fetches attributes
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::identifyImage</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::identifyImage</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$appendRawOutput`<span class="initializer"> = **`FALSE`**</span></span>
 \] )
@@ -9326,8 +9381,8 @@ Creates a new image as a copy
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::implodeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::implodeImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> )
 
 Creates a new image that is a copy of an existing one with the image
@@ -9504,8 +9559,8 @@ Adds a label to an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::labelImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::labelImage</span> ( <span
 class="methodparam"><span class="type">string</span> `$label`</span> )
 
 Adds a label to an image.
@@ -9526,8 +9581,8 @@ Adjusts the levels of an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::levelImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::levelImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$blackPoint`</span>
 , <span class="methodparam"><span class="type">float</span>
 `$gamma`</span> , <span class="methodparam"><span
@@ -9597,8 +9652,8 @@ Stretches with saturation the image intensity
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::linearStretchImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::linearStretchImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$blackPoint`</span>
 , <span class="methodparam"><span class="type">float</span>
 `$whitePoint`</span> )
@@ -9642,8 +9697,8 @@ Animates an image or images
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::liquidRescaleImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::liquidRescaleImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 , <span class="methodparam"><span class="type">float</span>
@@ -9708,8 +9763,8 @@ Scales an image proportionally 2x
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::magnifyImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::magnifyImage</span> ( <span
 class="methodparam">void</span> )
 
 Is a convenience method that scales an image proportionally to twice its
@@ -9751,8 +9806,8 @@ image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::mapImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::mapImage</span> ( <span
 class="methodparam"><span class="type">Imagick</span> `$map`</span> ,
 <span class="methodparam"><span class="type">bool</span>
 `$dither`</span> )
@@ -9782,8 +9837,8 @@ Changes the transparency value of a color
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::matteFloodfillImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::matteFloodfillImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$alpha`</span> ,
 <span class="methodparam"><span class="type">float</span> `$fuzz`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -9841,8 +9896,8 @@ Applies a digital filter
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::medianFilterImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::medianFilterImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> )
 
 Applies a digital filter that improves the quality of a noisy image.
@@ -9885,8 +9940,8 @@ Merges image layers
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::mergeImageLayers</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::mergeImageLayers</span> ( <span
 class="methodparam"><span class="type">int</span> `$layer_method`</span>
 )
 
@@ -9941,8 +9996,8 @@ Scales an image proportionally to half its size
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::minifyImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::minifyImage</span> ( <span
 class="methodparam">void</span> )
 
 Is a convenience method that scales an image proportionally to one-half
@@ -9959,8 +10014,8 @@ Control the brightness, saturation, and hue
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::modulateImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::modulateImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$brightness`</span>
 , <span class="methodparam"><span class="type">float</span>
 `$saturation`</span> , <span class="methodparam"><span
@@ -10007,8 +10062,8 @@ Creates a composite image
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::montageImage</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::montageImage</span> ( <span
 class="methodparam"><span class="type">ImagickDraw</span> `$draw`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$tile_geometry`</span> , <span class="methodparam"><span
@@ -10051,8 +10106,8 @@ Method morphs a set of images
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::morphImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::morphImages</span> ( <span
 class="methodparam"><span class="type">int</span>
 `$number_frames`</span> )
 
@@ -10539,8 +10594,8 @@ Forms a mosaic from images
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::mosaicImages</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::mosaicImages</span> ( <span
 class="methodparam">void</span> )
 
 Inlays an image sequence to form a single coherent picture. It returns a
@@ -10558,8 +10613,8 @@ Simulates motion blur
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::motionBlurImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::motionBlurImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> , <span class="methodparam"><span
@@ -10619,8 +10674,8 @@ Negates the colors in the reference image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::negateImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::negateImage</span> ( <span
 class="methodparam"><span class="type">bool</span> `$gray`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
@@ -10735,8 +10790,8 @@ Creates a new image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::newPseudoImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::newPseudoImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -10791,8 +10846,8 @@ Moves to the next image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::nextImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::nextImage</span> ( <span
 class="methodparam">void</span> )
 
 Associates the next image in the image list with an Imagick object.
@@ -10808,8 +10863,8 @@ Enhances the contrast of a color image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::normalizeImage</span> (\[ <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::normalizeImage</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
 
@@ -10854,8 +10909,8 @@ Simulates an oil painting
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::oilPaintImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::oilPaintImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> )
 
 Applies a special effect filter that simulates an oil painting. Each
@@ -10894,8 +10949,8 @@ Changes the color value of any pixel that matches target
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::opaquePaintImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::opaquePaintImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$target`</span> ,
 <span class="methodparam"><span class="type">mixed</span> `$fill`</span>
 , <span class="methodparam"><span class="type">float</span>
@@ -10941,8 +10996,8 @@ Removes repeated portions of images to optimize
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::optimizeImageLayers</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::optimizeImageLayers</span> ( <span
 class="methodparam">void</span> )
 
 Compares each image the GIF disposed forms of the previous image in the
@@ -10995,8 +11050,8 @@ Performs an ordered dither
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::orderedPosterizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::orderedPosterizeImage</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$threshold_map`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$channel`<span class="initializer"> =
@@ -11066,8 +11121,8 @@ Changes the color value of any pixel that matches target
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::paintFloodfillImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::paintFloodfillImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fill`</span> ,
 <span class="methodparam"><span class="type">float</span> `$fuzz`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -11124,8 +11179,8 @@ Change any pixel that matches color
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::paintOpaqueImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::paintOpaqueImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$target`</span> ,
 <span class="methodparam"><span class="type">mixed</span> `$fill`</span>
 , <span class="methodparam"><span class="type">float</span>
@@ -11179,8 +11234,8 @@ Changes any pixel that matches color with the color defined by fill
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::paintTransparentImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::paintTransparentImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$target`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$alpha`</span> , <span class="methodparam"><span
@@ -11222,8 +11277,8 @@ Fetch basic attributes about the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::pingImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::pingImage</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )
 
@@ -11246,8 +11301,8 @@ Quickly fetch attributes
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::pingImageBlob</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::pingImageBlob</span> ( <span
 class="methodparam"><span class="type">string</span> `$image`</span> )
 
 This method can be used to query image width, height, size, and format
@@ -11300,8 +11355,8 @@ Get basic image attributes in a lightweight manner
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::pingImageFile</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::pingImageFile</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$filehandle`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$fileName`</span> \] )
@@ -11356,8 +11411,8 @@ Simulates a Polaroid picture
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::polaroidImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::polaroidImage</span> ( <span
 class="methodparam"><span class="type">ImagickDraw</span>
 `$properties`</span> , <span class="methodparam"><span
 class="type">float</span> `$angle`</span> )
@@ -11406,8 +11461,8 @@ Reduces the image to a limited number of color level
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::posterizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::posterizeImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$levels`</span> ,
 <span class="methodparam"><span class="type">bool</span>
 `$dither`</span> )
@@ -11450,8 +11505,8 @@ Quickly pin-point appropriate parameters for image processing
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::previewImages</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::previewImages</span> ( <span
 class="methodparam"><span class="type">int</span> `$preview`</span> )
 
 Tiles 9 thumbnails of the specified image with an image processing
@@ -11479,8 +11534,8 @@ Move to the previous image in the object
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::previousImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::previousImage</span> ( <span
 class="methodparam">void</span> )
 
 Assocates the previous image in an image list with the Imagick object.
@@ -11496,8 +11551,8 @@ Adds or removes a profile from an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::profileImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::profileImage</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$profile`</span> )
@@ -11528,8 +11583,8 @@ Analyzes the colors within a reference image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::quantizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::quantizeImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$numberColors`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$colorspace`</span> , <span class="methodparam"><span
@@ -11582,8 +11637,8 @@ Analyzes the colors within a sequence of images
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::quantizeImages</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::quantizeImages</span> ( <span
 class="methodparam"><span class="type">int</span> `$numberColors`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$colorspace`</span> , <span class="methodparam"><span
@@ -11619,8 +11674,8 @@ Returns an array representing the font metrics
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::queryFontMetrics</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::queryFontMetrics</span> ( <span
 class="methodparam"><span class="type">ImagickDraw</span>
 `$properties`</span> , <span class="methodparam"><span
 class="type">string</span> `$text`</span> \[, <span
@@ -11678,8 +11733,8 @@ Returns the configured fonts
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::queryFonts</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::queryFonts</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \] )
 
@@ -11725,8 +11780,8 @@ Returns formats supported by Imagick
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">Imagick::queryFormats</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">Imagick::queryFormats</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \] )
 
@@ -11788,8 +11843,8 @@ Radial blurs an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::radialBlurImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::radialBlurImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$angle`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$channel`<span
 class="initializer"> = Imagick::CHANNEL\_DEFAULT</span></span> \] )
@@ -11832,8 +11887,8 @@ Creates a simulated 3d button-like effect
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::raiseImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::raiseImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 , <span class="methodparam"><span class="type">int</span> `$x`</span> ,
@@ -11887,8 +11942,8 @@ Creates a high-contrast, two-color image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::randomThresholdImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::randomThresholdImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$low`</span> ,
 <span class="methodparam"><span class="type">float</span> `$high`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -11945,8 +12000,8 @@ Reads image from filename
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::readImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::readImage</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )
 
@@ -12024,8 +12079,8 @@ Reads image from open filehandle
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::readImageFile</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::readImageFile</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$filehandle`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$fileName`<span class="initializer"> =
@@ -12081,8 +12136,8 @@ Recolors image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::recolorImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::recolorImage</span> ( <span
 class="methodparam"><span class="type">array</span> `$matrix`</span> )
 
 Translate, scale, shear, or rotate image colors. This method supports
@@ -12141,8 +12196,8 @@ Smooths the contours of an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::reduceNoiseImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::reduceNoiseImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> )
 
 Smooths the contours of an image while still preserving edge
@@ -12219,8 +12274,8 @@ Removes an image from the image list
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::removeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::removeImage</span> ( <span
 class="methodparam">void</span> )
 
 Removes an image from the image list.
@@ -12240,8 +12295,8 @@ Removes the named image profile and returns it
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::removeImageProfile</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::removeImageProfile</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 Removes the named image profile and returns it.
@@ -12265,8 +12320,8 @@ Renders all preceding drawing commands
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::render</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::render</span> ( <span
 class="methodparam">void</span> )
 
 Renders all preceding drawing commands.
@@ -12282,8 +12337,8 @@ Resample image to desired resolution
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::resampleImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::resampleImage</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$x_resolution`</span> , <span class="methodparam"><span
 class="type">float</span> `$y_resolution`</span> , <span
@@ -12331,8 +12386,8 @@ Reset image page
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::resetImagePage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::resetImagePage</span> ( <span
 class="methodparam"><span class="type">string</span> `$page`</span> )
 
 The page definition as a string. The string is in format WxH+x+y.
@@ -12354,8 +12409,8 @@ Scales an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::resizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::resizeImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span> ,
 <span class="methodparam"><span class="type">int</span> `$filter`</span>
@@ -12450,8 +12505,8 @@ Offsets an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::rollImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::rollImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$x`</span> , <span
 class="methodparam"><span class="type">int</span> `$y`</span> )
 
@@ -12492,8 +12547,8 @@ Rotates an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::rotateImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::rotateImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$background`</span>
 , <span class="methodparam"><span class="type">float</span>
 `$degrees`</span> )
@@ -12596,8 +12651,8 @@ Rounds image corners
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::roundCorners</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::roundCorners</span> ( <span
 class="methodparam"><span class="type">float</span> `$x_rounding`</span>
 , <span class="methodparam"><span class="type">float</span>
 `$y_rounding`</span> \[, <span class="methodparam"><span
@@ -12659,8 +12714,8 @@ Scales an image with pixel sampling
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::sampleImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::sampleImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span> )
 
@@ -12685,8 +12740,8 @@ Scales the size of an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::scaleImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::scaleImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$cols`</span> , <span
 class="methodparam"><span class="type">int</span> `$rows`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$bestfit`<span
@@ -12858,8 +12913,8 @@ Separates a channel from the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::separateImageChannel</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::separateImageChannel</span> ( <span
 class="methodparam"><span class="type">int</span> `$channel`</span> )
 
 Separates a channel from the image and returns a grayscale image. A
@@ -12905,8 +12960,8 @@ Sepia tones an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::sepiaToneImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::sepiaToneImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$threshold`</span>
 )
 
@@ -12950,8 +13005,8 @@ Sets the object's default background color
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setBackgroundColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setBackgroundColor</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$background`</span>
 )
 
@@ -12978,8 +13033,8 @@ Set colorspace
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setColorspace</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setColorspace</span> ( <span
 class="methodparam"><span class="type">int</span> `$COLORSPACE`</span> )
 
 Sets the global colorspace value for the object.
@@ -13006,8 +13061,8 @@ Sets the object's default compression type
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setCompression</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setCompression</span> ( <span
 class="methodparam"><span class="type">int</span> `$compression`</span>
 )
 
@@ -13031,8 +13086,8 @@ Sets the object's default compression quality
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setCompressionQuality</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setCompressionQuality</span> ( <span
 class="methodparam"><span class="type">int</span> `$quality`</span> )
 
 Sets the object's default compression quality.
@@ -13093,8 +13148,8 @@ Sets the filename before you read or write the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setFilename</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setFilename</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )
 
@@ -13115,8 +13170,8 @@ Sets the Imagick iterator to the first image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setFirstIterator</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setFirstIterator</span> ( <span
 class="methodparam">void</span> )
 
 Sets the Imagick iterator to the first image.
@@ -13132,8 +13187,8 @@ Sets font
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setFont</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setFont</span> ( <span
 class="methodparam"><span class="type">string</span> `$font`</span> )
 
 Sets object's font property. This method can be used for example to set
@@ -13187,8 +13242,8 @@ Sets the format of the Imagick object
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setFormat</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setFormat</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> )
 
 Sets the format of the Imagick object.
@@ -13208,8 +13263,8 @@ Sets the gravity
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setGravity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setGravity</span> ( <span
 class="methodparam"><span class="type">int</span> `$gravity`</span> )
 
 Sets the global gravity property for the Imagick object.
@@ -13232,8 +13287,8 @@ Replaces image in the object
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImage</span> ( <span
 class="methodparam"><span class="type">Imagick</span> `$replace`</span>
 )
 
@@ -13281,8 +13336,8 @@ Sets image alpha channel
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageAlphaChannel</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageAlphaChannel</span> ( <span
 class="methodparam"><span class="type">int</span> `$mode`</span> )
 
 Activate or deactivate image alpha channel. The `mode` is one of the
@@ -13314,8 +13369,8 @@ Set image artifact
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageArtifact</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageArtifact</span> ( <span
 class="methodparam"><span class="type">string</span> `$artifact`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
@@ -13407,8 +13462,8 @@ Sets the image background color
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageBackgroundColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageBackgroundColor</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$background`</span>
 )
 
@@ -13443,8 +13498,8 @@ Sets the image bias for any method that convolves an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageBias</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageBias</span> ( <span
 class="methodparam"><span class="type">float</span> `$bias`</span> )
 
 Sets the image bias for any method that convolves an image (e.g.
@@ -13522,8 +13577,8 @@ Sets the image chromaticity blue primary point
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageBluePrimary</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageBluePrimary</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
@@ -13550,8 +13605,8 @@ Sets the image border color
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageBorderColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageBorderColor</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$border`</span> )
 
 Sets the image border color.
@@ -13582,8 +13637,8 @@ Sets the depth of a particular image channel
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageChannelDepth</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageChannelDepth</span> ( <span
 class="methodparam"><span class="type">int</span> `$channel`</span> ,
 <span class="methodparam"><span class="type">int</span> `$depth`</span>
 )
@@ -13615,8 +13670,8 @@ Sets image clip mask
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageClipMask</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageClipMask</span> ( <span
 class="methodparam"><span class="type">Imagick</span>
 `$clip_mask`</span> )
 
@@ -13685,8 +13740,8 @@ Sets the color of the specified colormap index
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageColormapColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageColormapColor</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">ImagickPixel</span>
 `$color`</span> )
@@ -13714,8 +13769,8 @@ Sets the image colorspace
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageColorspace</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageColorspace</span> ( <span
 class="methodparam"><span class="type">int</span> `$colorspace`</span> )
 
 Sets the image colorspace. This method should be used when creating new
@@ -13743,8 +13798,8 @@ Sets the image composite operator
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageCompose</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageCompose</span> ( <span
 class="methodparam"><span class="type">int</span> `$compose`</span> )
 
 Sets the image composite operator, useful for specifying how to
@@ -13821,8 +13876,8 @@ Sets the image delay
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageDelay</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageDelay</span> ( <span
 class="methodparam"><span class="type">int</span> `$delay`</span> )
 
 Sets the image delay. For an animated image this is the amount of time
@@ -13881,8 +13936,8 @@ Sets the image depth
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageDepth</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageDepth</span> ( <span
 class="methodparam"><span class="type">int</span> `$depth`</span> )
 
 Sets the image depth.
@@ -13906,8 +13961,8 @@ Sets the image disposal method
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageDispose</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageDispose</span> ( <span
 class="methodparam"><span class="type">int</span> `$dispose`</span> )
 
 Sets the image disposal method.
@@ -13931,8 +13986,8 @@ Sets the image size
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageExtent</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageExtent</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span> )
 
@@ -13959,8 +14014,8 @@ Sets the filename of a particular image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageFilename</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageFilename</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )
 
@@ -14007,8 +14062,8 @@ Sets the image gamma
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageGamma</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageGamma</span> ( <span
 class="methodparam"><span class="type">float</span> `$gamma`</span> )
 
 Sets the image gamma.
@@ -14032,8 +14087,8 @@ Sets the image gravity
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageGravity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageGravity</span> ( <span
 class="methodparam"><span class="type">int</span> `$gravity`</span> )
 
 Sets the gravity property for the current image. This method can be used
@@ -14057,8 +14112,8 @@ Sets the image chromaticity green primary point
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageGreenPrimary</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageGreenPrimary</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
@@ -14089,8 +14144,8 @@ Set the iterator position
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
 Set the iterator to the position in the image list specified with the
@@ -14119,8 +14174,8 @@ Sets the image compression
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageInterlaceScheme</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageInterlaceScheme</span> ( <span
 class="methodparam"><span class="type">int</span>
 `$interlace_scheme`</span> )
 
@@ -14145,9 +14200,10 @@ Sets the image interpolate pixel method
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageInterpolateMethod</span> ( <span
-class="methodparam"><span class="type">int</span> `$method`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageInterpolateMethod</span> (
+<span class="methodparam"><span class="type">int</span> `$method`</span>
+)
 
 Sets the image interpolate pixel method.
 
@@ -14167,8 +14223,8 @@ Sets the image iterations
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageIterations</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageIterations</span> ( <span
 class="methodparam"><span class="type">int</span> `$iterations`</span> )
 
 Sets the number of iterations an animated image is repeated.
@@ -14213,8 +14269,8 @@ Sets the image matte channel
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageMatte</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageMatte</span> ( <span
 class="methodparam"><span class="type">bool</span> `$matte`</span> )
 
 Sets the image matte channel. 此方法在Imagick基于ImageMagick
@@ -14240,8 +14296,8 @@ Sets the image matte color
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageMatteColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageMatteColor</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$matte`</span> )
 
 Sets the image matte color.
@@ -14275,8 +14331,8 @@ Sets the image opacity level
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageOpacity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageOpacity</span> ( <span
 class="methodparam"><span class="type">float</span> `$opacity`</span> )
 
 Sets the image to the specified opacity level.
@@ -14325,8 +14381,8 @@ Sets the image orientation
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageOrientation</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageOrientation</span> ( <span
 class="methodparam"><span class="type">int</span> `$orientation`</span>
 )
 
@@ -14366,8 +14422,8 @@ Sets the page geometry of the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImagePage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImagePage</span> ( <span
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 , <span class="methodparam"><span class="type">int</span> `$x`</span> ,
@@ -14400,8 +14456,8 @@ Adds a named profile to the Imagick object
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageProfile</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageProfile</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$profile`</span> )
@@ -14432,8 +14488,8 @@ Sets an image property
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageProperty</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageProperty</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
@@ -14479,8 +14535,8 @@ Sets the image chromaticity red primary point
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageRedPrimary</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageRedPrimary</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
@@ -14507,8 +14563,8 @@ Sets the image rendering intent
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageRenderingIntent</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageRenderingIntent</span> ( <span
 class="methodparam"><span class="type">int</span>
 `$rendering_intent`</span> )
 
@@ -14533,8 +14589,8 @@ Sets the image resolution
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageResolution</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageResolution</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$x_resolution`</span> , <span class="methodparam"><span
 class="type">float</span> `$y_resolution`</span> )
@@ -14579,8 +14635,8 @@ Sets the image scene
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageScene</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageScene</span> ( <span
 class="methodparam"><span class="type">int</span> `$scene`</span> )
 
 Sets the image scene.
@@ -14604,8 +14660,8 @@ Sets the image ticks-per-second
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageTicksPerSecond</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageTicksPerSecond</span> ( <span
 class="methodparam"><span class="type">int</span>
 `$ticks_per_second`</span> )
 
@@ -14682,8 +14738,8 @@ Sets the image type
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageType</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageType</span> ( <span
 class="methodparam"><span class="type">int</span> `$image_type`</span> )
 
 Sets the image type.
@@ -14703,8 +14759,8 @@ Sets the image units of resolution
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageUnits</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageUnits</span> ( <span
 class="methodparam"><span class="type">int</span> `$units`</span> )
 
 Sets the image units of resolution.
@@ -14724,9 +14780,10 @@ Sets the image virtual pixel method
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageVirtualPixelMethod</span> ( <span
-class="methodparam"><span class="type">int</span> `$method`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageVirtualPixelMethod</span> (
+<span class="methodparam"><span class="type">int</span> `$method`</span>
+)
 
 Sets the image virtual pixel method.
 
@@ -14745,8 +14802,8 @@ Sets the image chromaticity white point
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setImageWhitePoint</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setImageWhitePoint</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
@@ -14773,8 +14830,8 @@ Sets the image compression
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setInterlaceScheme</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setInterlaceScheme</span> ( <span
 class="methodparam"><span class="type">int</span>
 `$interlace_scheme`</span> )
 
@@ -14795,8 +14852,8 @@ Set the iterator position
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setIteratorIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setIteratorIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
 Set the iterator to the position in the image list specified with the
@@ -14844,8 +14901,8 @@ Sets the Imagick iterator to the last image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setLastIterator</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setLastIterator</span> ( <span
 class="methodparam">void</span> )
 
 Sets the Imagick iterator to the last image.
@@ -14861,8 +14918,8 @@ Set an option
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setOption</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setOption</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
@@ -14950,8 +15007,8 @@ Sets the page geometry of the Imagick object
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setPage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setPage</span> ( <span
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 , <span class="methodparam"><span class="type">int</span> `$x`</span> ,
@@ -14980,8 +15037,8 @@ Sets point size
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setPointSize</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setPointSize</span> ( <span
 class="methodparam"><span class="type">float</span> `$point_size`</span>
 )
 
@@ -15148,8 +15205,8 @@ Sets the image resolution
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setResolution</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setResolution</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$x_resolution`</span> , <span class="methodparam"><span
 class="type">float</span> `$y_resolution`</span> )
@@ -15185,8 +15242,8 @@ Sets the limit for a particular resource
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setResourceLimit</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setResourceLimit</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> , <span
 class="methodparam"><span class="type">int</span> `$limit`</span> )
 
@@ -15219,8 +15276,8 @@ Sets the image sampling factors
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setSamplingFactors</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setSamplingFactors</span> ( <span
 class="methodparam"><span class="type">array</span> `$factors`</span> )
 
 Sets the image sampling factors.
@@ -15273,8 +15330,8 @@ Sets the size of the Imagick object
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setSize</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setSize</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span> )
 
@@ -15298,8 +15355,8 @@ Sets the size and offset of the Imagick object
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setSizeOffset</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setSizeOffset</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span> ,
 <span class="methodparam"><span class="type">int</span> `$offset`</span>
@@ -15331,8 +15388,8 @@ Sets the image type attribute
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::setType</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::setType</span> ( <span
 class="methodparam"><span class="type">int</span> `$image_type`</span> )
 
 Sets the image type attribute.
@@ -15352,8 +15409,8 @@ Creates a 3D effect
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::shadeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::shadeImage</span> ( <span
 class="methodparam"><span class="type">bool</span> `$gray`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$azimuth`</span> , <span class="methodparam"><span
@@ -15407,8 +15464,8 @@ Simulates an image shadow
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::shadowImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::shadowImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$opacity`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> , <span class="methodparam"><span
@@ -15454,8 +15511,8 @@ Sharpens an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::sharpenImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::sharpenImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> \[, <span class="methodparam"><span
@@ -15503,8 +15560,8 @@ Shaves pixels from the image edges
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::shaveImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::shaveImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span> )
 
@@ -15544,8 +15601,8 @@ Creating a parallelogram
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::shearImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::shearImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$background`</span>
 , <span class="methodparam"><span class="type">float</span>
 `$x_shear`</span> , <span class="methodparam"><span
@@ -15604,8 +15661,8 @@ Adjusts the contrast of an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::sigmoidalContrastImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::sigmoidalContrastImage</span> ( <span
 class="methodparam"><span class="type">bool</span> `$sharpen`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$alpha`</span> , <span class="methodparam"><span
@@ -15678,8 +15735,8 @@ Simulates a pencil sketch
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::sketchImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::sketchImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> , <span class="methodparam"><span
@@ -15778,8 +15835,8 @@ Applies a solarizing effect to the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::solarizeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::solarizeImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$threshold`</span> )
 
 Applies a special effect to the image, similar to the effect achieved in
@@ -16023,8 +16080,8 @@ Splices a solid color into the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::spliceImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::spliceImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 , <span class="methodparam"><span class="type">int</span> `$x`</span> ,
@@ -16069,8 +16126,8 @@ Randomly displaces each pixel in a block
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::spreadImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::spreadImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> )
 
 Special effects method that randomly displaces each pixel in a block
@@ -16169,8 +16226,8 @@ Hides a digital watermark within the image
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::steganoImage</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::steganoImage</span> ( <span
 class="methodparam"><span class="type">Imagick</span>
 `$watermark_wand`</span> , <span class="methodparam"><span
 class="type">int</span> `$offset`</span> )
@@ -16196,8 +16253,8 @@ Composites two images
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::stereoImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::stereoImage</span> ( <span
 class="methodparam"><span class="type">Imagick</span>
 `$offset_wand`</span> )
 
@@ -16392,8 +16449,8 @@ Changes the value of individual pixels based on a threshold
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::thresholdImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::thresholdImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$threshold`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$channel`<span class="initializer"> =
@@ -16436,8 +16493,8 @@ Changes the size of an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::thumbnailImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::thumbnailImage</span> ( <span
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
@@ -16503,8 +16560,8 @@ Applies a color vector to each pixel in the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::tintImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::tintImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$tint`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$opacity`</span> \[, <span class="methodparam"><span
@@ -16565,8 +16622,8 @@ Returns the image as a string
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">Imagick::\_\_toString</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Imagick::\_\_toString</span> ( <span
 class="methodparam">void</span> )
 
 Returns the current image as string. This will only return a single
@@ -16597,8 +16654,8 @@ Convenience method for setting crop size and the image geometry
 
 ### 说明
 
-<span class="type">Imagick</span> <span
-class="methodname">Imagick::transformImage</span> ( <span
+<span class="modifier">public</span> <span class="type">Imagick</span>
+<span class="methodname">Imagick::transformImage</span> ( <span
 class="methodparam"><span class="type">string</span> `$crop`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$geometry`</span> )
@@ -16649,9 +16706,10 @@ Transforms an image to a new colorspace
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::transformImageColorspace</span> ( <span
-class="methodparam"><span class="type">int</span> `$colorspace`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::transformImageColorspace</span> (
+<span class="methodparam"><span class="type">int</span>
+`$colorspace`</span> )
 
 Transforms an image to a new colorspace.
 
@@ -16716,8 +16774,8 @@ Paints pixels transparent
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::transparentPaintImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::transparentPaintImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$target`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$alpha`</span> , <span class="methodparam"><span
@@ -16781,8 +16839,8 @@ Creates a vertical mirror image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::transposeImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::transposeImage</span> ( <span
 class="methodparam">void</span> )
 
 Creates a vertical mirror image by reflecting the pixels around the
@@ -16820,8 +16878,8 @@ Creates a horizontal mirror image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::transverseImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::transverseImage</span> ( <span
 class="methodparam">void</span> )
 
 Creates a horizontal mirror image by reflecting the pixels around the
@@ -16859,8 +16917,8 @@ Remove edges from the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::trimImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::trimImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$fuzz`</span> )
 
 Remove edges that are the background color from the image.
@@ -16916,8 +16974,8 @@ Discards all but one of any pixel color
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::uniqueImageColors</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::uniqueImageColors</span> ( <span
 class="methodparam">void</span> )
 
 Discards all but one of any pixel color. 此方法在Imagick基于ImageMagick
@@ -16953,8 +17011,8 @@ Sharpens an image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::unsharpMaskImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::unsharpMaskImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$radius`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$sigma`</span> , <span class="methodparam"><span
@@ -17012,8 +17070,8 @@ Checks if the current item is valid
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::valid</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::valid</span> ( <span
 class="methodparam">void</span> )
 
 Checks if the current item is valid.
@@ -17029,8 +17087,8 @@ Adds vignette filter to the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::vignetteImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::vignetteImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$blackPoint`</span>
 , <span class="methodparam"><span class="type">float</span>
 `$whitePoint`</span> , <span class="methodparam"><span
@@ -17086,8 +17144,8 @@ Applies wave filter to the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::waveImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::waveImage</span> ( <span
 class="methodparam"><span class="type">float</span> `$amplitude`</span>
 , <span class="methodparam"><span class="type">float</span>
 `$length`</span> )
@@ -17143,8 +17201,8 @@ Force all pixels above the threshold into white
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::whiteThresholdImage</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::whiteThresholdImage</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$threshold`</span>
 )
 
@@ -17215,8 +17273,8 @@ Writes an image to a filehandle
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::writeImageFile</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::writeImageFile</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$filehandle`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$format`</span> \] )
@@ -17241,8 +17299,8 @@ Writes an image or image sequence
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::writeImages</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::writeImages</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 , <span class="methodparam"><span class="type">bool</span>
 `$adjoin`</span> )
@@ -17266,8 +17324,8 @@ Writes frames to a filehandle
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">Imagick::writeImagesFile</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">Imagick::writeImagesFile</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$filehandle`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$format`</span> \] )

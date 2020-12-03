@@ -147,7 +147,7 @@ $result = match (true) {
     $age >= 25 => 'adult',
     $age >= 18 => 'young adult',
     default => 'kid',
-}
+};
 
 var_dump($result);
 ?>

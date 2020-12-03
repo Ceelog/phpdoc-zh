@@ -32,7 +32,7 @@ Prior to version 1.0.0, 成功时返回 **`WIN32_NO_ERROR`**，参数错误时�
 
 ### 错误／异常
 
-A <span class="classname">ValueError</span> is thrown if the; value of
+A <span class="classname">ValueError</span> is thrown if the value of
 `servicename` parameter is empty.
 
 A <span class="classname">Win32ServiceException</span> is thrown on
@@ -1005,7 +1005,7 @@ Prior to version 1.0.0, 成功时返回 **`WIN32_NO_ERROR`**，参数错误时�
 
 ### 错误／异常
 
-A <span class="classname">ValueError</span> is thrown if the; value of
+A <span class="classname">ValueError</span> is thrown if the value of
 `servicename` parameter is empty.
 
 A <span class="classname">Win32ServiceException</span> is thrown on
@@ -1062,7 +1062,7 @@ Prior to version 1.0.0, 成功时返回 **`WIN32_NO_ERROR`**，参数错误时�
 
 ### 错误／异常
 
-A <span class="classname">ValueError</span> is thrown if the; value of
+A <span class="classname">ValueError</span> is thrown if the value of
 `servicename` parameter is empty.
 
 A <span class="classname">Win32ServiceException</span> is thrown on
