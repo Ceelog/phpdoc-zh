@@ -264,8 +264,6 @@
         — Gets the image iterations
     -   [Imagick::getImageLength](/class/imagick.html#Imagick::getImageLength)
         — Returns the image length in bytes
-    -   [Imagick::getImageMagickLicense](/class/imagick.html#Imagick::getImageMagickLicense)
-        — Returns a string containing the ImageMagick license
     -   [Imagick::getImageMatte](/class/imagick.html#Imagick::getImageMatte)
         — Return if the image has a matte channel
     -   [Imagick::getImageMatteColor](/class/imagick.html#Imagick::getImageMatteColor)
@@ -1518,8 +1516,9 @@ class="methodparam">void</span> )
 class="methodname">getCompressionQuality</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getCopyright</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">string</span> <span
+class="methodname">getCopyright</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -1538,8 +1537,9 @@ class="methodparam">void</span> )
 class="methodname">getGravity</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getHomeURL</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">string</span> <span
+class="methodname">getHomeURL</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">Imagick</span>
@@ -1720,10 +1720,6 @@ class="methodparam">void</span> )
 class="methodname">getImageLength</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">getImageMagickLicense</span> ( <span
-class="methodparam">void</span> )
-
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">getImageMatte</span> ( <span
 class="methodparam">void</span> )
@@ -1854,8 +1850,9 @@ class="methodparam">void</span> )
 <span class="methodname">getOption</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getPackageName</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">string</span> <span
+class="methodname">getPackageName</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -1884,12 +1881,14 @@ class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">getQuantum</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">getQuantumDepth</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">array</span> <span
+class="methodname">getQuantumDepth</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">getQuantumRange</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">array</span> <span
+class="methodname">getQuantumRange</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
@@ -1897,15 +1896,18 @@ class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">getRegistry</span> ( <span class="methodparam"><span
 class="type">string</span> `$key`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getReleaseDate</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">string</span> <span
+class="methodname">getReleaseDate</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">getResource</span> ( <span class="methodparam"><span
 class="type">int</span> `$type`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">getResourceLimit</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> )
 
@@ -1921,8 +1923,9 @@ class="methodparam">void</span> )
 class="methodname">getSizeOffset</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">getVersion</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">array</span> <span
+class="methodname">getVersion</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -2230,13 +2233,15 @@ class="type">string</span> `$text`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$multiline`</span>
 \] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">queryFonts</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$pattern`<span
-class="initializer"> = "\*"</span></span> \] )
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">array</span> <span
+class="methodname">queryFonts</span> (\[ <span class="methodparam"><span
+class="type">string</span> `$pattern`<span class="initializer"> =
+"\*"</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">queryFormats</span> (\[ <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">array</span> <span
+class="methodname">queryFormats</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \] )
 
@@ -2705,8 +2710,9 @@ class="methodparam"><span class="type">float</span>
 `$x_resolution`</span> , <span class="methodparam"><span
 class="type">float</span> `$y_resolution`</span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">setResourceLimit</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">bool</span> <span
+class="methodname">setResourceLimit</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> , <span
 class="methodparam"><span class="type">int</span> `$limit`</span> )
 
@@ -6707,8 +6713,9 @@ Returns the ImageMagick API copyright as a string
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Imagick::getCopyright</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">string</span> <span
+class="methodname">Imagick::getCopyright</span> ( <span
 class="methodparam">void</span> )
 
 Returns the ImageMagick API copyright as a string.
@@ -6811,8 +6818,9 @@ Returns the ImageMagick home URL
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Imagick::getHomeURL</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">string</span> <span
+class="methodname">Imagick::getHomeURL</span> ( <span
 class="methodparam">void</span> )
 
 Returns the ImageMagick home URL.
@@ -7209,8 +7217,6 @@ Gets the mean and standard deviation
 class="methodparam"><span class="type">int</span> `$channel`</span> )
 
 Gets the mean and standard deviation of one or more image channels.
-Return value is an associative array with the keys "mean" and
-"standardDeviation".
 
 ### 参数
 
@@ -7222,7 +7228,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+Returns an array with *"mean"* and *"standardDeviation"* members.
 
 ### 错误／异常
 
@@ -7272,7 +7278,7 @@ Returns statistics for each channel in the image
 
 Returns statistics for each channel in the image. The statistics include
 the channel depth, its minima and maxima, the mean, and the standard
-deviation. You can access the red channel mean, for example, like this:
+deviation.
 
 ### 返回值
 
@@ -7936,23 +7942,6 @@ $image = new Imagick('test.jpg');
 echo $image->getImageLength() . ' bytes';
 ?>
 ```
-
-Imagick::getImageMagickLicense
-==============================
-
-Returns a string containing the ImageMagick license
-
-### 说明
-
-<span class="type">string</span> <span
-class="methodname">Imagick::getImageMagickLicense</span> ( <span
-class="methodparam">void</span> )
-
-Returns a string containing the ImageMagick license
-
-### 返回值
-
-Returns a string containing the ImageMagick license.
 
 Imagick::getImageMatte
 ======================
@@ -8729,8 +8718,9 @@ Returns the ImageMagick package name
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Imagick::getPackageName</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">string</span> <span
+class="methodname">Imagick::getPackageName</span> ( <span
 class="methodparam">void</span> )
 
 Returns the ImageMagick package name.
@@ -8924,15 +8914,17 @@ Gets the quantum depth
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Imagick::getQuantumDepth</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">array</span> <span
+class="methodname">Imagick::getQuantumDepth</span> ( <span
 class="methodparam">void</span> )
 
-Returns the Imagick quantum depth as a string.
+Returns the Imagick quantum depth.
 
 ### 返回值
 
-Returns the Imagick quantum depth as a string.
+Returns an array with *"quantumDepthLong"* and *"quantumDepthString"*
+members.
 
 ### 错误／异常
 
@@ -8945,8 +8937,9 @@ Returns the Imagick quantum range
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Imagick::getQuantumRange</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">array</span> <span
+class="methodname">Imagick::getQuantumRange</span> ( <span
 class="methodparam">void</span> )
 
 Returns the quantum range for the Imagick instance.
@@ -8989,8 +8982,9 @@ Returns the ImageMagick release date
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Imagick::getReleaseDate</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">string</span> <span
+class="methodname">Imagick::getReleaseDate</span> ( <span
 class="methodparam">void</span> )
 
 Returns the ImageMagick release date as a string.
@@ -9010,7 +9004,8 @@ Returns the specified resource's memory usage
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">Imagick::getResource</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> )
 
@@ -9037,7 +9032,8 @@ Returns the specified resource limit
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">Imagick::getResourceLimit</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> )
 
@@ -9170,8 +9166,9 @@ Returns the ImageMagick API version
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Imagick::getVersion</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">array</span> <span
+class="methodname">Imagick::getVersion</span> ( <span
 class="methodparam">void</span> )
 
 Returns the ImageMagick API version as a string and as a number.
@@ -11733,8 +11730,9 @@ Returns the configured fonts
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Imagick::queryFonts</span> (\[ <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">array</span> <span
+class="methodname">Imagick::queryFonts</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \] )
 
@@ -11780,8 +11778,9 @@ Returns formats supported by Imagick
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Imagick::queryFormats</span> (\[ <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">array</span> <span
+class="methodname">Imagick::queryFormats</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \] )
 
@@ -15242,8 +15241,9 @@ Sets the limit for a particular resource
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Imagick::setResourceLimit</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">bool</span> <span
+class="methodname">Imagick::setResourceLimit</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> , <span
 class="methodparam"><span class="type">int</span> `$limit`</span> )
 
@@ -17350,176 +17350,187 @@ Filehandle where to write the images
 
 <span class="ooclass"> class **ImagickDraw**</span> {
 
-<span class="type">bool</span> <span class="methodname">affine</span> (
-<span class="methodparam"><span class="type">array</span>
-`$affine`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">affine</span> ( <span class="methodparam"><span
+class="type">array</span> `$affine`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">annotation</span> ( <span class="methodparam"><span
-class="type">float</span> `$x`</span> , <span class="methodparam"><span
-class="type">float</span> `$y`</span> , <span class="methodparam"><span
-class="type">string</span> `$text`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">annotation</span> ( <span
+class="methodparam"><span class="type">float</span> `$x`</span> , <span
+class="methodparam"><span class="type">float</span> `$y`</span> , <span
+class="methodparam"><span class="type">string</span> `$text`</span> )
 
-<span class="type">bool</span> <span class="methodname">arc</span> (
-<span class="methodparam"><span class="type">float</span> `$sx`</span> ,
-<span class="methodparam"><span class="type">float</span> `$sy`</span> ,
-<span class="methodparam"><span class="type">float</span> `$ex`</span> ,
-<span class="methodparam"><span class="type">float</span> `$ey`</span> ,
-<span class="methodparam"><span class="type">float</span> `$sd`</span> ,
-<span class="methodparam"><span class="type">float</span> `$ed`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">arc</span> ( <span class="methodparam"><span
+class="type">float</span> `$sx`</span> , <span class="methodparam"><span
+class="type">float</span> `$sy`</span> , <span class="methodparam"><span
+class="type">float</span> `$ex`</span> , <span class="methodparam"><span
+class="type">float</span> `$ey`</span> , <span class="methodparam"><span
+class="type">float</span> `$sd`</span> , <span class="methodparam"><span
+class="type">float</span> `$ed`</span> )
 
-<span class="type">bool</span> <span class="methodname">bezier</span> (
-<span class="methodparam"><span class="type">array</span>
-`$coordinates`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">bezier</span> ( <span class="methodparam"><span
+class="type">array</span> `$coordinates`</span> )
 
-<span class="type">bool</span> <span class="methodname">circle</span> (
-<span class="methodparam"><span class="type">float</span> `$ox`</span> ,
-<span class="methodparam"><span class="type">float</span> `$oy`</span> ,
-<span class="methodparam"><span class="type">float</span> `$px`</span> ,
-<span class="methodparam"><span class="type">float</span> `$py`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">circle</span> ( <span class="methodparam"><span
+class="type">float</span> `$ox`</span> , <span class="methodparam"><span
+class="type">float</span> `$oy`</span> , <span class="methodparam"><span
+class="type">float</span> `$px`</span> , <span class="methodparam"><span
+class="type">float</span> `$py`</span> )
 
-<span class="type">bool</span> <span class="methodname">clear</span> (
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">clear</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span
+class="type">ImagickDraw</span> <span class="methodname">clone</span> (
 <span class="methodparam">void</span> )
 
-<span class="type">ImagickDraw</span> <span
-class="methodname">clone</span> ( <span class="methodparam">void</span>
-)
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">color</span> ( <span class="methodparam"><span
+class="type">float</span> `$x`</span> , <span class="methodparam"><span
+class="type">float</span> `$y`</span> , <span class="methodparam"><span
+class="type">int</span> `$paintMethod`</span> )
 
-<span class="type">bool</span> <span class="methodname">color</span> (
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">comment</span> ( <span
+class="methodparam"><span class="type">string</span> `$comment`</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">composite</span> ( <span
+class="methodparam"><span class="type">int</span> `$compose`</span> ,
 <span class="methodparam"><span class="type">float</span> `$x`</span> ,
 <span class="methodparam"><span class="type">float</span> `$y`</span> ,
-<span class="methodparam"><span class="type">int</span>
-`$paintMethod`</span> )
-
-<span class="type">bool</span> <span class="methodname">comment</span> (
-<span class="methodparam"><span class="type">string</span>
-`$comment`</span> )
-
-<span class="type">bool</span> <span class="methodname">composite</span>
-( <span class="methodparam"><span class="type">int</span>
-`$compose`</span> , <span class="methodparam"><span
-class="type">float</span> `$x`</span> , <span class="methodparam"><span
-class="type">float</span> `$y`</span> , <span class="methodparam"><span
-class="type">float</span> `$width`</span> , <span
-class="methodparam"><span class="type">float</span> `$height`</span> ,
-<span class="methodparam"><span class="type">Imagick</span>
+<span class="methodparam"><span class="type">float</span>
+`$width`</span> , <span class="methodparam"><span
+class="type">float</span> `$height`</span> , <span
+class="methodparam"><span class="type">Imagick</span>
 `$compositeWand`</span> )
 
-<span class="methodname">\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">destroy</span> (
-<span class="methodparam">void</span> )
-
-<span class="type">bool</span> <span class="methodname">ellipse</span> (
-<span class="methodparam"><span class="type">float</span> `$ox`</span> ,
-<span class="methodparam"><span class="type">float</span> `$oy`</span> ,
-<span class="methodparam"><span class="type">float</span> `$rx`</span> ,
-<span class="methodparam"><span class="type">float</span> `$ry`</span> ,
-<span class="methodparam"><span class="type">float</span>
-`$start`</span> , <span class="methodparam"><span
-class="type">float</span> `$end`</span> )
-
-<span class="type">string</span> <span
-class="methodname">getClipPath</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">destroy</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ellipse</span> ( <span
+class="methodparam"><span class="type">float</span> `$ox`</span> , <span
+class="methodparam"><span class="type">float</span> `$oy`</span> , <span
+class="methodparam"><span class="type">float</span> `$rx`</span> , <span
+class="methodparam"><span class="type">float</span> `$ry`</span> , <span
+class="methodparam"><span class="type">float</span> `$start`</span> ,
+<span class="methodparam"><span class="type">float</span> `$end`</span>
+)
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getClipPath</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getClipRule</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getClipUnits</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">getFillColor</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">float</span> <span
-class="methodname">getFillOpacity</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getFillOpacity</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getFillRule</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span class="methodname">getFont</span>
-( <span class="methodparam">void</span> )
-
-<span class="type">string</span> <span
-class="methodname">getFontFamily</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFont</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">float</span> <span
-class="methodname">getFontSize</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFontFamily</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getFontSize</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getFontStretch</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getFontStyle</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getFontWeight</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span class="methodname">getGravity</span>
-( <span class="methodparam">void</span> )
-
-<span class="type">bool</span> <span
-class="methodname">getStrokeAntialias</span> ( <span
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">getGravity</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getStrokeAntialias</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">getStrokeColor</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">getStrokeDashArray</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getStrokeDashArray</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">float</span> <span
-class="methodname">getStrokeDashOffset</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getStrokeDashOffset</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getStrokeLineCap</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getStrokeLineJoin</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getStrokeMiterLimit</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">float</span> <span
-class="methodname">getStrokeOpacity</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getStrokeOpacity</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">float</span> <span
-class="methodname">getStrokeWidth</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getStrokeWidth</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getTextAlignment</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">getTextAntialias</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getTextAntialias</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getTextDecoration</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">getTextEncoding</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getTextEncoding</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">float</span>
@@ -17534,31 +17545,34 @@ class="methodparam">void</span> )
 <span class="methodname">getTextKerning</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">getTextUnderColor</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">string</span> <span
-class="methodname">getVectorGraphics</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getVectorGraphics</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">line</span> (
-<span class="methodparam"><span class="type">float</span> `$sx`</span> ,
-<span class="methodparam"><span class="type">float</span> `$sy`</span> ,
-<span class="methodparam"><span class="type">float</span> `$ex`</span> ,
-<span class="methodparam"><span class="type">float</span> `$ey`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">line</span> ( <span class="methodparam"><span
+class="type">float</span> `$sx`</span> , <span class="methodparam"><span
+class="type">float</span> `$sy`</span> , <span class="methodparam"><span
+class="type">float</span> `$ex`</span> , <span class="methodparam"><span
+class="type">float</span> `$ey`</span> )
 
-<span class="type">bool</span> <span class="methodname">matte</span> (
-<span class="methodparam"><span class="type">float</span> `$x`</span> ,
-<span class="methodparam"><span class="type">float</span> `$y`</span> ,
-<span class="methodparam"><span class="type">int</span>
-`$paintMethod`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">matte</span> ( <span class="methodparam"><span
+class="type">float</span> `$x`</span> , <span class="methodparam"><span
+class="type">float</span> `$y`</span> , <span class="methodparam"><span
+class="type">int</span> `$paintMethod`</span> )
 
-<span class="type">bool</span> <span class="methodname">pathClose</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathClose</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathCurveToAbsolute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathCurveToAbsolute</span> ( <span
 class="methodparam"><span class="type">float</span> `$x1`</span> , <span
 class="methodparam"><span class="type">float</span> `$y1`</span> , <span
 class="methodparam"><span class="type">float</span> `$x2`</span> , <span
@@ -17566,32 +17580,34 @@ class="methodparam"><span class="type">float</span> `$y2`</span> , <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathCurveToQuadraticBezierAbsolute</span> ( <span
-class="methodparam"><span class="type">float</span> `$x1`</span> , <span
-class="methodparam"><span class="type">float</span> `$y1`</span> , <span
-class="methodparam"><span class="type">float</span> `$x`</span> , <span
-class="methodparam"><span class="type">float</span> `$y`</span> )
-
-<span class="type">bool</span> <span
-class="methodname">pathCurveToQuadraticBezierRelative</span> ( <span
-class="methodparam"><span class="type">float</span> `$x1`</span> , <span
-class="methodparam"><span class="type">float</span> `$y1`</span> , <span
-class="methodparam"><span class="type">float</span> `$x`</span> , <span
-class="methodparam"><span class="type">float</span> `$y`</span> )
-
-<span class="type">bool</span> <span
-class="methodname">pathCurveToQuadraticBezierSmoothAbsolute</span> (
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathCurveToQuadraticBezierAbsolute</span> (
+<span class="methodparam"><span class="type">float</span> `$x1`</span> ,
+<span class="methodparam"><span class="type">float</span> `$y1`</span> ,
 <span class="methodparam"><span class="type">float</span> `$x`</span> ,
 <span class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathCurveToQuadraticBezierSmoothRelative</span> (
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathCurveToQuadraticBezierRelative</span> (
+<span class="methodparam"><span class="type">float</span> `$x1`</span> ,
+<span class="methodparam"><span class="type">float</span> `$y1`</span> ,
 <span class="methodparam"><span class="type">float</span> `$x`</span> ,
 <span class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathCurveToRelative</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathCurveToQuadraticBezierSmoothAbsolute</span>
+( <span class="methodparam"><span class="type">float</span> `$x`</span>
+, <span class="methodparam"><span class="type">float</span> `$y`</span>
+)
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathCurveToQuadraticBezierSmoothRelative</span>
+( <span class="methodparam"><span class="type">float</span> `$x`</span>
+, <span class="methodparam"><span class="type">float</span> `$y`</span>
+)
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathCurveToRelative</span> ( <span
 class="methodparam"><span class="type">float</span> `$x1`</span> , <span
 class="methodparam"><span class="type">float</span> `$y1`</span> , <span
 class="methodparam"><span class="type">float</span> `$x2`</span> , <span
@@ -17599,22 +17615,22 @@ class="methodparam"><span class="type">float</span> `$y2`</span> , <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathCurveToSmoothAbsolute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathCurveToSmoothAbsolute</span> ( <span
 class="methodparam"><span class="type">float</span> `$x2`</span> , <span
 class="methodparam"><span class="type">float</span> `$y2`</span> , <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathCurveToSmoothRelative</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathCurveToSmoothRelative</span> ( <span
 class="methodparam"><span class="type">float</span> `$x2`</span> , <span
 class="methodparam"><span class="type">float</span> `$y2`</span> , <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathEllipticArcAbsolute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathEllipticArcAbsolute</span> ( <span
 class="methodparam"><span class="type">float</span> `$rx`</span> , <span
 class="methodparam"><span class="type">float</span> `$ry`</span> , <span
 class="methodparam"><span class="type">float</span>
@@ -17625,8 +17641,8 @@ class="methodparam"><span class="type">bool</span> `$sweep_flag`</span>
 , <span class="methodparam"><span class="type">float</span> `$y`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">pathEllipticArcRelative</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathEllipticArcRelative</span> ( <span
 class="methodparam"><span class="type">float</span> `$rx`</span> , <span
 class="methodparam"><span class="type">float</span> `$ry`</span> , <span
 class="methodparam"><span class="type">float</span>
@@ -17637,114 +17653,124 @@ class="methodparam"><span class="type">bool</span> `$sweep_flag`</span>
 , <span class="methodparam"><span class="type">float</span> `$y`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">pathFinish</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathFinish</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathLineToAbsolute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathLineToAbsolute</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathLineToHorizontalAbsolute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathLineToHorizontalAbsolute</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathLineToHorizontalRelative</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathLineToHorizontalRelative</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathLineToRelative</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathLineToRelative</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathLineToVerticalAbsolute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathLineToVerticalAbsolute</span> ( <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathLineToVerticalRelative</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathLineToVerticalRelative</span> ( <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathMoveToAbsolute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathMoveToAbsolute</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pathMoveToRelative</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathMoveToRelative</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span class="methodname">pathStart</span>
-( <span class="methodparam">void</span> )
-
-<span class="type">bool</span> <span class="methodname">point</span> (
-<span class="methodparam"><span class="type">float</span> `$x`</span> ,
-<span class="methodparam"><span class="type">float</span> `$y`</span> )
-
-<span class="type">bool</span> <span class="methodname">polygon</span> (
-<span class="methodparam"><span class="type">array</span>
-`$coordinates`</span> )
-
-<span class="type">bool</span> <span class="methodname">polyline</span>
-( <span class="methodparam"><span class="type">array</span>
-`$coordinates`</span> )
-
-<span class="type">bool</span> <span class="methodname">pop</span> (
-<span class="methodparam">void</span> )
-
-<span class="type">bool</span> <span
-class="methodname">popClipPath</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pathStart</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">popDefs</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">point</span> ( <span class="methodparam"><span
+class="type">float</span> `$x`</span> , <span class="methodparam"><span
+class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">popPattern</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">polygon</span> ( <span
+class="methodparam"><span class="type">array</span>
+`$coordinates`</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">polyline</span> ( <span
+class="methodparam"><span class="type">array</span>
+`$coordinates`</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pop</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">push</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">popClipPath</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pushClipPath</span> ( <span class="methodparam"><span
-class="type">string</span> `$clip_mask_id`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">popDefs</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">pushDefs</span>
-( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">popPattern</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">pushPattern</span> ( <span class="methodparam"><span
-class="type">string</span> `$pattern_id`</span> , <span
-class="methodparam"><span class="type">float</span> `$x`</span> , <span
-class="methodparam"><span class="type">float</span> `$y`</span> , <span
-class="methodparam"><span class="type">float</span> `$width`</span> ,
-<span class="methodparam"><span class="type">float</span>
-`$height`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">push</span> ( <span
+class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">rectangle</span>
-( <span class="methodparam"><span class="type">float</span> `$x1`</span>
-, <span class="methodparam"><span class="type">float</span> `$y1`</span>
-, <span class="methodparam"><span class="type">float</span> `$x2`</span>
-, <span class="methodparam"><span class="type">float</span> `$y2`</span>
-)
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pushClipPath</span> ( <span
+class="methodparam"><span class="type">string</span>
+`$clip_mask_id`</span> )
 
-<span class="type">bool</span> <span class="methodname">render</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pushDefs</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">pushPattern</span> ( <span
+class="methodparam"><span class="type">string</span>
+`$pattern_id`</span> , <span class="methodparam"><span
+class="type">float</span> `$x`</span> , <span class="methodparam"><span
+class="type">float</span> `$y`</span> , <span class="methodparam"><span
+class="type">float</span> `$width`</span> , <span
+class="methodparam"><span class="type">float</span> `$height`</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">rectangle</span> ( <span
+class="methodparam"><span class="type">float</span> `$x1`</span> , <span
+class="methodparam"><span class="type">float</span> `$y1`</span> , <span
+class="methodparam"><span class="type">float</span> `$x2`</span> , <span
+class="methodparam"><span class="type">float</span> `$y2`</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">render</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">resetVectorGraphics</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">rotate</span> (
-<span class="methodparam"><span class="type">float</span>
-`$degrees`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">rotate</span> ( <span class="methodparam"><span
+class="type">float</span> `$degrees`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">roundRectangle</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">roundRectangle</span> ( <span
 class="methodparam"><span class="type">float</span> `$x1`</span> , <span
 class="methodparam"><span class="type">float</span> `$y1`</span> , <span
 class="methodparam"><span class="type">float</span> `$x2`</span> , <span
@@ -17752,74 +17778,79 @@ class="methodparam"><span class="type">float</span> `$y2`</span> , <span
 class="methodparam"><span class="type">float</span> `$rx`</span> , <span
 class="methodparam"><span class="type">float</span> `$ry`</span> )
 
-<span class="type">bool</span> <span class="methodname">scale</span> (
-<span class="methodparam"><span class="type">float</span> `$x`</span> ,
-<span class="methodparam"><span class="type">float</span> `$y`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">scale</span> ( <span class="methodparam"><span
+class="type">float</span> `$x`</span> , <span class="methodparam"><span
+class="type">float</span> `$y`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setClipPath</span> ( <span class="methodparam"><span
-class="type">string</span> `$clip_mask`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setClipPath</span> ( <span
+class="methodparam"><span class="type">string</span> `$clip_mask`</span>
+)
 
-<span class="type">bool</span> <span
-class="methodname">setClipRule</span> ( <span class="methodparam"><span
-class="type">int</span> `$fill_rule`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setClipRule</span> ( <span
+class="methodparam"><span class="type">int</span> `$fill_rule`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setClipUnits</span> ( <span class="methodparam"><span
-class="type">int</span> `$clip_units`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setClipUnits</span> ( <span
+class="methodparam"><span class="type">int</span> `$clip_units`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setFillAlpha</span> ( <span class="methodparam"><span
-class="type">float</span> `$opacity`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFillAlpha</span> ( <span
+class="methodparam"><span class="type">float</span> `$opacity`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setFillColor</span> ( <span class="methodparam"><span
-class="type">ImagickPixel</span> `$fill_pixel`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFillColor</span> ( <span
+class="methodparam"><span class="type">ImagickPixel</span>
+`$fill_pixel`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setFillOpacity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFillOpacity</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$fillOpacity`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setFillPatternURL</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFillPatternURL</span> ( <span
 class="methodparam"><span class="type">string</span> `$fill_url`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">setFillRule</span> ( <span class="methodparam"><span
-class="type">int</span> `$fill_rule`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFillRule</span> ( <span
+class="methodparam"><span class="type">int</span> `$fill_rule`</span> )
 
-<span class="type">bool</span> <span class="methodname">setFont</span> (
-<span class="methodparam"><span class="type">string</span>
-`$font_name`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFont</span> ( <span
+class="methodparam"><span class="type">string</span> `$font_name`</span>
+)
 
-<span class="type">bool</span> <span
-class="methodname">setFontFamily</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFontFamily</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$font_family`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setFontSize</span> ( <span class="methodparam"><span
-class="type">float</span> `$pointsize`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFontSize</span> ( <span
+class="methodparam"><span class="type">float</span> `$pointsize`</span>
+)
 
-<span class="type">bool</span> <span
-class="methodname">setFontStretch</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFontStretch</span> ( <span
 class="methodparam"><span class="type">int</span> `$fontStretch`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">setFontStyle</span> ( <span class="methodparam"><span
-class="type">int</span> `$style`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFontStyle</span> ( <span
+class="methodparam"><span class="type">int</span> `$style`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setFontWeight</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setFontWeight</span> ( <span
 class="methodparam"><span class="type">int</span> `$font_weight`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">setGravity</span> ( <span class="methodparam"><span
-class="type">int</span> `$gravity`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setGravity</span> ( <span
+class="methodparam"><span class="type">int</span> `$gravity`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setResolution</span> ( <span
@@ -17827,71 +17858,71 @@ class="methodparam"><span class="type">float</span>
 `$x_resolution`</span> , <span class="methodparam"><span
 class="type">float</span> `$y_resolution`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setStrokeAlpha</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setStrokeAlpha</span> ( <span
 class="methodparam"><span class="type">float</span> `$opacity`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setStrokeAntialias</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setStrokeAntialias</span> ( <span
 class="methodparam"><span class="type">bool</span>
 `$stroke_antialias`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setStrokeColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setStrokeColor</span> ( <span
 class="methodparam"><span class="type">ImagickPixel</span>
 `$stroke_pixel`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setStrokeDashArray</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setStrokeDashArray</span> ( <span
 class="methodparam"><span class="type">array</span> `$dashArray`</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">setStrokeDashOffset</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setStrokeDashOffset</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$dash_offset`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setStrokeLineCap</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setStrokeLineCap</span> ( <span
 class="methodparam"><span class="type">int</span> `$linecap`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setStrokeLineJoin</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setStrokeLineJoin</span> ( <span
 class="methodparam"><span class="type">int</span> `$linejoin`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setStrokeMiterLimit</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setStrokeMiterLimit</span> ( <span
 class="methodparam"><span class="type">int</span> `$miterlimit`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setStrokeOpacity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setStrokeOpacity</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$stroke_opacity`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setStrokePatternURL</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setStrokePatternURL</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$stroke_url`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setStrokeWidth</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setStrokeWidth</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$stroke_width`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setTextAlignment</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setTextAlignment</span> ( <span
 class="methodparam"><span class="type">int</span> `$alignment`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setTextAntialias</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setTextAntialias</span> ( <span
 class="methodparam"><span class="type">bool</span> `$antiAlias`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setTextDecoration</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setTextDecoration</span> ( <span
 class="methodparam"><span class="type">int</span> `$decoration`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setTextEncoding</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setTextEncoding</span> ( <span
 class="methodparam"><span class="type">string</span> `$encoding`</span>
 )
 
@@ -17907,34 +17938,34 @@ class="methodparam"><span class="type">float</span> `$spacing`</span> )
 <span class="methodname">setTextKerning</span> ( <span
 class="methodparam"><span class="type">float</span> `$kerning`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setTextUnderColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setTextUnderColor</span> ( <span
 class="methodparam"><span class="type">ImagickPixel</span>
 `$under_color`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setVectorGraphics</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setVectorGraphics</span> ( <span
 class="methodparam"><span class="type">string</span> `$xml`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setViewbox</span> ( <span class="methodparam"><span
-class="type">int</span> `$x1`</span> , <span class="methodparam"><span
-class="type">int</span> `$y1`</span> , <span class="methodparam"><span
-class="type">int</span> `$x2`</span> , <span class="methodparam"><span
-class="type">int</span> `$y2`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setViewbox</span> ( <span
+class="methodparam"><span class="type">int</span> `$x1`</span> , <span
+class="methodparam"><span class="type">int</span> `$y1`</span> , <span
+class="methodparam"><span class="type">int</span> `$x2`</span> , <span
+class="methodparam"><span class="type">int</span> `$y2`</span> )
 
-<span class="type">bool</span> <span class="methodname">skewX</span> (
-<span class="methodparam"><span class="type">float</span>
-`$degrees`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">skewX</span> ( <span class="methodparam"><span
+class="type">float</span> `$degrees`</span> )
 
-<span class="type">bool</span> <span class="methodname">skewY</span> (
-<span class="methodparam"><span class="type">float</span>
-`$degrees`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">skewY</span> ( <span class="methodparam"><span
+class="type">float</span> `$degrees`</span> )
 
-<span class="type">bool</span> <span class="methodname">translate</span>
-( <span class="methodparam"><span class="type">float</span> `$x`</span>
-, <span class="methodparam"><span class="type">float</span> `$y`</span>
-)
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">translate</span> ( <span
+class="methodparam"><span class="type">float</span> `$x`</span> , <span
+class="methodparam"><span class="type">float</span> `$y`</span> )
 
 }
 
@@ -17945,8 +17976,8 @@ Adjusts the current affine transformation matrix
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::affine</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::affine</span> ( <span
 class="methodparam"><span class="type">array</span> `$affine`</span> )
 
 **Warning**
@@ -18039,8 +18070,8 @@ Draws text on the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::annotation</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::annotation</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> , <span
 class="methodparam"><span class="type">string</span> `$text`</span> )
@@ -18073,8 +18104,8 @@ Draws an arc
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::arc</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::arc</span> ( <span
 class="methodparam"><span class="type">float</span> `$sx`</span> , <span
 class="methodparam"><span class="type">float</span> `$sy`</span> , <span
 class="methodparam"><span class="type">float</span> `$ex`</span> , <span
@@ -18153,8 +18184,8 @@ Draws a bezier curve
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::bezier</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::bezier</span> ( <span
 class="methodparam"><span class="type">array</span>
 `$coordinates`</span> )
 
@@ -18256,8 +18287,8 @@ Draws a circle
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::circle</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::circle</span> ( <span
 class="methodparam"><span class="type">float</span> `$ox`</span> , <span
 class="methodparam"><span class="type">float</span> `$oy`</span> , <span
 class="methodparam"><span class="type">float</span> `$px`</span> , <span
@@ -18329,8 +18360,8 @@ Clears the ImagickDraw
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::clear</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::clear</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -18351,7 +18382,8 @@ Makes an exact copy of the specified ImagickDraw object
 
 ### 说明
 
-<span class="type">ImagickDraw</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickDraw</span> <span
 class="methodname">ImagickDraw::clone</span> ( <span
 class="methodparam">void</span> )
 
@@ -18373,8 +18405,8 @@ Draws color on image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::color</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::color</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> , <span
 class="methodparam"><span class="type">int</span> `$paintMethod`</span>
@@ -18409,8 +18441,8 @@ Adds a comment
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::comment</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::comment</span> ( <span
 class="methodparam"><span class="type">string</span> `$comment`</span> )
 
 **Warning**
@@ -18435,8 +18467,8 @@ Composites an image onto the current image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::composite</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::composite</span> ( <span
 class="methodparam"><span class="type">int</span> `$compose`</span> ,
 <span class="methodparam"><span class="type">float</span> `$x`</span> ,
 <span class="methodparam"><span class="type">float</span> `$y`</span> ,
@@ -18526,7 +18558,8 @@ The ImagickDraw constructor
 
 ### 说明
 
-<span class="methodname">ImagickDraw::\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">ImagickDraw::\_\_construct</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -18546,8 +18579,8 @@ Frees all associated resources
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::destroy</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::destroy</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -18567,8 +18600,8 @@ Draws an ellipse on the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::ellipse</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::ellipse</span> ( <span
 class="methodparam"><span class="type">float</span> `$ox`</span> , <span
 class="methodparam"><span class="type">float</span> `$oy`</span> , <span
 class="methodparam"><span class="type">float</span> `$rx`</span> , <span
@@ -18651,8 +18684,8 @@ Obtains the current clipping path ID
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">ImagickDraw::getClipPath</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ImagickDraw::getClipPath</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -18673,7 +18706,7 @@ Returns the current polygon fill rule
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickDraw::getClipRule</span> ( <span
 class="methodparam">void</span> )
 
@@ -18694,7 +18727,7 @@ Returns the interpretation of clip path units
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickDraw::getClipUnits</span> ( <span
 class="methodparam">void</span> )
 
@@ -18715,7 +18748,8 @@ Returns the fill color
 
 ### 说明
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">ImagickDraw::getFillColor</span> ( <span
 class="methodparam">void</span> )
 
@@ -18736,8 +18770,8 @@ Returns the opacity used when drawing
 
 ### 说明
 
-<span class="type">float</span> <span
-class="methodname">ImagickDraw::getFillOpacity</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">ImagickDraw::getFillOpacity</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -18758,7 +18792,7 @@ Returns the fill rule
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickDraw::getFillRule</span> ( <span
 class="methodparam">void</span> )
 
@@ -18779,8 +18813,8 @@ Returns the font
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">ImagickDraw::getFont</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ImagickDraw::getFont</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -18800,8 +18834,8 @@ Returns the font family
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">ImagickDraw::getFontFamily</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ImagickDraw::getFontFamily</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -18822,8 +18856,8 @@ Returns the font pointsize
 
 ### 说明
 
-<span class="type">float</span> <span
-class="methodname">ImagickDraw::getFontSize</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">ImagickDraw::getFontSize</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -18863,7 +18897,7 @@ Returns the font style
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickDraw::getFontStyle</span> ( <span
 class="methodparam">void</span> )
 
@@ -18885,7 +18919,7 @@ Returns the font weight
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickDraw::getFontWeight</span> ( <span
 class="methodparam">void</span> )
 
@@ -18906,7 +18940,7 @@ Returns the text placement gravity
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickDraw::getGravity</span> ( <span
 class="methodparam">void</span> )
 
@@ -18927,8 +18961,8 @@ Returns the current stroke antialias setting
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::getStrokeAntialias</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::getStrokeAntialias</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -18951,7 +18985,8 @@ Returns the color used for stroking object outlines
 
 ### 说明
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">ImagickDraw::getStrokeColor</span> ( <span
 class="methodparam">void</span> )
 
@@ -18977,8 +19012,8 @@ stroke paths
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">ImagickDraw::getStrokeDashArray</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ImagickDraw::getStrokeDashArray</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -18999,8 +19034,8 @@ Returns the offset into the dash pattern to start the dash
 
 ### 说明
 
-<span class="type">float</span> <span
-class="methodname">ImagickDraw::getStrokeDashOffset</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">ImagickDraw::getStrokeDashOffset</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -19021,7 +19056,7 @@ stroked
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickDraw::getStrokeLineCap</span> ( <span
 class="methodparam">void</span> )
 
@@ -19045,7 +19080,7 @@ stroked
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickDraw::getStrokeLineJoin</span> ( <span
 class="methodparam">void</span> )
 
@@ -19068,7 +19103,7 @@ Returns the stroke miter limit
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickDraw::getStrokeMiterLimit</span> ( <span
 class="methodparam">void</span> )
 
@@ -19094,8 +19129,8 @@ Returns the opacity of stroked object outlines
 
 ### 说明
 
-<span class="type">float</span> <span
-class="methodname">ImagickDraw::getStrokeOpacity</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">ImagickDraw::getStrokeOpacity</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -19115,8 +19150,8 @@ Returns the width of the stroke used to draw object outlines
 
 ### 说明
 
-<span class="type">float</span> <span
-class="methodname">ImagickDraw::getStrokeWidth</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">ImagickDraw::getStrokeWidth</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -19136,7 +19171,7 @@ Returns the text alignment
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickDraw::getTextAlignment</span> ( <span
 class="methodparam">void</span> )
 
@@ -19157,8 +19192,8 @@ Returns the current text antialias setting
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::getTextAntialias</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::getTextAntialias</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -19179,7 +19214,7 @@ Returns the text decoration
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickDraw::getTextDecoration</span> ( <span
 class="methodparam">void</span> )
 
@@ -19200,8 +19235,8 @@ Returns the code set used for text annotations
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">ImagickDraw::getTextEncoding</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ImagickDraw::getTextEncoding</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -19279,7 +19314,8 @@ Returns the text under color
 
 ### 说明
 
-<span class="type">ImagickPixel</span> <span
+<span class="modifier">public</span> <span
+class="type">ImagickPixel</span> <span
 class="methodname">ImagickDraw::getTextUnderColor</span> ( <span
 class="methodparam">void</span> )
 
@@ -19301,8 +19337,8 @@ Returns a string containing vector graphics
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">ImagickDraw::getVectorGraphics</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ImagickDraw::getVectorGraphics</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -19323,8 +19359,8 @@ Draws a line
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::line</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::line</span> ( <span
 class="methodparam"><span class="type">float</span> `$sx`</span> , <span
 class="methodparam"><span class="type">float</span> `$sy`</span> , <span
 class="methodparam"><span class="type">float</span> `$ex`</span> , <span
@@ -19393,8 +19429,8 @@ Paints on the image's opacity channel
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::matte</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::matte</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> , <span
 class="methodparam"><span class="type">int</span> `$paintMethod`</span>
@@ -19459,8 +19495,8 @@ Adds a path element to the current path
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathClose</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathClose</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -19483,8 +19519,8 @@ Draws a cubic Bezier curve
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathCurveToAbsolute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathCurveToAbsolute</span> ( <span
 class="methodparam"><span class="type">float</span> `$x1`</span> , <span
 class="methodparam"><span class="type">float</span> `$y1`</span> , <span
 class="methodparam"><span class="type">float</span> `$x2`</span> , <span
@@ -19533,7 +19569,8 @@ Draws a quadratic Bezier curve
 
 ### 说明
 
-<span class="type">bool</span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span
 class="methodname">ImagickDraw::pathCurveToQuadraticBezierAbsolute</span>
 ( <span class="methodparam"><span class="type">float</span> `$x1`</span>
 , <span class="methodparam"><span class="type">float</span> `$y1`</span>
@@ -19633,7 +19670,8 @@ Draws a quadratic Bezier curve
 
 ### 说明
 
-<span class="type">bool</span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span
 class="methodname">ImagickDraw::pathCurveToQuadraticBezierRelative</span>
 ( <span class="methodparam"><span class="type">float</span> `$x1`</span>
 , <span class="methodparam"><span class="type">float</span> `$y1`</span>
@@ -19675,7 +19713,8 @@ Draws a quadratic Bezier curve
 
 ### 说明
 
-<span class="type">bool</span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span
 class="methodname">ImagickDraw::pathCurveToQuadraticBezierSmoothAbsolute</span>
 ( <span class="methodparam"><span class="type">float</span> `$x`</span>
 , <span class="methodparam"><span class="type">float</span> `$y`</span>
@@ -19768,7 +19807,8 @@ Draws a quadratic Bezier curve
 
 ### 说明
 
-<span class="type">bool</span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span
 class="methodname">ImagickDraw::pathCurveToQuadraticBezierSmoothRelative</span>
 ( <span class="methodparam"><span class="type">float</span> `$x`</span>
 , <span class="methodparam"><span class="type">float</span> `$y`</span>
@@ -19865,8 +19905,8 @@ Draws a cubic Bezier curve
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathCurveToRelative</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathCurveToRelative</span> ( <span
 class="methodparam"><span class="type">float</span> `$x1`</span> , <span
 class="methodparam"><span class="type">float</span> `$y1`</span> , <span
 class="methodparam"><span class="type">float</span> `$x2`</span> , <span
@@ -19915,12 +19955,12 @@ Draws a cubic Bezier curve
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathCurveToSmoothAbsolute</span> ( <span
-class="methodparam"><span class="type">float</span> `$x2`</span> , <span
-class="methodparam"><span class="type">float</span> `$y2`</span> , <span
-class="methodparam"><span class="type">float</span> `$x`</span> , <span
-class="methodparam"><span class="type">float</span> `$y`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathCurveToSmoothAbsolute</span> (
+<span class="methodparam"><span class="type">float</span> `$x2`</span> ,
+<span class="methodparam"><span class="type">float</span> `$y2`</span> ,
+<span class="methodparam"><span class="type">float</span> `$x`</span> ,
+<span class="methodparam"><span class="type">float</span> `$y`</span> )
 
 **Warning**
 
@@ -19963,12 +20003,12 @@ Draws a cubic Bezier curve
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathCurveToSmoothRelative</span> ( <span
-class="methodparam"><span class="type">float</span> `$x2`</span> , <span
-class="methodparam"><span class="type">float</span> `$y2`</span> , <span
-class="methodparam"><span class="type">float</span> `$x`</span> , <span
-class="methodparam"><span class="type">float</span> `$y`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathCurveToSmoothRelative</span> (
+<span class="methodparam"><span class="type">float</span> `$x2`</span> ,
+<span class="methodparam"><span class="type">float</span> `$y2`</span> ,
+<span class="methodparam"><span class="type">float</span> `$x`</span> ,
+<span class="methodparam"><span class="type">float</span> `$y`</span> )
 
 **Warning**
 
@@ -20011,11 +20051,11 @@ Draws an elliptical arc
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathEllipticArcAbsolute</span> ( <span
-class="methodparam"><span class="type">float</span> `$rx`</span> , <span
-class="methodparam"><span class="type">float</span> `$ry`</span> , <span
-class="methodparam"><span class="type">float</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathEllipticArcAbsolute</span> (
+<span class="methodparam"><span class="type">float</span> `$rx`</span> ,
+<span class="methodparam"><span class="type">float</span> `$ry`</span> ,
+<span class="methodparam"><span class="type">float</span>
 `$x_axis_rotation`</span> , <span class="methodparam"><span
 class="type">bool</span> `$large_arc_flag`</span> , <span
 class="methodparam"><span class="type">bool</span> `$sweep_flag`</span>
@@ -20072,11 +20112,11 @@ Draws an elliptical arc
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathEllipticArcRelative</span> ( <span
-class="methodparam"><span class="type">float</span> `$rx`</span> , <span
-class="methodparam"><span class="type">float</span> `$ry`</span> , <span
-class="methodparam"><span class="type">float</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathEllipticArcRelative</span> (
+<span class="methodparam"><span class="type">float</span> `$rx`</span> ,
+<span class="methodparam"><span class="type">float</span> `$ry`</span> ,
+<span class="methodparam"><span class="type">float</span>
 `$x_axis_rotation`</span> , <span class="methodparam"><span
 class="type">bool</span> `$large_arc_flag`</span> , <span
 class="methodparam"><span class="type">bool</span> `$sweep_flag`</span>
@@ -20133,8 +20173,8 @@ Terminates the current path
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathFinish</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathFinish</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -20154,8 +20194,8 @@ Draws a line path
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathLineToAbsolute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathLineToAbsolute</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
@@ -20185,7 +20225,8 @@ Draws a horizontal line path
 
 ### 说明
 
-<span class="type">bool</span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span
 class="methodname">ImagickDraw::pathLineToHorizontalAbsolute</span> (
 <span class="methodparam"><span class="type">float</span> `$x`</span> )
 
@@ -20213,7 +20254,8 @@ Draws a horizontal line
 
 ### 说明
 
-<span class="type">bool</span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span
 class="methodname">ImagickDraw::pathLineToHorizontalRelative</span> (
 <span class="methodparam"><span class="type">float</span> `$x`</span> )
 
@@ -20241,8 +20283,8 @@ Draws a line path
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathLineToRelative</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathLineToRelative</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
@@ -20272,9 +20314,10 @@ Draws a vertical line
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathLineToVerticalAbsolute</span> (
-<span class="methodparam"><span class="type">float</span> `$y`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathLineToVerticalAbsolute</span>
+( <span class="methodparam"><span class="type">float</span> `$y`</span>
+)
 
 **Warning**
 
@@ -20300,9 +20343,10 @@ Draws a vertical line path
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathLineToVerticalRelative</span> (
-<span class="methodparam"><span class="type">float</span> `$y`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathLineToVerticalRelative</span>
+( <span class="methodparam"><span class="type">float</span> `$y`</span>
+)
 
 **Warning**
 
@@ -20328,8 +20372,8 @@ Starts a new sub-path
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathMoveToAbsolute</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathMoveToAbsolute</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
@@ -20359,8 +20403,8 @@ Starts a new sub-path
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathMoveToRelative</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathMoveToRelative</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
@@ -20390,8 +20434,8 @@ Declares the start of a path drawing list
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pathStart</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pathStart</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -20467,8 +20511,8 @@ Draws a point
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::point</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::point</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
@@ -20526,8 +20570,8 @@ Draws a polygon
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::polygon</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::polygon</span> ( <span
 class="methodparam"><span class="type">array</span>
 `$coordinates`</span> )
 
@@ -20592,8 +20636,8 @@ Draws a polyline
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::polyline</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::polyline</span> ( <span
 class="methodparam"><span class="type">array</span>
 `$coordinates`</span> )
 
@@ -20658,8 +20702,8 @@ previously pushed ImagickDraw
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pop</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pop</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -20682,8 +20726,8 @@ Terminates a clip path definition
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::popClipPath</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::popClipPath</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -20703,8 +20747,8 @@ Terminates a definition list
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::popDefs</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::popDefs</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -20759,8 +20803,8 @@ Terminates a pattern definition
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::popPattern</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::popPattern</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -20780,8 +20824,8 @@ Clones the current ImagickDraw and pushes it to the stack
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::push</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::push</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -20838,8 +20882,8 @@ Starts a clip path definition
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pushClipPath</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pushClipPath</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$clip_mask_id`</span> )
 
@@ -20867,8 +20911,8 @@ processing
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pushDefs</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pushDefs</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -20891,8 +20935,8 @@ command comprise the definition of a named pattern
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::pushPattern</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::pushPattern</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$pattern_id`</span> , <span class="methodparam"><span
 class="type">float</span> `$x`</span> , <span class="methodparam"><span
@@ -20991,8 +21035,8 @@ Draws a rectangle
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::rectangle</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::rectangle</span> ( <span
 class="methodparam"><span class="type">float</span> `$x1`</span> , <span
 class="methodparam"><span class="type">float</span> `$y1`</span> , <span
 class="methodparam"><span class="type">float</span> `$x2`</span> , <span
@@ -21060,8 +21104,8 @@ Renders all preceding drawing commands onto the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::render</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::render</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -21102,8 +21146,8 @@ Applies the specified rotation to the current coordinate space
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::rotate</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::rotate</span> ( <span
 class="methodparam"><span class="type">float</span> `$degrees`</span> )
 
 **Warning**
@@ -21156,8 +21200,8 @@ Draws a rounded rectangle
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::roundRectangle</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::roundRectangle</span> ( <span
 class="methodparam"><span class="type">float</span> `$x1`</span> , <span
 class="methodparam"><span class="type">float</span> `$y1`</span> , <span
 class="methodparam"><span class="type">float</span> `$x2`</span> , <span
@@ -21233,8 +21277,8 @@ Adjusts the scaling factor
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::scale</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::scale</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
@@ -21293,8 +21337,8 @@ Associates a named clipping path with the image
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setClipPath</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setClipPath</span> ( <span
 class="methodparam"><span class="type">string</span> `$clip_mask`</span>
 )
 
@@ -21356,8 +21400,8 @@ Set the polygon fill rule to be used by the clipping path
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setClipRule</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setClipRule</span> ( <span
 class="methodparam"><span class="type">int</span> `$fill_rule`</span> )
 
 **Warning**
@@ -21421,8 +21465,8 @@ Sets the interpretation of clip path units
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setClipUnits</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setClipUnits</span> ( <span
 class="methodparam"><span class="type">int</span> `$clip_units`</span> )
 
 **Warning**
@@ -21486,8 +21530,8 @@ texture
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setFillAlpha</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setFillAlpha</span> ( <span
 class="methodparam"><span class="type">float</span> `$opacity`</span> )
 
 **Warning**
@@ -21543,8 +21587,8 @@ Sets the fill color to be used for drawing filled objects
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setFillColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setFillColor</span> ( <span
 class="methodparam"><span class="type">ImagickPixel</span>
 `$fill_pixel`</span> )
 
@@ -21603,8 +21647,8 @@ texture
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setFillOpacity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setFillOpacity</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$fillOpacity`</span> )
 
@@ -21663,8 +21707,8 @@ Sets the URL to use as a fill pattern for filling objects
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setFillPatternURL</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setFillPatternURL</span> ( <span
 class="methodparam"><span class="type">string</span> `$fill_url`</span>
 )
 
@@ -21693,8 +21737,8 @@ Sets the fill rule to use while drawing polygons
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setFillRule</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setFillRule</span> ( <span
 class="methodparam"><span class="type">int</span> `$fill_rule`</span> )
 
 **Warning**
@@ -21781,8 +21825,8 @@ Sets the fully-specified font to use when annotating with text
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setFont</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setFont</span> ( <span
 class="methodparam"><span class="type">string</span> `$font_name`</span>
 )
 
@@ -21847,8 +21891,8 @@ Sets the font family to use when annotating with text
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setFontFamily</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setFontFamily</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$font_family`</span> )
 
@@ -21918,8 +21962,8 @@ Sets the font pointsize to use when annotating with text
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setFontSize</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setFontSize</span> ( <span
 class="methodparam"><span class="type">float</span> `$pointsize`</span>
 )
 
@@ -21980,8 +22024,8 @@ Sets the font stretch to use when annotating with text
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setFontStretch</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setFontStretch</span> ( <span
 class="methodparam"><span class="type">int</span> `$fontStretch`</span>
 )
 
@@ -22053,8 +22097,8 @@ Sets the font style to use when annotating with text
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setFontStyle</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setFontStyle</span> ( <span
 class="methodparam"><span class="type">int</span> `$style`</span> )
 
 **Warning**
@@ -22113,8 +22157,8 @@ Sets the font weight
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setFontWeight</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setFontWeight</span> ( <span
 class="methodparam"><span class="type">int</span> `$font_weight`</span>
 )
 
@@ -22178,8 +22222,8 @@ Sets the text placement gravity
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setGravity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setGravity</span> ( <span
 class="methodparam"><span class="type">int</span> `$gravity`</span> )
 
 **Warning**
@@ -22274,8 +22318,8 @@ Specifies the opacity of stroked object outlines
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setStrokeAlpha</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setStrokeAlpha</span> ( <span
 class="methodparam"><span class="type">float</span> `$opacity`</span> )
 
 **Warning**
@@ -22332,8 +22376,8 @@ Controls whether stroked outlines are antialiased
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setStrokeAntialias</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setStrokeAntialias</span> ( <span
 class="methodparam"><span class="type">bool</span>
 `$stroke_antialias`</span> )
 
@@ -22398,8 +22442,8 @@ Sets the color used for stroking object outlines
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setStrokeColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setStrokeColor</span> ( <span
 class="methodparam"><span class="type">ImagickPixel</span>
 `$stroke_pixel`</span> )
 
@@ -22460,8 +22504,8 @@ Specifies the pattern of dashes and gaps used to stroke paths
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setStrokeDashArray</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setStrokeDashArray</span> ( <span
 class="methodparam"><span class="type">array</span> `$dashArray`</span>
 )
 
@@ -22533,8 +22577,8 @@ Specifies the offset into the dash pattern to start the dash
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setStrokeDashOffset</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setStrokeDashOffset</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$dash_offset`</span> )
 
@@ -22601,8 +22645,8 @@ stroked
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setStrokeLineCap</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setStrokeLineCap</span> ( <span
 class="methodparam"><span class="type">int</span> `$linecap`</span> )
 
 **Warning**
@@ -22664,8 +22708,8 @@ stroked
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setStrokeLineJoin</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setStrokeLineJoin</span> ( <span
 class="methodparam"><span class="type">int</span> `$linejoin`</span> )
 
 **Warning**
@@ -22740,8 +22784,8 @@ Specifies the miter limit
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setStrokeMiterLimit</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setStrokeMiterLimit</span> ( <span
 class="methodparam"><span class="type">int</span> `$miterlimit`</span> )
 
 **Warning**
@@ -22819,8 +22863,8 @@ Specifies the opacity of stroked object outlines
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setStrokeOpacity</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setStrokeOpacity</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$stroke_opacity`</span> )
 
@@ -22881,8 +22925,8 @@ Sets the pattern used for stroking object outlines
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setStrokePatternURL</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setStrokePatternURL</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$stroke_url`</span> )
 
@@ -22908,8 +22952,8 @@ Sets the width of the stroke used to draw object outlines
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setStrokeWidth</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setStrokeWidth</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$stroke_width`</span> )
 
@@ -22966,8 +23010,8 @@ Specifies a text alignment
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setTextAlignment</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setTextAlignment</span> ( <span
 class="methodparam"><span class="type">int</span> `$alignment`</span> )
 
 **Warning**
@@ -23025,8 +23069,8 @@ Controls whether text is antialiased
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setTextAntialias</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setTextAntialias</span> ( <span
 class="methodparam"><span class="type">bool</span> `$antiAlias`</span> )
 
 **Warning**
@@ -23084,8 +23128,8 @@ Specifies a decoration
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setTextDecoration</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setTextDecoration</span> ( <span
 class="methodparam"><span class="type">int</span> `$decoration`</span> )
 
 **Warning**
@@ -23140,8 +23184,8 @@ Specifies the text code set
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setTextEncoding</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setTextEncoding</span> ( <span
 class="methodparam"><span class="type">string</span> `$encoding`</span>
 )
 
@@ -23244,8 +23288,8 @@ Specifies the color of a background rectangle
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setTextUnderColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setTextUnderColor</span> ( <span
 class="methodparam"><span class="type">ImagickPixel</span>
 `$under_color`</span> )
 
@@ -23303,8 +23347,8 @@ Sets the vector graphics
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setVectorGraphics</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setVectorGraphics</span> ( <span
 class="methodparam"><span class="type">string</span> `$xml`</span> )
 
 **Warning**
@@ -23370,8 +23414,8 @@ Sets the overall canvas size
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::setViewbox</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::setViewbox</span> ( <span
 class="methodparam"><span class="type">int</span> `$x1`</span> , <span
 class="methodparam"><span class="type">int</span> `$y1`</span> , <span
 class="methodparam"><span class="type">int</span> `$x2`</span> , <span
@@ -23453,8 +23497,8 @@ Skews the current coordinate system in the horizontal direction
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::skewX</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::skewX</span> ( <span
 class="methodparam"><span class="type">float</span> `$degrees`</span> )
 
 **Warning**
@@ -23511,8 +23555,8 @@ Skews the current coordinate system in the vertical direction
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::skewY</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::skewY</span> ( <span
 class="methodparam"><span class="type">float</span> `$degrees`</span> )
 
 **Warning**
@@ -23568,8 +23612,8 @@ Applies a translation to the current coordinate system
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickDraw::translate</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickDraw::translate</span> ( <span
 class="methodparam"><span class="type">float</span> `$x`</span> , <span
 class="methodparam"><span class="type">float</span> `$y`</span> )
 
@@ -23631,25 +23675,29 @@ function translate($strokeColor, $fillColor, $backgroundColor, $fillModifiedColo
 
 <span class="ooclass"> class **ImagickPixel**</span> {
 
-<span class="type">bool</span> <span class="methodname">clear</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">clear</span> ( <span
+class="methodparam">void</span> )
 
-<span class="methodname">\_\_construct</span> (\[ <span
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$color`</span> \]
 )
 
-<span class="type">bool</span> <span class="methodname">destroy</span> (
-<span class="methodparam">void</span> )
-
-<span class="type">array</span> <span class="methodname">getColor</span>
-(\[ <span class="methodparam"><span class="type">int</span>
-`$normalized`<span class="initializer"> = 0</span></span> \] )
-
-<span class="type">string</span> <span
-class="methodname">getColorAsString</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">destroy</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getColor</span> (\[ <span
+class="methodparam"><span class="type">int</span> `$normalized`<span
+class="initializer"> = 0</span></span> \] )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getColorAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getColorCount</span> ( <span
 class="methodparam">void</span> )
 
@@ -23657,8 +23705,8 @@ class="methodparam">void</span> )
 <span class="methodname">getColorQuantum</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">float</span> <span
-class="methodname">getColorValue</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">getColorValue</span> ( <span
 class="methodparam"><span class="type">int</span> `$color`</span> )
 
 <span class="modifier">public</span> <span class="type"><span
@@ -23666,15 +23714,16 @@ class="type">int</span><span class="type">float</span></span> <span
 class="methodname">getColorValueQuantum</span> ( <span
 class="methodparam"><span class="type">int</span> `$color`</span> )
 
-<span class="type">array</span> <span class="methodname">getHSL</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getHSL</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getIndex</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">isPixelSimilar</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">isPixelSimilar</span> ( <span
 class="methodparam"><span class="type">ImagickPixel</span>
 `$color`</span> , <span class="methodparam"><span
 class="type">float</span> `$fuzz`</span> )
@@ -23685,21 +23734,22 @@ class="methodparam"><span class="type">string</span> `$color`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$fuzz`</span> \] )
 
-<span class="type">bool</span> <span class="methodname">isSimilar</span>
-( <span class="methodparam"><span class="type">ImagickPixel</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">isSimilar</span> ( <span
+class="methodparam"><span class="type">ImagickPixel</span>
 `$color`</span> , <span class="methodparam"><span
 class="type">float</span> `$fuzz`</span> )
 
-<span class="type">bool</span> <span class="methodname">setColor</span>
-( <span class="methodparam"><span class="type">string</span>
-`$color`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setColor</span> ( <span
+class="methodparam"><span class="type">string</span> `$color`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setcolorcount</span> ( <span
 class="methodparam"><span class="type">int</span> `$colorCount`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setColorValue</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setColorValue</span> ( <span
 class="methodparam"><span class="type">int</span> `$color`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$value`</span> )
@@ -23711,11 +23761,12 @@ class="methodparam"><span class="type">int</span> `$color`</span> ,
 class="type">int</span><span class="type">float</span></span>
 `$value`</span> )
 
-<span class="type">bool</span> <span class="methodname">setHSL</span> (
-<span class="methodparam"><span class="type">float</span> `$hue`</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setHSL</span> ( <span class="methodparam"><span
+class="type">float</span> `$hue`</span> , <span
+class="methodparam"><span class="type">float</span> `$saturation`</span>
 , <span class="methodparam"><span class="type">float</span>
-`$saturation`</span> , <span class="methodparam"><span
-class="type">float</span> `$luminosity`</span> )
+`$luminosity`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setIndex</span> ( <span
@@ -23730,8 +23781,8 @@ Clears resources associated with this object
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixel::clear</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixel::clear</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -23752,7 +23803,8 @@ The ImagickPixel constructor
 
 ### 说明
 
-<span class="methodname">ImagickPixel::\_\_construct</span> (\[ <span
+<span class="modifier">public</span> <span
+class="methodname">ImagickPixel::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$color`</span> \]
 )
 
@@ -23837,8 +23889,8 @@ Deallocates resources associated with this object
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixel::destroy</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixel::destroy</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -23860,8 +23912,8 @@ Returns the color
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">ImagickPixel::getColor</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ImagickPixel::getColor</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$normalized`<span
 class="initializer"> = 0</span></span> \] )
 
@@ -23872,12 +23924,17 @@ in the list.
 ### 参数
 
 `normalized`  
-Normalize the color values
+Normalize the color values. Possible values are *0*, *1* or *2*.
+
+| `normalized` | Description                                                                                                                                                                                 |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **`0`**      | The RGB values are returned as <span class="type">int</span>s in the range *0* to *255* (inclusive.) The alpha value is returned as <span class="type">int</span> and is either *0* or *1*. |
+| **`1`**      | The RGBA values are returned as <span class="type">float</span>s in the range *0* to *1* (inclusive.)                                                                                       |
+| **`2`**      | The RGBA values are returned as <span class="type">int</span>s in the range *0* to *255* (inclusive.)                                                                                       |
 
 ### 返回值
 
-An array of channel values, each normalized if **`TRUE`** is given as
-param. Throws ImagickPixelException on error.
+An array of channel values. Throws ImagickPixelException on error.
 
 ### 范例
 
@@ -23897,7 +23954,7 @@ $colorInfo = $color->getColor();
 echo "Standard values".PHP_EOL;
 print_r($colorInfo);
 
-$colorInfo = $color->getColor(true);
+$colorInfo = $color->getColor(1);
 
 echo "Normalized values:".PHP_EOL;
 print_r($colorInfo);
@@ -23932,8 +23989,8 @@ Returns the color as a string
 
 ### 说明
 
-<span class="type">string</span> <span
-class="methodname">ImagickPixel::getColorAsString</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ImagickPixel::getColorAsString</span> ( <span
 class="methodparam">void</span> )
 
 Returns the color of the ImagickPixel object as a string.
@@ -23983,7 +24040,7 @@ Returns the color count associated with this color
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickPixel::getColorCount</span> ( <span
 class="methodparam">void</span> )
 
@@ -24052,8 +24109,8 @@ Gets the normalized value of the provided color channel
 
 ### 说明
 
-<span class="type">float</span> <span
-class="methodname">ImagickPixel::getColorValue</span> ( <span
+<span class="modifier">public</span> <span class="type">float</span>
+<span class="methodname">ImagickPixel::getColorValue</span> ( <span
 class="methodparam"><span class="type">int</span> `$color`</span> )
 
 Retrieves the value of the color channel specified, as a floating-point
@@ -24163,8 +24220,8 @@ Returns the normalized HSL color of the ImagickPixel object
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">ImagickPixel::getHSL</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ImagickPixel::getHSL</span> ( <span
 class="methodparam">void</span> )
 
 Returns the normalized HSL color described by the ImagickPixel object,
@@ -24233,8 +24290,8 @@ Check the distance between this color and another
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixel::isPixelSimilar</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixel::isPixelSimilar</span> ( <span
 class="methodparam"><span class="type">ImagickPixel</span>
 `$color`</span> , <span class="methodparam"><span
 class="type">float</span> `$fuzz`</span> )
@@ -24294,8 +24351,8 @@ Check the distance between this color and another
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixel::isSimilar</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixel::isSimilar</span> ( <span
 class="methodparam"><span class="type">ImagickPixel</span>
 `$color`</span> , <span class="methodparam"><span
 class="type">float</span> `$fuzz`</span> )
@@ -24417,8 +24474,8 @@ Sets the color
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixel::setColor</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixel::setColor</span> ( <span
 class="methodparam"><span class="type">string</span> `$color`</span> )
 
 **Warning**
@@ -24498,8 +24555,8 @@ Sets the normalized value of one of the channels
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixel::setColorValue</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixel::setColorValue</span> ( <span
 class="methodparam"><span class="type">int</span> `$color`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$value`</span> )
@@ -24621,8 +24678,8 @@ Sets the normalized HSL color
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixel::setHSL</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixel::setHSL</span> ( <span
 class="methodparam"><span class="type">float</span> `$hue`</span> ,
 <span class="methodparam"><span class="type">float</span>
 `$saturation`</span> , <span class="methodparam"><span
@@ -24722,37 +24779,40 @@ Sets the colormap index of the pixel wand.
 
 <span class="ooclass"> class **ImagickPixelIterator**</span> {
 
-<span class="type">bool</span> <span class="methodname">clear</span> (
-<span class="methodparam">void</span> )
-
-<span class="methodname">\_\_construct</span> ( <span
-class="methodparam"><span class="type">Imagick</span> `$wand`</span> )
-
-<span class="type">bool</span> <span class="methodname">destroy</span> (
-<span class="methodparam">void</span> )
-
-<span class="type">array</span> <span
-class="methodname">getCurrentIteratorRow</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">clear</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> ( <span
+class="methodparam"><span class="type">Imagick</span> `$wand`</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">destroy</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getCurrentIteratorRow</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getIteratorRow</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">getNextIteratorRow</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getNextIteratorRow</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">array</span> <span
-class="methodname">getPreviousIteratorRow</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getPreviousIteratorRow</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">newPixelIterator</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">newPixelIterator</span> ( <span
 class="methodparam"><span class="type">Imagick</span> `$wand`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">newPixelRegionIterator</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">newPixelRegionIterator</span> ( <span
 class="methodparam"><span class="type">Imagick</span> `$wand`</span> ,
 <span class="methodparam"><span class="type">int</span> `$x`</span> ,
 <span class="methodparam"><span class="type">int</span> `$y`</span> ,
@@ -24760,24 +24820,24 @@ class="methodparam"><span class="type">Imagick</span> `$wand`</span> ,
 `$columns`</span> , <span class="methodparam"><span
 class="type">int</span> `$rows`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">resetIterator</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">resetIterator</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setIteratorFirstRow</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setIteratorFirstRow</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setIteratorLastRow</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setIteratorLastRow</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setIteratorRow</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setIteratorRow</span> ( <span
 class="methodparam"><span class="type">int</span> `$row`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">syncIterator</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">syncIterator</span> ( <span
 class="methodparam">void</span> )
 
 }
@@ -24789,8 +24849,8 @@ Clear resources associated with a PixelIterator
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixelIterator::clear</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixelIterator::clear</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -24844,9 +24904,9 @@ The ImagickPixelIterator constructor
 
 ### 说明
 
-<span class="methodname">ImagickPixelIterator::\_\_construct</span> (
-<span class="methodparam"><span class="type">Imagick</span>
-`$wand`</span> )
+<span class="modifier">public</span> <span
+class="methodname">ImagickPixelIterator::\_\_construct</span> ( <span
+class="methodparam"><span class="type">Imagick</span> `$wand`</span> )
 
 **Warning**
 
@@ -24897,8 +24957,8 @@ Deallocates resources associated with a PixelIterator
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixelIterator::destroy</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixelIterator::destroy</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -24918,7 +24978,8 @@ Returns the current row of ImagickPixel objects
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span
 class="methodname">ImagickPixelIterator::getCurrentIteratorRow</span> (
 <span class="methodparam">void</span> )
 
@@ -24941,7 +25002,7 @@ Returns the current pixel iterator row
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ImagickPixelIterator::getIteratorRow</span> ( <span
 class="methodparam">void</span> )
 
@@ -24963,9 +25024,9 @@ Returns the next row of the pixel iterator
 
 ### 说明
 
-<span class="type">array</span> <span
-class="methodname">ImagickPixelIterator::getNextIteratorRow</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ImagickPixelIterator::getNextIteratorRow</span>
+( <span class="methodparam">void</span> )
 
 **Warning**
 
@@ -25021,7 +25082,8 @@ Returns the previous row
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span
 class="methodname">ImagickPixelIterator::getPreviousIteratorRow</span> (
 <span class="methodparam">void</span> )
 
@@ -25045,9 +25107,10 @@ Returns a new pixel iterator
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixelIterator::newPixelIterator</span> ( <span
-class="methodparam"><span class="type">Imagick</span> `$wand`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixelIterator::newPixelIterator</span> (
+<span class="methodparam"><span class="type">Imagick</span>
+`$wand`</span> )
 
 **Warning**
 
@@ -25066,7 +25129,8 @@ Returns a new pixel iterator
 
 ### 说明
 
-<span class="type">bool</span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span
 class="methodname">ImagickPixelIterator::newPixelRegionIterator</span> (
 <span class="methodparam"><span class="type">Imagick</span>
 `$wand`</span> , <span class="methodparam"><span class="type">int</span>
@@ -25105,9 +25169,9 @@ Resets the pixel iterator
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixelIterator::resetIterator</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixelIterator::resetIterator</span> (
+<span class="methodparam">void</span> )
 
 **Warning**
 
@@ -25180,7 +25244,8 @@ Sets the pixel iterator to the first pixel row
 
 ### 说明
 
-<span class="type">bool</span> <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span
 class="methodname">ImagickPixelIterator::setIteratorFirstRow</span> (
 <span class="methodparam">void</span> )
 
@@ -25201,9 +25266,9 @@ Sets the pixel iterator to the last pixel row
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixelIterator::setIteratorLastRow</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixelIterator::setIteratorLastRow</span>
+( <span class="methodparam">void</span> )
 
 **Warning**
 
@@ -25222,9 +25287,9 @@ Set the pixel iterator row
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixelIterator::setIteratorRow</span> ( <span
-class="methodparam"><span class="type">int</span> `$row`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixelIterator::setIteratorRow</span> (
+<span class="methodparam"><span class="type">int</span> `$row`</span> )
 
 **Warning**
 
@@ -25279,9 +25344,9 @@ Syncs the pixel iterator
 
 ### 说明
 
-<span class="type">bool</span> <span
-class="methodname">ImagickPixelIterator::syncIterator</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ImagickPixelIterator::syncIterator</span> (
+<span class="methodparam">void</span> )
 
 **Warning**
 
