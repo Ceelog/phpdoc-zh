@@ -127,6 +127,12 @@
     -   [生成器语法](/language/generators/syntax.html)
     -   [Comparing generators with Iterator
         objects](/language/generators/comparison.html)
+-   [Attributes](/language/attributes.html)
+    -   [Attributes overview](/language/attributes/overview.html)
+    -   [Attribute syntax](/language/attributes/syntax.html)
+    -   [Reading Attributes with the Reflection
+        API](/language/attributes/reflection.html)
+    -   [Declaring Attribute Classes](/language/attributes/classes.html)
 -   [引用的解释](/language/references.html)
     -   [引用是什么](/language/references/whatare.html)
     -   [引用做什么](/language/references/whatdo.html)

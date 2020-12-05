@@ -719,7 +719,7 @@ String containing the prefix.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+The value of the namespace, or **`NULL`** if no namespace exists.
 
 ### 更新日志
 

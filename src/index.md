@@ -33,6 +33,7 @@ PHP 手册
     -   [Errors](/language/errors.html)
     -   [异常处理](/language/exceptions.html)
     -   [生成器](/language/generators.html)
+    -   [Attributes](/language/attributes.html)
     -   [引用的解释](/language/references.html)
     -   [预定义变量](/reserved/variables.html)
     -   [预定义异常](/reserved/exceptions.html)
@@ -191,7 +192,7 @@ class="surname family-name">Vrana</span> </span>
 <a href="/preface.html#contributors" class="link">其他贡献者</a> </span>
 </span>
 
-2020-12-05
+2020-12-06
 
 **Edited By**: <span class="personname fn"> <span
 class="firstname given-name">Peter</span> <span

@@ -1490,10 +1490,10 @@ Convert HTML entities to their corresponding characters
 class="methodname">html\_entity\_decode</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$flags`<span class="initializer"> = ENT\_COMPAT \|
-ENT\_HTML401</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`<span class="initializer"> =
-ini\_get("default\_charset")</span></span> \]\] )
+`$flags`<span class="initializer"> = **`ENT_COMPAT`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 <span class="function">html\_entity\_decode</span> is the opposite of
 <span class="function">htmlentities</span> in that it converts HTML
@@ -1569,6 +1569,12 @@ configuration option may be set incorrectly for the given input.
 ### 返回值
 
 Returns the decoded string.
+
+### 更新日志
+
+| 版本  | 说明                        |
+|-------|-----------------------------|
+| 8.0.0 | `encoding` is nullable now. |
 
 ### 范例
 
@@ -2624,14 +2630,13 @@ Calculate the metaphone key of a string
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">metaphone</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$phonemes`<span
+class="type">string</span> `$string`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$max_phonemes`<span
 class="initializer"> = 0</span></span> \] )
 
-Calculates the metaphone key of `str`.
+Calculates the metaphone key of `string`.
 
 Similar to <span class="function">soundex</span> metaphone creates the
 same key for similar sounding words. It's more accurate than <span
@@ -2644,18 +2649,25 @@ Binstock & Rex, Addison Wesley, 1995\].
 
 ### 参数
 
-`str`  
+`string`  
 The input string.
 
-`phonemes`  
-This parameter restricts the returned metaphone key to `phonemes`
+`max_phonemes`  
+This parameter restricts the returned metaphone key to `max_phonemes`
 *characters* in length. However, the resulting phonemes are always
 transcribed completely, so the resulting string length may be slightly
-longer than `phonemes`. The default value of *0* means no restriction.
+longer than `max_phonemes`. The default value of *0* means no
+restriction.
 
 ### 返回值
 
-Returns the metaphone key as a string, 或者在失败时返回 **`FALSE`**.
+Returns the metaphone key as a string.
+
+### 更新日志
+
+| 版本  | 说明                                          |
+|-------|-----------------------------------------------|
+| 8.0.0 | The function returned **`FALSE`** on failure. |
 
 ### 范例
 
@@ -2673,7 +2685,7 @@ var_dump(metaphone('programmer'));
     string(7) "PRKRMNK"
     string(6) "PRKRMR"
 
-**示例 \#2 Using the `phonemes` parameter**
+**示例 \#2 Using the `max_phonemes` parameter**
 
 ``` php
 <?php
@@ -2687,7 +2699,7 @@ var_dump(metaphone('programmer', 5));
     string(5) "PRKRM"
     string(5) "PRKRM"
 
-**示例 \#3 Using the `phonemes` parameter**
+**示例 \#3 Using the `max_phonemes` parameter**
 
 In this example, <span class="function">metaphone</span> is advised to
 produce a string of five characters, but that would require to split the
@@ -2885,7 +2897,8 @@ Query language and locale information
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">nl\_langinfo</span> ( <span class="methodparam"><span
 class="type">int</span> `$item`</span> )
 
@@ -3902,12 +3915,11 @@ Calculate the soundex key of a string
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">soundex</span>
+<span class="type">string</span> <span class="methodname">soundex</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$str`</span> )
+`$string`</span> )
 
-Calculates the soundex key of `str`.
+Calculates the soundex key of `string`.
 
 Soundex keys have the property that words pronounced similarly produce
 the same soundex key, and can thus be used to simplify searches in
@@ -3921,13 +3933,18 @@ Addison-Wesley (1973), pp. 391-392.
 
 ### 参数
 
-`str`  
+`string`  
 The input string.
 
 ### 返回值
 
-Returns the soundex key as a <span class="type">string</span>,
-或者在失败时返回 **`FALSE`**.
+Returns the soundex key as a <span class="type">string</span>.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                            |
+|-------|-----------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | Prior to this version, calling the function with an empty string returned **`FALSE`** for no particular reason. |
 
 ### 范例
 

@@ -17,3 +17,8 @@ uopz supports the following activities:
 > **Note**:
 >
 > All of the activities supported are compatible with opcache
+
+**Caution**
+
+PECL uopz 6.1.1 is not compatible with Xdebug \>= 2.9.4. Later uopz
+versions are not compatible with Xdebug \< 2.9.4.
