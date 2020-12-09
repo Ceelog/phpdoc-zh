@@ -315,7 +315,7 @@ class="methodparam"><span class="type">string</span> `$exponent`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$modulus`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$scale`<span class="initializer"> = **`null`**</span></span> \] )
 
 Use the fast-exponentiation method to raise `num` to the power
 `exponent` with respect to the modulus `modulus`.
@@ -339,7 +339,7 @@ class="function">bcscale</span>
 
 ### 返回值
 
-Returns the result as a string, or **`FALSE`** if `modulus` is *0* or
+Returns the result as a string, or **`false`** if `modulus` is *0* or
 `exponent` is negative.
 
 ### 注释
@@ -397,7 +397,7 @@ bcscale
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

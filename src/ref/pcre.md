@@ -30,7 +30,7 @@ class="type">字符串</span>。
 
 如果没有找到匹配或者发生了错误，当`subject`是<span
 class="type">数组</span> 时返回一个空<span
-class="type">数组</span>，其他情况返回**`NULL`**。
+class="type">数组</span>，其他情况返回**`null`**。
 
 ### 范例
 
@@ -392,7 +392,7 @@ print_r($matches);
     )
 
 **`PREG_UNMATCHED_AS_NULL`**  
-传入此标记，未匹配的子组报告为 **`NULL`**；否则会是空 <span
+传入此标记，未匹配的子组报告为 **`null`**；否则会是空 <span
 class="type">string</span>。
 
 如果没有给定排序标记，假定设置为**`PREG_PATTERN_ORDER`**。
@@ -410,7 +410,7 @@ class="type">string</span>。
 
 ### 返回值
 
-返回完整匹配次数（可能是0），或者如果发生错误返回**`FALSE`**。
+返回完整匹配次数（可能是0），或者如果发生错误返回**`false`**。
 
 ### 更新日志
 
@@ -615,7 +615,7 @@ print_r($matches);
     )
 
 **`PREG_UNMATCHED_AS_NULL`**  
-使用该标记，未匹配的子组会报告为 **`NULL`**；未使用时，报告为空的 <span
+使用该标记，未匹配的子组会报告为 **`null`**；未使用时，报告为空的 <span
 class="type">string</span>。
 
 ``` php
@@ -708,7 +708,7 @@ var_dump($matches);
 class="function">preg\_match</span>在第一次匹配后 将会停止搜索。<span
 class="function">preg\_match\_all</span>不同于此，它会一直搜索`subject`
 直到到达结尾。 如果发生错误<span class="function">preg\_match</span>返回
-**`FALSE`**。
+**`false`**。
 
 ### 更新日志
 
@@ -826,7 +826,7 @@ preg\_quote
 class="methodname">preg\_quote</span> ( <span class="methodparam"><span
 class="type">string</span> `$str`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$delimiter`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">preg\_quote</span>需要参数 `str` 并向其中
 每个正则表达式语法中的字符前增加一个反斜线。
@@ -914,7 +914,7 @@ class="type">string</span><span class="type">array</span></span>
 class="type">int</span> `$limit`<span class="initializer"> =
 -1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `&$count`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`<span class="initializer"> =
 0</span></span> \]\]\] )
 
@@ -949,7 +949,7 @@ class="function">preg\_match</span> for more details.
 
 <span class="function">preg\_replace\_callback\_array</span> returns an
 array if the `subject` parameter is an array, or a string otherwise. On
-errors the return value is **`NULL`**
+errors the return value is **`null`**
 
 If matches are found, the new subject will be returned, otherwise
 `subject` will be returned unchanged.
@@ -1076,7 +1076,7 @@ fclose($fp);
 
 如果 `subject` 是一个数组， <span
 class="function">preg\_replace\_callback</span>
-返回一个数组，其他情况返回字符串。错误发生时返回 **`NULL`**。
+返回一个数组，其他情况返回字符串。错误发生时返回 **`null`**。
 
 如果查找到了匹配，返回替换后的目标字符串（或字符串数组），其他情况
 `subject` 将会无变化返回。
@@ -1241,7 +1241,7 @@ eval 语法。因为在完成替换后，引擎会将结果字符串作为 PHP �
 返回一个数组，其他情况下返回一个字符串。
 
 如果匹配被查找到，替换后的 `subject` 被返回，其他情况下返回没有改变的
-`subject`。如果发生错误，返回 **`NULL`** 。
+`subject`。如果发生错误，返回 **`null`** 。
 
 ### 错误／异常
 
@@ -1417,7 +1417,7 @@ class="function">preg\_split</span> 将仅返回分隔后的非空部分。 </sp
 ### 返回值
 
 返回一个使用 `pattern` 边界分隔 `subject` 后得到 的子串组成的数组，
-或者在失败时返回 **`FALSE`**。
+或者在失败时返回 **`false`**。
 
 ### 范例
 

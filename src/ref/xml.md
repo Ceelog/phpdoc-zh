@@ -63,7 +63,7 @@ class="methodparam"><span class="type">int</span> `$code`</span> )
 
 返回与 `code`
 描述的错误代码参数对应的文本描述字符串，若没有与之对应的描述，则返回
-**`FALSE`**。
+**`false`**。
 
 ### 参见
 
@@ -91,7 +91,7 @@ class="methodparam"><span class="type">resource</span> `$parser`</span>
 ### 返回值
 
 如果 `parser` 没有指向一个合法的解析器，该函数将返回
-**`FALSE`**，否则将返回解析器当前在其数据缓冲区中的字节索引（起始值为
+**`false`**，否则将返回解析器当前在其数据缓冲区中的字节索引（起始值为
 0）。
 
 ### 注释
@@ -127,7 +127,7 @@ class="methodparam"><span class="type">resource</span> `$parser`</span>
 ### 返回值
 
 如果 `parser` 参数没有指向一个合法的解析器，该函数将返回
-**`FALSE`**，否则将返回指定解析器所在行（由函数 <span
+**`false`**，否则将返回指定解析器所在行（由函数 <span
 class="function">xml\_get\_current\_line\_number</span>
 给定）的当前列号。
 
@@ -158,7 +158,7 @@ class="methodparam"><span class="type">resource</span> `$parser`</span>
 ### 返回值
 
 如果 `parser` 参数没有指向一个合法的解析器，该函数将返回
-**`FALSE`**，否则将返回指定解析器在其缓存中的当前行号。
+**`false`**，否则将返回指定解析器在其缓存中的当前行号。
 
 ### 参见
 
@@ -187,7 +187,7 @@ class="methodparam"><span class="type">resource</span> `$parser`</span>
 ### 返回值
 
 如果 `parser` 参数没有指向一个合法的解析器，该函数将返回
-**`FALSE`**，否则将返回<a href="/xml/error-codes.html" class="link">错误代码</a>列表中的一个错误代码。
+**`false`**，否则将返回<a href="/xml/error-codes.html" class="link">错误代码</a>列表中的一个错误代码。
 
 ### 参见
 
@@ -215,7 +215,7 @@ class="methodparam"><span class="type">array</span> `&$index`</span> \]
 > **Note**:
 >
 > <span class="function">xml\_parse\_into\_struct</span> 失败返回
-> 0，成功返回 1。这和 **`FALSE`** 与 **`TRUE`** 不同，使用例如 ===
+> 0，成功返回 1。这和 **`false`** 与 **`true`** 不同，使用例如 ===
 > 的运算符时要注意。
 
 以下范例显示了由该函数生成的数组的内部结构。我们简单地将一个 *note*
@@ -424,10 +424,10 @@ class="initializer"> = false</span></span> \] )
 需要解析的数据集。您可以多次对新的数据调用 <span
 class="function">xml\_parse</span>
 函数来分段解析一个文档；只要在解析最后一段数据时将 `is_final` 参数设置为
-**`TRUE`**。
+**`true`**。
 
 `is_final`  
-如果被设置为 **`TRUE`**，则 `data` 为当前解析中最后一段数据。
+如果被设置为 **`true`**，则 `data` 为当前解析中最后一段数据。
 
 ### 返回值
 
@@ -442,7 +442,7 @@ class="function">xml\_get\_current\_byte\_index</span>。
 
 > **Note**:
 >
-> 将 `is_final` 参数设置为 **`TRUE`**，项目的错误将会报告在数据的末尾。
+> 将 `is_final` 参数设置为 **`true`**，项目的错误将会报告在数据的末尾。
 
 xml\_parser\_create\_ns
 =======================
@@ -517,7 +517,7 @@ class="methodparam"><span class="type">resource</span> `$parser`</span>
 <span class="simpara"> 指向要释放的 XML 解析器的指针。 </span>
 
 如果 `parser` 参数没有指向一个合法的解析器，该函数将返回
-**`FALSE`**，否则将释放指定的解析器并返回 **`TRUE`**。
+**`false`**，否则将释放指定的解析器并返回 **`true`**。
 
 xml\_parser\_get\_option
 ========================
@@ -542,7 +542,7 @@ class="methodparam"><span class="type">resource</span> `$parser`</span>
 </span>
 
 如果 `parser` 参数没有指向一个合法的解析器或者 `option`
-参数无效，该函数将返回 **`FALSE`**（同时产生 **`E_WARNING`**
+参数无效，该函数将返回 **`false`**（同时产生 **`E_WARNING`**
 警告）。否则将返回指定设置选项的值。
 
 xml\_parser\_set\_option
@@ -570,7 +570,7 @@ class="type">mixed</span> `$value`</span> )
 
 如果 `parser`
 参数没有指向一个合法的解析器或者指定的选项无法设置，该函数将返回
-**`FALSE`**，否则将会把选项设置为指定的值并返回 **`TRUE`**。
+**`false`**，否则将会把选项设置为指定的值并返回 **`true`**。
 
 可被设置的选项如下：
 
@@ -626,14 +626,14 @@ document. It can be called multiple times inside each fragment (e.g. for
 non-ASCII strings).
 
 如果处理器函数名被设置为空字符串或者
-**`FALSE`**，则该有问题的处理器将被屏蔽。
+**`false`**，则该有问题的处理器将被屏蔽。
 
 > **Note**: <span
 > class="simpara">除了函数名，含有对象引用的数组和方法名也可以作为参数。</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 xml\_set\_default\_handler
 ==========================
@@ -677,14 +677,14 @@ class="replaceable">parser</span> 为指向要调用处理器的 XML
 声明、文档类型声明、实体名或者其它没有已存在处理器的地数据。 </span>
 
 如果处理器函数名被设置为空字符串或者
-**`FALSE`**，则该有问题的处理器将被屏蔽。
+**`false`**，则该有问题的处理器将被屏蔽。
 
 > **Note**: <span
 > class="simpara">除了函数名，含有对象引用的数组和方法名也可以作为参数。</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 xml\_set\_element\_handler
 ==========================
@@ -760,11 +760,11 @@ class="replaceable">parser</span> 为指向要调用处理器的 XML
 </span>
 
 如果处理器函数名被设置为空字符串或者
-**`FALSE`**，则该有问题的处理器将被屏蔽。
+**`false`**，则该有问题的处理器将被屏蔽。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 xml\_set\_end\_namespace\_decl\_handler
 =======================================
@@ -795,7 +795,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 
 The function named by `handler` must accept two parameters, and should
 return an integer value. If the value returned from the handler is
-**`FALSE`** (which it will be if no value is returned), the XML parser
+**`false`** (which it will be if no value is returned), the XML parser
 will stop parsing and <span
 class="function">xml\_get\_error\_code</span> will return
 **`XML_ERROR_EXTERNAL_ENTITY_HANDLING`**.
@@ -814,7 +814,7 @@ calling the handler. </span>
 <span class="simpara"> The prefix is a string used to reference the
 namespace within an XML object. </span>
 
-If a handler function is set to an empty string, or **`FALSE`**, the
+If a handler function is set to an empty string, or **`false`**, the
 handler in question is disabled.
 
 > **Note**: <span
@@ -822,7 +822,7 @@ handler in question is disabled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -861,7 +861,7 @@ XML 解析器的引用，用于建立外部实体指向处理器。
 
 由 `handler`
 参数命名的函数名必须接受五个参数，并应该返回一个整型值。如果处理器的返回值为
-**`FALSE`**（这也是函数没有确定返回值时的返回值），XML
+**`false`**（这也是函数没有确定返回值时的返回值），XML
 解析器将停止解析， <span class="function">xml\_get\_error\_code</span>
 函数将返回 **`XML_ERROR_EXTERNAL_ENTITY_HANDLING`**。
 
@@ -899,14 +899,14 @@ class="replaceable">parser</span> 为指向要调用处理器的 XML
 XML 的要求被正常化。 </span>
 
 如果处理器函数名被设置为空字符串或者
-**`FALSE`**，则该有问题的处理器将被屏蔽。
+**`false`**，则该有问题的处理器将被屏蔽。
 
 > **Note**: <span
 > class="simpara">除了函数名，含有对象引用的数组和方法名也可以作为参数。</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 xml\_set\_notation\_decl\_handler
 =================================
@@ -974,14 +974,14 @@ class="replaceable">parser</span> 为指向要调用处理器的 XML
 <span class="simpara"> 外部注释声明的公共标识符。 </span>
 
 如果处理器函数名被设置为空字符串或者
-**`FALSE`**，则该有问题的处理器将被屏蔽。
+**`false`**，则该有问题的处理器将被屏蔽。
 
 > **Note**: <span
 > class="simpara">除了函数名，含有对象引用的数组和方法名也可以作为参数。</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 xml\_set\_object
 ================
@@ -1105,14 +1105,14 @@ class="replaceable">parser</span> 为指向要调用处理器的 XML
 <span class="simpara"> 第三个参数 `data` 包含了 PI 数据。 </span>
 
 如果处理器函数名被设置为空字符串或者
-**`FALSE`**，则该有问题的处理器将被屏蔽。
+**`false`**，则该有问题的处理器将被屏蔽。
 
 > **Note**: <span
 > class="simpara">除了函数名，含有对象引用的数组和方法名也可以作为参数。</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 xml\_set\_start\_namespace\_decl\_handler
 =========================================
@@ -1143,7 +1143,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 
 The function named by `handler` must accept three parameters, and should
 return an integer value. If the value returned from the handler is
-**`FALSE`** (which it will be if no value is returned), the XML parser
+**`false`** (which it will be if no value is returned), the XML parser
 will stop parsing and <span
 class="function">xml\_get\_error\_code</span> will return
 **`XML_ERROR_EXTERNAL_ENTITY_HANDLING`**.
@@ -1167,7 +1167,7 @@ namespace within an XML object. </span>
 <span class="simpara"> Uniform Resource Identifier (URI) of namespace.
 </span>
 
-If a handler function is set to an empty string, or **`FALSE`**, the
+If a handler function is set to an empty string, or **`false`**, the
 handler in question is disabled.
 
 > **Note**: <span
@@ -1175,7 +1175,7 @@ handler in question is disabled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1254,14 +1254,14 @@ class="replaceable">parser</span> 为指向要调用处理器的 XML
 class="function">xml\_set\_notation\_decl\_handler</span>）。 </span>
 
 如果处理器函数名被设置为空字符串或者
-**`FALSE`**，则该有问题的处理器将被屏蔽。
+**`false`**，则该有问题的处理器将被屏蔽。
 
 > **Note**: <span
 > class="simpara">除了函数名，含有对象引用的数组和方法名也可以作为参数。</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 **目录**
 

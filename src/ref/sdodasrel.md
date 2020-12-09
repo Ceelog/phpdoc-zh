@@ -308,7 +308,7 @@ value\_list
 An array of the values to be substituted into the SQL statement in place
 of the placeholders. In the event that there are no placeholders or
 parameter markers in the SQL statement then this argument can be
-specified as **`NULL`** or as an empty array;
+specified as **`null`** or as an empty array;
 
 column\_specifier  
 The Relational DAS needs to examine the result set and for every column,

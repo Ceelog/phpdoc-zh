@@ -2094,7 +2094,7 @@ parameter.
 <tr class="odd">
 <td>canonicalizeHostname</td>
 <td><span class="type">bool</span></td>
-<td><p>If <strong><code>TRUE</code></strong>, the driver will resolve the real hostname for the server IP address before authenticating via SASL. Some underlying GSSAPI layers already do this, but the functionality may be disabled in their config (e.g. <em>krb.conf</em>). Defaults to <strong><code>FALSE</code></strong>.</p>
+<td><p>If <strong><code>true</code></strong>, the driver will resolve the real hostname for the server IP address before authenticating via SASL. Some underlying GSSAPI layers already do this, but the functionality may be disabled in their config (e.g. <em>krb.conf</em>). Defaults to <strong><code>false</code></strong>.</p>
 <p>This option is a deprecated alias for the <em>"CANONICALIZE_HOST_NAME"</em> property of the <em>"authMechanismProperties"</em> URI option.</p></td>
 </tr>
 <tr class="even">
@@ -2110,7 +2110,7 @@ parameter.
 <tr class="even">
 <td>directConnection</td>
 <td><span class="type">bool</span></td>
-<td><p>This option can be used to control replica set discovery behavior when only a single host is provided in the connection string. By default, providing a single member in the connection string will establish a direct connection or discover additional members depending on whether the <em>"replicaSet"</em> URI option is omitted or present, respectively. Specify <strong><code>FALSE</code></strong> to force discovery to occur (if <em>"replicaSet"</em> is omitted) or specify <strong><code>TRUE</code></strong> to force a direct connection (if <em>"replicaSet"</em> is present).</p></td>
+<td><p>This option can be used to control replica set discovery behavior when only a single host is provided in the connection string. By default, providing a single member in the connection string will establish a direct connection or discover additional members depending on whether the <em>"replicaSet"</em> URI option is omitted or present, respectively. Specify <strong><code>false</code></strong> to force discovery to occur (if <em>"replicaSet"</em> is omitted) or specify <strong><code>true</code></strong> to force a direct connection (if <em>"replicaSet"</em> is present).</p></td>
 </tr>
 <tr class="odd">
 <td>gssapiServiceName</td>
@@ -2127,7 +2127,7 @@ parameter.
 <tr class="odd">
 <td>journal</td>
 <td><span class="type">bool</span></td>
-<td><p>Corresponds to the default write concern's <code class="parameter">journal</code> parameter. If <strong><code>TRUE</code></strong>, writes will require acknowledgement from MongoDB that the operation has been written to the journal. For details, see <span class="classname">MongoDB\Driver\WriteConcern</span>.</p></td>
+<td><p>Corresponds to the default write concern's <code class="parameter">journal</code> parameter. If <strong><code>true</code></strong>, writes will require acknowledgement from MongoDB that the operation has been written to the journal. For details, see <span class="classname">MongoDB\Driver\WriteConcern</span>.</p></td>
 </tr>
 <tr class="even">
 <td>localThresholdMS</td>
@@ -2171,19 +2171,19 @@ parameter.
 <tr class="odd">
 <td>retryReads</td>
 <td><span class="type">bool</span></td>
-<td><p>Specifies whether or not the driver should automatically retry certain read operations that fail due to transient network errors or replica set elections. This functionality requires MongoDB 3.6+. Defaults to <strong><code>TRUE</code></strong>.</p>
+<td><p>Specifies whether or not the driver should automatically retry certain read operations that fail due to transient network errors or replica set elections. This functionality requires MongoDB 3.6+. Defaults to <strong><code>true</code></strong>.</p>
 <p>See the <a href="https://github.com/mongodb/specifications/blob/master/source/retryable-reads/retryable-reads.rst" class="link external">» Retryable Reads Specification</a> for more information.</p></td>
 </tr>
 <tr class="even">
 <td>retryWrites</td>
 <td><span class="type">bool</span></td>
-<td><p>Specifies whether or not the driver should automatically retry certain write operations that fail due to transient network errors or replica set elections. This functionality requires MongoDB 3.6+. Defaults to <strong><code>TRUE</code></strong>.</p>
+<td><p>Specifies whether or not the driver should automatically retry certain write operations that fail due to transient network errors or replica set elections. This functionality requires MongoDB 3.6+. Defaults to <strong><code>true</code></strong>.</p>
 <p>See <a href="https://docs.mongodb.com/manual/core/retryable-writes/" class="link external">» Retryable Writes</a> in the MongoDB manual for more information.</p></td>
 </tr>
 <tr class="odd">
 <td>safe</td>
 <td><span class="type">bool</span></td>
-<td><p>If <strong><code>TRUE</code></strong>, specifies <em>1</em> for the default write concern's <code class="parameter">w</code> parameter. If <strong><code>FALSE</code></strong>, <em>0</em> is specified. For details, see <span class="classname">MongoDB\Driver\WriteConcern</span>.</p>
+<td><p>If <strong><code>true</code></strong>, specifies <em>1</em> for the default write concern's <code class="parameter">w</code> parameter. If <strong><code>false</code></strong>, <em>0</em> is specified. For details, see <span class="classname">MongoDB\Driver\WriteConcern</span>.</p>
 <p>This option is deprecated and should not be used.</p></td>
 </tr>
 <tr class="even">
@@ -2194,12 +2194,12 @@ parameter.
 <tr class="odd">
 <td>serverSelectionTryOnce</td>
 <td><span class="type">bool</span></td>
-<td><p>When <strong><code>TRUE</code></strong>, instructs the driver to scan the MongoDB deployment exactly once after server selection fails and then either select a server or raise an error. When <strong><code>FALSE</code></strong>, the driver blocks and searches for a server up to the <em>"serverSelectionTimeoutMS"</em> value. Defaults to <strong><code>TRUE</code></strong>.</p></td>
+<td><p>When <strong><code>true</code></strong>, instructs the driver to scan the MongoDB deployment exactly once after server selection fails and then either select a server or raise an error. When <strong><code>false</code></strong>, the driver blocks and searches for a server up to the <em>"serverSelectionTimeoutMS"</em> value. Defaults to <strong><code>true</code></strong>.</p></td>
 </tr>
 <tr class="even">
 <td>slaveOk</td>
 <td><span class="type">bool</span></td>
-<td><p>Specifies <em>"secondaryPreferred"</em> for the read preference mode if <strong><code>TRUE</code></strong>. For details, see <span class="classname">MongoDB\Driver\ReadPreference</span>.</p>
+<td><p>Specifies <em>"secondaryPreferred"</em> for the read preference mode if <strong><code>true</code></strong>. For details, see <span class="classname">MongoDB\Driver\ReadPreference</span>.</p>
 <p>This option is deprecated and should not be used.</p></td>
 </tr>
 <tr class="odd">
@@ -2215,18 +2215,18 @@ parameter.
 <tr class="odd">
 <td>ssl</td>
 <td><span class="type">bool</span></td>
-<td><p>Initiates the connection with TLS/SSL if <strong><code>TRUE</code></strong>. Defaults to <strong><code>FALSE</code></strong>.</p>
+<td><p>Initiates the connection with TLS/SSL if <strong><code>true</code></strong>. Defaults to <strong><code>false</code></strong>.</p>
 <p>This option is a deprecated alias for the <em>"tls"</em> URI option.</p></td>
 </tr>
 <tr class="even">
 <td>tls</td>
 <td><span class="type">bool</span></td>
-<td><p>Initiates the connection with TLS/SSL if <strong><code>TRUE</code></strong>. Defaults to <strong><code>FALSE</code></strong>.</p></td>
+<td><p>Initiates the connection with TLS/SSL if <strong><code>true</code></strong>. Defaults to <strong><code>false</code></strong>.</p></td>
 </tr>
 <tr class="odd">
 <td>tlsAllowInvalidCertificates</td>
 <td><span class="type">bool</span></td>
-<td><p>Specifies whether or not the driver should error when the server's TLS certificate is invalid. Defaults to <strong><code>FALSE</code></strong>.</p>
+<td><p>Specifies whether or not the driver should error when the server's TLS certificate is invalid. Defaults to <strong><code>false</code></strong>.</p>
 <div class="warning">
 <strong>Warning</strong>
 <p>Disabling certificate validation creates a vulnerability.</p>
@@ -2235,7 +2235,7 @@ parameter.
 <tr class="even">
 <td>tlsAllowInvalidHostnames</td>
 <td><span class="type">bool</span></td>
-<td><p>Specifies whether or not the driver should error when there is a mismatch between the server's hostname and the hostname specified by the TLS certificate. Defaults to <strong><code>FALSE</code></strong>.</p>
+<td><p>Specifies whether or not the driver should error when there is a mismatch between the server's hostname and the hostname specified by the TLS certificate. Defaults to <strong><code>false</code></strong>.</p>
 <div class="warning">
 <strong>Warning</strong>
 <p>Disabling certificate validation creates a vulnerability. Allowing invalid hostnames may expose the driver to a <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" class="link external">» man-in-the-middle attack</a>.</p>
@@ -2259,17 +2259,17 @@ parameter.
 <tr class="even">
 <td>tlsDisableCertificateRevocationCheck</td>
 <td><span class="type">bool</span></td>
-<td><p>If <strong><code>TRUE</code></strong>, the driver will not attempt to check certificate revocation status (e.g. OCSP, CRL). Defaults to <strong><code>FALSE</code></strong>.</p></td>
+<td><p>If <strong><code>true</code></strong>, the driver will not attempt to check certificate revocation status (e.g. OCSP, CRL). Defaults to <strong><code>false</code></strong>.</p></td>
 </tr>
 <tr class="odd">
 <td>tlsDisableOCSPEndpointCheck</td>
 <td><span class="type">bool</span></td>
-<td><p>If <strong><code>TRUE</code></strong>, the driver will not attempt to contact an OCSP responder endpoint if needed (i.e. an OCSP response is not stapled). Defaults to <strong><code>FALSE</code></strong>.</p></td>
+<td><p>If <strong><code>true</code></strong>, the driver will not attempt to contact an OCSP responder endpoint if needed (i.e. an OCSP response is not stapled). Defaults to <strong><code>false</code></strong>.</p></td>
 </tr>
 <tr class="even">
 <td>tlsInsecure</td>
 <td><span class="type">bool</span></td>
-<td><p>Relax TLS constraints as much as possible. Specifying <strong><code>TRUE</code></strong> for this option has the same effect as specifying <strong><code>TRUE</code></strong> for both the <em>"tlsAllowInvalidCertificates"</em> and <em>"tlsAllowInvalidHostnames"</em> URI options. Defaults to <strong><code>FALSE</code></strong>.</p>
+<td><p>Relax TLS constraints as much as possible. Specifying <strong><code>true</code></strong> for this option has the same effect as specifying <strong><code>true</code></strong> for both the <em>"tlsAllowInvalidCertificates"</em> and <em>"tlsAllowInvalidHostnames"</em> URI options. Defaults to <strong><code>false</code></strong>.</p>
 <div class="warning">
 <strong>Warning</strong>
 <p>Disabling certificate validation creates a vulnerability. Allowing invalid hostnames may expose the driver to a <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" class="link external">» man-in-the-middle attack</a>.</p>
@@ -2318,7 +2318,7 @@ parameter.
 <tr class="odd">
 <td>allow_invalid_hostname</td>
 <td><span class="type">bool</span></td>
-<td><p>Disables hostname validation if <strong><code>TRUE</code></strong>. Defaults to <strong><code>FALSE</code></strong>.</p>
+<td><p>Disables hostname validation if <strong><code>true</code></strong>. Defaults to <strong><code>false</code></strong>.</p>
 <p>Allowing invalid hostnames may expose the driver to a <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" class="link external">» man-in-the-middle attack</a>.</p>
 <p>This option is a deprecated alias for the <em>"tlsAllowInvalidHostnames"</em> URI option.</p></td>
 </tr>
@@ -2388,7 +2388,7 @@ parameter.
 <tr class="odd">
 <td>bypassAutoEncryption</td>
 <td><span class="type">bool</span></td>
-<td>With this option set to <strong><code>TRUE</code></strong>, <em>mongocryptd</em> will not be spawned automatically. This is used to disable automatic encryption.</td>
+<td>With this option set to <strong><code>true</code></strong>, <em>mongocryptd</em> will not be spawned automatically. This is used to disable automatic encryption.</td>
 </tr>
 <tr class="even">
 <td>extraOptions</td>
@@ -2477,7 +2477,7 @@ parameter.
 <tr class="even">
 <td>weak_cert_validation</td>
 <td><span class="type">bool</span></td>
-<td><p>Disables certificate validation if <strong><code>TRUE</code></strong>. Defaults to <strong><code>FALSE</code></strong></p>
+<td><p>Disables certificate validation if <strong><code>true</code></strong>. Defaults to <strong><code>false</code></strong></p>
 <p>This option is a deprecated alias for the <em>"tlsAllowInvalidHostnames"</em> URI option.</p></td>
 </tr>
 </tbody>
@@ -2519,8 +2519,8 @@ parameter.
 <tr class="odd">
 <td>PECL mongodb 1.6.0</td>
 <td><p>Added the <em>"retryReads"</em>, <em>"tls"</em>, <em>"tlsAllowInvalidCertificates"</em>, <em>"tlsAllowInvalidHostnames"</em>, <em>"tlsCAFile"</em>, <em>"tlsCertificateKeyFile"</em>, <em>"tlsCertificateKeyFilePassword"</em>, and <em>"tlsInsecure"</em> URI options.</p>
-<p>The <em>"retryWrites"</em> URI option defaults to <strong><code>TRUE</code></strong>.</p>
-<p>Specifying any SSL or TLS URI option via the connection string or <code class="parameter">uriOptions</code> parameter will now implicitly enable TLS unless <em>ssl</em> or <em>tls</em> is <strong><code>FALSE</code></strong>. TLS is <em>not</em> implicitly enabled for any options in the <code class="parameter">driverOptions</code> parameter, which is unchanged from previous versions.</p></td>
+<p>The <em>"retryWrites"</em> URI option defaults to <strong><code>true</code></strong>.</p>
+<p>Specifying any SSL or TLS URI option via the connection string or <code class="parameter">uriOptions</code> parameter will now implicitly enable TLS unless <em>ssl</em> or <em>tls</em> is <strong><code>false</code></strong>. TLS is <em>not</em> implicitly enabled for any options in the <code class="parameter">driverOptions</code> parameter, which is unchanged from previous versions.</p></td>
 </tr>
 <tr class="even">
 <td>PECL mongodb 1.5.0</td>
@@ -4074,9 +4074,9 @@ commands, queries, and write operations.
 <tr class="odd">
 <td>causalConsistency</td>
 <td><span class="type">bool</span></td>
-<td><p>Configure causal consistency in a session. If <strong><code>TRUE</code></strong>, each operation in the session will be causally ordered after the previous read or write operation. Set to <strong><code>FALSE</code></strong> to disable causal consistency.</p>
+<td><p>Configure causal consistency in a session. If <strong><code>true</code></strong>, each operation in the session will be causally ordered after the previous read or write operation. Set to <strong><code>false</code></strong> to disable causal consistency.</p>
 <p>See <a href="https://docs.mongodb.com/manual/core/read-isolation-consistency-recency/#causal-consistency" class="link external">» Casual Consistency</a> in the MongoDB manual for more information.</p></td>
-<td><strong><code>TRUE</code></strong></td>
+<td><strong><code>true</code></strong></td>
 </tr>
 <tr class="even">
 <td>defaultTransactionOptions</td>
@@ -4590,7 +4590,7 @@ An empty predicate will match all documents in the collection.
 <tr class="even">
 <td>explain</td>
 <td><span class="type">bool</span></td>
-<td><p>If <strong><code>TRUE</code></strong>, the returned <span class="classname">MongoDB\Driver\Cursor</span> will contain a single document that describes the process and indexes used to return the query.</p>
+<td><p>If <strong><code>true</code></strong>, the returned <span class="classname">MongoDB\Driver\Cursor</span> will contain a single document that describes the process and indexes used to return the query.</p>
 <p>Falls back to the deprecated <em>"$explain"</em> modifier if not specified.</p>
 <p>This option is not supported by the find command in MongoDB 3.2+ and will only be respected when using the legacy wire protocol version (i.e. OP_QUERY). The <a href="https://docs.mongodb.com/manual/reference/command/explain/" class="link external">» explain</a> command should be used on MongoDB 3.0+.</p></td>
 </tr>
@@ -4604,7 +4604,7 @@ An empty predicate will match all documents in the collection.
 <td>limit</td>
 <td><span class="type">int</span></td>
 <td><p>The maximum number of documents to return. If unspecified, then defaults to no limit. A limit of 0 is equivalent to setting no limit.</p>
-<p>A negative limit is will be interpreted as a positive limit with the <em>"singleBatch"</em> option set to <strong><code>TRUE</code></strong>. This behavior is supported for backwards compatibility, but should be considered deprecated.</p></td>
+<p>A negative limit is will be interpreted as a positive limit with the <em>"singleBatch"</em> option set to <strong><code>true</code></strong>. This behavior is supported for backwards compatibility, but should be considered deprecated.</p></td>
 </tr>
 <tr class="odd">
 <td>max</td>
@@ -4677,19 +4677,19 @@ An empty predicate will match all documents in the collection.
 <tr class="odd">
 <td>returnKey</td>
 <td><span class="type">bool</span></td>
-<td><p>If <strong><code>TRUE</code></strong>, returns only the index keys in the resulting documents. Default value is <strong><code>FALSE</code></strong>. If <strong><code>TRUE</code></strong> and the find command does not use an index, the returned documents will be empty.</p>
+<td><p>If <strong><code>true</code></strong>, returns only the index keys in the resulting documents. Default value is <strong><code>false</code></strong>. If <strong><code>true</code></strong> and the find command does not use an index, the returned documents will be empty.</p>
 <p>Falls back to the deprecated <em>"$returnKey"</em> modifier if not specified.</p></td>
 </tr>
 <tr class="even">
 <td>showRecordId</td>
 <td><span class="type">bool</span></td>
-<td><p>Determines whether to return the record identifier for each document. If <strong><code>TRUE</code></strong>, adds a top-level <em>"$recordId"</em> field to the returned documents.</p>
+<td><p>Determines whether to return the record identifier for each document. If <strong><code>true</code></strong>, adds a top-level <em>"$recordId"</em> field to the returned documents.</p>
 <p>Falls back to the deprecated <em>"$showDiskLoc"</em> modifier if not specified.</p></td>
 </tr>
 <tr class="odd">
 <td>singleBatch</td>
 <td><span class="type">bool</span></td>
-<td>Determines whether to close the cursor after the first batch. Defaults to <strong><code>FALSE</code></strong>.</td>
+<td>Determines whether to close the cursor after the first batch. Defaults to <strong><code>false</code></strong>.</td>
 </tr>
 <tr class="even">
 <td>skip</td>
@@ -5041,15 +5041,15 @@ class="methodname">MongoDB\\Driver\\Manager::executeBulkWrite</span>.
 <tr class="odd">
 <td>bypassDocumentValidation</td>
 <td><span class="type">bool</span></td>
-<td><p>If <strong><code>TRUE</code></strong>, allows insert and update operations to circumvent document level validation.</p>
+<td><p>If <strong><code>true</code></strong>, allows insert and update operations to circumvent document level validation.</p>
 <p>This option is available in MongoDB 3.2+ and is ignored for older server versions, which do not support document level validation.</p></td>
-<td><strong><code>FALSE</code></strong></td>
+<td><strong><code>false</code></strong></td>
 </tr>
 <tr class="even">
 <td>ordered</td>
 <td><span class="type">bool</span></td>
-<td>Ordered operations (<strong><code>TRUE</code></strong>) are executed serially on the MongoDB server, while unordered operations (<strong><code>FALSE</code></strong>) are sent to the server in an arbitrary order and may be executed in parallel.</td>
-<td><strong><code>TRUE</code></strong></td>
+<td>Ordered operations (<strong><code>true</code></strong>) are executed serially on the MongoDB server, while unordered operations (<strong><code>false</code></strong>) are sent to the server in an arbitrary order and may be executed in parallel.</td>
+<td><strong><code>true</code></strong></td>
 </tr>
 </tbody>
 </table>
@@ -5274,8 +5274,8 @@ An empty predicate will match all documents in the collection.
 <tr class="odd">
 <td>limit</td>
 <td><span class="type">bool</span></td>
-<td>Delete all matching documents (<strong><code>FALSE</code></strong>), or only the first matching document (<strong><code>TRUE</code></strong>)</td>
-<td><strong><code>FALSE</code></strong></td>
+<td>Delete all matching documents (<strong><code>false</code></strong>), or only the first matching document (<strong><code>true</code></strong>)</td>
+<td><strong><code>false</code></strong></td>
 </tr>
 </tbody>
 </table>
@@ -5492,14 +5492,14 @@ replacement document (i.e. *only* *field:value* expressions), or an
 <tr class="even">
 <td>multi</td>
 <td><span class="type">bool</span></td>
-<td>Update only the first matching document if <strong><code>FALSE</code></strong>, or all matching documents <strong><code>TRUE</code></strong>. This option cannot be <strong><code>TRUE</code></strong> if <code class="parameter">newObj</code> is a replacement document.</td>
-<td><strong><code>FALSE</code></strong></td>
+<td>Update only the first matching document if <strong><code>false</code></strong>, or all matching documents <strong><code>true</code></strong>. This option cannot be <strong><code>true</code></strong> if <code class="parameter">newObj</code> is a replacement document.</td>
+<td><strong><code>false</code></strong></td>
 </tr>
 <tr class="odd">
 <td>upsert</td>
 <td><span class="type">bool</span></td>
 <td>If <code class="parameter">filter</code> does not match an existing document, insert a <em>single</em> document. The document will be created from <code class="parameter">newObj</code> if it is a replacement document (i.e. no update operators); otherwise, the operators in <code class="parameter">newObj</code> will be applied to <code class="parameter">filter</code> to create the new document.</td>
-<td><strong><code>FALSE</code></strong></td>
+<td><strong><code>false</code></strong></td>
 </tr>
 </tbody>
 </table>
@@ -6052,7 +6052,7 @@ concerns are left unset.
 
 ### 返回值
 
-Returns **`TRUE`** if this is the default write concern and **`FALSE`**
+Returns **`true`** if this is the default write concern and **`false`**
 otherwise.
 
 ### 错误／异常
@@ -6255,7 +6255,7 @@ class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">int</span></span>
 `$mode`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$tagSets`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">array</span> `$options`<span class="initializer"> =
 array()</span></span> \]\] )
 
@@ -6528,7 +6528,7 @@ class="methodname">MongoDB\\Driver\\ReadPreference::\_\_construct</span>
 class="type">string</span><span class="type">int</span></span>
 `$mode`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$tagSets`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">array</span> `$options`<span class="initializer"> =
 array()</span></span> \]\] )
 
@@ -7190,10 +7190,10 @@ contact the shard's primary nor the config servers for updated metadata.
 The query returns data that reflects all successful writes issued with a
 write concern of *"majority"* *and* acknowledged prior to the start of
 the read operation. For replica sets that run with
-*writeConcernMajorityJournalDefault* set to **`TRUE`**, linearizable
+*writeConcernMajorityJournalDefault* set to **`true`**, linearizable
 read concern returns data that will never be rolled back.
 
-With *writeConcernMajorityJournalDefault* set to **`FALSE`**, MongoDB
+With *writeConcernMajorityJournalDefault* set to **`false`**, MongoDB
 will not wait for *w: "majority"* writes to be durable before
 acknowledging the writes. As such, *"majority"* write operations could
 possibly roll back in the event of a loss of a replica set member.
@@ -7490,7 +7490,7 @@ left unset.
 
 ### 返回值
 
-Returns **`TRUE`** if this is the default read concern and **`FALSE`**
+Returns **`true`** if this is the default read concern and **`false`**
 otherwise.
 
 ### 错误／异常
@@ -7939,7 +7939,7 @@ class="methodparam">void</span> )
 
 Returns the current result document as an array or object, depending on
 the cursor's type map. If iteration has not started or the current
-position is not valid, **`NULL`** will be returned.
+position is not valid, **`null`** will be returned.
 
 ### 参见
 
@@ -8166,8 +8166,8 @@ available is as follows:
 
 ### 返回值
 
-Returns **`TRUE`** if there are definitely no additional results
-available on the cursor, and **`FALSE`** otherwise.
+Returns **`true`** if there are definitely no additional results
+available on the cursor, and **`false`** otherwise.
 
 ### 错误／异常
 
@@ -8304,7 +8304,7 @@ be rewound.
 
 ### 返回值
 
-**`NULL`**.
+**`null`**.
 
 ### 错误／异常
 
@@ -8519,7 +8519,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`TRUE`** if the current cursor position is valid, **`FALSE`**
+**`true`** if the current cursor position is valid, **`false`**
 otherwise.
 
 ### 参见
@@ -9993,8 +9993,8 @@ of a replica set.
 
 ### 返回值
 
-Returns **`TRUE`** if this server is an arbiter member of a replica set,
-and **`FALSE`** otherwise.
+Returns **`true`** if this server is an arbiter member of a replica set,
+and **`false`** otherwise.
 
 ### 错误／异常
 
@@ -10028,8 +10028,8 @@ of a replica set.
 
 ### 返回值
 
-Returns **`TRUE`** if this server is a hidden member of a replica set,
-and **`FALSE`** otherwise.
+Returns **`true`** if this server is a hidden member of a replica set,
+and **`false`** otherwise.
 
 ### 错误／异常
 
@@ -10063,8 +10063,8 @@ of a replica set (i.e. its priority is *0*).
 
 ### 返回值
 
-Returns **`TRUE`** if this server is a passive member of a replica set,
-and **`FALSE`** otherwise.
+Returns **`true`** if this server is a passive member of a replica set,
+and **`false`** otherwise.
 
 ### 错误／异常
 
@@ -10098,8 +10098,8 @@ of a replica set.
 
 ### 返回值
 
-Returns **`TRUE`** if this server is a primary member of a replica set,
-and **`FALSE`** otherwise.
+Returns **`true`** if this server is a primary member of a replica set,
+and **`false`** otherwise.
 
 ### 错误／异常
 
@@ -10133,8 +10133,8 @@ of a replica set.
 
 ### 返回值
 
-Returns **`TRUE`** if this server is a secondary member of a replica
-set, and **`FALSE`** otherwise.
+Returns **`true`** if this server is a secondary member of a replica
+set, and **`false`** otherwise.
 
 ### 错误／异常
 
@@ -10258,7 +10258,7 @@ class="methodname">MongoDB\\Driver\\WriteConcernError::getInfo</span> (
 
 ### 返回值
 
-Returns the metadata document for the WriteConcernError, or **`NULL`**
+Returns the metadata document for the WriteConcernError, or **`null`**
 if no metadata is available.
 
 ### 错误／异常
@@ -10532,7 +10532,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-Returns the metadata document for the WriteError, or **`NULL`** if no
+Returns the metadata document for the WriteError, or **`null`** if no
 metadata is available.
 
 ### 错误／异常
@@ -10692,7 +10692,7 @@ class="methodname">MongoDB\\Driver\\WriteResult::getDeletedCount</span>
 
 ### 返回值
 
-Returns the number of documents deleted, or **`NULL`** if the write was
+Returns the number of documents deleted, or **`null`** if the write was
 not acknowledged.
 
 ### 错误／异常
@@ -10755,7 +10755,7 @@ class="methodname">MongoDB\\Driver\\WriteResult::getInsertedCount</span>
 ### 返回值
 
 Returns the number of documents inserted (excluding upserts), or
-**`NULL`** if the write was not acknowledged.
+**`null`** if the write was not acknowledged.
 
 ### 错误／异常
 
@@ -10821,7 +10821,7 @@ class="methodname">MongoDB\\Driver\\WriteResult::getModifiedCount</span>.
 
 ### 返回值
 
-Returns the number of documents selected for update, or **`NULL`** if
+Returns the number of documents selected for update, or **`null`** if
 the write was not acknowledged.
 
 ### 错误／异常
@@ -10890,12 +10890,12 @@ class="methodname">MongoDB\\Driver\\WriteResult::getMatchedCount</span>.
 
 ### 返回值
 
-Returns the number of existing documents updated, or **`NULL`** if the
+Returns the number of existing documents updated, or **`null`** if the
 write was not acknowledged.
 
 The modified count is not available on versions of MongoDB before 2.6,
 which used the legacy wire protocol version (i.e. OP\_UPDATE). If this
-is the case, the modified count will also be **`NULL`**.
+is the case, the modified count will also be **`null`**.
 
 ### 错误／异常
 
@@ -11162,7 +11162,7 @@ class="methodname">MongoDB\\Driver\\WriteResult::getWriteConcernError</span>
 
 Returns a <span
 class="classname">MongoDB\\Driver\\WriteConcernError</span> if a write
-concern error was encountered during the write operation, and **`NULL`**
+concern error was encountered during the write operation, and **`null`**
 otherwise.
 
 ### 错误／异常
@@ -11372,7 +11372,7 @@ the <span class="classname">MongoDB\\Driver\\WriteResult</span> object.
 
 ### 返回值
 
-Returns **`TRUE`** if the write was acknowledged, and **`FALSE`**
+Returns **`true`** if the write was acknowledged, and **`false`**
 otherwise.
 
 ### 错误／异常
@@ -13280,7 +13280,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-Returns the Javascript's scope document, or **`NULL`** if the is no
+Returns the Javascript's scope document, or **`null`** if the is no
 scope.
 
 ### 错误／异常
@@ -15160,7 +15160,7 @@ class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">float</span><span
 class="type">string</span><span
 class="type">DateTimeInterface</span></span> `$milliseconds`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">mixed</span> <span
@@ -15211,7 +15211,7 @@ class="methodname">MongoDB\\BSON\\UTCDateTime::\_\_construct</span> (\[
 class="type">int</span><span class="type">float</span><span
 class="type">string</span><span
 class="type">DateTimeInterface</span></span> `$milliseconds`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 ### 参数
 
@@ -15230,7 +15230,7 @@ class="classname">DateTimeImmutable</span> objects constructed from the
 current time
 <a href="/migration71/incompatible.html#migration71.incompatible.datetime-microseconds" class="link">did not incorporate sub-second precision</a>.
 
-If this argument is **`NULL`**, the current time will be used by
+If this argument is **`null`**, the current time will be used by
 default.
 
 ### 错误／异常
@@ -15243,7 +15243,7 @@ default.
 
 | 版本               | 说明                                                                                                                                                                                                                                                                                                                                                                                          |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PECL mongodb 1.2.0 | The `milliseconds` argument is optional and defaults to **`NULL`** (i.e. current time). The argument also accepts a <span class="classname">DateTimeInterface</span>, which may be used to derive the number of milliseconds since the Unix epoch. Previously, only <span class="type">int</span>, <span class="type">float</span>, and <span class="type">string</span> types were accepted. |
+| PECL mongodb 1.2.0 | The `milliseconds` argument is optional and defaults to **`null`** (i.e. current time). The argument also accepts a <span class="classname">DateTimeInterface</span>, which may be used to derive the number of milliseconds since the Unix epoch. Previously, only <span class="type">int</span>, <span class="type">float</span>, and <span class="type">string</span> types were accepted. |
 
 ### 范例
 

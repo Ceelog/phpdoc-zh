@@ -559,7 +559,7 @@ An offset to check for.
 
 ### 返回值
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 Judy::offsetGet
 ===============

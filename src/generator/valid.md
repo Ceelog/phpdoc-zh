@@ -15,4 +15,4 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果迭代器已被关闭返回 **`FALSE`**，否则返回 **`TRUE`**。
+如果迭代器已被关闭返回 **`false`**，否则返回 **`true`**。

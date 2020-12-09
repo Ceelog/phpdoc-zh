@@ -46,8 +46,8 @@ libmcrypt 2.4.x 或更高版本，那么还支持 nOFB 密码模式。
 
 | 名字                                                                 | 默认       | 可修改范围    | 更新日志 |
 |----------------------------------------------------------------------|------------|---------------|----------|
-| <a href="/mcrypt/setup.html#" class="link">mcrypt.algorithms_dir</a> | **`NULL`** | PHP\_INI\_ALL |          |
-| <a href="/mcrypt/setup.html#" class="link">mcrypt.modes_dir</a>      | **`NULL`** | PHP\_INI\_ALL |          |
+| <a href="/mcrypt/setup.html#" class="link">mcrypt.algorithms_dir</a> | **`null`** | PHP\_INI\_ALL |          |
+| <a href="/mcrypt/setup.html#" class="link">mcrypt.modes_dir</a>      | **`null`** | PHP\_INI\_ALL |          |
 
 有关 PHP\_INI\_\* 样式的更多详情与定义，见
 <a href="/configuration/changes/modes.html" class="xref">配置可被设定范围</a>。

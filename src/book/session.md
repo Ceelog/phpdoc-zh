@@ -313,7 +313,7 @@ session_start();
 > Since this class' methods are designed to be called internally by PHP
 > as part of the normal session workflow, child class calls to parent
 > methods (i.e. the actual internal native handlers) will return
-> **`FALSE`** unless the session has actually been started (either
+> **`false`** unless the session has actually been started (either
 > automatically, or by explicit <span
 > class="function">session\_start</span>. This is important to consider
 > when writing unit tests where the class methods might be invoked
@@ -392,7 +392,7 @@ class="methodparam"><span class="type">string</span> `$id`</span> )
 
 Destroys a session. Called internally by PHP with <span
 class="function">session\_regenerate\_id</span> (assuming the `$destroy`
-is set to **`TRUE`**, by <span class="function">session\_destroy</span>
+is set to **`true`**, by <span class="function">session\_destroy</span>
 or when <span class="function">session\_decode</span> fails.
 
 This method wraps the internal PHP save handler defined in the
@@ -461,14 +461,14 @@ be removed.
 ### 返回值
 
 Returns the number of deleted sessions on success, 或者在失败时返回
-**`FALSE`**. Note this value is returned internally to PHP for
+**`false`**. Note this value is returned internally to PHP for
 processing.
 
 ### 更新日志
 
 | 版本  | 说明                                                                |
 |-------|---------------------------------------------------------------------|
-| 7.1.0 | Prior to this version, the function returned **`TRUE`** on success. |
+| 7.1.0 | Prior to this version, the function returned **`true`** on success. |
 
 SessionHandler::open
 ====================
@@ -798,7 +798,7 @@ class="methodparam"><span class="type">string</span> `$id`</span> )
 
 Destroys a session. Called by <span
 class="function">session\_regenerate\_id</span> (with $destroy =
-**`TRUE`**), <span class="function">session\_destroy</span> and when
+**`true`**), <span class="function">session\_destroy</span> and when
 <span class="function">session\_decode</span> fails.
 
 ### 参数
@@ -841,14 +841,14 @@ be removed.
 ### 返回值
 
 Returns the number of deleted sessions on success, 或者在失败时返回
-**`FALSE`**. Note this value is returned internally to PHP for
+**`false`**. Note this value is returned internally to PHP for
 processing.
 
 ### 更新日志
 
 | 版本  | 说明                                                                |
 |-------|---------------------------------------------------------------------|
-| 7.1.0 | Prior to this version, the function returned **`TRUE`** on success. |
+| 7.1.0 | Prior to this version, the function returned **`true`** on success. |
 
 SessionHandlerInterface::open
 =============================

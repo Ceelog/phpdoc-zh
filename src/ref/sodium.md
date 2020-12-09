@@ -1276,7 +1276,7 @@ class="function">password\_hash</span> function.
 
 ### 返回值
 
-Returns **`TRUE`** if the password and hash match, or **`FALSE`**
+Returns **`true`** if the password and hash match, or **`false`**
 otherwise.
 
 ### 注释
@@ -1335,7 +1335,7 @@ paired with the matching opslimit values.
 
 ### 返回值
 
-Returns the hashed password, 或者在失败时返回 **`FALSE`**.
+Returns the hashed password, 或者在失败时返回 **`false`**.
 
 In order to produce the same password hash from the same password, the
 same values for `opslimit` and `memlimit` must be used. These are
@@ -1448,7 +1448,7 @@ representing the Argon2id algorithm version 1.3.
 
 ### 返回值
 
-Returns the derived key, 或者在失败时返回 **`FALSE`**. The return value
+Returns the derived key, 或者在失败时返回 **`false`**. The return value
 is a binary string of the hash, not an ASCII-encoded representation, and
 does not contain additional information about the parameters used to
 create the hash, so you will need to keep that information if you are

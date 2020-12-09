@@ -1078,9 +1078,9 @@ Imagick::CHANNEL\_DEFAULT</span></span> \] )
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$bestfit`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$bestfit`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">adaptiveSharpenImage</span> ( <span
@@ -1240,7 +1240,7 @@ class="methodparam"><span class="type">mixed</span> `$colorize`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$opacity`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$legacy`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">colorMatrixImage</span> ( <span
@@ -1756,7 +1756,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$include_values`<span class="initializer"> = **`TRUE`**</span></span>
+`$include_values`<span class="initializer"> = **`true`**</span></span>
 \]\] )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -1764,7 +1764,7 @@ class="methodparam"><span class="type">bool</span>
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$include_values`<span class="initializer"> = **`TRUE`**</span></span>
+`$include_values`<span class="initializer"> = **`true`**</span></span>
 \]\] )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -1951,7 +1951,7 @@ class="methodparam"><span class="type">string</span> `$embedText`</span>
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">identifyImage</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$appendRawOutput`<span class="initializer"> = **`FALSE`**</span></span>
+`$appendRawOutput`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -2284,7 +2284,7 @@ class="methodparam"><span class="type">string</span> `$image`</span> \[,
 class="methodparam"><span class="type">resource</span>
 `$filehandle`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$fileName`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">readImages</span> ( <span
@@ -2338,9 +2338,9 @@ class="methodparam"><span class="type">int</span> `$columns`</span> ,
 , <span class="methodparam"><span class="type">float</span>
 `$blur`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$bestfit`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$legacy`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">rollImage</span> ( <span
@@ -2381,9 +2381,9 @@ class="methodparam"><span class="type">int</span> `$columns`</span> ,
 class="methodparam"><span class="type">int</span> `$cols`</span> , <span
 class="methodparam"><span class="type">int</span> `$rows`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$bestfit`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">segmentImage</span> ( <span
@@ -2392,7 +2392,7 @@ class="methodparam"><span class="type">int</span> `$COLORSPACE`</span> ,
 `$cluster_threshold`</span> , <span class="methodparam"><span
 class="type">float</span> `$smooth_threshold`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$verbose`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">selectiveBlurImage</span> ( <span
@@ -2867,11 +2867,11 @@ Imagick::CHANNEL\_DEFAULT</span></span> \] )
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$bestfit`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$bestfit`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span> `$fill`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">tintImage</span> ( <span
@@ -2879,7 +2879,7 @@ class="methodparam"><span class="type">mixed</span> `$tint`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$opacity`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$legacy`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">\_\_toString</span> ( <span
@@ -3134,7 +3134,7 @@ using bitwise operators. 缺省为**`Imagick::CHANNEL_DEFAULT`**. 参考此
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -3182,9 +3182,9 @@ Adaptively resize image with data dependent triangulation
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$bestfit`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$bestfit`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 Adaptively resize image with data-dependent triangulation. Avoids
 blurring across sharp color changes. Most useful when used to shrink
@@ -3211,7 +3211,7 @@ Whether to fit the image inside a bounding box.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -3293,7 +3293,7 @@ using bitwise operators. 缺省为**`Imagick::CHANNEL_DEFAULT`**. 参考此
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -3352,7 +3352,7 @@ The mean offset
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -3394,7 +3394,7 @@ The source Imagick object
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -3431,7 +3431,7 @@ using bitwise operators. 缺省为**`Imagick::CHANNEL_DEFAULT`**. 参考此
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -3470,7 +3470,7 @@ The affine matrix
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -3524,7 +3524,7 @@ X server address
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 参见
 
@@ -3567,7 +3567,7 @@ The string to draw
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -3626,8 +3626,8 @@ Append a set of images into one larger image.
 ### 参数
 
 `stack`  
-Whether to stack the images vertically. By default (or if **`FALSE`** is
-specified) images are stacked left-to-right. If `stack` is **`TRUE`**,
+Whether to stack the images vertically. By default (or if **`false`** is
+specified) images are stacked left-to-right. If `stack` is **`true`**,
 images are stacked top-to-bottom.
 
 ### 返回值
@@ -3691,7 +3691,7 @@ Which channel should the auto-levelling should be done on.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -3757,7 +3757,7 @@ The threshold below which everything turns black
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 更新日志
 
@@ -3802,7 +3802,7 @@ moonlight.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -3852,7 +3852,7 @@ constant. When not supplied, all channels are blurred.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -3913,7 +3913,7 @@ Border height
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 更新日志
 
@@ -3966,7 +3966,7 @@ polynomical function to apply to the image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -4010,7 +4010,7 @@ The standard deviation of the Gaussian, in pixels
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -4061,7 +4061,7 @@ Y origo of the chopped area
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -4119,7 +4119,7 @@ Restricts the color range from 0 to the quantum depth.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 Imagick::clear
 ==============
@@ -4136,7 +4136,7 @@ Clears all resources associated to Imagick object
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::clipImage
 ==================
@@ -4153,7 +4153,7 @@ Clips along the first path from the 8BIM profile, if present.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -4211,12 +4211,12 @@ with \#, to work on a numbered path, e.g., "\#1" to use the first path.
 The name of the path
 
 `inside`  
-If **`TRUE`** later operations take effect inside clipping path.
+If **`true`** later operations take effect inside clipping path.
 Otherwise later operations take effect outside clipping path.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -4295,7 +4295,7 @@ constant. When not supplied, default channels are replaced.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -4389,7 +4389,7 @@ Y start position of the floodfill
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -4414,7 +4414,7 @@ class="methodparam"><span class="type">mixed</span> `$colorize`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$opacity`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$legacy`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Blends the fill color with each pixel in the image.
 
@@ -4429,7 +4429,7 @@ fully opaque and 0.0 is fully transparent.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -4485,7 +4485,7 @@ offsets are normalized (divide Flash offset by 255)
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -4551,7 +4551,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -4577,7 +4577,7 @@ The comment to add
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -4669,7 +4669,7 @@ One of the
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -4798,7 +4798,7 @@ operators）可以参考这个列表
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::\_\_construct
 ======================
@@ -4849,7 +4849,7 @@ The sharpen value
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -4909,7 +4909,7 @@ bitwise operators. **`Imagick::CHANNEL_ALL`**. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::convolveImage
 ======================
@@ -4939,7 +4939,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5022,7 +5022,7 @@ class="methodparam"><span class="type">int</span> `$width`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5069,7 +5069,7 @@ class="methodparam"><span class="type">int</span> `$width`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5119,7 +5119,7 @@ The amount to displace the colormap.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5148,7 +5148,7 @@ The passphrase
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 参见
 
@@ -5200,7 +5200,7 @@ The name of the artifact to delete
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5231,7 +5231,7 @@ The name of the property to delete.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::deskewImage
 ====================
@@ -5305,7 +5305,7 @@ original image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5344,7 +5344,7 @@ This method is deprecated in favour of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::displayImage
 =====================
@@ -5367,7 +5367,7 @@ The X server name
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5394,7 +5394,7 @@ The X server name
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5416,7 +5416,7 @@ class="type">bool</span> `$bestfit`</span> )
 
 Distorts an image using various distortion methods, by mapping color
 lookups of the source image to a new destination image usually of the
-same size as the source image, unless 'bestfit' is set to **`TRUE`**.
+same size as the source image, unless 'bestfit' is set to **`true`**.
 
 If 'bestfit' is enabled, and distortion allows it, the destination image
 is adjusted to ensure the whole source 'image' will just fit within the
@@ -5440,7 +5440,7 @@ Attempt to resize destination to fit distorted source
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5523,7 +5523,7 @@ class="methodparam"><span class="type">ImagickDraw</span> `$draw`</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::edgeImage
 ==================
@@ -5546,7 +5546,7 @@ The radius of the operation.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5596,7 +5596,7 @@ The sigma of the effect
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5642,7 +5642,7 @@ The passphrase
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 参见
 
@@ -5663,7 +5663,7 @@ Applies a digital filter that improves the quality of a noisy image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5700,7 +5700,7 @@ Equalizes the image histogram.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5777,7 +5777,7 @@ echo $im;
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -5934,7 +5934,7 @@ Y position for the new size
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 参见
 
@@ -5977,7 +5977,7 @@ using bitwise operators. 缺省为**`Imagick::CHANNEL_DEFAULT`**. 参考此
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -6026,7 +6026,7 @@ layers into a single image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -6048,7 +6048,7 @@ central x-axis.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -6114,7 +6114,7 @@ X start position of the floodfill
 Y start position of the floodfill
 
 `invert`  
-If **`TRUE`** paints any pixel that does not match the target color.
+If **`true`** paints any pixel that does not match the target color.
 
 `channel`  
 Provide any channel constant that is valid for your channel mode. To
@@ -6125,7 +6125,7 @@ using bitwise operators. 缺省为**`Imagick::CHANNEL_DEFAULT`**. 参考此
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -6188,7 +6188,7 @@ central y-axis.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -6233,7 +6233,7 @@ image pair.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -6339,7 +6339,7 @@ The outer bevel width
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -6411,7 +6411,7 @@ Array of arguments to pass to this function.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -6514,7 +6514,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -6573,7 +6573,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -6631,7 +6631,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -6762,7 +6762,7 @@ Returns the objects font property. 此方法在Imagick基于ImageMagick
 
 ### 返回值
 
-Returns the string containing the font name or **`FALSE`** if not font
+Returns the string containing the font name or **`false`** if not font
 is set.
 
 ### 参见
@@ -7024,7 +7024,7 @@ Returns the image border color.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -7054,7 +7054,7 @@ using bitwise operators. 缺省为**`Imagick::CHANNEL_DEFAULT`**. 参考此
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::getImageChannelDistortion
 ==================================
@@ -7090,7 +7090,7 @@ One of the
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -7167,7 +7167,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -7282,7 +7282,7 @@ deviation.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::getImageClipMask
 =========================
@@ -7332,7 +7332,7 @@ The offset into the image colormap.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -7389,7 +7389,7 @@ Returns the composite operator associated with the image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::getImageCompression
 ============================
@@ -7958,12 +7958,12 @@ Return if the image has a matte channel
 <span class="methodname">Imagick::getImageMatte</span> ( <span
 class="methodparam">void</span> )
 
-Returns **`TRUE`** if the image has a matte channel otherwise false.
+Returns **`true`** if the image has a matte channel otherwise false.
 此方法在Imagick基于ImageMagick 6.2.9以上版本编译时可用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::getImageMatteColor
 ===========================
@@ -8124,10 +8124,10 @@ Returns the image profiles
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$include_values`<span class="initializer"> = **`TRUE`**</span></span>
+`$include_values`<span class="initializer"> = **`true`**</span></span>
 \]\] )
 
-Returns all associated profiles that match the pattern. If **`FALSE`**
+Returns all associated profiles that match the pattern. If **`false`**
 is passed as second parameter only the profile names are returned.
 此方法在Imagick基于ImageMagick 6.3.6以上版本编译时可用。
 
@@ -8137,7 +8137,7 @@ is passed as second parameter only the profile names are returned.
 The pattern for profile names.
 
 `include_values`  
-Whether to return only profile names. If **`FALSE`** then only profile
+Whether to return only profile names. If **`false`** then only profile
 names will be returned.
 
 ### 返回值
@@ -8156,10 +8156,10 @@ Returns the image properties
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$include_values`<span class="initializer"> = **`TRUE`**</span></span>
+`$include_values`<span class="initializer"> = **`true`**</span></span>
 \]\] )
 
-Returns all associated properties that match the pattern. If **`FALSE`**
+Returns all associated properties that match the pattern. If **`false`**
 is passed as second parameter only the property names are returned.
 此方法在Imagick基于ImageMagick 6.3.6以上版本编译时可用。
 
@@ -8169,7 +8169,7 @@ is passed as second parameter only the property names are returned.
 The pattern for property names.
 
 `include_values`  
-Whether to return only property names. If **`FALSE`** then only property
+Whether to return only property names. If **`false`** then only property
 names will be returned.
 
 ### 返回值
@@ -9211,7 +9211,7 @@ using bitwise operators. 缺省为**`Imagick::CHANNEL_DEFAULT`**. 参考此
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -9246,13 +9246,13 @@ Checks if the object has more images
 <span class="methodname">Imagick::hasNextImage</span> ( <span
 class="methodparam">void</span> )
 
-Returns **`TRUE`** if the object has more images when traversing the
+Returns **`true`** if the object has more images when traversing the
 list in the forward direction.
 
 ### 返回值
 
-Returns **`TRUE`** if the object has more images when traversing the
-list in the forward direction, returns **`FALSE`** if there are none.
+Returns **`true`** if the object has more images when traversing the
+list in the forward direction, returns **`false`** if there are none.
 
 Imagick::hasPreviousImage
 =========================
@@ -9265,13 +9265,13 @@ Checks if the object has a previous image
 <span class="methodname">Imagick::hasPreviousImage</span> ( <span
 class="methodparam">void</span> )
 
-Returns **`TRUE`** if the object has more images when traversing the
+Returns **`true`** if the object has more images when traversing the
 list in the reverse direction
 
 ### 返回值
 
-Returns **`TRUE`** if the object has more images when traversing the
-list in the reverse direction, returns **`FALSE`** if there are none.
+Returns **`true`** if the object has more images when traversing the
+list in the reverse direction, returns **`false`** if there are none.
 
 Imagick::identifyFormat
 =======================
@@ -9298,7 +9298,7 @@ unique colors: %k".
 
 ### 返回值
 
-Returns format 或者在失败时返回 **`FALSE`**.
+Returns format 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -9323,7 +9323,7 @@ Identifies an image and fetches attributes
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">Imagick::identifyImage</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$appendRawOutput`<span class="initializer"> = **`FALSE`**</span></span>
+`$appendRawOutput`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 Identifies an image and returns the attributes. Attributes include the
@@ -9332,7 +9332,7 @@ image width, height, size, and others.
 ### 参数
 
 `appendRawOutput`  
-If **`TRUE`** then the raw output is appended to the array.
+If **`true`** then the raw output is appended to the array.
 
 ### 返回值
 
@@ -9392,7 +9392,7 @@ The radius of the implode
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -9467,7 +9467,7 @@ The array of pixels
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -9547,7 +9547,7 @@ image pair.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::labelImage
 ===================
@@ -9569,7 +9569,7 @@ The label to add
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::levelImage
 ===================
@@ -9615,7 +9615,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -9667,7 +9667,7 @@ The image white point
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -9724,7 +9724,7 @@ Introduces a bias for non-straight seams. This parameter is typically 0.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 参见
 
@@ -9769,7 +9769,7 @@ original size.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -9817,7 +9817,7 @@ class="methodparam"><span class="type">Imagick</span> `$map`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -9870,7 +9870,7 @@ The starting y coordinate of the operation.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -9908,7 +9908,7 @@ The radius of the pixel neighborhood.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -10002,7 +10002,7 @@ its original size
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::modulateImage
 ======================
@@ -10034,7 +10034,7 @@ resulting in a rotation of 180 degrees.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -10094,7 +10094,7 @@ color is that of the thumbnail's matte color.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::morphImages
 ====================
@@ -10159,7 +10159,7 @@ morphology method. Typically this is a value of 1.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -10601,7 +10601,7 @@ by the page offset of the image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::motionBlurImage
 ========================
@@ -10646,7 +10646,7 @@ ImageMagick version 6.4.4 or greater.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -10693,7 +10693,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -10749,7 +10749,7 @@ class="methodparam"><span class="type">mixed</span> `$background`</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -10809,7 +10809,7 @@ string containing pseudo image definition.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -10851,7 +10851,7 @@ Associates the next image in the image list with an Imagick object.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::normalizeImage
 =======================
@@ -10878,7 +10878,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -10921,7 +10921,7 @@ The radius of the circular neighborhood.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -10973,7 +10973,7 @@ intensities of 100 and 102 respectively are now interpreted as the same
 color.
 
 `invert`  
-If **`TRUE`** paints any pixel that does not match the target color.
+If **`true`** paints any pixel that does not match the target color.
 
 `channel`  
 Provide any channel constant that is valid for your channel mode. To
@@ -10984,7 +10984,7 @@ using bitwise operators. 缺省为**`Imagick::CHANNEL_DEFAULT`**. 参考此
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::optimizeImageLayers
 ============================
@@ -11004,7 +11004,7 @@ replace each frame, while preserving the results of the animation.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -11072,7 +11072,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -11163,7 +11163,7 @@ using bitwise operators. 缺省为**`Imagick::CHANNEL_DEFAULT`**. 参考此
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::paintOpaqueImage
 =========================
@@ -11208,7 +11208,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -11255,7 +11255,7 @@ consider two colors as the same.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -11289,7 +11289,7 @@ The filename to read the information from.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::pingImageBlob
 ======================
@@ -11313,7 +11313,7 @@ A string containing the image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -11372,7 +11372,7 @@ Optional filename for this image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -11427,7 +11427,7 @@ The polaroid angle
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -11474,7 +11474,7 @@ Reduces the image to a limited number of color level.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -11518,7 +11518,7 @@ Preview type. See
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -11539,7 +11539,7 @@ Assocates the previous image in an image list with the Imagick object.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::profileImage
 =====================
@@ -11567,7 +11567,7 @@ image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -11604,7 +11604,7 @@ class="methodparam"><span class="type">bool</span> `$dither`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -11658,7 +11658,7 @@ class="methodparam"><span class="type">bool</span> `$dither`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -11858,7 +11858,7 @@ Radial blurs an image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -11914,7 +11914,7 @@ effect.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -11969,7 +11969,7 @@ bitwise operators. Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -12012,7 +12012,7 @@ Reads image from filename
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::readImageBlob
 ======================
@@ -12035,7 +12035,7 @@ class="methodparam"><span class="type">string</span> `$image`</span> \[,
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -12083,7 +12083,7 @@ Reads image from open filehandle
 class="methodparam"><span class="type">resource</span>
 `$filehandle`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$fileName`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Reads image from open filehandle
 
@@ -12095,7 +12095,7 @@ Reads image from open filehandle
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -12122,7 +12122,7 @@ single Imagick object.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::recolorImage
 =====================
@@ -12151,7 +12151,7 @@ The matrix containing the color values
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 参见
 
@@ -12210,7 +12210,7 @@ of 0 and Imagick::reduceNoiseImage() selects a suitable radius for you.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -12260,7 +12260,7 @@ Refer to this list of
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -12281,7 +12281,7 @@ Removes an image from the image list.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -12327,7 +12327,7 @@ Renders all preceding drawing commands.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::resampleImage
 ======================
@@ -12359,7 +12359,7 @@ Resample image to desired resolution.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -12399,7 +12399,7 @@ The page definition. For example *7168x5147+0+0*
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::resizeImage
 ====================
@@ -12416,9 +12416,9 @@ class="methodparam"><span class="type">int</span> `$columns`</span> ,
 , <span class="methodparam"><span class="type">float</span>
 `$blur`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$bestfit`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$legacy`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 Scales an image to the desired dimensions with a
 <a href="/imagick/constants.html#FILTER%20constants" class="link">filter</a>.
@@ -12449,7 +12449,7 @@ Optional fit parameter.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 更新日志
 
@@ -12521,7 +12521,7 @@ The Y offset.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -12566,7 +12566,7 @@ number of degrees to rotate the image clockwise.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 更新日志
 
@@ -12619,7 +12619,7 @@ using bitwise operators. 缺省为**`Imagick::CHANNEL_DEFAULT`**. 参考此
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -12704,7 +12704,7 @@ $image->writeImage("rounded.png");
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::sampleImage
 ====================
@@ -12730,7 +12730,7 @@ color into the scaled image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::scaleImage
 ===================
@@ -12744,9 +12744,9 @@ Scales the size of an image
 class="methodparam"><span class="type">int</span> `$cols`</span> , <span
 class="methodparam"><span class="type">int</span> `$rows`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$bestfit`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 Scales the size of an image to the given dimensions. The other parameter
 will be calculated if 0 is passed as either param.
@@ -12767,7 +12767,7 @@ will be calculated if 0 is passed as either param.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -12809,7 +12809,7 @@ class="methodparam"><span class="type">int</span> `$COLORSPACE`</span> ,
 `$cluster_threshold`</span> , <span class="methodparam"><span
 class="type">float</span> `$smooth_threshold`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$verbose`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Analyses the image and identifies units that are similar.
 此方法在Imagick基于ImageMagick 6.4.5以上版本编译时可用。
@@ -12887,7 +12887,7 @@ using bitwise operators. 缺省为**`Imagick::CHANNEL_DEFAULT`**. 参考此
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -12928,7 +12928,7 @@ indicate the 1st, 2nd and 3rd channels.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -12975,7 +12975,7 @@ threshold of 80 is a good starting point for a reasonable tone.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13017,7 +13017,7 @@ Sets the object's default background color.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 更新日志
 
@@ -13047,7 +13047,7 @@ One of the
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13076,7 +13076,7 @@ constants.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setCompressionQuality
 ==============================
@@ -13105,7 +13105,7 @@ compression, 100 low compression.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -13160,7 +13160,7 @@ Sets the filename before you read or write an image file.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setFirstIterator
 =========================
@@ -13177,7 +13177,7 @@ Sets the Imagick iterator to the first image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setFont
 ================
@@ -13205,7 +13205,7 @@ Font name or a filename
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 参见
 
@@ -13253,7 +13253,7 @@ Sets the format of the Imagick object.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setGravity
 ===================
@@ -13300,7 +13300,7 @@ The replace Imagick object
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13350,7 +13350,7 @@ One of the **`Imagick::ALPHACHANNEL_*`** constants
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13389,7 +13389,7 @@ The value of the artifact
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13452,7 +13452,7 @@ class="methodparam"><span class="type">string</span> `$key`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setImageBackgroundColor
 ================================
@@ -13474,7 +13474,7 @@ Sets the image background color.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13510,7 +13510,7 @@ Imagick::ConvolveImage()).
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13591,7 +13591,7 @@ Sets the image chromaticity blue primary point.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13617,7 +13617,7 @@ The border color
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13652,7 +13652,7 @@ Sets the depth of a particular image channel.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13684,7 +13684,7 @@ The Imagick object containing the clip mask
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13755,7 +13755,7 @@ Sets the color of the specified colormap index.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13784,7 +13784,7 @@ One of the
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13811,7 +13811,7 @@ method.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13836,7 +13836,7 @@ class="methodparam"><span class="type">int</span> `$compression`</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13862,7 +13862,7 @@ class="methodparam"><span class="type">int</span> `$quality`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13894,7 +13894,7 @@ value of 20 would be 20/100 of a second aka 1/5th of a second.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13947,7 +13947,7 @@ Sets the image depth.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -13972,7 +13972,7 @@ Sets the image disposal method.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14000,7 +14000,7 @@ Sets the image size (i.e. columns & rows).
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14026,7 +14026,7 @@ Sets the filename of a particular image in a sequence.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14052,7 +14052,7 @@ class="methodparam"><span class="type">string</span> `$format`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setImageGamma
 ======================
@@ -14073,7 +14073,7 @@ Sets the image gamma.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14126,7 +14126,7 @@ Sets the image chromaticity green primary point.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14160,7 +14160,7 @@ The position to set the iterator to
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14186,7 +14186,7 @@ Sets the image compression.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14213,7 +14213,7 @@ The method is one of the **`Imagick::INTERPOLATE_*`** constants
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setImageIterations
 ===========================
@@ -14236,7 +14236,7 @@ continuously.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14282,7 +14282,7 @@ True activates the matte channel and false disables it.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setImageMatteColor
 ===========================
@@ -14307,7 +14307,7 @@ Sets the image matte color.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14349,7 +14349,7 @@ transparent.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -14395,7 +14395,7 @@ One of the
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -14442,7 +14442,7 @@ Sets the page geometry of the image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14474,7 +14474,7 @@ profiles.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14525,7 +14525,7 @@ echo $image->getImageProperty('Exif:Make');
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setImageRedPrimary
 ===========================
@@ -14549,7 +14549,7 @@ Sets the image chromaticity red primary point.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14575,7 +14575,7 @@ Sets the image rendering intent.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14604,7 +14604,7 @@ Sets the image resolution.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14646,7 +14646,7 @@ Sets the image scene.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14688,7 +14688,7 @@ per second.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -14749,7 +14749,7 @@ Sets the image type.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setImageUnits
 ======================
@@ -14770,7 +14770,7 @@ Sets the image units of resolution.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setImageVirtualPixelMethod
 ===================================
@@ -14792,7 +14792,7 @@ Sets the image virtual pixel method.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setImageWhitePoint
 ===========================
@@ -14816,7 +14816,7 @@ Sets the image chromaticity white point.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -14842,7 +14842,7 @@ Sets the image compression.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setIteratorIndex
 =========================
@@ -14866,7 +14866,7 @@ The position to set the iterator to
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -14908,7 +14908,7 @@ Sets the Imagick iterator to the last image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setOption
 ==================
@@ -14933,7 +14933,7 @@ Associates one or more options with the wand.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -15027,7 +15027,7 @@ Sets the page geometry of the Imagick object.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setPointSize
 =====================
@@ -15052,7 +15052,7 @@ Point size
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 参见
 
@@ -15119,7 +15119,7 @@ operation is not trivial.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -15195,7 +15195,7 @@ creates temporary images e.g. while processing PDFs.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setResolution
 ======================
@@ -15222,7 +15222,7 @@ The vertical resolution.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 注释
 
@@ -15263,7 +15263,7 @@ The unit depends on the type of the resource being limited.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 参见
 
@@ -15288,7 +15288,7 @@ Sets the image sampling factors.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -15346,7 +15346,7 @@ format such as RGB, GRAY, or CMYK.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setSizeOffset
 ======================
@@ -15379,7 +15379,7 @@ The image offset.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::setType
 ================
@@ -15400,7 +15400,7 @@ Sets the image type attribute.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::shadeImage
 ===================
@@ -15435,7 +15435,7 @@ Defines the light source direction.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -15486,7 +15486,7 @@ Simulates an image shadow.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -15535,7 +15535,7 @@ for you.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -15576,7 +15576,7 @@ for the new Image structure and returns a pointer to the new image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -15630,7 +15630,7 @@ The number of degrees to shear on the y axis
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 更新日志
 
@@ -15676,7 +15676,7 @@ function without saturating highlights or shadows. Contrast indicates
 how much to increase the contrast (0 is none; 3 is typical; 20 is
 pushing it); mid-point indicates where midtones fall in the resultant
 image (0 is white; 50 is middle-gray; 100 is black). Set sharpen to
-**`TRUE`** to increase the image contrast otherwise the contrast is
+**`true`** to increase the image contrast otherwise the contrast is
 reduced.
 
 See also
@@ -15700,7 +15700,7 @@ Which color channels the contrast will be applied to.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -15762,7 +15762,7 @@ Apply the effect along this angle.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -15850,7 +15850,7 @@ the extent of the solarization.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -15907,7 +15907,7 @@ using bitwise operators. 缺省为**`Imagick::CHANNEL_DEFAULT`**. 参考此
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -16101,7 +16101,7 @@ Splices a solid color into the image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -16139,7 +16139,7 @@ defined by the radius parameter.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -16192,7 +16192,7 @@ the specified width and height.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -16244,7 +16244,7 @@ start position within the image to hide the watermark.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::stereoImage
 ====================
@@ -16267,7 +16267,7 @@ of a left and right image of a stereo pair.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -16288,7 +16288,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -16373,7 +16373,7 @@ dramatic effect as the degrees move from 1 to 360.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -16468,7 +16468,7 @@ image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -16498,15 +16498,15 @@ Changes the size of an image
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$bestfit`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$bestfit`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span> `$fill`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\] )
 
 Changes the size of an image to the given dimensions and removes any
 associated profiles. The goal is to produce small, low cost thumbnail
-images suited for display on the Web. If **`TRUE`** is given as a third
+images suited for display on the Web. If **`true`** is given as a third
 parameter then columns and rows parameters are used as maximums for each
 side. Both sides will be scaled down until they match or are smaller
 than the parameter given for the side.
@@ -16530,7 +16530,7 @@ Whether to force maximum values
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -16566,7 +16566,7 @@ class="methodparam"><span class="type">mixed</span> `$tint`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$opacity`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$legacy`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Applies a color vector to each pixel in the image. The length of the
 vector is 0 for black and white and at its maximum for the midtones. The
@@ -16580,7 +16580,7 @@ vector weighing function is f(x)=(1-(4.0\*((x-0.5)\*(x-0.5)))).
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -16722,7 +16722,7 @@ e.g. Imagick::COLORSPACE\_CMYK.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -16799,11 +16799,11 @@ intensities of 100 and 102 respectively are now interpreted as the same
 color.
 
 `invert`  
-If **`TRUE`** paints any pixel that does not match the target color.
+If **`true`** paints any pixel that does not match the target color.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -16849,7 +16849,7 @@ central x-axis while rotating them 90-degrees.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 参见
 
@@ -16888,7 +16888,7 @@ central y-axis while rotating them 270-degrees.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 参见
 
@@ -16935,7 +16935,7 @@ range.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -16983,7 +16983,7 @@ Discards all but one of any pixel color. 此方法在Imagick基于ImageMagick
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -17041,7 +17041,7 @@ Imagick::UnsharpMaskImage() selects a suitable radius for you.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -17078,7 +17078,7 @@ Checks if the current item is valid.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::vignetteImage
 ======================
@@ -17114,7 +17114,7 @@ Y offset of the ellipse
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 参见
 
@@ -17163,7 +17163,7 @@ The length of the wave.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 错误／异常
 
@@ -17216,7 +17216,7 @@ unchanged.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 更新日志
 
@@ -17264,7 +17264,7 @@ Imagick::readImage() 或者 Imagick::setImageFilename() 设定的文件。
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::writeImageFile
 =======================
@@ -17290,7 +17290,7 @@ Filehandle where to write the image
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::writeImages
 ====================
@@ -17315,7 +17315,7 @@ Writes an image or image sequence.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 Imagick::writeImagesFile
 ========================
@@ -17341,7 +17341,7 @@ Filehandle where to write the images
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 类摘要
 ------
@@ -18507,7 +18507,7 @@ the Imagick object where composition image is taken from
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -18976,7 +18976,7 @@ should be used.
 
 ### 返回值
 
-Returns **`TRUE`** if antialiasing is on and false if it is off.
+Returns **`true`** if antialiasing is on and false if it is off.
 
 ImagickDraw::getStrokeColor
 ===========================
@@ -19205,7 +19205,7 @@ text is antialiased. Text is antialiased by default.
 
 ### 返回值
 
-Returns **`TRUE`** if text is antialiased and false if not.
+Returns **`true`** if text is antialiased and false if not.
 
 ImagickDraw::getTextDecoration
 ==============================
@@ -19456,7 +19456,7 @@ PAINT\_ constant
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -20074,7 +20074,7 @@ a whole is rotated relative to the current coordinate system. The center
 (cx, cy) of the ellipse is calculated automatically to satisfy the
 constraints imposed by the other parameters. largeArcFlag and sweepFlag
 contribute to the automatic calculations and help determine how the arc
-is drawn. If largeArcFlag is **`TRUE`** then draw the larger of the
+is drawn. If largeArcFlag is **`true`** then draw the larger of the
 available arcs. If sweepFlag is true, then draw the arc matching a
 clock-wise rotation.
 
@@ -20135,7 +20135,7 @@ a whole is rotated relative to the current coordinate system. The center
 (cx, cy) of the ellipse is calculated automatically to satisfy the
 constraints imposed by the other parameters. largeArcFlag and sweepFlag
 contribute to the automatic calculations and help determine how the arc
-is drawn. If largeArcFlag is **`TRUE`** then draw the larger of the
+is drawn. If largeArcFlag is **`true`** then draw the larger of the
 available arcs. If sweepFlag is true, then draw the arc matching a
 clock-wise rotation.
 
@@ -20590,7 +20590,7 @@ multidimensional array like array( array( 'x' =\> 3, 'y' =\> 4 ), array(
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -20656,7 +20656,7 @@ array( 'x' =\> 8, 'y' =\> 10 ) )
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -20717,7 +20717,7 @@ is proper form to pop all ImagickDraws which have been pushed.
 
 ### 返回值
 
-Returns **`TRUE`** on success and false on failure.
+Returns **`true`** on success and false on failure.
 
 ImagickDraw::popClipPath
 ========================
@@ -20815,7 +20815,7 @@ Terminates a pattern definition.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ImagickDraw::push
 =================
@@ -20840,7 +20840,7 @@ equivalent Push.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -20974,7 +20974,7 @@ height of the pattern
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -21116,7 +21116,7 @@ Renders all preceding drawing commands onto the image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ImagickDraw::resetVectorGraphics
 ================================
@@ -21137,7 +21137,7 @@ Resets the vector graphics.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ImagickDraw::rotate
 ===================
@@ -21728,7 +21728,7 @@ URL to use to obtain fill pattern.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ImagickDraw::setFillRule
 ========================
@@ -21842,7 +21842,7 @@ Sets the fully-specified font to use when annotating with text.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -21909,7 +21909,7 @@ the font family
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -22309,7 +22309,7 @@ Sets the resolution.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ImagickDraw::setStrokeAlpha
 ===========================
@@ -22528,7 +22528,7 @@ array of floats
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -23232,7 +23232,7 @@ Sets the text interline spacing.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ImagickDraw::setTextInterwordSpacing
 ====================================
@@ -23254,7 +23254,7 @@ Sets the text interword spacing.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ImagickDraw::setTextKerning
 ===========================
@@ -23279,7 +23279,7 @@ Sets the text kerning
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ImagickDraw::setTextUnderColor
 ==============================
@@ -23366,7 +23366,7 @@ xml containing the vector graphics
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -23794,7 +23794,7 @@ unsets any color associated with the object.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ImagickPixel::\_\_construct
 ===========================
@@ -23903,7 +23903,7 @@ function has been called.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ImagickPixel::getColor
 ======================
@@ -24315,7 +24315,7 @@ The theoretical maximum for this value is the square root of three
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ImagickPixel::isPixelSimilarQuantum
 ===================================
@@ -24379,7 +24379,7 @@ The theoretical maximum for this value is the square root of three
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -24493,7 +24493,7 @@ object.
 
 ### 返回值
 
-Returns **`TRUE`** if the specified color was set, **`FALSE`**
+Returns **`true`** if the specified color was set, **`false`**
 otherwise.
 
 ### 范例
@@ -24546,7 +24546,7 @@ Sets the color count associated with this color.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ImagickPixel::setColorValue
 ===========================
@@ -24576,7 +24576,7 @@ The value to set this channel to, ranging from 0 to 1.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -24636,7 +24636,7 @@ Imagick::getQuantum().
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -24703,7 +24703,7 @@ at 1, with the full HS value at 0.5 luminosity.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -24770,7 +24770,7 @@ Sets the colormap index of the pixel wand.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 类摘要
 ------
@@ -24861,7 +24861,7 @@ Clear resources associated with a PixelIterator.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -24916,7 +24916,7 @@ The ImagickPixelIterator constructor
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -24969,7 +24969,7 @@ Deallocates resources associated with a PixelIterator.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ImagickPixelIterator::getCurrentIteratorRow
 ===========================================
@@ -25120,7 +25120,7 @@ Returns a new pixel iterator.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。 Throwing ImagickPixelIteratorException.
+成功时返回 **`true`**。 Throwing ImagickPixelIteratorException.
 
 ImagickPixelIterator::newPixelRegionIterator
 ============================================
@@ -25183,7 +25183,7 @@ pixels in a pixel container.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -25257,7 +25257,7 @@ Sets the pixel iterator to the first pixel row.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ImagickPixelIterator::setIteratorLastRow
 ========================================
@@ -25278,7 +25278,7 @@ Sets the pixel iterator to the last pixel row.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ImagickPixelIterator::setIteratorRow
 ====================================
@@ -25303,7 +25303,7 @@ Set the pixel iterator row.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 ### 范例
 
@@ -25356,4 +25356,4 @@ Syncs the pixel iterator.
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。

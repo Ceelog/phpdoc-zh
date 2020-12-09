@@ -182,7 +182,7 @@ not compatible with this lexer.
 /\* 属性 \*/
 
 <span class="modifier">public</span> <span class="type">bool</span>
-`$bol` <span class="initializer"> = **`FALSE`**</span> ;
+`$bol` <span class="initializer"> = **`false`**</span> ;
 
 <span class="modifier">public</span> <span class="type">int</span>
 `$flags` <span class="initializer"> = 0</span> ;
@@ -528,7 +528,7 @@ lexer.
 /\* 属性 \*/
 
 <span class="modifier">public</span> <span class="type">bool</span>
-`$bol` <span class="initializer"> = **`FALSE`**</span> ;
+`$bol` <span class="initializer"> = **`false`**</span> ;
 
 <span class="modifier">public</span> <span class="type">int</span>
 `$flags` <span class="initializer"> = 0</span> ;
@@ -1988,7 +1988,7 @@ elements are inserted and removed only from one end.
 /\* 属性 \*/
 
 <span class="modifier">public</span> <span class="type">bool</span>
-`$empty` <span class="initializer"> = **`TRUE`**</span> ;
+`$empty` <span class="initializer"> = **`true`**</span> ;
 
 <span class="modifier">public</span> <span class="type">int</span>
 `$size` <span class="initializer"> = 0</span> ;
@@ -2154,7 +2154,7 @@ Position in the input, where the error occurred.
 
 `token`  
 If applicable - the <span class="classname">Parle\\Token</span> related
-to the error, otherwise **`NULL`**.
+to the error, otherwise **`null`**.
 
 简介
 ----

@@ -56,7 +56,7 @@ class="function">inotify\_add\_watch</span>
 
 ### 返回值
 
-A stream resource or **`FALSE`** on error.
+A stream resource or **`false`** on error.
 
 ### 范例
 
@@ -176,7 +176,7 @@ Read inotify events from an inotify instance.
 
 ### 返回值
 
-An array of inotify events or **`FALSE`** if no events was pending and
+An array of inotify events or **`false`** if no events was pending and
 `inotify_instance` is non-blocking. Each event is an array with the
 following keys:
 
@@ -222,7 +222,7 @@ Watch to remove from the instance
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 

@@ -127,7 +127,7 @@ class="methodparam"><span class="type">array</span> `&$regs`</span> \] )
 
 如果在 `string` 中找到 `pattern` 模式的匹配则返回
 所匹配字符串的长度，如果没有找到匹配或出错则返回
-**`FALSE`**。如果没有传递入可选参数 `regs` 或者所匹配的字符串长度为
+**`false`**。如果没有传递入可选参数 `regs` 或者所匹配的字符串长度为
 0，则本函数返回 1。
 
 以下代码片断接受 ISO 格式的日期（YYYY-MM-DD）然后以 DD.MM.YYYY
@@ -240,7 +240,7 @@ class="function">explode</span>
 `pattern` 作为边界分割出的子串。如果设定了 `limit`，则返回的数组最多包含
 `limit` 个单元，而其中最后一个单元包含了 `string`
 中剩余的所有部分。如果出错，则 <span class="function">split</span> 返回
-**`FALSE`**。
+**`false`**。
 
 将 `/etc/passwd` 中的前四个字段分割出来：
 
@@ -346,7 +346,7 @@ If there are <span class="replaceable">n</span> occurrences of
 class="replaceable">n</span>+1* items. For example, if there is no
 occurrence of `pattern`, an array with only one element will be
 returned. Of course, this is also true if `string` is empty. If an error
-occurs, <span class="function">spliti</span> returns **`FALSE`**.
+occurs, <span class="function">spliti</span> returns **`false`**.
 
 ### 范例
 

@@ -13,9 +13,9 @@ Read and write callbacks should match the following prototype:
 <span class="type">void</span> <span class="methodname">callback</span>
 (\[ <span class="methodparam"> <span
 class="type">EventBufferEvent</span> `$bev` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$arg` <span class="initializer"> =
-**`NULL`**</span> </span> \]\] )
+**`null`**</span> </span> \]\] )
 
 `bev`  
 Associated <span class="classname">EventBufferEvent</span> object.
@@ -30,10 +30,10 @@ Event callback should match the following prototype:
 <span class="type">void</span> <span class="methodname">callback</span>
 (\[ <span class="methodparam"> <span
 class="type">EventBufferEvent</span> `$bev` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$events` <span class="initializer"> = 0</span>
 </span> \[, <span class="methodparam"> <span class="type">mixed</span>
-`$arg` <span class="initializer"> = **`NULL`**</span> </span> \]\]\] )
+`$arg` <span class="initializer"> = **`null`**</span> </span> \]\]\] )
 
 `bev`  
 Associated <span class="classname">EventBufferEvent</span> object.

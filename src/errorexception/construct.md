@@ -18,7 +18,7 @@ class="initializer"> = \_\_FILE\_\_</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$lineno`<span
 class="initializer"> = \_\_LINE\_\_</span></span> \[, <span
 class="methodparam"><span class="type">Exception</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\]\]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\]\]\]\] )
 
 构造一个异常（Exception）。
 

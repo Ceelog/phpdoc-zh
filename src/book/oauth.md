@@ -353,7 +353,7 @@ class="methodparam">void</span> )
 
 关闭详细的请求信息（默认为关闭）。或者，将
 <a href="/class/oauth.html#" class="link">调试</a> 属性设置为
-**`FALSE`** 值来关闭调试。
+**`false`** 值来关闭调试。
 
 ### 参数
 
@@ -361,7 +361,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`TRUE`**
+**`true`**
 
 ### 更新日志
 
@@ -396,7 +396,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`TRUE`**
+**`true`**
 
 ### 参见
 
@@ -414,7 +414,7 @@ OAuth::disableSSLChecks
 class="methodparam">void</span> )
 
 关闭通常的 SSL 对等证书和主机检查，但不用于生产环境。或者，设置
-`sslChecks` 成员为 **`FALSE`** 来关闭 SSL 检查。
+`sslChecks` 成员为 **`false`** 来关闭 SSL 检查。
 
 ### 参数
 
@@ -422,7 +422,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`TRUE`**
+**`true`**
 
 ### 更新日志
 
@@ -446,7 +446,7 @@ OAuth::enableDebug
 class="methodparam">void</span> )
 
 打开用于调试的详细请求信息，调试信息存储在 `debugInfo`
-成员中。或者，可以设置 `debug` 成员为一个非 **`FALSE`**
+成员中。或者，可以设置 `debug` 成员为一个非 **`false`**
 值来打开启用调试。
 
 ### 参数
@@ -455,7 +455,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`TRUE`**
+**`true`**
 
 ### 更新日志
 
@@ -490,7 +490,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`TRUE`**
+**`true`**
 
 ### 参见
 
@@ -508,7 +508,7 @@ OAuth::enableSSLChecks
 class="methodparam">void</span> )
 
 启用通常的l SSL 对等证书和主机检查（默认为启用）。或者，可以设置
-`sslChecks` 成员为一个非 **`FALSE`** 值来启用 SSL 检查。
+`sslChecks` 成员为一个非 **`false`** 值来启用 SSL 检查。
 
 ### 参数
 
@@ -516,7 +516,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`TRUE`**
+**`true`**
 
 ### 更新日志
 
@@ -567,13 +567,13 @@ HTTP 客户端头信息（像 User-Agent， Accept 等等这样的）。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
 | 版本   | 说明                                            |
 |--------|-------------------------------------------------|
-| 1.0.0  | 以前失败时返回 **`NULL`**，而不是 **`FALSE`**。 |
+| 1.0.0  | 以前失败时返回 **`null`**，而不是 **`false`**。 |
 | 0.99.5 | 新增 `http_method` 参数                         |
 | 0.99.8 | 新增 `http_headers` 参数                        |
 
@@ -635,7 +635,7 @@ class="methodparam"><span class="type">mixed</span>
 
 ### 返回值
 
-一个包含签名的字符串 或者在失败时返回 **`FALSE`**
+一个包含签名的字符串 或者在失败时返回 **`false`**
 
 OAuth::getAccessToken
 =====================
@@ -674,13 +674,13 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-成功则返回一个包含解析过的 OAuth 响应的数组， 失败则返回 **`FALSE`** 。
+成功则返回一个包含解析过的 OAuth 响应的数组， 失败则返回 **`false`** 。
 
 ### 更新日志
 
 | 版本   | 说明                                            |
 |--------|-------------------------------------------------|
-| 1.0.0  | 以前失败时返回 **`NULL`**，而不是 **`FALSE`**。 |
+| 1.0.0  | 以前失败时返回 **`null`**，而不是 **`false`**。 |
 | 0.99.9 | 新增 `verifier_token` 参数                      |
 
 ### 范例
@@ -796,7 +796,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-返回一个包含最后一次响应头信息的字符串 或者在失败时返回 **`FALSE`** 。
+返回一个包含最后一次响应头信息的字符串 或者在失败时返回 **`false`** 。
 
 OAuth::getLastResponseInfo
 ==========================
@@ -856,7 +856,7 @@ class="methodparam"><span class="type">mixed</span>
 
 ### 返回值
 
-返回 一个包含生成的请求头信息的字符串 r 或者在失败时返回 **`FALSE`**
+返回 一个包含生成的请求头信息的字符串 r 或者在失败时返回 **`false`**
 
 OAuth::getRequestToken
 ======================
@@ -884,13 +884,13 @@ OAuth 回调 URL。 如果传递了 `callback_url`
 
 ### 返回值
 
-成功则返回一个包含解析过了的 OAuth 响应的数组，失败则返回 **`FALSE`** 。
+成功则返回一个包含解析过了的 OAuth 响应的数组，失败则返回 **`false`** 。
 
 ### 更新日志
 
 | 版本   | 说明                                            |
 |--------|-------------------------------------------------|
-| 1.0.0  | 以前失败时返回 **`NULL`**，而不是 **`FALSE`**。 |
+| 1.0.0  | 以前失败时返回 **`null`**，而不是 **`false`**。 |
 | 0.99.9 | 增加 `callback_url` 参数。                      |
 
 ### 范例
@@ -961,14 +961,14 @@ class="methodparam"><span class="type">int</span> `$auth_type`</span> )
 
 ### 返回值
 
-如果参数设置正确则返回 **`TRUE`** ，否则返回 **`FALSE`**
+如果参数设置正确则返回 **`true`** ，否则返回 **`false`**
 （比如，传递进一个无效的 `auth_type` ）。
 
 ### 更新日志
 
 | 版本  | 说明                                            |
 |-------|-------------------------------------------------|
-| 1.0.0 | 以前失败时返回 **`NULL`**，而不是 **`FALSE`**。 |
+| 1.0.0 | 以前失败时返回 **`null`**，而不是 **`false`**。 |
 
 OAuth::setCAPath
 ================
@@ -999,14 +999,14 @@ class="methodparam"><span class="type">string</span> `$ca_path`</span>
 
 ### 返回值
 
-成功则返回 **`TRUE`** ，如果 `ca_path` 或 `ca_info`
-其中之一被认为无效则返回 **`FALSE`** 。
+成功则返回 **`true`** ，如果 `ca_path` 或 `ca_info`
+其中之一被认为无效则返回 **`false`** 。
 
 ### 更新日志
 
 | 版本  | 说明                                            |
 |-------|-------------------------------------------------|
-| 1.0.0 | 以前失败时返回 **`NULL`**，而不是 **`FALSE`**。 |
+| 1.0.0 | 以前失败时返回 **`null`**，而不是 **`false`**。 |
 
 ### 参见
 
@@ -1032,13 +1032,13 @@ oauth\_nonce 的值。
 
 ### 返回值
 
-成功返回 **`TRUE`** ，如果 `nonce` 被认为无效，则返回 **`FALSE`** 。
+成功返回 **`true`** ，如果 `nonce` 被认为无效，则返回 **`false`** 。
 
 ### 更新日志
 
 | 版本  | 说明                                            |
 |-------|-------------------------------------------------|
-| 1.0.0 | 以前失败时返回 **`NULL`**，而不是 **`FALSE`**。 |
+| 1.0.0 | 以前失败时返回 **`null`**，而不是 **`false`**。 |
 
 ### 参见
 
@@ -1121,14 +1121,14 @@ RSA 证书。
 
 ### 返回值
 
-成功则返回 **`TRUE`** ，失败返回 **`FALSE`**
+成功则返回 **`true`** ，失败返回 **`false`**
 （例如，RSA证书不能被传递）。
 
 ### 更新日志
 
 | 版本  | 说明                                            |
 |-------|-------------------------------------------------|
-| 1.0.0 | 以前失败时返回 **`NULL`**，而不是 **`FALSE`**。 |
+| 1.0.0 | 以前失败时返回 **`null`**，而不是 **`false`**。 |
 
 ### 范例
 
@@ -1170,7 +1170,7 @@ class="methodparam"><span class="type">int</span> `$sslcheck`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 OAuth::setTimestamp
 ===================
@@ -1197,13 +1197,13 @@ class="methodparam"><span class="type">string</span> `$timestamp`</span>
 
 ### 返回值
 
-返回 **`TRUE`** ，除非 `timestamp` 无效，则返回 **`FALSE`** 。
+返回 **`true`** ，除非 `timestamp` 无效，则返回 **`false`** 。
 
 ### 更新日志
 
 | 版本  | 说明                                            |
 |-------|-------------------------------------------------|
-| 1.0.0 | 以前失败时返回 **`NULL`**，而不是 **`FALSE`**。 |
+| 1.0.0 | 以前失败时返回 **`null`**，而不是 **`false`**。 |
 
 ### 参见
 
@@ -1234,7 +1234,7 @@ OAuth 令牌 secret。
 
 ### 返回值
 
-**`TRUE`**
+**`true`**
 
 ### 范例
 
@@ -1267,7 +1267,7 @@ OAuth 版本，默认值为 "1.0"
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 简介
 ----
@@ -1403,7 +1403,7 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1694,7 +1694,7 @@ class="initializer"> = false</span></span> \] )
 想要的令牌长度，单位为字节。
 
 `strong`  
-设置为 **`TRUE`** 则意味着将对熵使用 */dev/random* ，否则使用非阻塞的
+设置为 **`true`** 则意味着将对熵使用 */dev/random* ，否则使用非阻塞的
 */dev/urandom*。在 Windows 平台将忽略此参数。
 
 ### 返回值
@@ -1703,7 +1703,7 @@ class="initializer"> = false</span></span> \] )
 
 ### 错误／异常
 
-如果 `strong` 参数为 **`TRUE`** ， 则当回退到用 <span
+如果 `strong` 参数为 **`true`** ， 则当回退到用 <span
 class="function">rand</span> 来实现填充剩余的随机字节的时候，将触发一个
 **`E_WARNING`** 级别的错误（比如，当最初找不到足够的随机数据的时候）。
 
@@ -1844,7 +1844,7 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1920,7 +1920,7 @@ class="methodparam"><span class="type">string</span> `$param_key`</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1951,7 +1951,7 @@ class="methodparam"><span class="type">string</span> `$path`</span> )
 
 ### 返回值
 
-**`TRUE`**
+**`true`**
 
 ### 参见
 

@@ -40,7 +40,7 @@ URI，用于指定代理服务器的地址（例如 *tcp://proxy.example.com:510
 `curl_verify_ssl_host` <span class="type">boolean</span>  
 校验服务器。
 
-默认为 **`FALSE`**
+默认为 **`false`**
 
 > **Note**:
 >
@@ -49,7 +49,7 @@ URI，用于指定代理服务器的地址（例如 *tcp://proxy.example.com:510
 `curl_verify_ssl_peer` <span class="type">boolean</span>  
 要求对使用的SSL证书进行校验。
 
-默认为 **`FALSE`**
+默认为 **`false`**
 
 > **Note**:
 >

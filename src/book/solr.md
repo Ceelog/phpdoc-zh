@@ -950,7 +950,7 @@ This is the query string to be escaped.
 
 ### 返回值
 
-Returns the escaped string 或者在失败时返回 **`FALSE`**.
+Returns the escaped string 或者在失败时返回 **`false`**.
 
 SolrUtils::getSolrVersion
 =========================
@@ -1119,7 +1119,7 @@ class="methodparam">void</span> )
 <span class="methodname">merge</span> ( <span class="methodparam"><span
 class="type">SolrInputDocument</span> `$sourceDoc`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$overwrite`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">reset</span> ( <span
@@ -1422,7 +1422,7 @@ can still pass values less than 1.0 but they must be greater than zero.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrInputDocument::clear
 ========================
@@ -1444,7 +1444,7 @@ boost to zero.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrInputDocument::\_\_clone
 ============================
@@ -1510,7 +1510,7 @@ The name of the field.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrInputDocument::\_\_destruct
 ===============================
@@ -1554,7 +1554,7 @@ Name of the field.
 
 ### 返回值
 
-Returns **`TRUE`** if the field was found and **`FALSE`** if it was not
+Returns **`true`** if the field was found and **`false`** if it was not
 found.
 
 SolrInputDocument::getBoost
@@ -1576,7 +1576,7 @@ Retrieves the current boost value for the document.
 
 ### 返回值
 
-Returns the boost value on success and **`FALSE`** on failure.
+Returns the boost value on success and **`false`** on failure.
 
 SolrInputDocument::getChildDocuments
 ====================================
@@ -1653,7 +1653,7 @@ The name of the field.
 
 ### 返回值
 
-Returns a SolrDocumentField object on success and **`FALSE`** on
+Returns a SolrDocumentField object on success and **`false`** on
 failure.
 
 SolrInputDocument::getFieldBoost
@@ -1677,7 +1677,7 @@ The name of the field.
 
 ### 返回值
 
-Returns the boost value for the field or **`FALSE`** if there was an
+Returns the boost value for the field or **`false`** if there was an
 error.
 
 SolrInputDocument::getFieldCount
@@ -1700,7 +1700,7 @@ Returns the number of fields in the document.
 
 ### 返回值
 
-Returns an integer on success 或者在失败时返回 **`FALSE`**.
+Returns an integer on success 或者在失败时返回 **`false`**.
 
 SolrInputDocument::getFieldNames
 ================================
@@ -1721,7 +1721,7 @@ Returns an array containing all the fields in the document.
 
 ### 返回值
 
-Returns an array on success and **`FALSE`** on failure.
+Returns an array on success and **`false`** on failure.
 
 SolrInputDocument::hasChildDocuments
 ====================================
@@ -1762,7 +1762,7 @@ Merges one input document into another
 class="methodparam"><span class="type">SolrInputDocument</span>
 `$sourceDoc`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Merges one input document into another.
 
@@ -1772,12 +1772,12 @@ Merges one input document into another.
 The source document.
 
 `overwrite`  
-If this is **`TRUE`** it will replace matching fields in the destination
+If this is **`true`** it will replace matching fields in the destination
 document.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 In the future,
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 In the future,
 this will be modified to return the number of fields in the new
 document.
 
@@ -1800,7 +1800,7 @@ This is an alias of SolrInputDocument::clear
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrInputDocument::setBoost
 ===========================
@@ -1823,7 +1823,7 @@ The index-time boost value for this document.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrInputDocument::setFieldBoost
 ================================
@@ -1891,7 +1891,7 @@ The sort direction
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrInputDocument::toArray
 ==========================
@@ -1912,7 +1912,7 @@ Returns an array representation of the input document.
 
 ### 返回值
 
-Returns an array containing the fields. It returns **`FALSE`** on
+Returns an array containing the fields. It returns **`false`** on
 failure.
 
 简介
@@ -2041,7 +2041,7 @@ class="methodparam">void</span> )
 <span class="methodname">merge</span> ( <span class="methodparam"><span
 class="type">SolrDocument</span> `$sourceDoc`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$overwrite`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">next</span> ( <span
@@ -2158,7 +2158,7 @@ The value of the field.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrDocument::clear
 ===================
@@ -2180,7 +2180,7 @@ document boost to zero.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrDocument::\_\_clone
 =======================
@@ -2265,7 +2265,7 @@ Name of the field
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrDocument::\_\_destruct
 ==========================
@@ -2307,7 +2307,7 @@ The name of the field.
 
 ### 返回值
 
-Returns **`TRUE`** if the field is present and **`FALSE`** if it does
+Returns **`true`** if the field is present and **`false`** if it does
 not.
 
 SolrDocument::\_\_get
@@ -2404,7 +2404,7 @@ Name of the field.
 
 ### 返回值
 
-Returns a SolrDocumentField on success and **`FALSE`** on failure.
+Returns a SolrDocumentField on success and **`false`** on failure.
 
 SolrDocument::getFieldCount
 ===========================
@@ -2426,7 +2426,7 @@ only counted once.
 
 ### 返回值
 
-Returns an integer on success and **`FALSE`** on failure.
+Returns an integer on success and **`false`** on failure.
 
 SolrDocument::getFieldNames
 ===========================
@@ -2470,7 +2470,7 @@ one wishes to resubmit/update a document retrieved from a query.
 
 ### 返回值
 
-Returns a SolrInputDocument on success and **`NULL`** on failure.
+Returns a SolrInputDocument on success and **`null`** on failure.
 
 SolrDocument::hasChildDocuments
 ===============================
@@ -2517,7 +2517,7 @@ Name of the field.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrDocument::key
 =================
@@ -2552,7 +2552,7 @@ Merges source to the current SolrDocument
 class="methodparam"><span class="type">SolrDocument</span>
 `$sourceDoc`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Merges source to the current SolrDocument.
 
@@ -2562,12 +2562,12 @@ Merges source to the current SolrDocument.
 The source document.
 
 `overwrite`  
-If this is **`TRUE`** then fields with the same name in the destination
+If this is **`true`** then fields with the same name in the destination
 document will be overwritten.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrDocument::next
 ==================
@@ -2612,7 +2612,7 @@ The name of the field.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrDocument::offsetGet
 =======================
@@ -2665,7 +2665,7 @@ The value for this field.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrDocument::offsetUnset
 =========================
@@ -2709,7 +2709,7 @@ This is an alias to SolrDocument::clear()
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrDocument::rewind
 ====================
@@ -2779,7 +2779,7 @@ Field value.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrDocument::sort
 ==================
@@ -2825,7 +2825,7 @@ The sort direction.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrDocument::toArray
 =====================
@@ -2965,7 +2965,7 @@ The name of the field.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrDocument::valid
 ===================
@@ -2987,7 +2987,7 @@ during foreach operations.
 
 ### 返回值
 
-Returns **`TRUE`** on success and **`FALSE`** if the current position is
+Returns **`true`** on success and **`false`** if the current position is
 no longer valid.
 
 简介
@@ -3240,7 +3240,7 @@ The name of the property.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrObject::offsetGet
 =====================
@@ -3317,7 +3317,7 @@ The name of the property.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3408,7 +3408,7 @@ class="type">SolrUpdateResponse</span> <span
 class="methodname">addDocument</span> ( <span class="methodparam"><span
 class="type">SolrInputDocument</span> `$doc`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$overwrite`<span
-class="initializer"> = **`TRUE`**</span></span> \[, <span
+class="initializer"> = **`true`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$commitWithin`<span
 class="initializer"> = 0</span></span> \]\] )
 
@@ -3416,7 +3416,7 @@ class="initializer"> = 0</span></span> \]\] )
 <span class="methodname">addDocuments</span> ( <span
 class="methodparam"><span class="type">array</span> `$docs`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$overwrite`<span class="initializer"> = **`TRUE`**</span></span> \[,
+`$overwrite`<span class="initializer"> = **`true`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$commitWithin`<span class="initializer"> = 0</span></span> \]\] )
 
@@ -3424,11 +3424,11 @@ class="methodparam"><span class="type">array</span> `$docs`</span> \[,
 class="type">SolrUpdateResponse</span> <span
 class="methodname">commit</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$softCommit`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$waitSearcher`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
+**`true`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$expungeDeletes`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\] )
+**`false`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> ( <span
@@ -3483,9 +3483,9 @@ class="methodname">optimize</span> (\[ <span class="methodparam"><span
 class="type">int</span> `$maxSegments`<span class="initializer"> =
 1</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$softCommit`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
+**`true`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$waitSearcher`<span class="initializer"> =
-**`TRUE`**</span></span> \]\]\] )
+**`true`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span
 class="type">SolrPingResponse</span> <span
@@ -3580,7 +3580,7 @@ class="methodname">SolrClient::addDocument</span> ( <span
 class="methodparam"><span class="type">SolrInputDocument</span>
 `$doc`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
+**`true`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$commitWithin`<span class="initializer"> =
 0</span></span> \]\] )
 
@@ -3592,7 +3592,7 @@ This method adds a document to the index.
 The SolrInputDocument instance.
 
 `overwrite`  
-Whether to overwrite existing document or not. If **`FALSE`** there will
+Whether to overwrite existing document or not. If **`false`** there will
 be duplicates (several documents with the same ID).
 
 **Warning**
@@ -3729,7 +3729,7 @@ Adds a collection of SolrInputDocument instances to the index
 <span class="methodname">SolrClient::addDocuments</span> ( <span
 class="methodparam"><span class="type">array</span> `$docs`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$overwrite`<span class="initializer"> = **`TRUE`**</span></span> \[,
+`$overwrite`<span class="initializer"> = **`true`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$commitWithin`<span class="initializer"> = 0</span></span> \]\] )
 
@@ -3742,7 +3742,7 @@ An array containing the collection of SolrInputDocument instances. This
 array must be an actual variable.
 
 `overwrite`  
-Whether to overwrite existing documents or not. If **`FALSE`** there
+Whether to overwrite existing documents or not. If **`false`** there
 will be duplicates (several documents with the same ID).
 
 **Warning**
@@ -3841,11 +3841,11 @@ Finalizes all add/deletes made to the index
 class="type">SolrUpdateResponse</span> <span
 class="methodname">SolrClient::commit</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$softCommit`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$waitSearcher`<span
-class="initializer"> = **`TRUE`**</span></span> \[, <span
+class="initializer"> = **`true`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$expungeDeletes`<span class="initializer"> = **`FALSE`**</span></span>
+`$expungeDeletes`<span class="initializer"> = **`false`**</span></span>
 \]\]\] )
 
 This method finalizes all add/deletes made to the index.
@@ -4492,9 +4492,9 @@ class="methodname">SolrClient::optimize</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$maxSegments`<span
 class="initializer"> = 1</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$softCommit`<span
-class="initializer"> = **`TRUE`**</span></span> \[, <span
+class="initializer"> = **`true`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$waitSearcher`<span
-class="initializer"> = **`TRUE`**</span></span> \]\]\] )
+class="initializer"> = **`true`**</span></span> \]\]\] )
 
 Defragments the index for faster search performance.
 
@@ -4939,7 +4939,7 @@ The new value for the servlet
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrClient::system
 ==================
@@ -5362,7 +5362,7 @@ SolrObjects.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SolrResponse::success
 =====================
@@ -5383,7 +5383,7 @@ Used to check if the request to the server was successful.
 
 ### 返回值
 
-Returns **`TRUE`** if it was successful and **`FALSE`** if it was not.
+Returns **`true`** if it was successful and **`false`** if it was not.
 
 简介
 ----
@@ -6183,7 +6183,7 @@ class="type">string</span> `$value`</span> )
 <span class="type">string</span> <span
 class="methodname">toString</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$url_encode`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">void</span> <span
@@ -6247,7 +6247,7 @@ Value of parameter
 
 ### 返回值
 
-Returns a SolrParam object on success and **`FALSE`** on failure.
+Returns a SolrParam object on success and **`false`** on failure.
 
 SolrParams::get
 ===============
@@ -6419,7 +6419,7 @@ Value of the parameter
 
 ### 返回值
 
-Returns a SolrParam object on success and **`FALSE`** on value.
+Returns a SolrParam object on success and **`false`** on value.
 
 ### 范例
 
@@ -6449,7 +6449,7 @@ Returns all the name-value pair parameters in the object
 <span class="type">string</span> <span
 class="methodname">SolrParams::toString</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$url_encode`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Returns all the name-value pair parameters in the object
 
@@ -6460,7 +6460,7 @@ Whether to return URL-encoded values
 
 ### 返回值
 
-Returns a string on success and **`FALSE`** on failure.
+Returns a string on success and **`false`** on failure.
 
 SolrParams::unserialize
 =======================
@@ -6573,7 +6573,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="type">string</span> <span
 class="methodname">SolrParams::toString</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$url_encode`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">void</span> <span
@@ -8605,7 +8605,7 @@ Returns true if group expanding is enabled
 <span class="methodname">SolrQuery::getExpand</span> ( <span
 class="methodparam">void</span> )
 
-Returns **`TRUE`** if group expanding is enabled
+Returns **`true`** if group expanding is enabled
 
 SolrQuery::getExpandFilterQueries
 =================================
@@ -8678,7 +8678,7 @@ Returns the value of the facet parameter.
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set
+Returns a boolean on success and **`null`** if not set
 
 SolrQuery::getFacetDateEnd
 ==========================
@@ -8702,7 +8702,7 @@ The name of the field
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set
+Returns a string on success and **`null`** if not set
 
 SolrQuery::getFacetDateFields
 =============================
@@ -8723,7 +8723,7 @@ Returns all the facet.date fields
 
 ### 返回值
 
-Returns all the facet.date fields as an array or **`NULL`** if none was
+Returns all the facet.date fields as an array or **`null`** if none was
 set
 
 SolrQuery::getFacetDateGap
@@ -8748,7 +8748,7 @@ The name of the field
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set
+Returns a string on success and **`null`** if not set
 
 SolrQuery::getFacetDateHardEnd
 ==============================
@@ -8772,7 +8772,7 @@ The name of the field
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set
+Returns a string on success and **`null`** if not set
 
 SolrQuery::getFacetDateOther
 ============================
@@ -8796,7 +8796,7 @@ The name of the field
 
 ### 返回值
 
-Returns an <span class="type">array</span> on success and **`NULL`** if
+Returns an <span class="type">array</span> on success and **`null`** if
 not set.
 
 SolrQuery::getFacetDateStart
@@ -8822,7 +8822,7 @@ The name of the field
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set
+Returns a string on success and **`null`** if not set
 
 SolrQuery::getFacetFields
 =========================
@@ -8843,7 +8843,7 @@ Returns all the facet fields
 
 ### 返回值
 
-Returns an array of all the fields and **`NULL`** if none was set
+Returns an array of all the fields and **`null`** if none was set
 
 SolrQuery::getFacetLimit
 ========================
@@ -8868,7 +8868,7 @@ The name of the field to override for
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set
+Returns an integer on success and **`null`** if not set
 
 SolrQuery::getFacetMethod
 =========================
@@ -8892,7 +8892,7 @@ The name of the field
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set
+Returns a string on success and **`null`** if not set
 
 SolrQuery::getFacetMinCount
 ===========================
@@ -8917,7 +8917,7 @@ The name of the field
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set
+Returns an integer on success and **`null`** if not set
 
 SolrQuery::getFacetMissing
 ==========================
@@ -8941,7 +8941,7 @@ The name of the field
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set
+Returns a boolean on success and **`null`** if not set
 
 SolrQuery::getFacetOffset
 =========================
@@ -8965,7 +8965,7 @@ The name of the field to override for.
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set
+Returns an integer on success and **`null`** if not set
 
 SolrQuery::getFacetPrefix
 =========================
@@ -8988,7 +8988,7 @@ The name of the field
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getFacetQueries
 ==========================
@@ -9009,7 +9009,7 @@ Returns all the facet queries
 
 ### 返回值
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getFacetSort
 =======================
@@ -9034,7 +9034,7 @@ The name of the field
 ### 返回值
 
 Returns an integer (SolrQuery::FACET\_SORT\_INDEX or
-SolrQuery::FACET\_SORT\_COUNT) on success or **`NULL`** if not set.
+SolrQuery::FACET\_SORT\_COUNT) on success or **`null`** if not set.
 
 SolrQuery::getFields
 ====================
@@ -9055,7 +9055,7 @@ Returns the list of fields that will be returned in the response
 
 ### 返回值
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getFilterQueries
 ===========================
@@ -9078,7 +9078,7 @@ influencing score
 
 ### 返回值
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getGroup
 ===================
@@ -9401,7 +9401,7 @@ snippets to be generated in the query response.
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getHighlightAlternateField
 =====================================
@@ -9425,7 +9425,7 @@ The name of the field
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getHighlightFields
 =============================
@@ -9448,7 +9448,7 @@ for
 
 ### 返回值
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getHighlightFormatter
 ================================
@@ -9471,7 +9471,7 @@ The name of the field
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getHighlightFragmenter
 =================================
@@ -9495,7 +9495,7 @@ The name of the field
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getHighlightFragsize
 ===============================
@@ -9521,7 +9521,7 @@ The name of the field
 
 ### 返回值
 
-Returns an integer on success or **`NULL`** if not set.
+Returns an integer on success or **`null`** if not set.
 
 SolrQuery::getHighlightHighlightMultiTerm
 =========================================
@@ -9545,7 +9545,7 @@ range/wildcard/fuzzy/prefix queries
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getHighlightMaxAlternateFieldLength
 ==============================================
@@ -9568,7 +9568,7 @@ The name of the field
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getHighlightMaxAnalyzedChars
 =======================================
@@ -9591,7 +9591,7 @@ suitable snippets
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getHighlightMergeContiguous
 ======================================
@@ -9616,7 +9616,7 @@ The name of the field
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getHighlightRegexMaxAnalyzedChars
 ============================================
@@ -9639,7 +9639,7 @@ regex fragmenter
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getHighlightRegexPattern
 ===================================
@@ -9660,7 +9660,7 @@ Returns the regular expression used for fragmenting
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getHighlightRegexSlop
 ================================
@@ -9682,7 +9682,7 @@ ideal fragment size to accomodate the regular expression
 
 ### 返回值
 
-Returns a double on success and **`NULL`** if not set.
+Returns a double on success and **`null`** if not set.
 
 SolrQuery::getHighlightRequireFieldMatch
 ========================================
@@ -9705,7 +9705,7 @@ particular field.
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getHighlightSimplePost
 =================================
@@ -9729,7 +9729,7 @@ The name of the field
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getHighlightSimplePre
 ================================
@@ -9753,7 +9753,7 @@ The name of the field
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getHighlightSnippets
 ===============================
@@ -9777,7 +9777,7 @@ The name of the field
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getHighlightUsePhraseHighlighter
 ===========================================
@@ -9800,7 +9800,7 @@ when they appear within the query phrase in the document.
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getMlt
 =================
@@ -9821,7 +9821,7 @@ Returns whether or not MoreLikeThis results should be enabled
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getMltBoost
 ======================
@@ -9844,7 +9844,7 @@ relevance
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getMltCount
 ======================
@@ -9865,7 +9865,7 @@ Returns the number of similar documents to return for each result
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltFields
 =======================
@@ -9886,7 +9886,7 @@ Returns all the fields to use for similarity
 
 ### 返回值
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getMltMaxNumQueryTerms
 =================================
@@ -9909,7 +9909,7 @@ generated query
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltMaxNumTokens
 =============================
@@ -9932,7 +9932,7 @@ that is not stored with TermVector support
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltMaxWordLength
 ==============================
@@ -9953,7 +9953,7 @@ Returns the maximum word length above which words will be ignored
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltMinDocFrequency
 ================================
@@ -9976,7 +9976,7 @@ not occur in at least this many docs
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltMinTermFrequency
 =================================
@@ -9999,7 +9999,7 @@ document
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltMinWordLength
 ==============================
@@ -10020,7 +10020,7 @@ Returns the minimum word length below which words will be ignored
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltQueryFields
 ============================
@@ -10041,7 +10041,7 @@ Returns the query fields and their boosts
 
 ### 返回值
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getQuery
 ===================
@@ -10062,7 +10062,7 @@ Returns the main search query
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getRows
 ==================
@@ -10084,7 +10084,7 @@ return to the client for every request
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getSortFields
 ========================
@@ -10105,7 +10105,7 @@ Returns all the sort fields
 
 ### 返回值
 
-Returns an array on success and **`NULL`** if none of the parameters was
+Returns an array on success and **`null`** if none of the parameters was
 set.
 
 SolrQuery::getStart
@@ -10128,7 +10128,7 @@ set of returned documents should begin.
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getStats
 ===================
@@ -10149,7 +10149,7 @@ Returns whether or not stats is enabled
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getStatsFacets
 =========================
@@ -10170,7 +10170,7 @@ Returns all the stats facets that were set
 
 ### 返回值
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getStatsFields
 =========================
@@ -10191,7 +10191,7 @@ Returns all the statistics fields
 
 ### 返回值
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getTerms
 ===================
@@ -10212,7 +10212,7 @@ Returns whether or not the TermsComponent is enabled
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getTermsField
 ========================
@@ -10233,7 +10233,7 @@ Returns the field from which the terms are retrieved
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getTermsIncludeLowerBound
 ====================================
@@ -10254,7 +10254,7 @@ Returns whether or not to include the lower bound in the result set
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getTermsIncludeUpperBound
 ====================================
@@ -10275,7 +10275,7 @@ Returns whether or not to include the upper bound term in the result set
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getTermsLimit
 ========================
@@ -10296,7 +10296,7 @@ Returns the maximum number of terms Solr should return
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getTermsLowerBound
 =============================
@@ -10317,7 +10317,7 @@ Returns the term to start at
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getTermsMaxCount
 ===========================
@@ -10338,7 +10338,7 @@ Returns the maximum document frequency
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getTermsMinCount
 ===========================
@@ -10359,7 +10359,7 @@ Returns the minimum document frequency to return in order to be included
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getTermsPrefix
 =========================
@@ -10381,7 +10381,7 @@ restrict matches to only terms that start with the prefix
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getTermsReturnRaw
 ============================
@@ -10403,7 +10403,7 @@ of the indexed term, regardless of if it is human readable
 
 ### 返回值
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getTermsSort
 =======================
@@ -10426,7 +10426,7 @@ sorted by term frequency (highest count first)
 
 ### 返回值
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getTermsUpperBound
 =============================
@@ -10447,7 +10447,7 @@ Returns the term to stop at
 
 ### 返回值
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getTimeAllowed
 =========================
@@ -10468,7 +10468,7 @@ Returns the time in milliseconds allowed for the query to finish.
 
 ### 返回值
 
-Returns and integer on success and **`NULL`** if it is not set.
+Returns and integer on success and **`null`** if it is not set.
 
 SolrQuery::removeExpandFilterQuery
 ==================================
@@ -10819,7 +10819,7 @@ to the client for debugging purposes.
 ### 参数
 
 `flag`  
-**`TRUE`** or **`FALSE`**
+**`true`** or **`false`**
 
 ### 返回值
 
@@ -11015,7 +11015,7 @@ Enables or disables faceting.
 ### 参数
 
 `value`  
-**`TRUE`** enables faceting and **`FALSE`** disables it.
+**`true`** enables faceting and **`false`** disables it.
 
 ### 返回值
 
@@ -11261,7 +11261,7 @@ field should be computed
 ### 参数
 
 `flag`  
-**`TRUE`** turns this feature on. **`FALSE`** disables it.
+**`true`** turns this feature on. **`false`** disables it.
 
 `field_override`  
 The name of the field.
@@ -11701,10 +11701,10 @@ Enables or disables highlighting
 <span class="methodname">SolrQuery::setHighlight</span> ( <span
 class="methodparam"><span class="type">bool</span> `$flag`</span> )
 
-Setting it to **`TRUE`** enables highlighted snippets to be generated in
+Setting it to **`true`** enables highlighted snippets to be generated in
 the query response.
 
-Setting it to **`FALSE`** disables highlighting
+Setting it to **`false`** disables highlighting
 
 ### 参数
 
@@ -11864,7 +11864,7 @@ class="methodname">SolrQuery::setHighlightMaxAlternateFieldLength</span>
 class="type">string</span> `$field_override`</span> \] )
 
 If SolrQuery::setHighlightAlternateField() was passed the value
-**`TRUE`**, this parameter specifies the maximum number of characters of
+**`true`**, this parameter specifies the maximum number of characters of
 the field to return
 
 Any value less than or equal to 0 means unlimited.
@@ -12022,16 +12022,16 @@ Require field matching during highlighting
 ( <span class="methodparam"><span class="type">bool</span>
 `$flag`</span> )
 
-If **`TRUE`**, then a field will only be highlighted if the query
+If **`true`**, then a field will only be highlighted if the query
 matched in this particular field.
 
 This will only work if SolrQuery::setHighlightUsePhraseHighlighter() was
-set to **`TRUE`**
+set to **`true`**
 
 ### 参数
 
 `flag`  
-**`TRUE`** or **`FALSE`**
+**`true`** or **`false`**
 
 ### 返回值
 
@@ -12165,7 +12165,7 @@ Enables or disables moreLikeThis
 ### 参数
 
 `flag`  
-**`TRUE`** enables it and **`FALSE`** turns it off.
+**`true`** enables it and **`false`** turns it off.
 
 ### 返回值
 
@@ -12187,7 +12187,7 @@ Set if the query will be boosted by the interesting term relevance
 ### 参数
 
 `value`  
-Sets to **`TRUE`** or **`FALSE`**
+Sets to **`true`** or **`false`**
 
 ### 返回值
 
@@ -12373,7 +12373,7 @@ Exclude the header from the returned results.
 ### 参数
 
 `flag`  
-**`TRUE`** excludes the header from the result.
+**`true`** excludes the header from the result.
 
 ### 返回值
 
@@ -12439,7 +12439,7 @@ Whether to show debug info
 ### 参数
 
 `flag`  
-Whether to show debug info. **`TRUE`** or **`FALSE`**
+Whether to show debug info. **`true`** or **`false`**
 
 ### 返回值
 
@@ -12483,7 +12483,7 @@ Enables or disables the Stats component.
 ### 参数
 
 `flag`  
-**`TRUE`** turns on the stats component and **`FALSE`** disables it.
+**`true`** turns on the stats component and **`false`** disables it.
 
 ### 返回值
 
@@ -12505,7 +12505,7 @@ Enables or disables the TermsComponent
 ### 参数
 
 `flag`  
-**`TRUE`** enables it. **`FALSE`** turns it off
+**`true`** enables it. **`false`** turns it off
 
 ### 返回值
 
@@ -12574,7 +12574,7 @@ Include the upper bound term in the result set.
 ### 参数
 
 `flag`  
-**`TRUE`** or **`FALSE`**
+**`true`** or **`false`**
 
 ### 返回值
 
@@ -12709,7 +12709,7 @@ it is human readable
 ### 参数
 
 `value`  
-**`TRUE`** or **`FALSE`**
+**`true`** or **`false`**
 
 ### 返回值
 

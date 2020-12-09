@@ -414,8 +414,8 @@ calling this function.
 
 ### 返回值
 
-Return **`TRUE`** if the programmer can change color definitions,
-**`FALSE`** otherwise.
+Return **`true`** if the programmer can change color definitions,
+**`false`** otherwise.
 
 ### 参见
 
@@ -445,7 +445,7 @@ immediately available to the program.
 
 ### 返回值
 
-Returns **`TRUE`** or **`NCURSES_ERR`** if any error occurred.
+Returns **`true`** or **`NCURSES_ERR`** if any error occurred.
 
 ### 参见
 
@@ -476,7 +476,7 @@ class="function">ncurses\_erase</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -504,7 +504,7 @@ current background rendition.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -533,7 +533,7 @@ background rendition.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -692,7 +692,7 @@ Saves the current terminal modes for program (in curses) for use by
 
 ### 返回值
 
-Returns **`FALSE`** on success, otherwise **`TRUE`**.
+Returns **`false`** on success, otherwise **`true`**.
 
 ### 参见
 
@@ -719,7 +719,7 @@ Saves the current terminal modes for shell (not in curses) for use by
 
 ### 返回值
 
-Returns **`FALSE`** on success, **`TRUE`** otherwise.
+Returns **`false`** on success, **`true`** otherwise.
 
 ### 参见
 
@@ -821,7 +821,7 @@ does not change.
 
 ### 返回值
 
-Returns **`FALSE`** on success, **`TRUE`** otherwise.
+Returns **`false`** on success, **`true`** otherwise.
 
 ### 参见
 
@@ -849,7 +849,7 @@ cleared. Cursor position does not change.
 
 ### 返回值
 
-Returns **`FALSE`** on success, otherwise **`TRUE`**.
+Returns **`false`** on success, otherwise **`true`**.
 
 ### 参见
 
@@ -902,7 +902,7 @@ calls.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ncurses\_echo
 =============
@@ -925,7 +925,7 @@ class="function">ncurses\_getch</span>.
 
 ### 返回值
 
-Returns **`FALSE`** on success, **`TRUE`** if any error occurred.
+Returns **`false`** on success, **`true`** if any error occurred.
 
 ### 参见
 
@@ -998,7 +998,7 @@ class="function">ncurses\_bkgd</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1072,7 +1072,7 @@ Flashes the screen, and if its not possible, sends an audible alert
 
 ### 返回值
 
-Returns **`FALSE`** on success, otherwise **`TRUE`**.
+Returns **`false`** on success, otherwise **`true`**.
 
 ### 参见
 
@@ -1099,7 +1099,7 @@ by your program.
 
 ### 返回值
 
-Returns **`FALSE`** on success, otherwise **`TRUE`**.
+Returns **`false`** on success, otherwise **`true`**.
 
 ncurses\_getch
 ==============
@@ -1199,8 +1199,8 @@ On success an associative array with following keys will be delivered:
 
 ### 返回值
 
-Returns **`FALSE`** if a mouse event is actually visible in the given
-window, otherwise returns **`TRUE`**.
+Returns **`false`** if a mouse event is actually visible in the given
+window, otherwise returns **`true`**.
 
 ### 范例
 
@@ -1299,7 +1299,7 @@ function.
 
 ### 返回值
 
-Return **`TRUE`** if the terminal has color capabilities, **`FALSE`**
+Return **`true`** if the terminal has color capabilities, **`false`**
 otherwise.
 
 ### 范例
@@ -1352,8 +1352,8 @@ Checks whether the terminal has insert and delete capabilities.
 
 ### 返回值
 
-Returns **`TRUE`** if the terminal has insert/delete-capabilities,
-**`FALSE`** otherwise.
+Returns **`true`** if the terminal has insert/delete-capabilities,
+**`false`** otherwise.
 
 ### 参见
 
@@ -1379,8 +1379,8 @@ Checks whether the terminal has insert- and delete-line-capabilities.
 
 ### 返回值
 
-Returns **`TRUE`** if the terminal has insert/delete-line capabilities,
-**`FALSE`** otherwise.
+Returns **`true`** if the terminal has insert/delete-line capabilities,
+**`false`** otherwise.
 
 ### 参见
 
@@ -1782,9 +1782,9 @@ Checks if ncurses is in endwin mode.
 
 ### 返回值
 
-Returns **`TRUE`**, if <span class="function">ncurses\_end</span> has
+Returns **`true`**, if <span class="function">ncurses\_end</span> has
 been called without any subsequent calls to <span
-class="function">ncurses\_wrefresh</span>, **`FALSE`** otherwise.
+class="function">ncurses\_wrefresh</span>, **`false`** otherwise.
 
 ### 参见
 
@@ -1889,7 +1889,7 @@ Returns a verbose description of the terminal.
 ### 返回值
 
 Returns the description, as a string truncated to 128 characters. On
-errors, returns **`NULL`**.
+errors, returns **`null`**.
 
 ### 参见
 
@@ -2659,7 +2659,7 @@ class="function">ncurses\_nocbreak</span> explicitly.
 
 ### 返回值
 
-Returns **`TRUE`** if any error occurred, otherwise **`FALSE`**.
+Returns **`true`** if any error occurred, otherwise **`false`**.
 
 ### 参见
 
@@ -2685,7 +2685,7 @@ Prevents echoing of user typed characters.
 
 ### 返回值
 
-Returns **`TRUE`** if any error occurred, **`FALSE`** otherwise.
+Returns **`true`** if any error occurred, **`false`** otherwise.
 
 ### 参见
 
@@ -2756,7 +2756,7 @@ uninterpreted, instead of generating a signal.
 
 ### 返回值
 
-Returns **`TRUE`** if any error occurred, otherwise **`FALSE`**.
+Returns **`true`** if any error occurred, otherwise **`false`**.
 
 ### 参见
 
@@ -3024,7 +3024,7 @@ uninterpreted, instead of generating a signal.
 
 ### 返回值
 
-Returns **`TRUE`** if any error occurred, otherwise **`FALSE`**.
+Returns **`true`** if any error occurred, otherwise **`false`**.
 
 ### 参见
 
@@ -3130,7 +3130,7 @@ class="function">ncurses\_savetty</span>.
 
 ### 返回值
 
-Always returns **`FALSE`**.
+Always returns **`false`**.
 
 ### 参见
 
@@ -3157,7 +3157,7 @@ restored with <span class="function">ncurses\_resetty</span>.
 
 ### 返回值
 
-Always returns **`FALSE`**.
+Always returns **`false`**.
 
 ### 参见
 
@@ -3421,7 +3421,7 @@ soft label keys from screen.
 
 ### 返回值
 
-Returns **`TRUE`** on errors, **`FALSE`** otherwise.
+Returns **`true`** on errors, **`false`** otherwise.
 
 ncurses\_slk\_color
 ===================
@@ -3482,7 +3482,7 @@ index line will be created.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ncurses\_slk\_noutrefresh
 =========================
@@ -3723,7 +3723,7 @@ Returns terminals shortname.
 ### 返回值
 
 Returns the shortname of the terminal, truncated to 14 characters. On
-errors, returns **`NULL`**.
+errors, returns **`null`**.
 
 ### 参见
 
@@ -3857,7 +3857,7 @@ An associative array specifying the event options:
 
 ### 返回值
 
-Returns **`FALSE`** on success, **`TRUE`** otherwise.
+Returns **`false`** on success, **`true`** otherwise.
 
 ### 参见
 

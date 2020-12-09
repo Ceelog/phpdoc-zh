@@ -12,9 +12,9 @@
 
 如同在<a href="/language/expressions.html" class="link">表达式</a>一章中定义的，<span
 class="replaceable">expr</span> 按照布尔求值。如果 <span
-class="replaceable">expr</span> 的值为 **`TRUE`**，PHP 将执行 <span
-class="replaceable">statement</span>，如果值为 **`FALSE`** ——将忽略
-<span class="replaceable">statement</span>。有关哪些值被视为 **`FALSE`**
+class="replaceable">expr</span> 的值为 **`true`**，PHP 将执行 <span
+class="replaceable">statement</span>，如果值为 **`false`** ——将忽略
+<span class="replaceable">statement</span>。有关哪些值被视为 **`false`**
 的更多信息参见<a href="/language/types/boolean.html#language.types.boolean.casting" class="link">转换为布尔值</a>一节。
 
 如果 `$a` 大于 `$b`，则以下例子将显示 <span class="computeroutput">a is

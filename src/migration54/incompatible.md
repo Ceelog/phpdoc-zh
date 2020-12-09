@@ -13,7 +13,7 @@
     class="simpara"> <span
     class="function">get\_magic\_quotes\_gpc</span> 和 <span
     class="function">get\_magic\_quotes\_runtime</span> 现在总是返回
-    **`FALSE`** 。 想用 <span
+    **`false`** 。 想用 <span
     class="function">set\_magic\_quotes\_runtime</span> 开启
     <a href="/security/magicquotes.html" class="link">魔术引号</a>
     时将产生一个 **`E_CORE_ERROR`** 级别的错误。 </span>
@@ -71,7 +71,7 @@
     5.4 或更新版本返回 false，但在 PHP 5.3 或更低版本返回 true </span>
 -   <span class="simpara"> 数组转换成字符串将产生一条 **`E_NOTICE`**
     级别的错误，但返回的结果仍是字符串 *"Array"* 。 </span>
--   <span class="simpara"> **`NULL`** 、**`FALSE`** 、或
+-   <span class="simpara"> **`null`** 、**`false`** 、或
     一个空字符串被添加成一个对象的属性时将发出一条 **`E_WARNING`**
     级别的错误，而不是 **`E_STRICT`** 。 </span>
 -   <span class="simpara">
@@ -86,7 +86,7 @@
     编写代码，以便同时兼容 PHP 5.3 和 5.4。 </span>
 -   <span class="simpara"> 当使用两个空数组作为参数时， <span
     class="function">array\_combine</span> 现在返回 *array()* 而不是
-    **`FALSE`** 。 </span>
+    **`false`** 。 </span>
 -   <span class="simpara"> <span class="function">htmlentities</span>
     将像 <span class="function">htmlspecialchars</span>
     一样处理亚洲字符集，这是以前 PHP 版本的处理情况，但现在将会发出一条
@@ -94,7 +94,7 @@
 -   <span class="simpara"> 现在 <span class="function">ob\_start</span>
     的第三个参数由 <span class="type">bool</span> `erase` 变为 <span
     class="type">int</span> `flags`。 注意，在 PHP 5.4 里代码明确设置
-    `erase` 为 **`FALSE`** 将不会按预期运行： 请按
+    `erase` 为 **`false`** 将不会按预期运行： 请按
     <a href="/ref/outcontrol.html#以兼容%20PHP%205.3%20和%205.4%20的方式创建一个不可擦除的输出缓冲区" class="link">本示例</a>
     编写代码，以便同时兼容 PHP 5.3 和 5.4。 </span>
 -   <span class="simpara"> 强烈建议不要再使用 <span

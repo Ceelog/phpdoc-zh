@@ -131,7 +131,7 @@ var_dump($a instanceof $d); // $d is a string 'NotMyClass'
     bool(false)
 
 如果被检测的变量不是对象，instanceof 并不发出任何错误信息而是返回
-**`FALSE`**。PHP 7.3.0 之前不允许用于检测常量。
+**`false`**。PHP 7.3.0 之前不允许用于检测常量。
 
 **示例 \#6 用 *instanceof* 检测其它变量**
 

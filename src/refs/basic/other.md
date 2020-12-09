@@ -169,6 +169,7 @@
     -   [安装／配置](/tokenizer/setup.html)
     -   [预定义常量](/tokenizer/constants.html)
     -   [范例](/tokenizer/examples.html)
+    -   [PhpToken](/class/phptoken.html) — The PhpToken class
     -   [Tokenizer 函数](/ref/tokenizer.html)
 -   [URLs](/book/url.html)
     -   [简介](/intro/url.html)

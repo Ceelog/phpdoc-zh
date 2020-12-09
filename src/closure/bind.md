@@ -23,7 +23,7 @@ class="type">mixed</span> `$newscope` <span class="initializer"> =
 需要绑定的匿名函数。
 
 `newthis`  
-需要绑定到匿名函数的对象，或者 **`NULL`** 创建未绑定的闭包。
+需要绑定到匿名函数的对象，或者 **`null`** 创建未绑定的闭包。
 
 `newscope`  
 想要绑定给闭包的类作用域，或者 'static'
@@ -37,7 +37,7 @@ and private methods of the bound object.
 ### 返回值
 
 返回一个新的 <span class="classname">Closure</span> 对象
-或者在失败时返回 **`FALSE`**
+或者在失败时返回 **`false`**
 
 ### 范例
 

@@ -13,15 +13,15 @@ gd\_info
 | 属性               | 含义                                                                                                                                                                                                 |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GD Version         | <span class="type">string</span> 值描述了安装的 *libgd* 的版本。                                                                                                                                     |
-| Freetype Support   | <span class="type">boolean</span> 值。如果安装了 Freetype 支持则为 **`TRUE`**。                                                                                                                      |
-| Freetype Linkage   | <span class="type">string</span> 值描述了 Freetype 连接的方法。取值可能为：'with freetype', 'with TTF library' 和 'with unknown library'。本单元仅在 *Freetype Support* 的值为 **`TRUE`** 时有定义。 |
-| T1Lib Support      | <span class="type">boolean</span> 值。如果包含有 *T1Lib* 支持则为 **`TRUE`**。                                                                                                                       |
-| GIF Read Support   | <span class="type">boolean</span> 值。如果包含有*读取* *GIF* 图像的支持则为 **`TRUE`**。                                                                                                             |
-| GIF Create Support | <span class="type">boolean</span> 值。如果包含有*创建* *GIF* 图像的支持则为 **`TRUE`**。                                                                                                             |
-| JPG Support        | <span class="type">boolean</span> 值。如果包含有 *JPG* 支持则为 **`TRUE`**。                                                                                                                         |
-| PNG Support        | <span class="type">boolean</span> 值。如果包含有 *PNG* 支持则为 **`TRUE`**。                                                                                                                         |
-| WBMP Support       | <span class="type">boolean</span> 值。如果包含有 *WBMP* 支持则为 **`TRUE`**。                                                                                                                        |
-| XBM Support        | <span class="type">boolean</span> 值。如果包含有 *XBM* 支持则为 **`TRUE`**。                                                                                                                         |
+| Freetype Support   | <span class="type">boolean</span> 值。如果安装了 Freetype 支持则为 **`true`**。                                                                                                                      |
+| Freetype Linkage   | <span class="type">string</span> 值描述了 Freetype 连接的方法。取值可能为：'with freetype', 'with TTF library' 和 'with unknown library'。本单元仅在 *Freetype Support* 的值为 **`true`** 时有定义。 |
+| T1Lib Support      | <span class="type">boolean</span> 值。如果包含有 *T1Lib* 支持则为 **`true`**。                                                                                                                       |
+| GIF Read Support   | <span class="type">boolean</span> 值。如果包含有*读取* *GIF* 图像的支持则为 **`true`**。                                                                                                             |
+| GIF Create Support | <span class="type">boolean</span> 值。如果包含有*创建* *GIF* 图像的支持则为 **`true`**。                                                                                                             |
+| JPG Support        | <span class="type">boolean</span> 值。如果包含有 *JPG* 支持则为 **`true`**。                                                                                                                         |
+| PNG Support        | <span class="type">boolean</span> 值。如果包含有 *PNG* 支持则为 **`true`**。                                                                                                                         |
+| WBMP Support       | <span class="type">boolean</span> 值。如果包含有 *WBMP* 支持则为 **`true`**。                                                                                                                        |
+| XBM Support        | <span class="type">boolean</span> 值。如果包含有 *XBM* 支持则为 **`true`**。                                                                                                                         |
 
 **示例 \#1 使用 <span class="function">gd\_info</span>**
 
@@ -79,7 +79,7 @@ WBMP 图像文件的大小并返回图像的尺寸以及文件类型和一个可
 文件中 `IMG` 标记中的 height/width 文本字符串。
 
 如果不能访问 `filename` 指定的图像或者其不是有效的图像，<span
-class="function">getimagesize</span> 将返回 **`FALSE`** 并产生一条
+class="function">getimagesize</span> 将返回 **`false`** 并产生一条
 `E_WARNING` 级的错误。
 
 > **Note**:
@@ -251,7 +251,7 @@ be a bit confusing. As an example, GIF always uses 3 channels per pixel,
 but the number of bits per pixel cannot be calculated for an animated
 GIF with a global color table.
 
-On failure, **`FALSE`** is returned.
+On failure, **`false`** is returned.
 
 ### 错误／异常
 
@@ -389,7 +389,7 @@ image\_type\_to\_extension
 class="methodname">image\_type\_to\_extension</span> ( <span
 class="methodparam"><span class="type">int</span> `$imagetype`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$include_dot`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$include_dot`<span class="initializer"> = **`true`**</span></span> \] )
 
 根据给定的常量 *IMAGETYPE\_XXX* 返回后缀名。
 
@@ -399,7 +399,7 @@ class="methodparam"><span class="type">int</span> `$imagetype`</span>
 *IMAGETYPE\_XXX* 系列常量之一。
 
 `include_dot`  
-是否在后缀名前加一个点。默认是 **`TRUE`**。
+是否在后缀名前加一个点。默认是 **`true`**。
 
 ### 返回值
 
@@ -549,7 +549,7 @@ class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 ### 返回值
 
-成功则返回仿射变换后的图像， 或者在失败时返回 **`FALSE`**.
+成功则返回仿射变换后的图像， 或者在失败时返回 **`false`**.
 
 imageaffinematrixconcat
 =======================
@@ -581,7 +581,7 @@ values).
 ### 返回值
 
 An affine transformation matrix (an array with keys *0* to *5* and float
-values) 或者在失败时返回 **`FALSE`**.
+values) 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -647,7 +647,7 @@ class="type">float</span> specifying the angle.
 ### 返回值
 
 An affine transformation matrix (an array with keys *0* to *5* and float
-values) 或者在失败时返回 **`FALSE`**.
+values) 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -698,8 +698,8 @@ class="function">imagesetpixel</span>
 自动将该点现有的颜色和画笔颜色混合，并将结果储存在图像中。结果的像素是不透明的。在非混色模式下，画笔颜色连同其
 alpha
 通道信息一起被拷贝，替换掉目标像素。混色模式在画调色板图像时不可用。如果
-`blendmode` 为 **`TRUE`**，则启用混色模式，否则关闭。成功时返回
-**`TRUE`**， 或者在失败时返回 **`FALSE`**。
+`blendmode` 为 **`true`**，则启用混色模式，否则关闭。成功时返回
+**`true`**， 或者在失败时返回 **`false`**。
 
 ### 参数
 
@@ -709,11 +709,11 @@ class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 `blendmode`  
 Whether to enable the blending mode or not. On true color images the
-default value is **`TRUE`** otherwise the default value is **`FALSE`**
+default value is **`true`** otherwise the default value is **`false`**
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -773,7 +773,7 @@ class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -876,9 +876,9 @@ Output a BMP image to browser or file
 ( <span class="methodparam"><span class="type">resource</span>
 `$image`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$to`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$compressed`<span class="initializer"> =
-**`TRUE`**</span></span> \]\] )
+**`true`**</span></span> \]\] )
 
 Outputs or saves a BMP version of the given `image`.
 
@@ -889,11 +889,11 @@ Outputs or saves a BMP version of the given `image`.
 class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 `to`  
-文件保存的路径，如果未设置或为 **`NULL`**，将会直接输出原始图象流。
+文件保存的路径，如果未设置或为 **`null`**，将会直接输出原始图象流。
 
 > **Note**:
 >
-> **`NULL`** is invalid if the `compressed` arguments is not used.
+> **`null`** is invalid if the `compressed` arguments is not used.
 
 `compressed`  
 Whether the BMP should be compressed with run-length encoding (RLE), or
@@ -901,11 +901,11 @@ not.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 **Caution**
 
-如果 libgd 输出图像失败，函数会返回 **`TRUE`**。
+如果 libgd 输出图像失败，函数会返回 **`true`**。
 
 ### 范例
 
@@ -1086,7 +1086,7 @@ class="function">imagecolorallocate</span>
 相同，但多了一个额外的透明度参数 `alpha`，其值从 *0* 到 *127*。*0*
 表示完全不透明，*127* 表示完全透明。
 
-如果分配失败则返回 **`FALSE`**。
+如果分配失败则返回 **`false`**。
 
 **示例 \#1 使用 <span class="function">imagecolorallocatealpha</span>
 的例子**
@@ -1156,11 +1156,11 @@ between 0x00 and 0xFF.
 
 ### 返回值
 
-A color identifier or **`FALSE`** if the allocation failed.
+A color identifier or **`false`** if the allocation failed.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -1599,7 +1599,7 @@ class="methodparam"><span class="type">resource</span> `$image1`</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1888,7 +1888,7 @@ Color offset.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2099,7 +2099,7 @@ of `dst_image` of width `dst_w` and height `dst_h` at position
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2260,7 +2260,7 @@ Destination height.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2378,7 +2378,7 @@ Path to the BMP image.
 
 ### 返回值
 
-成功后返回图象资源,失败后返回 **`FALSE`**。
+成功后返回图象资源,失败后返回 **`false`**。
 
 ### 范例
 
@@ -2424,7 +2424,7 @@ GD2 图像的路径。
 
 ### 返回值
 
-成功后返回图象资源,失败后返回 **`FALSE`**。
+成功后返回图象资源,失败后返回 **`false`**。
 
 ### 范例
 
@@ -2495,7 +2495,7 @@ y-coordinate of source point.
 
 ### 返回值
 
-成功后返回图象资源,失败后返回 **`FALSE`**。
+成功后返回图象资源,失败后返回 **`false`**。
 
 ### 范例
 
@@ -2554,7 +2554,7 @@ GD 文件的路径。
 
 ### 返回值
 
-成功后返回图象资源,失败后返回 **`FALSE`**。
+成功后返回图象资源,失败后返回 **`false`**。
 
 ### 范例
 
@@ -2610,7 +2610,7 @@ GIF 图像的路径。
 
 ### 返回值
 
-成功后返回图象资源,失败后返回 **`FALSE`**。
+成功后返回图象资源,失败后返回 **`false`**。
 
 ### 范例
 
@@ -2689,7 +2689,7 @@ JPEG 图像的路径。
 
 ### 返回值
 
-成功后返回图象资源,失败后返回 **`FALSE`**。
+成功后返回图象资源,失败后返回 **`false`**。
 
 ### 范例
 
@@ -2763,7 +2763,7 @@ PNG 图像的路径。
 
 ### 返回值
 
-成功后返回图象资源,失败后返回 **`FALSE`**。
+成功后返回图象资源,失败后返回 **`false`**。
 
 ### 范例
 
@@ -2830,7 +2830,7 @@ A string containing the image data.
 
 ### 返回值
 
-An image resource will be returned on success. **`FALSE`** is returned
+An image resource will be returned on success. **`false`** is returned
 if the image type is unsupported, the data is not in a recognised
 format, or the image is corrupt and cannot be loaded.
 
@@ -2898,7 +2898,7 @@ WBMP 图像的路径。
 
 ### 返回值
 
-成功后返回图象资源,失败后返回 **`FALSE`**。
+成功后返回图象资源,失败后返回 **`false`**。
 
 ### 范例
 
@@ -2968,7 +2968,7 @@ WebP 图像文件路径。
 
 ### 返回值
 
-成功后返回图象资源,失败后返回 **`FALSE`**。
+成功后返回图象资源,失败后返回 **`false`**。
 
 ### 范例
 
@@ -3015,7 +3015,7 @@ Path to the XBM image.
 
 ### 返回值
 
-成功后返回图象资源,失败后返回 **`FALSE`**。
+成功后返回图象资源,失败后返回 **`false`**。
 
 ### 范例
 
@@ -3066,7 +3066,7 @@ Path to the XPM image.
 
 ### 返回值
 
-成功后返回图象资源,失败后返回 **`FALSE`**。
+成功后返回图象资源,失败后返回 **`false`**。
 
 ### 范例
 
@@ -3130,7 +3130,7 @@ class="methodparam"><span class="type">int</span> `$width`</span> ,
 
 ### 返回值
 
-成功后返回图象资源,失败后返回 **`FALSE`**。
+成功后返回图象资源,失败后返回 **`false`**。
 
 ### 范例
 
@@ -3187,7 +3187,7 @@ The cropping rectangle as <span class="type">array</span> with keys *x*,
 
 ### 返回值
 
-Return cropped image resource on success 或者在失败时返回 **`FALSE`**.
+Return cropped image resource on success 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -3282,8 +3282,8 @@ Used only in **`IMG_CROP_THRESHOLD`** mode.
 ### 返回值
 
 Returns a cropped image resource on success 或者在失败时返回
-**`FALSE`**. If the complete image was cropped, <span
-class="function">imagecrop</span> returns **`FALSE`**.
+**`false`**. If the complete image was cropped, <span
+class="function">imagecrop</span> returns **`false`**.
 
 ### 更新日志
 
@@ -3297,7 +3297,7 @@ class="function">imagecrop</span> returns **`FALSE`**.
 **示例 \#1 Proper handling of auto-cropping**
 
 As noted in the return value section, <span
-class="function">imagecropauto</span> returns **`FALSE`** if the whole
+class="function">imagecropauto</span> returns **`false`** if the whole
 image was cropped. In this example we have an image resource *$im* which
 should be automatically cropped only if there is something to crop;
 otherwise we want to proceed with the original image.
@@ -3394,7 +3394,7 @@ class="function">imagecolorallocate</span> 创建。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3543,7 +3543,7 @@ drawn clockwise.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3632,7 +3632,7 @@ class="function">imagecolorallocate</span> 创建。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3812,7 +3812,7 @@ class="methodparam"><span class="type">int</span> `$arg3`</span> \]\]\]
 -   <span class="simpara"> `IMG_FILTER_SMOOTH`：使图像更柔滑。用 `arg1`
     设定柔滑级别。 </span>
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 **示例 \#1 <span class="function">imagefilter</span> 灰度例子**
 
@@ -3920,7 +3920,7 @@ class="function">imagecreatetruecolor</span>)返回的图象资源。
 -   <span class="simpara"> **`IMG_FILTER_COLORIZE`**: 绿色成分的值。
     </span>
 -   <span class="simpara"> **`IMG_FILTER_PIXELATE`**: Whether to use
-    advanced pixelation effect or not (defaults to **`FALSE`**). </span>
+    advanced pixelation effect or not (defaults to **`false`**). </span>
 
 `arg3`  
 -   <span class="simpara"> **`IMG_FILTER_COLORIZE`**: 蓝色成分的值。
@@ -3933,7 +3933,7 @@ class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -4123,7 +4123,7 @@ Flip mode, this can be one of the **`IMG_FLIP_*`** constants:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4506,7 +4506,7 @@ class="initializer"> = IMG\_GD2\_RAW</span></span> \]\]\] )
 class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 `filename`  
-文件保存的路径，如果未设置或为 **`NULL`**，将会直接输出原始图象流。
+文件保存的路径，如果未设置或为 **`null`**，将会直接输出原始图象流。
 
 `chunk_size`  
 Chunk size.
@@ -4517,7 +4517,7 @@ Chunk size.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4710,11 +4710,11 @@ GIF89a。
 class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 `filename`  
-文件保存的路径，如果未设置或为 **`NULL`**，将会直接输出原始图象流。
+文件保存的路径，如果未设置或为 **`null`**，将会直接输出原始图象流。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4869,7 +4869,7 @@ Grabs a screenshot of the whole screen.
 
 ### 返回值
 
-Returns an image resource identifier on success, **`FALSE`** on failure.
+Returns an image resource identifier on success, **`false`** on failure.
 
 ### 范例
 
@@ -4921,7 +4921,7 @@ Include the client area of the application window.
 
 ### 返回值
 
-Returns an image resource identifier on success, **`FALSE`** on failure.
+Returns an image resource identifier on success, **`false`** on failure.
 
 ### 错误／异常
 
@@ -5014,7 +5014,7 @@ class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 ### 返回值
 
-如果 `image` 是真彩色图像返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果 `image` 是真彩色图像返回 **`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -5072,7 +5072,7 @@ class="methodparam"><span class="type">int</span> `$quality`</span> \]\]
 class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 `filename`  
-文件保存的路径，如果未设置或为 **`NULL`**，将会直接输出原始图象流。
+文件保存的路径，如果未设置或为 **`null`**，将会直接输出原始图象流。
 
 如果要省略这个参数而提供 `quality` 参数，使用NULL。
 
@@ -5082,7 +5082,7 @@ class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5188,11 +5188,11 @@ One of the following constants:
 
 **`IMG_EFFECT_REPLACE`**  
 <span class="simpara"> Use pixel replacement (equivalent of passing
-**`TRUE`** to <span class="function">imagealphablending</span>) </span>
+**`true`** to <span class="function">imagealphablending</span>) </span>
 
 **`IMG_EFFECT_ALPHABLEND`**  
 <span class="simpara"> Use normal pixel blending (equivalent of passing
-**`FALSE`** to <span class="function">imagealphablending</span>) </span>
+**`false`** to <span class="function">imagealphablending</span>) </span>
 
 **`IMG_EFFECT_NORMAL`**  
 <span class="simpara"> Same as **`IMG_EFFECT_ALPHABLEND`**. </span>
@@ -5205,7 +5205,7 @@ grey background pixels will take the colour of the foreground pixel.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5309,7 +5309,7 @@ class="methodparam"><span class="type">string</span> `$file`</span> )
 
 <span class="function">imageloadfont</span>
 加载一个用户定义的位图字体并返回该字体的标识符（其值总是大于
-5，因此不会和内置字体冲突）。 在产生错误的情况下，该函数返回 **`FALSE`**
+5，因此不会和内置字体冲突）。 在产生错误的情况下，该函数返回 **`false`**
 。
 
 字体文件格式目前是二进制的且和平台有关。这意味着应该用和你运行 PHP
@@ -5385,7 +5385,7 @@ Total number of points (vertices), which must be at least 3.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5463,8 +5463,8 @@ class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 ### 返回值
 
-Returns **`TRUE`** if the convertion was complete, or if the source
-image already is a true color image, otherwise **`FALSE`** is returned.
+Returns **`true`** if the convertion was complete, or if the source
+image already is a true color image, otherwise **`false`** is returned.
 
 ### 范例
 
@@ -5671,8 +5671,8 @@ The vertical resolution in DPI.
 
 When used as getter (first signature), it returns an indexed array of
 the horizontal and vertical resolution on success, 或者在失败时返回
-**`FALSE`**. When used as setter (second signature), it returns
-**`TRUE`** on success, 或者在失败时返回 **`FALSE`**.
+**`false`**. When used as setter (second signature), it returns
+**`true`** on success, 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -5740,7 +5740,7 @@ Specifies the color of the uncovered zone after the rotation
 
 ### 返回值
 
-返回旋转后的图像资源， 或者在失败时返回 **`FALSE`**。
+返回旋转后的图像资源， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -5810,11 +5810,11 @@ false)*）。
 class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 `saveflag`  
-是否保存透明（alpha）通道。 默认 **`FALSE`**。
+是否保存透明（alpha）通道。 默认 **`false`**。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5895,7 +5895,7 @@ two pass).
 ### 返回值
 
 Return the scaled image resource on success 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 参见
 
@@ -5970,7 +5970,7 @@ The y-coordinate of the lower right corner.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -6041,7 +6041,7 @@ The interpolation method, which can be one of the following:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6126,7 +6126,7 @@ class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6185,7 +6185,7 @@ class="methodparam"><span class="type">resource</span> `$image`</span> ,
 
 <span class="function">imagesetthickness</span>
 把画矩形，多边形，椭圆等等时所用的线宽设为 `thickness`
-个像素。成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+个像素。成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参数
 
@@ -6198,7 +6198,7 @@ Thickness, in pixels.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6414,7 +6414,7 @@ alpha
 class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 `dither`  
-指明图像是否被抖动（dithered），如果为 **`TRUE`**
+指明图像是否被抖动（dithered），如果为 **`true`**
 则图像将被抖动使图像中的斑点更多但是颜色更接近。
 
 `ncolors`  
@@ -6422,7 +6422,7 @@ class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6715,7 +6715,7 @@ imagewebp
 ( <span class="methodparam"><span class="type">resource</span>
 `$image`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$to`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$quality`<span class="initializer"> =
 80</span></span> \]\] )
 
@@ -6728,7 +6728,7 @@ class="type">int</span> `$quality`<span class="initializer"> =
 class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 `to`  
-文件保存的路径，如果未设置或为 **`NULL`**，将会直接输出原始图象流。
+文件保存的路径，如果未设置或为 **`null`**，将会直接输出原始图象流。
 
 `quality`  
 `quality` 范围从0（最低质量，最小文件体积）到100 （最好质量,
@@ -6736,7 +6736,7 @@ class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -6787,7 +6787,7 @@ class="methodparam"><span class="type">int</span> `$foreground`</span>
 class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 `filename`  
-文件保存的路径，如果未设置或为 **`NULL`**，将会直接输出原始图象流。
+文件保存的路径，如果未设置或为 **`null`**，将会直接输出原始图象流。
 
 `foreground`  
 你可以从 <span class="function">imagecolorallocate</span>
@@ -6795,7 +6795,7 @@ class="function">imagecreatetruecolor</span>)返回的图象资源。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6869,7 +6869,7 @@ as a string.
 ### 返回值
 
 If success and spool flag is lower than 2 then the JPEG will not be
-returned as a string, **`FALSE`** on errors.
+returned as a string, **`false`** on errors.
 
 ### 范例
 
@@ -6967,7 +6967,7 @@ class="type">string</span> `$iptcblock`</span> )
 ### 返回值
 
 返回一个数组，用 tagmarker 作为索引，以其值为值。如果出错或未发现 IPTC
-数据则返回 **`FALSE`**。
+数据则返回 **`false`**。
 
 ### 范例
 
@@ -7028,7 +7028,7 @@ JPEG 文件的路径。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7091,7 +7091,7 @@ PNG 文件的路径。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

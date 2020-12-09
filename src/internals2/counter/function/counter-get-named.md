@@ -10,7 +10,7 @@ class="methodname">Counter::getNamed</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 <span class="function">counter\_get\_named</span>
-返回一个存在的计数器名称名称不存在则返回**`NULL`**。
+返回一个存在的计数器名称名称不存在则返回**`null`**。
 
 ### 参数
 
@@ -20,4 +20,4 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 ### 返回值
 
 <span class="function">counter\_get\_name</span>
-返回一个存在的计数器名称，名称不存在则返回**`NULL`**。
+返回一个存在的计数器名称，名称不存在则返回**`null`**。

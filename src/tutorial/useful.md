@@ -67,10 +67,10 @@ if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE) {
 `$_SERVER['HTTP_USER_AGENT']`（即所谓的 haystack）变量中寻找
 *'MSIE'*。如果在这个 haystack 中该字符串（即所谓的
 needle）被找到（“草里寻针”），则函数返回 needle 在 haystack
-中相对于开头的位置；如果没有，则返回 **`FALSE`**。如果该函数没有返回
-**`FALSE`**，则
+中相对于开头的位置；如果没有，则返回 **`false`**。如果该函数没有返回
+**`false`**，则
 <a href="/control-structures/if.html" class="link">if</a> 会将条件判断为
-**`TRUE`** 并运行其花括号 {}
+**`true`** 并运行其花括号 {}
 内的代码；否则，则不运行这些代码。可以自己尝试利用
 <a href="/control-structures/if.html" class="link">if</a>，<a href="/control-structures/else.html" class="link">else</a>
 以及其它的函数如 <span class="function">strtoupper</span> 和 <span
@@ -105,6 +105,6 @@ if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE) {
 和以上我们用一个 PHP 的 echo 语句来输出不同的是，我们跳出了 PHP
 模式来直接写 HTML
 代码。这里很值得注意的一点是，对于这两种情况而言，脚本的逻辑效率是相同的。在判断了
-<span class="function">strpos</span> 函数的返回值是 **`TRUE`** 或是
-**`FALSE`**，也就是判断了字符串 *'MSIE'* 是否被找到之后，最终只有一个
+<span class="function">strpos</span> 函数的返回值是 **`true`** 或是
+**`false`**，也就是判断了字符串 *'MSIE'* 是否被找到之后，最终只有一个
 HTML 块被发送给浏览者。

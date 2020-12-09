@@ -32,7 +32,7 @@
 <span class="simpara"> 传递给 <span class="function">json\_encode</span>
 函数的对象或数组包含了递归引用，导致无法被编码。如果打开了
 **`JSON_PARTIAL_OUTPUT_ON_ERROR`** 选项，则牵涉到递归引用的数据会转换成
-**`NULL`** 后返回。自 PHP 5.5.0 起生效。 </span>
+**`null`** 后返回。自 PHP 5.5.0 起生效。 </span>
 
 **`JSON_ERROR_INF_OR_NAN`** (<span class="type">int</span>)  
 <span class="simpara"> 传递给 <span class="function">json\_encode</span>
@@ -49,7 +49,7 @@
 class="function">json\_encode</span> 函数，比如
 <a href="/language/types/resource.html" class="link">资源(resource)</a>。如果打开了
 **`JSON_PARTIAL_OUTPUT_ON_ERROR`**
-选项，则对于不支持的数据类型，会转换成 **`NULL`** 后返回。自 PHP 5.5.0
+选项，则对于不支持的数据类型，会转换成 **`null`** 后返回。自 PHP 5.5.0
 起生效。 </span>
 
 **`JSON_ERROR_INVALID_PROPERTY_NAME`** (<span class="type">int</span>)  
@@ -74,7 +74,7 @@ class="function">json\_encode</span>. Available since PHP 7.0.0. </span>
 <span class="simpara"> Decodes JSON objects as PHP array. This option
 can be added automatically by calling <span
 class="function">json\_decode</span> with the second parameter equal to
-**`TRUE`**. Available since PHP 5.4.0. </span>
+**`true`**. Available since PHP 5.4.0. </span>
 
 下面的常量可以和 <span class="function">json\_encode</span> 的 form
 选项结合使用。

@@ -122,7 +122,7 @@ The type of method to create, can be **`CLASSKIT_ACC_PUBLIC`**,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -203,7 +203,7 @@ omitted, the value of `dMethod` is assumed.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -291,7 +291,7 @@ The redefined method can be **`CLASSKIT_ACC_PUBLIC`**,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -369,7 +369,7 @@ The name of the method to remove
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -445,7 +445,7 @@ The new name to give to the renamed method
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

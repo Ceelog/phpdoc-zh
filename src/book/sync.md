@@ -92,7 +92,7 @@ class="type">int</span> `$wait`<span class="initializer"> =
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">unlock</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$all`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 }
 
@@ -227,7 +227,7 @@ Unlocks the mutex
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">SyncMutex::unlock</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$all`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Decreases the internal counter of a SyncMutex object. When the internal
 counter reaches zero, the actual lock on the object is released.
@@ -289,7 +289,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$initialval`<span class="initializer"> = 1</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$autounlock`<span
-class="initializer"> = **`TRUE`**</span></span> \]\]\] )
+class="initializer"> = **`true`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">lock</span> (\[ <span class="methodparam"><span
@@ -316,7 +316,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$initialval`<span class="initializer"> = 1</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$autounlock`<span
-class="initializer"> = **`TRUE`**</span></span> \]\]\] )
+class="initializer"> = **`true`**</span></span> \]\]\] )
 
 Constructs a named or unnamed semaphore.
 
@@ -501,9 +501,9 @@ needs to be processed).
 class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$manual`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$prefire`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">fire</span> ( <span
@@ -531,9 +531,9 @@ Constructs a new SyncEvent object
 class="methodname">SyncEvent::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$manual`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$prefire`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\] )
 
 Constructs a named or unnamed event object.
 
@@ -756,7 +756,7 @@ occasionally necessary.
 class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$autounlock`<span class="initializer"> = **`TRUE`**</span></span> \]\]
+`$autounlock`<span class="initializer"> = **`true`**</span></span> \]\]
 )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -790,7 +790,7 @@ Constructs a new SyncReaderWriter object
 class="methodname">SyncReaderWriter::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$autounlock`<span class="initializer"> = **`TRUE`**</span></span> \]\]
+`$autounlock`<span class="initializer"> = **`true`**</span></span> \]\]
 )
 
 Constructs a named or unnamed reader-writer object.

@@ -27,16 +27,16 @@ class="function">svn\_commit</span> 时把工作副本添加到项目中。
 > dirname(\_\_FILE\_\_)。</span>
 
 `recursive`  
-如果添加项为目录是否递归目录下所有文件。 默认为 **`TRUE`**
+如果添加项为目录是否递归目录下所有文件。 默认为 **`true`**
 
 `force`  
 If true, Subversion will recurse into already versioned directories in
 order to add unversioned files that may be hiding in those directories.
-Default is **`FALSE`**
+Default is **`false`**
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -94,7 +94,7 @@ defined by this extension to specify a key.
 
 ### 返回值
 
-Returns the string value of the parameter at `key`; returns **`NULL`**
+Returns the string value of the parameter at `key`; returns **`null`**
 if parameter does not exist.
 
 ### 注释
@@ -258,7 +258,7 @@ revision.
 ### 返回值
 
 Returns the string contents of the item from the repository on success,
-and **`FALSE`** on failure.
+and **`false`** on failure.
 
 ### 注释
 
@@ -326,7 +326,7 @@ Any combination of **`SVN_NON_RECURSIVE`** and
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -388,7 +388,7 @@ String path to local working directory to cleanup
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -472,7 +472,7 @@ class="methodparam"><span class="type">array</span> `$targets`</span>
 
 提交本地文件副本的改变使用参数 `targets` ，使用 `log`
 参数作为提交日志，`targets` 参数默认使用递归，`recursive` 参数设置为
-**`FALSE`** 将不使用递归。
+**`false`** 将不使用递归。
 
 > **Note**: <span class="simpara">
 > 此方法没有指定任何认证参数，用户名和密码必须使用 <span
@@ -495,7 +495,7 @@ class="methodparam"><span class="type">array</span> `$targets`</span>
 > dirname(\_\_FILE\_\_)。</span>
 
 `recursive`  
-布尔类型，是否禁用 `targets` 递归。默认值为 **`TRUE`**
+布尔类型，是否禁用 `targets` 递归。默认值为 **`true`**
 
 ### 返回值
 
@@ -509,7 +509,7 @@ array(
 )
 ```
 
-失败返回 **`FALSE`**
+失败返回 **`false`**
 
 ### 注释
 
@@ -557,7 +557,7 @@ Delete items from a working copy or repository
 class="methodname">svn\_delete</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$force`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Deletes the file, directory or symbolic link at `path` from the working
 directory. The item will be deleted from the repository the next time
@@ -574,13 +574,13 @@ Path of item to delete.
 > dirname(\_\_FILE\_\_)。</span>
 
 `force`  
-If **`TRUE`**, the file will be deleted even if it has local
+If **`true`**, the file will be deleted even if it has local
 modifications. Otherwise, local modifications will result in a failure.
-Default is **`FALSE`**
+Default is **`false`**
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -644,8 +644,8 @@ Second path's revision number. See `rev1` for description.
 
 Returns an array-list consisting of two streams: the first is the diff
 output and the second contains error stream output. The streams can be
-read using <span class="function">fread</span>. Returns **`FALSE`** or
-**`NULL`** on error.
+read using <span class="function">fread</span>. Returns **`false`** or
+**`null`** on error.
 
 The diff output will, by default, be in the form of Subversion's custom
 unified diff format, but an
@@ -737,7 +737,7 @@ class="methodname">svn\_export</span> ( <span class="methodparam"><span
 class="type">string</span> `$frompath`</span> , <span
 class="methodparam"><span class="type">string</span> `$topath`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$working_copy`<span class="initializer"> = **`TRUE`**</span></span> \[,
+`$working_copy`<span class="initializer"> = **`true`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$revision_no`<span class="initializer"> = -1</span></span> \]\] )
 
@@ -753,11 +753,11 @@ The path to the current repository.
 The path to the new repository.
 
 `working_copy`  
-If **`TRUE`**, it will export uncommitted files from the working copy.
+If **`true`**, it will export uncommitted files from the working copy.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1373,7 +1373,7 @@ class="methodparam"><span class="type">string</span> `$url`</span> ,
 `$nonrecursive`</span> )
 
 Commits unversioned `path` into repository at `url`. If `path` is a
-directory and `nonrecursive` is **`FALSE`**, the directory will be
+directory and `nonrecursive` is **`false`**, the directory will be
 imported recursively.
 
 ### 参数
@@ -1394,7 +1394,7 @@ Whether or not to refrain from recursively processing directories.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -1566,9 +1566,9 @@ revision number
 class="type">int</span> `$revision_no`<span class="initializer"> =
 SVN\_REVISION\_HEAD</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$recurse`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$peg`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\] )
+**`false`**</span></span> \]\]\] )
 
 This function queries the repository URL and returns a list of files and
 directories, optionally from a specific revision. This is equivalent to
@@ -1682,7 +1682,7 @@ The path to the working copy or repository.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1878,7 +1878,7 @@ Revert changes to the working copy
 class="methodname">svn\_revert</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$recursive`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Revert any local changes to the path in a working copy.
 
@@ -1892,7 +1892,7 @@ Optionally make recursive changes.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1961,7 +1961,7 @@ local filesystem. </span>
 
 `repos_text_status`  
 <span class="simpara"> Status of item's text in repository. Only
-accurate if `update` was set to **`TRUE`**. 参见
+accurate if `update` was set to **`true`**. 参见
 <a href="/svn/constants.html#Working%20copy%20status%20constants" class="link">状态常量列表</a>
 获得可能的值. </span>
 
@@ -1972,21 +1972,21 @@ accurate if `update` was set to **`TRUE`**. 参见
 
 `repos_prop_status`  
 <span class="simpara"> Status of item's property in repository. Only
-accurate if `update` was set to **`TRUE`**. 参见
+accurate if `update` was set to **`true`**. 参见
 <a href="/svn/constants.html#Working%20copy%20status%20constants" class="link">状态常量列表</a>
 获得可能的值. </span>
 
 `locked`  
 <span class="simpara"> Whether or not the item is locked. (Only set if
-**`TRUE`**.) </span>
+**`true`**.) </span>
 
 `copied`  
 <span class="simpara"> Whether or not the item was copied (scheduled for
-addition with history). (Only set if **`TRUE`**.) </span>
+addition with history). (Only set if **`true`**.) </span>
 
 `switched`  
 <span class="simpara"> Whether or not the item was switched using the
-switch command. (Only set if **`TRUE`**) </span>
+switch command. (Only set if **`true`**) </span>
 
 These keys are only set if the item is versioned:
 
@@ -2025,16 +2025,16 @@ if (!defined('svn_wc_schedule_normal')) {
 
 `deleted`  
 <span class="simpara"> Whether or not the item was deleted, but parent
-revision lags behind. (Only set if **`TRUE`**.) </span>
+revision lags behind. (Only set if **`true`**.) </span>
 
 `absent`  
 <span class="simpara"> Whether or not the item is absent, that is,
 Subversion knows that there should be something there but there isn't.
-(Only set if **`TRUE`**.) </span>
+(Only set if **`true`**.) </span>
 
 `incomplete`  
 <span class="simpara"> Whether or not the entries file for a directory
-is incomplete. (Only set if **`TRUE`**.) </span>
+is incomplete. (Only set if **`true`**.) </span>
 
 `cmt_date`  
 <span class="simpara"> Integer Unix timestamp of last commit date.
@@ -2117,7 +2117,7 @@ class="type">string</span> `$path`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$revno`<span
 class="initializer"> = SVN\_REVISION\_HEAD</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$recurse`<span
-class="initializer"> = **`TRUE`**</span></span> \]\] )
+class="initializer"> = **`true`**</span></span> \]\] )
 
 Update working copy at `path` to revision `revno`. If `recurse` is true,
 directories will be recursively updated.
@@ -2140,7 +2140,7 @@ Whether or not to recursively update directories.
 
 ### 返回值
 
-Returns new revision number on success, returns **`FALSE`** on failure.
+Returns new revision number on success, returns **`false`** on failure.
 
 ### 注释
 

@@ -12,7 +12,7 @@ class="methodparam"><span class="type">string</span> `$daemon`</span> ,
 `$address`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$user`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$nodns`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 This function consults the `/etc/hosts.allow` and `/etc/hosts.deny`
 files to check if access to service `daemon` should be granted or denied
@@ -31,12 +31,12 @@ An optional user name.
 
 `nodns`  
 If `address` looks like domain name then DNS is used to resolve it to IP
-address; set `nodns` to **`TRUE`** to avoid this.
+address; set `nodns` to **`true`** to avoid this.
 
 ### 返回值
 
-This function returns **`TRUE`** if access should be granted,
-**`FALSE`** otherwise.
+This function returns **`true`** if access should be granted,
+**`false`** otherwise.
 
 ### 范例
 

@@ -1029,7 +1029,7 @@ used if an invalid $sort\_flag value has been specified.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1119,11 +1119,11 @@ Return comparison result:
 
 -   -1 if `str1` is *less* than `str2` .
 
-On error <span class="type">bool</span> **`FALSE`** is returned.
+On error <span class="type">bool</span> **`false`** is returned.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -1262,7 +1262,7 @@ rules will be used.
 ### 返回值
 
 Return new instance of <span class="classname">Collator</span> object,
-or **`NULL`** on error.
+or **`null`** on error.
 
 ### 范例
 
@@ -1318,7 +1318,7 @@ Attribute to get value for.
 
 ### 返回值
 
-Attribute value, or <span class="type">bool</span> **`FALSE`** on error.
+Attribute value, or <span class="type">bool</span> **`false`** on error.
 
 ### 范例
 
@@ -1480,7 +1480,7 @@ respectively).
 
 Real locale name from which the collation data comes. If the collator
 was instantiated from rules or an error occurred, returns <span
-class="type">bool</span> **`FALSE`**.
+class="type">bool</span> **`false`**.
 
 ### 范例
 
@@ -1548,11 +1548,11 @@ The string to produce the key from.
 
 ### 返回值
 
-Returns the collation key for the string, 或者在失败时返回 **`FALSE`**.
+Returns the collation key for the string, 或者在失败时返回 **`false`**.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -1619,7 +1619,7 @@ class="methodparam"><span class="type">Collator</span> `$coll`</span> )
 ### 返回值
 
 Returns current collation strength, or <span class="type">bool</span>
-**`FALSE`** on error.
+**`false`** on error.
 
 ### 范例
 
@@ -1678,7 +1678,7 @@ Attribute value.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1820,7 +1820,7 @@ Possible values are:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1899,7 +1899,7 @@ Array of strings to sort
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1984,7 +1984,7 @@ an invalid `sort_flag` value has been specified.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2501,7 +2501,7 @@ Pattern string if the chosen style requires a pattern.
 ### 返回值
 
 Returns <span class="classname">NumberFormatter</span> object or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### 范例
 
@@ -2584,7 +2584,7 @@ The 3-letter ISO 4217 currency code indicating the currency to use.
 ### 返回值
 
 String representing the formatted currency value, 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -2676,7 +2676,7 @@ to use.
 
 ### 返回值
 
-Returns the string containing formatted value, or **`FALSE`** on error.
+Returns the string containing formatted value, or **`false`** on error.
 
 ### 范例
 
@@ -2754,7 +2754,7 @@ constants.
 
 ### 返回值
 
-Return attribute value on success, or **`FALSE`** on error.
+Return attribute value on success, or **`false`** on error.
 
 ### 范例
 
@@ -3027,7 +3027,7 @@ Extract pattern used by the formatter.
 ### 返回值
 
 Pattern <span class="type">string</span> that is used by the formatter,
-or **`FALSE`** if an error happens.
+or **`false`** if an error happens.
 
 ### 范例
 
@@ -3111,7 +3111,7 @@ constants.
 
 ### 返回值
 
-The symbol string or **`FALSE`** on error.
+The symbol string or **`false`** on error.
 
 ### 范例
 
@@ -3196,7 +3196,7 @@ constants.
 
 ### 返回值
 
-Return attribute value on success, or **`FALSE`** on error.
+Return attribute value on success, or **`false`** on error.
 
 ### 范例
 
@@ -3287,7 +3287,7 @@ will hold the offset at which parsing ended.
 
 ### 返回值
 
-The parsed numeric value or **`FALSE`** on error.
+The parsed numeric value or **`false`** on error.
 
 ### 范例
 
@@ -3370,7 +3370,7 @@ will hold the offset at which parsing ended.
 
 ### 返回值
 
-The value of the parsed number or **`FALSE`** on error.
+The value of the parsed number or **`false`** on error.
 
 ### 范例
 
@@ -3452,7 +3452,7 @@ The attribute value.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3534,7 +3534,7 @@ Pattern in syntax described in
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3623,7 +3623,7 @@ Text for the symbol.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3714,7 +3714,7 @@ Text for the attribute value.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3820,7 +3820,7 @@ class="methodparam"><span class="type">string</span> `$langtag`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$locale`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$canonicalize`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">array</span> <span
@@ -3893,7 +3893,7 @@ class="methodname">lookup</span> ( <span class="methodparam"><span
 class="type">array</span> `$langtag`</span> , <span
 class="methodparam"><span class="type">string</span> `$locale`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$canonicalize`<span class="initializer"> = **`FALSE`**</span></span>
+`$canonicalize`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$default`</span> \]\] )
 
@@ -4170,7 +4170,7 @@ class="methodparam"><span class="type">string</span> `$langtag`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$locale`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$canonicalize`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 过程化风格
 
@@ -4180,7 +4180,7 @@ class="methodparam"><span class="type">string</span> `$langtag`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$locale`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$canonicalize`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Checks if a $langtag filter matches with $locale according to RFC 4647's
 basic filtering algorithm
@@ -4199,7 +4199,7 @@ matching.
 
 ### 返回值
 
-**`TRUE`** if $locale matches $langtag **`FALSE`** otherwise.
+**`true`** if $locale matches $langtag **`false`** otherwise.
 
 ### 范例
 
@@ -4265,7 +4265,7 @@ The locale to extract the variants from
 ### 返回值
 
 The <span class="type">array</span> containing the list of all variants
-subtag for the locale or **`NULL`** if not present
+subtag for the locale or **`null`** if not present
 
 ### 范例
 
@@ -4398,7 +4398,7 @@ class="methodparam"><span class="type">string</span> `$locale`</span>
 `$in_locale`</span> \] )
 
 Returns an appropriately localized display name for language of the
-input locale. If is **`NULL`** then the default locale is used.
+input locale. If is **`null`** then the default locale is used.
 
 ### 参数
 
@@ -4481,7 +4481,7 @@ class="methodparam"><span class="type">string</span> `$locale`</span>
 `$in_locale`</span> \] )
 
 Returns an appropriately localized display name for the input locale. If
-$locale is **`NULL`** then the default locale is used.
+$locale is **`null`** then the default locale is used.
 
 ### 参数
 
@@ -4565,7 +4565,7 @@ class="methodparam"><span class="type">string</span> `$locale`</span>
 `$in_locale`</span> \] )
 
 Returns an appropriately localized display name for region of the input
-locale. If is **`NULL`** then the default locale is used.
+locale. If is **`null`** then the default locale is used.
 
 ### 参数
 
@@ -4649,7 +4649,7 @@ class="methodparam"><span class="type">string</span> `$locale`</span>
 `$in_locale`</span> \] )
 
 Returns an appropriately localized display name for script of the input
-locale. If is **`NULL`** then the default locale is used.
+locale. If is **`null`** then the default locale is used.
 
 ### 参数
 
@@ -4733,7 +4733,7 @@ class="methodparam"><span class="type">string</span> `$locale`</span>
 `$in_locale`</span> \] )
 
 Returns an appropriately localized display name for variants of the
-input locale. If is **`NULL`** then the default locale is used.
+input locale. If is **`null`** then the default locale is used.
 
 ### 参数
 
@@ -4893,7 +4893,7 @@ The locale to extract the primary language code from
 
 ### 返回值
 
-The language code associated with the language or **`NULL`** in case of
+The language code associated with the language or **`null`** in case of
 error.
 
 ### 范例
@@ -4957,7 +4957,7 @@ The locale to extract the region code from
 
 ### 返回值
 
-The region subtag for the locale or **`NULL`** if not present
+The region subtag for the locale or **`null`** if not present
 
 ### 范例
 
@@ -5019,7 +5019,7 @@ The locale to extract the script code from
 
 ### 返回值
 
-The script subtag for the locale or **`NULL`** if not present
+The script subtag for the locale or **`null`** if not present
 
 ### 范例
 
@@ -5068,7 +5068,7 @@ class="methodparam"><span class="type">array</span> `$langtag`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$locale`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$canonicalize`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$default`</span> \]\] )
 
 过程化风格
@@ -5079,7 +5079,7 @@ class="methodparam"><span class="type">array</span> `$langtag`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$locale`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$canonicalize`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$default`</span> \]\] )
 
 Searches the items in `langtag` for the best match to the language range
@@ -5184,7 +5184,7 @@ subtags e.g. in the locale id if variants are '-varX-varY-varZ' then the
 returned array will have variant0=\>varX , variant1=\>varY ,
 variant2=\>varZ
 
-Returns **`NULL`** when the length of `locale` exceeds
+Returns **`null`** when the length of `locale` exceeds
 **`INTL_MAX_LOCALE_LEN`**.
 
 ### 范例
@@ -5257,7 +5257,7 @@ Is a BCP 47 compliant language tag.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5413,7 +5413,7 @@ The input string, which should be a single, UTF-8 encoded, code point.
 Returns a <span class="type">string</span> containing the
 Decomposition\_Mapping property, if present in the UCD.
 
-Returns **`NULL`** if there is no Decomposition\_Mapping property for
+Returns **`null`** if there is no Decomposition\_Mapping property for
 the character.
 
 ### 范例
@@ -5524,7 +5524,7 @@ One of the normalization forms.
 
 ### 返回值
 
-**`TRUE`** if normalized, **`FALSE`** otherwise or if there an error
+**`true`** if normalized, **`false`** otherwise or if there an error
 
 ### 范例
 
@@ -5608,7 +5608,7 @@ One of the normalization forms.
 
 ### 返回值
 
-The normalized string or **`FALSE`** if an error occurred.
+The normalized string or **`false`** if an error occurred.
 
 ### 范例
 
@@ -5908,7 +5908,7 @@ The <span class="type">array</span> of values to insert into the format
 
 ### 返回值
 
-The formatted pattern string or **`FALSE`** if an error occurred
+The formatted pattern string or **`false`** if an error occurred
 
 ### 范例
 
@@ -5980,7 +5980,7 @@ Arguments to insert into the format string
 
 ### 返回值
 
-The formatted string, or **`FALSE`** if an error occurred
+The formatted string, or **`false`** if an error occurred
 
 ### 范例
 
@@ -6317,7 +6317,7 @@ The <span class="type">string</span> to parse, conforming to the
 ### 返回值
 
 An <span class="type">array</span> containing items extracted, or
-**`FALSE`** on error
+**`false`** on error
 
 ### 范例
 
@@ -6407,7 +6407,7 @@ The <span class="type">string</span> to parse
 ### 返回值
 
 An <span class="type">array</span> containing the items extracted, or
-**`FALSE`** on error
+**`false`** on error
 
 ### 范例
 
@@ -6498,7 +6498,7 @@ before being interpreted.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7462,7 +7462,7 @@ type. For instance, hours for **`IntlCalendar::FIELD_HOUR_OF_DAY`**.
 
 ### 返回值
 
-Returns **`TRUE`** on success 或者在失败时返回 **`FALSE`**.
+Returns **`true`** on success 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -7524,9 +7524,9 @@ time.
 
 ### 返回值
 
-Returns **`TRUE`** if this objectʼs current time is after that of the
-`calendar` argumentʼs time. Returns **`FALSE`** otherwise. Also returns
-**`FALSE`** on failure. You can use
+Returns **`true`** if this objectʼs current time is after that of the
+`calendar` argumentʼs time. Returns **`false`** otherwise. Also returns
+**`false`** on failure. You can use
 <a href="/intl/setup.html#" class="link">exceptions</a> or <span
 class="function">intl\_get\_error\_code</span> to detect error
 conditions.
@@ -7584,9 +7584,9 @@ time.
 
 ### 返回值
 
-Returns **`TRUE`** if this objectʼs current time is before that of the
-`calendar` argumentʼs time. Returns **`FALSE`** otherwise. Also returns
-**`FALSE`** on failure. You can use
+Returns **`true`** if this objectʼs current time is before that of the
+`calendar` argumentʼs time. Returns **`false`** otherwise. Also returns
+**`false`** on failure. You can use
 <a href="/intl/setup.html#" class="link">exceptions</a> or <span
 class="function">intl\_get\_error\_code</span> to detect error
 conditions.
@@ -7633,7 +7633,7 @@ These are integer values between *0* and
 
 ### 返回值
 
-Returns **`TRUE`** on success 或者在失败时返回 **`FALSE`**. Failure can
+Returns **`true`** on success 或者在失败时返回 **`false`**. Failure can
 only occur is invalid arguments are provided.
 
 ### 范例
@@ -7841,7 +7841,7 @@ class="function">IntlGregorianCalendar::\_\_construct</span>.
 `timeZone`  
 The timezone to use.
 
--   **`NULL`**, in which case the default timezone will be used, as
+-   **`null`**, in which case the default timezone will be used, as
     specified in the ini setting
     <a href="/datetime/setup.html#" class="link">date.timezone</a> or
     through the function <span
@@ -7861,13 +7861,13 @@ The timezone to use.
     Raw offsets such as *"GMT+08:30"* are also accepted.
 
 `locale`  
-A locale to use or **`NULL`** to use
+A locale to use or **`null`** to use
 <a href="/intl/setup.html#" class="link">the default locale</a>.
 
 ### 返回值
 
 The created <span class="classname">IntlCalendar</span> instance or
-**`NULL`** on failure.
+**`null`** on failure.
 
 ### 范例
 
@@ -7950,9 +7950,9 @@ The calendar to compare with the primary object.
 
 ### 返回值
 
-Returns **`TRUE`** if the current time of both this and the passed in
+Returns **`true`** if the current time of both this and the passed in
 <span class="classname">IntlCalendar</span> object are the same, or
-**`FALSE`** otherwise. The value **`FALSE`** can also be returned on
+**`false`** otherwise. The value **`false`** can also be returned on
 failure. This can only happen if bad arguments are passed in. In any
 case, the two cases can be distinguished by calling <span
 class="function">intl\_get\_error\_code</span>.
@@ -8048,7 +8048,7 @@ These are integer values between *0* and
 ### 返回值
 
 Returns a (signed) difference of time in the unit associated with the
-specified field 或者在失败时返回 **`FALSE`**.
+specified field 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -8127,7 +8127,7 @@ class="function">DateTime::\_\_construct</span>.
 ### 返回值
 
 The created <span class="classname">IntlCalendar</span> object or
-**`NULL`** in case of failure. If a <span class="type">string</span> is
+**`null`** in case of failure. If a <span class="type">string</span> is
 passed, any exception that occurs inside the <span
 class="classname">DateTime</span> constructor is propagated.
 
@@ -8312,7 +8312,7 @@ These are integer values between *0* and
 ### 返回值
 
 An <span class="type">int</span> representing the maximum value in the
-units associated with the given `field` 或者在失败时返回 **`FALSE`**.
+units associated with the given `field` 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -8390,7 +8390,7 @@ These are integer values between *0* and
 ### 返回值
 
 An <span class="type">int</span> representing the minimum value in the
-fieldʼs unit 或者在失败时返回 **`FALSE`**.
+fieldʼs unit 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -8518,7 +8518,7 @@ One of the constants **`IntlCalendar::DOW_SUNDAY`**,
 Returns one of the constants **`IntlCalendar::DOW_TYPE_WEEKDAY`**,
 **`IntlCalendar::DOW_TYPE_WEEKEND`**,
 **`IntlCalendar::DOW_TYPE_WEEKEND_OFFSET`** or
-**`IntlCalendar::DOW_TYPE_WEEKEND_CEASE`** 或者在失败时返回 **`FALSE`**.
+**`IntlCalendar::DOW_TYPE_WEEKEND_CEASE`** 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -8745,7 +8745,7 @@ The IntlCalendar resource.
 
 One of the constants **`IntlCalendar::DOW_SUNDAY`**,
 **`IntlCalendar::DOW_MONDAY`**, …, **`IntlCalendar::DOW_SATURDAY`**
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -8822,7 +8822,7 @@ These are integer values between *0* and
 ### 返回值
 
 An <span class="type">int</span> representing a field value, in the
-fieldʼs unit, 或者在失败时返回 **`FALSE`**.
+fieldʼs unit, 或者在失败时返回 **`false`**.
 
 IntlCalendar::getKeywordValuesForLocale
 =======================================
@@ -8873,7 +8873,7 @@ Whether to show only the values commonly used for the specified locale.
 ### 返回值
 
 An iterator that yields strings with the locale keyword values
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -8961,7 +8961,7 @@ These are integer values between *0* and
 ### 返回值
 
 An <span class="type">int</span> representing a field value in the
-fieldʼs unit 或者在失败时返回 **`FALSE`**.
+fieldʼs unit 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -9032,7 +9032,7 @@ locale, valid locale, requested locale.
 
 ### 返回值
 
-A locale string 或者在失败时返回 **`FALSE`**.
+A locale string 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -9095,7 +9095,7 @@ These are integer values between *0* and
 ### 返回值
 
 An <span class="type">int</span> representing a field value in the
-fieldʼs unit 或者在失败时返回 **`FALSE`**.
+fieldʼs unit 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -9142,7 +9142,7 @@ The IntlCalendar resource.
 ### 返回值
 
 An <span class="type">int</span> representing a number of days
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -9226,7 +9226,7 @@ These are integer values between *0* and
 ### 返回值
 
 An <span class="type">int</span> representing a value for the given
-field in the fieldʼs unit 或者在失败时返回 **`FALSE`**.
+field in the fieldʼs unit 或者在失败时返回 **`false`**.
 
 IntlCalendar::getNow
 ====================
@@ -9707,7 +9707,7 @@ One of the constants **`IntlCalendar::DOW_SUNDAY`**,
 ### 返回值
 
 The number of milliseconds into the day at which the weekend begins or
-ends 或者在失败时返回 **`FALSE`**.
+ends 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -9744,8 +9744,8 @@ The IntlCalendar resource.
 
 ### 返回值
 
-Returns **`TRUE`** if the date is in Daylight Savings Time, **`FALSE`**
-otherwise. The value **`FALSE`** may also be returned on failure, for
+Returns **`true`** if the date is in Daylight Savings Time, **`false`**
+otherwise. The value **`false`** may also be returned on failure, for
 instance after specifying invalid field values on non-lenient mode; use
 <a href="/intl/setup.html#" class="link">exceptions</a> or query <span
 class="function">intl\_get\_error\_code</span> to disambiguate.
@@ -9824,7 +9824,7 @@ The other calendar against which the comparison is to be made.
 
 ### 返回值
 
-Assuming there are no argument errors, returns **`TRUE`** if the
+Assuming there are no argument errors, returns **`true`** if the
 calendars are equivalent except possibly for their set time.
 
 ### 范例
@@ -9966,7 +9966,7 @@ These are integer values between *0* and
 
 ### 返回值
 
-Assuming there are no argument errors, returns **`TRUE`** if the field
+Assuming there are no argument errors, returns **`true`** if the field
 is set.
 
 ### 范例
@@ -10012,7 +10012,7 @@ The IntlCalendar resource.
 
 `date`  
 An optional timestamp representing the number of milliseconds since the
-epoch, excluding leap seconds. If **`NULL`**, this objectʼs current time
+epoch, excluding leap seconds. If **`null`**, this objectʼs current time
 is used instead.
 
 ### 返回值
@@ -10020,7 +10020,7 @@ is used instead.
 A <span class="type">bool</span> indicating whether the given or this
 objectʼs time occurs in a weekend.
 
-The value **`FALSE`** may also be returned on failure, for instance
+The value **`false`** may also be returned on failure, for instance
 after giving a date out of bounds on non-lenient mode; use
 <a href="/intl/setup.html#" class="link">exceptions</a> or query <span
 class="function">intl\_get\_error\_code</span> to disambiguate.
@@ -10089,12 +10089,12 @@ These are integer values between *0* and
 **`IntlCalendar::FIELD_COUNT`**.
 
 `amountOrUpOrDown`  
-The (signed) amount to add to the field, **`TRUE`** for rolling up
-(adding *1*), or **`FALSE`** for rolling down (subtracting *1*).
+The (signed) amount to add to the field, **`true`** for rolling up
+(adding *1*), or **`false`** for rolling down (subtracting *1*).
 
 ### 返回值
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### 范例
 
@@ -10221,7 +10221,7 @@ The new value for **`IntlCalendar::FIELD_SECOND`**.
 
 ### 返回值
 
-Returns **`TRUE`** on success and **`FALSE`** on failure.
+Returns **`true`** on success and **`false`** on failure.
 
 ### 范例
 
@@ -10296,7 +10296,7 @@ One of the constants **`IntlCalendar::DOW_SUNDAY`**,
 
 ### 返回值
 
-Returns **`TRUE`** on success. Failure can only happen due to invalid
+Returns **`true`** on success. Failure can only happen due to invalid
 parameters.
 
 ### 范例
@@ -10375,11 +10375,11 @@ an error.
 The IntlCalendar resource.
 
 `isLenient`  
-Use **`TRUE`** to activate the lenient mode; **`FALSE`** otherwise.
+Use **`true`** to activate the lenient mode; **`false`** otherwise.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Failure can only happen due to invalid
+Returns **`true`** on success. Failure can only happen due to invalid
 parameters.
 
 ### 范例
@@ -10428,7 +10428,7 @@ The number of minimal days to set.
 
 ### 返回值
 
-**`TRUE`** on success, **`FALSE`** on failure.
+**`true`** on success, **`false`** on failure.
 
 IntlCalendar::setRepeatedWallTimeOption
 =======================================
@@ -10473,7 +10473,7 @@ One of the constants **`IntlCalendar::WALLTIME_FIRST`** or
 
 ### 返回值
 
-Returns **`TRUE`** on success. Failure can only happen due to invalid
+Returns **`true`** on success. Failure can only happen due to invalid
 parameters.
 
 ### 范例
@@ -10545,7 +10545,7 @@ One of the constants **`IntlCalendar::WALLTIME_FIRST`**,
 
 ### 返回值
 
-Returns **`TRUE`** on success. Failure can only happen due to invalid
+Returns **`true`** on success. Failure can only happen due to invalid
 parameters.
 
 ### 范例
@@ -10600,7 +10600,7 @@ such instant and the epoch, ignoring leap seconds.
 
 ### 返回值
 
-Returns **`TRUE`** on success and **`FALSE`** on failure.
+Returns **`true`** on success and **`false`** on failure.
 
 ### 范例
 
@@ -10666,7 +10666,7 @@ The IntlCalendar resource.
 The new timezone to be used by this calendar. It can be specified in the
 following ways:
 
--   **`NULL`**, in which case the default timezone will be used, as
+-   **`null`**, in which case the default timezone will be used, as
     specified in the ini setting
     <a href="/datetime/setup.html#" class="link">date.timezone</a> or
     through the function <span
@@ -10687,7 +10687,7 @@ following ways:
 
 ### 返回值
 
-Returns **`TRUE`** on success and **`FALSE`** on failure.
+Returns **`true`** on success and **`false`** on failure.
 
 ### 范例
 
@@ -10758,7 +10758,7 @@ The IntlCalendar resource.
 A <span class="classname">DateTime</span> object with the same timezone
 as this object (though using PHPʼs database instead of ICUʼs) and the
 same time, except for the smaller precision (second precision instead of
-millisecond). Returns **`FALSE`** on failure.
+millisecond). Returns **`false`** on failure.
 
 ### 范例
 
@@ -11554,7 +11554,7 @@ class="methodname">IntlGregorianCalendar::getGregorianChange</span> (
 
 ### 返回值
 
-Returns the change date 或者在失败时返回 **`FALSE`**.
+Returns the change date 或者在失败时返回 **`false`**.
 
 IntlGregorianCalendar::isLeapYear
 =================================
@@ -11577,7 +11577,7 @@ Determine if the given year is a leap year
 
 ### 返回值
 
-Returns **`TRUE`** for leap years, **`FALSE`** otherwise and on failure.
+Returns **`true`** for leap years, **`false`** otherwise and on failure.
 
 IntlGregorianCalendar::setGregorianChange
 =========================================
@@ -11602,7 +11602,7 @@ class="methodname">IntlGregorianCalendar::setGregorianChange</span> (
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 简介
 ----
@@ -11953,7 +11953,7 @@ class="methodparam"><span class="type">int</span> `$rawOffset`</span>
 ### 返回值
 
 Returns <span class="classname">IntlIterator</span> 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 IntlTimeZone::fromDateTimeZone
 ==============================
@@ -12326,7 +12326,7 @@ system timezone (e.g. "America/Los\_Angeles").
 
 ### 返回值
 
-Returns the system timezone 或者在失败时返回 **`FALSE`**.
+Returns the system timezone 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -12448,7 +12448,7 @@ class="methodparam"><span class="type">string</span> `$zoneId`</span> )
 
 ### 返回值
 
-Return region 或者在失败时返回 **`FALSE`**.
+Return region 或者在失败时返回 **`false`**.
 
 IntlTimeZone::getTZDataVersion
 ==============================
@@ -12516,7 +12516,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-Returns <span class="classname">IntlTimeZone</span> or **`NULL`** on
+Returns <span class="classname">IntlTimeZone</span> or **`null`** on
 failure.
 
 IntlTimeZone::getWindowsID
@@ -12562,7 +12562,7 @@ Windows timezone (e.g. "Pacific Standard Time").
 
 ### 返回值
 
-Returns the Windows timezone 或者在失败时返回 **`FALSE`**.
+Returns the Windows timezone 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -12844,6 +12844,30 @@ for DateType and TimeType.
 <span class="simpara">Most abbreviated style, only essential data
 (12/13/52 or 3:30pm)</span>
 
+**`IntlDateFormatter::RELATIVE_FULL`** (<span class="type">int</span>)  
+<span class="simpara"> The same as **`IntlDateFormatter::FULL`**, but
+yesterday, today, and tomorrow show as *yesterday*, *today*, and
+*tomorrow*, respectively. Available as of PHP 8.0.0, for `dateType`
+only. </span>
+
+**`IntlDateFormatter::RELATIVE_LONG`** (<span class="type">int</span>)  
+<span class="simpara"> The same as **`IntlDateFormatter::LONG`**, but
+yesterday, today, and tomorrow show as *yesterday*, *today*, and
+*tomorrow*, respectively. Available as of PHP 8.0.0, for `dateType`
+only. </span>
+
+**`IntlDateFormatter::RELATIVE_MEDIUM`** (<span class="type">int</span>)  
+<span class="simpara"> The same as **`IntlDateFormatter::MEDIUM`**, but
+yesterday, today, and tomorrow show as *yesterday*, *today*, and
+*tomorrow*, respectively. Available as of PHP 8.0.0, for `dateType`
+only. </span>
+
+**`IntlDateFormatter::RELATIVE_SHORT`** (<span class="type">int</span>)  
+<span class="simpara"> The same as **`IntlDateFormatter::SHORT`**, but
+yesterday, today, and tomorrow show as *yesterday*, *today*, and
+*tomorrow*, respectively. Available as of PHP 8.0.0, for `dateType`
+only. </span>
+
 The following int constants are used to specify the calendar. These
 calendars are all based directly on the Gregorian calendar.
 Non-Gregorian calendars need to be specified in locale. Examples might
@@ -12920,7 +12944,7 @@ Create a date formatter.
 ### 参数
 
 `locale`  
-Locale to use when formatting or parsing or **`NULL`** to use the value
+Locale to use when formatting or parsing or **`null`** to use the value
 specified in the ini setting
 <a href="/intl/setup.html#" class="link">intl.default_locale</a>.
 
@@ -12928,18 +12952,18 @@ specified in the ini setting
 Date type to use (**`none`**, **`short`**, **`medium`**, **`long`**,
 **`full`**). This is one of the
 <a href="/class/intldateformatter.html#预定义常量" class="link">IntlDateFormatter constants</a>.
-It can also be **`NULL`**, in which case ICUʼs default date type will be
+It can also be **`null`**, in which case ICUʼs default date type will be
 used.
 
 `timetype`  
 Time type to use (**`none`**, **`short`**, **`medium`**, **`long`**,
 **`full`**). This is one of the
 <a href="/class/intldateformatter.html#预定义常量" class="link">IntlDateFormatter constants</a>.
-It can also be **`NULL`**, in which case ICUʼs default time type will be
+It can also be **`null`**, in which case ICUʼs default time type will be
 used.
 
 `timezone`  
-Time zone ID. The default (and the one used if **`NULL`** is given) is
+Time zone ID. The default (and the one used if **`null`** is given) is
 the one returned by <span
 class="function">date\_default\_timezone\_get</span> or, if applicable,
 that of the <span class="classname">IntlCalendar</span> object passed
@@ -12952,7 +12976,7 @@ This can also be an <span class="classname">IntlTimeZone</span> or a
 
 `calendar`  
 Calendar to use for formatting or parsing. The default value is
-**`NULL`**, which corresponds to **`IntlDateFormatter::GREGORIAN`**.
+**`null`**, which corresponds to **`IntlDateFormatter::GREGORIAN`**.
 This can either be one of the
 <a href="/class/intldateformatter.html#" class="link">IntlDateFormatter calendar constants</a>
 or an <span class="classname">IntlCalendar</span>. Any <span
@@ -12960,7 +12984,7 @@ class="classname">IntlCalendar</span> object passed will be clone; it
 will not be changed by the <span
 class="classname">IntlDateFormatter</span>. This will determine the
 calendar type used (gregorian, islamic, persian, etc.) and, if
-**`NULL`** is given for the `timezone` parameter, also the timezone
+**`null`** is given for the `timezone` parameter, also the timezone
 used.
 
 `pattern`  
@@ -12971,7 +12995,7 @@ are documented at
 ### 返回值
 
 The created <span class="classname">IntlDateFormatter</span> or
-**`FALSE`** in case of failure.
+**`false`** in case of failure.
 
 ### 更新日志
 
@@ -12992,7 +13016,7 @@ The created <span class="classname">IntlDateFormatter</span> or
 <td><p>An <span class="classname">IntlCalendar</span> object is allowed for <code class="parameter">calendar</code>.</p>
 <p>Objects of type <span class="classname">IntlTimeZone</span> and <span class="classname">DateTimeZone</span> are allowed for <code class="parameter">timezone</code>.</p>
 <p>Invalid timezone identifiers (including empty strings) are no longer allowed for <code class="parameter">timezone</code>.</p>
-<p>If <strong><code>NULL</code></strong> is given for <code class="parameter">timezone</code>, the timezone identifier given by <span class="function">date_default_timezone_get</span> will be used instead of ICUʼs default.</p></td>
+<p>If <strong><code>null</code></strong> is given for <code class="parameter">timezone</code>, the timezone identifier given by <span class="function">date_default_timezone_get</span> will be used instead of ICUʼs default.</p></td>
 </tr>
 </tbody>
 </table>
@@ -13105,7 +13129,7 @@ used instead.
 
 ### 返回值
 
-The formatted string or, if an error occurred, **`FALSE`**.
+The formatted string or, if an error occurred, **`false`**.
 
 ### 更新日志
 
@@ -13320,15 +13344,15 @@ the value of one of these constants (in which case it will be used both
 for the time and the date) or a <span class="type">string</span> with
 the format described in
 <a href="http://www.icu-project.org/apiref/icu4c/classSimpleDateFormat.html#details" class="link external">» the ICU documentation</a>.
-If **`NULL`**, the default style will be used.
+If **`null`**, the default style will be used.
 
 `locale`  
-The locale to use, or **`NULL`** to use the
+The locale to use, or **`null`** to use the
 <a href="/intl/setup.html#" class="link">default one</a>.
 
 ### 返回值
 
-A string with result 或者在失败时返回 **`FALSE`**.
+A string with result 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -14261,7 +14285,7 @@ being formatted.
 ### 返回值
 
 The associated <span class="classname">IntlTimeZone</span> object
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -14337,7 +14361,7 @@ The formatter resource.
 
 ### 返回值
 
-**`TRUE`** if parser is lenient, **`FALSE`** if parser is strict. By
+**`true`** if parser is lenient, **`false`** if parser is strict. By
 default the parser is lenient.
 
 ### 范例
@@ -14601,7 +14625,7 @@ immediately.
 
 ### 返回值
 
-timestamp parsed value, or **`FALSE`** if value can't be parsed.
+timestamp parsed value, or **`false`** if value can't be parsed.
 
 ### 范例
 
@@ -14698,7 +14722,7 @@ The formatter resource.
 This can either be: the
 <a href="/class/intldateformatter.html#" class="link">calendar type</a>
 to use (default is **`IntlDateFormatter::GREGORIAN`**, which is also
-used if **`NULL`** is specified) or an <span
+used if **`null`** is specified) or an <span
 class="classname">IntlCalendar</span> object.
 
 Any <span class="classname">IntlCalendar</span> object passed in will be
@@ -14710,7 +14734,7 @@ the new timezone will be that of the passed object.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -14824,12 +14848,12 @@ invalid values ("February 30th") are not accepted.
 The formatter resource
 
 `lenient`  
-Sets whether the parser is lenient or not, default is **`TRUE`**
+Sets whether the parser is lenient or not, default is **`true`**
 (lenient).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -14969,7 +14993,7 @@ New pattern string to use. Possible patterns are documented at
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 Bad formatstrings
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 Bad formatstrings
 are usually the cause of the failure.
 
 ### 范例
@@ -15066,12 +15090,12 @@ Sets the time zone to use.
 The formatter resource.
 
 `zone`  
-The time zone ID string of the time zone to use. If **`NULL`** or the
+The time zone ID string of the time zone to use. If **`null`** or the
 empty string, the default time zone for the runtime is used.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -15163,7 +15187,7 @@ The formatter resource.
 The timezone to use for this formatter. This can be specified in the
 following forms:
 
--   **`NULL`**, in which case the default timezone will be used, as
+-   **`null`**, in which case the default timezone will be used, as
     specified in the ini setting
     <a href="/datetime/setup.html#" class="link">date.timezone</a> or
     through the function <span
@@ -15184,7 +15208,7 @@ following forms:
 
 ### 返回值
 
-Returns **`TRUE`** on success and **`FALSE`** on failure.
+Returns **`true`** on success and **`false`** on failure.
 
 ### 范例
 
@@ -15300,7 +15324,7 @@ class="methodparam">void</span> )
 class="type"><span class="type">string</span><span
 class="type">int</span></span> `$index`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$fallback`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">getLocales</span> ( <span
@@ -15436,7 +15460,7 @@ allowed.
 ### 返回值
 
 Returns <span class="classname">ResourceBundle</span> object or
-**`NULL`** on error.
+**`null`** on error.
 
 ### 范例
 
@@ -15620,7 +15644,7 @@ class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">int</span></span>
 `$index`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$fallback`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 过程化风格
 
@@ -15631,7 +15655,7 @@ class="methodparam"><span class="type">ResourceBundle</span> `$r`</span>
 class="type">string</span><span class="type">int</span></span>
 `$index`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$fallback`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Get the data from the bundle by index or string key.
 
@@ -15649,7 +15673,7 @@ allowed.
 
 ### 返回值
 
-Returns the data located at the index or **`NULL`** on error. Strings,
+Returns the data located at the index or **`null`** on error. Strings,
 integers and binary data strings are returned as corresponding PHP
 types, integer array is returned as PHP array. Complex types are
 returned as <span class="classname">ResourceBundle</span> object.
@@ -15924,7 +15948,7 @@ there were any.
 
 ### 返回值
 
-Returns **`TRUE`** if two given strings can be confused, **`FALSE`**
+Returns **`true`** if two given strings can be confused, **`false`**
 otherwise.
 
 ### 范例
@@ -15992,7 +16016,7 @@ there were any.
 
 ### 返回值
 
-Returns **`TRUE`** if there are suspicious characters, **`FALSE`**
+Returns **`true`** if there are suspicious characters, **`false`**
 otherwise.
 
 ### 范例
@@ -16220,7 +16244,7 @@ May also be set to
 ### 返回值
 
 Returns a <span class="classname">Transliterator</span> object on
-success, or **`NULL`** on failure.
+success, or **`null`** on failure.
 
 ### 参见
 
@@ -16275,7 +16299,7 @@ May also be set to
 ### 返回值
 
 Returns a <span class="classname">Transliterator</span> object on
-success, or **`NULL`** on failure.
+success, or **`null`** on failure.
 
 ### 参见
 
@@ -16318,7 +16342,7 @@ Opens the inverse transliterator.
 ### 返回值
 
 Returns a <span class="classname">Transliterator</span> object on
-success, or **`NULL`** on failure
+success, or **`null`** on failure
 
 ### 参见
 
@@ -16360,7 +16384,7 @@ Gets the last error code for this transliterator.
 
 ### 返回值
 
-The error code on success, or **`FALSE`** if none exists, or on failure.
+The error code on success, or **`false`** if none exists, or on failure.
 
 ### 参见
 
@@ -16402,7 +16426,7 @@ Gets the last error message for this transliterator.
 
 ### 返回值
 
-The error message on success, or **`FALSE`** if none exists, or on
+The error message on success, or **`false`** if none exists, or on
 failure.
 
 ### 参见
@@ -16444,7 +16468,7 @@ Returns an array with the registered transliterator IDs.
 ### 返回值
 
 An <span class="type">array</span> of registered transliterator IDs on
-success, 或者在失败时返回 **`FALSE`**.
+success, 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -16533,7 +16557,7 @@ left as is.
 
 ### 返回值
 
-The transformed string on success, 或者在失败时返回 **`FALSE`**.
+The transformed string on success, 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -22684,7 +22708,7 @@ class="type">int</span> `$nameChoice`<span class="initializer"> =
 Finds a Unicode character by its name and returns its code point value.
 
 The name is matched exactly and completely. If the name does not
-correspond to a code point, **`NULL`** is returned.
+correspond to a code point, **`null`** is returned.
 
 A Unicode 1.0 name is matched only if it differs from the modern name.
 Unicode names are all uppercase. Extended names are lowercase followed
@@ -22707,7 +22731,7 @@ Which set of names to use for the lookup. Can be any of these constants:
 ### 返回值
 
 The Unicode value of the code point with the given name (as an <span
-class="type">int</span>), or **`NULL`** if there is no such code point.
+class="type">int</span>), or **`null`** if there is no such code point.
 
 ### 范例
 
@@ -22838,7 +22862,7 @@ Which set of names to use for the lookup. Can be any of these constants:
 ### 返回值
 
 The corresponding name, or an empty string if there is no name for this
-character, or **`NULL`** if there is no such code point.
+character, or **`null`** if there is no such code point.
 
 ### 范例
 
@@ -23018,7 +23042,7 @@ Returns the decimal digit value of the code point in the specified
 radix.
 
 If the radix is not in the range *2\<=radix\<=36* or if the value of
-`codepoint` is not a valid digit in the specified radix, **`FALSE`** is
+`codepoint` is not a valid digit in the specified radix, **`false`** is
 returned. A character is a valid digit if at least one of the following
 is true:
 
@@ -23047,12 +23071,12 @@ The radix (defaults to *10*).
 ### 返回值
 
 Returns the numeric value represented by the character in the specified
-radix, or **`FALSE`** if there is no value or if the value exceeds the
+radix, or **`false`** if there is no value or if the value exceeds the
 radix.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -23683,7 +23707,7 @@ Returns the numeric value that is directly the property value or, for
 enumerated properties, corresponds to the numeric value of the
 enumerated constant of the respective property value enumeration type.
 
-Returns *0* or *1* (for **`FALSE`**/**`TRUE`**) for binary Unicode
+Returns *0* or *1* (for **`false`**/**`true`**) for binary Unicode
 properties.
 
 Returns a bit-mask for mask properties.
@@ -23860,10 +23884,10 @@ The Unicode property to lookup (see the *IntlChar::PROPERTY\_\**
 constants).
 
 **`IntlChar::PROPERTY_INVALID_CODE`** should not be used. Also, if
-`property` is out of range, **`FALSE`** is returned.
+`property` is out of range, **`false`** is returned.
 
 `nameChoice`  
-Selector for which name to get. If out of range, **`FALSE`** is
+Selector for which name to get. If out of range, **`false`** is
 returned.
 
 All properties have a long name. Most have a short name, but some do
@@ -23872,14 +23896,14 @@ returned by adding 1, 2, etc. to **`IntlChar::LONG_PROPERTY_NAME`**.
 
 ### 返回值
 
-Returns the name, or **`FALSE`** if either the `property` or the
+Returns the name, or **`false`** if either the `property` or the
 `nameChoice` is out of range.
 
-If a given `nameChoice` returns **`FALSE`**, then all larger values of
-`nameChoice` will return **`FALSE`**, with one exception: if **`FALSE`**
+If a given `nameChoice` returns **`false`**, then all larger values of
+`nameChoice` will return **`false`**, with one exception: if **`false`**
 is returned for **`IntlChar::SHORT_PROPERTY_NAME`**, then
 **`IntlChar::LONG_PROPERTY_NAME`** (and higher) may still return a
-non-**`FALSE`** value.
+non-**`false`** value.
 
 ### 范例
 
@@ -24018,11 +24042,11 @@ The Unicode property to lookup (see the *IntlChar::PROPERTY\_\**
 constants).
 
 If out of range, or this method doesn't work with the given value,
-**`FALSE`** is returned.
+**`false`** is returned.
 
 `value`  
 Selector for a value for the given property. If out of range,
-**`FALSE`** is returned.
+**`false`** is returned.
 
 In general, valid values range from *0* up to some maximum. There are a
 couple exceptions:
@@ -24033,7 +24057,7 @@ couple exceptions:
     contiguous and range from 0..240.
 
 `nameChoice`  
-Selector for which name to get. If out of range, **`FALSE`** is
+Selector for which name to get. If out of range, **`false`** is
 returned.
 
 All values have a long name. Most have a short name, but some do not.
@@ -24042,14 +24066,14 @@ by adding 1, 2, etc. to **`IntlChar::LONG_PROPERTY_NAME`**.
 
 ### 返回值
 
-Returns the name, or **`FALSE`** if either the `property` or the
+Returns the name, or **`false`** if either the `property` or the
 `nameChoice` is out of range.
 
-If a given `nameChoice` returns **`FALSE`**, then all larger values of
-`nameChoice` will return **`FALSE`**, with one exception: if **`FALSE`**
+If a given `nameChoice` returns **`false`**, then all larger values of
+`nameChoice` will return **`false`**, with one exception: if **`false`**
 is returned for **`IntlChar::SHORT_PROPERTY_NAME`**, then
 **`IntlChar::LONG_PROPERTY_NAME`** (and higher) may still return a
-non-**`FALSE`** value.
+non-**`false`** value.
 
 ### 范例
 
@@ -24163,8 +24187,8 @@ constants).
 
 ### 返回值
 
-Returns **`TRUE`** or **`FALSE`** according to the binary Unicode
-property value for `codepoint`. Also **`FALSE`** if `property` is out of
+Returns **`true`** or **`false`** according to the binary Unicode
+property value for `codepoint`. Also **`false`** if `property` is out of
 bounds or if the Unicode version does not have data for the property at
 all, or not for this code point.
 
@@ -24211,7 +24235,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 )
 
 Determines whether the specified code point is an alphanumeric character
-(letter or digit). **`TRUE`** for characters with general categories "L"
+(letter or digit). **`true`** for characters with general categories "L"
 (letters) and "Nd" (decimal digit numbers).
 
 ### 参数
@@ -24223,8 +24247,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is an alphanumeric character,
-**`FALSE`** if not.
+Returns **`true`** if `codepoint` is an alphanumeric character,
+**`false`** if not.
 
 ### 范例
 
@@ -24263,7 +24287,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 )
 
 Determines whether the specified code point is a letter character.
-**`TRUE`** for general categories "L" (letters).
+**`true`** for general categories "L" (letters).
 
 ### 参数
 
@@ -24274,7 +24298,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a letter character, **`FALSE`** if
+Returns **`true`** if `codepoint` is a letter character, **`false`** if
 not.
 
 ### 范例
@@ -24314,7 +24338,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 )
 
 Determines whether the specified code point is a base character.
-**`TRUE`** for general categories "L" (letters), "N" (numbers), "Mc"
+**`true`** for general categories "L" (letters), "N" (numbers), "Mc"
 (spacing combining marks), and "Me" (enclosing marks).
 
 > **Note**:
@@ -24334,7 +24358,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a base character, **`FALSE`** if
+Returns **`true`** if `codepoint` is a base character, **`false`** if
 not.
 
 ### 范例
@@ -24378,11 +24402,11 @@ space", a character that visibly separates words on a line.
 
 The following are equivalent definitions:
 
--   **`TRUE`** for Unicode White\_Space characters except for "vertical
+-   **`true`** for Unicode White\_Space characters except for "vertical
     space controls" where "vertical space controls" are the following
     characters: U+000A (LF) U+000B (VT) U+000C (FF) U+000D (CR) U+0085
     (NEL) U+2028 (LS) U+2029 (PS)
--   **`TRUE`** for U+0009 (TAB) and characters with general category
+-   **`true`** for U+0009 (TAB) and characters with general category
     "Zs" (space separators) except Zero Width Space (ZWSP, U+200B).
 
 ### 参数
@@ -24394,8 +24418,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is either a "blank" or "horizontal
-space" character, **`FALSE`** if not.
+Returns **`true`** if `codepoint` is either a "blank" or "horizontal
+space" character, **`false`** if not.
 
 ### 范例
 
@@ -24454,7 +24478,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a control character, **`FALSE`** if
+Returns **`true`** if `codepoint` is a control character, **`false`** if
 not.
 
 ### 范例
@@ -24498,7 +24522,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 Determines whether the specified code point is "defined", which usually
 means that it is assigned a character.
 
-**`TRUE`** for general categories other than "Cn" (other, not assigned).
+**`true`** for general categories other than "Cn" (other, not assigned).
 
 > **Note**:
 >
@@ -24514,7 +24538,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a defined character, **`FALSE`** if
+Returns **`true`** if `codepoint` is a defined character, **`false`** if
 not.
 
 ### 范例
@@ -24559,7 +24583,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 
 Determines whether the specified code point is a digit character.
 
-**`TRUE`** for characters with general category "Nd" (decimal digit
+**`true`** for characters with general category "Nd" (decimal digit
 numbers). Beginning with Unicode 4, this is the same as testing for the
 Numeric\_Type of Decimal.
 
@@ -24572,7 +24596,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a digit character, **`FALSE`** if
+Returns **`true`** if `codepoint` is a digit character, **`false`** if
 not.
 
 ### 范例
@@ -24615,7 +24639,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 Determines whether the specified code point is a "graphic" character
 (printable, excluding spaces).
 
-**`TRUE`** for all characters except those with general categories "Cc"
+**`true`** for all characters except those with general categories "Cc"
 (control codes), "Cf" (format controls), "Cs" (surrogates), "Cn"
 (unassigned), and "Z" (separators).
 
@@ -24628,7 +24652,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a "graphic" character, **`FALSE`**
+Returns **`true`** if `codepoint` is a "graphic" character, **`false`**
 if not.
 
 ### 范例
@@ -24667,7 +24691,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 Determines if the specified character should be regarded as an ignorable
 character in an identifier.
 
-**`TRUE`** for characters with general category "Cf" (format controls)
+**`true`** for characters with general category "Cf" (format controls)
 as well as non-whitespace ISO controls (U+0000..U+0008, U+000E..U+001B,
 U+007F..U+009F).
 
@@ -24684,8 +24708,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is ignorable in identifiers,
-**`FALSE`** if not.
+Returns **`true`** if `codepoint` is ignorable in identifiers,
+**`false`** if not.
 
 ### 范例
 
@@ -24726,7 +24750,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 
 Determines if the specified character is permissible in an identifier.
 
-**`TRUE`** for characters with general categories "L" (letters), "Nl"
+**`true`** for characters with general categories "L" (letters), "Nl"
 (letter numbers), "Nd" (decimal digits), "Mc" and "Mn" (combining
 marks), "Pc" (connecting punctuation), and u\_isIDIgnorable(c).
 
@@ -24746,8 +24770,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is the code point may occur in an
-identifier, **`FALSE`** if not.
+Returns **`true`** if `codepoint` is the code point may occur in an
+identifier, **`false`** if not.
 
 ### 范例
 
@@ -24793,7 +24817,7 @@ Determines if the specified character is permissible as the first
 character in an identifier according to Unicode (The Unicode Standard,
 Version 3.0, chapter 5.16 Identifiers).
 
-**`TRUE`** for characters with general categories "L" (letters) and "Nl"
+**`true`** for characters with general categories "L" (letters) and "Nl"
 (letter numbers).
 
 ### 参数
@@ -24805,7 +24829,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` may start an identifier, **`FALSE`**
+Returns **`true`** if `codepoint` may start an identifier, **`false`**
 if not.
 
 ### 范例
@@ -24849,7 +24873,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 
 Determines whether the specified code point is an ISO control code.
 
-**`TRUE`** for U+0000..U+001f and U+007f..U+009f (general category
+**`true`** for U+0000..U+001f and U+007f..U+009f (general category
 "Cc").
 
 ### 参数
@@ -24861,7 +24885,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is an ISO control code, **`FALSE`** if
+Returns **`true`** if `codepoint` is an ISO control code, **`false`** if
 not.
 
 ### 范例
@@ -24903,7 +24927,7 @@ Determines if the specified character is permissible in a Java
 identifier.
 
 In addition to <span class="function">IntlChar::isIDPart</span>,
-**`TRUE`** for characters with general category "Sc" (currency symbols).
+**`true`** for characters with general category "Sc" (currency symbols).
 
 ### 参数
 
@@ -24914,8 +24938,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` may occur in a Java identifier,
-**`FALSE`** if not.
+Returns **`true`** if `codepoint` may occur in a Java identifier,
+**`false`** if not.
 
 ### 范例
 
@@ -24963,7 +24987,7 @@ Determines if the specified character is permissible as the start of a
 Java identifier.
 
 In addition to <span class="function">IntlChar::isIDStart</span>,
-**`TRUE`** for characters with general categories "Sc" (currency
+**`true`** for characters with general categories "Sc" (currency
 symbols) and "Pc" (connecting punctuation).
 
 ### 参数
@@ -24975,8 +24999,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` may start a Java identifier,
-**`FALSE`** if not.
+Returns **`true`** if `codepoint` may start a Java identifier,
+**`false`** if not.
 
 ### 范例
 
@@ -25020,7 +25044,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 Determine if the specified code point is a space character according to
 Java.
 
-**`TRUE`** for characters with general categories "Z" (separators),
+**`true`** for characters with general categories "Z" (separators),
 which does not include control codes (e.g., TAB or Line Feed).
 
 ### 参数
@@ -25032,8 +25056,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a space character according to
-Java, **`FALSE`** if not.
+Returns **`true`** if `codepoint` is a space character according to
+Java, **`false`** if not.
 
 ### 范例
 
@@ -25094,7 +25118,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is an Ll lowercase letter, **`FALSE`**
+Returns **`true`** if `codepoint` is an Ll lowercase letter, **`false`**
 if not.
 
 ### 范例
@@ -25154,8 +25178,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` has the Bidi\_Mirrored property,
-**`FALSE`** if not.
+Returns **`true`** if `codepoint` has the Bidi\_Mirrored property,
+**`false`** if not.
 
 ### 范例
 
@@ -25195,7 +25219,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 
 Determines whether the specified code point is a printable character.
 
-**`TRUE`** for general categories other than "C" (controls).
+**`true`** for general categories other than "C" (controls).
 
 ### 参数
 
@@ -25206,7 +25230,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a printable character, **`FALSE`**
+Returns **`true`** if `codepoint` is a printable character, **`false`**
 if not.
 
 ### 范例
@@ -25249,7 +25273,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 
 Determines whether the specified code point is a punctuation character.
 
-**`TRUE`** for characters with general categories "P" (punctuation).
+**`true`** for characters with general categories "P" (punctuation).
 
 ### 参数
 
@@ -25260,8 +25284,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a punctuation character,
-**`FALSE`** if not.
+Returns **`true`** if `codepoint` is a punctuation character,
+**`false`** if not.
 
 ### 范例
 
@@ -25306,7 +25330,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a space character, **`FALSE`** if
+Returns **`true`** if `codepoint` is a space character, **`false`** if
 not.
 
 ### 范例
@@ -25352,7 +25376,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 
 Determines whether the specified code point is a titlecase letter.
 
-**`TRUE`** for general category "Lt" (titlecase letter).
+**`true`** for general category "Lt" (titlecase letter).
 
 ### 参数
 
@@ -25363,7 +25387,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a titlecase letter, **`FALSE`** if
+Returns **`true`** if `codepoint` is a titlecase letter, **`false`** if
 not.
 
 ### 范例
@@ -25421,8 +25445,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` has the Alphabetic Unicode property,
-**`FALSE`** if not.
+Returns **`true`** if `codepoint` has the Alphabetic Unicode property,
+**`false`** if not.
 
 ### 范例
 
@@ -25469,7 +25493,7 @@ IntlChar::PROPERTY\_LOWERCASE)*
 > **Note**:
 >
 > This is different than <span class="function">IntlChar::islower</span>
-> and will return **`TRUE`** for more characters.
+> and will return **`true`** for more characters.
 
 ### 参数
 
@@ -25480,8 +25504,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` has the Lowercase Unicode property,
-**`FALSE`** if not.
+Returns **`true`** if `codepoint` has the Lowercase Unicode property,
+**`false`** if not.
 
 ### 范例
 
@@ -25542,7 +25566,7 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is an Lu uppercase letter, **`FALSE`**
+Returns **`true`** if `codepoint` is an Lu uppercase letter, **`false`**
 if not.
 
 ### 范例
@@ -25596,7 +25620,7 @@ IntlChar::PROPERTY\_UPPERCASE)*
 > **Note**:
 >
 > This is different than <span class="function">IntlChar::isupper</span>
-> and will return **`TRUE`** for more characters.
+> and will return **`true`** for more characters.
 
 ### 参数
 
@@ -25607,8 +25631,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` has the Uppercase Unicode property,
-**`FALSE`** if not.
+Returns **`true`** if `codepoint` has the Uppercase Unicode property,
+**`false`** if not.
 
 ### 范例
 
@@ -25671,8 +25695,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` has the White\_Space Unicode property,
-**`FALSE`** if not.
+Returns **`true`** if `codepoint` has the White\_Space Unicode property,
+**`false`** if not.
 
 ### 范例
 
@@ -25745,8 +25769,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a whitespace character according to
-ICU, **`FALSE`** if not.
+Returns **`true`** if `codepoint` is a whitespace character according to
+ICU, **`false`** if not.
 
 ### 范例
 
@@ -25791,7 +25815,7 @@ class="methodparam"><span class="type">mixed</span> `$codepoint`</span>
 
 Determines whether the specified code point is a hexadecimal digit.
 
-**`TRUE`** for characters with general category "Nd" (decimal digit
+**`true`** for characters with general category "Nd" (decimal digit
 numbers) as well as Latin letters a-f and A-F in both ASCII and
 Fullwidth ASCII. (That is, for letters with code points 0041..0046,
 0061..0066, FF21..FF26, FF41..FF46.)
@@ -25807,8 +25831,8 @@ class="type">string</span> (e.g. *"\\u{2603}"*)
 
 ### 返回值
 
-Returns **`TRUE`** if `codepoint` is a hexadecimal character,
-**`FALSE`** if not.
+Returns **`true`** if `codepoint` is a hexadecimal character,
+**`false`** if not.
 
 ### 注释
 

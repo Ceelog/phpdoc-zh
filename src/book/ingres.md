@@ -268,7 +268,7 @@ with the same user name
 
 `ingres.scrollable` <span class="type">bool</span>  
 Enables support for scrollable cursors. When fetching CLOB or BLOB data,
-this should be set to **`FALSE`**. Available with Ingres 9.2.0 or later.
+this should be set to **`false`**. Available with Ingres 9.2.0 or later.
 
 `ingres.trace` <span class="type">bool</span>  
 Enables simple tracing using **`E_NOTICE`** messages
@@ -585,7 +585,7 @@ The connection link identifier
 
 ### 返回值
 
-Returns **`TRUE`** if autocommit is enabled or **`FALSE`** when
+Returns **`true`** if autocommit is enabled or **`false`** when
 autocommit is disabled
 
 ### 参见
@@ -630,7 +630,7 @@ The connection link identifier
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -715,7 +715,7 @@ The connection link identifier
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -755,7 +755,7 @@ The connection link identifier
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -964,7 +964,7 @@ The password associated with `username`
 
 ### 返回值
 
-Returns a Ingres link resource on success 或者在失败时返回 **`FALSE`**
+Returns a Ingres link resource on success 或者在失败时返回 **`false`**
 
 ### 范例
 
@@ -1312,7 +1312,7 @@ See the <a href="/book/ingres.html#" class="link">types</a> parameter in
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1394,7 +1394,7 @@ enumerated array, **`INGRES_ASSOC`** for associative array, or
 
 ### 返回值
 
-Returns an array that corresponds to the fetched row, or **`FALSE`** if
+Returns an array that corresponds to the fetched row, or **`false`** if
 there are no more rows
 
 ### 范例
@@ -1468,7 +1468,7 @@ The query result identifier
 ### 返回值
 
 Returns an associative array that corresponds to the fetched row, or
-**`FALSE`** if there are no more rows
+**`false`** if there are no more rows
 
 ### 范例
 
@@ -1539,7 +1539,7 @@ following values: **`INGRES_ASSOC`**, **`INGRES_NUM`**, and
 
 ### 返回值
 
-Returns an object that corresponds to the fetched row, or **`FALSE`** if
+Returns an object that corresponds to the fetched row, or **`false`** if
 there are no more rows
 
 ### 范例
@@ -1598,7 +1598,7 @@ The result identifier for a query
 ### 返回值
 
 Returns an <span class="type">int</span> if there is a return value
-otherwise it will return **`NULL`**.
+otherwise it will return **`null`**.
 
 ### 范例
 
@@ -1648,12 +1648,12 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 )
 
 <span class="function">ingres\_fetch\_row</span> returns an array that
-corresponds to the fetched row, or **`FALSE`** if there are no more
+corresponds to the fetched row, or **`false`** if there are no more
 rows. Each result column is stored in an array offset, starting at
 offset 1.
 
 Subsequent calls to <span class="function">ingres\_fetch\_row</span>
-return the next row in the result set, or **`FALSE`** if there are no
+return the next row in the result set, or **`false`** if there are no
 more rows.
 
 By default, arrays created by <span
@@ -1678,7 +1678,7 @@ The query result identifier
 
 ### 返回值
 
-Returns an array that corresponds to the fetched row, or **`FALSE`** if
+Returns an array that corresponds to the fetched row, or **`false`** if
 there are no more rows
 
 ### 范例
@@ -1805,7 +1805,7 @@ class="function">ingres\_num\_fields</span> *- 1*.
 ### 返回值
 
 Returns the name of a field in a query result 或者在失败时返回
-**`FALSE`**
+**`false`**
 
 ### 参见
 
@@ -1857,8 +1857,8 @@ class="function">ingres\_num\_fields</span> *- 1*.
 
 ### 返回值
 
-<span class="function">ingres\_field\_nullable</span> returns **`TRUE`**
-if the field can be set to the **`NULL`** value and **`FALSE`** if it
+<span class="function">ingres\_field\_nullable</span> returns **`true`**
+if the field can be set to the **`null`** value and **`false`** if it
 cannot
 
 ### 参见
@@ -2023,7 +2023,7 @@ class="function">ingres\_num\_fields</span> *- 1*.
 ### 返回值
 
 <span class="function">ingres\_field\_type</span> returns the type of a
-field in a query result 或者在失败时返回 **`FALSE`**. Examples of types
+field in a query result 或者在失败时返回 **`false`**. Examples of types
 returned are *IIAPI\_BYTE\_TYPE*, *IIAPI\_CHA\_TYPE*,
 *IIAPI\_DTE\_TYPE*, *IIAPI\_FLT\_TYPE*, *IIAPI\_INT\_TYPE*,
 *IIAPI\_VCH\_TYPE*. Some of these types can map to more than one SQL
@@ -2060,7 +2060,7 @@ The query result identifier
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2105,7 +2105,7 @@ call to <span class="function">ingres\_errno</span>, <span
 class="function">ingres\_error</span> or <span
 class="function">ingres\_errsqlstate</span> to get the respective error
 number, error text, or SQL STATE. While <span
-class="function">ingres\_next\_error</span> returns **`TRUE`**, there
+class="function">ingres\_next\_error</span> returns **`true`**, there
 are more errors to fetch.
 
 ### 参数
@@ -2115,8 +2115,8 @@ The connection link identifier
 
 ### 返回值
 
-<span class="function">ingres\_next\_error</span> returns **`TRUE`** if
-there is another error to retrieve or **`FALSE`** when there are no more
+<span class="function">ingres\_next\_error</span> returns **`true`** if
+there is another error to retrieve or **`false`** when there are no more
 errors
 
 ### 参见
@@ -2184,7 +2184,7 @@ fetch for a SELECT statement.
 > result's data and the script will be unable to get them.
 >
 > Instead, you should retrieve the result's data using one of these
-> fetch functions in a loop until it returns **`FALSE`**, indicating
+> fetch functions in a loop until it returns **`false`**, indicating
 > that no more results are available.
 
 ### 参数
@@ -2257,7 +2257,7 @@ options that can be passed
 
 ### 返回值
 
-Returns an Ingres link resource on success 或者在失败时返回 **`FALSE`**
+Returns an Ingres link resource on success 或者在失败时返回 **`false`**
 
 ### 参见
 
@@ -2434,7 +2434,7 @@ fetches the expected parameter types from the server.
 ### 返回值
 
 <span class="function">ingres\_query</span> returns a query result
-identifier on success else it returns **`FALSE`**. To see if an error
+identifier on success else it returns **`false`**. To see if an error
 occurred use <span class="function">ingres\_errno</span>, <span
 class="function">ingres\_error</span> or <span
 class="function">ingres\_errsqlstate</span>.
@@ -2561,7 +2561,7 @@ is set to 0, then the first row is 0, else it is 1
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2624,7 +2624,7 @@ The connection link identifier
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2756,7 +2756,7 @@ pairs. The following table lists the option name and the expected type
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2871,7 +2871,7 @@ See the <a href="/book/ingres.html#" class="link">types</a> parameter in
 
 <span class="function">ingres\_unbuffered\_query</span> returns a query
 result identifier when there are rows to fetch; else it returns
-**`FALSE`** when there are no rows, as is the case of an INSERT, UPDATE,
+**`false`** when there are no rows, as is the case of an INSERT, UPDATE,
 or DELETE statement. To see if an error occurred, use <span
 class="function">ingres\_errno</span>, <span
 class="function">ingres\_error</span>, or <span

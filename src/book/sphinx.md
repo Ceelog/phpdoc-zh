@@ -194,7 +194,7 @@ class="methodparam"><span class="type">string</span> `$attribute`</span>
 `$min`</span> , <span class="methodparam"><span
 class="type">float</span> `$max`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$exclude`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setFilterRange</span> ( <span
@@ -202,7 +202,7 @@ class="methodparam"><span class="type">string</span> `$attribute`</span>
 , <span class="methodparam"><span class="type">int</span> `$min`</span>
 , <span class="methodparam"><span class="type">int</span> `$max`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$exclude`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$exclude`<span class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setGeoAnchor</span> ( <span
@@ -295,7 +295,7 @@ class="methodparam"><span class="type">string</span> `$index`</span> ,
 `$attributes`</span> , <span class="methodparam"><span
 class="type">array</span> `$values`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$mva`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 }
 
@@ -379,12 +379,12 @@ Associative array of additional highlighting options (see below).
 | "chunk\_separator" | A string to insert between snippet chunks (passages). Default is " ... ".                                             |
 | "limit"            | Maximum snippet size, in symbols (codepoints). Integer, default is 256.                                               |
 | "around"           | How much words to pick around each matching keywords block. Integer, default is 5.                                    |
-| "exact\_phrase"    | Whether to highlight exact query phrase matches only instead of individual keywords. Boolean, default is **`FALSE`**. |
-| "single\_passage"  | Whether to extract single best passage only. Boolean, default is **`FALSE`**.                                         |
+| "exact\_phrase"    | Whether to highlight exact query phrase matches only instead of individual keywords. Boolean, default is **`false`**. |
+| "single\_passage"  | Whether to extract single best passage only. Boolean, default is **`false`**.                                         |
 
 ### 返回值
 
-Returns array of snippets on success 或者在失败时返回 **`FALSE`**.
+Returns array of snippets on success 或者在失败时返回 **`false`**.
 
 SphinxClient::buildKeywords
 ===========================
@@ -444,7 +444,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -572,7 +572,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -690,7 +690,7 @@ obtains and returns the result sets.
 
 ### 返回值
 
-Returns **`FALSE`** on failure and array of result sets on success.
+Returns **`false`** on failure and array of result sets on success.
 
 ### 参见
 
@@ -714,14 +714,14 @@ class="initializer"> = false</span></span> )
 ### 参数
 
 `array_result`  
-如果 `array_result` 设置为 **`FALSE`**, 匹配项以PHP
+如果 `array_result` 设置为 **`false`**, 匹配项以PHP
 hash格式返回，文档ID为键，其他信息（权重、属性）为值。如果
-`array_result` 设置为 **`TRUE`**,
+`array_result` 设置为 **`true`**,
 匹配项以普通数组返回，包括匹配项的全部信息（含文档ID）.
 
 ### 返回值
 
-总是返回 **`TRUE`**.
+总是返回 **`true`**.
 
 SphinxClient::setConnectTimeout
 ===============================
@@ -743,7 +743,7 @@ Timeout in seconds.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -778,7 +778,7 @@ Associative array of field names and field weights.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -810,11 +810,11 @@ false</span></span> \] )
 整数值数组.
 
 `exclude`  
-如果设置为 **`TRUE`**, 则匹配该过滤规则的文档会被排除在结果之外.
+如果设置为 **`true`**, 则匹配该过滤规则的文档会被排除在结果之外.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -836,12 +836,12 @@ Add new float range filter
 class="type">float</span> `$min`</span> , <span
 class="methodparam"><span class="type">float</span> `$max`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$exclude`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Adds new float range filter to the existing list of filters. Only those
 documents which have `attribute` value stored in the index between `min`
 and `max` (including values that are exactly equal to `min` or `max`)
-will be matched (or rejected, if `exclude` is **`TRUE`**).
+will be matched (or rejected, if `exclude` is **`true`**).
 
 ### 参数
 
@@ -855,12 +855,12 @@ Minimum value.
 Maximum value.
 
 `exclude`  
-If set to **`TRUE`**, matching documents are excluded from the result
+If set to **`true`**, matching documents are excluded from the result
 set.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -881,12 +881,12 @@ class="methodparam"><span class="type">string</span> `$attribute`</span>
 , <span class="methodparam"><span class="type">int</span> `$min`</span>
 , <span class="methodparam"><span class="type">int</span> `$max`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$exclude`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$exclude`<span class="initializer"> = **`false`**</span></span> \] )
 
 Adds new integer range filter to the existing list of filters. Only
 those documents which have `attribute` value stored in the index between
 `min` and `max` (including values that are exactly equal to `min` or
-`max`) will be matched (or rejected, if `exclude` is **`TRUE`**).
+`max`) will be matched (or rejected, if `exclude` is **`true`**).
 
 ### 参数
 
@@ -900,12 +900,12 @@ Minimum value.
 Maximum value.
 
 `exclude`  
-If set to **`TRUE`**, matching documents are excluded from the result
+If set to **`true`**, matching documents are excluded from the result
 set.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -951,7 +951,7 @@ Anchor longitude in radians.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -997,7 +997,7 @@ An optional clause controlling how the groups are sorted.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1030,7 +1030,7 @@ A string containing group-by attribute name.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1065,7 +1065,7 @@ Maximum ID value.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SphinxClient::setIndexWeights
 =============================
@@ -1089,7 +1089,7 @@ Default is empty array, i.e. weighting summing is disabled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SphinxClient::setLimits
 =======================
@@ -1129,7 +1129,7 @@ class="initializer"> = 0</span></span> \]\] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SphinxClient::setMatchMode
 ==========================
@@ -1161,7 +1161,7 @@ class="methodparam"><span class="type">int</span> `$mode`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1189,7 +1189,7 @@ Default value is 0, i.e. no limit.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SphinxClient::setOverride
 =========================
@@ -1230,7 +1230,7 @@ values.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SphinxClient::setRankingMode
 ============================
@@ -1259,7 +1259,7 @@ Ranking mode.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1297,7 +1297,7 @@ Delay between retries, in milliseconds.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SphinxClient::setSelect
 =======================
@@ -1326,7 +1326,7 @@ SQL-like clause.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SphinxClient::setServer
 =======================
@@ -1352,7 +1352,7 @@ IP 或者主机名.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 SphinxClient::setSortMode
 =========================
@@ -1387,7 +1387,7 @@ Sorting mode.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1421,7 +1421,7 @@ value pairs.
 ### 返回值
 
 Returns an associative array of search server statistics
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 SphinxClient::updateAttributes
 ==============================
@@ -1437,7 +1437,7 @@ class="methodparam"><span class="type">string</span> `$index`</span> ,
 `$attributes`</span> , <span class="methodparam"><span
 class="type">array</span> `$values`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$mva`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Instantly updates given attribute values in given documents.
 
@@ -1456,4 +1456,4 @@ values as values.
 ### 返回值
 
 Returns number of actually updated documents (0 or more) on success, or
-**`FALSE`** on failure.
+**`false`** on failure.

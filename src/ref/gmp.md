@@ -161,7 +161,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-Returns the binomial coefficient C(n, k), 或者在失败时返回 **`FALSE`**.
+Returns the binomial coefficient C(n, k), 或者在失败时返回 **`false`**.
 
 ### 错误／异常
 
@@ -611,7 +611,7 @@ Default value is GMP\_MSW\_FIRST \| GMP\_NATIVE\_ENDIAN.
 
 ### 返回值
 
-Returns a string 或者在失败时返回 **`FALSE`**.
+Returns a string 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -879,7 +879,7 @@ Default value is GMP\_MSW\_FIRST \| GMP\_NATIVE\_ENDIAN.
 
 ### 返回值
 
-Returns a GMP number 或者在失败时返回 **`FALSE`**.
+Returns a GMP number 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1047,7 +1047,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-A GMP number on success or **`FALSE`** if an inverse does not exist.
+A GMP number on success or **`false`** if an inverse does not exist.
 
 ### 范例
 
@@ -1481,7 +1481,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-Returns **`TRUE`** if `a` is a perfect power, **`FALSE`** otherwise.
+Returns **`true`** if `a` is a perfect power, **`false`** otherwise.
 
 ### 参见
 
@@ -1510,7 +1510,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-Returns **`TRUE`** if `a` is a perfect square, **`FALSE`** otherwise.
+Returns **`true`** if `a` is a perfect square, **`false`** otherwise.
 
 ### 范例
 
@@ -1862,11 +1862,11 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-成功时返回 **`NULL`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`null`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
-Issues an **`E_WARNING`** and returns **`FALSE`** if `seed` is not
+Issues an **`E_WARNING`** and returns **`false`** if `seed` is not
 valid.
 
 ### 范例
@@ -2132,7 +2132,7 @@ class="methodname">gmp\_setbit</span> ( <span class="methodparam"><span
 class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
 class="type">int</span> `$index`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$bit_on`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 Sets bit `index` in `a`.
 
@@ -2488,13 +2488,13 @@ The bit to test
 
 ### 返回值
 
-Returns **`TRUE`** if the bit is set in resource `$a`, otherwise
-**`FALSE`**.
+Returns **`true`** if the bit is set in resource `$a`, otherwise
+**`false`**.
 
 ### 错误／异常
 
 An **`E_WARNING`** level error is issued when `index` is less than zero,
-and **`FALSE`** is returned.
+and **`false`** is returned.
 
 ### 范例
 

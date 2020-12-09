@@ -20,7 +20,7 @@ page.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -39,7 +39,7 @@ Get information from installed RPM
 class="methodname">rpmdbinfo</span> ( <span class="methodparam"><span
 class="type">string</span> `$nevr`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$full`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Retrieve information about an installed package, from the system RPM
 database.
@@ -50,7 +50,7 @@ database.
 Name with optional epoch, version and release.
 
 `full`  
-If **`TRUE`** all information headers for the file are retrieved, else
+If **`true`** all information headers for the file are retrieved, else
 only a minimal set.
 
 ### 返回值
@@ -104,7 +104,7 @@ class="initializer"> = RPMTAG\_NAME</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$rpmmire`<span
 class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$full`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\] )
 
 Search packages in the system RPM database.
 
@@ -125,7 +125,7 @@ page. When \< 0 the criterion must equals the value, and database index
 is used if possible.
 
 `full`  
-If **`TRUE`** all information headers for the file are retrieved, else
+If **`true`** all information headers for the file are retrieved, else
 only a minimal set.
 
 ### 返回值
@@ -174,7 +174,7 @@ Get information from a RPM file
 ( <span class="methodparam"><span class="type">string</span>
 `$path`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$full`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `&$error`</span> \]\] )
 
 Retrieve information about a local file, a RPM package.
@@ -185,7 +185,7 @@ Retrieve information about a local file, a RPM package.
 Path of the RPM file.
 
 `full`  
-If **`TRUE`** all information headers for the file are retrieved, else
+If **`true`** all information headers for the file are retrieved, else
 only a minimal set.
 
 `error`  

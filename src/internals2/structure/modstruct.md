@@ -143,7 +143,7 @@ enabled (see
 [<sup>\[1\]</sup>](#fnidinternals2.structure.modstruct.struct-values.not-for-dev)
 [<sup>\[3\]</sup>](#fnidinternals2.structure.modstruct.struct-values.given-by-smh)
 
-**`NULL`**
+**`null`**
 
 This pointer is used internally by Zend to keep a non-local reference to
 any INI entries declared for the module.
@@ -151,7 +151,7 @@ any INI entries declared for the module.
 `deps`
 [<sup>\[3\]</sup>](#fnidinternals2.structure.modstruct.struct-values.given-by-smh)
 
-**`NULL`**
+**`null`**
 
 A pointer to a list of dependencies for the module.
 
@@ -235,7 +235,7 @@ The size of the data structure containing the module's globals, if any.
 &mymodule\_globals\_id
 
 Only one of these two fields will exist, depending upon whether the
-**`USING_ZTS`** constant is **`TRUE`**. The former is an index into
+**`USING_ZTS`** constant is **`true`**. The former is an index into
 TSRM's allocation table for the module's globals, and the latter is a
 pointer directly to the globals.
 
@@ -297,7 +297,7 @@ These fields are used for Zend's internal tracking information.
 [<sup>\[9\]</sup>](#fnidinternals2.structure.modstruct.struct-values.given-by-smpe)
 [<sup>\[4\]</sup>](#fnidinternals2.structure.modstruct.struct-values.given-by-smp)
 
-**`NULL`**
+**`null`**
 
 `module_number`
 [<sup>\[1\]</sup>](#fnidinternals2.structure.modstruct.struct-values.not-for-dev)
@@ -332,11 +332,11 @@ class="para footnote"> This field is filled in by
 
 <a href="#fninternals2.structure.modstruct.struct-values.only-with-zts" id="fnidinternals2.structure.modstruct.struct-values.only-with-zts"><sup>[7]</sup></a><span
 class="para footnote"> This field only exists when **`USING_ZTS`** is
-**`TRUE`**. </span>
+**`true`**. </span>
 
 <a href="#fninternals2.structure.modstruct.struct-values.only-without-zts" id="fnidinternals2.structure.modstruct.struct-values.only-without-zts"><sup>[8]</sup></a><span
 class="para footnote"> This field only exists when **`USING_ZTS`** is
-**`FALSE`**. </span>
+**`false`**. </span>
 
 <a href="#fninternals2.structure.modstruct.struct-values.given-by-smpe" id="fnidinternals2.structure.modstruct.struct-values.given-by-smpe"><sup>[9]</sup></a><span
 class="para footnote"> This field is filled in by
@@ -392,7 +392,7 @@ zend_module_entry counter_module_entry = {
 -   <span class="simpara"> "counter" uses per-module globals, so
     **`PHP_MODULE_GLOBALS`** is used </span>
 -   <span class="simpara"> This module has no post-deactivate function,
-    so **`NULL`** is used. </span>
+    so **`null`** is used. </span>
 -   <span class="simpara"> Since this module *does* use globals,
     **`STANDARD_MODULE_PROPERTIES_EX`** is used to finish the structure.
     </span>

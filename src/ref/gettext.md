@@ -354,7 +354,7 @@ application.
 ### 参数
 
 `domain`  
-The new message domain, or **`NULL`** to get the current setting without
+The new message domain, or **`null`** to get the current setting without
 changing it
 
 ### 返回值

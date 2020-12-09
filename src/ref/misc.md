@@ -74,7 +74,7 @@ class="function">constant</span>
 
 ### 返回值
 
-返回常量的值。如果常量未定义则返回 **`NULL`**。
+返回常量的值。如果常量未定义则返回 **`null`**。
 
 ### 错误／异常
 
@@ -128,7 +128,7 @@ define
 class="type">mixed</span> `$value`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$case_insensitive`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 在运行时定义一个常量。
 
@@ -147,7 +147,7 @@ class="methodparam"><span class="type">bool</span>
 常量的值；在 PHP 5 中，`value` 必须是标量( <span
 class="type">int</span>、 <span class="type">float</span>、<span
 class="type">string</span>、<span
-class="type">boolean</span>、**`NULL`**）在 PHP 7 中还允许是个 <span
+class="type">boolean</span>、**`null`**）在 PHP 7 中还允许是个 <span
 class="type">array</span> 的值。
 
 **Warning**
@@ -155,7 +155,7 @@ class="type">array</span> 的值。
 类型，但并不推荐这样做，因为可能会有不可预知的行为发生。
 
 `case_insensitive`  
-如果设置为 **`TRUE`**，该常量则大小写不敏感。默认是大小写敏感的。比如，
+如果设置为 **`true`**，该常量则大小写不敏感。默认是大小写敏感的。比如，
 *CONSTANT* 和 *Constant* 代表了不同的值。
 
 **Warning**
@@ -167,7 +167,7 @@ PHP 7.3.0 起废弃了定义大小写不敏感的常量。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -257,8 +257,8 @@ defined
 
 ### 返回值
 
-如果名称 `name` 的常量已定义，返回 **`TRUE`**；未定义则返回
-**`FALSE`**。
+如果名称 `name` 的常量已定义，返回 **`true`**；未定义则返回
+**`false`**。
 
 ### 范例
 
@@ -333,12 +333,12 @@ eval
 
 ### 返回值
 
-<span class="function">eval</span> 返回 **`NULL`**，除非在执行的代码中
+<span class="function">eval</span> 返回 **`null`**，除非在执行的代码中
 *return* 了一个值，函数返回传递给 *return* 的值。 PHP 7
 开始，执行的代码里如果有一个 parse error，<span
 class="function">eval</span> 会抛出 ParseError 异常。在 PHP 7 之前，
 如果在执行的代码中有 parse error，<span class="function">eval</span>
-返回 **`FALSE`**，之后的代码将正常执行。无法使用 <span
+返回 **`false`**，之后的代码将正常执行。无法使用 <span
 class="function">set\_error\_handler</span> 捕获 <span
 class="function">eval</span> 中的解析错误。
 
@@ -519,16 +519,16 @@ false</span></span> \]\] )
 `user_agent`  
 要分析的用户代理。默认使用HTTP头中User-Agent的值，不过，你可以通过传递该参数改变User-Agent。(比如查找另一个浏览器的信息)
 
-你可以传递一个 **`NULL`** 来忽略该参数。
+你可以传递一个 **`null`** 来忽略该参数。
 
 `return_array`  
-如果设置为 **`TRUE`**，该函数会返回一个 <span
+如果设置为 **`true`**，该函数会返回一个 <span
 class="type">array</span>，而不是 <span class="type">object</span>。
 
 ### 返回值
 
 信息会以包含一系列数据的数组或者对象返回。例如：浏览器的主版本号、次版本号和ID字符串；框架、JavaScript、cookies等功能是否支持
-**`TRUE`**/**`FALSE`** 的值。
+**`true`**/**`false`** 的值。
 
 *cookies*
 的值仅意味着浏览器是否具有接收cookies的功能，不代表用户是否已允许启用cookies。
@@ -653,7 +653,7 @@ highlight\_file
 class="methodname">highlight\_file</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$return`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$return`<span class="initializer"> = **`false`**</span></span> \] )
 
 使用PHP内置的语法高亮器所定义的颜色，打印输出或者返回 `filename`
 文件中语法高亮版本的代码。
@@ -671,13 +671,13 @@ AddType application/x-httpd-php-source .phps
 欲高亮文件的路径。
 
 `return`  
-设置该参数为 **`TRUE`** 使函数返回高亮后的代码。
+设置该参数为 **`true`** 使函数返回高亮后的代码。
 
 ### 返回值
 
 如果 `return` 设置为
-**`TRUE`**，高亮后的代码不会被打印输出，而是以字符串的形式返回。
-高亮成功返回 **`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，高亮后的代码不会被打印输出，而是以字符串的形式返回。
+高亮成功返回 **`true`**，否则返回 **`false`**。
 
 ### 注释
 
@@ -717,13 +717,13 @@ class="initializer"> = false</span></span> \] )
 需要高亮的PHP代码，应当包含开始标签。
 
 `return`  
-设置该参数为 **`TRUE`** 使函数返回高亮后的代码。
+设置该参数为 **`true`** 使函数返回高亮后的代码。
 
 ### 返回值
 
 如果 `return` 设置为
-**`TRUE`**，高亮后的代码不会被打印输出，而是以字符串的形式返回。
-高亮成功返回 **`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，高亮后的代码不会被打印输出，而是以字符串的形式返回。
+高亮成功返回 **`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -765,7 +765,7 @@ hrtime
 
 <span class="type">mixed</span> <span class="methodname">hrtime</span>
 (\[ <span class="methodparam"><span class="type">bool</span>
-`$get_as_number`<span class="initializer"> = **`FALSE`**</span></span>
+`$get_as_number`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 从任意时间点开始统计，返回系统的高精度时间（high resolution time）。
@@ -821,7 +821,7 @@ class="methodparam"><span class="type">bool</span> `$value`</span> \] )
 设置客户端断开连接时是否中断脚本的执行
 
 PHP 以命令行脚本执行时，当脚本终端结束，脚本不会被立即中止，除非设置
-`value` 为 **`TRUE`**，否则脚本输出任意字符时会被中止。
+`value` 为 **`true`**，否则脚本输出任意字符时会被中止。
 
 ### 参数
 
@@ -954,7 +954,7 @@ class="function">unpack</span>，在那些使用有符号和无符号格式代�
 
 ### 返回值
 
-返回包含数据的二进制字符串， 或者在失败时返回 **`FALSE`**。
+返回包含数据的二进制字符串， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1098,7 +1098,7 @@ The string to convert.
 
 ### 返回值
 
-The `subject` string converted to `out_codepage`, or **`NULL`** on
+The `subject` string converted to `out_codepage`, or **`null`** on
 failure.
 
 ### 错误／异常
@@ -1188,7 +1188,7 @@ A codepage identifier.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1221,7 +1221,7 @@ the event is sent to all processes of the process group.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1266,7 +1266,7 @@ class="methodname">sapi\_windows\_set\_ctrl\_handler</span> ( <span
 class="methodparam"><span class="type">callable</span>
 `$callable`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$add`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Sets or removes a *CTRL* event handler, which allows Windows CLI
 processes to intercept or ignore *CTRL+C* and *CTRL+BREAK* events. Note
@@ -1289,16 +1289,16 @@ supposed to have the following signature:
 **`PHP_WINDOWS_EVENT_CTRL_C`** or **`PHP_WINDOWS_EVENT_CTRL_BREAK`**.
 </span>
 
-Setting a **`NULL`** `callable` causes the process to ignore *CTRL+C*
+Setting a **`null`** `callable` causes the process to ignore *CTRL+C*
 events, but not *CTRL+BREAK* events.
 
 `add`  
-If **`TRUE`**, the handler is set. If **`FALSE`**, the handler is
+If **`true`**, the handler is set. If **`false`**, the handler is
 removed.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1344,13 +1344,13 @@ class="methodparam"><span class="type">resource</span> `$stream`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$enable`</span> \] )
 
-If `enable` is omitted, the function returns **`TRUE`** if the stream
-`stream` has VT100 control codes enabled, **`FALSE`** otherwise.
+If `enable` is omitted, the function returns **`true`** if the stream
+`stream` has VT100 control codes enabled, **`false`** otherwise.
 
 If `enable` is specified, the function will try to enable or disable the
 VT100 features of the stream `stream`. If the feature has been
-successfully enabled (or disabled), the function will return **`TRUE`**,
-or **`FALSE`** otherwise.
+successfully enabled (or disabled), the function will return **`true`**,
+or **`false`** otherwise.
 
 At startup, PHP tries to enable the VT100 feature of the
 **`STDOUT`**/**`STDERR`** streams. By the way, if those streams are
@@ -1373,16 +1373,16 @@ available on older Windows versions.
 The stream on which the function will operate.
 
 `enable`  
-If specified, the VT100 feature will be enabled (if **`TRUE`**) or
-disabled (if **`FALSE`**).
+If specified, the VT100 feature will be enabled (if **`true`**) or
+disabled (if **`false`**).
 
 ### 返回值
 
-If `enable` is not specified: returns **`TRUE`** if the VT100 feature is
-enabled, **`FALSE`** otherwise.
+If `enable` is not specified: returns **`true`** if the VT100 feature is
+enabled, **`false`** otherwise.
 
-If `enable` is specified: 成功时返回 **`TRUE`**， 或者在失败时返回
-**`FALSE`**。
+If `enable` is specified: 成功时返回 **`true`**， 或者在失败时返回
+**`false`**。
 
 ### 范例
 
@@ -1473,7 +1473,7 @@ sleep
 
 ### 返回值
 
-成功时返回 0，错误时返回 **`FALSE`**。
+成功时返回 0，错误时返回 **`false`**。
 
 如果函数的调用被一个信号中止，<span class="function">sleep</span>
 会返回一个非零的值。在Windows上，该值总是 *192*（即Windows
@@ -1576,7 +1576,7 @@ class="methodparam"><span class="type">int</span> `$seconds`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 如果延迟被中断，一个关联数组会返回，内容为：
 
@@ -1650,7 +1650,7 @@ class="methodparam"><span class="type">float</span> `$timestamp`</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1726,10 +1726,10 @@ class="function">openssl\_random\_pseudo\_bytes</span> 替代。
 有用的参数。例如：如果在多台主机上可能在同一微秒生成唯一ID。
 
 `prefix`为空，则返回的字符串长度为13。`more_entropy` 为
-**`TRUE`**，则返回的字符串长度为23。
+**`true`**，则返回的字符串长度为23。
 
 `more_entropy`  
-如果设置为 **`TRUE`**，<span class="function">uniqid</span>
+如果设置为 **`true`**，<span class="function">uniqid</span>
 会在返回的字符串结尾增加额外的熵（使用combined linear congruential
 generator）。 使得唯一ID更具唯一性。
 
@@ -1771,7 +1771,7 @@ printf("uniqid('', true): %s\r\n", uniqid('', true));
 > **Note**:
 >
 > 在Cygwin环境下，为了使此函数能够工作，`more_entropy` 必须设置为
-> **`TRUE`**。
+> **`true`**。
 
 unpack
 ======
@@ -1811,7 +1811,7 @@ The offset to begin unpacking from.
 ### 返回值
 
 Returns an associative array containing unpacked elements of binary
-string, 或者在失败时返回 **`FALSE`**.
+string, 或者在失败时返回 **`false`**.
 
 ### 更新日志
 

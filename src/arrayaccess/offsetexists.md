@@ -19,7 +19,7 @@ class="function">empty</span> 时，此方法将执行。
 > **Note**:
 >
 > 当使用 <span class="function">empty</span> 并且仅当 <span
-> class="function">ArrayAccess::offsetExists</span> 返回 **`TRUE`**
+> class="function">ArrayAccess::offsetExists</span> 返回 **`true`**
 > 时，<span class="function">ArrayAccess::offsetGet</span>
 > 将被调用以检查是为否空。
 
@@ -30,7 +30,7 @@ class="function">empty</span> 时，此方法将执行。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 > **Note**:
 >

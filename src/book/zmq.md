@@ -544,7 +544,7 @@ the constants for ZMQ extension.
 class="methodparam"><span class="type">int</span> `$io_threads`<span
 class="initializer"> = 1</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_persistent`<span
-class="initializer"> = **`TRUE`**</span></span> \]\] )
+class="initializer"> = **`true`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">getOpt</span> ( <span class="methodparam"><span
@@ -554,9 +554,9 @@ class="type">string</span> `$key`</span> )
 <span class="methodname">getSocket</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> \[,
 <span class="methodparam"><span class="type">string</span>
-`$persistent_id`<span class="initializer"> = **`NULL`**</span></span>
+`$persistent_id`<span class="initializer"> = **`null`**</span></span>
 \[, <span class="methodparam"><span class="type">callable</span>
-`$on_new_socket`<span class="initializer"> = **`NULL`**</span></span>
+`$on_new_socket`<span class="initializer"> = **`null`**</span></span>
 \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -582,7 +582,7 @@ Construct a new ZMQContext object
 class="methodparam"><span class="type">int</span> `$io_threads`<span
 class="initializer"> = 1</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_persistent`<span
-class="initializer"> = **`TRUE`**</span></span> \]\] )
+class="initializer"> = **`true`**</span></span> \]\] )
 
 Constructs a new ZMQ context. The context is used to initialize sockets.
 A persistent context is required to initialize persistent sockets.
@@ -661,9 +661,9 @@ Create a new socket
 <span class="methodname">ZMQContext::getSocket</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> \[,
 <span class="methodparam"><span class="type">string</span>
-`$persistent_id`<span class="initializer"> = **`NULL`**</span></span>
+`$persistent_id`<span class="initializer"> = **`null`**</span></span>
 \[, <span class="methodparam"><span class="type">callable</span>
-`$on_new_socket`<span class="initializer"> = **`NULL`**</span></span>
+`$on_new_socket`<span class="initializer"> = **`null`**</span></span>
 \]\] )
 
 Shortcut for creating new sockets from the context. If the context is
@@ -737,7 +737,7 @@ persistent connections as each socket is allocated from a context.
 
 ### 返回值
 
-Returns **`TRUE`** if the context is persistent and **`FALSE`** if the
+Returns **`true`** if the context is persistent and **`false`** if the
 context is non-persistent.
 
 ZMQContext::setOpt
@@ -786,22 +786,22 @@ Returns the current object. Throws ZMQContextException on error.
 <span class="methodname">bind</span> ( <span class="methodparam"><span
 class="type">string</span> `$dsn`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$force`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">ZMQSocket</span>
 <span class="methodname">connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$dsn`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$force`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="methodname">\_\_construct</span> ( <span
 class="methodparam"><span class="type">ZMQContext</span>
 `$context`</span> , <span class="methodparam"><span
 class="type">int</span> `$type`</span> \[, <span
 class="methodparam"><span class="type">string</span>
-`$persistent_id`<span class="initializer"> = **`NULL`**</span></span>
+`$persistent_id`<span class="initializer"> = **`null`**</span></span>
 \[, <span class="methodparam"><span class="type">callable</span>
-`$on_new_socket`<span class="initializer"> = **`NULL`**</span></span>
+`$on_new_socket`<span class="initializer"> = **`null`**</span></span>
 \]\] )
 
 <span class="modifier">public</span> <span class="type">ZMQSocket</span>
@@ -872,7 +872,7 @@ Bind the socket
 <span class="methodname">ZMQSocket::bind</span> ( <span
 class="methodparam"><span class="type">string</span> `$dsn`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$force`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Bind the socket to an endpoint. The endpoint is defined in format
 *transport://address* where transport is one of the following: inproc,
@@ -902,7 +902,7 @@ Connect the socket
 <span class="methodname">ZMQSocket::connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$dsn`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$force`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Connect the socket to a remote endpoint. The endpoint is defined in
 format *transport://address* where transport is one of the following:
@@ -966,9 +966,9 @@ class="methodparam"><span class="type">ZMQContext</span>
 `$context`</span> , <span class="methodparam"><span
 class="type">int</span> `$type`</span> \[, <span
 class="methodparam"><span class="type">string</span>
-`$persistent_id`<span class="initializer"> = **`NULL`**</span></span>
+`$persistent_id`<span class="initializer"> = **`null`**</span></span>
 \[, <span class="methodparam"><span class="type">callable</span>
-`$on_new_socket`<span class="initializer"> = **`NULL`**</span></span>
+`$on_new_socket`<span class="initializer"> = **`null`**</span></span>
 \]\] )
 
 Constructs a ZMQSocket object. `persistent_id` parameter can be used to
@@ -1104,7 +1104,7 @@ Returns the persistent id of the socket.
 
 ### 返回值
 
-Returns the persistent id string assigned of the object and **`NULL`**
+Returns the persistent id string assigned of the object and **`null`**
 if socket is not persistent.
 
 ZMQSocket::getSocketType

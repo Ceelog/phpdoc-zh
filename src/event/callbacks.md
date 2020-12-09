@@ -12,10 +12,10 @@ An event callback should match the following prototype:
 
 <span class="type">void</span> <span class="methodname">callback</span>
 (\[ <span class="methodparam"> <span class="type">mixed</span> `$fd`
-<span class="initializer"> = **`NULL`**</span> </span> \[, <span
+<span class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$what` </span> \[,
 <span class="methodparam"> <span class="type">mixed</span> `$arg` <span
-class="initializer"> = **`NULL`**</span> </span> \]\]\] )
+class="initializer"> = **`null`**</span> </span> \]\]\] )
 
 `fd`  
 The file descriptor, stream resource or socket associated with the
@@ -32,7 +32,7 @@ match the following prototype:
 
 <span class="type">void</span> <span class="methodname">callback</span>
 (\[ <span class="methodparam"> <span class="type">mixed</span> `$arg`
-<span class="initializer"> = **`NULL`**</span> </span> \] )
+<span class="initializer"> = **`null`**</span> </span> \] )
 
 `arg`  
 User custom data.
@@ -43,7 +43,7 @@ match the following prototype:
 <span class="type">void</span> <span class="methodname">callback</span>
 (\[ <span class="methodparam"> <span class="type">int</span> `$signum`
 </span> \[, <span class="methodparam"> <span class="type">mixed</span>
-`$arg` <span class="initializer"> = **`NULL`**</span> </span> \]\] )
+`$arg` <span class="initializer"> = **`null`**</span> </span> \]\] )
 
 `signum`  
 The number of the triggered signal(e.g. **`SIGTERM`** ).

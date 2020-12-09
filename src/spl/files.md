@@ -265,9 +265,9 @@ class="methodname">openFile</span> (\[ <span class="methodparam"><span
 class="type">string</span> `$open_mode`<span class="initializer"> =
 "r"</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`<span class="initializer"> =
-**`NULL`**</span></span> \]\]\] )
+**`null`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setFileClass</span> (\[ <span
@@ -994,7 +994,7 @@ returns the real path to the file.
 
 ### 返回值
 
-Returns the path to the file, or **`FALSE`** if the file does not exist.
+Returns the path to the file, or **`false`** if the file does not exist.
 
 ### 范例
 
@@ -1129,7 +1129,7 @@ This method can be used to determine if the file is a directory.
 
 ### 返回值
 
-Returns **`TRUE`** if a directory, **`FALSE`** otherwise.
+Returns **`true`** if a directory, **`false`** otherwise.
 
 ### 范例
 
@@ -1169,7 +1169,7 @@ Checks if the file is executable.
 
 ### 返回值
 
-Returns **`TRUE`** if executable, **`FALSE`** otherwise.
+Returns **`true`** if executable, **`false`** otherwise.
 
 ### 范例
 
@@ -1215,8 +1215,8 @@ regular file.
 
 ### 返回值
 
-Returns **`TRUE`** if the file exists and is a regular file (not a
-link), **`FALSE`** otherwise.
+Returns **`true`** if the file exists and is a regular file (not a
+link), **`false`** otherwise.
 
 ### 范例
 
@@ -1257,7 +1257,7 @@ object is a link.
 
 ### 返回值
 
-Returns **`TRUE`** if the file is a link, **`FALSE`** otherwise.
+Returns **`true`** if the file is a link, **`false`** otherwise.
 
 ### 范例
 
@@ -1295,7 +1295,7 @@ Check if the file is readable.
 
 ### 返回值
 
-Returns **`TRUE`** if readable, **`FALSE`** otherwise.
+Returns **`true`** if readable, **`false`** otherwise.
 
 ### 范例
 
@@ -1336,7 +1336,7 @@ Checks if the current entry is writable.
 
 ### 返回值
 
-Returns **`TRUE`** if writable, **`FALSE`** otherwise;
+Returns **`true`** if writable, **`false`** otherwise;
 
 SplFileInfo::openFile
 =====================
@@ -1352,9 +1352,9 @@ class="methodparam"><span class="type">string</span> `$open_mode`<span
 class="initializer"> = "r"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`<span class="initializer"> =
-**`NULL`**</span></span> \]\]\] )
+**`null`**</span></span> \]\]\] )
 
 Creates an <span class="classname">SplFileObject</span> <span
 class="type">object</span> of the file. This is useful because <span
@@ -1371,7 +1371,7 @@ class="function">fopen</span> documentation for descriptions of possible
 modes. The default is read only.
 
 `use_include_path`  
-值 设为 **`TRUE`** 时, 也会在
+值 设为 **`true`** 时, 也会在
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>搜索文件名。
 
 `context`  
@@ -1856,9 +1856,9 @@ class="methodparam"><span class="type">string</span> `$open_mode`<span
 class="initializer"> = "r"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`<span class="initializer"> =
-**`NULL`**</span></span> \]\]\] )
+**`null`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">SplFileInfo::setFileClass</span> (\[ <span
@@ -1913,7 +1913,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 `$open_mode`<span class="initializer"> = "r"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \]\]\] )
 
 Construct a new file object.
@@ -2059,7 +2059,7 @@ Determine whether the end of file has been reached
 
 ### 返回值
 
-Returns **`TRUE`** if file is at EOF, **`FALSE`** otherwise.
+Returns **`true`** if file is at EOF, **`false`** otherwise.
 
 ### 范例
 
@@ -2106,7 +2106,7 @@ Forces a write of all buffered output to the file.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2147,11 +2147,11 @@ Gets a character from the file.
 ### 返回值
 
 Returns a string containing a single character read from the file or
-**`FALSE`** on EOF.
+**`false`** on EOF.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -2226,13 +2226,13 @@ class="methodname">SplFileObject::setCsvControl</span>. An empty string
 
 ### 返回值
 
-Returns an indexed array containing the fields read, or **`FALSE`** on
+Returns an indexed array containing the fields read, or **`false`** on
 error.
 
 > **Note**:
 >
 > A blank line in a CSV file will be returned as an array comprising a
-> single **`NULL`** field unless using
+> single **`null`** field unless using
 > **`SplFileObject::SKIP_EMPTY | SplFileObject::DROP_NEW_LINE`**, in
 > which case empty lines are skipped.
 
@@ -2313,7 +2313,7 @@ Gets a line from the file.
 
 ### 返回值
 
-Returns a string containing the next line from the file, or **`FALSE`**
+Returns a string containing the next line from the file, or **`false`**
 on error.
 
 ### 错误／异常
@@ -2375,7 +2375,7 @@ Optional parameter to specify tags which should not be stripped.
 ### 返回值
 
 Returns a string containing the next line of the file with HTML and PHP
-code stripped, or **`FALSE`** on error.
+code stripped, or **`false`** on error.
 
 ### 范例
 
@@ -2449,11 +2449,11 @@ above operations, if <span class="function">flock</span> should not
 block during the locking attempt.
 
 `wouldblock`  
-Set to **`TRUE`** if the lock would block (EWOULDBLOCK errno condition).
+Set to **`true`** if the lock would block (EWOULDBLOCK errno condition).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2577,9 +2577,9 @@ mechanism.
 
 ### 返回值
 
-Returns the length of the written string 或者在失败时返回 **`FALSE`**.
+Returns the length of the written string 或者在失败时返回 **`false`**.
 
-Returns **`FALSE`**, and does not write the CSV line to the file, if the
+Returns **`false`**, and does not write the CSV line to the file, if the
 `delimiter` or `enclosure` parameter is not a single character.
 
 ### 错误／异常
@@ -2649,7 +2649,7 @@ The number of bytes to read.
 
 ### 返回值
 
-Returns the string read from the file 或者在失败时返回 **`FALSE`**.
+Returns the string read from the file 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -3029,7 +3029,7 @@ offset in the file stream.
 
 ### 返回值
 
-Returns the position of the file pointer as an integer, or **`FALSE`**
+Returns the position of the file pointer as an integer, or **`false`**
 on error.
 
 ### 范例
@@ -3079,7 +3079,7 @@ The size to truncate to.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3136,13 +3136,13 @@ comes first.
 
 ### 返回值
 
-Returns the number of bytes written, or **`FALSE`** on error.
+Returns the number of bytes written, or **`false`** on error.
 
 ### 更新日志
 
 | 版本  | 说明                                                             |
 |-------|------------------------------------------------------------------|
-| 7.4.0 | The function now returns **`FALSE`** instead of zero on failure. |
+| 7.4.0 | The function now returns **`false`** instead of zero on failure. |
 
 ### 范例
 
@@ -3177,7 +3177,7 @@ No purpose
 class="methodparam">void</span> )
 
 An <span class="classname">SplFileObject</span> does not have children
-so this method returns **`NULL`**.
+so this method returns **`null`**.
 
 ### 参数
 
@@ -3372,7 +3372,7 @@ SplFileObject does not have children
 class="methodparam">void</span> )
 
 An <span class="classname">SplFileObject</span> does not have children
-so this method always return **`FALSE`**.
+so this method always return **`false`**.
 
 ### 参数
 
@@ -3380,7 +3380,7 @@ so this method always return **`FALSE`**.
 
 ### 返回值
 
-Returns **`FALSE`**
+Returns **`false`**
 
 ### 参见
 
@@ -3840,7 +3840,7 @@ Check whether EOF has been reached.
 
 ### 返回值
 
-Returns **`TRUE`** if not reached EOF, **`FALSE`** otherwise.
+Returns **`true`** if not reached EOF, **`false`** otherwise.
 
 ### 范例
 

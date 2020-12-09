@@ -21,6 +21,6 @@ PHP scripts.
 
 As a side-effect of a change made to prevent duplicate error messages
 when <a href="/errorfunc/setup.html#" class="link">track_errors</a> is
-*On*, it is now necessary to return **`FALSE`** from user defined error
+*On*, it is now necessary to return **`false`** from user defined error
 handlers in order to populate `$php_errormsg`. This provides a
 fine-grain control over the levels of messages stored.

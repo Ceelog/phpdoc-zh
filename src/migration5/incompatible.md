@@ -59,7 +59,7 @@
     **`__FUNCTION__`**。其值都会严格按照定义时的名字返回（区分大小写）。
     </span>
 -   <span class="simpara"> <span class="function">ip2long</span>
-    在传递入一个非法 IP 作为参数时返回 **`FALSE`**，不再是 *-1*。
+    在传递入一个非法 IP 作为参数时返回 **`false`**，不再是 *-1*。
     </span>
 -   <span class="simpara">
     如果有函数定义在包含文件中，则这些函数可以在主文件中使用而与是否在

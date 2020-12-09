@@ -14,22 +14,22 @@ finfo::buffer
 class="methodname">finfo\_buffer</span> ( <span
 class="methodparam"><span class="type">resource</span> `$finfo`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$string`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+`$string`<span class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
 class="methodparam"><span class="type">resource</span> `$context`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 面向对象风格
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">finfo::buffer</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
 class="methodparam"><span class="type">resource</span> `$context`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 本函数用来获取字符串中二进制数据的信息。
 
@@ -50,7 +50,7 @@ class="initializer"> = **`NULL`**</span></span> \]\] )
 
 ### 返回值
 
-返回 `string` 参数所指定内容的类型描述。 发生错误时返回 **`FALSE`** 。
+返回 `string` 参数所指定内容的类型描述。 发生错误时返回 **`false`** 。
 
 ### 范例
 
@@ -92,7 +92,7 @@ class="type">resource</span> `$finfo`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 finfo\_file
 ===========
@@ -110,22 +110,22 @@ finfo::file
 class="methodname">finfo\_file</span> ( <span class="methodparam"><span
 class="type">resource</span> `$finfo`</span> , <span
 class="methodparam"><span class="type">string</span> `$file_name`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
 class="methodparam"><span class="type">resource</span> `$context`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 面向对象风格
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">finfo::file</span> ( <span
 class="methodparam"><span class="type">string</span> `$file_name`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
 class="methodparam"><span class="type">resource</span> `$context`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 本函数用来获取一个文件的信息。
 
@@ -148,7 +148,7 @@ class="initializer"> = **`NULL`**</span></span> \]\] )
 
 ### 返回值
 
-返回 `file_name` 参数指定的文件信息。 发生错误时返回 **`FALSE`** 。
+返回 `file_name` 参数指定的文件信息。 发生错误时返回 **`false`** 。
 
 ### 范例
 
@@ -191,7 +191,7 @@ class="methodname">finfo\_open</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$magic_file`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 面向对象风格 （构造器）：
 
@@ -200,7 +200,7 @@ class="methodname">finfo::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$magic_file`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 本函数打开一个魔数数据库并且返回它的资源。
 
@@ -215,12 +215,12 @@ class="initializer"> = **`NULL`**</span></span> \]\] )
 魔数数据库文件名称， 通常是 `/path/to/magic.mime`。 如果未指定，则使用
 *MAGIC* 环境变量。 如果未指定此环境变量， 则使用 PHP 绑定的魔数数据库。
 
-传入 **`NULL`** 或者空字符串，等同于使用默认值。
+传入 **`null`** 或者空字符串，等同于使用默认值。
 
 ### 返回值
 
 （仅适用于过程化风格） 如果成功则返回一个表示魔数数据库的资源，
-或者在失败时返回 **`FALSE`**。
+或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -320,7 +320,7 @@ class="function">finfo\_open</span> 或者其他 Fileinfo 函数时直接指定�
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 mime\_content\_type
 ===================
@@ -344,7 +344,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 ### 返回值
 
 返回文件的 MIME 内容类型，例如 *text/plain* 或
-*application/octet-stream*。 或者在失败时返回 **`FALSE`**。
+*application/octet-stream*。 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 

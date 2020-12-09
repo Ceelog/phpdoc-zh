@@ -89,7 +89,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -182,7 +182,7 @@ class="initializer"> = \_\_FILE\_\_</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$lineno`<span
 class="initializer"> = \_\_LINE\_\_</span></span> \[, <span
 class="methodparam"><span class="type">Exception</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\]\]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\]\]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">int</span> <span
@@ -306,7 +306,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span

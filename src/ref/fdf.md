@@ -33,7 +33,7 @@ within the script code.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -131,7 +131,7 @@ PDF document with data.
 
 ### 返回值
 
-Returns a FDF document handle, or **`FALSE`** on error.
+Returns a FDF document handle, or **`false`** on error.
 
 ### 范例
 
@@ -267,7 +267,7 @@ The appearance will be stored in this parameter.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 fdf\_get\_attachment
 ====================
@@ -632,7 +632,7 @@ class="function">fdf\_save\_string</span>.
 
 ### 返回值
 
-Returns a FDF document handle, or **`FALSE`** on error.
+Returns a FDF document handle, or **`false`** on error.
 
 ### 范例
 
@@ -678,7 +678,7 @@ PDF form or created using <span class="function">fdf\_create</span> and
 
 ### 返回值
 
-Returns a FDF document handle, or **`FALSE`** on error.
+Returns a FDF document handle, or **`false`** on error.
 
 ### 范例
 
@@ -747,7 +747,7 @@ class="function">fdf\_open\_string</span>.
 
 ### 返回值
 
-Returns the document as a string, or **`FALSE`** on error.
+Returns the document as a string, or **`false`** on error.
 
 ### 范例
 
@@ -820,7 +820,7 @@ stream.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -867,7 +867,7 @@ The possible values **`FDFNormalAP`**, **`FDFRolloverAP`** and
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 fdf\_set\_encoding
 ==================
@@ -901,7 +901,7 @@ An empty string resets the encoding to the default
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 fdf\_set\_file
 ==============
@@ -939,7 +939,7 @@ displayed. You can also set the default value for this parameter using
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1007,7 +1007,7 @@ Name of the FDF field, as a string.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1048,7 +1048,7 @@ Name of the FDF field, as a string.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1116,7 +1116,7 @@ Name of the FDF field, as a string.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1150,7 +1150,7 @@ class="function">fdf\_open\_string</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1194,7 +1194,7 @@ Name of the FDF field, as a string.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1229,7 +1229,7 @@ The frame name, as a string.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1281,7 +1281,7 @@ case all array elements will be stored as a value array.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1326,7 +1326,7 @@ The version number. For the current FDF toolkit 5.0, this may be either
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 

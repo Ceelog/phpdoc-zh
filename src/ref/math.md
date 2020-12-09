@@ -1168,7 +1168,7 @@ class="type">float</span> `$val`</span> )
 ### 返回值
 
 如果 `val` 是本机平台上 PHP 浮点数所允许范围中的一个合法的有限值，则返回
-**`TRUE`**。
+**`true`**。
 
 ### 参见
 
@@ -1187,7 +1187,7 @@ class="methodname">is\_infinite</span> ( <span class="methodparam"><span
 class="type">float</span> `$val`</span> )
 
 如果 `val` 为无穷大（正的或负的），例如 *log(0)*
-的结果或者任何超出本平台的浮点数范围的值，则返回 **`TRUE`**。
+的结果或者任何超出本平台的浮点数范围的值，则返回 **`true`**。
 
 ### 参数
 
@@ -1196,7 +1196,7 @@ class="type">float</span> `$val`</span> )
 
 ### 返回值
 
-如果 `val` 为无穷大返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果 `val` 为无穷大返回 **`true`**，否则返回 **`false`**。
 
 ### 参见
 
@@ -1214,7 +1214,7 @@ is\_nan
 <span class="methodparam"><span class="type">float</span> `$val`</span>
 )
 
-如果 `val` 为“非数值”，例如 *acos(1.01)* 的结果，则返回 **`TRUE`**。
+如果 `val` 为“非数值”，例如 *acos(1.01)* 的结果，则返回 **`true`**。
 
 ### 参数
 
@@ -1223,8 +1223,8 @@ is\_nan
 
 ### 返回值
 
-如果 `val` 不是一个数字（not a number）返回 **`TRUE`**，否则返回
-**`FALSE`**。
+如果 `val` 不是一个数字（not a number）返回 **`true`**，否则返回
+**`false`**。
 
 ### 范例
 
@@ -1855,7 +1855,7 @@ be returned as a <span class="type">float</span>.
 
 | 版本  | 说明                                                                                                                                                                                    |
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 4.2.0 | 如果不能计算幂，将发出一条警告，<span class="function">pow</span> 将返回 **`FALSE`**。<span class="function">pow</span> 开始不产生任何的警告。                                          |
+| 4.2.0 | 如果不能计算幂，将发出一条警告，<span class="function">pow</span> 将返回 **`false`**。<span class="function">pow</span> 开始不产生任何的警告。                                          |
 | 4.0.6 | 如果可能函数现在会返回 <span class="type">integer</span> 的结果，之前 总是返回 <span class="type">float</span>，For older versions, you may receive a bogus result for complex numbers. |
 
 ### 范例

@@ -174,7 +174,7 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-当两个字符串相等时返回 **`TRUE`**，否则返回 **`FALSE`**。
+当两个字符串相等时返回 **`true`**，否则返回 **`false`**。
 
 ### 错误／异常
 
@@ -206,7 +206,7 @@ var_dump(hash_equals($expected, $incorrect));
 > **Note**:
 >
 > 要想成功进行比较，那么所提供的 2 个参数必须是相同长度的字符串。
-> 如果所提供的字符串长度不同，那么本函数会立即返回 **`FALSE`**，
+> 如果所提供的字符串长度不同，那么本函数会立即返回 **`false`**，
 > 在时序攻击的场景下，已知字符串的长度可能会被泄露。
 
 > **Note**:
@@ -225,7 +225,7 @@ class="methodname">hash\_file</span> ( <span class="methodparam"><span
 class="type">string</span> `$algo`</span> , <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$raw_output`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$raw_output`<span class="initializer"> = **`false`**</span></span> \] )
 
 ### 参数
 
@@ -237,12 +237,12 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 要进行哈希运算的文件路径。支持 fopen 封装器。
 
 `raw_output`  
-设置为 **`TRUE`**，输出格式为原始的二进制数据。 设置为
-**`FALSE`**，输出小写的 16 进制字符串。
+设置为 **`true`**，输出格式为原始的二进制数据。 设置为
+**`false`**，输出小写的 16 进制字符串。
 
 ### 返回值
 
-如果 `raw_output` 设置为 **`TRUE`**，
+如果 `raw_output` 设置为 **`true`**，
 则返回原始二进制数据表示的信息摘要， 否则返回 16
 进制小写字符串格式表示的信息摘要。
 
@@ -282,7 +282,7 @@ hash\_final
 class="methodname">hash\_final</span> ( <span class="methodparam"><span
 class="type">HashContext</span> `$context`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$raw_output`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 ### 参数
 
@@ -290,12 +290,12 @@ class="initializer"> = **`FALSE`**</span></span> \] )
 <span class="function">hash\_init</span> 函数返回的哈希运算上下文资源。
 
 `raw_output`  
-设置为 **`TRUE`**，输出格式为原始的二进制数据。 设置为
-**`FALSE`**，输出小写的 16 进制字符串。
+设置为 **`true`**，输出格式为原始的二进制数据。 设置为
+**`false`**，输出小写的 16 进制字符串。
 
 ### 返回值
 
-如果 `raw_output` 设置为 **`TRUE`**，
+如果 `raw_output` 设置为 **`true`**，
 则返回原始二进制数据表示的信息摘要， 否则返回 16
 进制小写字符串格式表示的信息摘要。
 
@@ -379,7 +379,7 @@ of HKDF.
 ### 返回值
 
 Returns a string containing a raw binary representation of the derived
-key (also known as output keying material - OKM); or **`FALSE`** on
+key (also known as output keying material - OKM); or **`false`** on
 failure.
 
 ### 错误／异常
@@ -520,7 +520,7 @@ class="methodparam"><span class="type">string</span> `$algo`</span> ,
 `$filename`</span> , <span class="methodparam"><span
 class="type">string</span> `$key`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$raw_output`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 ### 参数
 
@@ -536,16 +536,16 @@ class="function">hash\_hmac\_algos</span> 函数。
 使用 HMAC 生成信息摘要时所使用的密钥。
 
 `raw_output`  
-设置为 **`TRUE`** 输出原始二进制数据， 设置为 **`FALSE`** 输出小写 16
+设置为 **`true`** 输出原始二进制数据， 设置为 **`false`** 输出小写 16
 进制字符串。
 
 ### 返回值
 
-如果 `raw_output` 设置为 **`TRUE`**，
+如果 `raw_output` 设置为 **`true`**，
 则返回原始二进制数据表示的信息摘要， 否则返回 16
 进制小写字符串格式表示的信息摘要。 如果 `algo`
 参数指定的不是受支持的算法，或者无法读取 `filename` 给定的文件，则返回
-**`FALSE`**。
+**`false`**。
 
 ### 更新日志
 
@@ -589,7 +589,7 @@ class="type">string</span> `$algo`</span> , <span
 class="methodparam"><span class="type">string</span> `$data`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$raw_output`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$raw_output`<span class="initializer"> = **`false`**</span></span> \] )
 
 ### 参数
 
@@ -605,15 +605,15 @@ class="function">hash\_hmac\_algos</span> 函数。
 使用 HMAC 生成信息摘要时所使用的密钥。
 
 `raw_output`  
-设置为 **`TRUE`** 输出原始二进制数据， 设置为 **`FALSE`** 输出小写 16
+设置为 **`true`** 输出原始二进制数据， 设置为 **`false`** 输出小写 16
 进制字符串。
 
 ### 返回值
 
-如果 `raw_output` 设置为 **`TRUE`**，
+如果 `raw_output` 设置为 **`true`**，
 则返回原始二进制数据表示的信息摘要， 否则返回 16
 进制小写字符串格式表示的信息摘要。 如果 `algo`
-参数指定的不是受支持的算法，返回 **`FALSE`**。
+参数指定的不是受支持的算法，返回 **`false`**。
 
 ### 更新日志
 
@@ -655,7 +655,7 @@ class="type">string</span> `$algo`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$key`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 ### 参数
 
@@ -729,7 +729,7 @@ class="methodparam"><span class="type">string</span> `$password`</span>
 class="type">int</span> `$length`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$raw_output`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 ### 参数
 
@@ -747,20 +747,20 @@ class="type">bool</span> `$raw_output`<span class="initializer"> =
 进行导出时的迭代次数。
 
 `length`  
-密钥导出数据的长度。如果 `raw_output` 为 **`TRUE`**，
-此参数为密钥导出数据的字节长度。如果 `raw_output` 为 **`FALSE`**，
+密钥导出数据的长度。如果 `raw_output` 为 **`true`**，
+此参数为密钥导出数据的字节长度。如果 `raw_output` 为 **`false`**，
 此参数为密钥导出数据的字节长度的 2 倍，因为 1 个字节数据对应的 2 个 16
 进制的字符。
 
 如果传入 *0*，则使用所选算法的完整输出大小。
 
 `raw_output`  
-设置为 **`TRUE`** 输出原始二进制数据， 设置为 **`FALSE`** 输出小写 16
+设置为 **`true`** 输出原始二进制数据， 设置为 **`false`** 输出小写 16
 进制字符串。
 
 ### 返回值
 
-如果 `raw_output` 设置为 **`TRUE`**，
+如果 `raw_output` 设置为 **`true`**，
 则返回原始二进制数据表示的信息摘要， 否则返回 16
 进制小写字符串格式表示的信息摘要。
 
@@ -831,7 +831,7 @@ class="methodparam"><span class="type">HashContext</span>
 `$hcontext`</span> , <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">resource</span> `$scontext`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 ### 参数
 
@@ -847,7 +847,7 @@ class="initializer"> = **`NULL`**</span></span> \] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -950,7 +950,7 @@ class="methodparam"><span class="type">string</span> `$data`</span> )
 
 ### 返回值
 
-返回 **`TRUE`**。
+返回 **`true`**。
 
 ### 更新日志
 
@@ -977,7 +977,7 @@ hash
 `$algo`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$raw_output`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 ### 参数
 
@@ -989,12 +989,12 @@ class="function">hash\_algos</span> 中查看支持的算法。
 要进行哈希运算的消息。
 
 `raw_output`  
-设置为 **`TRUE`** 输出原始二进制数据， 设置为 **`FALSE`** 输出小写 16
+设置为 **`true`** 输出原始二进制数据， 设置为 **`false`** 输出小写 16
 进制字符串。
 
 ### 返回值
 
-如果 `raw_output` 设置为 **`TRUE`**，
+如果 `raw_output` 设置为 **`true`**，
 则返回原始二进制数据表示的信息摘要， 否则返回 16
 进制小写字符串格式表示的信息摘要。
 

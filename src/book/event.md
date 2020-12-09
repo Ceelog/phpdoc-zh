@@ -569,7 +569,7 @@ Timeout in seconds.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**
+Returns **`true`** on success. Otherwise **`false`**
 
 ### 参见
 
@@ -761,7 +761,7 @@ non-pending.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**
+Returns **`true`** on success. Otherwise **`false`**
 
 ### 参见
 
@@ -821,7 +821,7 @@ resources allocated for the event.
 
 The <span class="methodname">Event::free</span> method currently doesn't
 destruct the object itself. To destruct the object completely call <span
-class="function">unset</span> , or assign **`NULL`**.
+class="function">unset</span> , or assign **`null`**.
 
 ### 参数
 
@@ -884,8 +884,8 @@ One of, or a composition of the following constants: **`Event::READ`** ,
 
 ### 返回值
 
-Returns **`TRUE`** if event is pending or scheduled. Otherwise
-**`FALSE`**.
+Returns **`true`** if event is pending or scheduled. Otherwise
+**`false`**.
 
 Event::set
 ==========
@@ -929,7 +929,7 @@ when the event becomes active.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 Event::setPriority
 ==================
@@ -951,7 +951,7 @@ The event priority.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 Event::setTimer
 ===============
@@ -985,7 +985,7 @@ triggers.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -1031,7 +1031,7 @@ triggers.
 
 ### 返回值
 
-Returns Event object on success. Otherwise **`FALSE`**.
+Returns Event object on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -1072,7 +1072,7 @@ triggers.
 
 ### 返回值
 
-Returns Event object on success. Otherwise **`FALSE`**.
+Returns Event object on success. Otherwise **`false`**.
 
 简介
 ----
@@ -1274,7 +1274,7 @@ Otherwise, it will lead to unpredictable results!
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -1302,7 +1302,7 @@ dispatching events.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -1326,7 +1326,7 @@ class="classname">EventBase</span> object.
 
 The <span class="methodname">EventBase::free</span> method doesn't
 destruct the object itself. To destruct the object completely call <span
-class="function">unset</span> , or assign **`NULL`**.
+class="function">unset</span> , or assign **`null`**.
 
 This method does not deallocate or detach any of the events that are
 currently associated with the <span class="classname">EventBase</span>
@@ -1463,7 +1463,7 @@ cached time.
 
 ### 返回值
 
-Returns the current *event base* time. On failure returns **`NULL`**.
+Returns the current *event base* time. On failure returns **`null`**.
 
 EventBase::gotExit
 ==================
@@ -1485,8 +1485,8 @@ class="methodname">EventBase::exit</span> .
 
 ### 返回值
 
-Returns **`TRUE`**, event loop was told to exit by <span
-class="methodname">EventBase::exit</span> . Otherwise **`FALSE`**.
+Returns **`true`**, event loop was told to exit by <span
+class="methodname">EventBase::exit</span> . Otherwise **`false`**.
 
 ### 参见
 
@@ -1514,8 +1514,8 @@ class="methodname">EventBase::stop</span> .
 
 ### 返回值
 
-Returns **`TRUE`**, event loop was told to stop by <span
-class="methodname">EventBase::stop</span> . Otherwise **`FALSE`**.
+Returns **`true`**, event loop was told to stop by <span
+class="methodname">EventBase::stop</span> . Otherwise **`false`**.
 
 ### 参见
 
@@ -1551,7 +1551,7 @@ Optional flags. One of *EventBase::LOOP\_\** constants. See
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -1578,7 +1578,7 @@ The number of priorities per event base.
 
 ### 返回值
 
-Returns **`TRUE`** on success, otherwise **`FALSE`**.
+Returns **`true`** on success, otherwise **`false`**.
 
 ### 参见
 
@@ -1603,7 +1603,7 @@ Re-initialize event base. Should be called after a fork.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 EventBase::stop
 ===============
@@ -1624,7 +1624,7 @@ Tells event\_base to stop dispatching events
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -1851,7 +1851,7 @@ String to be appended to the end of the buffer.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -1882,7 +1882,7 @@ The source EventBuffer object.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -2011,7 +2011,7 @@ The number of bytes to remove from the buffer.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -2066,7 +2066,7 @@ The number of bytes to reserve for the buffer
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 EventBuffer::freeze
 ===================
@@ -2089,7 +2089,7 @@ Whether to disable changes to the front or end of the buffer.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -2145,7 +2145,7 @@ String to be prepended to the front of the buffer.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -2175,7 +2175,7 @@ Source buffer.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -2213,7 +2213,7 @@ The number of bytes required to be contiguous within the buffer.
 ### 返回值
 
 If `size` is greater than the number of bytes in the buffer, the
-function returns **`NULL`**. Otherwise, <span
+function returns **`null`**. Otherwise, <span
 class="methodname">EventBuffer::pullup</span> returns string.
 
 ### 参见
@@ -2247,7 +2247,7 @@ Maxmimum number of bytes to read from the buffer.
 
 ### 返回值
 
-Returns string read, or **`FALSE`** on failure.
+Returns string read, or **`false`** on failure.
 
 ### 更新日志
 
@@ -2287,7 +2287,7 @@ Maxmimum number of bytes to read.
 
 ### 返回值
 
-Returns the number of bytes read, or **`FALSE`** on failure.
+Returns the number of bytes read, or **`false`** on failure.
 
 ### 参见
 
@@ -2311,7 +2311,7 @@ class="methodparam"> <span class="type">int</span> `$eol_style` </span>
 
 Extracts a line from the front of the buffer and returns it in a newly
 allocated string. If there is not a whole line to read, the function
-returns **`NULL`**. The line terminator is not included in the copied
+returns **`null`**. The line terminator is not included in the copied
 string.
 
 ### 参数
@@ -2323,7 +2323,7 @@ One of
 
 ### 返回值
 
-On success returns the line read from the buffer, otherwise **`NULL`**.
+On success returns the line read from the buffer, otherwise **`null`**.
 
 ### 参见
 
@@ -2349,7 +2349,7 @@ class="methodparam"> <span class="type">int</span> `$end` <span
 class="initializer"> = -1</span> </span> \]\] )
 
 Scans the buffer for an occurrence of the string `what` . It returns
-numeric position of the string, or **`FALSE`** if the string was not
+numeric position of the string, or **`false`** if the string was not
 found.
 
 If the `start` argument is provided, it points to the position at which
@@ -2371,11 +2371,11 @@ End search position.
 ### 返回值
 
 Returns numeric position of the first occurance of the string in the
-buffer, or **`FALSE`** if string is not found.
+buffer, or **`false`** if string is not found.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -2434,7 +2434,7 @@ class="initializer"> = -1</span> </span> \[, <span class="methodparam">
 
 Scans the buffer for an occurrence of an end of line specified by
 `eol_style` parameter . It returns numeric position of the string, or
-**`FALSE`** if the string was not found.
+**`false`** if the string was not found.
 
 If the `start` argument is provided, it represents the position at which
 the search should begin; otherwise, the search is performed from the
@@ -2454,11 +2454,11 @@ One of
 ### 返回值
 
 Returns numeric position of the first occurance of end-of-line symbol in
-the buffer, or **`FALSE`** if not found.
+the buffer, or **`false`** if not found.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -2494,7 +2494,7 @@ Maximum number of bytes to substract.
 ### 返回值
 
 Returns the data substracted as a <span class="type">string</span> on
-success, or **`FALSE`** on failure.
+success, or **`false`** on failure.
 
 ### 参见
 
@@ -2521,7 +2521,7 @@ Whether to enable events at the front or at the end of the buffer.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -2547,7 +2547,7 @@ class="methodname">EventBuffer::lock</span> .
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -2580,7 +2580,7 @@ The maximum number of bytes to write.
 
 ### 返回值
 
-Returns the number of bytes written, or **`FALSE`** on error.
+Returns the number of bytes written, or **`false`** on error.
 
 ### 参见
 
@@ -2706,15 +2706,15 @@ EventUtil::AF\_UNSPEC</span> </span> \] )
 class="methodname">\_\_construct</span> ( <span class="methodparam">
 <span class="type">EventBase</span> `$base` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$socket` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$options` <span
 class="initializer"> = 0</span> </span> \[, <span class="methodparam">
 <span class="type">callable</span> `$readcb` <span class="initializer">
-= **`NULL`**</span> </span> \[, <span class="methodparam"> <span
+= **`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">callable</span> `$writecb` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">callable</span> `$eventcb` <span class="initializer"> =
-**`NULL`**</span> </span> \]\]\]\]\] )
+**`null`**</span> </span> \]\]\]\]\] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">array</span> <span
@@ -2848,7 +2848,7 @@ class="type">string</span> `$data` </span> )
 
 `fd`  
 Numeric file descriptor associated with the buffer event. Normally
-represents a bound socket. Equals to **`NULL`**, if there is no file
+represents a bound socket. Equals to **`null`**, if there is no file
 descriptor(socket) associated with the buffer event.
 
 `priority`  
@@ -2978,7 +2978,7 @@ Note, *'unix:'* prefix is currently not case sensitive.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 范例
 
@@ -3171,7 +3171,7 @@ the event callback with an error event. If it succeeds, it launches a
 connection attempt just as <span
 class="methodname">EventBufferEvent::connect</span> would.
 
-`dns_base` is optional. May be **`NULL`**, or an object created with
+`dns_base` is optional. May be **`null`**, or an object created with
 <span class="methodname">EventDnsBase::\_\_construct</span> . For
 asyncronous hostname resolving pass a valid event dns base resource.
 Otherwise the hostname resolving will block.
@@ -3192,7 +3192,7 @@ Otherwise the hostname resolving will block.
 
 `dns_base`  
 Object of <span class="classname">EventDnsBase</span> in case if DNS is
-to be resolved asyncronously. Otherwise **`NULL`**.
+to be resolved asyncronously. Otherwise **`null`**.
 
 `hostname`  
 Hostname to connect to. Recognized formats are:
@@ -3215,7 +3215,7 @@ or **`EventUtil::AF_INET6`** . See
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 范例
 
@@ -3324,18 +3324,18 @@ Constructs EventBufferEvent object
 class="methodname">EventBufferEvent::\_\_construct</span> ( <span
 class="methodparam"> <span class="type">EventBase</span> `$base` </span>
 \[, <span class="methodparam"> <span class="type">mixed</span> `$socket`
-<span class="initializer"> = **`NULL`**</span> </span> \[, <span
+<span class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$options` <span
 class="initializer"> = 0</span> </span> \[, <span class="methodparam">
 <span class="type">callable</span> `$readcb` <span class="initializer">
-= **`NULL`**</span> </span> \[, <span class="methodparam"> <span
+= **`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">callable</span> `$writecb` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">callable</span> `$eventcb` <span class="initializer"> =
-**`NULL`**</span> </span> \]\]\]\]\] )
+**`null`**</span> </span> \]\]\]\]\] )
 
 Create a buffer event on a socket, stream or a file descriptor. Passing
-**`NULL`** to `socket` means that the socket should be created later,
+**`null`** to `socket` means that the socket should be created later,
 e.g. by means of <span
 class="methodname">EventBufferEvent::connect</span> .
 
@@ -3441,7 +3441,7 @@ Disable events **`Event::READ`** , **`Event::WRITE`** , or
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -3469,7 +3469,7 @@ Enable events **`Event::READ`** , **`Event::WRITE`** , or
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -3724,7 +3724,7 @@ Target buffer
 
 ### 返回值
 
-Returns **`TRUE`** on success; Otherwise **`FALSE`**.
+Returns **`true`** on success; Otherwise **`false`**.
 
 ### 参见
 
@@ -3800,7 +3800,7 @@ Priority value.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 EventBufferEvent::setTimeouts
 =============================
@@ -3827,7 +3827,7 @@ Write timeout
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 EventBufferEvent::setWatermark
 ==============================
@@ -3891,7 +3891,7 @@ Returns most recent OpenSSL error reported on the buffer event.
 ### 返回值
 
 Returns OpenSSL error string reported on the buffer event, or
-**`FALSE`**, if there is no more error to return.
+**`false`**, if there is no more error to return.
 
 ### 范例
 
@@ -4150,7 +4150,7 @@ Retrieves description of the current cipher by means of the
 
 ### 返回值
 
-Returns a textual description of the cipher on success, or **`FALSE`**
+Returns a textual description of the cipher on success, or **`false`**
 on error.
 
 EventBufferEvent::sslGetCipherName
@@ -4177,7 +4177,7 @@ Retrieves name of cipher used by current SSL connection.
 
 ### 返回值
 
-Returns the current cipher name of the SSL connection, or **`FALSE`** on
+Returns the current cipher name of the SSL connection, or **`false`** on
 error.
 
 EventBufferEvent::sslGetCipherVersion
@@ -4204,7 +4204,7 @@ Retrieves version of cipher used by current SSL connection.
 
 ### 返回值
 
-Returns the current cipher version of the SSL connection, or **`FALSE`**
+Returns the current cipher version of the SSL connection, or **`false`**
 on error.
 
 EventBufferEvent::sslGetProtocol
@@ -4290,7 +4290,7 @@ Associated event base.
 
 `socket`  
 Socket to use for this SSL. Can be stream or socket resource, numeric
-file descriptor, or **`NULL`**. If `socket` is **`NULL`**, it is assumed
+file descriptor, or **`null`**. If `socket` is **`null`**, it is assumed
 that the file descriptor for the socket will be assigned later, for
 instance, by means of <span
 class="methodname">EventBufferEvent::connectHost</span> method.
@@ -4334,7 +4334,7 @@ Data to be added to the underlying buffer.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -4361,7 +4361,7 @@ Source <span class="classname">EventBuffer</span> object.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -4454,7 +4454,7 @@ The backend method to avoid. See
 
 ### 返回值
 
-Returns **`TRUE`** on success, otherwise **`FALSE`**.
+Returns **`true`** on success, otherwise **`false`**.
 
 ### 范例
 
@@ -4613,7 +4613,7 @@ priority **`1`** and above, and so on.
 
 ### 返回值
 
-Returns **`TRUE`** on success, otherwise **`FALSE`**.
+Returns **`true`** on success, otherwise **`false`**.
 
 简介
 ----
@@ -4734,7 +4734,7 @@ IPv4 address with a port ( *IPv4:Port* ), or an IPv6 address with a port
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 EventDnsBase::addSearch
 =======================
@@ -4807,7 +4807,7 @@ Constructs EventDnsBase object.
 Event base.
 
 `initialize`  
-If the `initialize` argument is **`TRUE`**, it tries to configure the
+If the `initialize` argument is **`true`**, it tries to configure the
 DNS base sensibly given your operating system’s default. Otherwise, it
 leaves the event DNS base empty, with no nameservers or options
 configured. In the latter case DNS base should be configured manually,
@@ -4863,7 +4863,7 @@ Path to the hosts' file.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 EventDnsBase::parseResolvConf
 =============================
@@ -4904,7 +4904,7 @@ Path to *resolv.conf* file.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 EventDnsBase::setOption
 =======================
@@ -4932,7 +4932,7 @@ Option value.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 EventDnsBase::setSearchNdots
 ============================
@@ -4956,7 +4956,7 @@ The number of dots.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 简介
 ----
@@ -4990,7 +4990,7 @@ class="methodparam"> <span class="type">int</span> `$port` </span> )
 class="methodname">\_\_construct</span> ( <span class="methodparam">
 <span class="type">EventBase</span> `$base` </span> \[, <span
 class="methodparam"> <span class="type">EventSslContext</span> `$ctx`
-<span class="initializer"> = **`NULL`**</span> </span> \] )
+<span class="initializer"> = **`null`**</span> </span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">removeServerAlias</span> ( <span
@@ -5059,7 +5059,7 @@ ready to accept connections.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 范例
 
@@ -5163,7 +5163,7 @@ The alias to add.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 范例
 
@@ -5225,7 +5225,7 @@ The port number to listen on.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 范例
 
@@ -5298,7 +5298,7 @@ Constructs EventHttp object(the HTTP server)
 class="methodname">EventHttp::\_\_construct</span> ( <span
 class="methodparam"> <span class="type">EventBase</span> `$base` </span>
 \[, <span class="methodparam"> <span class="type">EventSslContext</span>
-`$ctx` <span class="initializer"> = **`NULL`**</span> </span> \] )
+`$ctx` <span class="initializer"> = **`null`**</span> </span> \] )
 
 Constructs the HTTP server object.
 
@@ -5485,7 +5485,7 @@ The alias to remove.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -5566,7 +5566,7 @@ Custom data.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 范例
 
@@ -5719,7 +5719,7 @@ User custom data passed to the callback.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 范例
 
@@ -5846,7 +5846,7 @@ class="methodparam"> <span class="type">EventDnsBase</span> `$dns_base`
 `$address` </span> , <span class="methodparam"> <span
 class="type">int</span> `$port` </span> \[, <span class="methodparam">
 <span class="type">EventSslContext</span> `$ctx` <span
-class="initializer"> = **`NULL`**</span> </span> \] )
+class="initializer"> = **`null`**</span> </span> \] )
 
 <span class="modifier">public</span> <span class="type">EventBase</span>
 <span class="methodname">getBase</span> ( <span
@@ -5914,7 +5914,7 @@ class="methodparam"> <span class="type">EventBase</span> `$base` </span>
 class="type">string</span> `$address` </span> , <span
 class="methodparam"> <span class="type">int</span> `$port` </span> \[,
 <span class="methodparam"> <span class="type">EventSslContext</span>
-`$ctx` <span class="initializer"> = **`NULL`**</span> </span> \] )
+`$ctx` <span class="initializer"> = **`null`**</span> </span> \] )
 
 Constructs EventHttpConnection object.
 
@@ -5924,7 +5924,7 @@ Constructs EventHttpConnection object.
 Associated event base.
 
 `dns_base`  
-If `dns_base` is **`NULL`**, hostname resolution will block.
+If `dns_base` is **`null`**, hostname resolution will block.
 
 `address`  
 The address to connect to.
@@ -5971,7 +5971,7 @@ Returns event base associated with the connection.
 ### 返回值
 
 On success returns <span class="classname">EventBase</span> object
-associated with the connection. Otherwise **`FALSE`**.
+associated with the connection. Otherwise **`false`**.
 
 EventHttpConnection::getPeer
 ============================
@@ -6032,7 +6032,7 @@ The URI associated with the request.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 范例
 
@@ -6118,9 +6118,9 @@ following prototype:
 <span class="type">void</span> <span class="methodname">callback</span>
 (\[ <span class="methodparam"> <span
 class="type">EventHttpConnection</span> `$conn` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$arg` <span
-class="initializer"> = **`NULL`**</span> </span> \]\] )
+class="initializer"> = **`null`**</span> </span> \]\] )
 
 ### 返回值
 
@@ -6462,7 +6462,7 @@ class="methodparam">void</span> )
 class="methodname">\_\_construct</span> ( <span class="methodparam">
 <span class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \] )
+class="initializer"> = **`null`**</span> </span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">findHeader</span> ( <span class="methodparam">
@@ -6527,7 +6527,7 @@ class="methodparam"> <span class="type">string</span> `$key` </span> ,
 <span class="methodname">sendError</span> ( <span class="methodparam">
 <span class="type">int</span> `$error` </span> \[, <span
 class="methodparam"> <span class="type">string</span> `$reason` <span
-class="initializer"> = **`NULL`**</span> </span> \] )
+class="initializer"> = **`null`**</span> </span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">sendReply</span> ( <span class="methodparam">
@@ -6620,7 +6620,7 @@ One of
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -6713,7 +6713,7 @@ Constructs EventHttpRequest object
 class="methodname">EventHttpRequest::\_\_construct</span> ( <span
 class="methodparam"> <span class="type">callable</span> `$callback`
 </span> \[, <span class="methodparam"> <span class="type">mixed</span>
-`$data` <span class="initializer"> = **`NULL`**</span> </span> \] )
+`$data` <span class="initializer"> = **`null`**</span> </span> \] )
 
 Constructs EventHttpRequest object.
 
@@ -6725,9 +6725,9 @@ Gets invoked on requesting path. Should match the following prototype:
 <span class="type">void</span> <span class="methodname">callback</span>
 (\[ <span class="methodparam"> <span
 class="type">EventHttpRequest</span> `$req` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$arg` <span class="initializer"> =
-**`NULL`**</span> </span> \]\] )
+**`null`**</span> </span> \]\] )
 
 `data`  
 User custom data passed to the callback.
@@ -6818,7 +6818,7 @@ One of
 
 ### 返回值
 
-Returns **`NULL`** if header not found.
+Returns **`null`** if header not found.
 
 ### 参见
 
@@ -7172,7 +7172,7 @@ Send an HTML error message to the client
 <span class="methodname">EventHttpRequest::sendError</span> ( <span
 class="methodparam"> <span class="type">int</span> `$error` </span> \[,
 <span class="methodparam"> <span class="type">string</span> `$reason`
-<span class="initializer"> = **`NULL`**</span> </span> \] )
+<span class="initializer"> = **`null`**</span> </span> \] )
 
 Send an HTML error message to the client.
 
@@ -7182,7 +7182,7 @@ Send an HTML error message to the client.
 The HTTP error code.
 
 `reason`  
-A brief explanation ofthe error. If **`NULL`**, the standard meaning of
+A brief explanation ofthe error. If **`null`**, the standard meaning of
 the error code will be used.
 
 ### 返回值
@@ -7420,7 +7420,7 @@ class="methodparam"> <span class="type">mixed</span> `&$port` </span> \]
 <span class="methodname">setCallback</span> ( <span class="methodparam">
 <span class="type">callable</span> `$cb` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$arg` <span
-class="initializer"> = **`NULL`**</span> </span> \] )
+class="initializer"> = **`null`**</span> </span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setErrorCallback</span> ( <span
@@ -7693,7 +7693,7 @@ Disables an event connect listener object
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -7718,7 +7718,7 @@ Enables an event connect listener object
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 
@@ -7771,7 +7771,7 @@ Output parameter. The port the socket is bound to.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 EventListener::setCallback
 ==========================
@@ -7784,7 +7784,7 @@ The setCallback purpose
 <span class="methodname">EventListener::setCallback</span> ( <span
 class="methodparam"> <span class="type">callable</span> `$cb` </span>
 \[, <span class="methodparam"> <span class="type">mixed</span> `$arg`
-<span class="initializer"> = **`NULL`**</span> </span> \] )
+<span class="initializer"> = **`null`**</span> </span> \] )
 
 Adjust event connect listener's callback and optionally the callback
 argument.
@@ -7792,19 +7792,19 @@ argument.
 ### 参数
 
 `cb`  
-The new callback for new connections. Ignored if **`NULL`**.
+The new callback for new connections. Ignored if **`null`**.
 
 Should match the following prototype:
 
 <span class="type">void</span> <span class="methodname">callback</span>
 (\[ <span class="methodparam"> <span class="type">EventListener</span>
-`$listener` <span class="initializer"> = **`NULL`**</span> </span> \[,
+`$listener` <span class="initializer"> = **`null`**</span> </span> \[,
 <span class="methodparam"> <span class="type">mixed</span> `$fd` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">array</span> `$address` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$arg` <span
-class="initializer"> = **`NULL`**</span> </span> \]\]\]\] )
+class="initializer"> = **`null`**</span> </span> \]\]\]\] )
 
 `listener`  
 The <span class="classname">EventListener</span> object.
@@ -7819,7 +7819,7 @@ Array of two elements: IP address and the *server* port.
 User custom data attached to the callback.
 
 `arg`  
-Custom user data attached to the callback. Ignored if **`NULL`**.
+Custom user data attached to the callback. Ignored if **`null`**.
 
 ### 返回值
 
@@ -7845,9 +7845,9 @@ The error callback. Should match the following prototype:
 
 <span class="type">void</span> <span class="methodname">callback</span>
 (\[ <span class="methodparam"> <span class="type">EventListener</span>
-`$listener` <span class="initializer"> = **`NULL`**</span> </span> \[,
+`$listener` <span class="initializer"> = **`null`**</span> </span> \[,
 <span class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \]\] )
+class="initializer"> = **`null`**</span> </span> \]\] )
 
 `listener`  
 The <span class="classname">EventListener</span> object.
@@ -8192,7 +8192,7 @@ class="methodparam">void</span> )
 class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">getLastSocketErrno</span> (\[ <span
 class="methodparam"> <span class="type">mixed</span> `$socket` <span
-class="initializer"> = **`NULL`**</span> </span> \] )
+class="initializer"> = **`null`**</span> </span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">string</span> <span
@@ -8354,7 +8354,7 @@ Returns the most recent socket error number
 class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">EventUtil::getLastSocketErrno</span> (\[ <span
 class="methodparam"> <span class="type">mixed</span> `$socket` <span
-class="initializer"> = **`NULL`**</span> </span> \] )
+class="initializer"> = **`null`**</span> </span> \] )
 
 Returns the most recent socket error number( *errno* ).
 
@@ -8423,7 +8423,7 @@ Socket resource or stream.
 ### 返回值
 
 Returns numeric file descriptor of a socket, or stream. <span
-class="methodname">EventUtil::getSocketFd</span> returns **`FALSE`** in
+class="methodname">EventUtil::getSocketFd</span> returns **`false`** in
 case if it is whether failed to recognize the type of the underlying
 file, or detected that the file descriptor associated with `socket` is
 not valid.
@@ -8460,7 +8460,7 @@ UNIX domain sockets.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 EventUtil::setSocketOption
 ==========================
@@ -8508,7 +8508,7 @@ class="function">socket\_get\_option</span> function.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise **`FALSE`**.
+Returns **`true`** on success. Otherwise **`false`**.
 
 ### 参见
 

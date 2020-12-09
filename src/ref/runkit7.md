@@ -28,7 +28,7 @@ of the **`RUNKIT7_ACC_*`** constants.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -65,7 +65,7 @@ default. One of the **`RUNKIT7_ACC_*`** constants.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -92,7 +92,7 @@ Name of the constant to remove. Either the name of a global constant, or
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -116,9 +116,9 @@ class="methodparam"><span class="type">string</span> `$funcname`</span>
 class="type">string</span> `$code`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$return_by_reference`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$doc_comment`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$return_type`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_strict`</span>
 \]\]\]\] )
@@ -129,7 +129,7 @@ class="methodparam"><span class="type">string</span> `$funcname`</span>
 , <span class="methodparam"><span class="type">Closure</span>
 `$closure`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$doc_comment`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$return_type`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_strict`</span>
 \]\]\] )
@@ -163,7 +163,7 @@ Whether the function should behave as if it were declared in a file with
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -214,7 +214,7 @@ Name of the new function to copy the definition to
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -259,9 +259,9 @@ class="methodparam"><span class="type">string</span> `$funcname`</span>
 class="type">string</span> `$code`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$return_by_reference`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$doc_comment`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$return_type`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$is_strict`</span>
 \]\]\]\] )
@@ -272,7 +272,7 @@ class="methodparam"><span class="type">string</span> `$funcname`</span>
 , <span class="methodparam"><span class="type">Closure</span>
 `$closure`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$doc_comment`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$return_type`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$is_strict`</span>
 \]\]\] )
@@ -310,7 +310,7 @@ Whether the function behaves as if it was declared in a file with
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -364,7 +364,7 @@ Name of the function to be deleted
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -400,7 +400,7 @@ New function name
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -440,7 +440,7 @@ Bitwise OR of the
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 runkit7\_method\_add
 ====================
@@ -459,7 +459,7 @@ class="methodparam"><span class="type">string</span> `$code`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = RUNKIT7\_ACC\_PUBLIC</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$doc_comment`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
 `$return_type`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_strict`</span> \]\]\]\] )
@@ -473,7 +473,7 @@ class="type">Closure</span> `$closure`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = RUNKIT7\_ACC\_PUBLIC</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$doc_comment`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
 `$return_type`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_strict`</span> \]\]\]\] )
@@ -512,7 +512,7 @@ Whether the method behaves as if it were declared in a file with
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -641,7 +641,7 @@ class="methodparam"><span class="type">string</span> `$code`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = RUNKIT7\_ACC\_PUBLIC</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$doc_comment`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
 `$return_type`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_strict`</span> \]\]\]\] )
@@ -655,7 +655,7 @@ class="type">Closure</span> `$closure`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = RUNKIT7\_ACC\_PUBLIC</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$doc_comment`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
 `$return_type`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_strict`</span> \]\]\]\] )
@@ -694,7 +694,7 @@ Whether the method behaves as if it was declared in a file with
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -768,7 +768,7 @@ The name of the method to remove
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -840,7 +840,7 @@ The new name to give to the renamed method
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

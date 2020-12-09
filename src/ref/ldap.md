@@ -5,7 +5,8 @@ Translate 8859 characters to t61 characters
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_8859\_to\_t61</span> ( <span
 class="methodparam"><span class="type">string</span> `$value`</span> )
 
@@ -20,7 +21,7 @@ The text to be translated.
 
 ### 返回值
 
-Return the *t61* translation of `value`.
+Return the *t61* translation of `value`, 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -33,14 +34,15 @@ Add entries to LDAP directory
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_add\_ext</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">string</span> `$dn`</span> , <span
-class="methodparam"><span class="type">array</span> `$entry`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$serverctrls`<span class="initializer"> = array()</span></span> \] )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">string</span> `$dn`</span>
+, <span class="methodparam"><span class="type">array</span>
+`$entry`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$controls`<span class="initializer"> = **`null`**</span></span> \] )
 
 Does the same thing as <span class="function">ldap\_add</span> but
 returns the LDAP result resource to be parsed with <span
@@ -52,7 +54,13 @@ See <span class="function">ldap\_add</span>
 
 ### 返回值
 
-Returns an LDAP result identifier or **`FALSE`** on error.
+Returns an LDAP result identifier or **`false`** on error.
+
+### 更新日志
+
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
 
 ### 注释
 
@@ -72,17 +80,18 @@ Add entries to LDAP directory
 
 <span class="type">bool</span> <span class="methodname">ldap\_add</span>
 ( <span class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
+`$ldap`</span> , <span class="methodparam"><span
 class="type">string</span> `$dn`</span> , <span
 class="methodparam"><span class="type">array</span> `$entry`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$serverctrls`<span class="initializer"> = array()</span></span> \] )
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$controls`<span class="initializer"> = **`null`**</span></span> \] )
 
 Add entries in the LDAP directory.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
@@ -103,19 +112,20 @@ $entry["attribute2"][1] = "value2";
 ?>
 ```
 
-`serverctrls`  
+`controls`  
 Array of <a href="/ldap/controls.html" class="link">LDAP Controls</a> to
 send with the request.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
-| 版本 | 说明                            |
-|------|---------------------------------|
-| 7.3  | Support for `serverctrls` added |
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 范例
 
@@ -160,16 +170,20 @@ Bind to LDAP directory
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_bind\_ext</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$bind_rdn`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$bind_password`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
-class="type">array</span> `$serverctrls`<span class="initializer"> =
-array()</span></span> \]\]\] )
+class="methodparam"><span class="type">resource</span> `$ldap`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$dn`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$password`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$controls`<span class="initializer"> = **`null`**</span></span> \]\]\]
+)
 
 Does the same thing as <span class="function">ldap\_bind</span> but
 returns the LDAP result resource to be parsed with <span
@@ -181,7 +195,13 @@ See <span class="function">ldap\_bind</span>
 
 ### 返回值
 
-Returns an LDAP result identifier or **`FALSE`** on error.
+Returns an LDAP result identifier or **`false`** on error.
+
+### 更新日志
+
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
 
 ### 参见
 
@@ -199,9 +219,9 @@ ldap\_bind
 class="methodname">ldap\_bind</span> ( <span class="methodparam"><span
 class="type">resource</span> `$link_identifier`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$bind_rdn`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
-`$bind_password`<span class="initializer"> = **`NULL`**</span></span>
+`$bind_password`<span class="initializer"> = **`null`**</span></span>
 \]\] )
 
 使用指定的 RDN 和密码绑定到 LDAP 目录。
@@ -220,7 +240,7 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -301,23 +321,24 @@ Compare value of attribute found in entry specified with DN
 
 ### 说明
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">bool</span><span
+class="type">int</span></span> <span
 class="methodname">ldap\_compare</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">string</span> `$dn`</span> , <span
-class="methodparam"><span class="type">string</span> `$attribute`</span>
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">string</span> `$dn`</span>
 , <span class="methodparam"><span class="type">string</span>
-`$value`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$serverctrls`<span class="initializer"> =
-array()</span></span> \] )
+`$attribute`</span> , <span class="methodparam"><span
+class="type">string</span> `$value`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$controls`<span class="initializer"> = **`null`**</span></span> \] )
 
 Compare `value` of `attribute` with value of same attribute in an LDAP
 directory entry.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
@@ -330,20 +351,21 @@ The attribute name.
 `value`  
 The compared value.
 
-`serverctrls`  
+`controls`  
 Array of <a href="/ldap/controls.html" class="link">LDAP Controls</a> to
 send with the request.
 
 ### 返回值
 
-Returns **`TRUE`** if `value` matches otherwise returns **`FALSE`**.
+Returns **`true`** if `value` matches otherwise returns **`false`**.
 Returns -1 on error.
 
 ### 更新日志
 
-| 版本 | 说明                            |
-|------|---------------------------------|
-| 7.3  | Support for `serverctrls` added |
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 范例
 
@@ -407,7 +429,7 @@ Connect to an LDAP server
 <span class="type">resource</span> <span
 class="methodname">ldap\_connect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$ldap_uri`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 **Warning**
 
@@ -418,7 +440,7 @@ anymore!
 <span class="type">resource</span> <span
 class="methodname">ldap\_connect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$host`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$port`<span
 class="initializer"> = 389</span></span> \]\] )
 
@@ -452,7 +474,7 @@ The port to connect to.
 Returns a positive LDAP link identifier when the provided LDAP URI seems
 plausible. It's a syntactic check of the provided parameter but the
 server(s) will not be contacted! If the syntactic check fails it returns
-**`FALSE`**. <span class="function">ldap\_connect</span> will otherwise
+**`false`**. <span class="function">ldap\_connect</span> will otherwise
 return a <span class="type">resource</span> as it does not actually
 connect but just initializes the connecting parameters. The actual
 connect happens with the next calls to ldap\_\* funcs, usually with
@@ -536,7 +558,7 @@ The estimated number of entries to retrieve.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -566,7 +588,7 @@ class="methodparam"><span class="type">resource</span> `$link`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$pagesize`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$iscritical`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$cookie`<span class="initializer"> =
 ""</span></span> \]\] )
 
@@ -592,7 +614,7 @@ class="function">ldap\_control\_paged\_result\_response</span>).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -679,25 +701,25 @@ Count the number of entries in a search
 
 <span class="type">int</span> <span
 class="methodname">ldap\_count\_entries</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">resource</span> `$result_identifier`</span> )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">resource</span>
+`$result`</span> )
 
 Returns the number of entries stored in the result of previous search
 operations.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`result_identifier`  
+`result`  
 The internal LDAP result.
 
 ### 返回值
 
-Returns number of entries in the result or **`FALSE`** on error.
+Returns number of entries in the result or **`false`** on error.
 
 ### 范例
 
@@ -729,13 +751,14 @@ Delete an entry from a directory
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_delete\_ext</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">string</span> `$dn`</span> \[, <span
-class="methodparam"><span class="type">array</span> `$serverctrls`<span
-class="initializer"> = array()</span></span> \] )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">string</span> `$dn`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$controls`<span class="initializer"> = **`null`**</span></span> \] )
 
 Does the same thing as <span class="function">ldap\_delete</span> but
 returns the LDAP result resource to be parsed with <span
@@ -747,7 +770,13 @@ See <span class="function">ldap\_delete</span>
 
 ### 返回值
 
-Returns an LDAP result identifier or **`FALSE`** on error.
+Returns an LDAP result identifier or **`false`** on error.
+
+### 更新日志
+
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
 
 ### 参见
 
@@ -763,35 +792,37 @@ Delete an entry from a directory
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_delete</span> ( <span class="methodparam"><span
-class="type">resource</span> `$link_identifier`</span> , <span
+class="type">resource</span> `$ldap`</span> , <span
 class="methodparam"><span class="type">string</span> `$dn`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$serverctrls`<span class="initializer"> = array()</span></span> \] )
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$controls`<span class="initializer"> = **`null`**</span></span> \] )
 
 Deletes a particular entry in LDAP directory.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
 `dn`  
 The distinguished name of an LDAP entity.
 
-`serverctrls`  
+`controls`  
 Array of <a href="/ldap/controls.html" class="link">LDAP Controls</a> to
 send with the request.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
-| 版本 | 说明                            |
-|------|---------------------------------|
-| 7.3  | Support for `serverctrls` added |
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 参见
 
@@ -805,7 +836,8 @@ Convert DN to User Friendly Naming format
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_dn2ufn</span> ( <span class="methodparam"><span
 class="type">string</span> `$dn`</span> )
 
@@ -819,7 +851,7 @@ The distinguished name of an LDAP entity.
 
 ### 返回值
 
-Returns the user friendly name.
+Returns the user friendly name, 或者在失败时返回 **`false`**.
 
 ldap\_err2str
 =============
@@ -872,7 +904,7 @@ Return the LDAP error number of the last LDAP command
 
 <span class="type">int</span> <span
 class="methodname">ldap\_errno</span> ( <span class="methodparam"><span
-class="type">resource</span> `$link_identifier`</span> )
+class="type">resource</span> `$ldap`</span> )
 
 Returns the standardized error number returned by the last LDAP command.
 This number can be converted into a textual error message using <span
@@ -880,7 +912,7 @@ class="function">ldap\_err2str</span>.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
@@ -928,13 +960,13 @@ Return the LDAP error message of the last LDAP command
 
 <span class="type">string</span> <span
 class="methodname">ldap\_error</span> ( <span class="methodparam"><span
-class="type">resource</span> `$link_identifier`</span> )
+class="type">resource</span> `$ldap`</span> )
 
 Returns the string error message explaining the error generated by the
-last LDAP command for the given `link_identifier`. While LDAP errno
-numbers are standardized, different libraries return different or even
-localized textual error messages. Never check for a specific error
-message text, but always use an error number to check.
+last LDAP command for the given `ldap`. While LDAP errno numbers are
+standardized, different libraries return different or even localized
+textual error messages. Never check for a specific error message text,
+but always use an error number to check.
 
 Unless you lower your warning level in your `php.ini` sufficiently or
 prefix your LDAP commands with *@* (at) characters to suppress warning
@@ -942,7 +974,7 @@ output, the errors generated will also show up in your HTML output.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
@@ -1021,38 +1053,39 @@ PASSWD extended operation helper
 
 ### 说明
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">ldap\_exop\_passwd</span> ( <span
-class="methodparam"><span class="type">resource</span> `$link`</span>
+class="methodparam"><span class="type">resource</span> `$ldap`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$user`<span class="initializer"> = ""</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$oldpw`<span
-class="initializer"> = ""</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$newpw`<span
-class="initializer"> = ""</span></span> \[, <span
-class="methodparam"><span class="type">array</span>
-`&$serverctrls`</span> \]\]\]\] )
+class="methodparam"><span class="type">string</span>
+`$old_password`<span class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">string</span>
+`$new_password`<span class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">array</span> `&$controls`<span
+class="initializer"> = **`null`**</span></span> \]\]\]\] )
 
 Performs a PASSWD extended operation.
 
 ### 参数
 
-`link`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
 `user`  
 dn of the user to change the password of.
 
-`oldpw`  
+`old_password`  
 The old password of this user. May be ommited depending of server
 configuration.
 
-`newpw`  
+`new_password`  
 The new password for this user. May be omitted or empty to have a
 generated password.
 
-`serverctrls`  
+`controls`  
 If provided, a password policy request control is send with the request
 and this is filled with an array of
 <a href="/ldap/controls.html" class="link">LDAP Controls</a> returned
@@ -1060,14 +1093,15 @@ with the request.
 
 ### 返回值
 
-Returns the generated password if `newpw` is empty or omitted. Otherwise
-returns **`TRUE`** on success and **`FALSE`** on failure.
+Returns the generated password if `new_password` is empty or omitted.
+Otherwise returns **`true`** on success and **`false`** on failure.
 
 ### 更新日志
 
-| 版本 | 说明                            |
-|------|---------------------------------|
-| 7.3  | Support for `serverctrls` added |
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 范例
 
@@ -1114,9 +1148,10 @@ Refresh extended operation helper
 
 ### 说明
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_exop\_refresh</span> ( <span
-class="methodparam"><span class="type">resource</span> `$link`</span> ,
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
 <span class="methodparam"><span class="type">string</span> `$dn`</span>
 , <span class="methodparam"><span class="type">int</span> `$ttl`</span>
 )
@@ -1125,7 +1160,7 @@ Performs a Refresh extended operation and returns the data.
 
 ### 参数
 
-`link`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
@@ -1144,7 +1179,7 @@ any smaller than that which the client requested, and it may be larger.
 However, to allow servers to maintain a relatively accurate directory,
 and to prevent clients from abusing the dynamic extensions, servers are
 permitted to shorten a client-requested time-to-live value, down to a
-minimum of 86400 seconds (one day). **`FALSE`** will be returned on
+minimum of 86400 seconds (one day). **`false`** will be returned on
 error.
 
 ### 参见
@@ -1158,21 +1193,22 @@ WHOAMI extended operation helper
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">ldap\_exop\_whoami</span> ( <span
-class="methodparam"><span class="type">resource</span> `$link`</span> )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> )
 
 Performs a WHOAMI extended operation and returns the data.
 
 ### 参数
 
-`link`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
 ### 返回值
 
-The data returned by the server, or **`FALSE`** on error.
+The data returned by the server, or **`false`** on error.
 
 ### 参见
 
@@ -1190,9 +1226,9 @@ class="methodname">ldap\_exop</span> ( <span class="methodparam"><span
 class="type">resource</span> `$link`</span> , <span
 class="methodparam"><span class="type">string</span> `$reqoid`</span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$reqdata`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$reqdata`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">array</span>
-`$serverctrls`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$serverctrls`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">string</span>
 `&$retdata`</span> \[, <span class="methodparam"><span
 class="type">string</span> `&$retoid`</span> \]\]\]\] )
@@ -1231,9 +1267,9 @@ request OID.
 
 ### 返回值
 
-When used with `retdata`, returns **`TRUE`** on success or **`FALSE`**
+When used with `retdata`, returns **`true`** on success or **`false`**
 on error. When used without `retdata`, returns a result identifier or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### 更新日志
 
@@ -1317,7 +1353,7 @@ set it to 1.
 
 ### 返回值
 
-Returns an array of all DN components, 或者在失败时返回 **`FALSE`**. The
+Returns an array of all DN components, 或者在失败时返回 **`false`**. The
 first element in the array has *count* key and represents the number of
 returned values, next elements are numerically indexed DN components.
 
@@ -1328,11 +1364,12 @@ Return first attribute
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_first\_attribute</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">resource</span> `$result_entry_identifier`</span> )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">resource</span>
+`$entry`</span> )
 
 Gets the first attribute in the given entry. Remaining attributes are
 retrieved by calling <span class="function">ldap\_next\_attribute</span>
@@ -1343,11 +1380,11 @@ particular entry.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`result_entry_identifier`  
+`entry`  
 
 `ber_identifier`  
 `ber_identifier` is the identifier to internal memory location pointer.
@@ -1363,7 +1400,7 @@ pointer.
 
 ### 返回值
 
-Returns the first attribute in the entry on success and **`FALSE`** on
+Returns the first attribute in the entry on success and **`false`** on
 error.
 
 ### 参见
@@ -1378,11 +1415,12 @@ Return first result id
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_first\_entry</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">resource</span> `$result_identifier`</span> )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">resource</span>
+`$result`</span> )
 
 Returns the entry identifier for first entry in the result. This entry
 identifier is then supplied to <span
@@ -1395,16 +1433,16 @@ class="function">ldap\_next\_entry</span> functions.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`result_identifier`  
+`result`  
 
 ### 返回值
 
 Returns the result entry identifier for the first entry on success and
-**`FALSE`** on error.
+**`false`** on error.
 
 ### 参见
 
@@ -1417,9 +1455,10 @@ Return first reference
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_first\_reference</span> ( <span
-class="methodparam"><span class="type">resource</span> `$link`</span> ,
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
 <span class="methodparam"><span class="type">resource</span>
 `$result`</span> )
 
@@ -1436,8 +1475,7 @@ Free result memory
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_free\_result</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$result_identifier`</span> )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> )
 
 Frees up the memory allocated internally to store the result. All result
 memory will be automatically freed when the script terminates.
@@ -1450,11 +1488,11 @@ runtime memory usage by the script low.
 
 ### 参数
 
-`result_identifier`  
+`ldap`  
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ldap\_get\_attributes
 =====================
@@ -1465,9 +1503,9 @@ Get attributes from a search result entry
 
 <span class="type">array</span> <span
 class="methodname">ldap\_get\_attributes</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">resource</span> `$result_entry_identifier`</span> )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">resource</span>
+`$entry`</span> )
 
 Reads attributes and values from an entry in the search result.
 
@@ -1488,16 +1526,16 @@ email address or a surname, and won't care what other data is held.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`result_entry_identifier`  
+`entry`  
 
 ### 返回值
 
 Returns a complete entry information in a multi-dimensional array on
-success and **`FALSE`** on error.
+success and **`false`** on error.
 
 ### 范例
 
@@ -1535,25 +1573,26 @@ Get the DN of a result entry
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_get\_dn</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">resource</span> `$result_entry_identifier`</span> )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">resource</span>
+`$entry`</span> )
 
 Finds out the DN of an entry in the result.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`result_entry_identifier`  
+`entry`  
 
 ### 返回值
 
-Returns the DN of the result entry and **`FALSE`** on error.
+Returns the DN of the result entry and **`false`** on error.
 
 ldap\_get\_entries
 ==================
@@ -1562,27 +1601,28 @@ Get all result entries
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_get\_entries</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">resource</span> `$result_identifier`</span> )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">resource</span>
+`$result`</span> )
 
 Reads multiple entries from the given result, and then reading the
 attributes and multiple values.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`result_identifier`  
+`result`  
 
 ### 返回值
 
 Returns a complete result information in a multi-dimensional array on
-success and **`FALSE`** on error.
+success and **`false`** on error.
 
 The structure of the array is as follows. The attribute index is
 converted to lowercase. (Attributes are case-insensitive for directory
@@ -1614,63 +1654,65 @@ Get the current value for given option
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_get\_option</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">int</span> `$option`</span> , <span
-class="methodparam"><span class="type">mixed</span> `&$retval`</span> )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">int</span> `$option`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">int</span></span> `&$value`<span class="initializer"> =
+**`null`**</span></span> \] )
 
-Sets `retval` to the value of the specified option.
+Sets `value` to the value of the specified option.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
 `option`  
 The parameter `option` can be one of:
 
-| Option                              | Type    | since |
-|-------------------------------------|---------|-------|
-| **`LDAP_OPT_DEREF`**                | integer |       |
-| **`LDAP_OPT_SIZELIMIT`**            | integer |       |
-| **`LDAP_OPT_TIMELIMIT`**            | integer |       |
-| **`LDAP_OPT_NETWORK_TIMEOUT`**      | integer |       |
-| **`LDAP_OPT_PROTOCOL_VERSION`**     | integer |       |
-| **`LDAP_OPT_ERROR_NUMBER`**         | integer |       |
-| **`LDAP_OPT_DIAGNOSTIC_MESSAGE`**   | integer |       |
-| **`LDAP_OPT_REFERRALS`**            | bool    |       |
-| **`LDAP_OPT_RESTART`**              | bool    |       |
-| **`LDAP_OPT_HOST_NAME`**            | string  |       |
-| **`LDAP_OPT_ERROR_STRING`**         | string  |       |
-| **`LDAP_OPT_MATCHED_DN`**           | string  |       |
-| **`LDAP_OPT_SERVER_CONTROLS`**      | array   |       |
-| **`LDAP_OPT_CLIENT_CONTROLS`**      | array   |       |
-| **`LDAP_OPT_X_KEEPALIVE_IDLE`**     | int     | 7.1   |
-| **`LDAP_OPT_X_KEEPALIVE_PROBES`**   | int     | 7.1   |
-| **`LDAP_OPT_X_KEEPALIVE_INTERVAL`** | int     | 7.1   |
-| **`LDAP_OPT_X_TLS_CACERTDIR`**      | string  | 7.1   |
-| **`LDAP_OPT_X_TLS_CACERTFILE`**     | string  | 7.1   |
-| **`LDAP_OPT_X_TLS_CERTFILE`**       | string  | 7.1   |
-| **`LDAP_OPT_X_TLS_CIPHER_SUITE`**   | string  | 7.1   |
-| **`LDAP_OPT_X_TLS_CRLCHECK`**       | integer | 7.1   |
-| **`LDAP_OPT_X_TLS_CRL_NONE`**       | integer | 7.1   |
-| **`LDAP_OPT_X_TLS_CRL_PEER`**       | integer | 7.1   |
-| **`LDAP_OPT_X_TLS_CRL_ALL`**        | integer | 7.1   |
-| **`LDAP_OPT_X_TLS_CRLFILE`**        | string  | 7.1   |
-| **`LDAP_OPT_X_TLS_DHFILE`**         | string  | 7.1   |
-| **`LDAP_OPT_X_TLS_KEYILE`**         | string  | 7.1   |
-| **`LDAP_OPT_X_TLS_PACKAGE`**        | string  | 7.1   |
-| **`LDAP_OPT_X_TLS_PROTOCOL_MIN`**   | integer | 7.1   |
-| **`LDAP_OPT_X_TLS_RANDOM_FILE`**    | string  | 7.1   |
-| **`LDAP_OPT_X_TLS_REQUIRE_CERT`**   | integer |       |
+| Option                              | Type                             | since |
+|-------------------------------------|----------------------------------|-------|
+| **`LDAP_OPT_DEREF`**                | <span class="type">int</span>    |       |
+| **`LDAP_OPT_SIZELIMIT`**            | <span class="type">int</span>    |       |
+| **`LDAP_OPT_TIMELIMIT`**            | <span class="type">int</span>    |       |
+| **`LDAP_OPT_NETWORK_TIMEOUT`**      | <span class="type">int</span>    |       |
+| **`LDAP_OPT_PROTOCOL_VERSION`**     | <span class="type">int</span>    |       |
+| **`LDAP_OPT_ERROR_NUMBER`**         | <span class="type">int</span>    |       |
+| **`LDAP_OPT_DIAGNOSTIC_MESSAGE`**   | <span class="type">int</span>    |       |
+| **`LDAP_OPT_REFERRALS`**            | <span class="type">int</span>    |       |
+| **`LDAP_OPT_RESTART`**              | <span class="type">int</span>    |       |
+| **`LDAP_OPT_HOST_NAME`**            | <span class="type">string</span> |       |
+| **`LDAP_OPT_ERROR_STRING`**         | <span class="type">string</span> |       |
+| **`LDAP_OPT_MATCHED_DN`**           | <span class="type">string</span> |       |
+| **`LDAP_OPT_SERVER_CONTROLS`**      | <span class="type">array</span>  |       |
+| **`LDAP_OPT_CLIENT_CONTROLS`**      | <span class="type">array</span>  |       |
+| **`LDAP_OPT_X_KEEPALIVE_IDLE`**     | <span class="type">int</span>    | 7.1   |
+| **`LDAP_OPT_X_KEEPALIVE_PROBES`**   | <span class="type">int</span>    | 7.1   |
+| **`LDAP_OPT_X_KEEPALIVE_INTERVAL`** | <span class="type">int</span>    | 7.1   |
+| **`LDAP_OPT_X_TLS_CACERTDIR`**      | <span class="type">string</span> | 7.1   |
+| **`LDAP_OPT_X_TLS_CACERTFILE`**     | <span class="type">string</span> | 7.1   |
+| **`LDAP_OPT_X_TLS_CERTFILE`**       | <span class="type">string</span> | 7.1   |
+| **`LDAP_OPT_X_TLS_CIPHER_SUITE`**   | <span class="type">string</span> | 7.1   |
+| **`LDAP_OPT_X_TLS_CRLCHECK`**       | <span class="type">int</span>    | 7.1   |
+| **`LDAP_OPT_X_TLS_CRL_NONE`**       | <span class="type">int</span>    | 7.1   |
+| **`LDAP_OPT_X_TLS_CRL_PEER`**       | <span class="type">int</span>    | 7.1   |
+| **`LDAP_OPT_X_TLS_CRL_ALL`**        | <span class="type">int</span>    | 7.1   |
+| **`LDAP_OPT_X_TLS_CRLFILE`**        | <span class="type">string</span> | 7.1   |
+| **`LDAP_OPT_X_TLS_DHFILE`**         | <span class="type">string</span> | 7.1   |
+| **`LDAP_OPT_X_TLS_KEYILE`**         | <span class="type">string</span> | 7.1   |
+| **`LDAP_OPT_X_TLS_PACKAGE`**        | <span class="type">string</span> | 7.1   |
+| **`LDAP_OPT_X_TLS_PROTOCOL_MIN`**   | <span class="type">int</span>    | 7.1   |
+| **`LDAP_OPT_X_TLS_RANDOM_FILE`**    | <span class="type">string</span> | 7.1   |
+| **`LDAP_OPT_X_TLS_REQUIRE_CERT`**   | <span class="type">int</span>    |       |
 
-`retval`  
+`value`  
 This will be set to the option value.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1705,13 +1747,13 @@ Get all binary values from a result entry
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_get\_values\_len</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">resource</span> `$result_entry_identifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$attribute`</span>
-)
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">resource</span>
+`$entry`</span> , <span class="methodparam"><span
+class="type">string</span> `$attribute`</span> )
 
 Reads all the values of the attribute in the entry in the result.
 
@@ -1721,17 +1763,17 @@ data and not string data.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`result_entry_identifier`  
+`entry`  
 
 `attribute`  
 
 ### 返回值
 
-Returns an array of values for the attribute on success and **`FALSE`**
+Returns an array of values for the attribute on success and **`false`**
 on error. Individual values are accessed by integer index in the array.
 The first index is 0. The number of values can be found by indexing
 "count" in the resultant array.
@@ -1747,19 +1789,18 @@ Get all values from a result entry
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_get\_values</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">resource</span> `$result_entry_identifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$attribute`</span>
-)
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">resource</span>
+`$entry`</span> , <span class="methodparam"><span
+class="type">string</span> `$attribute`</span> )
 
 Reads all the values of the attribute in the entry in the result.
 
-This call needs a `result_entry_identifier`, so needs to be preceded by
-one of the ldap search calls and one of the calls to get an individual
-entry.
+This call needs a `entry`, so needs to be preceded by one of the ldap
+search calls and one of the calls to get an individual entry.
 
 You application will either be hard coded to look for certain attributes
 (such as "surname" or "mail") or you will have to use the <span
@@ -1768,17 +1809,17 @@ attributes exist for a given entry.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`result_entry_identifier`  
+`entry`  
 
 `attribute`  
 
 ### 返回值
 
-Returns an array of values for the attribute on success and **`FALSE`**
+Returns an array of values for the attribute on success and **`false`**
 on error. The number of values can be found by indexing "count" in the
 resultant array. Individual values are accessed by integer index in the
 array. The first index is 0.
@@ -1926,7 +1967,7 @@ send with the request.
 
 ### 返回值
 
-Returns a search result identifier or **`FALSE`** on error.
+Returns a search result identifier or **`false`** on error.
 
 ### 更新日志
 
@@ -1967,14 +2008,15 @@ Add attribute values to current attributes
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_mod\_add\_ext</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">string</span> `$dn`</span> , <span
-class="methodparam"><span class="type">array</span> `$entry`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$serverctrls`<span class="initializer"> = array()</span></span> \] )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">string</span> `$dn`</span>
+, <span class="methodparam"><span class="type">array</span>
+`$entry`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$controls`<span class="initializer"> = **`null`**</span></span> \] )
 
 Does the same thing as <span class="function">ldap\_mod\_add</span> but
 returns the LDAP result resource to be parsed with <span
@@ -1986,7 +2028,14 @@ See <span class="function">ldap\_mod\_add</span>
 
 ### 返回值
 
-Returns an LDAP result identifier or **`FALSE`** on error.
+Returns an LDAP result identifier or **`false`** on error.
+
+### 更新日志
+
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 参见
 
@@ -2002,19 +2051,19 @@ Add attribute values to current attributes
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_mod\_add</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">string</span> `$dn`</span> , <span
-class="methodparam"><span class="type">array</span> `$entry`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$serverctrls`<span class="initializer"> = array()</span></span> \] )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">string</span> `$dn`</span>
+, <span class="methodparam"><span class="type">array</span>
+`$entry`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$controls`<span class="initializer"> = **`null`**</span></span> \] )
 
 Adds one or more attribute values to the specified `dn`. To add a whole
 new object see <span class="function">ldap\_add</span> function.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
@@ -2026,19 +2075,20 @@ An associative array listing the attirbute values to add. If an
 attribute was not existing yet it will be added. If an attribute is
 existing you can only add values to it if it supports multiple values.
 
-`serverctrls`  
+`controls`  
 Array of <a href="/ldap/controls.html" class="link">LDAP Controls</a> to
 send with the request.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
-| 版本 | 说明                            |
-|------|---------------------------------|
-| 7.3  | Support for `serverctrls` added |
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 注释
 
@@ -2058,14 +2108,15 @@ Delete attribute values from current attributes
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_mod\_del\_ext</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">string</span> `$dn`</span> , <span
-class="methodparam"><span class="type">array</span> `$entry`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$serverctrls`<span class="initializer"> = array()</span></span> \] )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">string</span> `$dn`</span>
+, <span class="methodparam"><span class="type">array</span>
+`$entry`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$controls`<span class="initializer"> = **`null`**</span></span> \] )
 
 Does the same thing as <span class="function">ldap\_mod\_del</span> but
 returns the LDAP result resource to be parsed with <span
@@ -2075,9 +2126,16 @@ class="function">ldap\_parse\_result</span>.
 
 See <span class="function">ldap\_mod\_del</span>
 
+### 更新日志
+
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
+
 ### 返回值
 
-Returns an LDAP result identifier or **`FALSE`** on error.
+Returns an LDAP result identifier or **`false`** on error.
 
 ### 参见
 
@@ -2093,12 +2151,12 @@ Delete attribute values from current attributes
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_mod\_del</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">string</span> `$dn`</span> , <span
-class="methodparam"><span class="type">array</span> `$entry`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$serverctrls`<span class="initializer"> = array()</span></span> \] )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">string</span> `$dn`</span>
+, <span class="methodparam"><span class="type">array</span>
+`$entry`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$controls`<span class="initializer"> = **`null`**</span></span> \] )
 
 Removes one or more attribute values from the specified `dn`. Object
 deletions are done by the <span class="function">ldap\_delete</span>
@@ -2106,7 +2164,7 @@ function.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
@@ -2115,19 +2173,20 @@ The distinguished name of an LDAP entity.
 
 `entry`  
 
-`serverctrls`  
+`controls`  
 Array of <a href="/ldap/controls.html" class="link">LDAP Controls</a> to
 send with the request.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
-| 版本 | 说明                            |
-|------|---------------------------------|
-| 7.3  | Support for `serverctrls` added |
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 参见
 
@@ -2143,14 +2202,15 @@ Replace attribute values with new ones
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_mod\_replace\_ext</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">string</span> `$dn`</span> , <span
-class="methodparam"><span class="type">array</span> `$entry`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$serverctrls`<span class="initializer"> = array()</span></span> \] )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">string</span> `$dn`</span>
+, <span class="methodparam"><span class="type">array</span>
+`$entry`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$controls`<span class="initializer"> = **`null`**</span></span> \] )
 
 Does the same thing as <span class="function">ldap\_mod\_replace</span>
 but returns the LDAP result resource to be parsed with <span
@@ -2162,7 +2222,14 @@ See <span class="function">ldap\_mod\_replace</span>
 
 ### 返回值
 
-Returns an LDAP result identifier or **`FALSE`** on error.
+Returns an LDAP result identifier or **`false`** on error.
+
+### 更新日志
+
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 参见
 
@@ -2178,19 +2245,19 @@ Replace attribute values with new ones
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_mod\_replace</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">string</span> `$dn`</span> , <span
-class="methodparam"><span class="type">array</span> `$entry`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$serverctrls`<span class="initializer"> = array()</span></span> \] )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">string</span> `$dn`</span>
+, <span class="methodparam"><span class="type">array</span>
+`$entry`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$controls`<span class="initializer"> = **`null`**</span></span> \] )
 
 Replaces one or more attributes from the specified `dn`. It may also add
 or remove attributes.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
@@ -2202,19 +2269,20 @@ An associative array listing the attributes to replace. Sending an empty
 array as value will remove the attribute, while sending an attribute not
 existing yet on this entry will add it.
 
-`serverctrls`  
+`controls`  
 Array of <a href="/ldap/controls.html" class="link">LDAP Controls</a> to
 send with the request.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
-| 版本 | 说明                            |
-|------|---------------------------------|
-| 7.3  | Support for `serverctrls` added |
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 注释
 
@@ -2236,26 +2304,27 @@ Batch and execute modifications on an LDAP entry
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_modify\_batch</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">string</span> `$dn`</span> , <span
-class="methodparam"><span class="type">array</span> `$entry`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$serverctrls`<span class="initializer"> = array()</span></span> \] )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">string</span> `$dn`</span>
+, <span class="methodparam"><span class="type">array</span>
+`$modifications_info`</span> \[, <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">null</span></span> `$controls`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 Modifies an existing entry in the LDAP directory. Allows detailed
 specification of the modifications to perform.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
 `dn`  
 The distinguished name of an LDAP entity.
 
-`entry`  
+`modifications_info`  
 An array that specifies the modifications to make. Each entry in this
 array is an associative array with two or three keys: *attrib* maps to
 the name of the attribute to modify, *modtype* maps to the type of
@@ -2286,19 +2355,20 @@ Note that any value for *attrib* must be a string, any value for
 *values* must be an array of strings, and any value for *modtype* must
 be one of the LDAP\_MODIFY\_BATCH\_\* constants listed above.
 
-`serverctrls`  
+`controls`  
 Array of <a href="/ldap/controls.html" class="link">LDAP Controls</a> to
 send with the request.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
-| 版本 | 说明                            |
-|------|---------------------------------|
-| 7.3  | Support for `serverctrls` added |
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 范例
 
@@ -2425,24 +2495,24 @@ Get the next attribute in result
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_next\_attribute</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">resource</span> `$result_entry_identifier`</span> )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">resource</span>
+`$entry`</span> )
 
 Retrieves the attributes in an entry. The first call to <span
-class="function">ldap\_next\_attribute</span> is made with the
-`result_entry_identifier` returned from <span
-class="function">ldap\_first\_attribute</span>.
+class="function">ldap\_next\_attribute</span> is made with the `entry`
+returned from <span class="function">ldap\_first\_attribute</span>.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`result_entry_identifier`  
+`entry`  
 
 `ber_identifier`  
 The internal state of the pointer is maintained by this parameter.
@@ -2455,7 +2525,7 @@ The internal state of the pointer is maintained by this parameter.
 
 ### 返回值
 
-Returns the next attribute in an entry on success and **`FALSE`** on
+Returns the next attribute in an entry on success and **`false`** on
 error.
 
 ### 参见
@@ -2469,34 +2539,34 @@ Get next result entry
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_next\_entry</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">resource</span> `$result_entry_identifier`</span> )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">resource</span>
+`$result`</span> )
 
 Retrieve the entries stored in the result. Successive calls to the <span
 class="function">ldap\_next\_entry</span> return entries one by one till
 there are no more entries. The first call to <span
 class="function">ldap\_next\_entry</span> is made after the call to
-<span class="function">ldap\_first\_entry</span> with the
-`result_entry_identifier` as returned from the <span
-class="function">ldap\_first\_entry</span>.
+<span class="function">ldap\_first\_entry</span> with the `result` as
+returned from the <span class="function">ldap\_first\_entry</span>.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`result_entry_identifier`  
+`result`  
 
 ### 返回值
 
 Returns entry identifier for the next entry in the result whose entries
 are being read starting with <span
 class="function">ldap\_first\_entry</span>. If there are no more entries
-in the result then it returns **`FALSE`**.
+in the result then it returns **`false`**.
 
 ### 参见
 
@@ -2509,9 +2579,10 @@ Get next reference
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_next\_reference</span> ( <span
-class="methodparam"><span class="type">resource</span> `$link`</span> ,
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
 <span class="methodparam"><span class="type">resource</span>
 `$entry`</span> )
 
@@ -2528,18 +2599,19 @@ Parse result object from an LDAP extended operation
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_parse\_exop</span> ( <span
-class="methodparam"><span class="type">resource</span> `$link`</span> ,
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
 <span class="methodparam"><span class="type">resource</span>
 `$result`</span> \[, <span class="methodparam"><span
-class="type">string</span> `&$retdata`</span> \[, <span
-class="methodparam"><span class="type">string</span> `&$retoid`</span>
-\]\] )
+class="type">string</span> `&$response_data`<span class="initializer"> =
+**`null`**</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `&$response_oid`<span class="initializer"> =
+**`null`**</span></span> \]\] )
 
 Parse LDAP extended operation data from result object `result`
 
 ### 参数
 
-`link`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
@@ -2547,15 +2619,15 @@ class="function">ldap\_connect</span>.
 An LDAP result resource, returned by <span
 class="function">ldap\_exop</span>.
 
-`retdata`  
+`response_data`  
 Will be filled by the response data.
 
-`retoid`  
+`response_oid`  
 Will be filled by the response OID.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2570,7 +2642,7 @@ Extract information from reference entry
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_parse\_reference</span> ( <span
-class="methodparam"><span class="type">resource</span> `$link`</span> ,
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
 <span class="methodparam"><span class="type">resource</span>
 `$entry`</span> , <span class="methodparam"><span
 class="type">array</span> `&$referrals`</span> )
@@ -2588,22 +2660,25 @@ Extract information from result
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_parse\_result</span> ( <span
-class="methodparam"><span class="type">resource</span> `$link`</span> ,
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
 <span class="methodparam"><span class="type">resource</span>
 `$result`</span> , <span class="methodparam"><span
-class="type">int</span> `&$errcode`</span> \[, <span
+class="type">int</span> `&$error_code`</span> \[, <span
+class="methodparam"><span class="type">string</span> `&$matched_dn`<span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
-`&$matcheddn`</span> \[, <span class="methodparam"><span
-class="type">string</span> `&$errmsg`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$referrals`</span>
+`&$error_message`<span class="initializer"> = **`null`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
-`&$serverctrls`</span> \]\]\]\] )
+`&$referrals`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type">array</span>
+`&$controls`<span class="initializer"> = **`null`**</span></span>
+\]\]\]\] )
 
 Parses an LDAP search result.
 
 ### 参数
 
-`link`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
@@ -2612,15 +2687,15 @@ An LDAP result resource, returned by <span
 class="function">ldap\_list</span> or <span
 class="function">ldap\_search</span>.
 
-`errcode`  
+`error_code`  
 A reference to a variable that will be set to the LDAP error code in the
 result, or *0* if no error occurred.
 
-`matcheddn`  
+`matched_dn`  
 A reference to a variable that will be set to a matched DN if one was
-recognised within the request, otherwise it will be set to **`NULL`**.
+recognised within the request, otherwise it will be set to **`null`**.
 
-`errmsg`  
+`error_message`  
 A reference to a variable that will be set to the LDAP error message in
 the result, or an empty string if no error occurred.
 
@@ -2629,19 +2704,19 @@ A reference to a variable that will be set to an <span
 class="type">array</span> set to all of the referral strings in the
 result, or an empty array if no referrals were returned.
 
-`serverctrls`  
+`controls`  
 An <span class="type">array</span> of LDAP Controls which have been sent
 with the response.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
-| 版本 | 说明                            |
-|------|---------------------------------|
-| 7.3  | Support for `serverctrls` added |
+| 版本 | 说明                         |
+|------|------------------------------|
+| 7.3  | Support for `controls` added |
 
 ### 范例
 
@@ -2760,7 +2835,7 @@ send with the request.
 
 ### 返回值
 
-Returns a search result identifier or **`FALSE`** on error.
+Returns a search result identifier or **`false`** on error.
 
 ### 更新日志
 
@@ -2776,17 +2851,19 @@ Modify the name of an entry
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_rename\_ext</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">string</span> `$dn`</span> , <span
-class="methodparam"><span class="type">string</span> `$newrdn`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$newparent`</span> , <span class="methodparam"><span
-class="type">bool</span> `$deleteoldrdn`</span> \[, <span
-class="methodparam"><span class="type">array</span> `$serverctrls`<span
-class="initializer"> = array()</span></span> \] )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type">string</span> `$dn`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$new_rdn`</span> , <span class="methodparam"><span
+class="type">string</span> `$new_parent`</span> , <span
+class="methodparam"><span class="type">bool</span>
+`$delete_old_rdn`</span> \[, <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">null</span></span> `$controls`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 Does the same thing as <span class="function">ldap\_rename</span> but
 returns the LDAP result resource to be parsed with <span
@@ -2798,7 +2875,14 @@ See <span class="function">ldap\_rename</span>
 
 ### 返回值
 
-Returns an LDAP result identifier or **`FALSE`** on error.
+Returns an LDAP result identifier or **`false`** on error.
+
+### 更新日志
+
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 参见
 
@@ -2814,50 +2898,52 @@ Modify the name of an entry
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_rename</span> ( <span class="methodparam"><span
-class="type">resource</span> `$link_identifier`</span> , <span
+class="type">resource</span> `$ldap`</span> , <span
 class="methodparam"><span class="type">string</span> `$dn`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$newrdn`</span> , <span class="methodparam"><span
-class="type">string</span> `$newparent`</span> , <span
+`$new_rdn`</span> , <span class="methodparam"><span
+class="type">string</span> `$new_parent`</span> , <span
 class="methodparam"><span class="type">bool</span>
-`$deleteoldrdn`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$serverctrls`<span class="initializer"> =
-array()</span></span> \] )
+`$delete_old_rdn`</span> \[, <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">null</span></span> `$controls`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 The entry specified by `dn` is renamed/moved.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
 `dn`  
 The distinguished name of an LDAP entity.
 
-`newrdn`  
+`new_rdn`  
 The new RDN.
 
-`newparent`  
+`new_parent`  
 The new parent/superior entry.
 
-`deleteoldrdn`  
-If **`TRUE`** the old RDN value(s) is removed, else the old RDN value(s)
+`delete_old_rdn`  
+If **`true`** the old RDN value(s) is removed, else the old RDN value(s)
 is retained as non-distinguished values of the entry.
 
-`serverctrls`  
+`controls`  
 Array of <a href="/ldap/controls.html" class="link">LDAP Controls</a> to
 send with the request.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
-| 版本 | 说明                            |
-|------|---------------------------------|
-| 7.3  | Support for `serverctrls` added |
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 注释
 
@@ -2882,21 +2968,28 @@ Bind to LDAP directory using SASL
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_sasl\_bind</span> ( <span
-class="methodparam"><span class="type">resource</span> `$link`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$binddn`<span class="initializer"> = **`NULL`**</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$password`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$sasl_mech`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$sasl_realm`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
-class="methodparam"><span class="type">string</span>
-`$sasl_authc_id`<span class="initializer"> = **`NULL`**</span></span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$sasl_authz_id`<span class="initializer"> = **`NULL`**</span></span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$props`<span class="initializer"> = **`NULL`**</span></span>
+class="methodparam"><span class="type">resource</span> `$ldap`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$dn`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$password`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$mech`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$realm`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$authc_id`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$authz_id`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$props`<span class="initializer"> = **`null`**</span></span>
 \]\]\]\]\]\]\] )
 
 **Warning**
@@ -2905,7 +2998,13 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
+
+### 更新日志
+
+| 版本  | 说明                                                                                    |
+|-------|-----------------------------------------------------------------------------------------|
+| 8.0.0 | `dn`, `password`, `mech`, `realm`, `authc_id`, `authz_id` and `props` are nullable now. |
 
 ### 注释
 
@@ -2954,10 +3053,10 @@ link identifier array since the first entries of the arrays are used for
 one search, the second entries are used for another, and so on. When
 doing parallel searches an array of search result identifiers is
 returned, except in case of error, then the entry corresponding to the
-search will be **`FALSE`**. This is very much like the value normally
+search will be **`false`**. This is very much like the value normally
 returned, except that a result identifier is always returned when a
 search was made. There are some rare cases where the normal search
-returns **`FALSE`** while the parallel search returns an identifier.
+returns **`false`** while the parallel search returns an identifier.
 
 ### 参数
 
@@ -3034,7 +3133,7 @@ send with the request.
 
 ### 返回值
 
-Returns a search result identifier or **`FALSE`** on error.
+Returns a search result identifier or **`false`** on error.
 
 ### 更新日志
 
@@ -3079,52 +3178,55 @@ Set the value of the given option
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_set\_option</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$link_identifier`</span> , <span class="methodparam"><span
-class="type">int</span> `$option`</span> , <span
-class="methodparam"><span class="type">mixed</span> `$newval`</span> )
+class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">null</span></span>
+`$ldap`</span> , <span class="methodparam"><span class="type">int</span>
+`$option`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">int</span><span class="type">bool</span></span>
+`$value`</span> )
 
-Sets the value of the specified option to be `newval`.
+Sets the value of the specified option to be `value`.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
 `option`  
 The parameter `option` can be one of:
 
-| Option                              | Type    | Available since |
-|-------------------------------------|---------|-----------------|
-| **`LDAP_OPT_DEREF`**                | integer |                 |
-| **`LDAP_OPT_SIZELIMIT`**            | integer |                 |
-| **`LDAP_OPT_TIMELIMIT`**            | integer |                 |
-| **`LDAP_OPT_NETWORK_TIMEOUT`**      | integer | PHP 5.3.0       |
-| **`LDAP_OPT_PROTOCOL_VERSION`**     | integer |                 |
-| **`LDAP_OPT_ERROR_NUMBER`**         | integer |                 |
-| **`LDAP_OPT_REFERRALS`**            | bool    |                 |
-| **`LDAP_OPT_RESTART`**              | bool    |                 |
-| **`LDAP_OPT_HOST_NAME`**            | string  |                 |
-| **`LDAP_OPT_ERROR_STRING`**         | string  |                 |
-| **`LDAP_OPT_DIAGNOSTIC_MESSAGE`**   | string  |                 |
-| **`LDAP_OPT_MATCHED_DN`**           | string  |                 |
-| **`LDAP_OPT_SERVER_CONTROLS`**      | array   |                 |
-| **`LDAP_OPT_CLIENT_CONTROLS`**      | array   |                 |
-| **`LDAP_OPT_X_KEEPALIVE_IDLE`**     | int     | PHP 7.1.0       |
-| **`LDAP_OPT_X_KEEPALIVE_PROBES`**   | int     | PHP 7.1.0       |
-| **`LDAP_OPT_X_KEEPALIVE_INTERVAL`** | int     | PHP 7.1.0       |
-| **`LDAP_OPT_X_TLS_CACERTDIR`**      | string  | PHP 7.1.0       |
-| **`LDAP_OPT_X_TLS_CACERTFILE`**     | string  | PHP 7.1.0       |
-| **`LDAP_OPT_X_TLS_CERTFILE`**       | string  | PHP 7.1.0       |
-| **`LDAP_OPT_X_TLS_CIPHER_SUITE`**   | string  | PHP 7.1.0       |
-| **`LDAP_OPT_X_TLS_CRLCHECK`**       | integer | PHP 7.1.0       |
-| **`LDAP_OPT_X_TLS_CRLFILE`**        | string  | PHP 7.1.0       |
-| **`LDAP_OPT_X_TLS_DHFILE`**         | string  | PHP 7.1.0       |
-| **`LDAP_OPT_X_TLS_KEYFILE`**        | string  | PHP 7.1.0       |
-| **`LDAP_OPT_X_TLS_PROTOCOL_MIN`**   | integer | PHP 7.1.0       |
-| **`LDAP_OPT_X_TLS_RANDOM_FILE`**    | string  | PHP 7.1.0       |
-| **`LDAP_OPT_X_TLS_REQUIRE_CERT`**   | integer | PHP 7.0.5       |
+| Option                              | Type                             | Available since |
+|-------------------------------------|----------------------------------|-----------------|
+| **`LDAP_OPT_DEREF`**                | <span class="type">int</span>    |                 |
+| **`LDAP_OPT_SIZELIMIT`**            | <span class="type">int</span>    |                 |
+| **`LDAP_OPT_TIMELIMIT`**            | <span class="type">int</span>    |                 |
+| **`LDAP_OPT_NETWORK_TIMEOUT`**      | <span class="type">int</span>    |                 |
+| **`LDAP_OPT_PROTOCOL_VERSION`**     | <span class="type">int</span>    |                 |
+| **`LDAP_OPT_ERROR_NUMBER`**         | <span class="type">int</span>    |                 |
+| **`LDAP_OPT_REFERRALS`**            | <span class="type">bool</span>   |                 |
+| **`LDAP_OPT_RESTART`**              | <span class="type">bool</span>   |                 |
+| **`LDAP_OPT_HOST_NAME`**            | <span class="type">string</span> |                 |
+| **`LDAP_OPT_ERROR_STRING`**         | <span class="type">string</span> |                 |
+| **`LDAP_OPT_DIAGNOSTIC_MESSAGE`**   | <span class="type">string</span> |                 |
+| **`LDAP_OPT_MATCHED_DN`**           | <span class="type">string</span> |                 |
+| **`LDAP_OPT_SERVER_CONTROLS`**      | <span class="type">array</span>  |                 |
+| **`LDAP_OPT_CLIENT_CONTROLS`**      | <span class="type">array</span>  |                 |
+| **`LDAP_OPT_X_KEEPALIVE_IDLE`**     | <span class="type">int</span>    | PHP 7.1.0       |
+| **`LDAP_OPT_X_KEEPALIVE_PROBES`**   | <span class="type">int</span>    | PHP 7.1.0       |
+| **`LDAP_OPT_X_KEEPALIVE_INTERVAL`** | <span class="type">int</span>    | PHP 7.1.0       |
+| **`LDAP_OPT_X_TLS_CACERTDIR`**      | <span class="type">string</span> | PHP 7.1.0       |
+| **`LDAP_OPT_X_TLS_CACERTFILE`**     | <span class="type">string</span> | PHP 7.1.0       |
+| **`LDAP_OPT_X_TLS_CERTFILE`**       | <span class="type">string</span> | PHP 7.1.0       |
+| **`LDAP_OPT_X_TLS_CIPHER_SUITE`**   | <span class="type">string</span> | PHP 7.1.0       |
+| **`LDAP_OPT_X_TLS_CRLCHECK`**       | <span class="type">int</span>    | PHP 7.1.0       |
+| **`LDAP_OPT_X_TLS_CRLFILE`**        | <span class="type">string</span> | PHP 7.1.0       |
+| **`LDAP_OPT_X_TLS_DHFILE`**         | <span class="type">string</span> | PHP 7.1.0       |
+| **`LDAP_OPT_X_TLS_KEYFILE`**        | <span class="type">string</span> | PHP 7.1.0       |
+| **`LDAP_OPT_X_TLS_PROTOCOL_MIN`**   | <span class="type">int</span>    | PHP 7.1.0       |
+| **`LDAP_OPT_X_TLS_RANDOM_FILE`**    | <span class="type">string</span> | PHP 7.1.0       |
+| **`LDAP_OPT_X_TLS_REQUIRE_CERT`**   | <span class="type">int</span>    | PHP 7.0.5       |
 
 **`LDAP_OPT_SERVER_CONTROLS`** and **`LDAP_OPT_CLIENT_CONTROLS`**
 require a list of controls, this means that the value must be an array
@@ -3133,16 +3235,16 @@ optional *value*, and an optional flag for *criticality*. In PHP a
 control is given by an array containing an element with the key *oid*
 and string value, and two optional elements. The optional elements are
 key *value* with string value and key *iscritical* with boolean value.
-*iscritical* defaults to ***`FALSE`*** if not supplied. See
+*iscritical* defaults to ***`false`*** if not supplied. See
 <a href="http://www.openldap.org/devel/cvsweb.cgi/~checkout~/doc/drafts/draft-ietf-ldapext-ldap-c-api-xx.txt" class="link external">» draft-ietf-ldapext-ldap-c-api-xx.txt</a>
 for details. See also the second example below.
 
-`newval`  
+`value`  
 The new value for the specified `option`.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3195,13 +3297,20 @@ Set a callback function to do re-binds on referral chasing
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_set\_rebind\_proc</span> ( <span
-class="methodparam"><span class="type">resource</span> `$link`</span> ,
-<span class="methodparam"><span class="type">callable</span>
+class="methodparam"><span class="type">resource</span> `$ldap`</span> ,
+<span class="methodparam"><span class="type"><span
+class="type">callable</span><span class="type">null</span></span>
 `$callback`</span> )
 
 **Warning**
 
 本函数还未编写文档，仅有参数列表。
+
+### 更新日志
+
+| 版本  | 说明                        |
+|-------|-----------------------------|
+| 8.0.0 | `callback` is nullable now. |
 
 ldap\_sort
 ==========
@@ -3274,7 +3383,7 @@ Start TLS
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_start\_tls</span> ( <span
-class="methodparam"><span class="type">resource</span> `$link`</span> )
+class="methodparam"><span class="type">resource</span> `$ldap`</span> )
 
 **Warning**
 
@@ -3287,7 +3396,8 @@ Translate t61 characters to 8859 characters
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_t61\_to\_8859</span> ( <span
 class="methodparam"><span class="type">string</span> `$value`</span> )
 
@@ -3304,19 +3414,19 @@ Unbind from LDAP directory
 
 <span class="type">bool</span> <span
 class="methodname">ldap\_unbind</span> ( <span class="methodparam"><span
-class="type">resource</span> `$link_identifier`</span> )
+class="type">resource</span> `$ldap`</span> )
 
 Unbinds from the LDAP directory.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 

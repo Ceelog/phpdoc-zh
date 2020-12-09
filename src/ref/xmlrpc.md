@@ -226,7 +226,7 @@ Array returned by <span class="function">xmlrpc\_decode</span>.
 
 ### 返回值
 
-Returns **`TRUE`** if the argument means fault, **`FALSE`** otherwise.
+Returns **`true`** if the argument means fault, **`false`** otherwise.
 Fault description is available in *$arg\["faultString"\]*, fault code is
 in *$arg\["faultCode"\]*.
 
@@ -421,7 +421,7 @@ Value to set the type
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 If successful,
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 If successful,
 `value` is converted to an object.
 
 ### 范例

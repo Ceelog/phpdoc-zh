@@ -4493,7 +4493,7 @@ Whether to turn on auto-commit or not.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -4620,7 +4620,7 @@ Savepoint name for the transaction.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -4771,14 +4771,14 @@ The MySQL password.
 `database`  
 The database to change to.
 
-If desired, the **`NULL`** value may be passed resulting in only
+If desired, the **`null`** value may be passed resulting in only
 changing the user and not selecting a database. To select a database in
 this case use the <span class="function">mysqli\_select\_db</span>
 function.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -5006,7 +5006,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5050,7 +5050,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5223,7 +5223,7 @@ class="function">mysqli\_connect</span>.
 
 ### 返回值
 
-A string that describes the error. **`NULL`** is returned if no error
+A string that describes the error. **`null`** is returned if no error
 occurred.
 
 ### 范例
@@ -5350,7 +5350,7 @@ Opens a connection to the MySQL Server.
 ### 参数
 
 `host`  
-Can be either a host name or an IP address. Passing the **`NULL`** value
+Can be either a host name or an IP address. Passing the **`null`** value
 or the string "localhost" to this parameter, the local host is assumed.
 When possible, pipes will be used instead of the TCP/IP protocol.
 
@@ -5362,7 +5362,7 @@ connections opened from the connection pool.
 The MySQL user name.
 
 `passwd`  
-If not provided or **`NULL`**, the MySQL server will attempt to
+If not provided or **`null`**, the MySQL server will attempt to
 authenticate the user against those user records which have no password
 only. This allows one username to be used with different permissions
 (depending on if a password is provided or not).
@@ -5387,7 +5387,7 @@ Specifies the socket or named pipe that should be used.
 ### 返回值
 
 Returns an object which represents the connection to a MySQL Server,
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -5548,7 +5548,7 @@ A string representing the debugging operation to perform
 
 ### 返回值
 
-Returns **`TRUE`**.
+Returns **`true`**.
 
 ### 注释
 
@@ -5607,7 +5607,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -6240,7 +6240,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-返回一个数组，包含客户端连接的统计数据，否则 **`FALSE`**。
+返回一个数组，包含客户端连接的统计数据，否则 **`false`**。
 
 ### 范例
 
@@ -7056,7 +7056,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7162,8 +7162,8 @@ class="function">mysqli\_init</span> 返回的链接标识。
 ### 返回值
 
 如果上一次调用 <span class="function">mysqli\_multi\_query</span>
-函数之后， 还有更多的结果集可以读取，返回 **`TRUE`**，否则返回
-**`FALSE`**。
+函数之后， 还有更多的结果集可以读取，返回 **`true`**，否则返回
+**`false`**。
 
 ### 范例
 
@@ -7223,7 +7223,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-如果第一个 SQL 语句就失败了，返回 **`FALSE`**。 如果是批量执行 SQL
+如果第一个 SQL 语句就失败了，返回 **`false`**。 如果是批量执行 SQL
 语句， 必须首先调用 <span class="function">mysqli\_next\_result</span>
 函数，才可以获取后续语句的错误信息。
 
@@ -7358,7 +7358,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7433,7 +7433,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -7505,7 +7505,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7622,7 +7622,7 @@ class="initializer"> = 0</span></span> \] )
 
 ### 返回值
 
-成功执行则返回存在可以读取结果集的连接数量， 否则 **`FALSE`**。
+成功执行则返回存在可以读取结果集的连接数量， 否则 **`false`**。
 
 ### 范例
 
@@ -7733,7 +7733,7 @@ SQL 语句中可以包含一个或者多个问号（*?*） 表示语句的参数
 ### 返回值
 
 <span class="function">mysqli\_prepare</span> 返回一个 statement
-对象，如果发生错误则返回 **`FALSE`**。
+对象，如果发生错误则返回 **`false`**。
 
 ### 范例
 
@@ -7913,9 +7913,9 @@ is then used to get results from such queries.
 
 ### 返回值
 
-失败时返回 **`FALSE`**，通过<span class="function">mysqli\_query</span>
+失败时返回 **`false`**，通过<span class="function">mysqli\_query</span>
 成功执行*SELECT, SHOW, DESCRIBE*或 *EXPLAIN*查询会返回一个<span
-class="classname">mysqli\_result</span> 对象，其他查询则返回**`TRUE`**。
+class="classname">mysqli\_result</span> 对象，其他查询则返回**`true`**。
 
 ### 更新日志
 
@@ -8082,7 +8082,7 @@ class="methodparam"><span class="type">string</span> `$socket`</span>
 class="function">mysqli\_init</span> 返回的链接标识。
 
 `host`  
-可以使用域名、IP 地址。如果传送 **`NULL`** 或者字符串 "localhost"
+可以使用域名、IP 地址。如果传送 **`null`** 或者字符串 "localhost"
 那么会使用 通道替代 TCP/IP 连接本地服务器。
 
 `username`  
@@ -8090,7 +8090,7 @@ MySQL 登录用户名
 
 `passwd`  
 如果设置
-**`NULL`**，那么会使用没有密码验证的方式尝试登录。这样可以为一个用户
+**`null`**，那么会使用没有密码验证的方式尝试登录。这样可以为一个用户
 提供不同的权限，基于他是否提供了密码。
 
 `dbname`  
@@ -8126,7 +8126,7 @@ MySQL 登录用户名
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -8311,7 +8311,7 @@ Control-Z*.
 
 ### 错误／异常
 
-在无效的连接上调用此函数会返回 **`NULL`** 并发出一个 **`E_WARNING`**
+在无效的连接上调用此函数会返回 **`null`** 并发出一个 **`E_WARNING`**
 级别的错误。
 
 ### 范例
@@ -8452,7 +8452,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -8495,7 +8495,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 ### 返回值
 
 如果成功则返回 <span class="classname">mysqli\_result</span>，否则返回
-**`FALSE`**。
+**`false`**。
 
 ### 参见
 
@@ -8543,7 +8543,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功返回 **`TRUE`**，否则返回 **`FALSE`**。
+成功返回 **`true`**，否则返回 **`false`**。
 
 ### 参见
 
@@ -8587,7 +8587,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -8625,7 +8625,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -8777,7 +8777,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -8825,7 +8825,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -8944,7 +8944,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -9181,11 +9181,11 @@ class="function">mysqli\_init</span> 返回的链接标识。
 `cipher`  
 SSL 加密允许使用的算法清单
 
-任何未使用的 SSL 参数，可以设置为 **`NULL`**。
+任何未使用的 SSL 参数，可以设置为 **`null`**。
 
 ### 返回值
 
-此函数永远会返回 **`TRUE`**。 如果 SSL 的设置有误，那么在调用 <span
+此函数永远会返回 **`true`**。 如果 SSL 的设置有误，那么在调用 <span
 class="function">mysqli\_real\_connect</span>
 函数建立连接的时候才会报错。
 
@@ -9229,7 +9229,7 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功则返回表示系统状态信息的字符串，失败则返回 **`FALSE`**。
+成功则返回表示系统状态信息的字符串，失败则返回 **`false`**。
 
 ### 范例
 
@@ -9368,20 +9368,20 @@ class="function">mysqli\_init</span> 返回的链接标识。
 
 ### 返回值
 
-成功则返回一个缓冲的结果集对象，失败则返回 **`FALSE`**。
+成功则返回一个缓冲的结果集对象，失败则返回 **`false`**。
 
 > **Note**:
 >
 > 如果上一查询并不产生结果集（例如，执行了一个 INSERT 语句）， 那么
 > <span class="function">mysqli\_store\_result</span> 会返回
-> **`FALSE`**。 如果读取结果集失败了，也会返回 **`FALSE`**。
-> 如何区分是上面哪种情况导致此函数的调用返回了 **`FALSE`**？
+> **`false`**。 如果读取结果集失败了，也会返回 **`false`**。
+> 如何区分是上面哪种情况导致此函数的调用返回了 **`false`**？
 > 你可以通过下面的方法来检测： <span
 > class="function">mysqli\_error</span> 返回了非空的字符串， <span
 > class="function">mysqli\_errno</span> 返回了非零值， 或者 <span
 > class="function">mysqli\_field\_count</span> 返回了非零值，
 > 都表示发生错误了。 还有一种可能的情况会导致此函数的调用返回
-> **`FALSE`**：上一次查询 <span class="function">mysqli\_query</span>
+> **`false`**：上一次查询 <span class="function">mysqli\_query</span>
 > 本身是成功的，
 > 但是由于返回的结果集太大，无法为其分配足够的内存来进行结果集转移。
 > 如果 <span class="function">mysqli\_field\_count</span>
@@ -9542,7 +9542,7 @@ library is compiled as thread-safe.
 
 ### 返回值
 
-如果是的话，返回**`TRUE`**，否则返回**`FALSE`**。
+如果是的话，返回**`true`**，否则返回**`false`**。
 
 mysqli::use\_result
 ===================
@@ -9591,7 +9591,7 @@ database connection from failing.
 
 ### 返回值
 
-Returns an unbuffered result object or **`FALSE`** if an error occurred.
+Returns an unbuffered result object or **`false`** if an error occurred.
 
 ### 范例
 
@@ -10138,7 +10138,7 @@ The attribute that you want to get.
 
 ### 返回值
 
-Returns **`FALSE`** if the attribute is not found, otherwise returns the
+Returns **`false`** if the attribute is not found, otherwise returns the
 value of the attribute.
 
 mysqli\_stmt::attr\_set
@@ -10182,7 +10182,7 @@ values:
 
 | Character                               | Description                                                                                                                                                                                                     |
 |-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MYSQLI\_STMT\_ATTR\_UPDATE\_MAX\_LENGTH | Setting to **`TRUE`** causes <span class="function">mysqli\_stmt\_store\_result</span> to update the metadata *MYSQL\_FIELD-\>max\_length* value.                                                               |
+| MYSQLI\_STMT\_ATTR\_UPDATE\_MAX\_LENGTH | Setting to **`true`** causes <span class="function">mysqli\_stmt\_store\_result</span> to update the metadata *MYSQL\_FIELD-\>max\_length* value.                                                               |
 | MYSQLI\_STMT\_ATTR\_CURSOR\_TYPE        | Type of cursor to open for statement when <span class="function">mysqli\_stmt\_execute</span> is invoked. `mode` can be *MYSQLI\_CURSOR\_TYPE\_NO\_CURSOR* (the default) or *MYSQLI\_CURSOR\_TYPE\_READ\_ONLY*. |
 | MYSQLI\_STMT\_ATTR\_PREFETCH\_ROWS      | Number of rows to fetch from server at a time when using a cursor. `mode` can be in the range from 1 to the maximum value of unsigned long. The default is 1.                                                   |
 
@@ -10281,7 +10281,7 @@ parameters in the statement.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -10433,7 +10433,7 @@ Further variables to be bound.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -10559,7 +10559,7 @@ executed.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -11169,7 +11169,7 @@ class="function">mysqli\_stmt\_fetch</span> function is used.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -11341,9 +11341,9 @@ Fetch the result from a prepared statement into the variables bound by
 
 | Value       | Description                                          |
 |-------------|------------------------------------------------------|
-| **`TRUE`**  | Success. Data has been fetched                       |
-| **`FALSE`** | Error occurred                                       |
-| **`NULL`**  | No more rows/data exists or data truncation occurred |
+| **`true`**  | Success. Data has been fetched                       |
+| **`false`** | Error occurred                                       |
+| **`null`**  | No more rows/data exists or data truncation occurred |
 
 ### 范例
 
@@ -11533,7 +11533,7 @@ Call to return a result set from a prepared statement query.
 
 ### 返回值
 
-Returns a resultset for successful SELECT queries, or **`FALSE`** for
+Returns a resultset for successful SELECT queries, or **`false`** for
 other DML queries or on failure. The <span
 class="function">mysqli\_errno</span> function can be used to
 distinguish between the two types of failure.
@@ -11738,7 +11738,7 @@ Checks if there are more query results from a multiple query.
 
 ### 返回值
 
-Returns **`TRUE`** if more results exist, otherwise **`FALSE`**.
+Returns **`true`** if more results exist, otherwise **`false`**.
 
 ### 仅 MySQL 原生驱动
 
@@ -11783,7 +11783,7 @@ Reads the next result from a multiple query.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -12107,7 +12107,7 @@ embedding question mark (*?*) characters at the appropriate positions.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -12249,7 +12249,7 @@ class="function">mysqli\_stmt\_prepare</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -12326,7 +12326,7 @@ class="function">mysqli\_free\_result</span>
 
 ### 返回值
 
-Returns a result object or **`FALSE`** if an error occurred.
+Returns a result object or **`false`** if an error occurred.
 
 ### 范例
 
@@ -12443,7 +12443,7 @@ A string containing data to be sent.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -12636,7 +12636,7 @@ class="function">mysqli\_stmt\_fetch</span> call returns buffered data.
 > in all cases. You can detect whether the query produced a result set
 > by checking if <span
 > class="function">mysqli\_stmt\_result\_metadata</span> returns
-> **`FALSE`**.
+> **`false`**.
 
 ### 参数
 
@@ -12646,7 +12646,7 @@ class="function">mysqli\_stmt\_fetch</span> call returns buffered data.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -13007,7 +13007,7 @@ minus one (0..<span class="function">mysqli\_num\_rows</span> - 1).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -13195,7 +13195,7 @@ class="methodparam"><span class="type">mysqli\_result</span>
 class="type">int</span> `$resulttype`<span class="initializer"> =
 MYSQLI\_BOTH</span></span> \] )
 
-Returns an array that corresponds to the fetched row or **`NULL`** if
+Returns an array that corresponds to the fetched row or **`null`** if
 there are no more rows for the resultset represented by the `result`
 parameter.
 
@@ -13210,7 +13210,7 @@ names of the result set as keys.
 > class="simpara">此函数返回的字段名*大小写敏感*。</span>
 
 > **Note**: <span class="simpara">此函数将 NULL 字段设置为 PHP
-> **`NULL`** 值。</span>
+> **`null`** 值。</span>
 
 If two or more columns of the result have the same field names, the last
 column will take precedence and overwrite the earlier data. In order to
@@ -13240,7 +13240,7 @@ both.
 ### 返回值
 
 Returns an array of strings that corresponds to the fetched row or
-**`NULL`** if there are no more rows in resultset.
+**`null`** if there are no more rows in resultset.
 
 ### 范例
 
@@ -13352,13 +13352,13 @@ class="methodparam"><span class="type">mysqli\_result</span>
 `$result`</span> )
 
 Returns an associative array that corresponds to the fetched row or
-**`NULL`** if there are no more rows.
+**`null`** if there are no more rows.
 
 > **Note**: <span
 > class="simpara">此函数返回的字段名*大小写敏感*。</span>
 
 > **Note**: <span class="simpara">此函数将 NULL 字段设置为 PHP
-> **`NULL`** 值。</span>
+> **`null`** 值。</span>
 
 ### 参数
 
@@ -13371,7 +13371,7 @@ class="function">mysqli\_use\_result</span>返回的结果集标识。
 
 Returns an associative array of strings representing the fetched row in
 the result set, where each key in the array represents the name of one
-of the result set's columns or **`NULL`** if there are no more rows in
+of the result set's columns or **`null`** if there are no more rows in
 resultset.
 
 If two or more columns of the result have the same field names, the last
@@ -13536,7 +13536,7 @@ fields - 1*.
 ### 返回值
 
 Returns an object which contains field definition information or
-**`FALSE`** if no field information for specified *fieldnr* is
+**`false`** if no field information for specified *fieldnr* is
 available.
 
 | Attribute   | Description                                                     |
@@ -13672,7 +13672,7 @@ class="function">mysqli\_use\_result</span>返回的结果集标识。
 ### 返回值
 
 Returns an object which contains field definition information or
-**`FALSE`** if no field information is available.
+**`false`** if no field information is available.
 
 | Property    | Description                                                     |
 |-------------|-----------------------------------------------------------------|
@@ -13817,7 +13817,7 @@ class="function">mysqli\_use\_result</span>返回的结果集标识。
 ### 返回值
 
 Returns an array of objects which contains field definition information
-or **`FALSE`** if no field information is available.
+or **`false`** if no field information is available.
 
 | Property    | Description                                                                                                                                                                                                                                                                                                                                                            |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -14023,13 +14023,13 @@ constructor for `class_name` objects.
 ### 返回值
 
 Returns an object with string properties that corresponds to the fetched
-row or **`NULL`** if there are no more rows in resultset.
+row or **`null`** if there are no more rows in resultset.
 
 > **Note**: <span
 > class="simpara">此函数返回的字段名*大小写敏感*。</span>
 
 > **Note**: <span class="simpara">此函数将 NULL 字段设置为 PHP
-> **`NULL`** 值。</span>
+> **`null`** 值。</span>
 
 ### 范例
 
@@ -14135,7 +14135,7 @@ class="methodparam"><span class="type">mysqli\_result</span>
 Fetches one row of data from the result set and returns it as an
 enumerated array, where each column is stored in an array offset
 starting from 0 (zero). Each subsequent call to this function will
-return the next row within the result set, or **`NULL`** if there are no
+return the next row within the result set, or **`null`** if there are no
 more rows.
 
 ### 参数
@@ -14148,11 +14148,11 @@ class="function">mysqli\_use\_result</span>返回的结果集标识。
 ### 返回值
 
 <span class="function">mysqli\_fetch\_row</span> returns an array of
-strings that corresponds to the fetched row or **`NULL`** if there are
+strings that corresponds to the fetched row or **`null`** if there are
 no more rows in result set.
 
 > **Note**: <span class="simpara">此函数将 NULL 字段设置为 PHP
-> **`NULL`** 值。</span>
+> **`null`** 值。</span>
 
 ### 范例
 
@@ -14377,7 +14377,7 @@ fields - 1*.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -14559,10 +14559,10 @@ class="function">mysqli\_use\_result</span>返回的结果集标识。
 ### 返回值
 
 An array of integers representing the size of each column (not including
-any terminating null characters). **`FALSE`** if an error occurred.
+any terminating null characters). **`false`** if an error occurred.
 
 <span class="function">mysqli\_fetch\_lengths</span> is valid only for
-the current row of the result set. It returns **`FALSE`** if you call it
+the current row of the result set. It returns **`false`** if you call it
 before calling mysqli\_fetch\_row/array/object or after retrieving all
 rows in the result.
 
@@ -14944,7 +14944,7 @@ calls or queries that don't use an index (or use a bad index).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -15082,8 +15082,8 @@ class="classname">mysqli\_warning</span> are available.
 
 ### 返回值
 
-Returns **`TRUE`** if next warning was fetched successfully. If there
-are no more warnings, it will return **`FALSE`**
+Returns **`true`** if next warning was fetched successfully. If there
+are no more warnings, it will return **`false`**
 
 简介
 ----
@@ -15216,7 +15216,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果成功，则返回一个数组包含客户端进程的统计信息，否则返回 **`FALSE`**。
+如果成功，则返回一个数组包含客户端进程的统计信息，否则返回 **`false`**。
 
 ### 范例
 
@@ -16676,7 +16676,7 @@ Close all client connections with the server.
 
 ### 返回值
 
-**`TRUE`** if connections are closed.
+**`true`** if connections are closed.
 
 Client::\_\_construct
 =====================
@@ -17165,8 +17165,8 @@ A single IndexField description consists of the following fields:
     be added.
 
 -   `required`: bool, (optional) true if the field is required to exist
-    in the document. Defaults to **`FALSE`**, except for *GEOJSON* where
-    it defaults to **`TRUE`**.
+    in the document. Defaults to **`false`**, except for *GEOJSON* where
+    it defaults to **`true`**.
 
 -   `options`: integer, (optional) special option flags for use when
     decoding *GEOJSON* data.
@@ -17253,7 +17253,7 @@ Drop collection index
 Drop a collection index.
 
 This operation does not yield an error if the index does not exist, but
-**`FALSE`** is returned in that case.
+**`false`** is returned in that case.
 
 ### 参数
 
@@ -17262,7 +17262,7 @@ Name of collection index to drop.
 
 ### 返回值
 
-**`TRUE`** if the DROP INDEX operation succeeded, otherwise **`FALSE`**.
+**`true`** if the DROP INDEX operation succeeded, otherwise **`false`**.
 
 ### 范例
 
@@ -17321,8 +17321,8 @@ Checks if the Collection object refers to a collection in the database
 
 ### 返回值
 
-Returns **`TRUE`** if collection exists in the database, else
-**`FALSE`** if it does not.
+Returns **`true`** if collection exists in the database, else
+**`false`** if it does not.
 
 A table defined with two columns (doc and \_id) is considered a
 collection, and a third \_json\_schema column as of MySQL 8.0.21. Adding
@@ -17512,7 +17512,7 @@ The document \_id in the collection.
 
 ### 返回值
 
-The collection object, or **`NULL`** if the \_id does not match a
+The collection object, or **`null`** if the \_id does not match a
 document.
 
 ### 范例
@@ -17576,7 +17576,7 @@ Retrieve the schema object that contains the collection.
 
 ### 返回值
 
-The schema object on success, or **`NULL`** if the object cannot be
+The schema object on success, or **`null`** if the object cannot be
 retrieved for the given collection.
 
 ### 范例
@@ -17676,7 +17676,7 @@ operations are allowed, and parameter binding is supported.
 
 `search_condition`  
 Must be a valid SQL expression used to match the documents to modify.
-This expression might be as simple as **`TRUE`**, which matches all
+This expression might be as simple as **`true`**, which matches all
 documents, or it might use functions and operators such as
 `'CAST(_id AS SIGNED) >= 10'`, `'age MOD 2 = 0 OR age MOD 3 = 0'`, or
 `'_id IN ["2","5","7","10"]'`.
@@ -17742,7 +17742,7 @@ operations are allowed, and parameter binding is supported.
 
 `search_condition`  
 Must be a valid SQL expression used to match the documents to modify.
-This expression might be as simple as **`TRUE`**, which matches all
+This expression might be as simple as **`true`**, which matches all
 documents, or it might use functions and operators such as
 `'CAST(_id AS SIGNED) >= 10'`, `'age MOD 2 = 0 OR age MOD 3 = 0'`, or
 `'_id IN ["2","5","7","10"]'`.
@@ -20616,7 +20616,7 @@ RowResult::getColumns() method.
 
 ### 返回值
 
-**`TRUE`** if a given column as a signed type.
+**`true`** if a given column as a signed type.
 
 ### 范例
 
@@ -20653,7 +20653,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`TRUE`** if a given column is padded.
+**`true`** if a given column is padded.
 
 ### 范例
 
@@ -20981,7 +20981,7 @@ database.
 
 ### 返回值
 
-Returns **`TRUE`** if object exists in the database, else **`FALSE`** if
+Returns **`true`** if object exists in the database, else **`false`** if
 it does not.
 
 ### 范例
@@ -21282,7 +21282,7 @@ Fetch one result from a result set.
 
 ### 返回值
 
-The result, as an associative array or **`NULL`** if no results are
+The result, as an associative array or **`null`** if no results are
 present.
 
 ### 范例
@@ -22270,7 +22270,7 @@ Fetch one result from the result set.
 
 ### 返回值
 
-The result, as an associative array or **`NULL`** if no results are
+The result, as an associative array or **`null`** if no results are
 present.
 
 ### 范例
@@ -22881,8 +22881,8 @@ in the schema object.
 
 ### 返回值
 
-**`TRUE`** if the schema, table, collection, or view still exists in the
-schema, else **`FALSE`**.
+**`true`** if the schema, table, collection, or view still exists in the
+schema, else **`false`**.
 
 ### 范例
 
@@ -23468,7 +23468,7 @@ Close the session with the server.
 
 ### 返回值
 
-**`TRUE`** if the session closed.
+**`true`** if the session closed.
 
 ### 范例
 
@@ -23627,7 +23627,7 @@ Name of the schema to drop.
 
 ### 返回值
 
-**`TRUE`** if the schema is dropped, or **`FALSE`** if it does not exist
+**`true`** if the schema is dropped, or **`false`** if it does not exist
 or can't be dropped.
 
 An **`E_WARNING`** level error is generated if the schema does not
@@ -23708,7 +23708,7 @@ connection URI.
 
 ### 返回值
 
-Name of the default schema defined by the connection, or **`NULL`** if
+Name of the default schema defined by the connection, or **`null`** if
 one was not set.
 
 ### 范例
@@ -24499,7 +24499,7 @@ class="methodname">mysql\_xdevapi\\SqlStatement::hasMoreResults</span> (
 
 ### 返回值
 
-**`TRUE`** if the result set has more objects to fetch.
+**`true`** if the result set has more objects to fetch.
 
 ### 范例
 
@@ -25066,7 +25066,7 @@ class="methodname">mysql\_xdevapi\\SqlStatementResult::hasData</span> (
 
 ### 返回值
 
-**`TRUE`** if the result set has data.
+**`true`** if the result set has data.
 
 ### 范例
 
@@ -25523,7 +25523,7 @@ Verifies if this table exists in the database.
 
 ### 返回值
 
-Returns **`TRUE`** if table exists in the database, else **`FALSE`** if
+Returns **`true`** if table exists in the database, else **`false`** if
 it does not.
 
 ### 范例
@@ -25770,7 +25770,7 @@ Determine if the underlying object is a view or not.
 
 ### 返回值
 
-**`TRUE`** if the underlying object is a view, otherwise **`FALSE`**.
+**`true`** if the underlying object is a view, otherwise **`false`**.
 
 ### 范例
 
@@ -28039,7 +28039,7 @@ mysql_close($link);
 > 大多数 MySQL 函数的最后一个可选参数是 `link_identifier`。
 > 如果没有提供这个参数，则会使用最后一个打开的连接。
 > 若不存在这个最后打开的连接，则会尝试用 `php.ini`
-> 里定义的默认参数来连接。 如果没有成功连接，函数会返回 **`FALSE`**。
+> 里定义的默认参数来连接。 如果没有成功连接，函数会返回 **`false`**。
 
 mysql\_affected\_rows
 =====================
@@ -28251,7 +28251,7 @@ mysql\_close
 来获取更多信息。用以替代本函数的有：
 
 -   <span class="function">mysqli\_close</span>
--   PDO: 为 PDO 对象设置一个 **`NULL`** 值
+-   PDO: 为 PDO 对象设置一个 **`null`** 值
 
 ### 说明
 
@@ -28276,7 +28276,7 @@ class="function">mysql\_connect</span>建立的连接.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -28381,7 +28381,7 @@ class="function">mysql\_connect</span>，将不会建立新连接，而将返回
 
 ### 返回值
 
-如果成功则返回一个 MySQL 连接标识， 或者在失败时返回 **`FALSE`**。
+如果成功则返回一个 MySQL 连接标识， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -28528,7 +28528,7 @@ class="function">mysql\_connect</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -28608,7 +28608,7 @@ class="function">mysql\_fetch\_row</span> 将返回那一行。
 mysql\_num\_rows - 1。但是如果结果集为空（<span
 class="function">mysql\_num\_rows</span> == 0），要将指针移动到 0
 会失败并发出 <a href="" class="link">E_WARNING</a> 级的错误，<span
-class="function">mysql\_data\_seek</span> 将返回 **`FALSE`**。
+class="function">mysql\_data\_seek</span> 将返回 **`false`**。
 
 ### 参数
 
@@ -28621,7 +28621,7 @@ class="function">mysql\_query</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -28720,7 +28720,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 
 ### 返回值
 
-如果成功则返回数据库名，失败返回 **`FALSE`**。如果返回了 **`FALSE`**，用
+如果成功则返回数据库名，失败返回 **`false`**。如果返回了 **`false`**，用
 <span class="function">mysql\_error</span> 来判断错误的种类。
 
 ### 范例
@@ -28783,8 +28783,8 @@ class="type">resource</span> `$         link_identifier        `</span>
 \] )
 
 根据查询结果返回一个正的 MySQL 结果资源号，出错时返回
-**`FALSE`**。本函数会对 *INSERT*/*UPDATE*/*DELETE* 查询返回
-**`TRUE`**/**`FALSE`** 来指示成功或失败。
+**`false`**。本函数会对 *INSERT*/*UPDATE*/*DELETE* 查询返回
+**`true`**/**`false`** 来指示成功或失败。
 
 <span class="function">mysql\_db\_query</span>
 选择一个数据库并在其上执行查询。如果没有提供可选的连接标识，本函数会去找一个到
@@ -28820,7 +28820,7 @@ class="type">resource</span> `$         link_identifier        `</span>
 <span class="function">mysql\_drop\_db</span>
 尝试丢弃（删除）指定连接标识所关联的服务器上的一整个数据库。
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 为向下兼容也可以用 <span
 class="function">mysql\_dropdb</span>，但反对这样做。
@@ -28853,7 +28853,7 @@ class="function">mysql\_connect</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -29075,7 +29075,7 @@ class="function">mysql\_fetch\_row</span> 那样）。
 
 ### 返回值
 
-返回根据从结果集取得的行生成的数组，如果没有更多行则返回 **`FALSE`**。
+返回根据从结果集取得的行生成的数组，如果没有更多行则返回 **`false`**。
 
 ### 范例
 
@@ -29151,7 +29151,7 @@ class="function">mysql\_query</span> 的调用。
 ### 返回值
 
 返回根据从结果集取得的行生成的关联数组；如果没有更多行则返回
-**`FALSE`**。
+**`false`**。
 
 如果结果中的两个或以上的列具有相同字段名，最后一列将优先。要访问同名的其它列，要么用
 <span class="function">mysql\_fetch\_row</span>
@@ -29221,7 +29221,7 @@ mysql_free_result($result);
 > class="simpara">此函数返回的字段名*大小写敏感*。</span>
 
 > **Note**: <span class="simpara">此函数将 NULL 字段设置为 PHP
-> **`NULL`** 值。</span>
+> **`null`** 值。</span>
 
 ### 参见
 
@@ -29255,7 +29255,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 -   <span class="simpara"> name - 列名 </span>
 -   <span class="simpara"> table - 该列所在的表名 </span>
 -   <span class="simpara"> max\_length - 该列最大长度 </span>
--   <span class="simpara"> not\_null - 1，如果该列不能为 **`NULL`**
+-   <span class="simpara"> not\_null - 1，如果该列不能为 **`null`**
     </span>
 -   <span class="simpara"> primary\_key - 1，如果该列是 primary key
     </span>
@@ -29333,7 +29333,7 @@ information. The properties of the object are:
 -   <span class="simpara"> max\_length - maximum length of the column
     </span>
 -   <span class="simpara"> not\_null - 1 if the column cannot be
-    **`NULL`** </span>
+    **`null`** </span>
 -   <span class="simpara"> primary\_key - 1 if the column is a primary
     key </span>
 -   <span class="simpara"> unique\_key - 1 if the column is a unique key
@@ -29413,7 +29413,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 )
 
 以数组返回上一次用 <span class="function">mysql\_fetch\_row</span>
-取得的行中每个字段的长度，如果出错返回 **`FALSE`**。
+取得的行中每个字段的长度，如果出错返回 **`false`**。
 
 <span class="function">mysql\_fetch\_lengths</span> 将上一次 <span
 class="function">mysql\_fetch\_row</span>，<span
@@ -29469,7 +29469,7 @@ class="classname">stdClass</span> 对象。
 ### 返回值
 
 返回根据所取得的行生成的对象 <span
-class="type">object</span>，如果没有更多行则返回 **`FALSE`**。
+class="type">object</span>，如果没有更多行则返回 **`false`**。
 
 ### 范例
 
@@ -29523,7 +29523,7 @@ var_dump($obj);
 > class="simpara">此函数返回的字段名*大小写敏感*。</span>
 
 > **Note**: <span class="simpara">此函数将 NULL 字段设置为 PHP
-> **`NULL`** 值。</span>
+> **`null`** 值。</span>
 
 ### 参见
 
@@ -29545,14 +29545,14 @@ class="methodname">mysql\_fetch\_row</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
 
-返回根据所取得的行生成的数组，如果没有更多行则返回 **`FALSE`**。
+返回根据所取得的行生成的数组，如果没有更多行则返回 **`false`**。
 
 <span class="function">mysql\_fetch\_row</span>
 从和指定的结果标识关联的结果集中取得一行数据并作为数组返回。每个结果的列储存在一个数组的单元中，偏移量从
 0 开始。
 
 依次调用 <span class="function">mysql\_fetch\_row</span>
-将返回结果集中的下一行，如果没有更多行则返回 **`FALSE`**。
+将返回结果集中的下一行，如果没有更多行则返回 **`false`**。
 
 参见 <span class="function">mysql\_fetch\_array</span>，<span
 class="function">mysql\_fetch\_assoc</span>，<span
@@ -29570,7 +29570,7 @@ class="function">mysql\_query</span> 的调用。
 ### 返回值
 
 Returns an numerical array of strings that corresponds to the fetched
-row, or **`FALSE`** if there are no more rows.
+row, or **`false`** if there are no more rows.
 
 <span class="function">mysql\_fetch\_row</span> fetches one row of data
 from the result associated with the specified result identifier. The row
@@ -29599,7 +29599,7 @@ echo $row[1]; // the email value
 ### 注释
 
 > **Note**: <span class="simpara">此函数将 NULL 字段设置为 PHP
-> **`NULL`** 值。</span>
+> **`null`** 值。</span>
 
 ### 参见
 
@@ -29719,7 +29719,7 @@ class="function">mysql\_query</span> 的调用。
 ### 返回值
 
 The name of the specified field index on success 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -29941,7 +29941,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 <span class="function">mysql\_free\_result</span>
 仅需要在考虑到返回很大的结果集时会占用多少内存时调用。在脚本结束后所有关联的内存都会被自动释放。
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 为向下兼容仍然可以使用 <span
 class="function">mysql\_freeresult</span>，但反对这样做。
@@ -29954,7 +29954,7 @@ class="function">mysql\_query</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 If a non-resource is used for the `result`, an error of level E\_WARNING
 will be emitted. It's worth noting that <span
@@ -30147,7 +30147,7 @@ class="methodparam"><span class="type">resource</span>
 
 <span class="function">mysql\_info</span>
 对以下列出的所有语句返回一个字符串。对于其它任何语句返回
-**`FALSE`**。字符串的格式取决于给出的语句。
+**`false`**。字符串的格式取决于给出的语句。
 
 **示例 \#1 相关的 MySQL 语句**
 
@@ -30169,7 +30169,7 @@ UPDATE
 > **Note**:
 >
 > <span class="function">mysql\_info</span> 对于 INSERT ... VALUES
-> 语句仅在该语句中列出了多个值的情况下返回一个非 **`FALSE`** 的值。
+> 语句仅在该语句中列出了多个值的情况下返回一个非 **`false`** 的值。
 
 参见 <span class="function">mysql\_affected\_rows</span>。
 
@@ -30380,7 +30380,7 @@ class="function">mysql\_tablename</span>
 class="function">mysql\_fetch\_array</span>。
 
 `database` 参数是需要被取得其中的的表名的数据库名。如果失败 <span
-class="function">mysql\_list\_tables</span> 返回 **`FALSE`**。
+class="function">mysql\_list\_tables</span> 返回 **`false`**。
 
 为向下兼容仍然可以使用本函数的别名 <span
 class="function">mysql\_listtables</span>，但反对这样做。
@@ -30506,7 +30506,7 @@ class="type">string</span> `$password`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$client_flags`</span>
 \]\]\]\] )
 
-如果成功则返回一个正的 MySQL 持久连接标识符，出错则返回 **`FALSE`**。
+如果成功则返回一个正的 MySQL 持久连接标识符，出错则返回 **`false`**。
 
 <span class="function">mysql\_pconnect</span> 建立一个到 MySQL
 服务器的连接。如果没有提供可选参数，则使用如下默认值：`server` =
@@ -30562,8 +30562,8 @@ class="methodparam"><span class="type">resource</span>
 
 <span class="function">mysql\_ping</span>
 检查到服务器的连接是否正常。如果断开，则自动尝试连接。本函数可用于空闲很久的脚本来检查服务器是否关闭了连接，如果有必要则重新连接上。如果到服务器的连接可用则
-<span class="function">mysql\_ping</span> 返回 **`TRUE`**，否则返回
-**`FALSE`**。
+<span class="function">mysql\_ping</span> 返回 **`true`**，否则返回
+**`false`**。
 
 参见 <span class="function">mysql\_thread\_id</span> 和 <span
 class="function">mysql\_list\_processes</span>。
@@ -30617,11 +30617,11 @@ class="function">mysql\_connect</span>
 
 <span class="function">mysql\_query</span> 仅对 SELECT，SHOW，DESCRIBE,
 EXPLAIN 和其他语句 语句返回一个 <span
-class="type">resource</span>，如果查询出现错误则返回 **`FALSE`**。
+class="type">resource</span>，如果查询出现错误则返回 **`false`**。
 
 对于其它类型的 SQL 语句，比如INSERT, UPDATE, DELETE, DROP 之类， <span
 class="function">mysql\_query</span> 在执行成功时返回
-**`TRUE`**，出错时返回 **`FALSE`**。
+**`true`**，出错时返回 **`false`**。
 
 返回的结果资源应该传递给 <span
 class="function">mysql\_fetch\_array</span>
@@ -30633,14 +30633,14 @@ class="function">mysql\_affected\_rows</span> 来查看对应于
 DELETE，INSERT，REPLACE 或 UPDATE 语句影响到了多少行。
 
 如果没有权限访问查询语句中引用的表时，<span
-class="function">mysql\_query</span> 也会返回 **`FALSE`**。
+class="function">mysql\_query</span> 也会返回 **`false`**。
 
 ### 范例
 
 **示例 \#1 无效的查询**
 
 以下查询语法上有错，因此 <span class="function">mysql\_query</span>
-失败并返回 **`FALSE`**。
+失败并返回 **`false`**。
 
 ``` php
 <?php
@@ -30769,7 +30769,7 @@ class="function">mysql\_connect</span>
 
 ### 返回值
 
-Returns the escaped string, or **`FALSE`** on error.
+Returns the escaped string, or **`false`** on error.
 
 ### 错误／异常
 
@@ -30852,7 +30852,7 @@ This would allow anyone to log in without a valid password.
 >
 > A MySQL connection is required before using <span
 > class="function">mysql\_real\_escape\_string</span> otherwise an error
-> of level **`E_WARNING`** is generated, and **`FALSE`** is returned. If
+> of level **`E_WARNING`** is generated, and **`false`** is returned. If
 > `link_identifier` isn't defined, the last MySQL connection is used.
 
 > **Note**:
@@ -30947,7 +30947,7 @@ class="methodparam"><span class="type">string</span>
 class="type">resource</span> `$         link_identifier        `</span>
 \] )
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 <span class="function">mysql\_select\_db</span>
 设定与指定的连接标识符所关联的服务器上的当前激活数据库。如果没有指定连接标识符，则使用上一个打开的连接。如果没有打开的连接，本函数将无参数调用
@@ -30992,7 +30992,7 @@ class="function">mysql\_connect</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -31070,7 +31070,7 @@ class="function">mysql\_connect</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -38274,7 +38274,7 @@ The following parameters are passed from the plugin to the callback.
 </tr>
 <tr class="even">
 <td><em>in_transaction</em></td>
-<td><p>Boolean flag indicating whether the statement is part of an open transaction. If autocommit mode is turned off, this will be set to <strong><code>TRUE</code></strong>. Otherwise it is set to <strong><code>FALSE</code></strong>.</p>
+<td><p>Boolean flag indicating whether the statement is part of an open transaction. If autocommit mode is turned off, this will be set to <strong><code>true</code></strong>. Otherwise it is set to <strong><code>false</code></strong>.</p>
 <p>Transaction detection is based on monitoring the mysqlnd library call <em>set_autocommit</em>. Monitoring is not possible before PHP 5.4.0. Please, see <a href="/set/mysqlinfo.html#连接池与切换" class="link">connection pooling and switching</a> concepts discussion for further details.</p></td>
 <td>Since 1.1.0.</td>
 </tr>
@@ -39958,7 +39958,7 @@ extensions.
 
 ### 返回值
 
-**`FALSE`** on error. Otherwise, returns an array with two entries
+**`false`** on error. Otherwise, returns an array with two entries
 *masters* and *slaves* each of which contains an array listing all
 corresponding servers.
 
@@ -40112,7 +40112,7 @@ The table name to ask Fabric about.
 
 ### 返回值
 
-**`FALSE`** on error. Otherwise, **`TRUE`**
+**`false`** on error. Otherwise, **`true`**
 
 ### 注释
 
@@ -40162,7 +40162,7 @@ The shard key to ask Fabric about.
 
 ### 返回值
 
-**`FALSE`** on error. Otherwise, **`TRUE`**
+**`false`** on error. Otherwise, **`true`**
 
 ### 注释
 
@@ -40197,7 +40197,7 @@ GTID，但是得到的 GTID 一定比这次写操作产生的 GTID 大。
 
 ### 返回值
 
-成功返回 GTID，失败返回 **`FALSE`**。
+成功返回 GTID，失败返回 **`false`**。
 
 函数通过配置文件中 *global\_transaction\_id\_injection* 章节定义的
 *fetch\_last\_gtid* 参数来获取 GTID。
@@ -40275,7 +40275,7 @@ extensions.
 
 ### 返回值
 
-**`FALSE`** on error. Otherwise, an array which describes the connection
+**`false`** on error. Otherwise, an array which describes the connection
 used to execute the last statement on.
 
 Array which describes the connection.
@@ -40376,7 +40376,7 @@ data values.
 
 ### 返回值
 
-Returns **`NULL`** if the PHP configuration directive
+Returns **`null`** if the PHP configuration directive
 <a href="/set/mysqlinfo.html#" class="link"><em>mysqlnd_ms.enable</em></a>
 has disabled the plugin. Otherwise, returns array of statistics.
 
@@ -40753,8 +40753,8 @@ Placeholders can be escaped using *\\*.
 
 ### 返回值
 
-Returns **`TRUE`** *table\_name* is matched by *wildcard*. Otherwise,
-returns **`FALSE`**
+Returns **`true`** *table\_name* is matched by *wildcard*. Otherwise,
+returns **`false`**
 
 ### 范例
 
@@ -40967,8 +40967,8 @@ Parameter value for the service level option. See also the
 
 ### 返回值
 
-Returns **`TRUE`** if the connections service level has been switched to
-the requested. Otherwise, returns **`FALSE`**
+Returns **`true`** if the connections service level has been switched to
+the requested. Otherwise, returns **`false`**
 
 ### 注释
 
@@ -41297,8 +41297,8 @@ queries on the servers.
 
 ### 返回值
 
-Returns **`TRUE`** if there is no open local or global transaction and a
-new global transaction can be started. Otherwise, returns **`FALSE`**
+Returns **`true`** if there is no open local or global transaction and a
+new global transaction can be started. Otherwise, returns **`false`**
 
 ### 参见
 
@@ -41349,8 +41349,8 @@ Global transaction identifier (gtrid).
 
 ### 返回值
 
-Returns **`TRUE`** if the global transaction has been committed.
-Otherwise, returns **`FALSE`**
+Returns **`true`** if the global transaction has been committed.
+Otherwise, returns **`false`**
 
 ### 参见
 
@@ -41426,8 +41426,8 @@ setting *max\_retries = 0*.
 
 ### 返回值
 
-Returns **`TRUE`** if garbage collection was successful. Otherwise,
-returns **`FALSE`**
+Returns **`true`** if garbage collection was successful. Otherwise,
+returns **`false`**
 
 ### 参见
 
@@ -41475,8 +41475,8 @@ Global transaction identifier (gtrid).
 
 ### 返回值
 
-Returns **`TRUE`** if the global transaction has been rolled back.
-Otherwise, returns **`FALSE`**
+Returns **`true`** if the global transaction has been rolled back.
+Otherwise, returns **`false`**
 
 ### 参见
 
@@ -42875,8 +42875,8 @@ The callback is installed with the <span
 class="function">mysqlnd\_qc\_set\_is\_select</span> function. The
 callback is given the statement string of every statement inspected by
 the plugin. Then, the callback can decide whether to cache the function.
-The callback is supposed to return **`FALSE`** if the statement shall
-not be cached. A return value of **`TRUE`** makes the plugin try to add
+The callback is supposed to return **`false`** if the statement shall
+not be cached. A return value of **`true`** makes the plugin try to add
 the statement into the cache. The cache entry will be given the default
 TTL (
 *<a href="/set/mysqlinfo.html#运行时配置" class="link">mysqlnd_qc.ttl</a>*).
@@ -42946,7 +42946,7 @@ printf("Cache hit: %d\n", $stats['cache_hit']);
     Cache hit: 1
 
 The examples callback tests if a statement string matches a pattern. If
-this is the case, it either returns **`TRUE`** to cache the statement
+this is the case, it either returns **`true`** to cache the statement
 using the global default TTL or an alternative TTL.
 
 To minimize application changes the callback can put into and registered
@@ -44114,9 +44114,9 @@ User-defined storage handler may or may not support the operation.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
-A return value of **`FALSE`** indicates that flushing all cache contents
+A return value of **`false`** indicates that flushing all cache contents
 has failed or the operation is not supported by the active storage
 handler. Applications must not expect that calling the function will
 always flush the cache.
@@ -44922,10 +44922,10 @@ a backtrace and further detail information.
 | *origin*                  | Code backtrace.                                                                                                                                                                                                                                                                                                                                                               |
 | *run\_time*               | Query run time in milliseconds. The collection of all times and the necessary *gettimeofday* system calls can be disabled by setting the PHP configuration directive *mysqlnd\_qc.time\_statistics* to *0*                                                                                                                                                                    |
 | *store\_time*             | Query result set store time in milliseconds. The collection of all times and the necessary *gettimeofday* system calls can be disabled by setting the PHP configuration directive *mysqlnd\_qc.time\_statistics* to *0*                                                                                                                                                       |
-| *eligible\_for\_caching*  | **`TRUE`** if query is cacheable otherwise **`FALSE`**.                                                                                                                                                                                                                                                                                                                       |
-| *no\_table*               | **`TRUE`** if the query has generated a result set and at least one column from the result set has no table name set in its metadata. This is usually the case with queries which one probably do not want to cache such as *SELECT SLEEP(1)*. By default any such query will not be added to the cache. See also PHP configuration directive *mysqlnd\_qc.cache\_no\_table*. |
-| *was\_added*              | **`TRUE`** if the query result has been put into the cache, otherwise **`FALSE`**.                                                                                                                                                                                                                                                                                            |
-| *was\_already\_in\_cache* | **`TRUE`** if the query result would have been added to the cache if it was not already in the cache (cache hit). Otherwise **`FALSE`**.                                                                                                                                                                                                                                      |
+| *eligible\_for\_caching*  | **`true`** if query is cacheable otherwise **`false`**.                                                                                                                                                                                                                                                                                                                       |
+| *no\_table*               | **`true`** if the query has generated a result set and at least one column from the result set has no table name set in its metadata. This is usually the case with queries which one probably do not want to cache such as *SELECT SLEEP(1)*. By default any such query will not be added to the cache. See also PHP configuration directive *mysqlnd\_qc.cache\_no\_table*. |
+| *was\_added*              | **`true`** if the query result has been put into the cache, otherwise **`false`**.                                                                                                                                                                                                                                                                                            |
+| *was\_already\_in\_cache* | **`true`** if the query result would have been added to the cache if it was not already in the cache (cache hit). Otherwise **`false`**.                                                                                                                                                                                                                                      |
 
 ### 范例
 
@@ -45215,7 +45215,7 @@ The callback is free to ignore the configuration setting
 
 The callback is invoked for every statement inspected by the plugin. It
 is given the statements string as a parameter. The callback returns
-**`FALSE`** if the statement shall not be cached. It returns **`TRUE`**
+**`false`** if the statement shall not be cached. It returns **`true`**
 to make the plugin attempt to cache the statements result set, if any. A
 so-created cache entry is given the default TTL set with the PHP
 configuration directive *mysqlnd\_qc.ttl*. If a different TTL shall be
@@ -45231,7 +45231,7 @@ capabilities.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -45321,7 +45321,7 @@ The names of the built-in storage handler are *default*, *APC*,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 If changing the storage handler fails a catchable fatal error will be
 thrown. The query cache cannot operate if the previous storage handler
@@ -46979,7 +46979,7 @@ Length of the MySQL password.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -47122,7 +47122,7 @@ by a plugin.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -47210,7 +47210,7 @@ When possible, pipes will be used instead of the TCP/IP protocol.
 The MySQL user name.
 
 `password`  
-If not provided or **`NULL`**, the MySQL server will attempt to
+If not provided or **`null`**, the MySQL server will attempt to
 authenticate the user against those user records which have no password
 only. This allows one username to be used with different permissions
 (depending on if a password as provided or not).
@@ -47223,7 +47223,7 @@ queries.
 Specifies the port number to attempt to connect to the MySQL server.
 
 `socket`  
-Specifies the socket or named pipe that should be used. If **`NULL`**,
+Specifies the socket or named pipe that should be used. If **`null`**,
 mysqlnd will default to */tmp/mysql.sock*.
 
 `mysql_flags`  
@@ -47231,7 +47231,7 @@ Connection options.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -47320,7 +47320,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -48899,7 +48899,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -48958,7 +48958,7 @@ Thread Id of the connection to be killed.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -49198,7 +49198,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -49278,7 +49278,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -49352,7 +49352,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -49414,7 +49414,7 @@ The query string.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -49481,12 +49481,12 @@ Read a result set header.
 Mysqlnd connection handle. Do not modify!
 
 `mysqlnd_stmt`  
-Mysqlnd statement handle. Do not modify! Set to **`NULL`**, if function
+Mysqlnd statement handle. Do not modify! Set to **`null`**, if function
 is not used in the context of a prepared statement.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -49549,7 +49549,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -49677,7 +49677,7 @@ What to refresh.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -49733,7 +49733,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -49793,7 +49793,7 @@ The database name.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -49851,7 +49851,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -49914,7 +49914,7 @@ The query string.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -49971,7 +49971,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -50032,7 +50032,7 @@ Whether to turn on auto-commit or not.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -50099,7 +50099,7 @@ The charset to be set as default.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -50164,7 +50164,7 @@ Optional option value, if required.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -50289,7 +50289,7 @@ The option to be set.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -50410,7 +50410,7 @@ Whether to ignore *UPDATE*/*INSERT* status.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -50559,7 +50559,7 @@ Whether to ignore *UPDATE*/*INSERT* status.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -50700,7 +50700,7 @@ A list of allowable ciphers to use for SSL encryption.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -50911,7 +50911,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -50968,7 +50968,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -51145,7 +51145,7 @@ Mysqlnd prepared statement handle. Do not modify! Resource of type
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -51217,7 +51217,7 @@ The query to be prepared.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -51284,8 +51284,8 @@ available through user space API calls.
 The function can be disabled with
 *<a href="/set/mysqlinfo.html#" class="link">mysqlnd_uh.enable</a>*. If
 *<a href="/set/mysqlinfo.html#" class="link">mysqlnd_uh.enable</a>* is
-set to **`FALSE`** the function will not install the proxy and always
-return **`TRUE`**. Additionally, an error of the type *E\_WARNING* may
+set to **`false`** the function will not install the proxy and always
+return **`true`**. Additionally, an error of the type *E\_WARNING* may
 be emitted. The error message may read like *PHP Warning:
 mysqlnd\_uh\_convert\_to\_mysqlnd(): (Mysqlnd User Handler) The plugin
 has been disabled by setting the configuration parameter
@@ -51372,8 +51372,8 @@ assuming that the listed extensions are compiled to use the
 The function can be disabled with
 *<a href="/set/mysqlinfo.html#" class="link">mysqlnd_uh.enable</a>*. If
 *<a href="/set/mysqlinfo.html#" class="link">mysqlnd_uh.enable</a>* is
-set to **`FALSE`** the function will not install the proxy and always
-return **`TRUE`**. Additionally, an error of the type *E\_WARNING* may
+set to **`false`** the function will not install the proxy and always
+return **`true`**. Additionally, an error of the type *E\_WARNING* may
 be emitted. The error message may read like *PHP Warning:
 mysqlnd\_uh\_set\_connection\_proxy(): (Mysqlnd User Handler) The plugin
 has been disabled by setting the configuration parameter
@@ -51391,7 +51391,7 @@ particular connection only.
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 范例
 
@@ -51470,8 +51470,8 @@ created them as long as the extension is compiled to use the
 The function can be disabled with
 *<a href="/set/mysqlinfo.html#" class="link">mysqlnd_uh.enable</a>*. If
 *<a href="/set/mysqlinfo.html#" class="link">mysqlnd_uh.enable</a>* is
-set to **`FALSE`** the function will not install the proxy and always
-return **`TRUE`**. Additionally, an error of the type *E\_WARNING* may
+set to **`false`** the function will not install the proxy and always
+return **`true`**. Additionally, an error of the type *E\_WARNING* may
 be emitted. The error message may read like *PHP Warning:
 mysqlnd\_uh\_set\_statement\_proxy(): (Mysqlnd User Handler) The plugin
 has been disabled by setting the configuration parameter
@@ -51484,7 +51484,7 @@ The mysqlnd statement proxy object of type *MysqlndUhStatement*
 
 ### 返回值
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### 参见
 
@@ -52232,7 +52232,7 @@ PHP, which are
 ### 返回值
 
 An array of mysqlnd\_memcache configuration information on success,
-otherwise **`FALSE`**.
+otherwise **`false`**.
 
 The returned array has these elements:
 
@@ -52403,7 +52403,7 @@ syntax used to identify potential Memcache-queries. The query should
 have three sub patterns. The first subpattern contains the requested
 field list, the second the name of the ID column from the query and the
 third the requested value. If this parameter is omitted or os set to
-**`NULL`**, then a default pattern will be used.
+**`null`**, then a default pattern will be used.
 
 `callback`  
 A callback which will be used whenever a query is being sent to MySQL.
@@ -52412,8 +52412,8 @@ parameter telling if a query was sent via Memcache.
 
 ### 返回值
 
-**`TRUE`** if the association or disassociation is successful, otherwise
-**`FALSE`** if there is an error.
+**`true`** if the association or disassociation is successful, otherwise
+**`false`** if there is an error.
 
 ### 范例
 

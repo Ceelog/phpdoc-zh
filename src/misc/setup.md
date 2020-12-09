@@ -40,7 +40,7 @@
 这是配置指令的简短说明。
 
 `ignore_user_abort` <span class="type">boolean</span>  
-默认值为 **`FALSE`** 。 如果设置为 **`TRUE`**
+默认值为 **`false`** 。 如果设置为 **`true`**
 ，在客户端断开连接后，脚本不会被中止。
 
 参见 <span class="function">ignore\_user\_abort</span>.

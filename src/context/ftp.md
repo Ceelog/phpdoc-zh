@@ -13,7 +13,7 @@ Context options for *ftp://* and *ftps://* transports.
 Allow overwriting of already existing files on remote server. Applies to
 write mode (uploading) only.
 
-Defaults to **`FALSE`**.
+Defaults to **`false`**.
 
 `resume_pos` <span class="type">int</span>  
 File offset at which to begin transfer. Applies to read mode

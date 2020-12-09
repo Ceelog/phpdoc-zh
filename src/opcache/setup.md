@@ -104,7 +104,7 @@ PECL 扩展的 DLL 当前不可用。参见
 | <a href="/opcache/setup.html#" class="link">opcache.log_verbosity_level</a>           | "1"          | PHP\_INI\_SYSTEM |                                                           |
 | <a href="/opcache/setup.html#" class="link">opcache.preferred_memory_model</a>        | ""           | PHP\_INI\_SYSTEM |                                                           |
 | <a href="/opcache/setup.html#" class="link">opcache.protect_memory</a>                | "0"          | PHP\_INI\_SYSTEM |                                                           |
-| <a href="/opcache/setup.html#" class="link">opcache.mmap_base</a>                     | **`NULL`**   | PHP\_INI\_SYSTEM |                                                           |
+| <a href="/opcache/setup.html#" class="link">opcache.mmap_base</a>                     | **`null`**   | PHP\_INI\_SYSTEM |                                                           |
 | <a href="/opcache/setup.html#" class="link">opcache.restrict_api</a>                  | ""           | PHP\_INI\_SYSTEM |                                                           |
 | <a href="/opcache/setup.html#" class="link">opcache.file_update_protection</a>        | "2"          | PHP\_INI\_ALL    |                                                           |
 | <a href="/opcache/setup.html#" class="link">opcache.huge_code_pages</a>               | "0"          | PHP\_INI\_SYSTEM |                                                           |

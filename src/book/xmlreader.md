@@ -213,7 +213,7 @@ class="type">DOMNode</span><span class="type">false</span></span> <span
 class="methodname">expand</span> (\[ <span class="methodparam"><span
 class="type"><span class="type">DOMNode</span><span
 class="type">null</span></span> `$baseNode`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">string</span><span class="type">null</span></span> <span
@@ -275,7 +275,7 @@ class="methodparam">void</span> )
 <span class="methodname">next</span> (\[ <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$name`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type"><span
@@ -284,7 +284,7 @@ class="methodname">open</span> ( <span class="methodparam"><span
 class="type">string</span> `$uri`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\] )
 
@@ -333,7 +333,7 @@ class="type">XMLReader</span></span> <span class="methodname">XML</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$source`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\] )
 
@@ -474,7 +474,7 @@ Closes the input the XMLReader object is currently parsing.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -493,7 +493,7 @@ class="type">DOMNode</span><span class="type">false</span></span> <span
 class="methodname">XMLReader::expand</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">DOMNode</span><span class="type">null</span></span>
-`$baseNode`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$baseNode`<span class="initializer"> = **`null`**</span></span> \] )
 
 This method copies the current node and returns the appropriate DOM
 object.
@@ -506,7 +506,7 @@ class="classname">DOMDocument</span> for the created DOM object.
 
 ### 返回值
 
-The resulting <span class="classname">DOMNode</span> or **`FALSE`** on
+The resulting <span class="classname">DOMNode</span> or **`false`** on
 error.
 
 XMLReader::getAttribute
@@ -521,7 +521,7 @@ class="type">string</span><span class="type">null</span></span> <span
 class="methodname">XMLReader::getAttribute</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
-Returns the value of a named attribute or **`NULL`** if the attribute
+Returns the value of a named attribute or **`null`** if the attribute
 does not exist or not positioned on an element node.
 
 ### 参数
@@ -533,11 +533,11 @@ The name of the attribute.
 
 | 版本  | 说明                                            |
 |-------|-------------------------------------------------|
-| 8.0.0 | This function can no longer return **`FALSE`**. |
+| 8.0.0 | This function can no longer return **`false`**. |
 
 ### 返回值
 
-The value of the attribute, or **`NULL`** if no attribute with the given
+The value of the attribute, or **`null`** if no attribute with the given
 `name` is found or not positioned on an element node.
 
 ### 参见
@@ -568,14 +568,14 @@ The position of the attribute.
 ### 返回值
 
 The value of the attribute, or an empty string (before PHP 5.6) or
-**`NULL`** (from PHP 5.6 onwards) if no attribute exists at `index` or
+**`null`** (from PHP 5.6 onwards) if no attribute exists at `index` or
 is not positioned on the element.
 
 ### 更新日志
 
 | 版本  | 说明                                                                                                             |
 |-------|------------------------------------------------------------------------------------------------------------------|
-| 5.6.0 | <span class="methodname">XMLReader::getAttributeNo</span> now returns **`NULL`** if the attribute doesn't exist. |
+| 5.6.0 | <span class="methodname">XMLReader::getAttributeNo</span> now returns **`null`** if the attribute doesn't exist. |
 
 ### 参见
 
@@ -610,15 +610,15 @@ The namespace URI.
 ### 返回值
 
 The value of the attribute, or an empty string (before PHP 5.6) or
-**`NULL`** (from PHP 5.6 onwards) if no attribute with the given `name`
+**`null`** (from PHP 5.6 onwards) if no attribute with the given `name`
 and `namespace` is found or not positioned of element.
 
 ### 更新日志
 
 | 版本  | 说明                                                                                                             |
 |-------|------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | This function can no longer return **`FALSE`**.                                                                  |
-| 5.6.0 | <span class="methodname">XMLReader::getAttributeNS</span> now returns **`NULL`** if the attribute doesn't exist. |
+| 8.0.0 | This function can no longer return **`false`**.                                                                  |
+| 5.6.0 | <span class="methodname">XMLReader::getAttributeNS</span> now returns **`null`** if the attribute doesn't exist. |
 
 ### 参见
 
@@ -646,7 +646,7 @@ One of the
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -668,7 +668,7 @@ valid.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -719,13 +719,13 @@ String containing the prefix.
 
 ### 返回值
 
-The value of the namespace, or **`NULL`** if no namespace exists.
+The value of the namespace, or **`null`** if no namespace exists.
 
 ### 更新日志
 
 | 版本  | 说明                                            |
 |-------|-------------------------------------------------|
-| 8.0.0 | This function can no longer return **`FALSE`**. |
+| 8.0.0 | This function can no longer return **`false`**. |
 
 XMLReader::moveToAttribute
 ==========================
@@ -747,7 +747,7 @@ The name of the attribute.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -776,7 +776,7 @@ The position of the attribute.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -810,7 +810,7 @@ The namespace URI.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -834,7 +834,7 @@ Moves cursor to the parent Element of current Attribute.
 
 ### 返回值
 
-Returns **`TRUE`** if successful and **`FALSE`** if it fails or not
+Returns **`true`** if successful and **`false`** if it fails or not
 positioned on Attribute when this method is called.
 
 ### 参见
@@ -859,7 +859,7 @@ Moves cursor to the first Attribute.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -885,7 +885,7 @@ moves to first attribute if positioned on an Element.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -906,7 +906,7 @@ Move cursor to next node skipping all subtrees
 <span class="methodname">XMLReader::next</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$name`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$name`<span class="initializer"> = **`null`**</span></span> \] )
 
 Positions cursor on the next node skipping all subtrees.
 
@@ -917,7 +917,7 @@ The name of the next node to move to.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -945,7 +945,7 @@ class="methodname">XMLReader::open</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\] )
 
@@ -957,7 +957,7 @@ Set the URI containing the XML document to be parsed.
 URI pointing to the document.
 
 `encoding`  
-The document encoding or **`NULL`**.
+The document encoding or **`null`**.
 
 `flags`  
 A bitmask of the
@@ -965,9 +965,9 @@ A bitmask of the
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 If called
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 If called
 statically, returns an <span class="classname">XMLReader</span>
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 错误／异常
 
@@ -1000,7 +1000,7 @@ Moves cursor to the next node in the document.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1136,12 +1136,12 @@ One of the
 <a href="/class/xmlreader.html#预定义常量" class="link">parser option constants</a>.
 
 `value`  
-If set to **`TRUE`** the option will be enabled otherwise will be
+If set to **`true`** the option will be enabled otherwise will be
 disabled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 XMLReader::setRelaxNGSchema
 ===========================
@@ -1165,7 +1165,7 @@ filename or URI pointing to a RelaxNG Schema.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1195,7 +1195,7 @@ String containing the RelaxNG Schema.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1226,7 +1226,7 @@ The filename of the XSD schema.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -1259,7 +1259,7 @@ class="methodname">XMLReader::XML</span> ( <span
 class="methodparam"><span class="type">string</span> `$source`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\] )
 
@@ -1271,7 +1271,7 @@ Set the data containing the XML to parse.
 String containing the XML to be parsed.
 
 `encoding`  
-The document encoding or **`NULL`**.
+The document encoding or **`null`**.
 
 `flags`  
 A bitmask of the
@@ -1279,9 +1279,9 @@ A bitmask of the
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 If called
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 If called
 statically, returns an <span class="classname">XMLReader</span>
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 错误／异常
 

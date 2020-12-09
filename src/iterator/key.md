@@ -18,7 +18,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功返回<span class="type">标量</span>，失败则返回 **`NULL`**。
+成功返回<span class="type">标量</span>，失败则返回 **`null`**。
 
 ### 错误／异常
 

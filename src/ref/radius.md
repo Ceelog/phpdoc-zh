@@ -11,7 +11,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-Returns a handle on success, **`FALSE`** on error. This function only
+Returns a handle on success, **`false`** on error. This function only
 fails if insufficient memory is available.
 
 ### 范例
@@ -81,7 +81,7 @@ passed into the `max_tries`.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -113,7 +113,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-Returns a handle on success, **`FALSE`** on error. This function only
+Returns a handle on success, **`false`** on error. This function only
 fails if insufficient memory is available.
 
 ### 范例
@@ -145,7 +145,7 @@ at the end of each request.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 radius\_config
 ==============
@@ -179,7 +179,7 @@ class="function">radius\_add\_server</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -215,7 +215,7 @@ Type is **`RADIUS_ACCESS_REQUEST`** or **`RADIUS_ACCOUNTING_REQUEST`**.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -389,7 +389,7 @@ will be a PPTP-MPPE implementation in PHP.
 
 ### 返回值
 
-Returns the demangled string, or **`FALSE`** on error.
+Returns the demangled string, or **`false`** on error.
 
 radius\_demangle
 ================
@@ -409,7 +409,7 @@ reasons, and must be demangled before you can use them.
 
 ### 返回值
 
-Returns the demangled string, or **`FALSE`** on error.
+Returns the demangled string, or **`false`** on error.
 
 radius\_get\_attr
 =================
@@ -487,7 +487,7 @@ The tagged attribute to be decoded.
 
 ### 返回值
 
-Returns the data from the tagged attribute 或者在失败时返回 **`FALSE`**.
+Returns the data from the tagged attribute 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -542,7 +542,7 @@ The tagged attribute to be decoded.
 
 ### 返回值
 
-Returns the tag from the tagged attribute 或者在失败时返回 **`FALSE`**.
+Returns the tag from the tagged attribute 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -592,7 +592,7 @@ determine the vendor.
 ### 返回值
 
 Returns an associative array containing the attribute-type, vendor and
-the data, or **`FALSE`** on error.
+the data, or **`false`** on error.
 
 ### 范例
 
@@ -680,7 +680,7 @@ option is set.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -737,7 +737,7 @@ option is set.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -817,7 +817,7 @@ option is set.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -896,7 +896,7 @@ option is set.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -974,7 +974,7 @@ option is set.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1036,7 +1036,7 @@ option is set.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1116,7 +1116,7 @@ option is set.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1185,7 +1185,7 @@ option is set.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1214,7 +1214,7 @@ passwords and encryption-keys.
 
 ### 返回值
 
-Returns the request authenticator as string, or **`FALSE`** on error.
+Returns the request authenticator as string, or **`false`** on error.
 
 ### 参见
 
@@ -1247,7 +1247,7 @@ The data to be salt-encrypted.
 
 ### 返回值
 
-Returns the salt-encrypted data 或者在失败时返回 **`FALSE`**.
+Returns the salt-encrypted data 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -1282,7 +1282,7 @@ class="function">radius\_send\_request</span> returns the Radius code
 which specifies the type of the response. This will typically be
 **`RADIUS_ACCESS_ACCEPT`**, **`RADIUS_ACCESS_REJECT`**, or
 **`RADIUS_ACCESS_CHALLENGE`**. If no valid response is received, <span
-class="function">radius\_send\_request</span> returns **`FALSE`**.
+class="function">radius\_send\_request</span> returns **`false`**.
 
 ### 参见
 
@@ -1305,7 +1305,7 @@ passwords and encryption-keys.
 
 ### 返回值
 
-Returns the server's shared secret as string, or **`FALSE`** on error.
+Returns the server's shared secret as string, or **`false`** on error.
 
 radius\_strerror
 ================

@@ -36,7 +36,7 @@ The following classes were introduced in PHP 5.2.0:
     -   <span class="simpara"> bool RegexIterator::getMode() - Returns
         current operation mode </span>
     -   <span class="simpara"> bool RegexIterator::getPregFlags() -
-        Returns current PREG flags (if in use or **`NULL`**) </span>
+        Returns current PREG flags (if in use or **`null`**) </span>
     -   <span class="simpara"> bool RegexIterator::setFlags(int
         new\_flags) - Set operation flags </span>
     -   <span class="simpara"> bool RegexIterator::setMode(int

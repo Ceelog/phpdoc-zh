@@ -14,7 +14,7 @@
 -   <span class="simpara"> <span class="function">var\_dump</span>
     的输出现在包含对象的私有属性. </span>
 -   <span class="simpara"> 如果会话启动失败，<span
-    class="function">session\_start</span> 现在将返回 **`FALSE`**.
+    class="function">session\_start</span> 现在将返回 **`false`**.
     </span>
 -   <span class="simpara"> <span
     class="function">property\_exists</span>

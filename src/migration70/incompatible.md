@@ -45,7 +45,7 @@ function handler(Throwable $e) { ... }
 
 #### 当内部构造器失败的时候，总是抛出异常
 
-在之前版本中，如果内部类的构造器出错，会返回 **`NULL`**
+在之前版本中，如果内部类的构造器出错，会返回 **`null`**
 或者一个不可用的对象。 从 PHP 7 开始，如果内部类构造器发生错误，
 那么会抛出异常。
 
@@ -568,9 +568,9 @@ $c =& new C;
 -   <span class="simpara"><span class="type">int</span></span>
 -   <span class="simpara"><span class="type">float</span></span>
 -   <span class="simpara"><span class="type">string</span></span>
--   <span class="simpara">**`NULL`**</span>
--   <span class="simpara">**`TRUE`**</span>
--   <span class="simpara">**`FALSE`**</span>
+-   <span class="simpara">**`null`**</span>
+-   <span class="simpara">**`true`**</span>
+-   <span class="simpara">**`false`**</span>
 
 此外，也不要使用下列的名字来命名类、接口以及 trait。虽然在 PHP 7.0 中，
 这并不会引发错误， 但是这些名字是保留给将来使用的。
@@ -731,11 +731,11 @@ JSON 扩展已经被 JSOND 扩展取代。 对于数值的处理，有以下两�
 
 将浮点数转换为整数的时候，如果浮点数值太大，导致无法以整数表达的情况下，
 在之前的版本中，内部函数会直接将整数截断，并不会引发错误。 在 PHP 7.0
-中，如果发生这种情况，会引发 E\_WARNING 错误，并且返回 **`NULL`**。
+中，如果发生这种情况，会引发 E\_WARNING 错误，并且返回 **`null`**。
 
 #### 自定义会话处理器的返回值修复
 
-在自定义会话处理器中，如果函数的返回值不是 **`FALSE`**，也不是 *-1*，
+在自定义会话处理器中，如果函数的返回值不是 **`false`**，也不是 *-1*，
 会引发致命错误。现在，如果这些函数的返回值不是布尔值，也不是 *-1* 或者
 *0*，函数调用结果将被视为失败，并且引发 E\_WARNING 错误。
 

@@ -31,7 +31,7 @@ The IP address.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 swoole\_async\_read
 ===================
@@ -111,7 +111,7 @@ The content readed from the file.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 swoole\_async\_set
 ==================
@@ -159,7 +159,7 @@ The offset.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 swoole\_async\_writefile
 ========================
@@ -191,7 +191,7 @@ The content writing to the file.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 swoole\_client\_select
 ======================
@@ -304,7 +304,7 @@ class="methodparam"><span class="type">callable</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 swoole\_event\_del
 ==================
@@ -323,7 +323,7 @@ class="methodparam"><span class="type">int</span> `$fd`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 swoole\_event\_exit
 ===================
@@ -407,7 +407,7 @@ class="methodparam"><span class="type">string</span> `$data`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 swoole\_get\_local\_ip
 ======================

@@ -19,7 +19,7 @@ command line history.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 readline\_callback\_handler\_install
 ====================================
@@ -51,7 +51,7 @@ class="function">readline</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -114,7 +114,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果上一个被安装的回调函数句柄被移出返回 **`TRUE`** 否则 **`FALSE`**
+如果上一个被安装的回调函数句柄被移出返回 **`true`** 否则 **`false`**
 如果没有找到的话.
 
 ### 范例
@@ -172,7 +172,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 readline\_completion\_function
 ==============================
@@ -197,7 +197,7 @@ class="methodparam"><span class="type">callable</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 readline\_info
 ==============
@@ -286,7 +286,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 readline\_redisplay
 ===================
@@ -326,7 +326,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 readline
 ========

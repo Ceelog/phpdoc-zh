@@ -30,7 +30,7 @@ class="initializer"> = CASE\_LOWER</span></span> \] )
 
 ### 返回值
 
-返回一个键全是小写或者全是大写的数组；如果输入值（`array`）不是一个数组，那么返回**`FALSE`**
+返回一个键全是小写或者全是大写的数组；如果输入值（`array`）不是一个数组，那么返回**`false`**
 
 ### 错误／异常
 
@@ -88,9 +88,9 @@ class="methodparam"><span class="type">int</span> `$size`</span> \[,
 每个数组的单元数目
 
 `preserve_keys`  
-设为 **`TRUE`**，可以使 PHP 保留输入数组中原来的键名。如果你指定了
-**`FALSE`**，那每个结果数组将用从零开始的新数字索引。默认值是
-**`FALSE`**。
+设为 **`true`**，可以使 PHP 保留输入数组中原来的键名。如果你指定了
+**`false`**，那每个结果数组将用从零开始的新数字索引。默认值是
+**`false`**。
 
 ### 返回值
 
@@ -99,7 +99,7 @@ class="methodparam"><span class="type">int</span> `$size`</span> \[,
 
 ### 错误／异常
 
-如果 `size` 小于 1，会抛出一个 **`E_WARNING`** 错误并返回 **`NULL`**。
+如果 `size` 小于 1，会抛出一个 **`E_WARNING`** 错误并返回 **`null`**。
 
 ### 范例
 
@@ -189,7 +189,7 @@ class="function">\_\_isset</span> 魔术方法。
 
 `column_key`  
 需要返回值的列，它可以是索引数组的列索引，或者是关联数组的列的键，也可以是属性名。
-也可以是**`NULL`**，此时将返回整个数组（配合`index_key`参数来重置数组键的时候，非常管用）
+也可以是**`null`**，此时将返回整个数组（配合`index_key`参数来重置数组键的时候，非常管用）
 
 `index_key`  
 作为返回数组的索引/键的列，它可以是该列的整数索引，或者字符串键值。
@@ -382,7 +382,7 @@ class="type">string</span>）。
 ### 返回值
 
 返回合并的 <span
-class="type">array</span>，如果两个数组的单元数不同则返回 **`FALSE`**。
+class="type">array</span>，如果两个数组的单元数不同则返回 **`false`**。
 
 ### 错误／异常
 
@@ -392,7 +392,7 @@ class="type">array</span>，如果两个数组的单元数不同则返回 **`FAL
 
 | 版本  | 说明                                                                       |
 |-------|----------------------------------------------------------------------------|
-| 5.4.0 | （修复）早期版本中如果是空数组就报**`E_WARNING`**的错并且返回**`FALSE`**。 |
+| 5.4.0 | （修复）早期版本中如果是空数组就报**`E_WARNING`**的错并且返回**`false`**。 |
 
 ### 范例
 
@@ -1147,7 +1147,7 @@ class="type">int</span> `$flag`<span class="initializer"> =
 `callback`  
 使用的回调函数
 
-如果没有提供 `callback` 函数， 将删除 `array` 中所有等值为 **`FALSE`**
+如果没有提供 `callback` 函数， 将删除 `array` 中所有等值为 **`false`**
 的条目。更多信息见<a href="/language/types/boolean.html#language.types.boolean.casting" class="link">转换为布尔值</a>。
 
 `flag`  
@@ -1313,7 +1313,7 @@ class="type">string</span>）。如果类型不对，将出现一个警告，并
 
 ### 返回值
 
-成功时返回交换后的数组，如果失败返回 **`NULL`**。
+成功时返回交换后的数组，如果失败返回 **`null`**。
 
 ### 范例
 
@@ -1766,7 +1766,7 @@ class="methodparam"><span class="type">mixed</span> `$key`</span> ,
 `$array`</span> )
 
 数组里有键 `key` 时，<span class="function">array\_key\_exists</span>
-返回 **`TRUE`**。 `key` 可以是任何能作为数组索引的值。
+返回 **`true`**。 `key` 可以是任何能作为数组索引的值。
 
 ### 参数
 
@@ -1778,7 +1778,7 @@ class="methodparam"><span class="type">mixed</span> `$key`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 > **Note**:
 >
@@ -1801,8 +1801,8 @@ if (array_key_exists('first', $search_array)) {
 **示例 \#2 <span class="function">array\_key\_exists</span> 与 <span
 class="function">isset</span> 的对比**
 
-<span class="function">isset</span> 对于数组中为 **`NULL`** 的值不会返回
-**`TRUE`**，而 <span class="function">array\_key\_exists</span> 会。
+<span class="function">isset</span> 对于数组中为 **`null`** 的值不会返回
+**`true`**，而 <span class="function">array\_key\_exists</span> 会。
 
 ``` php
 <?php
@@ -1822,7 +1822,7 @@ array_key_exists('first', $search_array);
 >
 > 由于为了兼容以前版本，如果 <span class="type">object</span> 当做
 > `array` 传入 <span class="function">array\_key\_exists</span>，同时
-> `key` 是对象的属性，也会返回 **`TRUE`**。 不要依赖这个特性，保证参数
+> `key` 是对象的属性，也会返回 **`true`**。 不要依赖这个特性，保证参数
 > `array` 类型是数组（<span class="type">array</span>）。
 >
 > 要检查对象是否有某个属性，应该去用 <span
@@ -1855,7 +1855,7 @@ class="methodparam"><span class="type">array</span> `$array`</span> )
 
 ### 返回值
 
-返回 `array` 的第一个键值（如果不为空），否则返回 **`NULL`**。
+返回 `array` 的第一个键值（如果不为空），否则返回 **`null`**。
 
 ### 范例
 
@@ -1922,7 +1922,7 @@ class="methodparam"><span class="type">array</span> `$array`</span> )
 
 ### 返回值
 
-返回 `array` 的最后一个键值（如果不为空），否则返回 **`NULL`**。
+返回 `array` 的最后一个键值（如果不为空），否则返回 **`null`**。
 
 ### 参见
 
@@ -2037,7 +2037,7 @@ class="function">array\_map</span> 实参中数组的数量。
 回调函数 <span
 class="type">callable</span>，应用到每个数组里的每个元素。
 
-多个数组操作合并时，`callback` 可以设置为 **`NULL`**。 如果只提供了
+多个数组操作合并时，`callback` 可以设置为 **`null`**。 如果只提供了
 `array` 一个数组， <span class="methodname">array\_map</span>
 会返回输入的数组。
 
@@ -2175,7 +2175,7 @@ print_r($d);
 传入两个及以上的数组时，它们元素数量将会相同。因为回调函数会并行地处理相互对应的元素。
 如果几个数组的元素数量不一致：空元素会扩展短那个数组，直到长度和最长的数组一样。
 
-此函数有个有趣的用法：传入 **`NULL`**
+此函数有个有趣的用法：传入 **`null`**
 作为回调函数的名称，将创建多维数组（一个数组，内部包含数组。）
 
 **示例 \#4 多个数组的合并操作**
@@ -2232,7 +2232,7 @@ print_r($d);
 
     )
 
-**示例 \#5 仅有 `array1` 时，`callback` 设置为 **`NULL`****
+**示例 \#5 仅有 `array1` 时，`callback` 设置为 **`null`****
 
 ``` php
 <?php
@@ -2575,7 +2575,7 @@ class="type">string</span>）键名保持不变，但数字键名会被重新索
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -2832,7 +2832,7 @@ class="type">array</span> `&$array`</span> )
 ### 返回值
 
 返回 `array` 的最后一个值。如果 `array`
-是空（如果不是一个数组），将会返回 **`NULL`** 。
+是空（如果不是一个数组），将会返回 **`null`** 。
 
 ### 错误／异常
 
@@ -3059,7 +3059,7 @@ class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">callable</span>
 `$callback`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$initial`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 <span class="function">array\_reduce</span> 将回调函数 `callback`
 迭代地作用到 `array` 数组中的每一个单元中，从而将数组简化为单一的值。
@@ -3091,7 +3091,7 @@ class="methodparam"><span class="type">mixed</span> `$carry`</span> ,
 返回结果值。
 
 `initial` 参数，<span class="function">array\_reduce</span> 返回
-**`NULL`**。
+**`null`**。
 
 ### 范例
 
@@ -3165,7 +3165,7 @@ class="function">array\_replace\_recursive</span>
 ### 返回值
 
 返回一个<span class="type">数组</span>。如果发生错误，将返回
-**`NULL`**。
+**`null`**。
 
 ### 范例
 
@@ -3284,7 +3284,7 @@ key 的值替换 `array`
 ### 返回值
 
 返回一个<span class="type">数组</span>。如果发生错误，将返回
-**`NULL`**。
+**`null`**。
 
 ### 范例
 
@@ -3328,7 +3328,7 @@ array\_reverse
 class="methodname">array\_reverse</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$preserve_keys`<span class="initializer"> = **`FALSE`**</span></span>
+`$preserve_keys`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 <span class="function">array\_reverse</span> 接受数组 `array`
@@ -3340,7 +3340,7 @@ class="methodparam"><span class="type">array</span> `$array`</span> \[,
 输入的数组。
 
 `preserve_keys`  
-如果设置为 **`TRUE`** 会保留数字的键。
+如果设置为 **`true`** 会保留数字的键。
 非数字的键则不受这个设置的影响，总是会被保留。
 
 ### 返回值
@@ -3433,14 +3433,14 @@ false</span></span> \] )
 这个数组。
 
 `strict`  
-如果可选的第三个参数 `strict` 为 **`TRUE`**，则 <span
+如果可选的第三个参数 `strict` 为 **`true`**，则 <span
 class="function">array\_search</span> 将在 `haystack`
 中检查*完全相同*的元素。 这意味着同样严格比较 `haystack` 里 `needle` 的
 <a href="/language/types.html" class="link">类型</a>，并且对象需是同一个实例。
 
 ### 返回值
 
-如果找到了 `needle` 则返回它的键，否则返回 **`FALSE`**。
+如果找到了 `needle` 则返回它的键，否则返回 **`false`**。
 
 如果 `needle` 在 `haystack`
 中出现不止一次，则返回第一个匹配的键。要返回所有匹配值的键，应该用 <span
@@ -3448,7 +3448,7 @@ class="function">array\_keys</span> 加上可选参数 `search_value` 来代替�
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -3457,7 +3457,7 @@ class="function">array\_keys</span> 加上可选参数 `search_value` 来代替�
 
 | 版本  | 说明                                                                                                                                                   |
 |-------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0 | As with all internal PHP functions as of 5.3.0, <span class="function">array\_search</span> returns **`NULL`** if invalid parameters are passed to it. |
+| 5.3.0 | As with all internal PHP functions as of 5.3.0, <span class="function">array\_search</span> returns **`null`** if invalid parameters are passed to it. |
 
 ### 范例
 
@@ -3505,7 +3505,7 @@ class="type">array</span> `&$array`</span> )
 
 ### 返回值
 
-返回移出的值，如果 `array` 为 空或不是一个数组则返回 **`NULL`**。
+返回移出的值，如果 `array` 为 空或不是一个数组则返回 **`null`**。
 
 ### 范例
 
@@ -3548,9 +3548,9 @@ class="methodname">array\_slice</span> ( <span class="methodparam"><span
 class="type">array</span> `$array`</span> , <span
 class="methodparam"><span class="type">int</span> `$offset`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$preserve_keys`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="function">array\_slice</span> 返回根据 `offset` 和 `length`
 参数所指定的 `array` 数组中的一段序列。
@@ -3583,7 +3583,7 @@ class="initializer"> = **`FALSE`**</span></span> \]\] )
 >
 > 注意 <span class="function">array\_slice</span>
 > 默认会重新排序并重置数组的数字索引。你可以通过将 `preserve_keys` 设为
-> **`TRUE`** 来改变此行为。 无论本参数如何设置，都会保留字符串的键。
+> **`true`** 来改变此行为。 无论本参数如何设置，都会保留字符串的键。
 
 ### 返回值
 
@@ -3696,7 +3696,7 @@ class="methodparam"><span class="type">array</span> `&$input`</span> ,
 > **Note**: <span class="simpara"> 如果 `replacement` 不是数组，会被
 > <a href="/language/types/array.html#language.types.array.casting" class="link">类型转换</a>
 > 成数组 (例如： `(array) $replacement`)。 当传入的 `replacement`
-> 是个对象或者 **`NULL`**，会导致未知的行为出现。 </span>
+> 是个对象或者 **`null`**，会导致未知的行为出现。 </span>
 
 ### 参数
 
@@ -3732,7 +3732,7 @@ class="methodparam"><span class="type">array</span> `&$input`</span> ,
 > 不保留替换数组 `replacement` 中的键名。
 
 如果用来替换 `replacement` 只有一个单元，那么不需要给它加上 *array()*
-或方括号，除非该单元本身就是一个数组、一个对象或者 **`NULL`**。
+或方括号，除非该单元本身就是一个数组、一个对象或者 **`null`**。
 
 ### 返回值
 
@@ -4752,7 +4752,7 @@ class="methodparam"><span class="type">array</span> `&$array`</span> ,
 <span class="methodparam"><span class="type">callable</span>
 `$callback`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$userdata`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 将用户自定义函数 `callback` 应用到 `array`
 数组中的每个单元。本函数会递归到更深层的数组中去。
@@ -4776,7 +4776,7 @@ class="type">mixed</span> `$userdata`<span class="initializer"> =
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4822,7 +4822,7 @@ class="type">array</span> `&$array`</span> , <span
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$userdata`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 将用户自定义函数 `funcname` 应用到 `array` 数组中的每个单元。
 
@@ -4861,7 +4861,7 @@ class="type">mixed</span> `$userdata`<span class="initializer"> =
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -5073,7 +5073,7 @@ class="function">sort</span>。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5133,7 +5133,7 @@ class="function">sort</span>。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5292,7 +5292,7 @@ array 不止一次包含了自身）并返回大于预期的统计数字。
 
 返回 `array_or_countable` 中的单元数目。 如果参数既不是数组，也不是实现
 *Countable* 接口的对象，将返回 *1*。 有个例外：如果 `array_or_countable`
-是 **`NULL`** 则结果是 *0*。
+是 **`null`** 则结果是 *0*。
 
 ### 范例
 
@@ -5379,11 +5379,11 @@ current
 
 <span class="function">current</span>
 函数返回当前被内部指针指向的数组单元的值，并不移动指针。如果内部指针指向超出了单元列表的末端，<span
-class="function">current</span> 返回 **`FALSE`**。
+class="function">current</span> 返回 **`false`**。
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -5413,9 +5413,9 @@ var_dump(current($arr)); // array(0) { }
 ### 注释
 
 > **Note**: <span class="simpara"> 如果数组包含 <span
-> class="type">boolean</span> **`FALSE`**
+> class="type">boolean</span> **`false`**
 > 的单元则本函数在碰到这个单元时也返回
-> **`FALSE`**，使得不可能判断是否到了此数组列表的末端。
+> **`false`**，使得不可能判断是否到了此数组列表的末端。
 > 要正确遍历可能含有空单元的数组，用 <span class="function">each</span>
 > 函数。 </span>
 
@@ -5462,7 +5462,7 @@ each 遍历数组，必须使用 <span class="function">reset</span>。
 包含有数据。
 
 如果内部指针越过了数组的末端，则 <span class="function">each</span> 返回
-**`FALSE`**。
+**`false`**。
 
 ### 范例
 
@@ -5570,7 +5570,7 @@ end
 
 ### 返回值
 
-返回最后一个元素的值，或者如果是空数组则返回 **`FALSE`**。
+返回最后一个元素的值，或者如果是空数组则返回 **`false`**。
 
 ### 范例
 
@@ -5606,7 +5606,7 @@ extract
 class="type">int</span> `$flags`<span class="initializer"> =
 EXTR\_OVERWRITE</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$prefix`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 本函数用来将变量从数组中导入到当前的符号表中。
 
@@ -5804,7 +5804,7 @@ in\_array
 `$needle`</span> , <span class="methodparam"><span
 class="type">array</span> `$haystack`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$strict`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 大海捞针，在大海（`haystack`）中搜索针（ `needle`），如果没有设置
 `strict` 则使用宽松的比较。
@@ -5822,14 +5822,14 @@ class="initializer"> = **`FALSE`**</span></span> \] )
 待搜索的数组。
 
 `strict`  
-如果第三个参数 `strict` 的值为 **`TRUE`** 则 <span
+如果第三个参数 `strict` 的值为 **`true`** 则 <span
 class="function">in\_array</span> 函数还会检查 `needle`
 的<a href="/language/types.html" class="link">类型</a>是否和 `haystack`
 中的相同。
 
 ### 返回值
 
-如果找到 `needle` 则返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果找到 `needle` 则返回 **`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -5935,7 +5935,7 @@ key
 <span class="function">key</span>
 函数返回数组中内部指针指向的当前单元的键名。
 但它不会移动指针。如果内部指针超过了元素列表尾部，或者数组是空的，<span
-class="function">key</span> 会返回 **`NULL`**。
+class="function">key</span> 会返回 **`null`**。
 
 ### 更新日志
 
@@ -6005,7 +6005,7 @@ class="function">sort</span>。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6060,7 +6060,7 @@ class="function">sort</span>。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6342,7 +6342,7 @@ class="function">natsort</span> 函数的不区分大小写字母的版本。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6422,7 +6422,7 @@ natsort
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -6565,11 +6565,11 @@ class="function">current</span>
 ### 返回值
 
 返回数组内部指针指向的下一个单元的值，或当没有更多单元时返回
-**`FALSE`**。
+**`false`**。
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -6592,7 +6592,7 @@ $mode = end($transport);     // $mode = 'plane';
 ### 注释
 
 > **Note**: <span class="simpara"> 你将无法区别包含数组尾以及 <span
-> class="type">boolean</span> **`FALSE`**
+> class="type">boolean</span> **`false`**
 > 单元的数组。要正确遍历可能含有空单元或者单元值为 0 的数组，参见 <span
 > class="function">each</span> 函数。 </span>
 
@@ -6637,7 +6637,7 @@ The input array.
 ### 返回值
 
 返回数组内部指针指向的前一个单元的值，或当没有更多单元时返回
-**`FALSE`**。
+**`false`**。
 
 ### 范例
 
@@ -6658,13 +6658,13 @@ $mode = end($transport);     // $mode = 'plane';
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
 
 > **Note**: <span class="simpara"> 你会无法区分包含 <span
-> class="type">boolean</span> **`FALSE`**
+> class="type">boolean</span> **`false`**
 > 单元的数组开头。要正确遍历可能含有空单元或者单元值为 0 的数组，参见
 > <span class="function">each</span> 函数。 </span>
 
@@ -6771,7 +6771,7 @@ reset
 
 ### 返回值
 
-返回数组第一个单元的值，如果数组为空则返回 **`FALSE`**。
+返回数组第一个单元的值，如果数组为空则返回 **`false`**。
 
 ### 范例
 
@@ -6835,7 +6835,7 @@ class="function">sort</span>。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6896,7 +6896,7 @@ shuffle
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -6985,7 +6985,7 @@ SORT\_REGULAR</span></span> \] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7093,7 +7093,7 @@ class="type">callable</span> `$value_compare_func`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7184,7 +7184,7 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7266,7 +7266,7 @@ which will compare such values as equal.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

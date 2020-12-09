@@ -47,7 +47,7 @@ representing a bitset of the error constants IDNA\_ERROR\_\*.
 ### 返回值
 
 The domain name encoded in ASCII-compatible form, 或者在失败时返回
-**`FALSE`**
+**`false`**
 
 ### 更新日志
 
@@ -125,7 +125,7 @@ representing a bitset of the error constants IDNA\_ERROR\_\*.
 ### 返回值
 
 The domain name in Unicode, encoded in UTF-8, 或者在失败时返回
-**`FALSE`**
+**`false`**
 
 ### 更新日志
 

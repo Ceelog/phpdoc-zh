@@ -113,6 +113,7 @@
     -   [预定义常量](/shmop/constants.html)
     -   [范例](/shmop/examples.html)
     -   [Shared Memory 函数](/ref/shmop.html)
+    -   [Shmop](/class/shmop.html) — The Shmop class
 -   [Sync](/book/sync.html) — Sync
     -   [简介](/intro/sync.html)
     -   [安装／配置](/sync/setup.html)

@@ -44,7 +44,7 @@ The pass phrase.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -92,7 +92,7 @@ class="classname">gnupg</span> 的调用生成。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -145,7 +145,7 @@ The pass phrase.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -188,7 +188,7 @@ class="classname">gnupg</span> 的调用生成。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -232,7 +232,7 @@ class="classname">gnupg</span> 的调用生成。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -276,7 +276,7 @@ class="classname">gnupg</span> 的调用生成。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -329,7 +329,7 @@ The text being decrypted.
 ### 返回值
 
 On success, this function returns the decrypted text. On failure, this
-function returns **`FALSE`**.
+function returns **`false`**.
 
 ### 范例
 
@@ -390,7 +390,7 @@ The parameter `plaintext` gets filled with the decrypted text.
 
 On success, this function returns information about the signature and
 fills the `plaintext` parameter with the decrypted text. On failure,
-this function returns **`FALSE`**.
+this function returns **`false`**.
 
 ### 范例
 
@@ -449,7 +449,7 @@ The text being encrypted.
 ### 返回值
 
 On success, this function returns the encrypted text. On failure, this
-function returns **`FALSE`**.
+function returns **`false`**.
 
 ### 范例
 
@@ -508,7 +508,7 @@ The text being encrypted.
 ### 返回值
 
 On success, this function returns the encrypted and signed text. On
-failure, this function returns **`FALSE`**.
+failure, this function returns **`false`**.
 
 ### 范例
 
@@ -564,7 +564,7 @@ class="classname">gnupg</span> 的调用生成。
 ### 返回值
 
 On success, this function returns the keydata. On failure, this function
-returns **`FALSE`**.
+returns **`false`**.
 
 ### 范例
 
@@ -608,7 +608,7 @@ class="classname">gnupg</span> 的调用生成。
 
 ### 返回值
 
-Returns an errortext, if an error has occurred, otherwise **`FALSE`**.
+Returns an errortext, if an error has occurred, otherwise **`false`**.
 
 ### 范例
 
@@ -703,7 +703,7 @@ The data key that is being imported.
 ### 返回值
 
 On success, this function returns and info-array about the
-importprocess. On failure, this function returns **`FALSE`**.
+importprocess. On failure, this function returns **`false`**.
 
 ### 范例
 
@@ -793,7 +793,7 @@ The pattern being checked against the keys.
 ### 返回值
 
 Returns an array with information about all keys that matches the given
-pattern or **`FALSE`**, if an error has occurred.
+pattern or **`false`**, if an error has occurred.
 
 ### 范例
 
@@ -845,7 +845,7 @@ Pass a non-zero integer-value to this function to enable armored-output
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -957,7 +957,7 @@ produced. The possible values are **`GNUPG_SIG_MODE_NORMAL`**,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1011,7 +1011,7 @@ The plain text being signed.
 ### 返回值
 
 On success, this function returns the signed text or the signature. On
-failure, this function returns **`FALSE`**.
+failure, this function returns **`false`**.
 
 ### 范例
 
@@ -1068,7 +1068,7 @@ The signed text.
 
 `signature`  
 The signature. To verify a clearsigned text, set signature to
-**`FALSE`**.
+**`false`**.
 
 `plaintext`  
 The plain text. If this optional parameter is passed, it is filled with
@@ -1077,7 +1077,7 @@ the plain text.
 ### 返回值
 
 On success, this function returns information about the signature. On
-failure, this function returns **`FALSE`**.
+failure, this function returns **`false`**.
 
 ### 范例
 

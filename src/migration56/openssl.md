@@ -20,10 +20,10 @@ context options.
 While not recommended in general, it is possible to disable peer
 certificate verification for a request by setting the
 <a href="/context/ssl.html#context.ssl.verify-peer" class="link"><code class="parameter">verify_peer</code></a>
-context option to **`FALSE`**, and to disable peer name validation by
+context option to **`false`**, and to disable peer name validation by
 setting the
 <a href="/context/ssl.html#context.ssl.verify-peer-name" class="link"><code class="parameter">verify_peer_name</code></a>
-context option to **`FALSE`**.
+context option to **`false`**.
 
 ### Certificate fingerprints
 
@@ -55,7 +55,7 @@ SSL/TLS compression has been disabled by default to mitigate the CRIME
 attack. PHP 5.4.13 added a
 <a href="/context/ssl.html#context.ssl.disable-compression" class="link"><code class="parameter">disable_compression</code></a>
 context option to allow compression to be disabled: this is now set to
-**`TRUE`** (that is, compression is disabled) by default.
+**`true`** (that is, compression is disabled) by default.
 
 ### Allow servers to prefer their cipher order
 
@@ -69,7 +69,7 @@ The protocol and cipher that were negotiated for an encrypted stream can
 now be accessed via <span
 class="function">stream\_get\_meta\_data</span> or <span
 class="function">stream\_context\_get\_options</span> when the
-`capture_session_meta` SSL context option is set to **`TRUE`**.
+`capture_session_meta` SSL context option is set to **`true`**.
 
 ``` php
 <?php
@@ -118,11 +118,11 @@ openssl dhparam -out /path/to/my/certs/dh-2048.pem 2048
 ```
 
 `single_dh_use`  
-If set to **`TRUE`**, a new key pair will be created when using
+If set to **`true`**, a new key pair will be created when using
 Diffie-Hellman parameters, thereby improving forward secrecy.
 
 `single_ecdh_use`  
-If set to **`TRUE`**, a new key pair will always be generated when ECDH
+If set to **`true`**, a new key pair will always be generated when ECDH
 cipher suites are negotiated. This improves forward secrecy.
 
 ### SSL/TLS version selection

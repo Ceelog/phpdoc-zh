@@ -26,7 +26,7 @@ class="initializer"> = "all"</span></span> \] )
 
 ### 返回值
 
-成功时返回当前内部配置变量的值， 或者在失败时返回 **`FALSE`**。
+成功时返回当前内部配置变量的值， 或者在失败时返回 **`false`**。
 
 如果省略了 `type`，或者设置为 "all"，<span
 class="function">iconv\_get\_encoding</span>
@@ -99,7 +99,7 @@ ini\_get("iconv.internal\_encoding")</span></span> \]\] )
 ### 返回值
 
 成功时返回 `encoded_headers` 指定的 *MIME*
-头的整套关联数组，解码时出现错误则返回 **`FALSE`**。
+头的整套关联数组，解码时出现错误则返回 **`false`**。
 
 返回元素的每个键代表独立字段名，相应的元素代表一个字段值。
 如果有多个同一名称的字段， <span
@@ -196,7 +196,7 @@ class="function">iconv\_mime\_decode</span>遇到一个不规则的
 ### 返回值
 
 如果解码成功,返回一个被解码的*MIME*字段,
-如果在解码过程中出现一个错误,将返回**`FALSE`** .
+如果在解码过程中出现一个错误,将返回**`false`** .
 
 ### 范例
 
@@ -268,7 +268,7 @@ item names are treated case-sensitive.
 
 ### 返回值
 
-Returns an encoded *MIME* field on success, or **`FALSE`** if an error
+Returns an encoded *MIME* field on success, or **`false`** if an error
 occurs during the encoding.
 
 ### 范例
@@ -329,7 +329,7 @@ class="methodparam"><span class="type">string</span> `$type`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -400,7 +400,7 @@ class="methodparam"><span class="type">string</span> `$haystack`</span>
 class="type">int</span> `$offset`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Finds position of first occurrence of a `needle` within a `haystack`.
 
@@ -424,7 +424,7 @@ search should be performed. If the offset is negative, it is counted
 from the end of the string.
 
 `encoding`  
-If `encoding` parameter is omitted or **`NULL`**, `string` are assumed
+If `encoding` parameter is omitted or **`null`**, `string` are assumed
 to be encoded in
 <a href="/iconv/setup.html#运行时配置" class="link">iconv.internal_encoding</a>.
 
@@ -437,11 +437,11 @@ Returns the numeric position of the first occurrence of `needle` in
 `haystack`.
 
 If `needle` is not found, <span class="function">iconv\_strpos</span>
-will return **`FALSE`**.
+will return **`false`**.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -473,7 +473,7 @@ class="methodparam"><span class="type">string</span> `$haystack`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$needle`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 Finds the last occurrence of a `needle` within a `haystack`.
 
@@ -492,7 +492,7 @@ The entire string.
 The searched substring.
 
 `encoding`  
-If `encoding` parameter is omitted or **`NULL`**, `string` are assumed
+If `encoding` parameter is omitted or **`null`**, `string` are assumed
 to be encoded in
 <a href="/iconv/setup.html#运行时配置" class="link">iconv.internal_encoding</a>.
 
@@ -505,11 +505,11 @@ Returns the numeric position of the last occurrence of `needle` in
 `haystack`.
 
 If `needle` is not found, <span class="function">iconv\_strrpos</span>
-will return **`FALSE`**.
+will return **`false`**.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -577,14 +577,14 @@ class="function">substr</span> 则是基于字节的位移来计算。
 
 返回 `offset` 和 `length` 参数指定的 `str` 的部分。
 
-如果 `str` 比 `offset` 字符数更短，将会返回 **`FALSE`**。 如果 `str` 是
+如果 `str` 比 `offset` 字符数更短，将会返回 **`false`**。 如果 `str` 是
 `offset` 个字符的长度，将返回空字符串。
 
 ### 更新日志
 
 | 版本   | 说明                                                                                                |
 |--------|-----------------------------------------------------------------------------------------------------|
-| 7.0.11 | 如果 `str` 等长于 `offset` 个字符， 将返回空字符串。之前的版本里，这种情况是会返回 **`FALSE`** 的。 |
+| 7.0.11 | 如果 `str` 等长于 `offset` 个字符， 将返回空字符串。之前的版本里，这种情况是会返回 **`false`** 的。 |
 
 ### 参见
 
@@ -618,7 +618,7 @@ class="methodparam"><span class="type">string</span> `$str`</span> )
 如果你在 `out_charset` 后添加了字符串
 *//TRANSLIT*，将启用转写（transliteration）功能。这个意思是，当一个字符不能被目标字符集所表示时，它可以通过一个或多个形似的字符来近似表达。
 如果你添加了字符串 *//IGNORE*，不能以目标字符集表达的字符将被默默丢弃。
-否则，会导致一个 **`E_NOTICE`**并返回 **`FALSE`**。
+否则，会导致一个 **`E_NOTICE`**并返回 **`false`**。
 
 **Caution**
 *//TRANSLIT* 运行细节高度依赖于系统的 iconv() 实现（参见
@@ -630,13 +630,13 @@ class="methodparam"><span class="type">string</span> `$str`</span> )
 
 ### 返回值
 
-返回转换后的字符串， 或者在失败时返回 **`FALSE`**。
+返回转换后的字符串， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
 | 版本  | 说明                                                                                                                |
 |-------|---------------------------------------------------------------------------------------------------------------------|
-| 5.4.0 | 这个版本起，字符非法时候会返回 **`FALSE`**，除非在输出字符里指定了 *//IGNORE* 。 在之前版本，它会返回一部分字符串。 |
+| 5.4.0 | 这个版本起，字符非法时候会返回 **`false`**，除非在输出字符里指定了 *//IGNORE* 。 在之前版本，它会返回一部分字符串。 |
 
 ### 范例
 

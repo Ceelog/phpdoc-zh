@@ -536,7 +536,7 @@ them using the bitwise OR operator (“\|”):
 
 ### 返回值
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 GearmanClient::addServer
 ========================
@@ -565,7 +565,7 @@ No socket I/O happens here; the server is simply added to the list.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -611,7 +611,7 @@ A comma-separated list of servers, each server specified in the format
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -672,7 +672,7 @@ in parallel.
 
 ### 返回值
 
-A <span class="classname">GearmanTask</span> object or **`FALSE`** if
+A <span class="classname">GearmanTask</span> object or **`false`** if
 the task could not be added.
 
 ### 范例
@@ -796,7 +796,7 @@ class="methodname">GearmanClient::runTasks</span> to perform the work.
 
 ### 返回值
 
-A <span class="classname">GearmanTask</span> object or **`FALSE`** if
+A <span class="classname">GearmanTask</span> object or **`false`** if
 the task could not be added.
 
 ### 范例
@@ -1007,7 +1007,7 @@ before those of normal or low priority.
 
 ### 返回值
 
-A <span class="classname">GearmanTask</span> object or **`FALSE`** if
+A <span class="classname">GearmanTask</span> object or **`false`** if
 the task could not be added.
 
 ### 范例
@@ -1105,7 +1105,7 @@ before those of normal or low priority.
 
 ### 返回值
 
-A <span class="classname">GearmanTask</span> object or **`FALSE`** if
+A <span class="classname">GearmanTask</span> object or **`false`** if
 the task could not be added.
 
 ### 参见
@@ -1156,7 +1156,7 @@ after those of normal or low priority.
 
 ### 返回值
 
-A <span class="classname">GearmanTask</span> object or **`FALSE`** if
+A <span class="classname">GearmanTask</span> object or **`false`** if
 the task could not be added.
 
 ### 范例
@@ -1254,7 +1254,7 @@ after those of normal or high priority.
 
 ### 返回值
 
-A <span class="classname">GearmanTask</span> object or **`FALSE`** if
+A <span class="classname">GearmanTask</span> object or **`false`** if
 the task could not be added.
 
 ### 参见
@@ -1395,7 +1395,7 @@ Clears all the task callback functions that have previously been set.
 
 ### 返回值
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### 参见
 
@@ -1428,7 +1428,7 @@ Creates a copy of a <span class="classname">GearmanClient</span> object.
 
 ### 返回值
 
-A <span class="classname">GearmanClient</span> on success, **`FALSE`**
+A <span class="classname">GearmanClient</span> on success, **`false`**
 on failure.
 
 GearmanClient::\_\_construct
@@ -2435,7 +2435,7 @@ Some arbitrary serialized data to be echo back
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 GearmanClient::error
 ====================
@@ -2596,7 +2596,7 @@ Some arbitrary serialized data to be echo back
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 GearmanClient::removeOptions
 ============================
@@ -2618,7 +2618,7 @@ The options to be removed (unset)
 
 ### 返回值
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 GearmanClient::returnCode
 =========================
@@ -2667,7 +2667,7 @@ starts running the tasks in parallel.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2702,7 +2702,7 @@ A function or method to call
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2744,7 +2744,7 @@ A function to be called
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2777,7 +2777,7 @@ Arbitrary context data
 
 ### 返回值
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### 参见
 
@@ -2806,7 +2806,7 @@ A function to call
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2844,7 +2844,7 @@ Sets some arbitrary application data that can later be retrieved by
 
 ### 返回值
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### 参见
 
@@ -2873,7 +2873,7 @@ A function or method to call
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2907,7 +2907,7 @@ Function to call when the worker throws an exception
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2942,7 +2942,7 @@ A function to call
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2974,7 +2974,7 @@ The options to be set
 
 ### 返回值
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 GearmanClient::setStatusCallback
 ================================
@@ -2999,7 +2999,7 @@ A function to call
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3031,7 +3031,7 @@ An interval of time in milliseconds
 
 ### 返回值
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 GearmanClient::setWarningCallback
 =================================
@@ -3056,7 +3056,7 @@ A function to call
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3093,7 +3093,7 @@ A function to call
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3258,7 +3258,7 @@ Serialized result data.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3313,7 +3313,7 @@ Arbitrary serialized data.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3347,7 +3347,7 @@ An exception description.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3381,7 +3381,7 @@ known way (as opposed to failing due to a thrown exception).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3486,7 +3486,7 @@ Serialized result data.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3513,7 +3513,7 @@ Arbitrary serialized data.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3541,7 +3541,7 @@ An exception description.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3569,7 +3569,7 @@ known way (as opposed to failing due to a thrown exception).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3604,7 +3604,7 @@ The denominator of the precentage completed expressed as a fraction.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3632,7 +3632,7 @@ A warning message.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3695,7 +3695,7 @@ The denominator of the precentage completed expressed as a fraction.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3756,7 +3756,7 @@ A warning messages.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3947,7 +3947,7 @@ Returns a new <span class="classname">GearmanTask</span> object.
 ### 返回值
 
 A <span class="classname">GearmanTask</span> oject 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 GearmanTask::data
 =================
@@ -3968,7 +3968,7 @@ Returns data being returned for a task by a worker.
 
 ### 返回值
 
-The serialized data, or **`FALSE`** if no data is present.
+The serialized data, or **`false`** if no data is present.
 
 ### 参见
 
@@ -3993,7 +3993,7 @@ Returns the size of the data being returned for a task.
 
 ### 返回值
 
-The data size, or **`FALSE`** if there is no data.
+The data size, or **`false`** if there is no data.
 
 ### 参见
 
@@ -4069,7 +4069,7 @@ job server.
 
 ### 返回值
 
-**`TRUE`** if the task is known, **`FALSE`** otherwise.
+**`true`** if the task is known, **`false`** otherwise.
 
 GearmanTask::isRunning
 ======================
@@ -4090,7 +4090,7 @@ Indicates whether or not this task is currently running.
 
 ### 返回值
 
-**`TRUE`** if the task is running, **`FALSE`** otherwise.
+**`true`** if the task is running, **`false`** otherwise.
 
 GearmanTask::jobHandle
 ======================
@@ -4144,7 +4144,7 @@ Length of data to be read.
 ### 返回值
 
 An array whose first element is the length of data read and the second
-is the data buffer. Returns **`FALSE`** if the read failed.
+is the data buffer. Returns **`false`** if the read failed.
 
 ### 参见
 
@@ -4198,7 +4198,7 @@ Data to send to the worker.
 
 ### 返回值
 
-The length of data sent, or **`FALSE`** if the send failed.
+The length of data sent, or **`false`** if the send failed.
 
 ### 参见
 
@@ -4227,7 +4227,7 @@ Data to send to the worker.
 
 ### 返回值
 
-The length of data sent, or **`FALSE`** if the send failed.
+The length of data sent, or **`false`** if the send failed.
 
 ### 参见
 
@@ -4253,7 +4253,7 @@ expressed as a fraction.
 
 ### 返回值
 
-A number between 0 and 100, or **`FALSE`** if cannot be determined.
+A number between 0 and 100, or **`false`** if cannot be determined.
 
 ### 参见
 
@@ -4279,7 +4279,7 @@ expressed as a fraction.
 
 ### 返回值
 
-A number between 0 and 100, or **`FALSE`** if cannot be determined.
+A number between 0 and 100, or **`false`** if cannot be determined.
 
 ### 参见
 
@@ -4306,7 +4306,7 @@ handle which is set by the Gearman job server.
 
 ### 返回值
 
-The unique identifier, or **`FALSE`** if no identifier is assigned.
+The unique identifier, or **`false`** if no identifier is assigned.
 
 ### 参见
 
@@ -4340,7 +4340,7 @@ handle which is set by the Gearman job server.
 
 ### 返回值
 
-The unique identifier, or **`FALSE`** if no identifier is assigned.
+The unique identifier, or **`false`** if no identifier is assigned.
 
 ### 参见
 
@@ -4495,7 +4495,7 @@ An interval of time in seconds
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4558,7 +4558,7 @@ The options to be added
 
 ### 返回值
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### 参见
 
@@ -4593,7 +4593,7 @@ can be used to run jobs. No socket I/O happens here.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4634,7 +4634,7 @@ port is specified, it defaults to 4730.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4859,7 +4859,7 @@ The options to be removed (unset)
 
 ### 返回值
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### 参见
 
@@ -4914,7 +4914,7 @@ A string identifier.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4957,7 +4957,7 @@ The options to be set
 
 ### 返回值
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### 参见
 
@@ -4987,7 +4987,7 @@ infinite timeout.
 
 ### 返回值
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### 范例
 
@@ -5154,7 +5154,7 @@ servers when operating in non-blocking I/O mode. On failure, issues a
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5236,7 +5236,7 @@ or **`GEARMAN_WORK_FAIL`**.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

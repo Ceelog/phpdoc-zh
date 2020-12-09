@@ -51,3 +51,7 @@
     -   [预定义常量](/zlib/constants.html)
     -   [范例](/zlib/examples.html)
     -   [Zlib 函数](/ref/zlib.html)
+    -   [DeflateContext](/class/deflatecontext.html) — The
+        DeflateContext class
+    -   [InflateContext](/class/inflatecontext.html) — The
+        InflateContext class

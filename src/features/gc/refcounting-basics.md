@@ -17,9 +17,9 @@ $a = "new string";
 在上例中，新的变量*a*，是在当前作用域中生成的。并且生成了类型为 <span
 class="type">string</span> 和值为*new
 string*的变量容器。在额外的两个字节信息中，"is\_ref"被默认设置为
-**`FALSE`**，因为没有任何自定义的引用生成。"refcount" 被设定为
+**`false`**，因为没有任何自定义的引用生成。"refcount" 被设定为
 *1*，因为这里只有一个变量使用这个变量容器.
-注意到当"refcount"的值是*1*时，"is\_ref"的值总是**`FALSE`**.
+注意到当"refcount"的值是*1*时，"is\_ref"的值总是**`false`**.
 如果你已经安装了<a href="http://xdebug.org/" class="link external">» Xdebug</a>，你能通过调用函数
 <span
 class="function">xdebug\_debug\_zval</span>显示"refcount"和"is\_ref"的值。

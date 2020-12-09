@@ -27,7 +27,7 @@ year 的值是从 1 到 32767。
 
 ### 返回值
 
-如果给出的日期有效则返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果给出的日期有效则返回 **`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -228,8 +228,8 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-如果 `timezone_identifier` 参数无效则返回 **`FALSE`**，否则返回
-**`TRUE`**。
+如果 `timezone_identifier` 参数无效则返回 **`false`**，否则返回
+**`true`**。
 
 ### 范例
 
@@ -437,7 +437,7 @@ class="function">DateTimeImmutable::\_\_construct</span>.
 ### 返回值
 
 Returns <span class="type">array</span> with information about the
-parsed date/time on success 或者在失败时返回 **`FALSE`**.
+parsed date/time on success 或者在失败时返回 **`false`**.
 
 ### 错误／异常
 
@@ -568,7 +568,7 @@ Longitude in degrees.
 
 ### 返回值
 
-Returns array on success 或者在失败时返回 **`FALSE`**. The structure of
+Returns array on success 或者在失败时返回 **`false`**. The structure of
 the array is detailed in the following list:
 
 *sunrise*  
@@ -607,9 +607,9 @@ It starts at *sunset*. </span>
 <span class="simpara"> The end of the astronomical dusk (zenith angle =
 108°). It starts at *nautical\_twilight\_end*. </span>
 
-The values of the array elements are either UNIX timestamps, **`FALSE`**
+The values of the array elements are either UNIX timestamps, **`false`**
 if the sun is below the respective zenith for the whole day, or
-**`TRUE`** if the sun is above the respective zenith for the whole day.
+**`true`** if the sun is above the respective zenith for the whole day.
 
 ### 范例
 
@@ -757,7 +757,7 @@ class="initializer"> = 0</span></span> \]\]\]\]\] )
 
 ### 返回值
 
-按指定格式 `format` 返回的日出时间， 或者在失败时返回 **`FALSE`**。
+按指定格式 `format` 返回的日出时间， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -865,7 +865,7 @@ class="function">date\_default\_timezone\_set</span>。
 
 ### 返回值
 
-用指定的格式 `format` 返回日落时间， 或者在失败时返回 **`FALSE`**。
+用指定的格式 `format` 返回日落时间， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1196,7 +1196,7 @@ class="function">time</span> 的返回值。
 ### 返回值
 
 返回格式化后的日期时间的字符串表达。 如果 `timestamp`
-参数不是一个有效数值，则返回 **`FALSE`** 并引发 **`E_WARNING`**
+参数不是一个有效数值，则返回 **`false`** 并引发 **`E_WARNING`**
 级别的错误。
 
 ### 错误／异常
@@ -1427,7 +1427,7 @@ class="initializer"> = false</span></span> \] )
 ### 参数
 
 `return_float`  
-当其设为 **`TRUE`** 时，会返回一个浮点数而不是一个数组。
+当其设为 **`true`** 时，会返回一个浮点数而不是一个数组。
 
 ### 返回值
 
@@ -1667,8 +1667,8 @@ false</span></span> \]\] )
 class="function">time</span> 的返回值。
 
 `is_associative`  
-如果设为 **`FALSE`**
-或未提供则返回的是普通的数字索引数组。如果该参数设为 **`TRUE`** 则 <span
+如果设为 **`false`**
+或未提供则返回的是普通的数字索引数组。如果该参数设为 **`true`** 则 <span
 class="function">localtime</span> 函数返回包含有所有从 C 的 localtime
 函数调用所返回的不同单元的关联数组。关联数组中不同的键名为：
 
@@ -1765,7 +1765,7 @@ class="type">bool</span> `$get_as_float`</span> \] )
 sec 是自 Unix 纪元（0:00:00 January 1, 1970 GMT）起到现在的秒数，msec
 是微秒部分。字符串的两部分都是以秒为单位返回的。
 
-如果给出了 `get_as_float` 参数并且其值等价于 **`TRUE`**，<span
+如果给出了 `get_as_float` 参数并且其值等价于 **`true`**，<span
 class="function">microtime</span> 将返回一个浮点数。
 
 > **Note**: <span class="simpara"> `get_as_float` 参数是 PHP 5.0.0
@@ -1898,7 +1898,7 @@ class="function">mktime</span>
 ### 返回值
 
 <span class="function">mktime</span> 根据给出的参数返回 Unix
-时间戳。如果参数非法，本函数返回 **`FALSE`**（在 PHP 5.1 之前返回
+时间戳。如果参数非法，本函数返回 **`false`**（在 PHP 5.1 之前返回
 *-1*）。
 
 ### 错误／异常
@@ -1914,7 +1914,7 @@ class="function">date\_default\_timezone\_set</span>。
 |-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.0.0 | `is_dst`参数已经被移除。                                                                                                                                       |
 | 5.3.0 | <span class="function">mktime</span> now throws **`E_DEPRECATED`** notice if the `is_dst` parameter is used.                                                   |
-| 5.1.0 | `is_dst` 参数被废弃。出错时函数返回 **`FALSE`** 而不再是 *-1*。修正了本函数可以接受年月日参数全为零。                                                          |
+| 5.1.0 | `is_dst` 参数被废弃。出错时函数返回 **`false`** 而不再是 *-1*。修正了本函数可以接受年月日参数全为零。                                                          |
 | 5.1.0 | When called with no arguments, <span class="function">mktime</span> throws **`E_STRICT`** notice. Use the <span class="function">time</span> function instead. |
 | 5.1.0 | 现在发布 **`E_STRICT`** 和 **`E_NOTICE`** 时区错误。                                                                                                           |
 
@@ -2093,7 +2093,7 @@ class="function">date\_default\_timezone\_set</span>。
 
 由于输出依赖于 C 库，所以一些转换标记并不被支持。 在 Windows
 上，使用未知的转换标记将导致 5 **`E_WARNING`** 信息，并返回
-**`FALSE`**。 在其他的操作系统上，你可能不能得到任何 **`E_WARNING`**
+**`false`**。 在其他的操作系统上，你可能不能得到任何 **`E_WARNING`**
 信息， 并且可能输出未经转换的转换标记。
 
 ### 更新日志
@@ -2360,7 +2360,7 @@ strptime
 class="type">string</span> `$format`</span> )
 
 <span class="function">strptime</span> 返回一个将 `date`
-解析后的数组，如果出错返回 **`FALSE`**。
+解析后的数组，如果出错返回 **`false`**。
 
 月份和星期几的名字以及其它与语种有关的字符串对应于 <span
 class="function">setlocale</span>设定的当前区域（**`LC_TIME`**）。
@@ -2378,7 +2378,7 @@ class="function">setlocale</span>设定的当前区域（**`LC_TIME`**）。
 
 ### 返回值
 
-返回一个数组 或者在失败时返回 **`FALSE`**
+返回一个数组 或者在失败时返回 **`false`**
 
 | 键名     | 说明                                        |
 |----------|---------------------------------------------|
@@ -2493,7 +2493,7 @@ class="function">date\_default\_timezone\_get</span> 函数页面中有说明。
 
 ### 返回值
 
-成功则返回时间戳，否则返回 **`FALSE`**。在 PHP 5.1.0
+成功则返回时间戳，否则返回 **`false`**。在 PHP 5.1.0
 之前本函数在失败时返回 *-1*。
 
 ### 错误／异常
@@ -2694,7 +2694,7 @@ and `isDST`.
 
 ### 返回值
 
-Returns time zone name on success 或者在失败时返回 **`FALSE`**.
+Returns time zone name on success 或者在失败时返回 **`false`**.
 
 ### 范例
 

@@ -29,7 +29,7 @@ class="function">return</span>，则脚本中止运行。如果当前脚本文�
 > PHP 的负担。 </span>
 
 > **Note**: <span class="simpara">
-> 如果没有提供参数，则一定不能用括号，此时返回 **`NULL`**。如果调用
+> 如果没有提供参数，则一定不能用括号，此时返回 **`null`**。如果调用
 > *return* 时加上了括号却又没有参数会导致解析错误。 </span>
 
 > **Note**: <span class="simpara">

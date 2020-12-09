@@ -14,7 +14,7 @@ saving data. Thus the original values in session data are kept.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -264,7 +264,7 @@ range *a-z A-Z 0-9 , (comma) and - (minus)* are allowed.
 
 <span class="function">session\_create\_id</span> returns new collision
 free session id for the current session. If it is used without active
-session, it omits collision check. On failure, **`FALSE`** is returned.
+session, it omits collision check. On failure, **`false`** is returned.
 
 ### 范例
 
@@ -355,7 +355,7 @@ class="function">unserialize</span> 函数。 序列化方法是 PHP
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -412,7 +412,7 @@ class="function">session\_regenerate\_id</span>。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -523,7 +523,7 @@ to 0.
 ### 返回值
 
 <span class="function">session\_gc</span> returns number of deleted
-session data for success, **`FALSE`** for failure.
+session data for success, **`false`** for failure.
 
 Old save handlers do not return number of deleted session data, but only
 success/failure flag. If this is the case, number of deleted session
@@ -698,8 +698,8 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 
 ### 返回值
 
-<span class="function">session\_is\_registered</span> 返回 **`TRUE`**
-则表示 `name` 变量已经在当前会话中注册使用，否则返回 **`FALSE`** 。
+<span class="function">session\_is\_registered</span> 返回 **`true`**
+则表示 `name` 变量已经在当前会话中注册使用，否则返回 **`false`** 。
 
 ### 注释
 
@@ -832,7 +832,7 @@ session\_regenerate\_id
 class="methodname">session\_regenerate\_id</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$delete_old_session`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="function">session\_regenerate\_id</span>
 在不修改当前会话中数据的前提下使用新的 ID 替换原有会话 ID。
@@ -864,7 +864,7 @@ class="function">session\_regenerate\_id</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1055,7 +1055,7 @@ variable names or other arrays.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -1130,7 +1130,7 @@ an active session and discards changes in $\_SESSION.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1199,9 +1199,9 @@ class="methodparam"><span class="type">int</span> `$lifetime`</span> \[,
 `$path`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$domain`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$secure`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$httponly`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\]\] )
 
 <span class="type">bool</span> <span
 class="methodname">session\_set\_cookie\_params</span> ( <span
@@ -1232,11 +1232,11 @@ Cookie 的作用 <a href="/session/setup.html#" class="link">域</a>。
 在所有的子域中都可用，此参数必须以点（.）开头，例如：“.php.net”。
 
 `secure`  
-设置为 **`TRUE`** 表示 cookie 仅在使用
+设置为 **`true`** 表示 cookie 仅在使用
 <a href="/session/setup.html#" class="link">安全</a> 链接时可用。
 
 `httponly`  
-设置为 **`TRUE`** 表示 PHP 发送 cookie 的时候会使用
+设置为 **`true`** 表示 PHP 发送 cookie 的时候会使用
 <a href="/session/setup.html#" class="link">httponly</a> 标记。
 
 `options`  
@@ -1249,14 +1249,14 @@ Cookie 的作用 <a href="/session/setup.html#" class="link">域</a>。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
 | 版本  | 说明                                                                                                                         |
 |-------|------------------------------------------------------------------------------------------------------------------------------|
 | 7.3.0 | 增加 `options` 参数， 可以通过传入一个关联数组对各个选项进行设置。 同时，通过使用这个参数还可以对 SameSite cookie 进行设置。 |
-| 7.2.0 | 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 之前版本中是返回 <span class="type">void</span> 的。                  |
+| 7.2.0 | 成功时返回 **`true`**， 或者在失败时返回 **`false`**。 之前版本中是返回 <span class="type">void</span> 的。                  |
 | 5.2.0 | 加入 `httponly` 参数。                                                                                                       |
 
 ### 参见
@@ -1299,7 +1299,7 @@ class="methodname">session\_set\_save\_handler</span> ( <span
 class="methodparam"><span class="type">object</span>
 `$sessionhandler`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$register_shutdown`<span class="initializer">
-= **`TRUE`**</span></span> \] )
+= **`true`**</span></span> \] )
 
 <span class="function">session\_set\_save\_handler</span> 设置用户自定义
 会话存储函数。 如果想使用 PHP 内置的会话存储机制之外的方式，
@@ -1326,14 +1326,14 @@ class="function">register\_shutdown\_function</span> 函数。
 open 回调函数类似于类的构造函数， 在会话打开的时候会被调用。
 这是自动开始会话或者通过调用 <span
 class="function">session\_start</span> 手动开始会话
-之后第一个被调用的回调函数。 此回调函数操作成功返回 **`TRUE`**，反之返回
-**`FALSE`**。
+之后第一个被调用的回调函数。 此回调函数操作成功返回 **`true`**，反之返回
+**`false`**。
 
 `close()`  
 close 回调函数类似于类的析构函数。 在 write 回调函数调用之后调用。
 当调用 <span class="function">session\_write\_close</span>
 函数之后，也会调用 close 回调函数。 此回调函数操作成功返回
-**`TRUE`**，反之返回 **`FALSE`**。
+**`true`**，反之返回 **`false`**。
 
 `read(string $sessionId)`  
 如果会话中有数据，read
@@ -1375,8 +1375,8 @@ class="function">session\_write\_close</span> 函数之后调用此回调函数�
 `destroy($sessionId)`  
 当调用 <span class="function">session\_destroy</span> 函数， 或者调用
 <span class="function">session\_regenerate\_id</span> 函数并且设置
-destroy 参数为 **`TRUE`** 时， 会调用此回调函数。此回调函数操作成功返回
-**`TRUE`**，反之返回 **`FALSE`**。
+destroy 参数为 **`true`** 时， 会调用此回调函数。此回调函数操作成功返回
+**`true`**，反之返回 **`false`**。
 
 `gc($lifetime)`  
 为了清理会话中的旧数据，PHP 会不时的调用垃圾收集回调函数。 调用周期由
@@ -1384,7 +1384,7 @@ destroy 参数为 **`TRUE`** 时， 会调用此回调函数。此回调函数�
 和 <a href="/session/setup.html#" class="link">session.gc_divisor</a>
 参数控制。 传入到此回调函数的 lifetime 参数由
 <a href="/session/setup.html#" class="link">session.gc_maxlifetime</a>
-设置。 此回调函数操作成功返回 **`TRUE`**，反之返回 **`FALSE`**。
+设置。 此回调函数操作成功返回 **`true`**，反之返回 **`false`**。
 
 `create_sid()`  
 当需要新的会话 ID 时被调用的回调函数。 回调函数被调用时无传入参数，
@@ -1392,7 +1392,7 @@ destroy 参数为 **`TRUE`** 时， 会调用此回调函数。此回调函数�
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1527,7 +1527,7 @@ class="function">register\_shutdown\_function</span> 函数 来注册
 class="function">session\_register\_shutdown</span> 函数来注册 shutdown
 回调函数。 如果你使用 <span
 class="function">session\_set\_save\_handler</span> 的 OOP 原型，
-那么仅需设置 “register shutdown” 为 **`TRUE`** 即可。
+那么仅需设置 “register shutdown” 为 **`true`** 即可。
 
 **Warning**
 
@@ -1602,21 +1602,21 @@ class="function">session\_set\_save\_handler</span>
 中的配置项。此数组中的键无需包含 *session.* 前缀。
 
 除了常规的会话配置指示项， 还可以在此数组中包含 *read\_and\_close*
-选项。如果将此选项的值设置为 **`TRUE`**，
+选项。如果将此选项的值设置为 **`true`**，
 那么会话文件会在读取完毕之后马上关闭，
 因此，可以在会话数据没有变动的时候，避免不必要的文件锁。
 
 ### 返回值
 
-成功开始会话返回 **`TRUE`** ，反之返回 **`FALSE`**
+成功开始会话返回 **`true`** ，反之返回 **`false`**
 
 ### 更新日志
 
 | 版本  | 说明                                                                                                                                         |
 |-------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0 | 当 <span class="function">session\_start</span> 执行失败， 无法开始一个会话的时候，会返回 **`FALSE`**， 并且不会初始化超级变量 `$_SESSION`。 |
+| 7.1.0 | 当 <span class="function">session\_start</span> 执行失败， 无法开始一个会话的时候，会返回 **`false`**， 并且不会初始化超级变量 `$_SESSION`。 |
 | 7.0.0 | 新加 `options` 参数。                                                                                                                        |
-| 5.3.0 | 如果函数调用失败返回 **`FALSE`**， 之前版本返回了 **`TRUE`**。                                                                               |
+| 5.3.0 | 如果函数调用失败返回 **`false`**， 之前版本返回了 **`true`**。                                                                               |
 
 ### 范例
 
@@ -1771,7 +1771,7 @@ The variable name.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -1850,7 +1850,7 @@ the session as soon as all changes to session variables are done.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 

@@ -990,7 +990,7 @@ The index being checked.
 
 ### 返回值
 
-**`TRUE`** if the requested index exists, otherwise **`FALSE`**
+**`true`** if the requested index exists, otherwise **`false`**
 
 ### 范例
 
@@ -1030,7 +1030,7 @@ The index with the value.
 
 ### 返回值
 
-The value at the specified index or **`NULL`**.
+The value at the specified index or **`null`**.
 
 ### 错误／异常
 

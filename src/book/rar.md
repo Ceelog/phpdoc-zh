@@ -171,7 +171,7 @@ class="function">rar\_open</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -246,7 +246,7 @@ class="function">rar\_open</span>.
 
 ### 返回值
 
-Returns the comment or **`NULL`** if there is none.
+Returns the comment or **`null`** if there is none.
 
 > **Note**:
 >
@@ -323,7 +323,7 @@ class="function">rar\_open</span>.
 ### 返回值
 
 <span class="function">rar\_list</span> returns array of <span
-class="type">RarEntry</span> objects 或者在失败时返回 **`FALSE`**.
+class="type">RarEntry</span> objects 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -442,7 +442,7 @@ Path to the entry within the RAR archive.
 ### 返回值
 
 Returns the matching <span class="type">RarEntry</span> object
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -522,8 +522,8 @@ class="function">rar\_open</span>.
 
 ### 返回值
 
-Returns **`TRUE`** if the archive is broken, **`FALSE`** otherwise. This
-function may also return **`FALSE`** if the passed file has already been
+Returns **`true`** if the archive is broken, **`false`** otherwise. This
+function may also return **`false`** if the passed file has already been
 closed. The only way to tell the two cases apart is to enable exceptions
 with <span class="methodname">RarException::setUsingExceptions</span>;
 however, this should be unnecessary as a program should not operate on
@@ -597,7 +597,7 @@ class="function">rar\_open</span>.
 
 ### 返回值
 
-Returns **`TRUE`** if the archive is solid, **`FALSE`** otherwise.
+Returns **`true`** if the archive is solid, **`false`** otherwise.
 
 ### 范例
 
@@ -683,12 +683,12 @@ different passwords in respect to the headers and among them.
 `volume_callback`  
 A function that receives one parameter – the path of the volume that was
 not found – and returns a string with the correct path for such volume
-or **`NULL`** if such volume does not exist or is not known. The
+or **`null`** if such volume does not exist or is not known. The
 programmer should ensure the passed function doesn't cause loops as this
 function is called repeatedly if the path returned in a previous call
 did not correspond to the needed volume. Specifying this parameter omits
 the notice that would otherwise be emitted whenever a volume is not
-found; an implementation that only returns **`NULL`** can therefore be
+found; an implementation that only returns **`null`** can therefore be
 used to merely omit such notices.
 
 **Warning**
@@ -699,7 +699,7 @@ correctly. Use <span class="function">realpath</span> as a workaround.
 ### 返回值
 
 Returns the requested <span class="type">RarArchive</span> instance
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -831,11 +831,11 @@ A <span class="type">RarArchive</span> object, opened with <span
 class="function">rar\_open</span>.
 
 `allow_broken`  
-Whether to allow reading broken files (**`TRUE`**) or not (**`FALSE`**).
+Whether to allow reading broken files (**`true`**) or not (**`false`**).
 
 ### 返回值
 
-Returns **`TRUE`** 或者在失败时返回 **`FALSE`**. It will only fail if
+Returns **`true`** 或者在失败时返回 **`false`**. It will only fail if
 the file has already been closed.
 
 ### 范例
@@ -1112,7 +1112,7 @@ class="methodparam"><span class="type">string</span> `$dir`</span> \[,
 class="methodparam"><span class="type">string</span> `$password`<span
 class="initializer"> = NULL</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$extended_data`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getAttr</span> ( <span
@@ -1427,7 +1427,7 @@ class="methodparam"><span class="type">string</span> `$dir`</span> \[,
 class="methodparam"><span class="type">string</span> `$password`<span
 class="initializer"> = NULL</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$extended_data`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\] )
 
 <span class="methodname">RarEntry::extract</span> extracts the entry's
 data. It will create new file in the specified `dir` with the name
@@ -1453,13 +1453,13 @@ omitted and the entry is encrypted, the password given to <span
 class="function">rar\_open</span>, if any, will be used. If a wrong
 password is given, either explicitly or implicitly via <span
 class="function">rar\_open</span>, CRC checking will fail and this
-method will fail and return **`FALSE`**. If no password is given and one
-is required, this method will fail and return **`FALSE`**. You can check
+method will fail and return **`false`**. If no password is given and one
+is required, this method will fail and return **`false`**. You can check
 whether an entry is encrypted with <span
 class="methodname">RarEntry::isEncrypted</span>.
 
 `extended_data`  
-If **`TRUE`**, extended information such as NTFS ACLs and Unix owner
+If **`true`**, extended information such as NTFS ACLs and Unix owner
 information will be set in the extract files, as long as it's present in
 the archive.
 
@@ -1470,7 +1470,7 @@ correctly. Use <span class="function">realpath</span> as a workaround.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1541,7 +1541,7 @@ Returns the OS-dependent attributes of the archive entry.
 
 ### 返回值
 
-Returns the attributes or **`FALSE`** on error.
+Returns the attributes or **`false`** on error.
 
 ### 范例
 
@@ -1627,7 +1627,7 @@ entry.
 
 ### 返回值
 
-Returns the CRC of the archive entry or **`FALSE`** on error.
+Returns the CRC of the archive entry or **`false`** on error.
 
 ### 更新日志
 
@@ -1655,7 +1655,7 @@ Gets entry last modification time.
 ### 返回值
 
 Returns entry last modification time as string in format *YYYY-MM-DD
-HH:II:SS*, or **`FALSE`** on error.
+HH:II:SS*, or **`false`** on error.
 
 RarEntry::getHostOs
 ===================
@@ -1676,7 +1676,7 @@ Returns the code of the host OS of the archive entry.
 
 ### 返回值
 
-Returns the code of the host OS, or **`FALSE`** on error.
+Returns the code of the host OS, or **`false`** on error.
 
 ### 范例
 
@@ -1772,7 +1772,7 @@ the method used when adding current archive entry.
 
 ### 返回值
 
-Returns the method number or **`FALSE`** on error.
+Returns the method number or **`false`** on error.
 
 ### 范例
 
@@ -1809,7 +1809,7 @@ Returns the name (with path) of the archive entry.
 
 ### 返回值
 
-Returns the entry name as a string, or **`FALSE`** on error.
+Returns the entry name as a string, or **`false`** on error.
 
 ### 更新日志
 
@@ -1869,7 +1869,7 @@ Get packed size of the archive entry.
 
 ### 返回值
 
-Returns the packed size, or **`FALSE`** on error.
+Returns the packed size, or **`false`** on error.
 
 ### 更新日志
 
@@ -1930,12 +1930,12 @@ class="function">rar\_open</span>, if any, will be used. If a wrong
 password is given, either explicitly or implicitly via <span
 class="function">rar\_open</span>, this method's resulting stream will
 produce wrong output. If no password is given and one is required, this
-method will fail and return **`FALSE`**. You can check whether an entry
+method will fail and return **`false`**. You can check whether an entry
 is encrypted with <span class="methodname">RarEntry::isEncrypted</span>.
 
 ### 返回值
 
-The file handler 或者在失败时返回 **`FALSE`**.
+The file handler 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -2007,7 +2007,7 @@ Get unpacked size of the archive entry.
 
 ### 返回值
 
-Returns the unpacked size, or **`FALSE`** on error.
+Returns the unpacked size, or **`false`** on error.
 
 ### 更新日志
 
@@ -2052,7 +2052,7 @@ the entry. It is encoded as 10 \* major version + minor version.
 
 ### 返回值
 
-Returns the version or **`FALSE`** on error.
+Returns the version or **`false`** on error.
 
 ### 范例
 
@@ -2090,7 +2090,7 @@ Tests whether the current entry is a directory.
 
 ### 返回值
 
-Returns **`TRUE`** if this entry is a directory and **`FALSE`**
+Returns **`true`** if this entry is a directory and **`false`**
 otherwise.
 
 ### 注释
@@ -2135,7 +2135,7 @@ Tests whether the current entry contents are encrypted.
 
 ### 返回值
 
-Returns **`TRUE`** if the current entry is encrypted and **`FALSE`**
+Returns **`true`** if the current entry is encrypted and **`false`**
 otherwise.
 
 RarEntry::\_\_toString
@@ -2281,7 +2281,7 @@ the wrong type of arguments).
 
 ### 返回值
 
-Returns **`TRUE`** if exceptions are being used, **`FALSE`** otherwise.
+Returns **`true`** if exceptions are being used, **`false`** otherwise.
 
 ### 范例
 
@@ -2316,7 +2316,7 @@ class="methodname">RarException::setUsingExceptions</span> ( <span
 class="methodparam"><span class="type">bool</span>
 `$using_exceptions`</span> )
 
-If and only if the argument is **`TRUE`**, then, instead of emitting
+If and only if the argument is **`true`**, then, instead of emitting
 warnings and returning a special value indicating error when the UnRAR
 library encounters an error, an exception of type <span
 class="type">RarException</span> will be thrown.
@@ -2334,7 +2334,7 @@ outside the library (their error code will be -1):
 ### 参数
 
 `using_exceptions`  
-Should be **`TRUE`** to activate exception throwing, **`FALSE`** to
+Should be **`true`** to activate exception throwing, **`false`** to
 deactivate (the default).
 
 ### 范例

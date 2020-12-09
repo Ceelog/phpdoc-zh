@@ -82,7 +82,7 @@ class="interfacename">Iterator</span> </span> {
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$search`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$format`<span
 class="initializer"> = APC\_ITER\_ALL</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$chunk_size`<span
@@ -134,7 +134,7 @@ Constructs an APCUIterator iterator object
 <span class="modifier">public</span> <span
 class="methodname">APCUIterator::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$search`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$format`<span
 class="initializer"> = APC\_ITER\_ALL</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$chunk_size`<span
@@ -152,7 +152,7 @@ A <a href="/book/pcre.html" class="link">PCRE</a> regular expression
 that matches against APCu key names, either as a <span
 class="type">string</span> for a single regular expression, or as an
 <span class="type">array</span> of regular expressions. Or, optionally
-pass in **`NULL`** to skip the search.
+pass in **`null`** to skip the search.
 
 `format`  
 The desired format, as configured with one or more of the
@@ -169,7 +169,7 @@ The type to list. Either pass in **`APC_LIST_ACTIVE`** or
 ### 返回值
 
 An <span class="classname">APCUIterator</span> <span
-class="type">object</span> on success, or **`NULL`** on failure.
+class="type">object</span> on success, or **`null`** on failure.
 
 ### 范例
 
@@ -210,7 +210,7 @@ class="classname">APCUIterator</span> stack.
 
 ### 返回值
 
-Returns the current item on success, or **`FALSE`** if no more items or
+Returns the current item on success, or **`false`** if no more items or
 exist, or on failure.
 
 ### 参见
@@ -272,7 +272,7 @@ Gets the total number of cache hits.
 
 ### 返回值
 
-The number of hits on success, or **`FALSE`** on failure.
+The number of hits on success, or **`false`** on failure.
 
 ### 参见
 
@@ -330,7 +330,7 @@ Gets the current iterator key.
 
 ### 返回值
 
-Returns the key on success, or **`FALSE`** upon failure.
+Returns the key on success, or **`false`** upon failure.
 
 ### 参见
 
@@ -356,7 +356,7 @@ Moves the iterator pointer to the next element.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -409,8 +409,8 @@ Checks if the current iterator position is valid.
 
 ### 返回值
 
-Returns **`TRUE`** if the current iterator position is valid, otherwise
-**`FALSE`**.
+Returns **`true`** if the current iterator position is valid, otherwise
+**`false`**.
 
 ### 参见
 

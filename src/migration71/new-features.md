@@ -46,7 +46,7 @@ test();
 
 一个新的返回值类型<span class="type">void</span>被引入。 返回值声明为
 void 类型的方法要么干脆省去 return 语句，要么使用一个空的 return 语句。
-对于 void 函数来说，**`NULL`** 不是一个合法的返回值。
+对于 void 函数来说，**`null`** 不是一个合法的返回值。
 
 ``` php
 <?php
@@ -72,7 +72,7 @@ var_dump(swap($a, $b), $a, $b);
     int(2)
     int(1)
 
-试图去获取一个 void 方法的返回值会得到 **`NULL`**
+试图去获取一个 void 方法的返回值会得到 **`null`**
 ，并且不会产生任何警告。这么做的原因是不想影响更高层次的方法。
 
 ### Symmetric array destructuring

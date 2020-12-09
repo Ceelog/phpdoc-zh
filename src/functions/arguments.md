@@ -85,7 +85,7 @@ echo makecoffee("espresso");
     Making a cup of .
     Making a cup of espresso.
 
-PHP 还允许使用数组 <span class="type">array</span> 和特殊类型 **`NULL`**
+PHP 还允许使用数组 <span class="type">array</span> 和特殊类型 **`null`**
 作为默认参数，例如：
 
 **示例 \#5 使用非标量类型作为默认参数**

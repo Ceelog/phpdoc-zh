@@ -20,5 +20,5 @@ class="methodname">Iterator::next</span>
 
 ### 返回值
 
-返回将被转换为<span class="type">布尔型</span>。成功时返回 **`TRUE`**，
-或者在失败时返回 **`FALSE`**。
+返回将被转换为<span class="type">布尔型</span>。成功时返回 **`true`**，
+或者在失败时返回 **`false`**。

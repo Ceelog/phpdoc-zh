@@ -18,7 +18,7 @@ class="methodparam">void</span> )
 如果 PHP 以 Apache 1 模块方式运行，且 Apache
 的版本是非多线程的，以及激活了 PHP 指令.
 <a href="/apache/setup.html#" class="link">child_terminate</a>，则返回
-**`TRUE`**。如果不满足上述条件则返回 **`FALSE`** 并生成一条
+**`true`**。如果不满足上述条件则返回 **`false`** 并生成一条
 **`E_WARNING`** 级的错误信息。
 
 ### 更新日志
@@ -95,7 +95,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 Apache 版本信息 或者在失败时返回 **`FALSE`**.
+成功时返回 Apache 版本信息 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -150,7 +150,7 @@ Apache 环境变量
 
 ### 返回值
 
-成功时返回 Apache 环境变量值，失败时返回 **`FALSE`**
+成功时返回 Apache 环境变量值，失败时返回 **`false`**
 
 ### 范例
 
@@ -296,7 +296,7 @@ note 值。
 如果只有一个参数调用，则返回记录 *note\_name*
 的当前值。如果用两个参数调用，则将记录 *note\_name* 的值设为
 *note\_value* 并返回记录 *note\_name*
-的前一个值。如果未能获取记录，则返回 **`FALSE`**。
+的前一个值。如果未能获取记录，则返回 **`false`**。
 
 ### 范例
 
@@ -360,7 +360,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-包含当前请求所有头信息的数组，失败返回 **`FALSE`** 。
+包含当前请求所有头信息的数组，失败返回 **`false`** 。
 
 ### 更新日志
 
@@ -425,7 +425,7 @@ class="function">apache\_reset\_timeout</span>，Apache理论上可永远运行
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -448,7 +448,7 @@ class="methodparam">void</span> )
 ### 返回值
 
 成功时返回包含全部 Apache 响应头信息的数组， 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 更新日志
 
@@ -518,7 +518,7 @@ Apache 环境变量值。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -563,7 +563,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-包含当前请求所有头信息的数组，失败返回 **`FALSE`** 。
+包含当前请求所有头信息的数组，失败返回 **`false`** 。
 
 ### 更新日志
 
@@ -621,7 +621,7 @@ virtual命令将执行的文件
 
 ### 返回值
 
-成功执行 virtual 命令，或失败时返回 **`FALSE`** 。
+成功执行 virtual 命令，或失败时返回 **`false`** 。
 
 ### 范例
 

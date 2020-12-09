@@ -6,15 +6,15 @@
 
 | 例子        | 名称                       | 结果                                                                                                                   |
 |-------------|----------------------------|------------------------------------------------------------------------------------------------------------------------|
-| $a == $b    | 等于                       | **`TRUE`**，如果类型转换后 `$a` 等于 `$b`。                                                                            |
-| $a === $b   | 全等                       | **`TRUE`**，如果 `$a` 等于 `$b`，并且它们的类型也相同。                                                                |
-| $a != $b    | 不等                       | **`TRUE`**，如果类型转换后 `$a` 不等于 `$b`。                                                                          |
-| $a \<\> $b  | 不等                       | **`TRUE`**，如果类型转换后 `$a` 不等于 `$b`。                                                                          |
-| $a !== $b   | 不全等                     | **`TRUE`**，如果 `$a` 不等于 `$b`，或者它们的类型不同。                                                                |
-| $a \< $b    | 小与                       | **`TRUE`**，如果 `$a` 严格小于 `$b`。                                                                                  |
-| $a \> $b    | 大于                       | **`TRUE`**，如果 `$a` 严格大于 `$b`。                                                                                  |
-| $a \<= $b   | 小于等于                   | **`TRUE`**，如果 `$a` 小于或者等于 `$b`。                                                                              |
-| $a \>= $b   | 大于等于                   | **`TRUE`**，如果 `$a` 大于或者等于 `$b`。                                                                              |
+| $a == $b    | 等于                       | **`true`**，如果类型转换后 `$a` 等于 `$b`。                                                                            |
+| $a === $b   | 全等                       | **`true`**，如果 `$a` 等于 `$b`，并且它们的类型也相同。                                                                |
+| $a != $b    | 不等                       | **`true`**，如果类型转换后 `$a` 不等于 `$b`。                                                                          |
+| $a \<\> $b  | 不等                       | **`true`**，如果类型转换后 `$a` 不等于 `$b`。                                                                          |
+| $a !== $b   | 不全等                     | **`true`**，如果 `$a` 不等于 `$b`，或者它们的类型不同。                                                                |
+| $a \< $b    | 小与                       | **`true`**，如果 `$a` 严格小于 `$b`。                                                                                  |
+| $a \> $b    | 大于                       | **`true`**，如果 `$a` 严格大于 `$b`。                                                                                  |
+| $a \<= $b   | 小于等于                   | **`true`**，如果 `$a` 小于或者等于 `$b`。                                                                              |
+| $a \>= $b   | 大于等于                   | **`true`**，如果 `$a` 大于或者等于 `$b`。                                                                              |
 | $a \<=\> $b | 太空船运算符（组合比较符） | 当`$a`小于、等于、大于 `$b`时 分别返回一个小于、等于、大于0的 <span class="type">integer</span> 值。 PHP7 起开始提供。 |
 
 如果比较一个数字和字符串或者比较涉及到数字内容的字符串，则字符串会被<a href="/language/types/string.html#language.types.string.conversion" class="link">转换为数值</a>并且比较按照数值来进行。此规则也适用于
@@ -92,8 +92,8 @@ echo $a <=> $b; // 1
 
 | 运算数 1 类型                                                                                            | 运算数 2 类型                                                                                            | 结果                                                                                                                                                                      |
 |----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span class="type">null</span> 或 <span class="type">string</span>                                       | <span class="type">string</span>                                                                         | 将 **`NULL`** 转换为 ""，进行数字或词汇比较                                                                                                                               |
-| <span class="type">bool</span> 或 <span class="type">null</span>                                         | 任何其它类型                                                                                             | 转换为 <span class="type">bool</span>，**`FALSE`** \< **`TRUE`**                                                                                                          |
+| <span class="type">null</span> 或 <span class="type">string</span>                                       | <span class="type">string</span>                                                                         | 将 **`null`** 转换为 ""，进行数字或词汇比较                                                                                                                               |
+| <span class="type">bool</span> 或 <span class="type">null</span>                                         | 任何其它类型                                                                                             | 转换为 <span class="type">bool</span>，**`false`** \< **`true`**                                                                                                          |
 | <span class="type">object</span>                                                                         | <span class="type">object</span>                                                                         | 内置类可以定义自己的比较，不同类不能比较，相同类和数组同样方式比较属性（PHP 4 中），PHP 5 有其自己的<a href="/language/oop5/object-comparison.html" class="link">说明</a> |
 | <span class="type">string</span>，<span class="type">resource</span> 或 <span class="type">number</span> | <span class="type">string</span>，<span class="type">resource</span> 或 <span class="type">number</span> | 将字符串和资源转换成数字，按普通数学比较                                                                                                                                  |
 | <span class="type">array</span>                                                                          | <span class="type">array</span>                                                                          | 具有较少成员的数组较小，如果运算数 1 中的键不存在于运算数 2 中则数组无法比较，否则挨个值比较（见下例）                                                                    |
@@ -172,13 +172,13 @@ if (empty($_POST['action'])) {
 ```
 
 表达式 *(expr1) ? (expr2) : (expr3)* 在 <span
-class="replaceable">expr1</span> 求值为 **`TRUE`** 时的值为 <span
+class="replaceable">expr1</span> 求值为 **`true`** 时的值为 <span
 class="replaceable">expr2</span>，在 <span
-class="replaceable">expr1</span> 求值为 **`FALSE`** 时的值为 <span
+class="replaceable">expr1</span> 求值为 **`false`** 时的值为 <span
 class="replaceable">expr3</span>。
 
 自 PHP 5.3 起，可以省略三元运算符中间那部分。表达式 *expr1 ?: expr3* 在
-<span class="replaceable">expr1</span> 求值为 **`TRUE`** 时返回 <span
+<span class="replaceable">expr1</span> 求值为 **`true`** 时返回 <span
 class="replaceable">expr1</span>，否则返回 <span
 class="replaceable">expr3</span>。
 
@@ -231,7 +231,7 @@ if (isset($_POST['action'])) {
 ?>
 ```
 
-当 <span class="replaceable">expr1</span> 为 **`NULL`**，表达式 *(expr1)
+当 <span class="replaceable">expr1</span> 为 **`null`**，表达式 *(expr1)
 ?? (expr2)* 等同于 <span class="replaceable">expr2</span>，否则为 <span
 class="replaceable">expr1</span>。
 

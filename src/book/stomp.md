@@ -199,7 +199,7 @@ The transaction to abort.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -310,7 +310,7 @@ The message/messageId to be acknowledged.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -454,7 +454,7 @@ The transaction id.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -513,7 +513,7 @@ The transaction id.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -715,7 +715,7 @@ stomp 连接标识符。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -753,7 +753,7 @@ stomp 连接标识符。
 
 ### 返回值
 
-Returns an error string or **`FALSE`** if no error occurred.
+Returns an error string or **`false`** if no error occurred.
 
 ### 范例
 
@@ -946,7 +946,7 @@ stomp 连接标识符。
 ### 返回值
 
 <span class="type">string</span> session id on success 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -1031,7 +1031,7 @@ stomp 连接标识符。
 
 ### 返回值
 
-Returns **`TRUE`** if a frame is ready to read, or **`FALSE`**
+Returns **`true`** if a frame is ready to read, or **`false`**
 otherwise.
 
 Stomp::readFrame
@@ -1231,7 +1231,7 @@ Message to send.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -1378,7 +1378,7 @@ Destination to subscribe to.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -1436,7 +1436,7 @@ Subscription to remove.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 

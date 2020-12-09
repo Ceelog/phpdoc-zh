@@ -231,17 +231,17 @@ Available since PHP 5.3.0 </span>
 **`__COMPILER_HALT_OFFSET__`** (<span class="type">int</span>)  
 <span class="simpara"> 自 PHP 5.1.0 起有效 </span>
 
-**`TRUE`** (<span class="type">boolean</span>)  
+**`true`** (<span class="type">boolean</span>)  
 <span class="simpara"> See
 <a href="/language/types/boolean.html" class="link">Booleans</a>.
 </span>
 
-**`FALSE`** (<span class="type">boolean</span>)  
+**`false`** (<span class="type">boolean</span>)  
 <span class="simpara"> See
 <a href="/language/types/boolean.html" class="link">Booleans</a>.
 </span>
 
-**`NULL`** (<span class="type">null</span>)  
+**`null`** (<span class="type">null</span>)  
 <span class="simpara"> See
 <a href="/language/types/null.html" class="link">Null</a>. </span>
 

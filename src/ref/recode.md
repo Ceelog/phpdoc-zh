@@ -28,7 +28,7 @@ A local file handle <span class="type">resource</span> for the `output`
 
 ### 返回值
 
-Returns **`FALSE`**, if unable to comply, **`TRUE`** otherwise.
+Returns **`false`**, if unable to comply, **`true`** otherwise.
 
 ### 范例
 
@@ -76,7 +76,7 @@ The <span class="type">string</span> to be recoded
 
 ### 返回值
 
-Returns the recoded <span class="type">string</span> or **`FALSE`**, if
+Returns the recoded <span class="type">string</span> or **`false`**, if
 unable to perform the recode request.
 
 ### 范例

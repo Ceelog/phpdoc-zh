@@ -70,5 +70,5 @@
 ### Session
 
 -   <span class="simpara"> <span class="function">session\_start</span>
-    当无法成功初始化会话的时候，返回 **`FALSE`**，
+    当无法成功初始化会话的时候，返回 **`false`**，
     并且不会初始化超级变量 `$_SESSION`。 </span>

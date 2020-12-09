@@ -78,7 +78,7 @@ class="function">ob\_end\_clean</span>时缓冲区内容将被丢弃。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 错误的原因首先是，在调用时没有一个起作用的缓冲区，或者是因为某些原因缓冲区不能被删除（可能对特殊缓冲区而言）。
 
 ### 错误／异常
@@ -134,7 +134,7 @@ class="function">ob\_end\_flush</span>后缓冲区内容被丢弃。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 错误的原因首先是，在调用时没有一个起作用的缓冲区，或者是因为某些原因缓冲区不能被删除（可能对特殊缓冲区而言）。
 
 ### 错误／异常
@@ -216,7 +216,7 @@ class="function">ob\_end\_clean</span>。
 ### 返回值
 
 返回输出缓冲区的内容，并结束输出缓冲区。如果输出缓冲区不是活跃的，即返回
-**`FALSE`** 。
+**`false`** 。
 
 ### 范例
 
@@ -262,7 +262,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-此函数返回输出缓冲区的内容，或者如果输出缓冲区无效将返回**`FALSE`** 。
+此函数返回输出缓冲区的内容，或者如果输出缓冲区无效将返回**`false`** 。
 
 ### 范例
 
@@ -318,7 +318,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-返回输出缓冲区的内容；或者是，如果没有起作用的输出缓冲区，返回**`FALSE`**
+返回输出缓冲区的内容；或者是，如果没有起作用的输出缓冲区，返回**`false`**
 。
 
 ### 范例
@@ -369,7 +369,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-返回输出缓冲区内容的长度；或者返回**`FALSE`**——如果没有起作用的缓冲区。
+返回输出缓冲区内容的长度；或者返回**`false`**——如果没有起作用的缓冲区。
 
 ### 范例
 
@@ -439,17 +439,17 @@ class="methodparam"><span class="type">bool</span> `$full_status` <span
 class="initializer"> = FALSE</span></span> \] )
 
 <span
-class="function">ob\_get\_status</span>返回最顶层输出缓冲区的状态信息；或者如果`full_status`设为**`TRUE`**，返回所有有效的输出缓冲级别。
+class="function">ob\_get\_status</span>返回最顶层输出缓冲区的状态信息；或者如果`full_status`设为**`true`**，返回所有有效的输出缓冲级别。
 
 ### 参数
 
 `full_status`  
-设为**`TRUE`** 返回所有有效的输出缓冲区级别的状态信息。如果设为
-**`FALSE`** 或者没有设置，仅返回最 顶层输出缓冲区的状态信息。
+设为**`true`** 返回所有有效的输出缓冲区级别的状态信息。如果设为
+**`false`** 或者没有设置，仅返回最 顶层输出缓冲区的状态信息。
 
 ### 返回值
 
-如果调用时没有`full_status`参数，或者`full_status` = **`FALSE`**
+如果调用时没有`full_status`参数，或者`full_status` = **`false`**
 将返回一个包含下面元素的简单数组：
 
 ``` returnvalues
@@ -472,7 +472,7 @@ Array
 | del    | 由<span class="function">ob\_start</span>设置的删除标签（Erase-flag）                                           |
 
 如果调用时`full_status` =
-**`TRUE`**，将返回一个数组，该数组的每个元素包含有效的输出缓冲区级别的状态信息。缓冲区的级别数用来当作数组的第一维数；每个元素自身是另一个数组，它持有该有效输出级别的状态信息。
+**`true`**，将返回一个数组，该数组的每个元素包含有效的输出缓冲区级别的状态信息。缓冲区的级别数用来当作数组的第一维数；每个元素自身是另一个数组，它持有该有效输出级别的状态信息。
 
     Array
     (
@@ -536,7 +536,7 @@ class="function">ob\_gzhandler</span>真正发送压缩过的数据之前，该
 所有可以发送正确头信息表明他自己可以接受压缩的网页的浏览器，都可以支持。
 All browsers are supported since it's up to the browser to send the
 correct header saying that it accepts compressed web pages.
-如果一个浏览器不支持压缩过的页面，此函数返回**`FALSE`**。
+如果一个浏览器不支持压缩过的页面，此函数返回**`false`**。
 
 ### 参数
 
@@ -608,7 +608,7 @@ class="function">ob\_implicit\_flush</span>将打开或关闭绝对（隐式）�
 ### 参数
 
 `flag`  
-设为**`TRUE`** 打开绝对刷送，反之是 **`FALSE`** 。
+设为**`true`** 打开绝对刷送，反之是 **`false`** 。
 
 ### 返回值
 
@@ -695,7 +695,7 @@ ob\_start
 
 <span class="type">bool</span> <span class="methodname">ob\_start</span>
 (\[ <span class="methodparam"><span class="type">callable</span>
-`$output_callback`<span class="initializer"> = **`NULL`**</span></span>
+`$output_callback`<span class="initializer"> = **`null`**</span></span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$chunk_size`<span class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
@@ -732,7 +732,7 @@ class="function">ob\_clean</span>
 当调用 `output_callback` 时，它将收到输出缓冲区的内容作为参数
 并预期返回一个新的输出缓冲区作为结果，这个新返回的输出缓冲区内容将被送到浏览器。
 如果这个 `output_callback` 不是一个可以调用的函数，此函数 会返回
-**`FALSE`**。以下是回调签名：
+**`false`**。以下是回调签名：
 
 <span class="type">string</span> <span class="methodname"><span
 class="replaceable">handler</span></span> ( <span
@@ -748,10 +748,10 @@ class="methodparam"><span class="type">string</span> `$buffer`</span>
 <a href="/outcontrol/constants.html" class="link"><strong><code>PHP_OUTPUT_HANDLER_*</code></strong> 常量</a>。
 </span>
 
-如果 `output_callback` 返回 **`FALSE`** ，其原来的输入
+如果 `output_callback` 返回 **`false`** ，其原来的输入
 内容被直接送到浏览器。
 
-这个参数 `output_callback` 可以通过直接给一个 **`NULL`** 值而避开。
+这个参数 `output_callback` 可以通过直接给一个 **`null`** 值而避开。
 
 <span class="function">ob\_end\_clean</span>, <span
 class="function">ob\_end\_flush</span>, <span
@@ -797,7 +797,7 @@ as shorthand.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -896,7 +896,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -959,7 +959,7 @@ class="function">output\_add\_rewrite\_var</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

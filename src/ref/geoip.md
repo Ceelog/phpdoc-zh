@@ -21,7 +21,7 @@ class="methodparam"><span class="type">string</span> `$hostname`</span>
 ### 返回值
 
 如果成功将会返回自治系统号，如果在数据库中未找到相关信息则返回
-**`FALSE`** 。
+**`false`** 。
 
 ### 范例
 
@@ -67,7 +67,7 @@ class="methodparam"><span class="type">string</span> `$hostname`</span>
 ### 返回值
 
 成功，返回两个大写字母组成的七大洲简称字符串,
-如果在数据库中未找到相关信息则返回 **`FALSE`** 。
+如果在数据库中未找到相关信息则返回 **`false`** 。
 
 | Code | 洲名   |
 |------|--------|
@@ -127,7 +127,7 @@ class="methodparam"><span class="type">string</span> `$hostname`</span>
 ### 返回值
 
 成功，返回 ISO 定义的国家代码，如果在数据库中未找到相关信息则返回
-**`FALSE`** 。
+**`false`** 。
 
 ### 范例
 
@@ -185,7 +185,7 @@ class="methodparam"><span class="type">string</span> `$hostname`</span>
 ### 返回值
 
 成功，返回由三个字母组成的国家简称，如果在数据库中未找到相关信息则返回
-**`FALSE`** 。
+**`false`** 。
 
 ### 范例
 
@@ -234,7 +234,7 @@ class="methodparam"><span class="type">string</span> `$hostname`</span>
 
 ### 返回值
 
-成功，返回国家全称，如果在数据库中未找到相关信息则返回 **`FALSE`** 。
+成功，返回国家全称，如果在数据库中未找到相关信息则返回 **`false`** 。
 
 ### 范例
 
@@ -286,7 +286,7 @@ GEOIP\_\*\_EDITION)。
 
 ### 返回值
 
-如果成功，返回数据库的版本信息，错误则返回**`NULL`** 。
+如果成功，返回数据库的版本信息，错误则返回**`null`** 。
 
 ### 范例
 
@@ -329,8 +329,8 @@ GEOIP\_\*\_EDITION)。
 
 ### 返回值
 
-如果存在则返回 **`TRUE`** , 未找到则返回 **`FALSE`** , 错误则返回
-**`NULL`** 。
+如果存在则返回 **`true`** , 未找到则返回 **`false`** , 错误则返回
+**`null`** 。
 
 ### 范例
 
@@ -375,7 +375,7 @@ class="methodparam"><span class="type">int</span> `$database`</span> )
 
 ### 返回值
 
-成功则返回相对应的数据库文件名，错误则返回**`NULL`** 。
+成功则返回相对应的数据库文件名，错误则返回**`null`** 。
 
 ### 范例
 
@@ -510,7 +510,7 @@ class="methodparam"><span class="type">string</span> `$hostname`</span>
 
 ### 返回值
 
-成功，返回域名，如果在数据库中未找到信息则返回 **`FALSE`** 。
+成功，返回域名，如果在数据库中未找到信息则返回 **`false`** 。
 
 ### 范例
 
@@ -624,7 +624,7 @@ class="methodparam"><span class="type">string</span> `$hostname`</span>
 
 ### 返回值
 
-成功，则返回 ISP 名称，未找到相关信息则返回 **`FALSE`** 。
+成功，则返回 ISP 名称，未找到相关信息则返回 **`false`** 。
 
 ### 范例
 
@@ -680,7 +680,7 @@ class="methodparam"><span class="type">string</span> `$hostname`</span>
 
 ### 返回值
 
-成功，返回连接速度，未找到相关信息则返回 **`FALSE`** 。
+成功，返回连接速度，未找到相关信息则返回 **`false`** 。
 
 ### 范例
 
@@ -728,7 +728,7 @@ class="methodparam"><span class="type">string</span> `$hostname`</span>
 
 ### 返回值
 
-成功， 返回组织的名称，未找到相关信息则返回 **`FALSE`** 。
+成功， 返回组织的名称，未找到相关信息则返回 **`false`** 。
 
 ### 范例
 
@@ -799,7 +799,7 @@ class="methodparam"><span class="type">string</span> `$hostname`</span>
 
 ### 返回值
 
-成功，返回关联数组，未找到相关信息则返回 **`FALSE`** 。
+成功，返回关联数组，未找到相关信息则返回 **`false`** 。
 
 ### 更新日志
 
@@ -873,7 +873,7 @@ class="methodparam"><span class="type">string</span> `$hostname`</span>
 
 ### 返回值
 
-成功，返回关联数组， 如果信息未找到则返回 **`FALSE`**。
+成功，返回关联数组， 如果信息未找到则返回 **`false`**。
 
 ### 范例
 
@@ -937,7 +937,7 @@ class="function">geoip\_region\_by\_name</span>)
 
 ### 返回值
 
-成功，返回地区名字，如果相关信息未找到则返回 **`FALSE`** 。
+成功，返回地区名字，如果相关信息未找到则返回 **`false`** 。
 
 ### 范例
 
@@ -1061,7 +1061,7 @@ class="function">geoip\_region\_by\_name</span>)
 
 ### 返回值
 
-成功，返回地区名字，如果相关信息未找到则返回 **`FALSE`** 。
+成功，返回地区名字，如果相关信息未找到则返回 **`false`** 。
 
 ### 范例
 

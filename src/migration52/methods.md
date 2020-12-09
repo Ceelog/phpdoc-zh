@@ -73,7 +73,7 @@ New methods were introduced in 5.2.0:
     internal flags </span>
 -   <span class="simpara"> bool <span
     class="methodname">CachingIterator::offsetExists</span>(mixed
-    index) - Returns **`TRUE`** if the requested index exists </span>
+    index) - Returns **`true`** if the requested index exists </span>
 -   <span class="simpara"> string <span
     class="methodname">CachingIterator::offsetGet</span>(mixed index) -
     Return the internal cache if used </span>

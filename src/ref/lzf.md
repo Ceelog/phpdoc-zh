@@ -19,7 +19,7 @@ The string to compress.
 
 ### 返回值
 
-Returns the compressed data or **`FALSE`** if an error occurred.
+Returns the compressed data or **`false`** if an error occurred.
 
 ### 参见
 
@@ -46,7 +46,7 @@ The compressed string.
 
 ### 返回值
 
-Returns the decompressed data or **`FALSE`** if an error occurred.
+Returns the decompressed data or **`false`** if an error occurred.
 
 ### 参见
 

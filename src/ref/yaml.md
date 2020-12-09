@@ -15,7 +15,7 @@ YAML\_ANY\_ENCODING</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$linebreak`<span class="initializer"> =
 YAML\_ANY\_BREAK</span></span> \[, <span class="methodparam"><span
 class="type">array</span> `$callbacks`<span class="initializer"> =
-**`NULL`**</span></span> \]\]\] )
+**`null`**</span></span> \]\]\] )
 
 Generate a YAML representation of the provided `data` in the `filename`.
 
@@ -46,7 +46,7 @@ for more details.
 
 ### 返回值
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### 更新日志
 
@@ -74,7 +74,7 @@ class="initializer"> = YAML\_ANY\_ENCODING</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$linebreak`<span
 class="initializer"> = YAML\_ANY\_BREAK</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$callbacks`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 Generate a YAML representation of the provided `data`.
 
@@ -213,7 +213,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `&$ndocs`</span> \[,
 <span class="methodparam"><span class="type">array</span>
-`$callbacks`<span class="initializer"> = **`NULL`**</span></span> \]\]\]
+`$callbacks`<span class="initializer"> = **`null`**</span></span> \]\]\]
 )
 
 Convert all or part of a YAML document stream read from a file to a PHP
@@ -242,7 +242,7 @@ for more details.
 ### 返回值
 
 Returns the value encoded in `input` in appropriate PHP type
-或者在失败时返回 **`FALSE`**. If `pos` is *-1* an <span
+或者在失败时返回 **`false`**. If `pos` is *-1* an <span
 class="type">array</span> will be returned with one entry for each
 document found in the stream.
 
@@ -276,7 +276,7 @@ class="methodparam"><span class="type">string</span> `$url`</span> \[,
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `&$ndocs`</span> \[,
 <span class="methodparam"><span class="type">array</span>
-`$callbacks`<span class="initializer"> = **`NULL`**</span></span> \]\]\]
+`$callbacks`<span class="initializer"> = **`null`**</span></span> \]\]\]
 )
 
 Convert all or part of a YAML document stream read from a URL to a PHP
@@ -309,7 +309,7 @@ for more
 ### 返回值
 
 Returns the value encoded in `input` in appropriate PHP type
-或者在失败时返回 **`FALSE`**. If `pos` is *-1* an <span
+或者在失败时返回 **`false`**. If `pos` is *-1* an <span
 class="type">array</span> will be returned with one entry for each
 document found in the stream.
 
@@ -343,7 +343,7 @@ class="methodparam"><span class="type">int</span> `$pos`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `&$ndocs`</span> \[,
 <span class="methodparam"><span class="type">array</span>
-`$callbacks`<span class="initializer"> = **`NULL`**</span></span> \]\]\]
+`$callbacks`<span class="initializer"> = **`null`**</span></span> \]\]\]
 )
 
 Convert all or part of a YAML document stream to a PHP variable.
@@ -371,7 +371,7 @@ for more details.
 ### 返回值
 
 Returns the value encoded in `input` in appropriate PHP type
-或者在失败时返回 **`FALSE`**. If `pos` is *-1* an <span
+或者在失败时返回 **`false`**. If `pos` is *-1* an <span
 class="type">array</span> will be returned with one entry for each
 document found in the stream.
 

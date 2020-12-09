@@ -5596,7 +5596,7 @@ a string of namespace.
 ### 返回值
 
 <span class="type">string</span> path, if the namespace is not
-registered, then **`NULL`** default library will be returned
+registered, then **`null`** default library will be returned
 
 ### 范例
 

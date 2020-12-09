@@ -50,7 +50,7 @@ PHP 核心:
     设置默认的流环境. </span>
 -   <span class="simpara"> <span
     class="function">stream\_supports\_lock</span> -
-    如果流支持锁定则返回 **`TRUE`**. </span>
+    如果流支持锁定则返回 **`true`**. </span>
 -   <span class="simpara"> <span
     class="function">stream\_context\_get\_params</span> -
     获取一个流环境的参数. </span>

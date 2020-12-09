@@ -345,7 +345,7 @@ class="function">PDOStatement::bindColumn</span> 方法绑定的 PHP 变量。
 </span>
 
 **`PDO::ATTR_AUTOCOMMIT`** (<span class="type">integer</span>)  
-<span class="simpara"> 如果此值为 **`FALSE`** ，PDO
+<span class="simpara"> 如果此值为 **`false`** ，PDO
 将试图禁用自动提交以便数据库连接开始一个事务。 </span>
 
 **`PDO::ATTR_PREFETCH`** (<span class="type">integer</span>)  
@@ -598,7 +598,7 @@ class="function">set\_exception\_handler</span> ）地捕获异常。
 
 连接数据成功后，返回一个 PDO 类的实例给脚本，此连接在 PDO
 对象的生存周期中保持活动。要想关闭连接，需要销毁对象以确保所有剩余到它的引用都被删除，可以赋一个
-**`NULL`** 值给对象变量。如果不明确地这么做，PHP
+**`null`** 值给对象变量。如果不明确地这么做，PHP
 在脚本结束时会自动关闭连接。
 
 **示例 \#3 关闭一个连接**
@@ -665,7 +665,7 @@ class="function">PDO::rollBack</span>来完成，这取决于事务中的代码�
 PDO
 仅在驱动层检查是否具有事务处理能力。如果某些运行时条件意味着事务不可用，且数据库服务接受请求去启动一个事务，
 <span class="methodname">PDO::beginTransaction</span> 将仍然返回
-**`TRUE`** 而且没有错误。
+**`true`** 而且没有错误。
 
 试着在 MySQL 数据库的 MyISAM 数据表中使用事务就是一个很好的例子。
 
@@ -1076,7 +1076,7 @@ class="methodparam">void</span> )
 <span class="type">string</span> <span
 class="methodname">lastInsertId</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$name`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="type">PDOStatement</span> <span class="methodname">prepare</span>
@@ -1129,7 +1129,7 @@ class="function">PDO::rollBack</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1177,7 +1177,7 @@ class="function">PDO::beginTransaction</span> 开始一个新的事务为止。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1410,7 +1410,7 @@ reflect that error. You must call <span
 class="function">PDOStatement::errorCode</span> to return the error code
 for an operation performed on a particular statement handle.
 
-如果数据库句柄没有进行操作，则返回 **`NULL`** 。
+如果数据库句柄没有进行操作，则返回 **`null`** 。
 
 ### 范例
 
@@ -1463,7 +1463,7 @@ The array consists of at least the following fields:
 > **Note**:
 >
 > If the SQLSTATE error code is not set or there is no driver-specific
-> error, the elements following element 0 will be set to **`NULL`**.
+> error, the elements following element 0 will be set to **`null`**.
 
 <span class="function">PDO::errorInfo</span> only retrieves error
 information for operations performed directly on the database handle. If
@@ -1543,7 +1543,7 @@ class="function">PDO::exec</span> 返回 0。
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -1711,7 +1711,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果当前事务处于激活，则返回 **`TRUE`** ，否则返回 **`FALSE`** 。
+如果当前事务处于激活，则返回 **`true`** ，否则返回 **`false`** 。
 
 PDO::lastInsertId
 =================
@@ -1723,7 +1723,7 @@ PDO::lastInsertId
 <span class="type">string</span> <span
 class="methodname">PDO::lastInsertId</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$name`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 返回最后插入行的ID，或者是一个序列对象最后的值，取决于底层的驱动。比如，<span
 class="function">PDO\_PGSQL</span> 要求为 `name`
@@ -1808,7 +1808,7 @@ prepare 时就设置。
 class="function">PDO::prepare</span> 返回 <span
 class="classname">PDOStatement</span> 对象。
 如果数据库服务器无法准备语句， <span
-class="function">PDO::prepare</span> 返回 **`FALSE`** 或抛出 <span
+class="function">PDO::prepare</span> 返回 **`false`** 或抛出 <span
 class="classname">PDOException</span> (取决于
 <a href="/book/pdo.html#错误与错误处理" class="link">错误处理器</a>)。
 
@@ -1922,7 +1922,7 @@ class="function">PDOStatement::closeCursor</span> 释放数据库PDOStatement
 ### 返回值
 
 <span class="function">PDO::query</span> 返回 PDOStatement
-对象，或在失败时返回 **`FALSE`**。
+对象，或在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2003,7 +2003,7 @@ class="function">PDO::quote</span> 把用户输入的数据拼接进 SQL 语句�
 ### 返回值
 
 返回加引号的字符串，理论上可以安全用于 SQL 语句。
-如果驱动不支持这种方式，将返回 **`FALSE`** 。
+如果驱动不支持这种方式，将返回 **`false`** 。
 
 ### 范例
 
@@ -2088,7 +2088,7 @@ class="classname">PDOException</span> 异常。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2159,7 +2159,7 @@ class="methodparam"><span class="type">int</span> `$attribute`</span> ,
 
     -   *PDO::NULL\_NATURAL*: 不转换。
 
-    -   *PDO::NULL\_EMPTY\_STRING*： 将空字符串转换成 **`NULL`**。
+    -   *PDO::NULL\_EMPTY\_STRING*： 将空字符串转换成 **`null`**。
 
     -   *PDO::NULL\_TO\_STRING*: 将 NULL 转换成空字符串。
 
@@ -2179,8 +2179,8 @@ class="methodparam"><span class="type">int</span> `$attribute`</span> ,
 
 -   *PDO::ATTR\_EMULATE\_PREPARES* 启用或禁用预处理语句的模拟。
     有些驱动不支持或有限度地支持本地预处理。使用此设置强制PDO总是模拟预处理语句（如果为
-    **`TRUE`** ），或试着使用本地预处理语句（如果为
-    **`FALSE`**）。如果驱动不能成功预处理当前查询，它将总是回到模拟预处理语句上。
+    **`true`** ），或试着使用本地预处理语句（如果为
+    **`false`**）。如果驱动不能成功预处理当前查询，它将总是回到模拟预处理语句上。
     需要 <span class="type">bool</span> 类型。
 
 -   *PDO::MYSQL\_ATTR\_USE\_BUFFERED\_QUERY* （在MySQL中可用）：
@@ -2192,7 +2192,7 @@ class="methodparam"><span class="type">int</span> `$attribute`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 简介
 ----
@@ -2376,7 +2376,7 @@ class="function">PDOStatement::fetchAll</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2476,7 +2476,7 @@ PDO::PARAM\_INPUT\_OUTPUT 位。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2562,7 +2562,7 @@ PDO::PARAM\_STR</span></span> \] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2641,7 +2641,7 @@ do {
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2988,7 +2988,7 @@ class="methodname">PDO::prepare</span> 预处理的SQL
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -3124,7 +3124,7 @@ POD 如何返回行。
 
 -   *PDO::FETCH\_BOTH*（默认）：返回一个索引为结果集列名和以0开始的列号的数组
 
--   *PDO::FETCH\_BOUND*：返回 **`TRUE`** ，并分配结果集中的列值给 <span
+-   *PDO::FETCH\_BOUND*：返回 **`true`** ，并分配结果集中的列值给 <span
     class="function">PDOStatement::bindColumn</span> 方法绑定的 PHP
     变量。
 
@@ -3161,7 +3161,7 @@ class="function">PDOStatement::fetch</span> 前游标的位置
 ### 返回值
 
 此函数（方法）成功时返回的值依赖于提取类型。在所有情况下，失败都返回
-**`FALSE`** 。
+**`false`** 。
 
 ### 范例
 
@@ -3549,7 +3549,7 @@ class="methodname">PDOStatement::fetchColumn</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$column_number`<span
 class="initializer"> = 0</span></span> \] )
 
-从结果集中的下一行返回单独的一列，如果没有了，则返回 **`FALSE`** 。
+从结果集中的下一行返回单独的一列，如果没有了，则返回 **`false`** 。
 
 ### 参数
 
@@ -3630,7 +3630,7 @@ class="function">PDOStatement::fetch</span> 的一种替代。
 
 ### 返回值
 
-返回一个属性名对应于列名的所要求类的实例， 或者在失败时返回 **`FALSE`**.
+返回一个属性名对应于列名的所要求类的实例， 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -3705,7 +3705,7 @@ class="function">PDOStatement::getColumnMeta</span>。
 | *precision*         | 该列的数值精度。除浮点小数外通常为 *0* 。                                                                                                          |
 | *pdo\_type*         | 以 *PDO::PARAM\_\** 常量为代表的列类型。                                                                                                           |
 
-如果结果集不存在，或者是请求的列在结果集中不存在，则返回 **`FALSE`** 。
+如果结果集不存在，或者是请求的列在结果集中不存在，则返回 **`false`** 。
 
 ### 更新日志
 
@@ -3768,7 +3768,7 @@ PDOStatement
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3940,7 +3940,7 @@ class="methodparam"><span class="type">int</span> `$attribute`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3997,7 +3997,7 @@ class="type">object</span> `$object`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5163,7 +5163,7 @@ class="function">PDO::getAttribute</span> 可被用于获取
 **`PDO_ATTR_DRIVER_NAME`** 属性以检查驱动。
 
 **`PDO::MYSQL_ATTR_USE_BUFFERED_QUERY`** (<span class="type">int</span>)  
-<span class="simpara"> If this attribute is set to **`TRUE`** on a <span
+<span class="simpara"> If this attribute is set to **`true`** on a <span
 class="classname">PDOStatement</span>, the MySQL driver will use the
 buffered versions of the MySQL API. If you're writing portable code, you
 should use <span class="function">PDOStatement::fetchAll</span> instead.
@@ -5268,7 +5268,7 @@ Provides a way to disable verification of the server SSL certificate.
 **`PDO::MYSQL_ATTR_MULTI_STATEMENTS`** (<span class="type">int</span>)  
 Disables multi query execution in both <span
 class="function">PDO::prepare</span> and <span
-class="function">PDO::query</span> when set to **`FALSE`**.
+class="function">PDO::query</span> when set to **`false`**.
 
 Note, this constant can only be used in the `driver_options` array when
 constructing a new database handle.
@@ -5521,14 +5521,14 @@ The application name used in tracing.
 
 *ConnectionPooling*  
 Specifies whether the connection is assigned from a connection pool (1
-or **`TRUE`**) or not (0 or **`FALSE`**).
+or **`true`**) or not (0 or **`false`**).
 
 *Database*  
 The name of the database.
 
 *Encrypt*  
 Specifies whether the communication with SQL Server is encrypted (1 or
-**`TRUE`**) or unencrypted (0 or **`FALSE`**).
+**`true`**) or unencrypted (0 or **`false`**).
 
 *Failover\_Partner*  
 Specifies the server and instance of the database's mirror (if enabled
@@ -5544,7 +5544,7 @@ Disables or explicitly enables support for multiple active Result sets
 
 *QuotedId*  
 Specifies whether to use SQL-92 rules for quoted identifiers (1 or
-**`TRUE`**) or to use legacy Transact-SQL rules (0 or **`FALSE`**).
+**`true`**) or to use legacy Transact-SQL rules (0 or **`false`**).
 
 *Server*  
 The name of the database server.
@@ -5553,8 +5553,8 @@ The name of the database server.
 Specifies the path for the file used for trace data.
 
 *TraceOn*  
-Specifies whether ODBC tracing is enabled (1 or **`TRUE`**) or disabled
-(0 or **`FALSE`**) for the connection being established.
+Specifies whether ODBC tracing is enabled (1 or **`true`**) or disabled
+(0 or **`false`**) for the connection being established.
 
 *TransactionIsolation*  
 Specifies the transaction isolation level. The accepted values for this
@@ -5563,8 +5563,8 @@ PDO::SQLSRV\_TXN\_READ\_COMMITTED, PDO::SQLSRV\_TXN\_REPEATABLE\_READ,
 PDO::SQLSRV\_TXN\_SNAPSHOT, and PDO::SQLSRV\_TXN\_SERIALIZABLE.
 
 *TrustServerCertificate*  
-Specifies whether the client should trust (1 or **`TRUE`**) or reject (0
-or **`FALSE`**) a self-signed server certificate.
+Specifies whether the client should trust (1 or **`true`**) or reject (0
+or **`false`**) a self-signed server certificate.
 
 *WSID*  
 Specifies the name of the computer for tracing.
@@ -5769,9 +5769,9 @@ following values are supported:
 -   **`PDO::ODBC_SQL_USE_ODBC`**: always use the ODBC cursor library.
 
 **`PDO::ODBC_ATTR_ASSUME_UTF8`** (<span class="type">bool</span>)  
-Windows only. If **`TRUE`**, UTF-16 encoded character data (*CHAR*,
+Windows only. If **`true`**, UTF-16 encoded character data (*CHAR*,
 *VARCHAR* and *LONGVARCHAR*) is converted to UTF-8 when reading from or
-writing data to the database. If **`FALSE`** (the default), no character
+writing data to the database. If **`false`** (the default), no character
 encoding conversion is done.
 
 运行时配置
@@ -5996,7 +5996,7 @@ List of fields to insert
 
 ### 返回值
 
-Returns **`TRUE`** on success, 或者在失败时返回 **`FALSE`**.
+Returns **`true`** on success, 或者在失败时返回 **`false`**.
 
 PDO::pgsqlCopyFromFile
 ======================
@@ -6039,7 +6039,7 @@ List of fields to insert
 
 ### 返回值
 
-Returns **`TRUE`** on success, 或者在失败时返回 **`FALSE`**.
+Returns **`true`** on success, 或者在失败时返回 **`false`**.
 
 PDO::pgsqlCopyToArray
 =====================
@@ -6078,7 +6078,7 @@ List of fields to export
 
 ### 返回值
 
-Returns an array of rows, 或者在失败时返回 **`FALSE`**.
+Returns an array of rows, 或者在失败时返回 **`false`**.
 
 PDO::pgsqlCopyToFile
 ====================
@@ -6121,7 +6121,7 @@ List of fields to insert
 
 ### 返回值
 
-Returns **`TRUE`** on success, 或者在失败时返回 **`FALSE`**.
+Returns **`true`** on success, 或者在失败时返回 **`false`**.
 
 PDO::pgsqlGetNotify
 ===================
@@ -6152,7 +6152,7 @@ The length of time to wait for a response, in milliseconds.
 ### 返回值
 
 If one or more notifications is pending, returns a single row, with
-fields *message* and *pid*, otherwise returns **`FALSE`**.
+fields *message* and *pid*, otherwise returns **`false`**.
 
 PDO::pgsqlGetPid
 ================
@@ -6209,7 +6209,7 @@ storage for optimal row size.
 ### 返回值
 
 Returns the OID of the newly created large object on success, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### 范例
 
@@ -6278,7 +6278,7 @@ stream for writing.
 
 ### 返回值
 
-Returns a stream resource on success 或者在失败时返回 **`FALSE`**.
+Returns a stream resource on success 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -6332,7 +6332,7 @@ A large object identifier
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6496,7 +6496,7 @@ class="methodparam"><span class="type">int</span> `$rownumber`</span> ,
 class="type">mixed</span> `$values`</span> )
 
 `context`  
-**`NULL`** for the first row; on subsequent rows it will have the value
+**`null`** for the first row; on subsequent rows it will have the value
 that was previously returned from the step function; you should use this
 to maintain the aggregate state.
 
@@ -6542,7 +6542,7 @@ predetermined number of arguments.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6668,7 +6668,7 @@ class="methodparam"><span class="type">string</span> `$string1`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6772,7 +6772,7 @@ single SQL statement.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 

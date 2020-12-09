@@ -13,7 +13,7 @@ PHP 选项和信息
 -   [PHP 选项/信息 函数](/ref/info.html)
     -   [assert\_options](/ref/info.html#assert_options) —
         设置/获取断言的各种标志
-    -   [assert](/ref/info.html#assert) — 检查一个断言是否为 FALSE
+    -   [assert](/ref/info.html#assert) — 检查一个断言是否为 false
     -   [cli\_get\_process\_title](/ref/info.html#cli_get_process_title)
         — Returns the current process title
     -   [cli\_set\_process\_title](/ref/info.html#cli_set_process_title)

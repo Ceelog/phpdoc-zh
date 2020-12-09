@@ -142,7 +142,7 @@ class="function">collator\_get\_error\_code</span> .
 
 ### 返回值
 
-**`TRUE`** if it the code indicates some failure, and **`FALSE`** in
+**`true`** if it the code indicates some failure, and **`false`** in
 case of success or a warning.
 
 ### 范例

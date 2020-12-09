@@ -177,7 +177,7 @@ The error message for E\_RECOVERABLE errors has been changed from
 The *allowed\_classes* element of the $options parameter of <span
 class="function">unserialize</span> is now strictly typed, i.e. if
 anything other than an <span class="type">array</span> or a <span
-class="type">boolean</span> is given, unserialize() returns **`FALSE`**
+class="type">boolean</span> is given, unserialize() returns **`false`**
 and issues an **`E_WARNING`**.
 
 ### DateTime constructor incorporates microseconds
@@ -187,7 +187,7 @@ class="classname">DateTimeImmutable</span> now properly incorporate
 microseconds when constructed from the current time, either explicitly
 or with a relative string (e.g. *"first day of next month"*). This means
 that naive comparisons of two newly created instances will now more
-likely return **`FALSE`** instead of **`TRUE`**:
+likely return **`false`** instead of **`true`**:
 
 ``` php
 <?php

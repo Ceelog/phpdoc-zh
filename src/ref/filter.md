@@ -22,7 +22,7 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 filter\_id
 ==========
@@ -42,7 +42,7 @@ filter\_id
 
 ### 返回值
 
-如果获取成功则返回过滤器id，如果过滤器不存在则返回 **`FALSE`** 。
+如果获取成功则返回过滤器id，如果过滤器不存在则返回 **`false`** 。
 
 ### 参见
 
@@ -85,15 +85,15 @@ class="type">array</span>
 这个参数也可以是一个<a href="/filter/constants.html" class="link">filter constant</a>的整数。那么数组中的所有变量都会被这个过滤器所过滤。
 
 `add_empty`  
-在返回值中添加 **`NULL`** 作为不存在的键。
+在返回值中添加 **`null`** 作为不存在的键。
 
 ### 返回值
 
-如果成功的话返回一个所请求的变量的数组，如果失败的话返回 **`FALSE`**
-。对于数组的值，如果过滤失败则返回 **`FALSE`** ，如果`variable_name`
-不存在的话则返回 **`NULL`** 。 如果标示 **`FILTER_NULL_ON_FAILURE`**
-被使用了，那么当变量不存在时返回 **`FALSE`** ，当过滤失败时返回
-**`NULL`** 。
+如果成功的话返回一个所请求的变量的数组，如果失败的话返回 **`false`**
+。对于数组的值，如果过滤失败则返回 **`false`** ，如果`variable_name`
+不存在的话则返回 **`null`** 。 如果标示 **`FILTER_NULL_ON_FAILURE`**
+被使用了，那么当变量不存在时返回 **`false`** ，当过滤失败时返回
+**`null`** 。
 
 ### 范例
 
@@ -221,10 +221,10 @@ This will result in no filtering taking place by default.
 
 ### 返回值
 
-如果成功的话返回所请求的变量。如果过滤失败则返回 **`FALSE`**
-，如果`variable_name` 不存在的话则返回 **`NULL`** 。 如果标示
+如果成功的话返回所请求的变量。如果过滤失败则返回 **`false`**
+，如果`variable_name` 不存在的话则返回 **`null`** 。 如果标示
 **`FILTER_NULL_ON_FAILURE`** 被使用了，那么当变量不存在时返回
-**`FALSE`** ，当过滤失败时返回 **`NULL`** 。
+**`false`** ，当过滤失败时返回 **`null`** 。
 
 ### 范例
 
@@ -337,12 +337,12 @@ class="type">array</span>
 这个参数也可以是一个<a href="/filter/constants.html" class="link">filter constant</a>的整数。那么数组中的所有值都会被这个过滤器所过滤。
 
 `add_empty`  
-在返回值中添加 **`NULL`** 作为不存在的键。
+在返回值中添加 **`null`** 作为不存在的键。
 
 ### 返回值
 
-如果成功则返回一个包含所请求变量的数组，或者当失败时返回 **`FALSE`** 。
-一个数组的值如果过滤失败则为 **`FALSE`** ，或者为 **`NULL`**
+如果成功则返回一个包含所请求变量的数组，或者当失败时返回 **`false`** 。
+一个数组的值如果过滤失败则为 **`false`** ，或者为 **`null`**
 如果变量不存在的话。
 
 ### 范例
@@ -498,7 +498,7 @@ $var = filter_var('Doe, Jane Sue', FILTER_CALLBACK, array('options' => 'foo'));
 
 ### 返回值
 
-Returns the filtered data, or **`FALSE`** if the filter fails.
+Returns the filtered data, or **`false`** if the filter fails.
 
 ### 范例
 

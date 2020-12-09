@@ -164,7 +164,7 @@ SQLSRV extension. For more information about these options, see
 
 | 名字                          | 默认           | 可修改范围    | Changelog                  |
 |-------------------------------|----------------|---------------|----------------------------|
-| sqlsrv.WarningsReturnAsErrors | 1 (**`TRUE`**) | PHP\_INI\_ALL | Available since SQLSRV 1.0 |
+| sqlsrv.WarningsReturnAsErrors | 1 (**`true`**) | PHP\_INI\_ALL | Available since SQLSRV 1.0 |
 | sqlsrv.LogSubsystems          | 0              | PHP\_INI\_ALL | Available since SQLSRV 1.0 |
 | sqlsrv.LogSeverity            | 1              | PHP\_INI\_ALL | Available since SQLSRV 1.0 |
 
@@ -679,7 +679,7 @@ class="function">sqlsrv\_connect</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -766,7 +766,7 @@ The statement resource to be cancelled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -847,7 +847,7 @@ The connection about which information is returned.
 ### 返回值
 
 Returns an associative array with keys described in the table below.
-Returns **`FALSE`** otherwise.
+Returns **`false`** otherwise.
 
 | Key           | Description                                     |
 |---------------|-------------------------------------------------|
@@ -906,7 +906,7 @@ The connection to be closed.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -964,7 +964,7 @@ The connection on which the transaction is to be committed.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1049,13 +1049,13 @@ values:
 
 | Setting                | Options                                                                                                                                                                            |
 |------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WarningsReturnAsErrors | 1 (**`TRUE`**) or 0 (**`FALSE`**)                                                                                                                                                  |
+| WarningsReturnAsErrors | 1 (**`true`**) or 0 (**`false`**)                                                                                                                                                  |
 | LogSubsystems          | SQLSRV\_LOG\_SYSTEM\_ALL (-1) SQLSRV\_LOG\_SYSTEM\_CONN (2) SQLSRV\_LOG\_SYSTEM\_INIT (1) SQLSRV\_LOG\_SYSTEM\_OFF (0) SQLSRV\_LOG\_SYSTEM\_STMT (4) SQLSRV\_LOG\_SYSTEM\_UTIL (8) |
 | LogSeverity            | SQLSRV\_LOG\_SEVERITY\_ALL (-1) SQLSRV\_LOG\_SEVERITY\_ERROR (1) SQLSRV\_LOG\_SEVERITY\_NOTICE (4) SQLSRV\_LOG\_SEVERITY\_WARNING (2)                                              |
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1097,7 +1097,7 @@ complete list of supported keys, see
 ### 返回值
 
 A connection resource. If a connection cannot be successfully opened,
-**`FALSE`** is returned.
+**`false`** is returned.
 
 ### 范例
 
@@ -1161,7 +1161,7 @@ By default, the <span class="function">sqlsrv\_connect</span> uses
 connection pooling to improve connection performance. To turn off
 connection pooling (i.e. force a new connection on each call), set the
 "ConnectionPooling" option in the $connectionOptions array to 0 (or
-**`FALSE`**). For more information, see
+**`false`**). For more information, see
 <a href="http://msdn.microsoft.com/en-us/library/cc644930.aspx" class="link external">» SQLSRV Connection Pooling</a>.
 
 The SQLSRV extension does not have a dedicated function for changing
@@ -1205,7 +1205,7 @@ SQLSRV\_ERR\_WARNINGS.
 
 If errors and/or warnings occurred on the last sqlsrv operation, an
 array of arrays containing error information is returned. If no errors
-and/or warnings occurred on the last sqlsrv operation, **`NULL`** is
+and/or warnings occurred on the last sqlsrv operation, **`null`** is
 returned. The following table describes the structure of the returned
 arrays:
 
@@ -1249,7 +1249,7 @@ if( $stmt === false ) {
 
 By default, warnings generated on a call to any SQLSRV function are
 treated as errors. This means that if a warning occurs on a call to a
-SQLSRV function, the function returns **`FALSE`**. However, warnings
+SQLSRV function, the function returns **`false`**. However, warnings
 that correspond to SQLSTATE values 01000, 01001, 01003, and 01S02 are
 never treated as errors. For information about changing this behavior,
 see <span class="function">sqlsrv\_configure</span> and the
@@ -1284,7 +1284,7 @@ class="function">sqlsrv\_prepare</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1391,8 +1391,8 @@ the first row in a result set has index 0.
 
 ### 返回值
 
-Returns an array on success, **`NULL`** if there are no more rows to
-return, and **`FALSE`** if an error occurs.
+Returns an array on success, **`null`** if there are no more rows to
+return, and **`false`** if an error occurs.
 
 ### 范例
 
@@ -1521,8 +1521,8 @@ the first row in a result set has index 0.
 
 ### 返回值
 
-Returns an object on success, **`NULL`** if there are no more rows to
-return, and **`FALSE`** if an error occurs or if the specified class
+Returns an object on success, **`null`** if there are no more rows to
+return, and **`false`** if an error occurs or if the specified class
 does not exist.
 
 ### 范例
@@ -1570,7 +1570,7 @@ the $className parameter:
 -   Field-property matching occurs regardless of access modifiers.
 -   Class property data types are ignored when applying a field value to
     a property.
--   If the class does not exist, the function returns **`FALSE`** and
+-   If the class does not exist, the function returns **`false`** and
     adds an error to the error collection.
 
 Regardless of whether the $className parameter is supplied, if a field
@@ -1632,8 +1632,8 @@ the first row in a result set has index 0.
 
 ### 返回值
 
-Returns **`TRUE`** if the next row of a result set was successfully
-retrieved, **`FALSE`** if an error occurs, and **`NULL`** if there are
+Returns **`true`** if the next row of a result set was successfully
+retrieved, **`false`** if an error occurs, and **`null`** if there are
 no more rows in the result set.
 
 ### 范例
@@ -1708,16 +1708,16 @@ The statement resource for which metadata is returned.
 
 ### 返回值
 
-Returns an array of arrays on success. Otherwise, **`FALSE`** is
+Returns an array of arrays on success. Otherwise, **`false`** is
 returned. Each returned array is described by the following table:
 
 | Key       | Description                                                                                                                          |
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Name      | The name of the field.                                                                                                               |
 | Type      | The numeric value for the SQL type.                                                                                                  |
-| Size      | The number of characters for fields of character type, the number of bytes for fields of binary type, or **`NULL`** for other types. |
-| Precision | The precision for types of variable precision, **`NULL`** for other types.                                                           |
-| Scale     | The scale for types of variable scale, **`NULL`** for other types.                                                                   |
+| Size      | The number of characters for fields of character type, the number of bytes for fields of binary type, or **`null`** for other types. |
+| Precision | The precision for types of variable precision, **`null`** for other types.                                                           |
+| Scale     | The scale for types of variable scale, **`null`** for other types.                                                                   |
 | Nullable  | An enumeration indicating whether the column is nullable, not nullable, or if it is not known.                                       |
 
 For more information, see
@@ -1774,13 +1774,13 @@ execution is terminated and the statement is rolled back.
 ### 参数
 
 `stmt`  
-The statement for which resources are freed. Note that **`NULL`** is a
+The statement for which resources are freed. Note that **`null`** is a
 valid parameter value. This allows the function to be called multiple
 times in a script.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1848,7 +1848,7 @@ class="function">sqlsrv\_configure</span>.
 ### 返回值
 
 Returns the value of the specified setting. If an invalid setting is
-specified, **`FALSE`** is returned.
+specified, **`false`** is returned.
 
 ### 参见
 
@@ -1892,7 +1892,7 @@ in the Microsoft SQLSRV documentation.
 
 ### 返回值
 
-Returns data from the specified field on success. Returns **`FALSE`**
+Returns data from the specified field on success. Returns **`false`**
 otherwise.
 
 ### 范例
@@ -1963,7 +1963,7 @@ class="function">sqlsrv\_execute</span>.
 
 ### 返回值
 
-Returns **`TRUE`** if the specified statement has rows and **`FALSE`**
+Returns **`true`** if the specified statement has rows and **`false`**
 if the statement does not have rows or if an error occurred.
 
 ### 范例
@@ -2014,8 +2014,8 @@ The statement on which the next result is being called.
 
 ### 返回值
 
-Returns **`TRUE`** if the next result was successfully retrieved,
-**`FALSE`** if an error occurred, and **`NULL`** if there are no more
+Returns **`true`** if the next result was successfully retrieved,
+**`false`** if an error occurred, and **`null`** if there are no more
 results to retrieve.
 
 ### 范例
@@ -2084,7 +2084,7 @@ before or after statement execution.
 
 ### 返回值
 
-Returns the number of fields on success. Returns **`FALSE`** otherwise.
+Returns the number of fields on success. Returns **`false`** otherwise.
 
 ### 范例
 
@@ -2153,9 +2153,9 @@ in the Microsoft SQLSRV documentation.
 
 ### 返回值
 
-Returns the number of rows retrieved on success and **`FALSE`** if an
+Returns the number of rows retrieved on success and **`false`** if an
 error occurred. If a forward cursor (the default) or dynamic cursor is
-used, **`FALSE`** is returned.
+used, **`false`** is returned.
 
 ### 范例
 
@@ -2239,12 +2239,12 @@ described in the following table:
 | Key                    | Values                                                                                              | Description                                                                                                                                                                                                                                              |
 |------------------------|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | QueryTimeout           | A positive integer value.                                                                           | Sets the query timeout in seconds. By default, the driver will wait indefinitely for results.                                                                                                                                                            |
-| SendStreamParamsAtExec | **`TRUE`** or **`FALSE`** (the default is **`TRUE`**)                                               | Configures the driver to send all stream data at execution (**`TRUE`**), or to send stream data in chunks (**`FALSE`**). By default, the value is set to **`TRUE`**. For more information, see <span class="function">sqlsrv\_send\_stream\_data</span>. |
+| SendStreamParamsAtExec | **`true`** or **`false`** (the default is **`true`**)                                               | Configures the driver to send all stream data at execution (**`true`**), or to send stream data in chunks (**`false`**). By default, the value is set to **`true`**. For more information, see <span class="function">sqlsrv\_send\_stream\_data</span>. |
 | Scrollable             | SQLSRV\_CURSOR\_FORWARD, SQLSRV\_CURSOR\_STATIC, SQLSRV\_CURSOR\_DYNAMIC, or SQLSRV\_CURSOR\_KEYSET | See <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a> in the Microsoft SQLSRV documentation.                                                                       |
 
 ### 返回值
 
-Returns a statement resource on success and **`FALSE`** if an error
+Returns a statement resource on success and **`false`** if an error
 occurred.
 
 ### 范例
@@ -2356,12 +2356,12 @@ described in the following table:
 | Key                    | Values                                                                                              | Description                                                                                                                                                                                                                                              |
 |------------------------|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | QueryTimeout           | A positive integer value.                                                                           | Sets the query timeout in seconds. By default, the driver will wait indefinitely for results.                                                                                                                                                            |
-| SendStreamParamsAtExec | **`TRUE`** or **`FALSE`** (the default is **`TRUE`**)                                               | Configures the driver to send all stream data at execution (**`TRUE`**), or to send stream data in chunks (**`FALSE`**). By default, the value is set to **`TRUE`**. For more information, see <span class="function">sqlsrv\_send\_stream\_data</span>. |
+| SendStreamParamsAtExec | **`true`** or **`false`** (the default is **`true`**)                                               | Configures the driver to send all stream data at execution (**`true`**), or to send stream data in chunks (**`false`**). By default, the value is set to **`true`**. For more information, see <span class="function">sqlsrv\_send\_stream\_data</span>. |
 | Scrollable             | SQLSRV\_CURSOR\_FORWARD, SQLSRV\_CURSOR\_STATIC, SQLSRV\_CURSOR\_DYNAMIC, or SQLSRV\_CURSOR\_KEYSET | See <a href="http://msdn.microsoft.com/en-us/library/ee376927.aspx" class="link external">» Specifying a Cursor Type and Selecting Rows</a> in the Microsoft SQLSRV documentation.                                                                       |
 
 ### 返回值
 
-Returns a statement resource on success and **`FALSE`** if an error
+Returns a statement resource on success and **`false`** if an error
 occurred.
 
 ### 范例
@@ -2424,7 +2424,7 @@ class="function">sqlsrv\_connect</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2509,7 +2509,7 @@ returned.
 Returns the number of rows affected by the last INSERT, UPDATE, or
 DELETE query. If no rows were affected, 0 is returned. If the number of
 affected rows cannot be determined, -1 is returned. If an error
-occurred, **`FALSE`** is returned.
+occurred, **`false`** is returned.
 
 ### 范例
 
@@ -2569,7 +2569,7 @@ class="function">sqlsrv\_execute</span>.
 
 ### 返回值
 
-Returns **`TRUE`** if there is more data to send and **`FALSE`** if
+Returns **`true`** if there is more data to send and **`false`** if
 there is not.
 
 ### 范例

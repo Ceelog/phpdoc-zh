@@ -17,7 +17,7 @@ Returns a string description of the last connect error.
 
 ### 返回值
 
-A string that describes the error, or **`NULL`** if no error occurred.
+A string that describes the error, or **`null`** if no error occurred.
 
 ### 范例
 

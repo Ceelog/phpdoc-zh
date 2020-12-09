@@ -12,7 +12,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 初始化 Error。
 

@@ -76,7 +76,7 @@ class="methodparam">void</span> )
 class="type"><span class="type">string</span><span
 class="type">array</span></span> `$key`</span> \[, <span
 class="methodparam"><span class="type">int</span> `&$cas`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">\_\_get</span> ( <span
@@ -145,7 +145,7 @@ expire time
 
 ### 返回值
 
-<span class="type">bool</span>, **`TRUE`** on success, **`FALSE`** on
+<span class="type">bool</span>, **`true`** on success, **`false`** on
 failure
 
 > **Note**:
@@ -262,7 +262,7 @@ class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">array</span></span>
 `$key`</span> \[, <span class="methodparam"><span
 class="type">int</span> `&$cas`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Retrieve values from cache
 
@@ -273,7 +273,7 @@ Retrieve values from cache
 class="type">array</span> of multiple keys.
 
 `cas`  
-if not **`NULL`**, it will be set to the retrieved item's cas.
+if not **`null`**, it will be set to the retrieved item's cas.
 
 ### 返回值
 
@@ -299,7 +299,7 @@ Retrieve values from cache
 
 ### 返回值
 
-mixed on success, **`NULL`** on failure
+mixed on success, **`null`** on failure
 
 Yac::info
 =========

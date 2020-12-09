@@ -28,7 +28,7 @@
     -   [func\_num\_args](/ref/funchand.html#func_num_args) — Returns
         the number of arguments passed to the function
     -   [function\_exists](/ref/funchand.html#function_exists) —
-        如果给定的函数已经被定义就返回 TRUE
+        如果给定的函数已经被定义就返回 true
     -   [get\_defined\_functions](/ref/funchand.html#get_defined_functions)
         — 返回所有已定义函数的数组
     -   [register\_shutdown\_function](/ref/funchand.html#register_shutdown_function)

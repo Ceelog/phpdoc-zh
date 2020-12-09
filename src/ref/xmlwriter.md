@@ -33,7 +33,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -83,7 +83,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -131,7 +131,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -179,7 +179,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -226,7 +226,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -274,7 +274,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -322,7 +322,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -376,7 +376,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -418,7 +418,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -466,7 +466,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -495,7 +495,7 @@ Flush current buffer
 class="type">string</span><span class="type">int</span></span> <span
 class="methodname">XMLWriter::flush</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$empty`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 过程化风格
 
@@ -504,7 +504,7 @@ class="type">int</span></span> <span
 class="methodname">xmlwriter\_flush</span> ( <span
 class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$empty`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$empty`<span class="initializer"> = **`true`**</span></span> \] )
 
 Flushes the current buffer.
 
@@ -517,7 +517,7 @@ class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
 `empty`  
-Whether to empty the buffer or not. Default is **`TRUE`**.
+Whether to empty the buffer or not. Default is **`true`**.
 
 ### 返回值
 
@@ -530,7 +530,7 @@ return the number of written bytes.
 | 版本  | 说明                                                                                                                 |
 |-------|----------------------------------------------------------------------------------------------------------------------|
 | 8.0.0 | 现在 `writer` 需要 <span class="classname">XMLWriter</span> 实例， 之前需要的是 <span class="type">resource</span>。 |
-| 8.0.0 | This function can no longer return **`FALSE`**.                                                                      |
+| 8.0.0 | This function can no longer return **`false`**.                                                                      |
 
 XMLWriter::fullEndElement
 =========================
@@ -568,7 +568,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -610,11 +610,11 @@ string output.
 
 ### 返回值
 
-面向对象风格: 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+面向对象风格: 成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 过程化风格: Returns a new <span class="classname">XMLWriter</span> for
 later use with the xmlwriter functions on success, 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 更新日志
 
@@ -659,11 +659,11 @@ The URI of the resource for the output.
 
 ### 返回值
 
-面向对象风格: 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+面向对象风格: 成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 过程化风格: Returns a new <span class="classname">XMLWriter</span>
 instance for later use with the xmlwriter functions on success,
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -711,7 +711,7 @@ Returns current buffer
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">XMLWriter::outputMemory</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$flush`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 过程化风格
 
@@ -719,7 +719,7 @@ class="initializer"> = **`TRUE`**</span></span> \] )
 class="methodname">xmlwriter\_output\_memory</span> ( <span
 class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$flush`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$flush`<span class="initializer"> = **`true`**</span></span> \] )
 
 Returns the current buffer.
 
@@ -732,7 +732,7 @@ class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
 `flush`  
-Whether to flush the output buffer or not. Default is **`TRUE`**.
+Whether to flush the output buffer or not. Default is **`true`**.
 
 ### 返回值
 
@@ -789,7 +789,7 @@ The indentation string.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -846,7 +846,7 @@ Whether indentation is enabled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -946,12 +946,12 @@ The namespace prefix.
 The attribute name.
 
 `namespace`  
-The namespace URI. If `namespace` is **`NULL`**, the namespace
+The namespace URI. If `namespace` is **`null`**, the namespace
 declaration will be omitted.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1006,7 +1006,7 @@ The attribute name.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1079,7 +1079,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1127,7 +1127,7 @@ class="function">xmlwriter\_open\_memory</span> 的调用。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1159,10 +1159,10 @@ class="type">string</span><span class="type">null</span></span>
 `$version`<span class="initializer"> = "1.0"</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$standalone`<span class="initializer"> = **`NULL`**</span></span>
+`$standalone`<span class="initializer"> = **`null`**</span></span>
 \]\]\] )
 
 过程化风格
@@ -1175,10 +1175,10 @@ class="type">string</span><span class="type">null</span></span>
 `$version`<span class="initializer"> = "1.0"</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$standalone`<span class="initializer"> = **`NULL`**</span></span>
+`$standalone`<span class="initializer"> = **`null`**</span></span>
 \]\]\] )
 
 Starts a document.
@@ -1202,7 +1202,7 @@ The encoding of the document as part of the XML declaration.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1253,7 +1253,7 @@ The attribute list name.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1306,7 +1306,7 @@ The qualified name of the document type to create.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1363,7 +1363,7 @@ The name of the entity.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1394,10 +1394,10 @@ class="methodparam"><span class="type">string</span>
 `$qualifiedName`</span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$publicId`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$systemId`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 过程化风格
 
@@ -1408,10 +1408,10 @@ class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
 `$qualifiedName`</span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$publicId`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$systemId`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 Starts a DTD.
 
@@ -1434,7 +1434,7 @@ The external subset system identifier.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1493,19 +1493,19 @@ class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
 `prefix`  
-The namespace prefix. If `prefix` is **`NULL`**, the namespace will be
+The namespace prefix. If `prefix` is **`null`**, the namespace will be
 omitted.
 
 `name`  
 The element name.
 
 `namespace`  
-The namespace URI. If `namespace` is **`NULL`**, the namespace
+The namespace URI. If `namespace` is **`null`**, the namespace
 declaration will be omitted.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1557,7 +1557,7 @@ The element name.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1609,7 +1609,7 @@ The target of the processing instruction.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1666,7 +1666,7 @@ has to be used.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1722,14 +1722,14 @@ class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
 `prefix`  
-The namespace prefix. If `prefix` is **`NULL`**, the namespace will be
+The namespace prefix. If `prefix` is **`null`**, the namespace will be
 omitted.
 
 `name`  
 The attribute name.
 
 `namespace`  
-The namespace URI. If `namespace` is **`NULL`**, the namespace
+The namespace URI. If `namespace` is **`null`**, the namespace
 declaration will be omitted.
 
 `value`  
@@ -1737,7 +1737,7 @@ The attribute value.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1797,7 +1797,7 @@ The value of the attribute.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1878,7 +1878,7 @@ The contents of the CDATA.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1965,7 +1965,7 @@ The contents of the comment.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -2023,7 +2023,7 @@ The content of the DTD attribute list.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -2081,7 +2081,7 @@ The content of the element.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -2112,16 +2112,16 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$content`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$isParam`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$publicId`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$systemId`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$notationData`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\]\] )
 
 过程化风格
 
@@ -2132,16 +2132,16 @@ class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
 `$name`</span> , <span class="methodparam"><span
 class="type">string</span> `$content`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$isParam`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$publicId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$publicId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$systemId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$systemId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$notationData`<span class="initializer"> = **`NULL`**</span></span>
+`$notationData`<span class="initializer"> = **`null`**</span></span>
 \]\]\]\] )
 
 Writes a full DTD entity.
@@ -2162,7 +2162,7 @@ The content of the entity.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -2193,13 +2193,13 @@ Write full DTD tag
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$publicId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$publicId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$systemId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$systemId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$content`<span class="initializer"> = **`NULL`**</span></span> \]\]\] )
+`$content`<span class="initializer"> = **`null`**</span></span> \]\]\] )
 
 过程化风格
 
@@ -2209,13 +2209,13 @@ class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$name`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$publicId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$publicId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$systemId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$systemId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$content`<span class="initializer"> = **`NULL`**</span></span> \]\]\] )
+`$content`<span class="initializer"> = **`null`**</span></span> \]\]\] )
 
 Writes a full DTD.
 
@@ -2241,7 +2241,7 @@ The content of the DTD.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -2277,7 +2277,7 @@ class="type">string</span><span class="type">null</span></span>
 `$namespace`</span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$content`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 过程化风格
 
@@ -2293,7 +2293,7 @@ class="type">string</span><span class="type">null</span></span>
 `$namespace`</span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$content`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Writes a full namespaced element tag.
 
@@ -2306,14 +2306,14 @@ class="function">xmlwriter\_open\_uri</span> 或 <span
 class="function">xmlwriter\_open\_memory</span> 的调用。
 
 `prefix`  
-The namespace prefix. If `prefix` is **`NULL`**, the namespace will be
+The namespace prefix. If `prefix` is **`null`**, the namespace will be
 omitted.
 
 `name`  
 The element name.
 
 `namespace`  
-The namespace URI. If `namespace` is **`NULL`**, the namespace
+The namespace URI. If `namespace` is **`null`**, the namespace
 declaration will be omitted.
 
 `content`  
@@ -2321,7 +2321,7 @@ The element contents.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -2352,7 +2352,7 @@ Write full element tag
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$content`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$content`<span class="initializer"> = **`null`**</span></span> \] )
 
 过程化风格
 
@@ -2362,7 +2362,7 @@ class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$name`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$content`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$content`<span class="initializer"> = **`null`**</span></span> \] )
 
 Writes a full element tag.
 
@@ -2382,7 +2382,7 @@ The element contents.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -2441,7 +2441,7 @@ The content of the processing instruction.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -2493,7 +2493,7 @@ The text string to write.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 

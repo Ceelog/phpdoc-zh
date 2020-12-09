@@ -5,14 +5,14 @@ Although most existing PHP 5 code should work without changes, you
 should pay attention to the following backward incompatible changes:
 
 -   <span class="simpara"> <span class="function">getrusage</span>
-    returns **`NULL`** when passed incompatible arguments as of PHP
+    returns **`null`** when passed incompatible arguments as of PHP
     5.2.1. </span>
 -   <span class="simpara"> <span
     class="function">ZipArchive::setCommentName</span> returns
-    **`TRUE`** on success as of PHP 5.2.1. </span>
+    **`true`** on success as of PHP 5.2.1. </span>
 -   <span class="simpara"> <span
     class="function">ZipArchive::setCommentIndex</span> returns
-    **`TRUE`** on success as of PHP 5.2.1. </span>
+    **`true`** on success as of PHP 5.2.1. </span>
 -   <span class="simpara"> <span
     class="function">SplFileObject::getFilename</span> returns the
     filename, not relative/path/to/file, as of PHP 5.2.1. </span>
@@ -33,7 +33,7 @@ should pay attention to the following backward incompatible changes:
 -   <span class="simpara"> Added a warning when performing modulus 0
     operations </span> <span class="simpara"> In earlier versions of
     PHP, performing integer % 0 did not emit any warning messages,
-    instead returning an unexpected return value of **`FALSE`**. As of
+    instead returning an unexpected return value of **`false`**. As of
     PHP 5.2.0, this operation will emit an **`E_WARNING`**, as is the
     case in all other instances where division by zero is performed.
     </span>
@@ -128,4 +128,4 @@ should pay attention to the following backward incompatible changes:
     class="simpara"> In version 5.2.4 a security fix caused a regression
     for patterns of the form "/foo/\*/bar/\*". Since version 5.2.5
     instead of raising a warning the *glob()* function will return
-    **`FALSE`** when *openbase\_dir* restrictions are violated. </span>
+    **`false`** when *openbase\_dir* restrictions are violated. </span>

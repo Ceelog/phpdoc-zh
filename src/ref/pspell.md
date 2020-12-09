@@ -27,7 +27,7 @@ The added word.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -77,7 +77,7 @@ The added word.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 pspell\_check
 =============
@@ -104,7 +104,7 @@ The tested word.
 
 ### 返回值
 
-Returns **`TRUE`** if the spelling is correct, **`FALSE`** if not.
+Returns **`true`** if the spelling is correct, **`false`** if not.
 
 ### 范例
 
@@ -144,7 +144,7 @@ class="function">pspell\_save\_wordlist</span>, nothing happens.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -219,7 +219,7 @@ untested, so be careful when using.
 
 ### 返回值
 
-Returns a pspell config identifier, or **`FALSE`** on error.
+Returns a pspell config identifier, or **`false`** on error.
 
 ### 范例
 
@@ -253,7 +253,7 @@ class="methodparam"><span class="type">int</span> `$config`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 pspell\_config\_dict\_dir
 =========================
@@ -274,7 +274,7 @@ class="methodparam"><span class="type">int</span> `$config`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 pspell\_config\_ignore
 ======================
@@ -302,7 +302,7 @@ Words less than `min_length` characters will be skipped.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -351,7 +351,7 @@ are several modes available:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -399,7 +399,7 @@ The file should be writable by whoever PHP runs as (e.g. nobody).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -455,7 +455,7 @@ The file should be writable by whoever PHP runs as (e.g. nobody).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -507,12 +507,12 @@ class="function">pspell\_new\_config</span>.
 `config`  
 
 `allow`  
-**`TRUE`** if run-together words should be treated as legal compounds,
-**`FALSE`** otherwise.
+**`true`** if run-together words should be treated as legal compounds,
+**`false`** otherwise.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -559,11 +559,11 @@ class="function">pspell\_new\_config</span>.
 `config`  
 
 `save`  
-**`TRUE`** if replacement pairs should be saved, **`FALSE`** otherwise.
+**`true`** if replacement pairs should be saved, **`false`** otherwise.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -602,7 +602,7 @@ created.
 ### 返回值
 
 Returns a dictionary link identifier on success, 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -795,7 +795,7 @@ only one of them.
 ### 返回值
 
 Returns the dictionary link identifier on success 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -832,7 +832,7 @@ class="function">pspell\_new\_personal</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -896,7 +896,7 @@ The fixed spelling for the `misspelled` word.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

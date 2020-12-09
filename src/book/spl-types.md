@@ -36,7 +36,7 @@ Parent class for all SPL types.
 /\* Constants \*/
 
 <span class="modifier">const</span> <span class="type">NULL</span>
-`SplType::__default` <span class="initializer"> = **`NULL`**</span> ;
+`SplType::__default` <span class="initializer"> = **`null`**</span> ;
 
 /\* 方法 \*/
 
@@ -213,14 +213,14 @@ natively in PHP.
 /\* Constants \*/
 
 <span class="modifier">const</span> <span class="type">NULL</span>
-`SplEnum::__default` <span class="initializer"> = **`NULL`**</span> ;
+`SplEnum::__default` <span class="initializer"> = **`null`**</span> ;
 
 /\* 方法 \*/
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">getConstList</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$include_default`<span class="initializer"> = **`FALSE`**</span></span>
+`$include_default`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 /\* 继承的方法 \*/
@@ -286,7 +286,7 @@ Returns all consts (possible values) as an array
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">SplEnum::getConstList</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$include_default`<span class="initializer"> = **`FALSE`**</span></span>
+`$include_default`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 **Warning**
@@ -338,20 +338,20 @@ The SplBool class is used to enforce strong typing of the bool type.
 /\* Constants \*/
 
 <span class="modifier">const</span> <span class="type">bool</span>
-`SplBool::__default` <span class="initializer"> = **`FALSE`**</span> ;
+`SplBool::__default` <span class="initializer"> = **`false`**</span> ;
 
 <span class="modifier">const</span> <span class="type">bool</span>
-`SplBool::false` <span class="initializer"> = **`FALSE`**</span> ;
+`SplBool::false` <span class="initializer"> = **`false`**</span> ;
 
 <span class="modifier">const</span> <span class="type">bool</span>
-`SplBool::true` <span class="initializer"> = **`TRUE`**</span> ;
+`SplBool::true` <span class="initializer"> = **`true`**</span> ;
 
 /\* 继承的方法 \*/
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">SplEnum::getConstList</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$include_default`<span class="initializer"> = **`FALSE`**</span></span>
+`$include_default`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 }

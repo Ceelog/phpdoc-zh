@@ -66,7 +66,7 @@ the `permissions` will be ignored.
 
 Returns <span class="classname">SysvMessageQueue</span> instance that
 can be used to access the System V message queue, 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 更新日志
 
@@ -102,7 +102,7 @@ Queue key.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -127,11 +127,11 @@ class="methodparam"><span class="type">int</span>
 `$max_message_size`</span> , <span class="methodparam"><span
 class="type">mixed</span> `&$message`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$unserialize`<span
-class="initializer"> = **`TRUE`**</span></span> \[, <span
+class="initializer"> = **`true`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `&$error_code`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="function">msg\_receive</span> will receive the first
 message from the specified `queue` of the type specified by
@@ -166,13 +166,13 @@ The received message will be stored in `message`, unless there were
 errors receiving the message.
 
 `unserialize`  
-If set to **`TRUE`**, the message is treated as though it was serialized
+If set to **`true`**, the message is treated as though it was serialized
 using the same mechanism as the session module. The message will be
 unserialized and then returned to your script. This allows you to easily
 receive arrays or complex object structures from other PHP scripts, or
 if you are using the WDDX serializer, from any WDDX compatible source.
 
-If `unserialize` is **`FALSE`**, the message will be returned as a
+If `unserialize` is **`false`**, the message will be returned as a
 binary-safe string.
 
 `flags`  
@@ -192,7 +192,7 @@ value of the system errno variable.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 Upon successful completion the message queue data structure is updated
 as follows: *msg\_lrpid* is set to the process-ID of the calling
@@ -236,7 +236,7 @@ The message queue.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -267,11 +267,11 @@ class="type">string</span><span class="type">int</span><span
 class="type">float</span><span class="type">bool</span></span>
 `$message`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$serialize`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
+**`true`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$blocking`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
+**`true`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `&$error_code`<span class="initializer"> =
-**`NULL`**</span></span> \]\]\] )
+**`null`**</span></span> \]\]\] )
 
 <span class="function">msg\_send</span> sends a `message` of type
 `message_type` (which MUST be greater than 0) to the message queue
@@ -290,14 +290,14 @@ The body of the message.
 
 > **Note**:
 >
-> If `serialize` set to **`FALSE`** is supplied, MUST be of type: <span
+> If `serialize` set to **`false`** is supplied, MUST be of type: <span
 > class="type">string</span>, <span class="type">int</span>, <span
 > class="type">float</span> or <span class="type">bool</span>. In other
 > case a warning will be issued.
 
 `serialize`  
 The optional `serialize` controls how the `message` is sent. `serialize`
-defaults to **`TRUE`** which means that the `message` is serialized
+defaults to **`true`** which means that the `message` is serialized
 using the same mechanism as the session module before being sent to the
 queue. This allows complex arrays and objects to be sent to other PHP
 scripts, or if you are using the WDDX serializer, to any WDDX compatible
@@ -308,8 +308,8 @@ If the message is too large to fit in the queue, your script will wait
 until another process reads messages from the queue and frees enough
 space for your message to be sent. This is called blocking; you can
 prevent blocking by setting the optional `blocking` parameter to
-**`FALSE`**, in which case <span class="function">msg\_send</span> will
-immediately return **`FALSE`** if the message is too big for the queue,
+**`false`**, in which case <span class="function">msg\_send</span> will
+immediately return **`false`** if the message is too big for the queue,
 and set the optional `error_code` to **`MSG_EAGAIN`**, indicating that
 you should try to send your message again a little later on.
 
@@ -319,7 +319,7 @@ of the system errno variable.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 Upon successful completion the message queue data structure is updated
 as follows: `msg_lspid` is set to the process-ID of the calling process,
@@ -373,7 +373,7 @@ you require in the `data` array.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -429,7 +429,7 @@ following meanings:
 | *msg\_lspid*     | The pid of the process that sent the last message to the queue.                                                                        |
 | *msg\_lrpid*     | The pid of the process that received the last message from the queue.                                                                  |
 
-Returns **`FALSE`** on failure.
+Returns **`false`** on failure.
 
 ### 更新日志
 
@@ -455,7 +455,7 @@ Acquire a semaphore
 class="methodname">sem\_acquire</span> ( <span class="methodparam"><span
 class="type">SysvSemaphore</span> `$semaphore`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$non_blocking`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="function">sem\_acquire</span> by default blocks (if
 necessary) until the semaphore can be acquired. A process attempting to
@@ -480,7 +480,7 @@ a semaphore cannot be immediately acquired.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -509,7 +509,7 @@ class="initializer"> = 1</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$permissions`<span
 class="initializer"> = 0666</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$auto_release`<span
-class="initializer"> = **`TRUE`**</span></span> \]\]\] )
+class="initializer"> = **`true`**</span></span> \]\]\] )
 
 <span class="function">sem\_get</span> returns an id that can be used to
 access the System V semaphore with the given `key`.
@@ -540,7 +540,7 @@ shutdown.
 
 ### 返回值
 
-Returns a positive semaphore identifier on success, or **`FALSE`** on
+Returns a positive semaphore identifier on success, or **`false`** on
 error.
 
 ### 更新日志
@@ -591,7 +591,7 @@ A Semaphore as returned by <span class="function">sem\_get</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -626,7 +626,7 @@ A semaphore as returned by <span class="function">sem\_get</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -653,7 +653,7 @@ class="methodname">shm\_attach</span> ( <span class="methodparam"><span
 class="type">int</span> `$key`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$size`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+`$size`<span class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$permissions`<span
 class="initializer"> = 0666</span></span> \]\] )
 
@@ -683,7 +683,7 @@ The optional permission bits. Default to 0666.
 ### 返回值
 
 Returns a <span class="classname">SysvSharedMemory</span> instance on
-success, 或者在失败时返回 **`FALSE`**.
+success, 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -721,7 +721,7 @@ class="function">shm\_attach</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -802,7 +802,7 @@ The variable key.
 
 ### 返回值
 
-Returns **`TRUE`** if the entry exists, otherwise **`FALSE`**
+Returns **`true`** if the entry exists, otherwise **`false`**
 
 ### 更新日志
 
@@ -854,7 +854,7 @@ cannot be serialized.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -893,7 +893,7 @@ The variable key.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -927,7 +927,7 @@ class="function">shm\_attach</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 

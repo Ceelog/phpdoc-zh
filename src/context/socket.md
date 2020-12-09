@@ -58,7 +58,7 @@ Enables sending and receiving data to/from broadcast addresses.
 > class="function">stream\_socket\_server</span>.
 
 `tcp_nodelay`  
-Setting this option to **`TRUE`** will set *SOL\_TCP,NO\_DELAY=1*
+Setting this option to **`true`** will set *SOL\_TCP,NO\_DELAY=1*
 appropriately, thus disabling the TCP Nagle algorithm.
 
 ### 更新日志

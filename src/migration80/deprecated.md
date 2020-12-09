@@ -24,7 +24,7 @@ PHP 8.0 废弃的功能
     ```
 
 -   Calling <span class="function">get\_defined\_functions</span> with
-    `exclude_disabled` explicitly set to **`FALSE`** is deprecated and
+    `exclude_disabled` explicitly set to **`false`** is deprecated and
     no longer has an effect. <span
     class="function">get\_defined\_functions</span> will never include
     disabled functions.
@@ -117,7 +117,7 @@ needed to protect against XXE attacks.
 
 ### Standard Library
 
--   Sort comparison functions that return **`TRUE`** or **`FALSE`** will
+-   Sort comparison functions that return **`true`** or **`false`** will
     now throw a deprecation warning, and should be replaced with an
     implementation that returns an integer less than, equal to, or
     greater than zero.
@@ -164,7 +164,7 @@ needed to protect against XXE attacks.
 -   <span class="methodname">ReflectionFunction::isDisabled</span> is
     deprecated, as it is no longer possible to create a <span
     class="classname">ReflectionFunction</span> for a disabled function.
-    This method now always returns **`FALSE`**.
+    This method now always returns **`false`**.
 
 -   <span class="methodname">ReflectionParameter::getClass</span>, <span
     class="methodname">ReflectionParameter::isArray</span>, and <span

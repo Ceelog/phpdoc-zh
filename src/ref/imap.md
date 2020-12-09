@@ -88,7 +88,7 @@ these messages be passed to the user.
 ### 返回值
 
 Returns an array of all of the IMAP alert messages generated or
-**`FALSE`** if no alert messages are available.
+**`false`** if no alert messages are available.
 
 ### 参见
 
@@ -108,9 +108,9 @@ class="methodparam"><span class="type">string</span> `$mailbox`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$message`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$options`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$internal_date`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 Appends a string `message` to the specified `mailbox`.
 
@@ -144,7 +144,7 @@ rfc2060 specifications for a date\_time value.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -347,7 +347,7 @@ Returns the information in an object with following properties:
 -   <span class="simpara"> **`Recent`** - number of recent messages in
     the mailbox </span>
 
-Returns **`FALSE`** on failure.
+Returns **`false`** on failure.
 
 ### 范例
 
@@ -420,7 +420,7 @@ The flags which you can unset are "\\\\Seen", "\\\\Answered",
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -454,7 +454,7 @@ class="function">imap\_expunge</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -502,7 +502,7 @@ disabled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -597,7 +597,7 @@ You can set the **`FT_UID`** which tells the function to treat the
 
 ### 返回值
 
-Returns **`TRUE`**.
+Returns **`true`**.
 
 ### 范例
 
@@ -672,7 +672,7 @@ disabled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -701,7 +701,7 @@ stack is subsequently cleared.
 
 This function returns an array of all of the IMAP error messages
 generated since the last <span class="function">imap\_errors</span>
-call, or the beginning of the page. Returns **`FALSE`** if no error
+call, or the beginning of the page. Returns **`false`** if no error
 messages are available.
 
 ### 参见
@@ -733,7 +733,7 @@ class="function">imap\_setflag\_full</span>.
 
 ### 返回值
 
-Returns **`TRUE`**.
+Returns **`true`**.
 
 imap\_fetch\_overview
 =====================
@@ -1010,25 +1010,25 @@ tells the function to treat the `msg_number` argument as a *UID*.
 ### 返回值
 
 Returns an object with properties listed in the table below,
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 |               |                                                                                                                                                               |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | type          | Primary body type                                                                                                                                             |
 | encoding      | Body transfer encoding                                                                                                                                        |
-| ifsubtype     | **`TRUE`** if there is a subtype string                                                                                                                       |
+| ifsubtype     | **`true`** if there is a subtype string                                                                                                                       |
 | subtype       | MIME subtype                                                                                                                                                  |
-| ifdescription | **`TRUE`** if there is a description string                                                                                                                   |
+| ifdescription | **`true`** if there is a description string                                                                                                                   |
 | description   | Content description string                                                                                                                                    |
-| ifid          | **`TRUE`** if there is an identification string                                                                                                               |
+| ifid          | **`true`** if there is an identification string                                                                                                               |
 | id            | Identification string                                                                                                                                         |
 | lines         | Number of lines                                                                                                                                               |
 | bytes         | Number of bytes                                                                                                                                               |
-| ifdisposition | **`TRUE`** if there is a disposition string                                                                                                                   |
+| ifdisposition | **`true`** if there is a disposition string                                                                                                                   |
 | disposition   | Disposition string                                                                                                                                            |
-| ifdparameters | **`TRUE`** if the `dparameters` array exists                                                                                                                  |
+| ifdparameters | **`true`** if the `dparameters` array exists                                                                                                                  |
 | dparameters   | An array of objects where each object has an *"attribute"* and a *"value"* property corresponding to the parameters on the *Content-disposition* MIME header. |
-| ifparameters  | **`TRUE`** if the parameters array exists                                                                                                                     |
+| ifparameters  | **`true`** if the parameters array exists                                                                                                                     |
 | parameters    | An array of objects where each object has an *"attribute"* and a *"value"* property.                                                                          |
 | parts         | An array of objects identical in structure to the top-level object, each of which corresponds to a MIME body part.                                            |
 
@@ -1093,7 +1093,7 @@ following constants: **`IMAP_GC_ELT`** (message cache elements),
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1141,7 +1141,7 @@ the mailbox you wish to retrieve information about.
 Returns an array with integer values limit and usage for the given
 mailbox. The value of limit represents the total amount of space allowed
 for this mailbox. The usage value represents the mailboxes current level
-of capacity. Will return **`FALSE`** in the case of failure.
+of capacity. Will return **`false`** in the case of failure.
 
 As of PHP 4.3, the function more properly reflects the functionality as
 dictated by the
@@ -1244,7 +1244,7 @@ Returns an array of integer values pertaining to the specified user
 mailbox. All values contain a key based upon the resource name, and a
 corresponding array with the usage and limit values within.
 
-This function will return **`FALSE`** in the case of call failure, and
+This function will return **`false`** in the case of call failure, and
 an array of information about the connection upon an un-parsable
 response from the server.
 
@@ -1541,7 +1541,7 @@ class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$subjectlength`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$defaulthost`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 Gets information about the given message number by reading its headers.
 
@@ -1565,7 +1565,7 @@ than or equal to zero.
 
 ### 返回值
 
-Returns **`FALSE`** on error or, if successful, the information in an
+Returns **`false`** on error or, if successful, the information in an
 object with following properties:
 
 -   <span class="simpara"> toaddress - full to: line, up to 1024
@@ -1683,7 +1683,7 @@ intervening errors, will return the same error.
 ### 返回值
 
 Returns the full text of the last IMAP error message that occurred on
-the current page. Returns **`FALSE`** if no error messages are
+the current page. Returns **`false`** if no error messages are
 available.
 
 ### 参见
@@ -1937,7 +1937,7 @@ are processed; these bodies constitute the bodies of the parts.
 ### 返回值
 
 Returns the MIME message as <span class="type">string</span>,
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -2024,7 +2024,7 @@ disabled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2074,7 +2074,7 @@ disabled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -2102,13 +2102,13 @@ class="methodparam"><span class="type">string</span> `$subject`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$message`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$additional_headers`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$cc`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$bcc`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$rpath`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\]\] )
 
 This function allows sending of emails with correct handling of Cc and
 Bcc receivers.
@@ -2144,7 +2144,7 @@ This is useful when using PHP as a mail client for multiple users.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2188,7 +2188,7 @@ Returns the information in an object with following properties:
 | Deleted | number of deleted messages             |
 | Size    | mailbox size                           |
 
-Returns **`FALSE`** on failure.
+Returns **`false`** on failure.
 
 ### 范例
 
@@ -2339,7 +2339,7 @@ A string encoded in modified UTF-7.
 
 ### 返回值
 
-Returns `in` converted to UTF-8, 或者在失败时返回 **`FALSE`**.
+Returns `in` converted to UTF-8, 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -2367,7 +2367,7 @@ Gets the number of messages in the current mailbox.
 ### 返回值
 
 Return the number of messages in the current mailbox, as an integer, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### 参见
 
@@ -2522,7 +2522,7 @@ or more connection parameters:
 
 ### 返回值
 
-Returns an IMAP stream on success or **`FALSE`** on error.
+Returns an IMAP stream on success or **`false`** on error.
 
 ### 范例
 
@@ -2611,7 +2611,7 @@ have inactivity timeout.
 
 ### 返回值
 
-Returns **`TRUE`** if the stream is still alive, **`FALSE`** otherwise.
+Returns **`true`** if the stream is still alive, **`false`** otherwise.
 
 ### 范例
 
@@ -2711,7 +2711,7 @@ disabled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2772,7 +2772,7 @@ Number of maximum connect attempts
 
 ### 返回值
 
-Returns **`TRUE`** if the stream is reopened, **`FALSE`** otherwise.
+Returns **`true`** if the stream is reopened, **`false`** otherwise.
 
 ### 范例
 
@@ -3005,7 +3005,7 @@ A bitmask with one or more of the following:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3044,7 +3044,7 @@ class="methodparam"><span class="type">string</span> `$criteria`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$options`<span class="initializer"> = SE\_FREE</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$charset`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 This function performs a search on the mailbox currently opened in the
 given IMAP stream.
@@ -3123,7 +3123,7 @@ MIME character set to use when searching strings.
 
 Returns an array of message numbers or UIDs.
 
-Return **`FALSE`** if it does not understand the search `criteria` or no
+Return **`false`** if it does not understand the search `criteria` or no
 messages have been found.
 
 ### 范例
@@ -3206,7 +3206,7 @@ The maximum size (in KB) for the `quota_root`
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3277,7 +3277,7 @@ The rights to give to the user. Passing an empty string will delete acl.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -3330,7 +3330,7 @@ A bit mask that may contain the single option:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3371,9 +3371,9 @@ class="methodparam"><span class="type">int</span> `$criteria`</span> ,
 class="type">int</span> `$options`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$search_criteria`<span class="initializer">
-= **`NULL`**</span></span> \[, <span class="methodparam"><span
+= **`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$charset`<span class="initializer"> =
-**`NULL`**</span></span> \]\]\] )
+**`null`**</span></span> \]\]\] )
 
 Gets and sorts message numbers by the given parameters.
 
@@ -3418,7 +3418,7 @@ MIME character set to use when sorting strings.
 ### 返回值
 
 Returns an array of message numbers sorted by the given parameters,
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 imap\_status
 ============
@@ -3530,7 +3530,7 @@ disabled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3561,7 +3561,7 @@ Gets a tree of a threaded message.
 ### 返回值
 
 <span class="function">imap\_thread</span> returns an associative array
-containing a tree of messages threaded by *REFERENCES*, or **`FALSE`**
+containing a tree of messages threaded by *REFERENCES*, or **`false`**
 on error.
 
 Every message in the current mailbox will be represented by three
@@ -3626,8 +3626,8 @@ The timeout, in seconds.
 
 ### 返回值
 
-If the `timeout` parameter is set, this function returns **`TRUE`** on
-success and **`FALSE`** on failure.
+If the `timeout` parameter is set, this function returns **`true`** on
+success and **`false`** on failure.
 
 If `timeout` is not provided or evaluates to -1, the current timeout
 value of `timeout_type` is returned as an integer.
@@ -3717,7 +3717,7 @@ The message number
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3755,7 +3755,7 @@ disabled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3788,7 +3788,7 @@ section 5.1.3 (original UTF-7 was defined in
 ### 返回值
 
 Returns a string that is encoded in ISO-8859-1 and consists of the same
-sequence of characters in `text`, or **`FALSE`** if `text` contains
+sequence of characters in `text`, or **`false`** if `text` contains
 invalid modified UTF-7 sequence or `text` contains a character that is
 not part of ISO-8859-1 character set.
 
@@ -3855,7 +3855,7 @@ A UTF-8 encoded string.
 
 ### 返回值
 
-Returns `in` converted to modified UTF-7, 或者在失败时返回 **`FALSE`**.
+Returns `in` converted to modified UTF-7, 或者在失败时返回 **`false`**.
 
 ### 参见
 

@@ -20,8 +20,8 @@ class="methodname">Error::\_\_construct</span> 的第三个参数）。
 ### 返回值
 
 如果有的话，返回先前的 <span
-class="classname">Throwable</span>，没有就返回 **`NULL`**。 or
-**`NULL`** otherwise.
+class="classname">Throwable</span>，没有就返回 **`null`**。 or
+**`null`** otherwise.
 
 ### 范例
 

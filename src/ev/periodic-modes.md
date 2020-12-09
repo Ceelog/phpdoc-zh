@@ -6,14 +6,14 @@ modes depending on the `offset` , `interval` and `reschedule_cb`
 parameters.
 
 1.  *Absolute timer* . In this mode `interval` = **`0`** ,
-    `reschedule_cb` = **`NULL`**. This time simply fires at the
+    `reschedule_cb` = **`null`**. This time simply fires at the
     wallclock time `offset` and doesn't repeat. It will not adjust when
     a time jump occurs, that is, if it is to be run at *January 1st
     2014* then it will run when the system time reaches or surpasses
     this time.
 
 2.  *Repeating interval timer* . In this mode `interval` \> **`0`** ,
-    `reschedule_cb` = **`NULL`**; the watcher will always be scheduled
+    `reschedule_cb` = **`null`**; the watcher will always be scheduled
     to timeout at the next `offset` + **`N`** \* `interval` time(for
     some integer **`N`** ) and then repeat, regardless of any time
     jumps.

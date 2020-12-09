@@ -7,7 +7,7 @@
 开启或关闭压缩功能。当开启的时候，item的值超过某个阈值（当前是100bytes）时，会首先对值进行压缩然后存储，并
 在获取该值时进行解压缩然后返回，使得压缩对应用层透明。
 
-类型: *boolean*, 默认: **`TRUE`**.
+类型: *boolean*, 默认: **`true`**.
 
 **`Memcached::OPT_SERIALIZER`**  
 指定对于非标量值进行序列化的序列化工具。可用的值有**`Memcached::SERIALIZER_PHP`**
@@ -86,28 +86,28 @@ Murmur元素key hash算法。
 >
 > 如果你要使用一致性hash算法强烈建议开启此选项，并且这个选项可能在未来的发布版中被设置为默认开启。
 
-类型: *boolean*, 默认: **`FALSE`**.
+类型: *boolean*, 默认: **`false`**.
 
 **`Memcached::OPT_BUFFER_WRITES`**  
 开启或关闭I/O缓存。开启I/O缓存会导致存储命令不实际发送而是存储到缓冲区中。任意的检索数据操作都会导致
 缓存中的数据被发送到远程服务端。退出连接或关闭连接也会导致缓存数据被发送到远程服务端。
 
-类型: *boolean*, 默认: **`FALSE`**.
+类型: *boolean*, 默认: **`false`**.
 
 **`Memcached::OPT_BINARY_PROTOCOL`**  
 开启使用二进制协议。请注意这个选项不能在一个打开的连接上进行切换。
 
-类型: *boolean*, 默认: **`FALSE`**.
+类型: *boolean*, 默认: **`false`**.
 
 **`Memcached::OPT_NO_BLOCK`**  
 开启或关闭异步I/O。这将使得存储函数传输速度最大化。
 
-类型: *boolean*, 默认: **`FALSE`**.
+类型: *boolean*, 默认: **`false`**.
 
 **`Memcached::OPT_TCP_NODELAY`**  
 开启或关闭已连接socket的无延迟特性（在某些幻境可能会带来速度上的提升）。
 
-类型: *boolean*, 默认: **`FALSE`**.
+类型: *boolean*, 默认: **`false`**.
 
 **`Memcached::OPT_SOCKET_SEND_SIZE`**  
 socket发送缓冲的最大值。
@@ -147,7 +147,7 @@ poll连接超时时间，单位毫秒。
 **`Memcached::OPT_CACHE_LOOKUPS`**  
 开启或禁用DNS查找缓存。
 
-类型: *boolean*, 默认: **`FALSE`**.
+类型: *boolean*, 默认: **`false`**.
 
 **`Memcached::OPT_SERVER_FAILURE_LIMIT`**  
 指定一个服务器连接的失败重试次数限制。在达到此数量的失败重连后此服务器将被从服务器池中移除。

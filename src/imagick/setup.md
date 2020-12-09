@@ -51,9 +51,9 @@ website.
 
 | 名字                                                                       | 默认        | 可修改范围       | 更新日志                      |
 |----------------------------------------------------------------------------|-------------|------------------|-------------------------------|
-| <a href="/imagick/setup.html#" class="link">imagick.locale_fix</a>         | **`FALSE`** | PHP\_INI\_ALL    | Available since Imagick 2.1.0 |
-| <a href="/imagick/setup.html#" class="link">imagick.progress_monitor</a>   | **`FALSE`** | PHP\_INI\_SYSTEM | Available since Imagick 2.2.2 |
-| <a href="/imagick/setup.html#" class="link">imagick.skip_version_check</a> | **`FALSE`** | PHP\_INI\_SYSTEM | Available since Imagick 3.3.0 |
+| <a href="/imagick/setup.html#" class="link">imagick.locale_fix</a>         | **`false`** | PHP\_INI\_ALL    | Available since Imagick 2.1.0 |
+| <a href="/imagick/setup.html#" class="link">imagick.progress_monitor</a>   | **`false`** | PHP\_INI\_SYSTEM | Available since Imagick 2.2.2 |
+| <a href="/imagick/setup.html#" class="link">imagick.skip_version_check</a> | **`false`** | PHP\_INI\_SYSTEM | Available since Imagick 3.3.0 |
 
 有关 PHP\_INI\_\* 样式的更多详情与定义，见
 <a href="/configuration/changes/modes.html" class="xref">配置可被设定范围</a>。

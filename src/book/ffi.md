@@ -170,17 +170,17 @@ class="modifier">static</span> <span class="type">FFI\\CData</span>
 <span class="methodname">new</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$type`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$owned`<span
-class="initializer"> = **`TRUE`**</span></span> \[, <span
+class="initializer"> = **`true`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$persistent`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span
 class="type">FFI\\CData</span> <span class="methodname">new</span> (
 <span class="methodparam"><span class="type">mixed</span> `$type`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$owned`<span class="initializer"> = **`TRUE`**</span></span> \[, <span
+`$owned`<span class="initializer"> = **`true`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$persistent`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">FFI</span> <span
@@ -603,18 +603,18 @@ class="modifier">static</span> <span class="type">FFI\\CData</span>
 <span class="methodname">FFI::new</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$type`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$owned`<span
-class="initializer"> = **`TRUE`**</span></span> \[, <span
+class="initializer"> = **`true`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$persistent`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span
 class="type">FFI\\CData</span> <span class="methodname">FFI::new</span>
 ( <span class="methodparam"><span class="type">mixed</span>
 `$type`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$owned`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
+**`true`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$persistent`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 Creates a native data structure of the given C type. If this method is
 called statically, it must only use predefined C type names (e.g. *int*,

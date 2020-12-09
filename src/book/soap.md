@@ -402,7 +402,7 @@ Returns the XML sent in the last SOAP request.
 >
 > This method works only if the <span
 > class="classname">SoapClient</span> object was created with the
-> *trace* option set to **`TRUE`**.
+> *trace* option set to **`true`**.
 
 ### 参数
 
@@ -449,7 +449,7 @@ Returns the SOAP headers from the last request.
 >
 > This function only works if the <span
 > class="classname">SoapClient</span> object was created with the
-> *trace* option set to **`TRUE`**.
+> *trace* option set to **`true`**.
 
 ### 参数
 
@@ -495,7 +495,7 @@ Returns the XML received in the last SOAP response.
 >
 > This method works only if the <span
 > class="classname">SoapClient</span> object was created with the
-> *trace* option set to **`TRUE`**.
+> *trace* option set to **`true`**.
 
 ### 参数
 
@@ -542,7 +542,7 @@ Returns the SOAP headers from the last response.
 >
 > This function only works if the <span
 > class="classname">SoapClient</span> object was created with the
-> *trace* option set to **`TRUE`**.
+> *trace* option set to **`true`**.
 
 ### 参数
 
@@ -760,11 +760,11 @@ Defines headers to be sent along with the SOAP requests.
 The headers to be set. It could be <span
 class="classname">SoapHeader</span> object or array of <span
 class="classname">SoapHeader</span> objects. If not specified or set to
-**`NULL`**, the headers will be deleted.
+**`null`**, the headers will be deleted.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -874,7 +874,7 @@ are returned, *\_\_soapCall* will return an associative array of named
 output parameters.
 
 On error, if the SoapClient object was constructed with the *exceptions*
-option set to **`FALSE`**, a SoapFault object will be returned.
+option set to **`false`**, a SoapFault object will be returned.
 
 ### 范例
 
@@ -930,7 +930,7 @@ objects in *WSDL* or *non-WSDL* mode.
 ### 参数
 
 `wsdl`  
-URI of the *WSDL* file or **`NULL`** if working in *non-WSDL* mode.
+URI of the *WSDL* file or **`null`** if working in *non-WSDL* mode.
 
 > **Note**:
 >
@@ -969,7 +969,7 @@ does not change the encoding of SOAP requests (it is always utf-8), but
 converts strings into it.
 
 The *trace* option enables tracing of request so faults can be
-backtraced. This defaults to **`FALSE`**
+backtraced. This defaults to **`false`**
 
 The *classmap* option can be used to map some WSDL types to PHP classes.
 This option must be an array with WSDL types as keys and names of PHP
@@ -1584,7 +1584,7 @@ class="classname">SoapServer</span> objects in WSDL or non-WSDL mode.
 
 `wsdl`  
 To use the SoapServer in WSDL mode, pass the URI of a WSDL file.
-Otherwise, pass **`NULL`** and set the *uri* option to the target
+Otherwise, pass **`null`** and set the *uri* option to the target
 namespace for the server.
 
 `options`  
@@ -1607,7 +1607,7 @@ There is also a *features* option which can be set to
 **`SOAP_WAIT_ONE_WAY_CALLS`**, **`SOAP_SINGLE_ELEMENT_ARRAYS`**,
 **`SOAP_USE_XSI_ARRAY_TYPE`**.
 
-The *send\_errors* option can be set to **`FALSE`** to sent a generic
+The *send\_errors* option can be set to **`false`** to sent a generic
 error message ("Internal error") instead of the specific error message
 sent otherwise.
 
@@ -1896,7 +1896,7 @@ class="methodparam"><span class="type">string</span> `$namespace`</span>
 `$name`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$mustunderstand`<span class="initializer"> = **`FALSE`**</span></span>
+`$mustunderstand`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$actor`</span> \]\]\] )
 
@@ -1934,7 +1934,7 @@ class="methodparam"><span class="type">string</span> `$namespace`</span>
 `$name`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$mustunderstand`<span class="initializer"> = **`FALSE`**</span></span>
+`$mustunderstand`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$actor`</span> \]\]\] )
 

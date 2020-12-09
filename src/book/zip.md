@@ -154,7 +154,7 @@ class="methodparam"><span class="type">string</span> `$dirname`</span>
 <span class="methodname">addFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$entryname`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$entryname`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$start`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$length`<span
@@ -492,7 +492,7 @@ behaviour of these constants is described on the
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -531,7 +531,7 @@ Adds a file to a ZIP archive from the given path
 <span class="methodname">ZipArchive::addFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$entryname`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$entryname`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$start`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$length`<span
@@ -570,7 +570,7 @@ described on the
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -652,7 +652,7 @@ described on the
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -739,7 +739,7 @@ An associative array of options. Available options are:
 
 -   *"remove\_all\_path"*
 
-    **`TRUE`** to use the file name only and add to the root of the
+    **`true`** to use the file name only and add to the root of the
     archive.
 
 -   *"flags"*
@@ -771,7 +771,7 @@ An associative array of options. Available options are:
 ### 返回值
 
 An <span class="type">array</span> of added files on success
-或者在失败时返回 **`FALSE`**
+或者在失败时返回 **`false`**
 
 ### 更新日志
 
@@ -842,7 +842,7 @@ class="methodname">ZipArchive::addGlob</span>.
 ### 返回值
 
 An <span class="type">array</span> of added files on success
-或者在失败时返回 **`FALSE`**
+或者在失败时返回 **`false`**
 
 ### 范例
 
@@ -891,7 +891,7 @@ automatically called at the end of the script.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ZipArchive::count
 =================
@@ -932,7 +932,7 @@ Index of the entry to delete.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -971,7 +971,7 @@ Name of the entry to delete.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1016,7 +1016,7 @@ class="type">mixed</span> `$entries`</span> \] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1073,7 +1073,7 @@ unchanged comment is returned.
 
 ### 返回值
 
-Returns the Zip archive comment 或者在失败时返回 **`FALSE`**.
+Returns the Zip archive comment 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1120,7 +1120,7 @@ unchanged comment is returned.
 
 ### 返回值
 
-Returns the comment on success 或者在失败时返回 **`FALSE`**.
+Returns the comment on success 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1165,7 +1165,7 @@ unchanged comment is returned.
 
 ### 返回值
 
-Returns the comment on success 或者在失败时返回 **`FALSE`**.
+Returns the comment on success 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1219,7 +1219,7 @@ unchanged attributes are returned.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1284,7 +1284,7 @@ unchanged attributes are returned.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ZipArchive::getFromIndex
 ========================
@@ -1323,7 +1323,7 @@ to it.
 ### 返回值
 
 Returns the contents of the entry on success 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -1383,7 +1383,7 @@ The flags to use to find the entry. The following values may be ORed.
 ### 返回值
 
 Returns the contents of the entry on success 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -1445,7 +1445,7 @@ unchanged name is returned.
 
 ### 返回值
 
-Returns the name on success 或者在失败时返回 **`FALSE`**.
+Returns the name on success 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1484,7 +1484,7 @@ Returns the status error message, system and/or zip messages.
 ### 返回值
 
 Returns a <span class="type">string</span> with the status message on
-success 或者在失败时返回 **`FALSE`**.
+success 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -1515,7 +1515,7 @@ The name of the entry to use.
 ### 返回值
 
 Returns a file pointer (resource) on success 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -1592,11 +1592,11 @@ Check if a compression method is supported by libzip.
 The compression method, one of the **`ZipArchive::CM_*`** constants.
 
 `encode`  
-If **`TRUE`** check for compression, else check for decompression.
+If **`true`** check for compression, else check for decompression.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -1631,11 +1631,11 @@ Check if a compression method is supported by libzip.
 The encryption method, one of the **`ZipArchive::EM_*`** constants.
 
 `encode`  
-If **`TRUE`** check for encryption, else check for decryption.
+If **`true`** check for encryption, else check for decryption.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -1679,7 +1679,7 @@ them.
 
 ### 返回值
 
-Returns the index of the entry on success 或者在失败时返回 **`FALSE`**.
+Returns the index of the entry on success 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1762,7 +1762,7 @@ The mode to use to open the archive.
 ### 返回值
 
 `Error codes`  
-Returns **`TRUE`** on success or the error code.
+Returns **`true`** on success or the error code.
 
 -   **`ZipArchive::ER_EXISTS`**
 
@@ -1875,7 +1875,7 @@ be cancelled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -1932,7 +1932,7 @@ class="type">float</span> (from 0.0 to 1.0).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -1986,7 +1986,7 @@ New name.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2030,7 +2030,7 @@ New name.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2096,7 +2096,7 @@ behaviour of these constants is described on the
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2142,7 +2142,7 @@ The contents of the comment.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2188,7 +2188,7 @@ The contents of the comment.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2233,7 +2233,7 @@ The contents of the comment.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2283,7 +2283,7 @@ Compression level.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2336,7 +2336,7 @@ Compression level.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2405,7 +2405,7 @@ Optional password, default used when missing.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -2447,7 +2447,7 @@ Optional password, default used when missing.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2516,7 +2516,7 @@ Optional flags. Currently unused.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ZipArchive::setExternalAttributesName
 =====================================
@@ -2552,7 +2552,7 @@ Optional flags. Currently unused.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2605,7 +2605,7 @@ Optional flags, unused for now.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2667,7 +2667,7 @@ Optional flags, unused for now.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2721,7 +2721,7 @@ The password to be used for the archive.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -2769,7 +2769,7 @@ about the original file in the archive, ignoring any changes made.
 ### 返回值
 
 Returns an array containing the entry details 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -2836,7 +2836,7 @@ about the original file in the archive, ignoring any changes made.
 ### 返回值
 
 Returns an array containing the entry details 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -2887,7 +2887,7 @@ Undo all changes done in the archive.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ZipArchive::unchangeArchive
 ===========================
@@ -2909,7 +2909,7 @@ archive comment changes.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ZipArchive::unchangeIndex
 =========================
@@ -2931,7 +2931,7 @@ Index of the entry.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ZipArchive::unchangeName
 ========================
@@ -2953,4 +2953,4 @@ Name of the entry.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。

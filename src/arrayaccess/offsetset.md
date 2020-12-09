@@ -31,7 +31,7 @@ class="methodparam"><span class="type">mixed</span> `$offset`</span> ,
 > **Note**:
 >
 > 如果另一个值不可用，那么 `offset` 参数将被设置为
-> **`NULL`**，就像下面的例子。
+> **`null`**，就像下面的例子。
 >
 > ``` php
 > <?php

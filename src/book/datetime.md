@@ -306,7 +306,7 @@ class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$time`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
-`$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">DateTime</span>
 <span class="methodname">add</span> ( <span class="methodparam"><span
@@ -381,7 +381,7 @@ class="type">DateInterval</span><span class="type">false</span></span>
 <span class="methodname">diff</span> ( <span class="methodparam"><span
 class="type">DateTimeInterface</span> `$targetObject`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$absolute`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">string</span><span class="type">false</span></span> <span
@@ -458,7 +458,7 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 
 ### 返回值
 
-返回被修改的 DateTime 对象， 或者在失败时返回 **`FALSE`**.
+返回被修改的 DateTime 对象， 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -555,7 +555,7 @@ class="methodname">DateTime::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$time`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
-`$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 过程化风格
 
@@ -564,7 +564,7 @@ class="methodname">date\_create</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$time`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
-`$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 返回一个新的 DateTime 对象。
 
@@ -592,7 +592,7 @@ class="methodparam"><span class="type">DateTimeZone</span>
 ### 返回值
 
 返回一个新的 DateTime 对象实例，或者在发生错误的时候返回
-过程化风格在失败时返回 **`FALSE`**。。
+过程化风格在失败时返回 **`false`**。。
 
 ### 错误／异常
 
@@ -804,7 +804,7 @@ The Unix epoch 为 1970-01-01 00:00:00 UTC。
 
 ### 返回值
 
-返回一个 DateTime 对象。 或者在失败时返回 **`FALSE`**。
+返回一个 DateTime 对象。 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1054,7 +1054,7 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 
 ### 返回值
 
-返回被修改的 DateTime 对象， 或者在失败时返回 **`FALSE`**.
+返回被修改的 DateTime 对象， 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1184,7 +1184,7 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 
 ### 返回值
 
-返回被修改的 DateTime 对象， 或者在失败时返回 **`FALSE`**.
+返回被修改的 DateTime 对象， 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1291,7 +1291,7 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 
 ### 返回值
 
-返回被修改的 DateTime 对象， 或者在失败时返回 **`FALSE`**.
+返回被修改的 DateTime 对象， 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1428,7 +1428,7 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 
 ### 返回值
 
-返回被修改的 DateTime 对象， 或者在失败时返回 **`FALSE`**.
+返回被修改的 DateTime 对象， 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -1543,7 +1543,7 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 
 ### 返回值
 
-返回被修改的 DateTime 对象， 或者在失败时返回 **`FALSE`**.
+返回被修改的 DateTime 对象， 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1641,7 +1641,7 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 
 ### 返回值
 
-返回被修改的 DateTime 对象， 或者在失败时返回 **`FALSE`**.
+返回被修改的 DateTime 对象， 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1720,7 +1720,7 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 
 ### 返回值
 
-返回被修改的 DateTime 对象， 或者在失败时返回 **`FALSE`**.
+返回被修改的 DateTime 对象， 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1875,7 +1875,7 @@ class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
-`$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span
 class="type">DateTimeImmutable</span> <span
@@ -1960,7 +1960,7 @@ class="type">DateInterval</span><span class="type">false</span></span>
 <span class="methodname">diff</span> ( <span class="methodparam"><span
 class="type">DateTimeInterface</span> `$targetObject`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$absolute`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">string</span><span class="type">false</span></span> <span
@@ -2020,7 +2020,7 @@ class="methodname">DateTimeImmutable::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
-`$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 过程化风格
 
@@ -2029,7 +2029,7 @@ class="methodname">date\_create\_immutable</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
-`$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Like <span class="methodname">DateTime::\_\_construct</span> but works
 with <span class="classname">DateTimeImmutable</span>.
@@ -2150,7 +2150,7 @@ class="classname">DateTime</span> 类型的对象。此函数会修改这个对�
 
 ### 返回值
 
-Returns the newly created object 或者在失败时返回 **`FALSE`**.
+Returns the newly created object 或者在失败时返回 **`false`**.
 
 DateTimeImmutable::\_\_set\_state
 =================================
@@ -2344,7 +2344,7 @@ class="type">DateInterval</span><span class="type">false</span></span>
 <span class="methodname">diff</span> ( <span class="methodparam"><span
 class="type">DateTimeInterface</span> `$targetObject`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$absolute`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">string</span><span class="type">false</span></span> <span
@@ -2476,7 +2476,7 @@ class="type">DateInterval</span><span class="type">false</span></span>
 class="methodparam"><span class="type">DateTimeInterface</span>
 `$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">DateInterval</span><span class="type">false</span></span>
@@ -2484,7 +2484,7 @@ class="type">DateInterval</span><span class="type">false</span></span>
 class="methodparam"><span class="type">DateTimeInterface</span>
 `$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">DateInterval</span><span class="type">false</span></span>
@@ -2492,7 +2492,7 @@ class="type">DateInterval</span><span class="type">false</span></span>
 class="methodparam"><span class="type">DateTimeInterface</span>
 `$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 过程化风格
 
@@ -2503,7 +2503,7 @@ class="type">DateTimeInterface</span> `$originObject`</span> , <span
 class="methodparam"><span class="type">DateTimeInterface</span>
 `$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Returns the difference between two <span
 class="classname">DateTimeInterface</span> objects.
@@ -2519,7 +2519,7 @@ Should the interval be forced to be positive?
 ### 返回值
 
 The <span class="classname">DateInterval</span> object represents the
-difference between the two dates 或者在失败时返回 **`FALSE`**.
+difference between the two dates 或者在失败时返回 **`false`**.
 
 The return value more specifically represents the interval to apply to
 the original object (`$this` or `$originObject`) to arrive at the
@@ -2704,7 +2704,7 @@ class="function">gmdate</span>.
 ### 返回值
 
 Returns the formatted date string on success 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -2792,7 +2792,7 @@ Returns the timezone offset.
 ### 返回值
 
 Returns the timezone offset in seconds from UTC on success
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -2966,7 +2966,7 @@ Return time zone relative to given DateTime.
 ### 返回值
 
 Returns a <span class="classname">DateTimeZone</span> object on success
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -3131,7 +3131,7 @@ class="methodname">listIdentifiers</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$what`<span
 class="initializer"> = DateTimeZone::ALL</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$country`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 }
 
@@ -3214,7 +3214,7 @@ class="methodparam"><span class="type">string</span> `$timezone`</span>
 ### 返回值
 
 成功时返回 <span class="classname">DateTimeZone</span>对象.
-过程化风格在失败时返回 **`FALSE`**。
+过程化风格在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -3384,7 +3384,7 @@ DateTimeZone 对象的时区信息计算出来的。
 
 ### 返回值
 
-成功时返回精确到秒的时差， 或者在失败时返回 **`FALSE`**。
+成功时返回精确到秒的时差， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3459,7 +3459,7 @@ End timestamp.
 ### 返回值
 
 Returns a numerically indexed array of transition arrays on success,
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 | Key      | Type                             | Description                                  |
 |----------|----------------------------------|----------------------------------------------|
@@ -3540,7 +3540,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功，返回数组， 或者在失败时返回 **`FALSE`**。
+成功，返回数组， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3610,7 +3610,7 @@ class="methodname">DateTimeZone::listIdentifiers</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$what`<span
 class="initializer"> = DateTimeZone::ALL</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$country`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 过程化风格
 
@@ -3619,7 +3619,7 @@ class="methodname">timezone\_identifiers\_list</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$what`<span
 class="initializer"> = DateTimeZone::ALL</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$country`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 ### 参数
 
@@ -3634,7 +3634,7 @@ class="initializer"> = **`NULL`**</span></span> \]\] )
 
 ### 返回值
 
-成功，返回数组，失败则返回**`FALSE`**.
+成功，返回数组，失败则返回**`false`**.
 
 ### 更新日志
 
@@ -3763,9 +3763,9 @@ class="methodname">DateInterval::format</span>.
 `days`  
 如果 DateInterval 对象是由 <span class="function">DateTime::diff</span>
 函数创建的， 那么它表示开始日期和结束日期之间包含了多少天。 否则，`days`
-属性为 **`FALSE`**。
+属性为 **`false`**。
 
-在 PHP 5.4.20/5.5.4 之前版本中，此属性不会为 **`FALSE`**， 而是 -99999。
+在 PHP 5.4.20/5.5.4 之前版本中，此属性不会为 **`false`**， 而是 -99999。
 
 更新日志
 --------
@@ -4301,7 +4301,7 @@ foreach ($period as $date) {
 
 Unbound numbers of repetitions as specified by ISO 8601 section 4.5
 "Recurring time interval" are not supported, i.e. neither passing
-*"R/..."* as `isostr` nor passing **`NULL`** as `end` would work.
+*"R/..."* as `isostr` nor passing **`null`** as `end` would work.
 
 DatePeriod::getDateInterval
 ===========================
@@ -4374,7 +4374,7 @@ Gets the end date of the period.
 
 ### 返回值
 
-Returns **`NULL`** if the <span class="classname">DatePeriod</span> does
+Returns **`null`** if the <span class="classname">DatePeriod</span> does
 not have an end date. For example, when initialized with the
 `recurrences` parameter, or the `isostr` parameter without an end date.
 

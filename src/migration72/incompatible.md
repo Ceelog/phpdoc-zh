@@ -71,9 +71,9 @@ var_dump(
     int(1)
     int(1)
 
-### <span class="function">get\_class</span> 函数不再接受 **`NULL`** 参数
+### <span class="function">get\_class</span> 函数不再接受 **`null`** 参数
 
-之前版本中，传递 **`NULL`** 给 <span class="function">get\_class</span>
+之前版本中，传递 **`null`** 给 <span class="function">get\_class</span>
 函数将返回当前类名。在新版本中，此行为会抛出一个 **`E_WARNING`**
 错误。如果想实现与之前版本同样的效果，请不要传递任何参数进来。
 
@@ -138,7 +138,7 @@ type"*，现在将会返回字符 *"resource (closed)"*。
 
 之前版本中，对 <span class="classname">\_\_PHP\_Incomplete\_Class</span>
 调用 <span class="function">is\_object</span> 函数会返回
-**`FALSE`**，现在会返回 **`TRUE`**。
+**`false`**，现在会返回 **`true`**。
 
 ### 提升未定义常量的错误级别
 
@@ -190,7 +190,7 @@ longer accept non-cryptographic hashes.
 
 The <span class="function">json\_decode</span> function option,
 **`JSON_OBJECT_AS_ARRAY`**, is now used if the second parameter (assoc)
-is **`NULL`**. Previously, **`JSON_OBJECT_AS_ARRAY`** was always
+is **`null`**. Previously, **`JSON_OBJECT_AS_ARRAY`** was always
 ignored.
 
 ### <span class="function">rand</span> and <span class="function">mt\_rand</span> output

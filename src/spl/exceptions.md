@@ -103,7 +103,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -265,7 +265,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -350,7 +350,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -435,7 +435,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -521,7 +521,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -607,7 +607,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -693,7 +693,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -778,7 +778,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -866,7 +866,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -951,7 +951,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -1037,7 +1037,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -1125,7 +1125,7 @@ class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$code`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">Throwable</span> `$previous`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span

@@ -88,7 +88,7 @@ class="methodparam"><span class="type">array</span> `$options`</span>
 
 ### 返回值
 
-**`NULL`**
+**`null`**
 
 ### 更新日志
 
@@ -197,7 +197,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`NULL`**
+**`null`**
 
 ### 参见
 

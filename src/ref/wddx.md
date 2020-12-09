@@ -35,7 +35,7 @@ naming the variables or another array, etc.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 wddx\_deserialize
 =================
@@ -130,7 +130,7 @@ An optional comment string.
 
 ### 返回值
 
-Returns a packet ID for use in later functions, or **`FALSE`** on error.
+Returns a packet ID for use in later functions, or **`false`** on error.
 
 wddx\_serialize\_value
 ======================
@@ -161,7 +161,7 @@ An optional comment string that appears in the packet header.
 
 ### 返回值
 
-Returns the WDDX packet, or **`FALSE`** on error.
+Returns the WDDX packet, or **`false`** on error.
 
 wddx\_serialize\_vars
 =====================
@@ -195,7 +195,7 @@ naming the variables or another array, etc.
 
 ### 返回值
 
-Returns the WDDX packet, or **`FALSE`** on error.
+Returns the WDDX packet, or **`false`** on error.
 
 ### 范例
 

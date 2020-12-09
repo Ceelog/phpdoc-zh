@@ -35,7 +35,7 @@ for a detailed description of these constants.
 
 ### 返回值
 
-Returns a chunk of compressed data, 或者在失败时返回 **`FALSE`**.
+Returns a chunk of compressed data, 或者在失败时返回 **`false`**.
 
 ### 错误／异常
 
@@ -112,7 +112,7 @@ no preset dictionary).
 ### 返回值
 
 Returns a deflate context resource (*zlib.deflate*) on success,
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 错误／异常
 
@@ -151,7 +151,7 @@ successfully opened by <span class="function">gzopen</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -213,7 +213,7 @@ One of **`ZLIB_ENCODING_*`** constants.
 
 ### 返回值
 
-The compressed string or **`FALSE`** if an error occurred.
+The compressed string or **`false`** if an error occurred.
 
 ### 范例
 
@@ -259,7 +259,7 @@ The maximum length of data to decode.
 
 ### 返回值
 
-The decoded string, or **`FALSE`** if an error occurred.
+The decoded string, or **`false`** if an error occurred.
 
 ### 参见
 
@@ -303,7 +303,7 @@ One of **`ZLIB_ENCODING_*`** constants.
 
 ### 返回值
 
-The deflated string or **`FALSE`** if an error occurred.
+The deflated string or **`false`** if an error occurred.
 
 ### 范例
 
@@ -370,7 +370,7 @@ checksum.
 
 ### 返回值
 
-The encoded string, or **`FALSE`** if an error occurred.
+The encoded string, or **`false`** if an error occurred.
 
 ### 范例
 
@@ -419,8 +419,8 @@ successfully opened by <span class="function">gzopen</span>.
 
 ### 返回值
 
-Returns **`TRUE`** if the gz-file pointer is at EOF or an error occurs;
-otherwise returns **`FALSE`**.
+Returns **`true`** if the gz-file pointer is at EOF or an error occurs;
+otherwise returns **`false`**.
 
 ### 范例
 
@@ -467,7 +467,7 @@ too.
 ### 返回值
 
 An array containing the file, one line per cell, empty lines included,
-and with newlines still attached, 或者在失败时返回 **`FALSE`**.
+and with newlines still attached, 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -510,7 +510,7 @@ successfully opened by <span class="function">gzopen</span>.
 
 ### 返回值
 
-The uncompressed character or **`FALSE`** on EOF (unlike <span
+The uncompressed character or **`false`** on EOF (unlike <span
 class="function">gzeof</span>).
 
 ### 范例
@@ -561,7 +561,7 @@ The length of data to get.
 
 ### 返回值
 
-The uncompressed string, or **`FALSE`** on error.
+The uncompressed string, or **`false`** on error.
 
 ### 范例
 
@@ -620,7 +620,7 @@ stripped.
 
 ### 返回值
 
-The uncompressed and stripped string, or **`FALSE`** on error.
+The uncompressed and stripped string, or **`false`** on error.
 
 ### 范例
 
@@ -669,7 +669,7 @@ The maximum length of data to decode.
 
 ### 返回值
 
-The original uncompressed data or **`FALSE`** on error.
+The original uncompressed data or **`false`** on error.
 
 The function will return an error if the uncompressed data is more than
 32768 times the length of the compressed input `data` or more than the
@@ -739,7 +739,7 @@ Returns a file pointer to the file opened, after that, everything you
 read from this file descriptor will be transparently decompressed and
 what you write gets compressed.
 
-If the open fails, the function returns **`FALSE`**.
+If the open fails, the function returns **`false`**.
 
 ### 范例
 
@@ -791,7 +791,7 @@ successfully opened by <span class="function">gzopen</span>.
 ### 返回值
 
 The number of uncompressed characters read from `gz` and passed through
-to the input, or **`FALSE`** on error.
+to the input, or **`false`** on error.
 
 ### 范例
 
@@ -842,13 +842,13 @@ The number of bytes to read.
 
 ### 返回值
 
-The data that have been read, 或者在失败时返回 **`FALSE`**.
+The data that have been read, 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
 | 版本  | 说明                                                                            |
 |-------|---------------------------------------------------------------------------------|
-| 7.4.0 | This functions returns **`FALSE`** on failure now; previously *0* was returned. |
+| 7.4.0 | This functions returns **`false`** on failure now; previously *0* was returned. |
 
 ### 范例
 
@@ -895,7 +895,7 @@ successfully opened by <span class="function">gzopen</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -988,7 +988,7 @@ successfully opened by <span class="function">gzopen</span>.
 
 ### 返回值
 
-The position of the file pointer or **`FALSE`** if an error occurs.
+The position of the file pointer or **`false`** if an error occurs.
 
 ### 参见
 
@@ -1022,7 +1022,7 @@ The maximum length of data to decode.
 
 ### 返回值
 
-The original uncompressed data or **`FALSE`** on error.
+The original uncompressed data or **`false`** on error.
 
 The function will return an error if the uncompressed data is more than
 32768 times the length of the compressed input `data` or more than the
@@ -1061,7 +1061,7 @@ class="type">false</span></span> <span class="methodname">gzwrite</span>
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$length`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$length`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">gzwrite</span> writes the contents of `data` to
 the given gz-file.
@@ -1090,14 +1090,14 @@ stop after `length` (uncompressed) bytes have been written or the end of
 ### 返回值
 
 Returns the number of (uncompressed) bytes written to the given gz-file
-stream, 或者在失败时返回 **`FALSE`**.
+stream, 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
 | 版本  | 说明                                                                            |
 |-------|---------------------------------------------------------------------------------|
 | 8.0.0 | `length` is nullable now; previously, the default was *0*.                      |
-| 7.4.0 | This functions returns **`FALSE`** on failure now; previously *0* was returned. |
+| 7.4.0 | This functions returns **`false`** on failure now; previously *0* was returned. |
 
 ### 范例
 
@@ -1157,7 +1157,7 @@ for a detailed description of these constants.
 
 ### 返回值
 
-Returns a chunk of uncompressed data, 或者在失败时返回 **`FALSE`**.
+Returns a chunk of uncompressed data, 或者在失败时返回 **`false`**.
 
 ### 错误／异常
 
@@ -1197,7 +1197,7 @@ class="methodparam"><span class="type">InflateContext</span>
 
 ### 返回值
 
-Returns number of bytes read so far 或者在失败时返回 **`FALSE`**.
+Returns number of bytes read so far 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -1225,7 +1225,7 @@ Usually returns either **`ZLIB_OK`** or **`ZLIB_STREAM_END`**.
 
 ### 返回值
 
-Returns decompression status 或者在失败时返回 **`FALSE`**.
+Returns decompression status 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -1278,7 +1278,7 @@ no preset dictionary).
 ### 返回值
 
 Returns an inflate context resource (*zlib.inflate*) on success,
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 错误／异常
 
@@ -1332,7 +1332,7 @@ too.
 ### 返回值
 
 Returns the number of (uncompressed) bytes read from the file on
-success, 或者在失败时返回 **`FALSE`**
+success, 或者在失败时返回 **`false`**
 
 ### 错误／异常
 
@@ -1372,7 +1372,7 @@ Uncompress any raw/gzip/zlib encoded data.
 
 ### 返回值
 
-Returns the uncompressed data, 或者在失败时返回 **`FALSE`**.
+Returns the uncompressed data, 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -1448,7 +1448,7 @@ Returns the coding type used for output compression.
 
 ### 返回值
 
-Possible return values are *gzip*, *deflate*, or **`FALSE`**.
+Possible return values are *gzip*, *deflate*, or **`false`**.
 
 ### 参见
 

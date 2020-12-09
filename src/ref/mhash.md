@@ -54,7 +54,7 @@ The hash ID. One of the **`MHASH_hashname`** constants.
 
 ### 返回值
 
-Returns the size in bytes or **`FALSE`**, if the `algo` does not exist.
+Returns the size in bytes or **`false`**, if the `algo` does not exist.
 
 ### 范例
 
@@ -90,7 +90,7 @@ The hash ID. One of the **`MHASH_hashname`** constants.
 
 ### 返回值
 
-Returns the name of the hash or **`FALSE`**, if the hash does not exist.
+Returns the name of the hash or **`false`**, if the hash does not exist.
 
 ### 范例
 
@@ -154,7 +154,7 @@ The key length, in bytes.
 
 ### 返回值
 
-Returns the generated key as a string, or **`FALSE`** on error.
+Returns the generated key as a string, or **`false`** on error.
 
 mhash
 =====
@@ -169,7 +169,7 @@ class="type">false</span></span> <span class="methodname">mhash</span> (
 <span class="methodparam"><span class="type">string</span>
 `$data`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$key`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$key`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">mhash</span> applies a hash function specified by
 `algo` to the `data`.
@@ -191,7 +191,7 @@ can be used in HMAC mode.
 ### 返回值
 
 Returns the resulting hash (also called digest) or HMAC as a string, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### 更新日志
 

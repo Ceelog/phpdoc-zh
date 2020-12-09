@@ -249,7 +249,7 @@ The key of the entry to add.
 
 ### 返回值
 
-**`TRUE`** when the entry was added, and **`FALSE`** if the entry was
+**`true`** when the entry was added, and **`false`** if the entry was
 not added.
 
 ### 范例
@@ -365,7 +365,7 @@ The key of the entry to delete.
 
 ### 返回值
 
-**`TRUE`** when the entry was deleted, and **`FALSE`** if the entry was
+**`true`** when the entry was deleted, and **`false`** if the entry was
 not deleted.
 
 ### 范例
@@ -413,7 +413,7 @@ The key of the entry to check for whether it exists in the set.
 
 ### 返回值
 
-Returns **`TRUE`** when the entry was found, or **`FALSE`** when the
+Returns **`true`** when the entry was found, or **`false`** when the
 entry is not found.
 
 ### 范例
@@ -892,7 +892,7 @@ will be used.
 
 ### 返回值
 
-**`TRUE`** when the entry was added, and **`FALSE`** if the entry was
+**`true`** when the entry was added, and **`false`** if the entry was
 not added.
 
 ### 范例
@@ -1019,7 +1019,7 @@ entry was deleted or not. Associated memory structures will not be freed
 immediately, but rather when the hash itself is freed.
 
 Elements can not be deleted when the hash is used in an iterator. The
-method will not throw an exception, but simply return **`FALSE`** like
+method will not throw an exception, but simply return **`false`** like
 would happen with any other deletion failure.
 
 ### 参数
@@ -1029,7 +1029,7 @@ The key of the entry to delete.
 
 ### 返回值
 
-**`TRUE`** when the entry was deleted, and **`FALSE`** if the entry was
+**`true`** when the entry was deleted, and **`false`** if the entry was
 not deleted.
 
 ### 范例
@@ -1077,7 +1077,7 @@ The key of the entry to check for whether it exists in the hash.
 
 ### 返回值
 
-Returns **`TRUE`** when the entry was found, or **`FALSE`** when the
+Returns **`true`** when the entry was found, or **`false`** when the
 entry is not found.
 
 ### 范例
@@ -1137,7 +1137,7 @@ The key of the entry to add.
 
 ### 返回值
 
-The value if the key exists, or **`NULL`** if the key wasn't part of the
+The value if the key exists, or **`null`** if the key wasn't part of the
 hash.
 
 ### 范例
@@ -1557,7 +1557,7 @@ The new value to update the entry with.
 
 ### 返回值
 
-**`TRUE`** when the entry was found and updated, and **`FALSE`** if the
+**`true`** when the entry was found and updated, and **`false`** if the
 entry was not part of the hash already.
 
 ### 范例
@@ -1720,7 +1720,7 @@ The value of the entry to add.
 
 ### 返回值
 
-**`TRUE`** when the entry was added, and **`FALSE`** if the entry was
+**`true`** when the entry was added, and **`false`** if the entry was
 not added.
 
 ### 范例
@@ -1837,7 +1837,7 @@ entry was deleted or not. Associated memory structures will not be freed
 immediately, but rather when the hash itself is freed.
 
 Elements can not be deleted when the hash is used in an iterator. The
-method will not throw an exception, but simply return **`FALSE`** like
+method will not throw an exception, but simply return **`false`** like
 would happen with any other deletion failure.
 
 ### 参数
@@ -1847,7 +1847,7 @@ The key of the entry to delete.
 
 ### 返回值
 
-**`TRUE`** when the entry was deleted, and **`FALSE`** if the entry was
+**`true`** when the entry was deleted, and **`false`** if the entry was
 not deleted.
 
 ### 范例
@@ -1899,7 +1899,7 @@ The key of the entry to check for whether it exists in the hash.
 
 ### 返回值
 
-Returns **`TRUE`** when the entry was found, or **`FALSE`** when the
+Returns **`true`** when the entry was found, or **`false`** when the
 entry is not found.
 
 QuickHashStringIntHash::get
@@ -1922,7 +1922,7 @@ The key of the entry to add.
 
 ### 返回值
 
-The value if the key exists, or **`NULL`** if the key wasn't part of the
+The value if the key exists, or **`null`** if the key wasn't part of the
 hash.
 
 ### 范例
@@ -2369,7 +2369,7 @@ converted to a string automatically if possible.
 
 ### 返回值
 
-**`TRUE`** when the entry was found and updated, and **`FALSE`** if the
+**`true`** when the entry was found and updated, and **`false`** if the
 entry was not part of the hash already.
 
 ### 范例
@@ -2567,7 +2567,7 @@ converted to a string automatically if possible.
 
 ### 返回值
 
-**`TRUE`** when the entry was added, and **`FALSE`** if the entry was
+**`true`** when the entry was added, and **`false`** if the entry was
 not added.
 
 ### 范例
@@ -2689,7 +2689,7 @@ entry was deleted or not. Associated memory structures will not be freed
 immediately, but rather when the hash itself is freed.
 
 Elements can not be deleted when the hash is used in an iterator. The
-method will not throw an exception, but simply return **`FALSE`** like
+method will not throw an exception, but simply return **`false`** like
 would happen with any other deletion failure.
 
 ### 参数
@@ -2699,7 +2699,7 @@ The key of the entry to delete.
 
 ### 返回值
 
-**`TRUE`** when the entry was deleted, and **`FALSE`** if the entry was
+**`true`** when the entry was deleted, and **`false`** if the entry was
 not deleted.
 
 ### 范例
@@ -2747,7 +2747,7 @@ The key of the entry to check for whether it exists in the hash.
 
 ### 返回值
 
-Returns **`TRUE`** when the entry was found, or **`FALSE`** when the
+Returns **`true`** when the entry was found, or **`false`** when the
 entry is not found.
 
 QuickHashIntStringHash::get
@@ -2770,7 +2770,7 @@ The key of the entry to add.
 
 ### 返回值
 
-The value if the key exists, or **`NULL`** if the key wasn't part of the
+The value if the key exists, or **`null`** if the key wasn't part of the
 hash.
 
 ### 范例
@@ -3209,7 +3209,7 @@ converted to a string automatically if possible.
 
 ### 返回值
 
-**`TRUE`** when the entry was found and updated, and **`FALSE`** if the
+**`true`** when the entry was found and updated, and **`false`** if the
 entry was not part of the hash already.
 
 ### 范例

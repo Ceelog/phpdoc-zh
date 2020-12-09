@@ -489,7 +489,7 @@ class="methodname">Memcached::set</span>类似，但是如果
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如果key已经存在，
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如果key已经存在，
 <span
 class="methodname">Memcached::getResultCode</span>方法将会返回**`Memcached::RES_NOTSTORED`**。
 
@@ -542,7 +542,7 @@ memcached
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如果key已经存在，
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如果key已经存在，
 <span
 class="methodname">Memcached::getResultCode</span>方法将会返回**`Memcached::RES_NOTSTORED`**。
 
@@ -591,7 +591,7 @@ memcached服务端端口号，通常是*11211*。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -638,7 +638,7 @@ class="function">Memcached::addServers</span>向服务器池中增加`servers`�
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -692,7 +692,7 @@ class="function">Memcached::append</span>向已经存在的元素后追加`value
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如果key不存在，
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如果key不存在，
 <span
 class="methodname">Memcached::getResultCode</span>将返回**`Memcached::RES_NOTSTORED`**。
 
@@ -755,7 +755,7 @@ memcached
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如果key不存在，
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如果key不存在，
 <span class="methodname">Memcached::getResultCode</span>将返回
 **`Memcached::RES_NOTSTORED`**。
 
@@ -809,7 +809,7 @@ class="function">Memcached::cas</span>执行一个“检查并设置”的操作
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 如果在元素尝试存储时发现在本客户端最后一次获取后被其他客户端修改， <span
 class="methodname">Memcached::getResultCode</span>
 将返回**`Memcached::RES_DATA_EXISTS`**。
@@ -889,7 +889,7 @@ memcached
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 如果在元素尝试存储时发现在本客户端最后一次获取后被其他客户端修改， <span
 class="methodname">Memcached::getResultCode</span>
 将返回**`Memcached::RES_DATA_EXISTS`**。
@@ -967,7 +967,7 @@ class="function">Memcached::decrement</span> 失败。
 
 ### 返回值
 
-成功时返回元素新的值， 或者在失败时返回 **`FALSE`**。 如果key不存在，
+成功时返回元素新的值， 或者在失败时返回 **`false`**。 如果key不存在，
 <span
 class="methodname">Memcached::getResultCode</span>返回**`Memcached::RES_NOTFOUND`**。
 
@@ -1046,7 +1046,7 @@ The expiry time to set on the item.
 
 ### 返回值
 
-Returns item's new value on success 或者在失败时返回 **`FALSE`**.
+Returns item's new value on success 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -1088,7 +1088,7 @@ key的存储命令也会成功).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如果key不存在,
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如果key不存在,
 <span
 class="methodname">Memcached::getResultCode</span>将会返回**`Memcached::RES_NOTFOUND`**.
 
@@ -1145,7 +1145,7 @@ memcached
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如果key不存在，
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如果key不存在，
 <span
 class="methodname">Memcached::getResultCode</span>返回**`Memcached::RES_NOTFOUND`**。
 
@@ -1235,7 +1235,7 @@ The amount of time the server will wait to delete the items.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 The <span
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTFOUND`** if the key does not exist.
 
@@ -1265,7 +1265,7 @@ class="function">Memcached::fetch</span>从最后一次请求中抓取下一个�
 
 ### 返回值
 
-返回下一个结果或其他情况下返回**`FALSE`**。 如果结果集已经抓取完毕，
+返回下一个结果或其他情况下返回**`false`**。 如果结果集已经抓取完毕，
 <span
 class="methodname">Memcached::getResultCode</span>将返回**`Memcached::RES_END`**。
 
@@ -1341,7 +1341,7 @@ class="function">Memcached::fetchAll</span>抓取最后一次请求的结果集�
 
 ### 返回值
 
-返回结果集 或者在失败时返回 **`FALSE`**. 如需要则使用 <span
+返回结果集 或者在失败时返回 **`false`**. 如需要则使用 <span
 class="methodname">Memcached::getResultCode</span>。
 
 ### 范例
@@ -1422,7 +1422,7 @@ class="function">Memcached::flush</span>作废之后，该key下被重新存储�
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如需要则使用
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如需要则使用
 <span class="methodname">Memcached::getResultCode</span>。
 
 ### 范例
@@ -1467,14 +1467,14 @@ class="function">Memcached::get</span>返回之前存储在`key`下的元素。�
 要检索的元素的key。
 
 `cache_cb`  
-通读缓存回掉函数或**`NULL`**.
+通读缓存回掉函数或**`null`**.
 
 `cas_token`  
 检索的元素的CAS标记值。
 
 ### 返回值
 
-返回存储在服务端的元素的值或者在其他情况下返回**`FALSE`**。
+返回存储在服务端的元素的值或者在其他情况下返回**`false`**。
 如果key不存在， <span
 class="methodname">Memcached::getResultCode</span>返回**`Memcached::RES_NOTFOUND`**。
 
@@ -1547,7 +1547,7 @@ been returned.
 ### 返回值
 
 Returns the keys stored on all the servers on success 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 Memcached::getByKey
 ===================
@@ -1582,14 +1582,14 @@ memcached
 要抓取的元素的key。
 
 `cache_cb`  
-通读缓存回掉函数或**`NULL`**.
+通读缓存回掉函数或**`null`**.
 
 `cas_token`  
 检索的元素的CAS标记值。
 
 ### 返回值
 
-返回存储在服务端的元素的值或者在其他情况下返回**`FALSE`**。
+返回存储在服务端的元素的值或者在其他情况下返回**`false`**。
 如果key不存在， <span
 class="methodname">Memcached::getResultCode</span>返回**`Memcached::RES_NOTFOUND`**。
 
@@ -1630,11 +1630,11 @@ class="methodname">Memcached::fetchAll</span>。如果`with_cas`设置为true，
 是否同时请求CAS标记。
 
 `value_cb`  
-结果回掉函数或**`NULL`**。
+结果回掉函数或**`null`**。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如需要则使用
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如需要则使用
 <span class="methodname">Memcached::getResultCode</span>。
 
 ### 范例
@@ -1725,11 +1725,11 @@ memcached
 是否同时请求CAS标记。
 
 `value_cb`  
-结果回掉函数或**`NULL`**。
+结果回掉函数或**`null`**。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如需要则使用
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如需要则使用
 <span class="methodname">Memcached::getResultCode</span>。
 
 ### 参见
@@ -1777,7 +1777,7 @@ Get 操作的附加选项。
 
 ### 返回值
 
-返回检索到的元素的数组 或者在失败时返回 **`FALSE`**. 如需要则使用 <span
+返回检索到的元素的数组 或者在失败时返回 **`false`**. 如需要则使用 <span
 class="methodname">Memcached::getResultCode</span>。
 
 ### 范例
@@ -1978,7 +1978,7 @@ get操作的附加选项。
 
 ### 返回值
 
-返回检索到的元素的数组 或者在失败时返回 **`FALSE`**. 如需要则使用 <span
+返回检索到的元素的数组 或者在失败时返回 **`false`**. 如需要则使用 <span
 class="methodname">Memcached::getResultCode</span>。
 
 ### 参见
@@ -2142,7 +2142,7 @@ memcached
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如需要则使用
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如需要则使用
 <span class="methodname">Memcached::getResultCode</span>。
 
 ### 范例
@@ -2403,7 +2403,7 @@ class="function">Memcached::increment</span> 会将元素设置成
 
 ### 返回值
 
-成功时返回元素的新值 或者在失败时返回 **`FALSE`**。
+成功时返回元素的新值 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2484,7 +2484,7 @@ The expiry time to set on the item.
 
 ### 返回值
 
-Returns new item's value on success 或者在失败时返回 **`FALSE`**.
+Returns new item's value on success 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -2577,7 +2577,7 @@ class="function">Memcached::prepend</span>向已存在元素的字符串值前�
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如果key不存在，
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如果key不存在，
 <span
 class="methodname">Memcached::getResultCode</span>返回**`Memcached::RES_NOTSTORED`**。
 
@@ -2640,7 +2640,7 @@ memcached
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如果key不存在，
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如果key不存在，
 <span
 class="methodname">Memcached::getResultCode</span>返回**`Memcached::RES_NOTSTORED`**。
 
@@ -2669,7 +2669,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 Memcached::replace
 ==================
@@ -2703,7 +2703,7 @@ class="methodname">Memcached::set</span>类似，但是如果
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如果key不存在，
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如果key不存在，
 <span
 class="methodname">Memcached::getResultCode</span>返回**`Memcached::RES_NOTSTORED`**。
 
@@ -2753,7 +2753,7 @@ memcached
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如果key不存在，
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如果key不存在，
 <span
 class="methodname">Memcached::getResultCode</span>返回**`Memcached::RES_NOTSTORED`**。
 
@@ -2783,7 +2783,7 @@ memcache servers from the known server list, resetting it back to empty.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2826,7 +2826,7 @@ class="type">int</span> `$expiration`</span> \] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如需要则使用
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如需要则使用
 <span class="methodname">Memcached::getResultCode</span>。
 
 ### 范例
@@ -2911,7 +2911,7 @@ memcached
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如需要则使用
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如需要则使用
 <span class="methodname">Memcached::getResultCode</span>。
 
 ### 范例
@@ -2962,7 +2962,7 @@ class="methodname">Memcached::set</span>， 但是使用了
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如需要则使用
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如需要则使用
 <span class="methodname">Memcached::getResultCode</span>。
 
 ### 范例
@@ -3024,7 +3024,7 @@ memcached
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如需要则使用
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如需要则使用
 <span class="methodname">Memcached::getResultCode</span>。
 
 ### 参见
@@ -3057,7 +3057,7 @@ class="methodparam"><span class="type">int</span> `$option`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3105,7 +3105,7 @@ the value is the new value for the option.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3196,7 +3196,7 @@ value on the given key.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如需要则使用
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如需要则使用
 <span class="methodname">Memcached::getResultCode</span>。
 
 ### 参见
@@ -3238,7 +3238,7 @@ memcached
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 如需要则使用
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 如需要则使用
 <span class="methodname">Memcached::getResultCode</span>。
 
 ### 参见

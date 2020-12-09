@@ -84,11 +84,11 @@ PHP 7.1.2, and back to 0 (disabled) in PHP 7.1.7.
 
 Session IDs will now only be generated with a CSPRNG.
 
-### More informative <span class="classname">TypeError</span> messages when **`NULL`** is allowed
+### More informative <span class="classname">TypeError</span> messages when **`null`** is allowed
 
 <span class="classname">TypeError</span> exceptions for arg\_info type
 checks will now provide more informative error messages. If the
-parameter type or return type accepts **`NULL`** (by either having a
-default value of **`NULL`** or being a nullable type), then the error
+parameter type or return type accepts **`null`** (by either having a
+default value of **`null`** or being a nullable type), then the error
 message will now mention this with a message of "must be ... or null" or
 "must ... or be null."

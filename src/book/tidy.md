@@ -117,16 +117,16 @@ class="type">string</span>`$tidy->errorBuffer`;
 class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$filename`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$filename`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$useIncludePath`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\]\] )
+**`false`**</span></span> \]\]\]\] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">tidyNode</span><span class="type">null</span></span> <span
@@ -194,12 +194,12 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$useIncludePath`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\] )
+**`false`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">parseString</span> ( <span
@@ -207,10 +207,10 @@ class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type"><span
@@ -220,12 +220,12 @@ class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$useIncludePath`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\] )
+**`false`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type"><span
@@ -235,10 +235,10 @@ class="type">string</span> `$string`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">tidyNode</span><span class="type">null</span></span> <span
@@ -349,7 +349,7 @@ The <span class="classname">Tidy</span> 对象。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -394,16 +394,16 @@ Constructs a new <span class="classname">tidy</span> object
 class="methodname">tidy::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$filename`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$filename`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$useIncludePath`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\]\] )
+**`false`**</span></span> \]\]\]\] )
 
 Constructs a new <span class="classname">tidy</span> object.
 
@@ -519,7 +519,7 @@ The <span class="classname">Tidy</span> 对象。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -593,7 +593,7 @@ The <span class="classname">Tidy</span> 对象。
 
 ### 返回值
 
-Returns the error buffer as a string, or **`FALSE`** if the buffer is
+Returns the error buffer as a string, or **`false`** if the buffer is
 empty.
 
 ### 范例
@@ -933,7 +933,7 @@ The option name
 ### 返回值
 
 Returns a string if the option exists and has documentation available,
-or **`FALSE`** otherwise.
+or **`false`** otherwise.
 
 ### 范例
 
@@ -1229,13 +1229,13 @@ The <span class="classname">Tidy</span> 对象。
 
 ### 返回值
 
-This function returns **`TRUE`** if the specified tidy `tidy` is a XHTML
-document, or **`FALSE`** otherwise.
+This function returns **`true`** if the specified tidy `tidy` is a XHTML
+document, or **`false`** otherwise.
 
 **Warning**
 
 This function is not yet implemented in the Tidylib itself, so it always
-return **`FALSE`**.
+return **`false`**.
 
 tidy::isXml
 ===========
@@ -1268,13 +1268,13 @@ The <span class="classname">Tidy</span> 对象。
 
 ### 返回值
 
-This function returns **`TRUE`** if the specified tidy `tidy` is a
-generic XML document (non HTML/XHTML), or **`FALSE`** otherwise.
+This function returns **`true`** if the specified tidy `tidy` is a
+generic XML document (non HTML/XHTML), or **`false`** otherwise.
 
 **Warning**
 
 This function is not yet implemented in the Tidylib itself, so it always
-return **`FALSE`**.
+return **`false`**.
 
 tidy::parseFile
 ===============
@@ -1294,12 +1294,12 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$useIncludePath`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\] )
+**`false`**</span></span> \]\]\] )
 
 过程化风格
 
@@ -1310,12 +1310,12 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$useIncludePath`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\] )
+**`false`**</span></span> \]\]\] )
 
 Parses the given file.
 
@@ -1346,10 +1346,10 @@ Search for the file in the
 
 ### 返回值
 
-<span class="methodname">tidy::parseFile</span> returns **`TRUE`** on
+<span class="methodname">tidy::parseFile</span> returns **`true`** on
 success. <span class="function">tidy\_parse\_file</span> returns a new
 <span class="classname">tidy</span> instance on success. Both, the
-method and the function return **`FALSE`** on failure.
+method and the function return **`false`** on failure.
 
 ### 更新日志
 
@@ -1399,10 +1399,10 @@ class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 过程化风格
 
@@ -1413,10 +1413,10 @@ class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 Parses a document stored in a string.
 
@@ -1441,10 +1441,10 @@ The possible values for encoding are: *ascii*, *latin0*, *latin1*,
 
 ### 返回值
 
-<span class="methodname">tidy::parseString</span> returns **`TRUE`** on
+<span class="methodname">tidy::parseString</span> returns **`true`** on
 success. <span class="function">tidy\_parse\_string</span> returns a new
 <span class="classname">tidy</span> instance on success. Both, the
-method and the function return **`FALSE`** on failure.
+method and the function return **`false`** on failure.
 
 ### 更新日志
 
@@ -1528,12 +1528,12 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$useIncludePath`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\] )
+**`false`**</span></span> \]\]\] )
 
 过程化风格
 
@@ -1544,12 +1544,12 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$useIncludePath`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\] )
+**`false`**</span></span> \]\]\] )
 
 Repairs the given file and returns it as a string.
 
@@ -1578,7 +1578,7 @@ Search for the file in the
 
 ### 返回值
 
-Returns the repaired contents as a string, 或者在失败时返回 **`FALSE`**.
+Returns the repaired contents as a string, 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -1629,10 +1629,10 @@ class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 过程化风格
 
@@ -1643,10 +1643,10 @@ class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$config`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$encoding`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 Repairs the given string.
 
@@ -1672,7 +1672,7 @@ The possible values for encoding are: *ascii*, *latin0*, *latin1*,
 
 ### 返回值
 
-Returns the repaired string, 或者在失败时返回 **`FALSE`**.
+Returns the repaired string, 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -1965,7 +1965,7 @@ Returns the parent node of the current node.
 ### 返回值
 
 Returns a <span class="type">tidyNode</span> if the node has a parent,
-or **`NULL`** otherwise.
+or **`null`** otherwise.
 
 ### 范例
 
@@ -2018,7 +2018,7 @@ Tells if the node has children.
 
 ### 返回值
 
-Returns **`TRUE`** if the node has children, **`FALSE`** otherwise.
+Returns **`true`** if the node has children, **`false`** otherwise.
 
 ### 范例
 
@@ -2086,7 +2086,7 @@ Tells if the node has siblings.
 
 ### 返回值
 
-Returns **`TRUE`** if the node has siblings, **`FALSE`** otherwise.
+Returns **`true`** if the node has siblings, **`false`** otherwise.
 
 ### 范例
 
@@ -2154,7 +2154,7 @@ Tells whether the current node is ASP.
 
 ### 返回值
 
-Returns **`TRUE`** if the node is ASP, **`FALSE`** otherwise.
+Returns **`true`** if the node is ASP, **`false`** otherwise.
 
 ### 范例
 
@@ -2237,7 +2237,7 @@ Tells if the node is a comment.
 
 ### 返回值
 
-Returns **`TRUE`** if the node is a comment, **`FALSE`** otherwise.
+Returns **`true`** if the node is a comment, **`false`** otherwise.
 
 ### 范例
 
@@ -2318,8 +2318,8 @@ document.
 
 ### 返回值
 
-Returns **`TRUE`** if the node is an element node, but not the root node
-of the document, **`FALSE`** otherwise.
+Returns **`true`** if the node is an element node, but not the root node
+of the document, **`false`** otherwise.
 
 ### 更新日志
 
@@ -2448,7 +2448,7 @@ Tells if the node is JSTE.
 
 ### 返回值
 
-Returns **`TRUE`** if the node is JSTE, **`FALSE`** otherwise.
+Returns **`true`** if the node is JSTE, **`false`** otherwise.
 
 ### 范例
 
@@ -2531,7 +2531,7 @@ Tells if the node is PHP.
 
 ### 返回值
 
-Returns **`TRUE`** if the current node is PHP code, **`FALSE`**
+Returns **`true`** if the current node is PHP code, **`false`**
 otherwise.
 
 ### 范例
@@ -2618,7 +2618,7 @@ Tells if the node represents a text (without any markup).
 
 ### 返回值
 
-Returns **`TRUE`** if the node represent a text, **`FALSE`** otherwise.
+Returns **`true`** if the node represent a text, **`false`** otherwise.
 
 ### 范例
 

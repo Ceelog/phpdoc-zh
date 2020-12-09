@@ -23,7 +23,7 @@ class="type">array</span> `$param_arr`</span> )
 
 ### 返回值
 
-返回回调函数的结果。如果出错的话就返回**`FALSE`**
+返回回调函数的结果。如果出错的话就返回**`false`**
 
 ### 更新日志
 
@@ -138,7 +138,7 @@ echo "global \$bar=$bar\n";
 > 5.4里面被去掉了。而且，这也不适用于内部函数，for which the function
 > signature is
 > honored。如果回调函数默认设置需要接受的参数是引用传递的时候，按值传递，结果将会输出一个警告。<span
-> class="function">call\_user\_func</span> 将会返回 **`FALSE`**（there
+> class="function">call\_user\_func</span> 将会返回 **`false`**（there
 > is, however, an exception for passed values with reference count = 1,
 > such as in literals, as these can be turned into references without
 > ill effects — but also without writes to that value having any effect
@@ -367,7 +367,7 @@ The function code.
 
 ### 返回值
 
-Returns a unique function name as a string, or **`FALSE`** on error.
+Returns a unique function name as a string, or **`false`** on error.
 
 ### 范例
 
@@ -557,7 +557,7 @@ One parameter, gathering all the method parameter in one array.
 
 ### 返回值
 
-Returns the function result, or **`FALSE`** on error.
+Returns the function result, or **`false`** on error.
 
 ### 范例
 
@@ -641,7 +641,7 @@ Zero or more parameters to be passed to the function.
 
 ### 返回值
 
-Returns the function result, or **`FALSE`** on error.
+Returns the function result, or **`false`** on error.
 
 ### 范例
 
@@ -717,14 +717,14 @@ class="function">func\_num\_args</span>
 
 ### 返回值
 
-返回指定的参数，错误则返回 **`FALSE`** 。
+返回指定的参数，错误则返回 **`false`** 。
 
 ### 更新日志
 
 | 版本  | 说明                                                                                                                                                                                                                                                                                                                        |
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 5.3.0 | 该函数可以在参数列表中使用。                                                                                                                                                                                                                                                                                                |
-| 5.3.0 | If this function is called from the outermost scope of a file which has been included by calling <span class="function">include</span> or <span class="function">require</span> from within a function in the calling file, it now generates a warning and returns **`FALSE`**. （不知道如何翻译跟好，直接参考例2即可明白） |
+| 5.3.0 | If this function is called from the outermost scope of a file which has been included by calling <span class="function">include</span> or <span class="function">require</span> from within a function in the calling file, it now generates a warning and returns **`false`**. （不知道如何翻译跟好，直接参考例2即可明白） |
 
 ### 错误／异常
 
@@ -861,7 +861,7 @@ class="function">func\_num\_args</span>
 | 版本  | 说明                                                                                                                                                                                                                                                                                                                        |
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 5.3.0 | 该函数可以在参数列表中使用。                                                                                                                                                                                                                                                                                                |
-| 5.3.0 | If this function is called from the outermost scope of a file which has been included by calling <span class="function">include</span> or <span class="function">require</span> from within a function in the calling file, it now generates a warning and returns **`FALSE`**. （不知道如何翻译跟好，直接参考例2即可明白） |
+| 5.3.0 | If this function is called from the outermost scope of a file which has been included by calling <span class="function">include</span> or <span class="function">require</span> from within a function in the calling file, it now generates a warning and returns **`false`**. （不知道如何翻译跟好，直接参考例2即可明白） |
 
 ### 错误／异常
 
@@ -1099,7 +1099,7 @@ Output in PHP 5.3 and later will be something similar to:
 function\_exists
 ================
 
-如果给定的函数已经被定义就返回 **`TRUE`**
+如果给定的函数已经被定义就返回 **`true`**
 
 ### 说明
 
@@ -1118,13 +1118,13 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-如果 `function_name` 存在且的确是一个函数就返回 **`TRUE`** ，反之则返回
-**`FALSE`** 。
+如果 `function_name` 存在且的确是一个函数就返回 **`true`** ，反之则返回
+**`false`** 。
 
 > **Note**:
 >
 > 对于语法结构的判断，例如 <span class="function">include\_once</span>
-> 和 <span class="function">echo</span> 将会返回 **`FALSE`** 。
+> 和 <span class="function">echo</span> 将会返回 **`false`** 。
 
 ### 范例
 
@@ -1166,7 +1166,7 @@ get\_defined\_functions
 class="methodname">get\_defined\_functions</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$exclude_disabled`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 获取所有已定义函数的数组。
 
@@ -1350,7 +1350,7 @@ method.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1437,7 +1437,7 @@ The function name, as a string.
 -   [func\_num\_args](/ref/funchand.html#func_num_args) — Returns the
     number of arguments passed to the function
 -   [function\_exists](/ref/funchand.html#function_exists) —
-    如果给定的函数已经被定义就返回 TRUE
+    如果给定的函数已经被定义就返回 true
 -   [get\_defined\_functions](/ref/funchand.html#get_defined_functions)
     — 返回所有已定义函数的数组
 -   [register\_shutdown\_function](/ref/funchand.html#register_shutdown_function)

@@ -689,7 +689,7 @@ The index being checked.
 
 ### 返回值
 
-**`TRUE`** if the requested `index` exists, otherwise **`FALSE`**
+**`true`** if the requested `index` exists, otherwise **`false`**
 
 SplDoublyLinkedList::offsetGet
 ==============================
@@ -1049,8 +1049,8 @@ Checks if the doubly linked list contains any more nodes.
 
 ### 返回值
 
-Returns **`TRUE`** if the doubly linked list contains any more nodes,
-**`FALSE`** otherwise.
+Returns **`true`** if the doubly linked list contains any more nodes,
+**`false`** otherwise.
 
 简介
 ----
@@ -1812,7 +1812,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-Returns **`TRUE`** if the heap is corrupted, **`FALSE`** otherwise.
+Returns **`true`** if the heap is corrupted, **`false`** otherwise.
 
 SplHeap::isEmpty
 ================
@@ -1960,7 +1960,7 @@ Checks if the heap contains any more nodes.
 
 ### 返回值
 
-Returns **`TRUE`** if the heap contains any more nodes, **`FALSE`**
+Returns **`true`** if the heap contains any more nodes, **`false`**
 otherwise.
 
 简介
@@ -2455,7 +2455,7 @@ The associated priority.
 
 ### 返回值
 
-Returns **`TRUE`**.
+Returns **`true`**.
 
 SplPriorityQueue::isCorrupted
 =============================
@@ -2474,7 +2474,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-Returns **`TRUE`** if the priority queue is corrupted, **`FALSE`**
+Returns **`true`** if the priority queue is corrupted, **`false`**
 otherwise.
 
 SplPriorityQueue::isEmpty
@@ -2652,7 +2652,7 @@ Checks if the queue contains any more nodes.
 
 ### 返回值
 
-Returns **`TRUE`** if the queue contains any more nodes, **`FALSE`**
+Returns **`true`** if the queue contains any more nodes, **`false`**
 otherwise.
 
 简介
@@ -2696,7 +2696,7 @@ class="modifier">static</span> <span class="type">SplFixedArray</span>
 <span class="methodname">fromArray</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$save_indexes`<span class="initializer"> = **`TRUE`**</span></span> \]
+`$save_indexes`<span class="initializer"> = **`true`**</span></span> \]
 )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -2818,7 +2818,7 @@ class="methodname">SplFixedArray::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$size`<span
 class="initializer"> = 0</span></span> \] )
 
-Initializes a fixed array with a number of **`NULL`** values equal to
+Initializes a fixed array with a number of **`null`** values equal to
 `size`.
 
 ### 参数
@@ -2913,7 +2913,7 @@ echo count($array) . "\n";
 > **Note**:
 >
 > The count of elements is always equal to the set size because all
-> values are initially initialized with **`NULL`**.
+> values are initially initialized with **`null`**.
 
 ### 参见
 
@@ -2958,7 +2958,7 @@ class="modifier">static</span> <span class="type">SplFixedArray</span>
 <span class="methodname">SplFixedArray::fromArray</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$save_indexes`<span class="initializer"> = **`TRUE`**</span></span> \]
+`$save_indexes`<span class="initializer"> = **`true`**</span></span> \]
 )
 
 Import the PHP array `array` in a new <span
@@ -3128,7 +3128,7 @@ The index being checked.
 
 ### 返回值
 
-**`TRUE`** if the requested `index` exists, otherwise **`FALSE`**
+**`true`** if the requested `index` exists, otherwise **`false`**
 
 SplFixedArray::offsetGet
 ========================
@@ -3254,7 +3254,7 @@ class="methodparam"><span class="type">int</span> `$size`</span> )
 Change the size of an array to the new size of `size`. If `size` is less
 than the current array size, any values after the new size will be
 discarded. If `size` is greater than the current array size, the array
-will be padded with **`NULL`** values.
+will be padded with **`null`** values.
 
 ### 参数
 
@@ -3264,7 +3264,7 @@ The new array size. This should be a value between *0* and
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -3358,7 +3358,7 @@ Checks if the array contains any more elements.
 
 ### 返回值
 
-Returns **`TRUE`** if the array contains any more elements, **`FALSE`**
+Returns **`true`** if the array contains any more elements, **`false`**
 otherwise.
 
 SplFixedArray::\_\_wakeup
@@ -3413,7 +3413,7 @@ class="type">SplObjectStorage</span> `$storage`</span> )
 <span class="methodname">attach</span> ( <span class="methodparam"><span
 class="type">object</span> `$object`</span> \[, <span
 class="methodparam"><span class="type">mixed</span> `$data`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">contains</span> ( <span
@@ -3458,7 +3458,7 @@ class="methodparam"><span class="type">object</span> `$object`</span> )
 <span class="methodname">offsetSet</span> ( <span
 class="methodparam"><span class="type">object</span> `$object`</span>
 \[, <span class="methodparam"><span class="type">mixed</span>
-`$data`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$data`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">offsetUnset</span> ( <span
@@ -3626,7 +3626,7 @@ Adds an object in the storage
 <span class="methodname">SplObjectStorage::attach</span> ( <span
 class="methodparam"><span class="type">object</span> `$object`</span>
 \[, <span class="methodparam"><span class="type">mixed</span>
-`$data`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$data`<span class="initializer"> = **`null`**</span></span> \] )
 
 Adds an <span class="type">object</span> inside the storage, and
 optionally associate it to some data.
@@ -3693,8 +3693,8 @@ The <span class="type">object</span> to look for.
 
 ### 返回值
 
-Returns **`TRUE`** if the <span class="type">object</span> is in the
-storage, **`FALSE`** otherwise.
+Returns **`true`** if the <span class="type">object</span> is in the
+storage, **`false`** otherwise.
 
 ### 范例
 
@@ -4185,8 +4185,8 @@ The <span class="type">object</span> to look for.
 
 ### 返回值
 
-Returns **`TRUE`** if the <span class="type">object</span> exists in the
-storage, and **`FALSE`** otherwise.
+Returns **`true`** if the <span class="type">object</span> exists in the
+storage, and **`false`** otherwise.
 
 ### 范例
 
@@ -4289,7 +4289,7 @@ Associates data to an object in the storage
 <span class="methodname">SplObjectStorage::offsetSet</span> ( <span
 class="methodparam"><span class="type">object</span> `$object`</span>
 \[, <span class="methodparam"><span class="type">mixed</span>
-`$data`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$data`<span class="initializer"> = **`null`**</span></span> \] )
 
 Associate data to an <span class="type">object</span> in the storage.
 
@@ -4733,7 +4733,7 @@ Returns if the current iterator entry is valid.
 
 ### 返回值
 
-Returns **`TRUE`** if the iterator entry is valid, **`FALSE`**
+Returns **`true`** if the iterator entry is valid, **`false`**
 otherwise.
 
 ### 范例

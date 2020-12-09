@@ -44,7 +44,7 @@ class="methodparam">void</span> )
 <span class="function">serialize</span>
 函数会检查类中是否存在一个魔术方法
 <a href="/language/oop5/magic.html#object.sleep" class="link">__sleep()</a>。如果存在，该方法会先被调用，然后才执行序列化操作。此功能可以用于清理对象，并返回一个包含对象中所有应被序列化的变量名称的数组。如果该方法未返回任何内容，则
-**`NULL`** 被序列化，并产生一个 **`E_NOTICE`** 级别的错误。
+**`null`** 被序列化，并产生一个 **`E_NOTICE`** 级别的错误。
 
 > **Note**:
 >

@@ -32,11 +32,11 @@ class="type">SimpleXMLElement</span> class.
 ### 返回值
 
 Returns a <span class="type">SimpleXMLElement</span> 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -88,7 +88,7 @@ class="type">int</span> `$options`<span class="initializer"> =
 class="type">string</span> `$ns`<span class="initializer"> =
 ""</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_prefix`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\]\] )
+**`false`**</span></span> \]\]\]\] )
 
 Convert the well-formed XML document in the given file to an object.
 
@@ -120,18 +120,18 @@ parameter to specify
 Namespace prefix or URI.
 
 `is_prefix`  
-**`TRUE`** if `ns` is a prefix, **`FALSE`** if it's a URI; defaults to
-**`FALSE`**.
+**`true`** if `ns` is a prefix, **`false`** if it's a URI; defaults to
+**`false`**.
 
 ### 返回值
 
 Returns an <span class="type">object</span> of class <span
 class="type">SimpleXMLElement</span> with properties containing the data
-held within the XML document, 或者在失败时返回 **`FALSE`**.
+held within the XML document, 或者在失败时返回 **`false`**.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -211,7 +211,7 @@ class="type">int</span> `$options`<span class="initializer"> =
 class="type">string</span> `$ns`<span class="initializer"> =
 ""</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_prefix`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\]\] )
+**`false`**</span></span> \]\]\]\] )
 
 Takes a well-formed XML string and returns it as an object.
 
@@ -235,18 +235,18 @@ parameter to specify
 Namespace prefix or URI.
 
 `is_prefix`  
-**`TRUE`** if `ns` is a prefix, **`FALSE`** if it's a URI; defaults to
-**`FALSE`**.
+**`true`** if `ns` is a prefix, **`false`** if it's a URI; defaults to
+**`false`**.
 
 ### 返回值
 
 Returns an <span class="type">object</span> of class <span
 class="type">SimpleXMLElement</span> with properties containing the data
-held within the xml document, 或者在失败时返回 **`FALSE`**.
+held within the xml document, 或者在失败时返回 **`false`**.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。

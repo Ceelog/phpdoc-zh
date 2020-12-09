@@ -75,10 +75,10 @@ context options.
 While not recommended in general, it is possible to disable peer
 certificate verification for a request by setting the
 <a href="/context/ssl.html#context.ssl.verify-peer" class="link"><code class="parameter">verify_peer</code></a>
-context option to **`FALSE`**, and to disable peer name validation by
+context option to **`false`**, and to disable peer name validation by
 setting the
 <a href="/context/ssl.html#context.ssl.verify-peer-name" class="link"><code class="parameter">verify_peer_name</code></a>
-context option to **`FALSE`**.
+context option to **`false`**.
 
 ### <a href="/book/gmp.html" class="link">GMP</a> 资源现为对象
 
@@ -101,6 +101,6 @@ class="function">mcrypt\_ofb</span>
 
 ### <a href="/book/curl.html" class="link">cURL</a> 文件上传
 
-必须先设置 CURLOPT\_SAFE\_UPLOAD 为 **`FALSE`** 才能够使用 @file
+必须先设置 CURLOPT\_SAFE\_UPLOAD 为 **`false`** 才能够使用 @file
 语法来上传文件。 建议使用 <span class="classname">CURLFile</span>
 类来上传文件。

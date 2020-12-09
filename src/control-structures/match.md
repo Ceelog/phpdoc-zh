@@ -1,5 +1,5 @@
-*match*
--------
+match
+-----
 
 The *match* expression branches evaluation based on an identity check of
 a value. Similarly to a *switch* statement, a *match* expression has a

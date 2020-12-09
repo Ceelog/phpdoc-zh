@@ -27,8 +27,8 @@ class="initializer"> = DEBUG\_BACKTRACE\_PROVIDE\_OBJECT</span></span>
 | DEBUG\_BACKTRACE\_PROVIDE\_OBJECT | 是否填充 "object" 的索引。                                                    |
 | DEBUG\_BACKTRACE\_IGNORE\_ARGS    | 是否忽略 "args" 的索引，包括所有的 function/method 的参数，能够节省内存开销。 |
 
-在 5.3.6 之前，仅仅能使用的值是 **`TRUE`** 或者
-**`FALSE`**，分别等于是否设置 **`DEBUG_BACKTRACE_PROVIDE_OBJECT`**
+在 5.3.6 之前，仅仅能使用的值是 **`true`** 或者
+**`false`**，分别等于是否设置 **`DEBUG_BACKTRACE_PROVIDE_OBJECT`**
 选项。
 
 `limit`  
@@ -272,7 +272,7 @@ class="methodparam">void</span> )
 返回了一个关联数组，描述了最后错误的信息，以该错误的 "type"、
 "message"、"file" 和 "line" 为数组的键。 如果该错误由 PHP
 内置函数导致的，"message"会以该函数名开头。 如果还没有错误则返回
-**`NULL`**。
+**`null`**。
 
 ### 范例
 
@@ -347,7 +347,7 @@ class="type">string</span> `$extra_headers`</span> \]\]\] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -510,7 +510,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-该函数总是返回 **`TRUE`**。
+该函数总是返回 **`true`**。
 
 ### 范例
 
@@ -561,7 +561,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-该函数总是返回 **`TRUE`**。
+该函数总是返回 **`true`**。
 
 ### 范例
 
@@ -622,7 +622,7 @@ E\_ALL \| E\_STRICT</span></span> \] )
 class="function">trigger\_error</span>)，你需要对数据/文件做清理回收。
 
 重要的是要记住 `error_types` 里指定的错误类型都会绕过 PHP
-标准错误处理程序， 除非回调函数返回了 **`FALSE`**。 <span
+标准错误处理程序， 除非回调函数返回了 **`false`**。 <span
 class="function">error\_reporting</span>
 设置将不会起到作用而你的错误处理函数继续会被调用 —— 不过你仍然可以获取
 <a href="/errorfunc/setup.html#PHP外的PHP常量" class="link">error_reporting</a>
@@ -646,7 +646,7 @@ class="function">set\_error\_handler</span> 函数所在文件中产生的大多
 ### 参数
 
 `error_handler`  
-以下格式的回调（callback）： 可以传入 **`NULL`**
+以下格式的回调（callback）： 可以传入 **`null`**
 重置处理程序到默认状态。
 除了可以传入函数名，还可以传入引用对象和对象方法名的数组。
 
@@ -685,7 +685,7 @@ string。 </span>
 **Warning**
 PHP 7.2.0 后此参数被*弃用*了。 极其不建议依赖它。
 
-如果函数返回 **`FALSE`**，标准错误处理处理程序将会继续调用。
+如果函数返回 **`false`**，标准错误处理处理程序将会继续调用。
 
 `error_types`  
 就像<a href="/errorfunc/setup.html#PHP外的PHP常量" class="link">error_reporting</a>
@@ -697,8 +697,8 @@ PHP 7.2.0 后此参数被*弃用*了。 极其不建议依赖它。
 ### 返回值
 
 如果之前有定义过错误处理程序，则返回该程序名称的
-string；如果是内置的错误处理程序，则返回 **`NULL`**。
-如果你指定了一个无效的回调函数，同样会返回 **`NULL`**。
+string；如果是内置的错误处理程序，则返回 **`null`**。
+如果你指定了一个无效的回调函数，同样会返回 **`null`**。
 如果之前的错误处理程序是一个类的方法，此函数会返回一个带类和方法名的索引数组(indexed
 array)。
 
@@ -883,7 +883,7 @@ class="classname">Throwable</span> 接口。 PHP 7 起，处理程序的签名�
 class="replaceable">handler</span></span> ( <span
 class="methodparam"><span class="type">Throwable</span> `$ex`</span> )
 
-也可以传递 **`NULL`** 值用于重置异常处理函数为默认值。
+也可以传递 **`null`** 值用于重置异常处理函数为默认值。
 
 **Caution**
 注意，如果在用户回调里将 `ex` 参数的类型明确约束为<span
@@ -892,15 +892,15 @@ class="classname">Exception</span>， PHP 7
 
 ### 返回值
 
-返回之前定义的异常处理程序的名称，或者在错误时返回 **`NULL`**。
-如果之前没有定义错误处理程序，也会返回 **`NULL`**。
+返回之前定义的异常处理程序的名称，或者在错误时返回 **`null`**。
+如果之前没有定义错误处理程序，也会返回 **`null`**。
 
 ### 更新日志
 
 | 版本  | 说明                                                                                                                     |
 |-------|--------------------------------------------------------------------------------------------------------------------------|
 | 7.0.0 | 传入 `exception_handler` 的参数从 <span class="classname">Exception</span> 改为 <span class="classname">Throwable</span> |
-| 5.5.0 | 之前版本里，如果传入 **`NULL`** ，函数会返回 **`TRUE`**。 自 PHP 5.5.0 后，会返回上一次的异常处理器。                    |
+| 5.5.0 | 之前版本里，如果传入 **`null`** ，函数会返回 **`true`**。 自 PHP 5.5.0 后，会返回上一次的异常处理器。                    |
 
 ### 范例
 
@@ -957,8 +957,8 @@ class="function">set\_error\_handler</span>)。
 
 ### 返回值
 
-如果指定了错误的 `error_type` 会返回 **`FALSE`** ，正确则返回
-**`TRUE`**。
+如果指定了错误的 `error_type` 会返回 **`false`** ，正确则返回
+**`true`**。
 
 ### 范例
 

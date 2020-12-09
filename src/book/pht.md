@@ -296,7 +296,7 @@ class="classname">pht\\Thread</span>s internal task queue.
 
 `func`  
 The function to be threaded. If it is bound to an instance, then *$this*
-will become **`NULL`**.
+will become **`null`**.
 
 `funcArgs`  
 An optional list of arguments for the function. These arguments will be

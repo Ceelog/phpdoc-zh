@@ -23,7 +23,7 @@ chdir
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -92,7 +92,7 @@ chroot
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -180,7 +180,7 @@ class="type">resource</span> `$context`</span> \] )
 ### 返回值
 
 成功的话，返回一个 <span class="classname">Directory</span> 类实例,
-参数错误的情况下返回 **`NULL`** ， 其它错误情况返回 **`FALSE`** 。
+参数错误的情况下返回 **`null`** ， 其它错误情况返回 **`false`** 。
 
 ### 范例
 
@@ -189,7 +189,7 @@ class="type">resource</span> `$context`</span> \] )
 请特别注意下面示例中 <span class="function">Directory::read</span>
 函数返回值的判断方式。 我们严格测试（值相等，并且类型相同，请参考
 <a href="/language/operators/comparison.html" class="link">比较运算符</a>
-）返回值等于 **`FALSE`** ，因为有些情况下，目录名可能"等于" **`FALSE`**
+）返回值等于 **`false`** ，因为有些情况下，目录名可能"等于" **`false`**
 ，导致 跳出循环。
 
 ``` php
@@ -234,12 +234,12 @@ getcwd
 
 ### 返回值
 
-成功则返回当前工作目录，失败返回 **`FALSE`**。
+成功则返回当前工作目录，失败返回 **`false`**。
 
 在某些 Unix
 的变种下，如果任何父目录没有设定可读或搜索模式，即使当前目录设定了，<span
 class="function">getcwd</span> 还是会返回
-**`FALSE`**。有关模式与权限的更多信息见 <span
+**`false`**。有关模式与权限的更多信息见 <span
 class="function">chmod</span>。
 
 ### 范例
@@ -299,11 +299,11 @@ class="function">closedir</span>，<span class="function">readdir</span>
 ### 返回值
 
 如果成功则返回目录句柄的 <span class="type">resource</span>，失败则返回
-**`FALSE`**。
+**`false`**。
 
 如果 `path`
 不是一个合法的目录或者因为权限限制或文件系统错误而不能打开目录，<span
-class="function">opendir</span> 返回 **`FALSE`** 并产生一个
+class="function">opendir</span> 返回 **`false`** 并产生一个
 <a href="/errorfunc/constants.html" class="link">E_WARNING</a> 级别的
 PHP 错误信息。可以在 <span class="function">opendir</span>
 前面加上“<a href="/language/operators/errorcontrol.html" class="link">@</a>”符号来抑制错误信息的输出。
@@ -370,11 +370,11 @@ class="function">opendir</span> 打开
 
 ### 返回值
 
-成功则返回文件名 或者在失败时返回 **`FALSE`**
+成功则返回文件名 或者在失败时返回 **`false`**
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -384,8 +384,8 @@ class="function">opendir</span> 打开
 **示例 \#1 列出目录中的所有文件**
 
 请留意下面例子中检查 <span class="function">readdir</span>
-返回值的风格。这里明确地测试返回值是否全等于（值和类型都相同——更多信息参见<a href="/language/operators/comparison.html" class="link">比较运算符</a>）**`FALSE`**，否则任何目录项的名称求值为
-**`FALSE`** 的都会导致循环停止（例如一个目录名为“0”）。
+返回值的风格。这里明确地测试返回值是否全等于（值和类型都相同——更多信息参见<a href="/language/operators/comparison.html" class="link">比较运算符</a>）**`false`**，否则任何目录项的名称求值为
+**`false`** 的都会导致循环停止（例如一个目录名为“0”）。
 
 ``` php
 <?php
@@ -484,7 +484,7 @@ class="methodparam"><span class="type">resource</span> `$context`</span>
 ### 返回值
 
 成功则返回包含有文件名的 <span class="type">array</span>，如果失败则返回
-**`FALSE`**。如果 `directory` 不是个目录，则返回布尔值 **`FALSE`**
+**`false`**。如果 `directory` 不是个目录，则返回布尔值 **`false`**
 并生成一条 **`E_WARNING`** 级的错误。
 
 ### 更新日志

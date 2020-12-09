@@ -88,7 +88,7 @@ class="classname">IntlException</span>. This is possibly in addition to
 the error message generated due to
 <a href="/intl/setup.html#" class="link">intl.error_level</a>.
 
-The default value is **`FALSE`**.
+The default value is **`false`**.
 
 资源类型
 --------

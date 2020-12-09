@@ -20,7 +20,7 @@ class="function">get\_defined\_constants</span>
 可以获得所有已定义的常量列表。
 
 > **Note**: <span class="simpara">
-> 常量和（全局）变量在不同的名字空间中。这意味着例如 **`TRUE`** 和
+> 常量和（全局）变量在不同的名字空间中。这意味着例如 **`true`** 和
 > `$TRUE` 是不同的。 </span>
 
 如果使用了一个未定义的常量，PHP

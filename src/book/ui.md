@@ -908,7 +908,7 @@ class="methodname">\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$title`</span> ,
 <span class="methodparam"><span class="type">Size</span> `$size`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$menu`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$menu`<span class="initializer"> = **`false`**</span></span> \] )
 
 /\* 方法 \*/
 
@@ -1063,7 +1063,7 @@ class="methodname">UI\\Window::\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$title`</span> ,
 <span class="methodparam"><span class="type">Size</span> `$size`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$menu`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$menu`<span class="initializer"> = **`false`**</span></span> \] )
 
 Shall construct a new Window
 
@@ -4845,7 +4845,7 @@ class="type">string</span> `$label`</span> , <span
 class="methodparam"><span class="type">UI\\Control</span>
 `$control`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$stretchy`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">delete</span> ( <span class="methodparam"><span
@@ -4924,7 +4924,7 @@ class="methodparam"><span class="type">string</span> `$label`</span> ,
 <span class="methodparam"><span class="type">UI\\Control</span>
 `$control`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$stretchy`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Shall append the control to the form, and set the label
 
@@ -5469,7 +5469,7 @@ class="initializer"> = UI\\Controls\\Box::Horizontal</span></span> \] )
 class="methodname">append</span> ( <span class="methodparam"><span
 class="type">Control</span> `$control`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$stretchy`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">delete</span> ( <span class="methodparam"><span
@@ -5557,7 +5557,7 @@ Append Control
 class="methodname">UI\\Controls\\Box::append</span> ( <span
 class="methodparam"><span class="type">Control</span> `$control`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$stretchy`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$stretchy`<span class="initializer"> = **`false`**</span></span> \] )
 
 Shall append the given control to this Box
 

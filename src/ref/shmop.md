@@ -66,7 +66,7 @@ class="function">shmop\_open</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -147,7 +147,7 @@ The size of the shared memory block you wish to create in bytes
 
 On success <span class="function">shmop\_open</span> will return a <span
 class="classname">Shmop</span> instance that you can use to access the
-shared memory segment you've created. **`FALSE`** is returned on
+shared memory segment you've created. **`false`** is returned on
 failure.
 
 ### 更新日志
@@ -206,7 +206,7 @@ bytes.
 
 ### 返回值
 
-Returns the data 或者在失败时返回 **`FALSE`**.
+Returns the data 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -312,7 +312,7 @@ The size of the written `data`.
 
 | 版本  | 说明                                                                                                                                |
 |-------|-------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | Prior to PHP 8.0.0, **`FALSE`** was returned on failure.                                                                            |
+| 8.0.0 | Prior to PHP 8.0.0, **`false`** was returned on failure.                                                                            |
 | 8.0.0 | `shmop` expects a <span class="classname">Shmop</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### 范例

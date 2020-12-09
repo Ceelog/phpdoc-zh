@@ -6,9 +6,9 @@
 
 -   <span class="simpara"> 在 PHP 5.3.x
     的所有绑定扩展中应用了新的内部参数解析
-    API，当给函数传递了不兼容的参数时将返回 **`NULL`**。 <span
+    API，当给函数传递了不兼容的参数时将返回 **`null`**。 <span
     class="function">get\_class</span> 在出现错误时将会返回
-    **`FALSE`**。 </span>
+    **`false`**。 </span>
 -   <span class="simpara"> <span class="function">clearstatcache</span>
     默认不再清除 realpath 的缓存。 </span>
 -   <span class="simpara"> <span class="function">realpath</span>

@@ -354,10 +354,10 @@ class="function">fbsql\_connect</span> 来创建一个。
 If this optional parameter is given the auto commit status will be
 changed.
 
-With `OnOff` set to **`TRUE`** each statement will be committed
+With `OnOff` set to **`true`** each statement will be committed
 automatically, if no errors was found.
 
-With OnOff set to **`FALSE`** the user must commit or rollback the
+With OnOff set to **`false`** the user must commit or rollback the
 transaction using either <span class="function">fbsql\_commit</span> or
 <span class="function">fbsql\_rollback</span>.
 
@@ -401,7 +401,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-Returns the BLOB size as an integer, or **`FALSE`** on error.
+Returns the BLOB size as an integer, or **`false`** on error.
 
 ### 参见
 
@@ -449,7 +449,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 fbsql\_clob\_size
 =================
@@ -482,7 +482,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-Returns the CLOB size as an integer, or **`FALSE`** on error.
+Returns the CLOB size as an integer, or **`false`** on error.
 
 ### 参见
 
@@ -519,7 +519,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -567,7 +567,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -616,7 +616,7 @@ The password for the connection.
 
 ### 返回值
 
-Returns a positive FrontBase link identifier on success, or **`FALSE`**
+Returns a positive FrontBase link identifier on success, or **`false`**
 on errors.
 
 ### 范例
@@ -793,7 +793,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -845,7 +845,7 @@ The row number. Starts at 0.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1013,7 +1013,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 ### 返回值
 
 Returns a positive FrontBase result identifier to the query result, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### 参见
 
@@ -1053,7 +1053,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 Returns an integer value with the current status. This can be one of the
 following constants:
 
--   <span class="simpara"> **`FALSE`** - The exec handler for the host
+-   <span class="simpara"> **`false`** - The exec handler for the host
     was invalid. This error will occur when the `link_identifier`
     connects directly to a database by using a port number. FBExec can
     be available on the server but no connection has been made for it.
@@ -1110,7 +1110,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1269,7 +1269,7 @@ associative indices, using the field names as keys.
 
 ### 返回值
 
-Returns an array that corresponds to the fetched row, or **`FALSE`** if
+Returns an array that corresponds to the fetched row, or **`false`** if
 there are no more rows.
 
 If two or more columns of the result have the same field names, the last
@@ -1340,7 +1340,7 @@ class="function">fbsql\_db\_query</span> 返回的结果标识符。
 ### 返回值
 
 Returns an associative array that corresponds to the fetched row, or
-**`FALSE`** if there are no more rows.
+**`false`** if there are no more rows.
 
 If two or more columns of the result have the same field names, the last
 column will take precedence. To access the other column(s) of the same
@@ -1398,7 +1398,7 @@ class="function">fbsql\_fetch\_field</span> is retrieved.
 
 ### 返回值
 
-Returns an object containing field information, or **`FALSE`** on
+Returns an object containing field information, or **`false`** on
 errors.
 
 The properties of the object are:
@@ -1409,7 +1409,7 @@ The properties of the object are:
 -   <span class="simpara"> max\_length - maximum length of the column
     </span>
 -   <span class="simpara"> not\_null - 1 if the column cannot be
-    **`NULL`** </span>
+    **`null`** </span>
 -   <span class="simpara"> type - the type of the column </span>
 
 ### 范例
@@ -1474,7 +1474,7 @@ class="function">fbsql\_db\_query</span> 返回的结果标识符。
 
 Returns an array, starting at offset 0, that corresponds to the lengths
 of each field in the last row fetched by <span
-class="function">fbsql\_fetch\_row</span>, or **`FALSE`** on error.
+class="function">fbsql\_fetch\_row</span>, or **`false`** on error.
 
 ### 参见
 
@@ -1512,7 +1512,7 @@ class="function">fbsql\_db\_query</span> 返回的结果标识符。
 ### 返回值
 
 Returns an object with properties that correspond to the fetched row, or
-**`FALSE`** if there are no more rows.
+**`false`** if there are no more rows.
 
 ### 范例
 
@@ -1552,7 +1552,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 from the result associated with the specified result identifier.
 
 Subsequent call to <span class="function">fbsql\_fetch\_row</span> would
-return the next row in the result set, or **`FALSE`** if there are no
+return the next row in the result set, or **`false`** if there are no
 more rows.
 
 ### 参数
@@ -1564,7 +1564,7 @@ class="function">fbsql\_db\_query</span> 返回的结果标识符。
 ### 返回值
 
 Returns an array that corresponds to the fetched row where each result
-column is stored in an offset, starting at offset 0, or **`FALSE`** if
+column is stored in an offset, starting at offset 0, or **`false`** if
 there are no more rows.
 
 ### 参见
@@ -1660,7 +1660,7 @@ The numerical offset of the field. The field index starts at 0.
 
 ### 返回值
 
-Returns the name as a string, or **`FALSE`** if the field doesn't exist.
+Returns the name as a string, or **`false`** if the field doesn't exist.
 
 ### 范例
 
@@ -1718,7 +1718,7 @@ The numerical offset of the field. The field index starts at 0.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1846,7 +1846,7 @@ class="function">fbsql\_db\_query</span> 返回的结果标识符。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 fbsql\_get\_autostart\_info
 ===========================
@@ -1982,7 +1982,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-Returns a result pointer or **`FALSE`** on error.
+Returns a result pointer or **`false`** on error.
 
 ### 范例
 
@@ -2052,7 +2052,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 ### 返回值
 
 Returns a result pointer which can be used with the *fbsql\_field\_xxx*
-functions, or **`FALSE`** on error.
+functions, or **`false`** on error.
 
 ### 错误／异常
 
@@ -2123,7 +2123,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 Returns a result pointer which can be used with the <span
 class="function">fbsql\_tablename</span> function to read the actual
-table names, or **`FALSE`** on error.
+table names, or **`false`** on error.
 
 ### 参见
 
@@ -2157,8 +2157,8 @@ class="function">fbsql\_db\_query</span> 返回的结果标识符。
 
 ### 返回值
 
-Returns **`TRUE`** if an additional result set was available or
-**`FALSE`** otherwise.
+Returns **`true`** if an additional result set was available or
+**`false`** otherwise.
 
 ### 范例
 
@@ -2351,7 +2351,7 @@ The password for the connection.
 ### 返回值
 
 Returns a positive FrontBase persistent link identifier on success, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### 参见
 
@@ -2400,9 +2400,9 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-<span class="function">fbsql\_query</span> returns **`TRUE`** (non-zero)
-or **`FALSE`** to indicate whether or not the query succeeded. A return
-value of **`TRUE`** means that the query was legal and could be executed
+<span class="function">fbsql\_query</span> returns **`true`** (non-zero)
+or **`false`** to indicate whether or not the query succeeded. A return
+value of **`true`** means that the query was legal and could be executed
 by the server. It does not indicate anything about the number of rows
 affected or returned. It is perfectly possible for a query to succeed
 but affect no rows or return no rows.
@@ -2412,13 +2412,13 @@ returns a new result identifier that you can pass to <span
 class="function">fbsql\_result</span>.
 
 <span class="function">fbsql\_query</span> will also fail and return
-**`FALSE`** if you don't have permission to access the table(s)
+**`false`** if you don't have permission to access the table(s)
 referenced by the query.
 
 ### 范例
 
 The following query is syntactically invalid, so <span
-class="function">fbsql\_query</span> fails and returns **`FALSE`**:
+class="function">fbsql\_query</span> fails and returns **`false`**:
 
 **示例 \#1 <span class="function">fbsql\_query</span> example**
 
@@ -2431,7 +2431,7 @@ $result = fbsql_query("SELECT * WHERE 1=1")
 
 The following query is semantically invalid if *my\_col* is not a column
 in the table *my\_tbl*, so <span class="function">fbsql\_query</span>
-fails and returns **`FALSE`**:
+fails and returns **`false`**:
 
 **示例 \#2 <span class="function">fbsql\_query</span> example**
 
@@ -2677,7 +2677,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2751,7 +2751,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2828,7 +2828,7 @@ Can be one of:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2876,7 +2876,7 @@ The old password to be replaced.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 fbsql\_set\_transaction
 =======================
@@ -2953,7 +2953,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2990,7 +2990,7 @@ class="function">fbsql\_connect</span> 来创建一个。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3112,7 +3112,7 @@ Whether to enable warnings or no.
 
 ### 返回值
 
-Returns **`TRUE`** if warnings is turned on, **`FALSE`** otherwise.
+Returns **`true`** if warnings is turned on, **`false`** otherwise.
 
 ### 参见
 

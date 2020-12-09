@@ -585,8 +585,8 @@ class="methodname">SDO\_DAS\_XML\_Document::setXMLDeclaration</span> (
 `$xmlDeclatation`</span> )
 
 Controls whether an XML declaration will be generated at the start of
-the XML document. Set to **`TRUE`** to generate the XML declaration, or
-**`FALSE`** to suppress it.
+the XML document. Set to **`true`** to generate the XML declaration, or
+**`false`** to suppress it.
 
 ### 参数
 

@@ -99,7 +99,7 @@ class="type">mixed</span> `$group`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -184,7 +184,7 @@ chmod("/somedir/somefile", 0750);
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -228,7 +228,7 @@ class="type">mixed</span> `$user`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -302,7 +302,7 @@ class="function">lstat</span>
 必须注意的是，对于不存在的文件，PHP 并不会缓存其信息。所以如果调用 <span
 class="function">file\_exists</span>
 来检查不存在的文件，在该文件没有被创建之前，它都会返回
-**`FALSE`**。如果该文件被创建了，就算以后被删除，它都会返回 **`TRUE`**
+**`false`**。如果该文件被创建了，就算以后被删除，它都会返回 **`true`**
 函数 <span class="function">unlink</span> 会自动清除该缓存.
 
 > **Note**:
@@ -336,7 +336,7 @@ class="function">fileperms</span>。
 
 `filename`  
 清除文件名指定的文件的真实路径缓存; 只在 `clear_realpath_cache` 为
-**`TRUE`** 时启用
+**`true`** 时启用
 
 ### 返回值
 
@@ -417,7 +417,7 @@ class="function">stream\_context\_create</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -564,7 +564,7 @@ class="methodparam"><span class="type">string</span> `$directory`</span>
 
 ### 返回值
 
-以浮点返回可用的字节数， 或者在失败时返回 **`FALSE`**。
+以浮点返回可用的字节数， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -614,7 +614,7 @@ class="methodparam"><span class="type">string</span> `$directory`</span>
 
 ### 返回值
 
-以浮点返回一个目录的磁盘总大小字节数， 或者在失败时返回 **`FALSE`**。
+以浮点返回一个目录的磁盘总大小字节数， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -670,7 +670,7 @@ fclose
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -713,8 +713,8 @@ class="function">fclose</span> 关闭)。
 
 ### 返回值
 
-如果文件指针到了 EOF 或者出错时则返回 **`TRUE`**，否则返回一个错误（包括
-socket 超时），其它情况则返回 **`FALSE`**。
+如果文件指针到了 EOF 或者出错时则返回 **`true`**，否则返回一个错误（包括
+socket 超时），其它情况则返回 **`false`**。
 
 ### 注释
 
@@ -749,7 +749,7 @@ while(!safe_feof($fp, $start) && (microtime(true) - $start) < $timeout)
 **Warning**
 
 如果传递的文件指针无效可能会陷入无限循环中，因为 <span
-class="function">feof</span> 不会返回 **`TRUE`**。
+class="function">feof</span> 不会返回 **`true`**。
 
 **示例 \#2 使用无效文件指针的 <span class="function">feof</span> 例子**
 
@@ -778,7 +778,7 @@ fflush
 `$handle`</span> )
 
 本函数强制将所有缓冲的输出写入 `handle` 文件句柄所指向的资源。
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 文件指针必须是有效的，必须指向由 <span class="function">fopen</span> 或
 <span class="function">fsockopen</span> 成功打开的文件(并还未由 <span
@@ -793,7 +793,7 @@ class="function">fclose</span> 关闭)。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -841,11 +841,11 @@ class="function">fclose</span> 关闭)。
 ### 返回值
 
 返回一个包含有一个字符的字符串，该字符从 `handle` 指向的文件中得到。
-碰到 EOF 则返回 **`FALSE`**。
+碰到 EOF 则返回 **`false`**。
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -938,7 +938,7 @@ PHP 5.0.4 以后的版本中设为
 > 也许可以解决此问题。</span>
 
 如果提供了无效的文件指针，<span class="function">fgetcsv</span> 会返回
-**`NULL`**。 其他错误，包括碰到文件结束时返回 **`FALSE`**，。
+**`null`**。 其他错误，包括碰到文件结束时返回 **`false`**，。
 
 ### 更新日志
 
@@ -1014,9 +1014,9 @@ class="function">fclose</span> 关闭)。
 ### 返回值
 
 从指针 `handle` 指向的文件中读取了 `length` - 1 字节后返回字符串。
-如果文件指针中没有更多的数据了则返回 **`FALSE`**。
+如果文件指针中没有更多的数据了则返回 **`false`**。
 
-错误发生时返回 **`FALSE`**。
+错误发生时返回 **`false`**。
 
 ### 范例
 
@@ -1097,7 +1097,7 @@ class="function">fclose</span> 关闭)。
 从 `handle` 指向的文件中大读取 `length` - 1 个字节的字符，并过滤了所有的
 HTML 和 PHP 代码。
 
-错误发生时返回 **`FALSE`**。
+错误发生时返回 **`false`**。
 
 ### 更新日志
 
@@ -1173,12 +1173,12 @@ class="type">string</span> `$filename`</span> )
 
 ### 返回值
 
-如果由 `filename` 指定的文件或目录存在则返回 **`TRUE`**，否则返回
-**`FALSE`**。
+如果由 `filename` 指定的文件或目录存在则返回 **`true`**，否则返回
+**`false`**。
 
 > **Note**:
 >
-> This function will return **`FALSE`** for symlinks pointing to
+> This function will return **`false`** for symlinks pointing to
 > non-existing files.
 
 > **Note**:
@@ -1249,7 +1249,7 @@ class="type">int</span> `$maxlen`</span> \]\]\]\] )
 class="function">file\_get\_contents</span>
 把文件读入一个字符串。将在参数 `offset` 所指定的位置开始读取长度为
 `maxlen` 的内容。如果失败，<span
-class="function">file\_get\_contents</span> 将返回 **`FALSE`**。
+class="function">file\_get\_contents</span> 将返回 **`false`**。
 
 <span class="function">file\_get\_contents</span>
 函数是用来将文件的内容读入到一个字符串中的首选方法。如果操作系统支持还会使用内存映射技术来增强性能。
@@ -1274,7 +1274,7 @@ class="function">file\_get\_contents</span> 将返回 **`FALSE`**。
 `context`  
 A valid context resource created with <span
 class="function">stream\_context\_create</span>. 如果你不需要自定义
-context，可以用 **`NULL`** 来忽略。
+context，可以用 **`null`** 来忽略。
 
 `offset`  
 The offset where the reading starts on the original stream.
@@ -1290,7 +1290,7 @@ the filters.
 
 ### 返回值
 
-The function returns the read data 或者在失败时返回 **`FALSE`**.
+The function returns the read data 或者在失败时返回 **`false`**.
 
 ### 错误／异常
 
@@ -1448,11 +1448,11 @@ class="function">stream\_copy\_to\_stream</span> 函数。
 
 ### 返回值
 
-该函数将返回写入到文件内数据的字节数，失败时返回**`FALSE`**
+该函数将返回写入到文件内数据的字节数，失败时返回**`false`**
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -1570,7 +1570,7 @@ class="function">stream\_context\_create</span> function.
 
 Returns the file in an array. Each element of the array corresponds to a
 line in the file, with the newline still attached. Upon failure, <span
-class="function">file</span> returns **`FALSE`**.
+class="function">file</span> returns **`false`**.
 
 > **Note**:
 >
@@ -1661,7 +1661,7 @@ fileatime
 
 ### 返回值
 
-返回文件上次被访问的时间， 或者在失败时返回 **`FALSE`**。时间以 Unix
+返回文件上次被访问的时间， 或者在失败时返回 **`false`**。时间以 Unix
 时间戳的方式返回。
 
 ### 范例
@@ -1735,7 +1735,7 @@ filectime
 
 ### 返回值
 
-返回文件上次 inode 被修改的时间， 或者在失败时返回 **`FALSE`**。 时间以
+返回文件上次 inode 被修改的时间， 或者在失败时返回 **`false`**。 时间以
 Unix 时间戳的方式返回。
 
 ### 范例
@@ -1814,9 +1814,9 @@ class="function">posix\_getgrgid</span> 来将其解析为组名。
 
 ### 返回值
 
-返回该文件所属组的 ID。或在错误时返回 **`FALSE`**。 组 ID
+返回该文件所属组的 ID。或在错误时返回 **`false`**。 组 ID
 以数字格式返回，用 <span class="function">posix\_getgrgid</span>
-来将其解析为组名。如果出错则返回 **`FALSE`**。
+来将其解析为组名。如果出错则返回 **`false`**。
 
 ### 范例
 
@@ -1831,7 +1831,7 @@ print_r(posix_getgrgid(filegroup($filename)));
 
 ### 错误／异常
 
-如果失败返回 **`FALSE`** 以及一个 **`E_WARNING`** 级别的错误。
+如果失败返回 **`false`** 以及一个 **`E_WARNING`** 级别的错误。
 
 ### 注释
 
@@ -1869,7 +1869,7 @@ fileinode
 
 ### 返回值
 
-返回文件的 inode 节点号， 或者在失败时返回 **`FALSE`**。
+返回文件的 inode 节点号， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1924,7 +1924,7 @@ filemtime
 
 ### 返回值
 
-返回文件上次被修改的时间， 或者在失败时返回 **`FALSE`**。时间以 Unix
+返回文件上次被修改的时间， 或者在失败时返回 **`false`**。时间以 Unix
 时间戳的方式返回，可用于 <span class="function">date</span>。
 
 ### 范例
@@ -1988,7 +1988,7 @@ fileowner
 
 ### 返回值
 
-返回文件所有的用户 ID，如果出错则返回 **`FALSE`**。用户 ID
+返回文件所有的用户 ID，如果出错则返回 **`false`**。用户 ID
 以数字格式返回，用 <span class="function">posix\_getpwuid</span>
 来将其解析为用户名。
 
@@ -2177,7 +2177,7 @@ filesize
 
 ### 返回值
 
-返回文件大小的字节数，如果出错返回 **`FALSE`** 并生成一条
+返回文件大小的字节数，如果出错返回 **`false`** 并生成一条
 **`E_WARNING`** 级的错误。
 
 > **Note**: <span class="simpara"> 因为 PHP
@@ -2241,7 +2241,7 @@ class="type">string</span> `$filename`</span> )
 返回文件的类型。 可能的值有 fifo，char，dir，block，link，file 和
 unknown。
 
-如果出错则返回 **`FALSE`**。如果 stat 调用失败或者文件类型未知的话 <span
+如果出错则返回 **`false`**。如果 stat 调用失败或者文件类型未知的话 <span
 class="function">filetype</span> 还会产生一个 **`E_NOTICE`** 消息。
 
 ### 范例
@@ -2329,12 +2329,12 @@ PHP 支持以咨询方式（也就是说所有访问程序必须使用同一方�
 
 `wouldblock`  
 如果锁定会堵塞的话（EWOULDBLOCK
-错误码情况下），可选的第三个参数会被设置为 **`TRUE`**。（Windows
+错误码情况下），可选的第三个参数会被设置为 **`true`**。（Windows
 上不支持）
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -2423,7 +2423,7 @@ release the lock.
 脚本可以对该文件进行处理。
 
 <span class="function">flock</span> 不支持旧的文件系统，如 *FAT*
-以及它的派生系统。因此，此环境下总是返回 **`FALSE`**（尤其是对 Windows
+以及它的派生系统。因此，此环境下总是返回 **`false`**（尤其是对 Windows
 98 用户来说）。
 
 fnmatch
@@ -2470,7 +2470,7 @@ joined with the
 
 ### 返回值
 
-匹配则返回 **`TRUE`**，否则返回 **`FALSE`**。
+匹配则返回 **`true`**，否则返回 **`false`**。
 
 ### 更新日志
 
@@ -2569,7 +2569,7 @@ $handle = fopen("c:\\folder\\resource.txt", "r");
 | *'w+'* | 读写方式打开，将文件指针指向文件头并将文件大小截为零。如果文件不存在则尝试创建之。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | *'a'*  | 写入方式打开，将文件指针指向文件末尾。如果文件不存在则尝试创建之。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | *'a+'* | 读写方式打开，将文件指针指向文件末尾。如果文件不存在则尝试创建之。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| *'x'*  | 创建并以写入方式打开，将文件指针指向文件头。如果文件已存在，则 <span class="function">fopen</span> 调用失败并返回 **`FALSE`**，并生成一条 **`E_WARNING`** 级别的错误信息。如果文件不存在则尝试创建之。这和给 底层的 *open(2)* 系统调用指定 *O\_EXCL\|O\_CREAT* 标记是等价的。                                                                                                                                                                                                                                                                                                                     |
+| *'x'*  | 创建并以写入方式打开，将文件指针指向文件头。如果文件已存在，则 <span class="function">fopen</span> 调用失败并返回 **`false`**，并生成一条 **`E_WARNING`** 级别的错误信息。如果文件不存在则尝试创建之。这和给 底层的 *open(2)* 系统调用指定 *O\_EXCL\|O\_CREAT* 标记是等价的。                                                                                                                                                                                                                                                                                                                     |
 | *'x+'* | 创建并以读写方式打开，其他的行为和 *'x'* 一样。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | *'c'*  | Open the file for writing only. If the file does not exist, it is created. If it exists, it is neither truncated (as opposed to *'w'*), nor the call to this function fails (as is the case with *'x'*). The file pointer is positioned on the beginning of the file. This may be useful if it's desired to get an advisory lock (see <span class="function">flock</span>) before attempting to modify the file, as using *'w'* could truncate the file before the lock was obtained (if truncation is desired, <span class="function">ftruncate</span> can be used after the lock is requested). |
 | *'c+'* | Open the file for reading and writing; otherwise it has the same behavior as *'c'*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -2610,7 +2610,7 @@ $handle = fopen("c:\\folder\\resource.txt", "r");
 如果也需要在
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>
 中搜寻文件的话，可以将可选的第三个参数 `use_include_path` 设为 '1' 或
-**`TRUE`**。
+**`true`**。
 
 `context`  
 > **Note**: <span class="simpara">在 PHP 5.0.0
@@ -2619,7 +2619,7 @@ $handle = fopen("c:\\folder\\resource.txt", "r");
 
 ### 返回值
 
-成功时返回文件指针资源，如果打开失败，本函数返回 **`FALSE`**。
+成功时返回文件指针资源，如果打开失败，本函数返回 **`false`**。
 
 ### 错误／异常
 
@@ -2720,7 +2720,7 @@ class="function">fclose</span> 关闭)。
 ### 返回值
 
 如果发生错误， <span class="function">fpassthru</span> 返回
-**`FALSE`**。否则 <span class="function">fpassthru</span> 返回从
+**`false`**。否则 <span class="function">fpassthru</span> 返回从
 `handle` 读取并传递到输出的字符数目。
 
 ### 范例
@@ -2800,7 +2800,7 @@ class="function">fclose</span> 关闭)。
 
 ### 返回值
 
-返回写入字符串的长度， 或者在失败时返回 **`FALSE`**。
+返回写入字符串的长度， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2889,7 +2889,7 @@ class="type">int</span> `$length`</span> )
 
 ### 返回值
 
-返回所读取的字符串， 或者在失败时返回 **`FALSE`**。
+返回所读取的字符串， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3238,7 +3238,7 @@ class="function">ftell</span> 会返回未定义错误。
 Returns the position of the file pointer referenced by `handle` as an
 integer; i.e., its offset into the file stream.
 
-如果出错，返回 **`FALSE`**。
+如果出错，返回 **`false`**。
 
 ### 范例
 
@@ -3302,13 +3302,13 @@ The size to truncate to.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
 | 版本  | 说明                                                                                                                                                                         |
 |-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 4.3.3 | 在 PHP 4.3.3 之前，<span class="function">ftruncate</span> 在成功时返回一个 <span class="type">integer</span> 值 1，而不是 <span class="type">boolean</span> 的 **`TRUE`**。 |
+| 4.3.3 | 在 PHP 4.3.3 之前，<span class="function">ftruncate</span> 在成功时返回一个 <span class="type">integer</span> 值 1，而不是 <span class="type">boolean</span> 的 **`true`**。 |
 
 ### 范例
 
@@ -3373,7 +3373,7 @@ The string that is to be written.
 ### 返回值
 
 <span class="function">fwrite</span> 返回写入的字符数，出现错误时则返回
-**`FALSE`** 。
+**`false`** 。
 
 ### 注释
 
@@ -3526,7 +3526,7 @@ class="type">int</span> `$flags`<span class="initializer"> =
 ### 返回值
 
 返回包含有匹配文件和目录的数组，没有匹配文件时返回空数组，出错返回
-**`FALSE`**。
+**`false`**。
 
 > **Note**:
 >
@@ -3585,7 +3585,7 @@ is\_dir
 ### 参数
 
 `filename`  
-如果文件名存在并且为目录则返回 **`TRUE`**。如果 `filename`
+如果文件名存在并且为目录则返回 **`true`**。如果 `filename`
 是一个相对路径，则按照当前工作目录检查其相对路径。 If `filename` is a
 symbolic or hard link then the link will be resolved and checked.If you
 have enabled
@@ -3594,7 +3594,7 @@ further restrictions may apply.
 
 ### 返回值
 
-如果文件名存在，并且是个目录，返回 **`TRUE`**，否则返回**`FALSE`**。
+如果文件名存在，并且是个目录，返回 **`true`**，否则返回**`false`**。
 
 ### 范例
 
@@ -3659,7 +3659,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 
 ### 返回值
 
-如果文件存在且可执行则返回 **`TRUE`**，错误时返回**`FALSE`**。
+如果文件存在且可执行则返回 **`true`**，错误时返回**`false`**。
 
 ### 更新日志
 
@@ -3725,7 +3725,7 @@ is\_file
 
 ### 返回值
 
-如果文件存在且为正常的文件则返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果文件存在且为正常的文件则返回 **`true`**，否则返回 **`false`**。
 
 > **Note**: <span class="simpara"> 因为 PHP
 > 的整数类型是有符号整型而且很多平台使用 32 位整型，对 2GB
@@ -3787,7 +3787,7 @@ is\_link
 
 ### 返回值
 
-如果文件存在并且是一个符号连接则返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果文件存在并且是一个符号连接则返回 **`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -3847,7 +3847,7 @@ class="type">string</span> `$filename`</span> )
 ### 返回值
 
 如果由 `filename` 指定的文件或目录存在并且可读则返回
-**`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -3887,7 +3887,7 @@ not taken into account before PHP 5.1.5.
 >
 > The check is done using the real UID/GID instead of the effective one.
 
-对于目录这个函数可能会返回 **`TRUE`**。请使用 <span
+对于目录这个函数可能会返回 **`true`**。请使用 <span
 class="function">is\_dir</span> 来区分文件和目录。
 
 ### 参见
@@ -3909,7 +3909,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 )
 
 如果 `filename` 所给出的文件是通过 HTTP POST 上传的则返回
-**`TRUE`**。这可以用来确保恶意的用户无法欺骗脚本去访问本不能访问的文件，例如
+**`true`**。这可以用来确保恶意的用户无法欺骗脚本去访问本不能访问的文件，例如
 `/etc/passwd`。
 
 这种检查显得格外重要，如果上传的文件有可能会造成对用户或本系统的其他用户显示其内容的话。
@@ -3926,7 +3926,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3965,7 +3965,7 @@ is\_writable
 class="methodname">is\_writable</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> )
 
-如果文件存在并且可写则返回 **`TRUE`**。`filename`
+如果文件存在并且可写则返回 **`true`**。`filename`
 参数可以是一个允许进行是否可写检查的目录名。
 
 记住 PHP 也许只能以运行 webserver 的用户名（通常为
@@ -3978,7 +3978,7 @@ class="type">string</span> `$filename`</span> )
 
 ### 返回值
 
-如果文件 `filename` 存在并且可写则返回 **`TRUE`**。
+如果文件 `filename` 存在并且可写则返回 **`true`**。
 
 ### 范例
 
@@ -4051,7 +4051,7 @@ class="type">mixed</span> `$group`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4107,7 +4107,7 @@ class="type">mixed</span> `$user`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4161,7 +4161,7 @@ class="type">string</span> `$link`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -4222,7 +4222,7 @@ linkinfo
 ### 返回值
 
 <span class="function">linkinfo</span> 返回 *lstat* 系统调用所返回的
-UNIX C stat 结构中的 *st\_dev* 字段。 如果出错则返回 0 或 **`FALSE`**。
+UNIX C stat 结构中的 *st\_dev* 字段。 如果出错则返回 0 或 **`false`**。
 
 ### 更新日志
 
@@ -4334,7 +4334,7 @@ mkdir
 class="type">int</span> `$mode`<span class="initializer"> =
 0777</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$recursive`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \]\]\] )
 
 尝试新建一个由 pathname 指定的目录。
@@ -4365,7 +4365,7 @@ umask 修改，可以用 <span class="function">umask</span> 来改变。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4436,15 +4436,15 @@ HTTP POST 上传机制所上传的）。如果文件合法，则将其移动为�
 
 ### 返回值
 
-成功时返回 **`TRUE`**。
+成功时返回 **`true`**。
 
 如果 `filename` 不是合法的上传文件，不会出现任何操作，<span
-class="function">move\_uploaded\_file</span> 将返回 **`FALSE`**。
+class="function">move\_uploaded\_file</span> 将返回 **`false`**。
 
 如果 `filename`
 是合法的上传文件，但出于某些原因无法移动，不会出现任何操作，<span
 class="function">move\_uploaded\_file</span> 将返回
-**`FALSE`**。此外还会发出一条警告。
+**`false`**。此外还会发出一条警告。
 
 ### 范例
 
@@ -4513,8 +4513,8 @@ ini 文件的结构和 `php.ini` 的相似。
 
 `process_sections`  
 如果将最后的 `process_sections` 参数设为
-**`TRUE`**，将得到一个多维数组，包括了配置文件中每一节的名称和设置。`process_sections`
-的默认值是 **`FALSE`**。
+**`true`**，将得到一个多维数组，包括了配置文件中每一节的名称和设置。`process_sections`
+的默认值是 **`false`**。
 
 `scanner_mode`  
 Can either be **`INI_SCANNER_NORMAL`** (default) or
@@ -4524,7 +4524,7 @@ values will not be parsed.
 ### 返回值
 
 成功时以关联数组 <span class="type">array</span> 返回设置，失败时返回
-**`FALSE`**。
+**`false`**。
 
 ### 范例
 
@@ -4698,8 +4698,8 @@ ini 字符串内容
 
 `process_sections`  
 设置 `process_sections` 参数为
-**`TRUE`**,得到一个多维数组,包含名称和设置。`process_sections` 默认为
-**`FALSE`**
+**`true`**,得到一个多维数组,包含名称和设置。`process_sections` 默认为
+**`false`**
 
 `scanner_mode`  
 可以是 **`INI_SCANNER_NORMAL`** (默认)或 **`INI_SCANNER_RAW`** 。如果是
@@ -4707,14 +4707,14 @@ ini 字符串内容
 
 As of PHP 5.6.1 can also be specified as **`INI_SCANNER_TYPED`**. In
 this mode boolean, null and integer types are preserved when possible.
-String values *"true"*, *"on"* and *"yes"* are converted to **`TRUE`**.
-*"false"*, *"off"*, *"no"* and *"none"* are considered **`FALSE`**.
-*"null"* is converted to **`NULL`** in typed mode. Also, all numeric
+String values *"true"*, *"on"* and *"yes"* are converted to **`true`**.
+*"false"*, *"off"*, *"no"* and *"none"* are considered **`false`**.
+*"null"* is converted to **`null`** in typed mode. Also, all numeric
 strings are converted to integer type if it is possible.
 
 ### 返回值
 
-执行成功返回一个关联数组,返回 **`FALSE`** 为失败
+执行成功返回一个关联数组,返回 **`false`** 为失败
 
 ### 注释
 
@@ -4917,7 +4917,7 @@ class="function">fgets</span>，<span class="function">fgetss</span> 和
 'r'，返回的文件指针等于命令的 STDOUT，当模式为
 'w'，返回的文件指针等于命令的 STDIN。
 
-如果出错返回 **`FALSE`**。
+如果出错返回 **`false`**。
 
 ### 范例
 
@@ -4970,7 +4970,7 @@ readfile
 <span class="methodparam"><span class="type">string</span>
 `$filename`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \]\] )
 
 读取文件并写入到输出缓冲。
@@ -4983,14 +4983,14 @@ class="type">resource</span> `$context`</span> \]\] )
 `use_include_path`  
 想要在
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>
-中搜索文件，可使用这个可选的第二个参数，设为 **`TRUE`**。
+中搜索文件，可使用这个可选的第二个参数，设为 **`true`**。
 
 `context`  
 Stream 上下文（context） <span class="type">resource</span>。
 
 ### 返回值
 
-成功时返回从文件中读入的字节数， 或者在失败时返回 **`FALSE`**
+成功时返回从文件中读入的字节数， 或者在失败时返回 **`false`**
 
 ### 错误／异常
 
@@ -5079,7 +5079,7 @@ class="type">string</span> `$path`</span> )
 
 ### 返回值
 
-返回链接的路径内容，出错则返回 **`FALSE`**。
+返回链接的路径内容，出错则返回 **`false`**。
 
 ### 范例
 
@@ -5218,7 +5218,7 @@ class="type">string</span> `$path`</span> )
 
 > **Note**:
 >
-> Whilst a path must be supplied, the value can be blank or **`NULL`**
+> Whilst a path must be supplied, the value can be blank or **`null`**
 > In these cases, the value is interpreted as the current directory.
 
 ### 返回值
@@ -5227,13 +5227,13 @@ Returns the canonicalized absolute pathname on success. The resulting
 path will have no symbolic link, '/./' or '/../' components.
 
 <span class="function">realpath</span> 失败时返回
-**`FALSE`**，比如说文件不存在的话。
+**`false`**，比如说文件不存在的话。
 
 > **Note**:
 >
 > The running script must have executable permissions on all directories
 > in the hierarchy, otherwise <span class="function">realpath</span>
-> will return **`FALSE`**.
+> will return **`false`**.
 
 > **Note**: <span class="simpara"> 因为 PHP
 > 的整数类型是有符号整型而且很多平台使用 32 位整型，对 2GB
@@ -5243,8 +5243,8 @@ path will have no symbolic link, '/./' or '/../' components.
 
 | 版本  | 说明                                                                                                                                         |
 |-------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0 | 在之前的版本中，在 \*BSD 系统上，如果仅仅是 `path` 不存在的话，<span class="function">realpath</span> 并不会像其它系统那样返回 **`FALSE`**。 |
-| 5.0.0 | 在此之前的版本中，如果 `path` 传入了空或者 **`NULL`**，将导致 <span class="function">realpath</span> 返回脚本当前的目录。                    |
+| 5.3.0 | 在之前的版本中，在 \*BSD 系统上，如果仅仅是 `path` 不存在的话，<span class="function">realpath</span> 并不会像其它系统那样返回 **`false`**。 |
+| 5.0.0 | 在此之前的版本中，如果 `path` 传入了空或者 **`null`**，将导致 <span class="function">realpath</span> 返回脚本当前的目录。                    |
 
 ### 范例
 
@@ -5323,7 +5323,7 @@ class="methodparam"><span class="type">resource</span> `$context`</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5367,7 +5367,7 @@ rewind
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5426,7 +5426,7 @@ class="type">resource</span> `$context`</span> \] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5503,7 +5503,7 @@ class="function">stat</span> 相同，只除了它会返回符号连接的状态
 \* - 仅在支持 st\_blksize 类型的系统下有效。其它系统（如 Windows）返回
 -1。
 
-如果出错，<span class="function">stat</span> 返回 **`FALSE`**。
+如果出错，<span class="function">stat</span> 返回 **`false`**。
 
 > **Note**: <span class="simpara"> 因为 PHP
 > 的整数类型是有符号整型而且很多平台使用 32 位整型，对 2GB
@@ -5620,7 +5620,7 @@ class="type">string</span> `$link`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -5683,7 +5683,7 @@ The directory where the temporary filename will be created.
 
 ### 返回值
 
-返回新的临时文件名，出错返回 **`FALSE`**。
+返回新的临时文件名，出错返回 **`false`**。
 
 ### 更新日志
 
@@ -5744,7 +5744,7 @@ class="function">fclose</span>）自动被删除，或当脚本结束后。
 ### 返回值
 
 返回一个与 <span class="function">fopen</span>
-所打开返回类似的新文件句柄， 或者在失败时返回 **`FALSE`**.
+所打开返回类似的新文件句柄， 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -5802,7 +5802,7 @@ class="type">int</span> `$atime`</span> \]\] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5923,7 +5923,7 @@ class="type">resource</span> `$context`</span> \] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 

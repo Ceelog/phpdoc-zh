@@ -3,9 +3,9 @@ Attributes overview
 
 Attributes allow to add structured, machine-readable metadata
 information on declarations in code: Classes, methods, functions,
-parameters, properties and constants can be the target of an attribute.
-The metadata defined by attributes can then be inspected at runtime
-using the
+parameters, properties and class constants can be the target of an
+attribute. The metadata defined by attributes can then be inspected at
+runtime using the
 <a href="/book/reflection.html" class="link">Reflection APIs</a>.
 Attributes could therefore be thought of as a configuration language
 embedded directly into code.
@@ -43,43 +43,44 @@ class SetUp {}
 
 class CopyFile implements ActionHandler
 {
-      public string $fileName;
-      public string $targetDirectory;
+    public string $fileName;
+    public string $targetDirectory;
 
-      #[SetUp]
-      public function fileExists()
-      {
-          if (!file_exists($this->fileName)) {
-              throw new RuntimeException("File does not exist");
-          }
-      }
+    #[SetUp]
+    public function fileExists()
+    {
+        if (!file_exists($this->fileName)) {
+            throw new RuntimeException("File does not exist");
+        }
+    }
 
-      #[SetUp]
-      public function targetDirectoryExists()
-      {
-          @mkdir($this->targetDirectory);
-      }
+    #[SetUp]
+    public function targetDirectoryExists()
+    {
+        mkdir($this->targetDirectory);
+    }
 
-      public function execute()
-      {
-          copy($this->fileName, $this->targetDirectory . '/' . basename($this->fileName));
-      }
+    public function execute()
+    {
+        copy($this->fileName, $this->targetDirectory . '/' . basename($this->fileName));
+    }
 }
 
-function executeAction(ActionHandler $actionHandler) {
-      $reflection = new ReflectionObject($actionHandler);
+function executeAction(ActionHandler $actionHandler)
+{
+    $reflection = new ReflectionObject($actionHandler);
 
-      foreach ($reflection->getMethods() as $method) {
-          $attributes = $method->getAttributes(SetUp::class);
+    foreach ($reflection->getMethods() as $method) {
+        $attributes = $method->getAttributes(SetUp::class);
 
-          if (count($attributes) > 0) {
-              $methodName = $method->getName();
+        if (count($attributes) > 0) {
+            $methodName = $method->getName();
 
-              $actionHandler->$methodName();
-          }
-      }
+            $actionHandler->$methodName();
+        }
+    }
 
-      $actionHandler->execute();
+    $actionHandler->execute();
 }
 
 $copyAction = new CopyFile();

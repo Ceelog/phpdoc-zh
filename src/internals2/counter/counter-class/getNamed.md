@@ -10,7 +10,7 @@ Counter::getNamed
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 <span class="function">Counter::getNamed</span>
-通过名称查询一个已存在的计数器，不存在则返回**`NULL`**。这是静态函数。
+通过名称查询一个已存在的计数器，不存在则返回**`null`**。这是静态函数。
 
 ### 参数
 
@@ -20,4 +20,4 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 ### 返回值
 
 <span class="function">Counter::getNamed</span>
-通过名称查询一个已存在的计数器，不存在则返回**`NULL`**。
+通过名称查询一个已存在的计数器，不存在则返回**`null`**。

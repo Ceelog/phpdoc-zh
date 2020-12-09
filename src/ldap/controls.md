@@ -45,7 +45,7 @@ iscritical (<span class="type">bool</span>)
 <span class="simpara"> If a control is noted as critical, the request
 will fail if the control is not supported by the server, or if it fails
 to be applied. Note that some controls should always be marked as
-critical as noted in the RFC introducing them. Defaults to **`FALSE`**.
+critical as noted in the RFC introducing them. Defaults to **`false`**.
 </span>
 
 value (<span class="type">mixed</span>)  

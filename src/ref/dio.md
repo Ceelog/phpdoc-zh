@@ -187,7 +187,7 @@ the process's *umask* setting as per usual.
 
 ### 返回值
 
-A file descriptor or **`FALSE`** on error.
+A file descriptor or **`false`** on error.
 
 ### 范例
 
@@ -358,7 +358,7 @@ Returns an associative array with the following keys:
 
 -   "ctime" - time of last change
 
-On error <span class="function">dio\_stat</span> returns **`NULL`**.
+On error <span class="function">dio\_stat</span> returns **`null`**.
 
 dio\_tcsetattr
 ==============
@@ -463,7 +463,7 @@ The offset in bytes.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 

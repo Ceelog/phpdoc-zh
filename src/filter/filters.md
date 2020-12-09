@@ -35,8 +35,8 @@ Validate filters
 <td>"boolean"</td>
 <td><code class="parameter">default</code></td>
 <td><strong><code>FILTER_NULL_ON_FAILURE</code></strong></td>
-<td><p>Returns <strong><code>TRUE</code></strong> for "1", "true", "on" and "yes". Returns <strong><code>FALSE</code></strong> otherwise.</p>
-<p>If <strong><code>FILTER_NULL_ON_FAILURE</code></strong> is set, <strong><code>FALSE</code></strong> is returned only for "0", "false", "off", "no", and "", and <strong><code>NULL</code></strong> is returned for all non-boolean values.</p></td>
+<td><p>Returns <strong><code>true</code></strong> for "1", "true", "on" and "yes". Returns <strong><code>false</code></strong> otherwise.</p>
+<p>If <strong><code>FILTER_NULL_ON_FAILURE</code></strong> is set, <strong><code>false</code></strong> is returned only for "0", "false", "off", "no", and "", and <strong><code>null</code></strong> is returned for all non-boolean values.</p></td>
 </tr>
 <tr class="even">
 <td><strong><code>FILTER_VALIDATE_DOMAIN</code></strong></td>
@@ -229,7 +229,7 @@ Filter flags
 <tr class="odd">
 <td><strong><code>FILTER_NULL_ON_FAILURE</code></strong></td>
 <td><strong><code>FILTER_VALIDATE_BOOLEAN</code></strong></td>
-<td>Returns <strong><code>NULL</code></strong> for unrecognized boolean values.</td>
+<td>Returns <strong><code>null</code></strong> for unrecognized boolean values.</td>
 </tr>
 <tr class="even">
 <td><strong><code>FILTER_FLAG_ALLOW_OCTAL</code></strong></td>

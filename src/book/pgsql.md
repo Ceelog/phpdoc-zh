@@ -70,7 +70,7 @@ PostgreSQL
     -   [pg\_fetch\_row](/book/pgsql.html#pg_fetch_row) —
         提取一行作为枚举数组
     -   [pg\_field\_is\_null](/book/pgsql.html#pg_field_is_null) —
-        测试字段是否为 NULL
+        测试字段是否为 null
     -   [pg\_field\_name](/book/pgsql.html#pg_field_name) —
         返回字段的名字
     -   [pg\_field\_num](/book/pgsql.html#pg_field_num) — 返回字段的编号
@@ -503,7 +503,7 @@ class="function">pg\_convert</span>. Use SQL *NULL* in place of an empty
 
 **`PGSQL_CONV_IGNORE_DEFAULT`** (<span class="type">integer</span>)  
 <span class="simpara"> Passed to <span
-class="function">pg\_convert</span>. Ignore conversion of **`NULL`**
+class="function">pg\_convert</span>. Ignore conversion of **`null`**
 into SQL *NOT NULL* columns. </span>
 
 范例
@@ -634,7 +634,7 @@ ORDER BY a.attnum;
 >
 > Most PostgreSQL functions accept `connection` as the optional first
 > parameter. If it is not provided, the last opened connection is used.
-> If it doesn't exist, functions return **`FALSE`**.
+> If it doesn't exist, functions return **`false`**.
 
 > **Note**:
 >
@@ -766,7 +766,7 @@ last connection made by <span class="function">pg\_connect</span> or
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -833,7 +833,7 @@ class="type">string</span> `$connection_string`</span> )
 <span class="function">pg\_connect</span> 打开一个由 `connection_string`
 所指定的 PostgreSQL
 数据库的连接。如果成功则返回连接资源，如果不能连接则返回
-**`FALSE`**。`connection_string` 应该是用引号引起来的字符串。
+**`false`**。`connection_string` 应该是用引号引起来的字符串。
 
 **示例 \#1 使用 <span class="function">pg\_connect</span>**
 
@@ -883,7 +883,7 @@ class="methodparam"><span class="type">resource</span>
 
 <span class="function">pg\_connection\_busy</span>
 在此连接状态为忙的时候返回
-**`TRUE`**。如果连接状态为忙，说明前一个查询仍然在执行。如果调用 <span
+**`true`**。如果连接状态为忙，说明前一个查询仍然在执行。如果调用 <span
 class="function">pg\_get\_result</span> 函数的话，则会被锁死。
 
 **示例 \#1 <span class="function">pg\_connection\_busy</span> 例子**
@@ -926,7 +926,7 @@ PostgreSQL database connection resource.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1010,8 +1010,8 @@ PostgreSQL database connection resource.
 
 ### 返回值
 
-**`TRUE`** if no error occurred, or **`FALSE`** if there was an error.
-Note that **`TRUE`** does not necessarily indicate that input was
+**`true`** if no error occurred, or **`false`** if there was an error.
+Note that **`true`** does not necessarily indicate that input was
 waiting to be read.
 
 pg\_convert
@@ -1036,12 +1036,12 @@ class="function">pg\_convert</span> 的前提条件是现有的表 *table\_name*
 中具有的列至少有 *assoc\_array* 中的单元那么多。*table\_name*
 中的字段名以及字段值必须和 *assoc\_array*
 中的键名及值匹配。如果成功则返回一个包括转换后的值的数组，否则返回
-**`FALSE`**。
+**`false`**。
 
 > **Note**:
 >
 > If there are boolean fields in `table_name` don't use the constant
-> **`TRUE`** in `assoc_array`. It will be converted to the string 'TRUE'
+> **`true`** in `assoc_array`. It will be converted to the string 'TRUE'
 > which is no valid entry for boolean fields in PostgreSQL. Use one of
 > t, true, 1, y, yes instead.
 
@@ -1068,7 +1068,7 @@ combined.
 
 ### 返回值
 
-An <span class="type">array</span> of converted values, or **`FALSE`**
+An <span class="type">array</span> of converted values, or **`false`**
 on error.
 
 ### 范例
@@ -1137,7 +1137,7 @@ How SQL *NULL* values are represented in the `rows`. Default is \\N
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1177,7 +1177,7 @@ class="methodparam"><span class="type">string</span> `$null_as`</span>
 
 <span class="function">pg\_copy\_to</span>
 将一个表拷贝到数组中，该数组作为结果返回。它在内部使用了 *COPY FROM* SQL
-命令来插入记录，并返回结果数组。如果失败则返回 **`FALSE`**。
+命令来插入记录，并返回结果数组。如果失败则返回 **`false`**。
 
 参见 <span class="function">pg\_copy\_from</span>。
 
@@ -1194,7 +1194,7 @@ class="type">resource</span> `$connection`</span> )
 
 <span class="function">pg\_dbname</span> 返回给定 PostgreSQL
 `connection` 资源的数据库名称。如果 `connection` 不是有效的 PostgreSQL
-连接资源则返回 **`FALSE`**。
+连接资源则返回 **`false`**。
 
 **示例 \#1 <span class="function">pg\_dbname</span> 例子**
 
@@ -1249,7 +1249,7 @@ returned.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 Returns <span
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 Returns <span
 class="type">string</span> if **`PGSQL_DML_STRING`** is passed via
 `options`.
 
@@ -1307,7 +1307,7 @@ last connection made by <span class="function">pg\_connect</span> or
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1462,7 +1462,7 @@ PostgreSQL database connection resource. When `connection` is not
 present, the default connection is used. The default connection is the
 last connection made by <span class="function">pg\_connect</span> or
 <span class="function">pg\_pconnect</span>. When there is no default
-connection, it raises *E\_WARNING* and returns **`FALSE`**.
+connection, it raises *E\_WARNING* and returns **`false`**.
 
 `data`  
 A <span class="type">string</span> containing text to be escaped.
@@ -1575,7 +1575,7 @@ Elements are converted to strings by calling this function.
 
 ### 返回值
 
-A query result resource on success 或者在失败时返回 **`FALSE`**.
+A query result resource on success 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1623,7 +1623,7 @@ that contains all rows (records) in a particular column of the result
 resource.
 
 > **Note**: <span class="simpara">此函数将 NULL 字段设置为 PHP
-> **`NULL`** 值。</span>
+> **`null`** 值。</span>
 
 ### 参数
 
@@ -1641,7 +1641,7 @@ Defaults to the first column if not specified.
 
 An <span class="type">array</span> with all values in the result column.
 
-**`FALSE`** is returned if `column` is larger than the number of columns
+**`false`** is returned if `column` is larger than the number of columns
 in the result, or on any other error.
 
 ### 范例
@@ -1689,7 +1689,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 
 <span class="function">pg\_fetch\_all</span>
 从结果资源中返回一个包含有所有的行（元组/记录）的数组。如果没有更多行可供提取，则返回
-**`FALSE`**。
+**`false`**。
 
 **示例 \#1 <span class="function">pg\_fetch\_all</span> 例子**
 
@@ -1731,7 +1731,7 @@ class="type">int</span> `$result_type`</span> \]\] )
 
 <span class="function">pg\_fetch\_array</span>
 返回一个与所提取的行（元组/记录）相一致的数组。如果没有更多行可供提取，则返回
-**`FALSE`**。
+**`false`**。
 
 <span class="function">pg\_fetch\_array</span> 是 <span
 class="function">pg\_fetch\_row</span>
@@ -1861,7 +1861,7 @@ class="type">int</span> `$result_type`</span> \]\] )
 
 <span class="function">pg\_fetch\_object</span>
 返回与所提取行的属性相一致的一个对象。如果出错或者没有更多行可供提取时则返回
-**`FALSE`**。
+**`false`**。
 
 <span class="function">pg\_fetch\_object</span> 和 <span
 class="function">pg\_fetch\_array</span> 相似，只有一点区别 －
@@ -1971,7 +1971,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 0 开始。
 
 > **Note**: <span class="simpara">此函数将 NULL 字段设置为 PHP
-> **`NULL`** 值。</span>
+> **`null`** 值。</span>
 
 ### 参数
 
@@ -1983,16 +1983,16 @@ class="function">pg\_execute</span> (among others).
 
 `row`  
 Row number in result to fetch. Rows are numbered from 0 upwards. If
-omitted or **`NULL`**, the next row is fetched.
+omitted or **`null`**, the next row is fetched.
 
 ### 返回值
 
 An <span class="type">array</span>, indexed from 0 upwards, with each
 value represented as a <span class="type">string</span>. Database *NULL*
-values are returned as **`NULL`**.
+values are returned as **`null`**.
 
 返回的数组和提取的行相一致。如果没有更多行 `row` 可提取，则返回
-**`FALSE`**。
+**`false`**。
 
 ### 更新日志
 
@@ -2037,7 +2037,7 @@ while ($row = pg_fetch_row($result)) {
 pg\_field\_is\_null
 ===================
 
-测试字段是否为 **`NULL`**
+测试字段是否为 **`null`**
 
 ### 说明
 
@@ -2049,8 +2049,8 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 `$field`</span> )
 
 <span class="function">pg\_field\_is\_null</span> 测试字段是否为
-**`NULL`**。如果字段在给出的行中为 **`NULL`** 则返回
-1，如果字段在给出的行中不是 **`NULL`** 则返回
+**`null`**。如果字段在给出的行中为 **`null`** 则返回
+1，如果字段在给出的行中不是 **`null`** 则返回
 0。字段可以以列的索引号（数字）方式给出，也可以以字段名（字符串）方式给出。行的编号从
 0 开始。
 
@@ -2201,7 +2201,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 
 <span class="function">pg\_field\_size</span> 返回 PostgreSQL `result`
 中指定字段占用内部存储空间的大小（字节数）。字段编号从 0
-开始。字段大小为 -1 表示可变长度字段。如果出错本函数返回 **`FALSE`**。
+开始。字段大小为 -1 表示可变长度字段。如果出错本函数返回 **`false`**。
 
 参考 <span class="function">pg\_field\_name</span> 页面中的例子。
 
@@ -2225,11 +2225,11 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$field_number`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$oid_only`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="function">pg\_field\_table</span> returns the name of the
 table that field belongs to, or the table's oid if `oid_only` is
-**`TRUE`**.
+**`true`**.
 
 ### 参数
 
@@ -2244,11 +2244,11 @@ Field number, starting from 0.
 
 `oid_only`  
 By default the tables name that field belongs to is returned but if
-`oid_only` is set to **`TRUE`**, then the oid will instead be returned.
+`oid_only` is set to **`true`**, then the oid will instead be returned.
 
 ### 返回值
 
-On success either the fields table name or oid. Or, **`FALSE`** on
+On success either the fields table name or oid. Or, **`false`** on
 failure.
 
 ### 范例
@@ -2329,7 +2329,7 @@ Field number, starting from 0.
 
 ### 返回值
 
-The OID of the field's base type. **`FALSE`** is returned on error.
+The OID of the field's base type. **`false`** is returned on error.
 
 ### 范例
 
@@ -2402,8 +2402,8 @@ PostgreSQL 数据库链接资源
 
 ### 返回值
 
-如果刷新成功或者没有数据等待刷新返回 **`TRUE`** ， 如果返回 *0*
-为部分刷新或者更多未被刷新,刷新失败为 **`FALSE`**
+如果刷新成功或者没有数据等待刷新返回 **`true`** ， 如果返回 *0*
+为部分刷新或者更多未被刷新,刷新失败为 **`false`**
 
 pg\_free\_result
 ================
@@ -2420,7 +2420,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 <span class="function">pg\_free\_result</span>
 仅在当你担心脚本执行时占用了过多内存时调用。脚本执行完毕后所有的查询结果占用的内存都会被自动释放。不过如果你确认在脚本中不会再用到查询结果了，你可以用
 `result` 作为参数调用 <span class="function">pg\_free\_result</span>
-来释放有关的内存。成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+来释放有关的内存。成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 > **Note**:
 >
@@ -2438,7 +2438,7 @@ class="function">pg\_execute</span> (among others).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2484,7 +2484,7 @@ class="type">int</span> `$result_type`</span> \] )
 <span class="function">pg\_get\_notify</span> 取得 SQL 命令 *NOTIFY*
 发送的通告消息。要接收通告消息，必须发送 SQL 命令
 *LISTEN*。如果连接中有通告消息，则数组包含消息名并且返回后端的
-PID。如果没有消息则返回 **`FALSE`**。
+PID。如果没有消息则返回 **`false`**。
 
 参见 <span class="function">pg\_get\_pid</span>。
 
@@ -2557,7 +2557,7 @@ class="function">pg\_send\_query</span> 而得到的查询结果资源。<span
 class="function">pg\_send\_query</span> 可以向 PostgreSQL 发送多个查询，
 <span class="function">pg\_get\_result</span>
 则用来逐个得到查询结果。返回值为查询结果资源号。如果没有更多查询结果，则返回
-**`FALSE`**。
+**`false`**。
 
 pg\_host
 ========
@@ -2623,7 +2623,7 @@ string is returned.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 Returns <span
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 Returns <span
 class="type">string</span> if **`PGSQL_DML_STRING`** is passed via
 `options`.
 
@@ -2710,7 +2710,7 @@ PostgreSQL database connection resource.
 ### 返回值
 
 A <span class="type">string</span> containing the last notice on the
-given `connection`, or **`FALSE`** on error.
+given `connection`, or **`false`** on error.
 
 ### 更新日志
 
@@ -2762,7 +2762,7 @@ class="function">pg\_query</span> 发送的命令是 SQL INSERT
 的情况下用来取得分配给所插入记录的 `oid`。如果存在有效的 `oid`
 则返回一个正整数，如果出错或者上一条通过 <span
 class="function">pg\_query</span> 发送的命令不是 INSERT 或者该 INSERT
-失败则返回 **`FALSE`**。
+失败则返回 **`false`**。
 
 从 PostgreSQL 7.2 版开始 OID 字段成为可选项。如果一个表中没有定义 OID
 字段，程序员必须用 <span class="function">pg\_result\_status</span>
@@ -2820,7 +2820,7 @@ class="function">pg\_pconnect</span> 打开的有效的数据库连接号。不�
 PostgreSQL 访问模式 INV\_READ，INV\_WRITE 和
 INV\_ARCHIVE，该对象总是以读写方式访问。INV\_ARCHIVE 已经从 PostgreSQL
 中删除了（6.3 及以上版本）。本函数返回大型对象的 oid，如果出错则返回
-**`FALSE`**。
+**`false`**。
 
 要使用大型对象（lo）接口，需要将其放置在事务块中。
 
@@ -2868,7 +2868,7 @@ last connection made by <span class="function">pg\_connect</span> or
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2934,7 +2934,7 @@ first appeared in PostgreSQL 8.1.
 
 ### 返回值
 
-导入成功则返回新建的大型对象的 `OID`，如果出错则返回 **`FALSE`**。
+导入成功则返回新建的大型对象的 `OID`，如果出错则返回 **`false`**。
 
 ### 范例
 
@@ -2970,7 +2970,7 @@ class="methodparam"><span class="type">string</span> `$mode`</span> )
 <span class="function">pg\_lo\_open</span>
 打开一个大型对象并返回大型对象资源号。该资源号内封装了连接号。`oid`
 指定了有效的大型对象的 oid，`mode` 可以为 "r"，"w" 或者
-"rw"。如果失败则返回 **`FALSE`**。
+"rw"。如果失败则返回 **`false`**。
 
 **Warning**
 
@@ -3000,7 +3000,7 @@ class="methodparam"><span class="type">resource</span>
 <span class="function">pg\_lo\_read\_all</span>
 读入一个大型对象并在（PHP）发送完所有待发的 header
 之后将其直接发送给浏览器。主要目的是发送图片或声音等二进制数据。返回值为读入的字节数，如果出错则返回
-**`FALSE`**。
+**`false`**。
 
 要使用大型对象（lo）接口，需要将其放置在事务块中。
 
@@ -3025,7 +3025,7 @@ class="methodparam"><span class="type">int</span> `$len`</span> )
 <span class="function">pg\_lo\_read</span> 从大型对象中读入最多 `len`
 字节的数据并以字符串返回。`large_object`
 指定了有效的大型对象的资源号，`len`
-则指定了大型对象的段所允许的最大长度。如果出错则返回 **`FALSE`**。
+则指定了大型对象的段所允许的最大长度。如果出错则返回 **`false`**。
 
 要使用大型对象（lo）接口，需要将其放置在事务块中。
 
@@ -3101,7 +3101,7 @@ The number of bytes to truncate.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3144,7 +3144,7 @@ class="methodparam"><span class="type">resource</span>
 class="type">int</span> `$oid`</span> )
 
 <span class="function">pg\_lo\_unlink</span> 删除由 `oid`
-指定的大型对象。成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+指定的大型对象。成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 要使用大型对象（lo）接口，需要将其放置在事务块中。
 
@@ -3165,7 +3165,7 @@ The `OID` of the large object in the database.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3202,7 +3202,7 @@ class="type">string</span> `$data`</span> )
 
 <span class="function">pg\_lo\_write</span> 把 `data`
 参数中的数据尽可能多地写入大型对象并返回实际写入的字节数。如果出错则返回
-**`FALSE`**。`large_object` 参数是 <span
+**`false`**。`large_object` 参数是 <span
 class="function">pg\_lo\_open</span> 函数所返回的大型对象资源号。
 
 要使用大型对象（lo）接口，需要将其放置在事务块中。
@@ -3246,7 +3246,7 @@ The name of the table.
 ### 返回值
 
 以数组 <span class="type">array</span> 形式返回表的定义，如果出错则返回
-**`FALSE`**。
+**`false`**。
 
 ### 范例
 
@@ -3397,7 +3397,7 @@ Certain parameter values are reported by the server automatically at
 connection startup or whenever their values change. <span
 class="function">pg\_parameter\_status</span> can be used to interrogate
 these settings. It returns the current value of a parameter if known, or
-**`FALSE`** if the parameter is not known.
+**`false`** if the parameter is not known.
 
 Parameters reported as of PostgreSQL 8.0 include *server\_version*,
 *server\_encoding*, *client\_encoding*, *is\_superuser*,
@@ -3437,7 +3437,7 @@ Possible `param_name` values include *server\_version*,
 ### 返回值
 
 A <span class="type">string</span> containing the value of the
-parameter, **`FALSE`** on failure or invalid `param_name`.
+parameter, **`false`** on failure or invalid `param_name`.
 
 ### 范例
 
@@ -3510,7 +3510,7 @@ connection.
 
 ### 返回值
 
-PostgreSQL connection resource on success, **`FALSE`** on failure.
+PostgreSQL connection resource on success, **`false`** on failure.
 
 ### 范例
 
@@ -3551,7 +3551,7 @@ Ping 数据库连接
 
 <span class="function">pg\_ping</span> ping
 数据库连接，如果中断则尝试重新连接。如果连接在活动状态返回
-**`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，否则返回 **`false`**。
 
 **示例 \#1 <span class="function">pg\_ping</span>**
 
@@ -3644,7 +3644,7 @@ parameters are used, they are referred to as $1, $2, etc.
 
 ### 返回值
 
-A query result resource on success 或者在失败时返回 **`FALSE`**.
+A query result resource on success 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -3724,7 +3724,7 @@ terminator is added automatically.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3775,7 +3775,7 @@ using earlier versions.
 If parameters are used, they are referred to in the `query` string as
 $1, $2, etc. The same parameter may appear more than once in the
 `query`; the same value will be used in that case. `params` specifies
-the actual values of the parameters. A **`NULL`** value in this array
+the actual values of the parameters. A **`null`** value in this array
 means the corresponding parameter is SQL *NULL*.
 
 The primary advantage of <span class="function">pg\_query\_params</span>
@@ -3819,7 +3819,7 @@ large object functions.
 
 ### 返回值
 
-A query result resource on success 或者在失败时返回 **`FALSE`**.
+A query result resource on success 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -3859,7 +3859,7 @@ class="methodparam"><span class="type">string</span> `$query`</span> )
 
 <span class="function">pg\_query</span>
 在查询可以执行时返回查询结果资源号。如果查询失败或者提供的连接号无效则返回
-**`FALSE`**。如果连接号有效，则可以用 <span
+**`false`**。如果连接号有效，则可以用 <span
 class="function">pg\_last\_error</span> 函数来提取详细的错误信息。<span
 class="function">pg\_query</span> 发送一条 SQL 语句到 `connection`
 资源指定的 PostgreSQL 数据库。`connection` 必须是由 <span
@@ -3909,7 +3909,7 @@ is only available against a PostgreSQL 7.4 or above server. The error
 field is specified by the `fieldcode`.
 
 Because <span class="function">pg\_query</span> and <span
-class="function">pg\_query\_params</span> return **`FALSE`** if the
+class="function">pg\_query\_params</span> return **`false`** if the
 query fails, you must use <span class="function">pg\_send\_query</span>
 and <span class="function">pg\_get\_result</span> to get the result
 handle.
@@ -3936,7 +3936,7 @@ only), **`PGSQL_DIAG_CONTEXT`**, **`PGSQL_DIAG_SOURCE_FILE`**,
 ### 返回值
 
 A <span class="type">string</span> containing the contents of the error
-field, **`NULL`** if the field does not exist or **`FALSE`** on failure.
+field, **`null`** if the field does not exist or **`false`** on failure.
 
 ### 范例
 
@@ -3996,7 +3996,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 `$offset`</span> )
 
 <span class="function">pg\_result\_seek</span>
-在结果资源中设定内部行偏移量。如果出错则返回 **`FALSE`**。
+在结果资源中设定内部行偏移量。如果出错则返回 **`false`**。
 
 参见 <span class="function">pg\_fetch\_row</span>，<span
 class="function">pg\_fetch\_assoc</span>，<span
@@ -4072,7 +4072,7 @@ string is returned.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 Returns <span
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 Returns <span
 class="type">string</span> if **`PGSQL_DML_STRING`** is passed via
 `options`.
 
@@ -4145,7 +4145,7 @@ elements in the array must match the number of placeholders.
 
 ### 返回值
 
-Returns **`TRUE`** on success, **`FALSE`** on failure. Use <span
+Returns **`true`** on success, **`false`** on failure. Use <span
 class="function">pg\_get\_result</span> to determine the query result.
 
 ### 范例
@@ -4203,8 +4203,8 @@ Sends a request to create a prepared statement with the given
 parameters, without waiting for completion.
 
 This is an asynchronous version of <span
-class="function">pg\_prepare</span>: it returns **`TRUE`** if it was
-able to dispatch the request, and **`FALSE`** if not. After a successful
+class="function">pg\_prepare</span>: it returns **`true`** if it was
+able to dispatch the request, and **`false`** if not. After a successful
 call, call <span class="function">pg\_get\_result</span> to determine
 whether the server successfully created the prepared statement. The
 function's parameters are handled identically to <span
@@ -4232,7 +4232,7 @@ parameters are used, they are referred to as $1, $2, etc.
 
 ### 返回值
 
-Returns **`TRUE`** on success, **`FALSE`** on failure. Use <span
+Returns **`true`** on success, **`false`** on failure. Use <span
 class="function">pg\_get\_result</span> to determine the query result.
 
 ### 范例
@@ -4316,7 +4316,7 @@ elements in the array must match the number of placeholders.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 Use <span class="function">pg\_get\_result</span> to determine the query
 result.
@@ -4534,7 +4534,7 @@ PostgreSQL database connection resource.
 
 ### 返回值
 
-A socket resource on success 或者在失败时返回 **`FALSE`**.
+A socket resource on success 或者在失败时返回 **`false`**.
 
 pg\_trace
 =========
@@ -4562,8 +4562,8 @@ PostgreSQL 服务器。更多信息参考 PostgreSQL 手册。
 指定了要追踪的连接，默认为上一个打开的连接。
 
 如果 `pathname` 可以作为日志文件打开，则 <span
-class="function">pg\_trace</span> 返回 **`TRUE`**，否则返回
-**`FALSE`**。
+class="function">pg\_trace</span> 返回 **`true`**，否则返回
+**`false`**。
 
 参见 <span class="function">fopen</span> 和 <span
 class="function">pg\_untrace</span>。
@@ -4682,7 +4682,7 @@ class="methodparam"><span class="type">resource</span>
 启动的追踪功能。`connection`
 指定了被追踪的连接号，默认为上一个打开的连接。
 
-本函数总是返回 **`TRUE`**。
+本函数总是返回 **`true`**。
 
 参见 <span class="function">pg\_trace</span>。
 
@@ -4740,7 +4740,7 @@ returned.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 Returns <span
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 Returns <span
 class="type">string</span> if **`PGSQL_DML_STRING`** is passed via
 `options`.
 
@@ -4798,7 +4798,7 @@ last connection made by <span class="function">pg\_connect</span> or
 ### 返回值
 
 Returns an array with *client*, *protocol* and *server* keys and values
-(if available). Returns **`FALSE`** on error or invalid connection.
+(if available). Returns **`false`** on error or invalid connection.
 
 ### 范例
 
@@ -4878,7 +4878,7 @@ Returns an array with *client*, *protocol* and *server* keys and values
 -   [pg\_fetch\_row](/book/pgsql.html#pg_fetch_row) —
     提取一行作为枚举数组
 -   [pg\_field\_is\_null](/book/pgsql.html#pg_field_is_null) —
-    测试字段是否为 NULL
+    测试字段是否为 null
 -   [pg\_field\_name](/book/pgsql.html#pg_field_name) — 返回字段的名字
 -   [pg\_field\_num](/book/pgsql.html#pg_field_num) — 返回字段的编号
 -   [pg\_field\_prtlen](/book/pgsql.html#pg_field_prtlen) —

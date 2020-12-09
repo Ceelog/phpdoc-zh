@@ -291,8 +291,8 @@ class="methodname">RecursiveIterator::getChildren</span>.
 
 ### 返回值
 
-Returns **`TRUE`** if the current entry can be iterated over, otherwise
-returns **`FALSE`**.
+Returns **`true`** if the current entry can be iterated over, otherwise
+returns **`false`**.
 
 ### 参见
 

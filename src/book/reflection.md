@@ -497,12 +497,12 @@ false</span></span> \] )
 导出的反射。
 
 `return`  
-设为 **`TRUE`** 时返回导出结果，设为 **`FALSE`**（默认值）则忽略返回。
+设为 **`true`** 时返回导出结果，设为 **`false`**（默认值）则忽略返回。
 
 ### 返回值
 
-如果参数 `return` 设为 **`TRUE`**，导出结果将作为 <span
-class="type">string</span> 返回，否则返回 **`NULL`**。
+如果参数 `return` 设为 **`true`**，导出结果将作为 <span
+class="type">string</span> 返回，否则返回 **`null`**。
 
 ### 参见
 
@@ -999,12 +999,12 @@ class="methodparam"><span class="type">mixed</span> `$argument`</span>
 导出的反射。
 
 `return`  
-设为 **`TRUE`** 时返回导出结果，设为 **`FALSE`**（默认值）则忽略返回。
+设为 **`true`** 时返回导出结果，设为 **`false`**（默认值）则忽略返回。
 
 ### 返回值
 
-如果参数 `return` 设为 **`TRUE`**，导出结果将作为 <span
-class="type">string</span> 返回，否则返回 **`NULL`**。
+如果参数 `return` 设为 **`true`**，导出结果将作为 <span
+class="type">string</span> 返回，否则返回 **`null`**。
 
 ### 范例
 
@@ -1136,7 +1136,7 @@ class="methodparam">void</span> )
 ### 返回值
 
 一个 <span class="classname">ReflectionMethod</span>
-对象，反射了类的构造函数，或者当类不存在构造函数时返回 **`NULL`**。
+对象，反射了类的构造函数，或者当类不存在构造函数时返回 **`null`**。
 
 ### 范例
 
@@ -1191,7 +1191,7 @@ ReflectionClass::getDefaultProperties
 
 默认属性的<span
 class="type">数组</span>，其键是属性的名称，其值是属性的默认值或者在属性没有默认值时是
-**`NULL`**。 这个函数不区分静态和非静态属性，也不考虑可见性修饰符。
+**`null`**。 这个函数不区分静态和非静态属性，也不考虑可见性修饰符。
 
 ### 范例
 
@@ -1260,7 +1260,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果存在则返回文档注释，否则返回 **`FALSE`**。
+如果存在则返回文档注释，否则返回 **`false`**。
 
 ### 范例
 
@@ -1314,7 +1314,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-返回用户定义的类最后一行的行数，如果未知则返回 **`FALSE`**。
+返回用户定义的类最后一行的行数，如果未知则返回 **`false`**。
 
 ### 范例
 
@@ -1363,7 +1363,7 @@ class="methodparam">void</span> )
 ### 返回值
 
 类所处的扩展的 <span class="classname">ReflectionExtension</span>
-对象的表示，如果是用户定义的类则返回 **`NULL`**。
+对象的表示，如果是用户定义的类则返回 **`null`**。
 
 ### 范例
 
@@ -1408,7 +1408,7 @@ ReflectionClass::getExtensionName
 
 ### 返回值
 
-获取定义的类所在的扩展的名称，如果是用户定义的类，则返回 **`FALSE`**。
+获取定义的类所在的扩展的名称，如果是用户定义的类，则返回 **`false`**。
 
 ### 范例
 
@@ -1451,7 +1451,7 @@ class="methodparam">void</span> )
 ### 返回值
 
 返回类所定义的文件名。如果这个类是在 PHP 核心或 PHP 扩展中定义的，则返回
-**`FALSE`**。
+**`false`**。
 
 ### 参见
 
@@ -2090,7 +2090,7 @@ The class constant name.
 ### 返回值
 
 A <span class="classname">ReflectionClassConstant</span>,
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -2387,7 +2387,7 @@ class="methodparam">void</span> )
 
 返回了一个数组，新的方法名位于键中，原始名称（格式是
 *"TraitName::original"*）位于数组的值中。 出现一个错误的情况下返回
-**`NULL`**。
+**`null`**。
 
 ReflectionClass::getTraitNames
 ==============================
@@ -2410,7 +2410,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-返回的数组的值包含了 trait 的名称。 出现错误的情况下返回 **`NULL`**。
+返回的数组的值包含了 trait 的名称。 出现错误的情况下返回 **`null`**。
 
 ReflectionClass::getTraits
 ==========================
@@ -2435,7 +2435,7 @@ class="methodparam">void</span> )
 
 返回了一个数组，键是 trait 的名称，值是 trait 实例的 <span
 class="classname">ReflectionClass</span>。 出现错误的情况下返回
-**`NULL`**。
+**`null`**。
 
 ReflectionClass::hasConstant
 ============================
@@ -2457,7 +2457,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 
 ### 返回值
 
-如果已定义返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果已定义返回 **`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -2507,7 +2507,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 
 ### 返回值
 
-如果有这个方法返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果有这个方法返回 **`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -2586,7 +2586,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 
 ### 返回值
 
-如果有这个属性返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果有这个属性返回 **`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -2644,7 +2644,7 @@ ReflectionClass::implementsInterface
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2672,7 +2672,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2737,7 +2737,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2786,7 +2786,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2835,7 +2835,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果这个类可以复制返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果这个类可以复制返回 **`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -2887,7 +2887,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2938,7 +2938,7 @@ class="methodparam"><span class="type">object</span> `$object`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2998,7 +2998,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3080,7 +3080,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3125,7 +3125,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3173,7 +3173,7 @@ Check whether this class is iterable (i.e. can be used inside
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3238,7 +3238,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3304,7 +3304,7 @@ class="methodparam"><span class="type">string</span> `$class`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3334,8 +3334,8 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果是 trait 返回 **`TRUE`**，否则返回 **`FALSE`**。
-在出现错误的情况下，将会返回 **`NULL`**。
+如果是 trait 返回 **`true`**，否则返回 **`false`**。
+在出现错误的情况下，将会返回 **`null`**。
 
 ReflectionClass::isUserDefined
 ==============================
@@ -3356,7 +3356,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3788,7 +3788,7 @@ Exports a reflection.
 The class constant name.
 
 `return`  
-设为 **`TRUE`** 时返回导出结果，设为 **`FALSE`**（默认值）则忽略返回。
+设为 **`true`** 时返回导出结果，设为 **`false`**（默认值）则忽略返回。
 
 ### 返回值
 
@@ -3838,7 +3838,7 @@ Gets doc comments from a class constant.
 
 ### 返回值
 
-The doc comment if it exists, otherwise **`FALSE`**
+The doc comment if it exists, otherwise **`false`**
 
 ReflectionClassConstant::getModifiers
 =====================================
@@ -3926,7 +3926,7 @@ Checks if the class constant is private.
 
 ### 返回值
 
-**`TRUE`** if the class constant is private, otherwise **`FALSE`**
+**`true`** if the class constant is private, otherwise **`false`**
 
 ### 参见
 
@@ -3952,7 +3952,7 @@ Checks if the class constant is protected.
 
 ### 返回值
 
-**`TRUE`** if the class constant is protected, otherwise **`FALSE`**
+**`true`** if the class constant is protected, otherwise **`false`**
 
 ### 参见
 
@@ -3978,7 +3978,7 @@ Checks if the class constant is public.
 
 ### 返回值
 
-**`TRUE`** if the class constant is public, otherwise **`FALSE`**
+**`true`** if the class constant is public, otherwise **`false`**
 
 ### 参见
 
@@ -4471,12 +4471,12 @@ class="methodparam"><span class="type">string</span> `$name`</span> \[,
 导出的反射。
 
 `return`  
-设为 **`TRUE`** 时返回导出结果，设为 **`FALSE`**（默认值）则忽略返回。
+设为 **`true`** 时返回导出结果，设为 **`false`**（默认值）则忽略返回。
 
 ### 返回值
 
-如果参数 `return` 设为 **`TRUE`**，导出结果将作为 <span
-class="type">string</span> 返回，否则返回 **`NULL`**。
+如果参数 `return` 设为 **`true`**，导出结果将作为 <span
+class="type">string</span> 返回，否则返回 **`null`**。
 
 ### 参见
 
@@ -5002,8 +5002,8 @@ ReflectionExtension::isPersistent
 
 ### 返回值
 
-扩展在<a href="/ini/core.html#ini.extension" class="link"><em>extension</em></a>配置中被载入返回**`TRUE`**
-，否则返回 **`FALSE`**。
+扩展在<a href="/ini/core.html#ini.extension" class="link"><em>extension</em></a>配置中被载入返回**`true`**
+，否则返回 **`false`**。
 
 ### 参见
 
@@ -5030,8 +5030,8 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果扩展被<span class="function">dl</span>载入则返回**`TRUE`**
-，否则返回 **`FALSE`** 。
+如果扩展被<span class="function">dl</span>载入则返回**`true`**
+，否则返回 **`false`** 。
 
 ### 参见
 
@@ -5049,7 +5049,7 @@ To string
 <span class="methodparam">void</span> )
 
 以<span class="type">string</span>形式返回扩展的反射信息。同 <span
-class="methodname">ReflectionExtension::export</span>`return`参数设置为**`TRUE`**。
+class="methodname">ReflectionExtension::export</span>`return`参数设置为**`true`**。
 
 ### 参数
 
@@ -5416,12 +5416,12 @@ Exports a Reflected function.
 导出的反射。
 
 `return`  
-设为 **`TRUE`** 时返回导出结果，设为 **`FALSE`**（默认值）则忽略返回。
+设为 **`true`** 时返回导出结果，设为 **`false`**（默认值）则忽略返回。
 
 ### 返回值
 
-如果参数 `return` 设为 **`TRUE`**，导出结果将作为 <span
-class="type">string</span> 返回，否则返回 **`NULL`**。
+如果参数 `return` 设为 **`true`**，导出结果将作为 <span
+class="type">string</span> 返回，否则返回 **`null`**。
 
 ### 参见
 
@@ -5449,7 +5449,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-Returns <span class="classname">Closure</span>. Returns **`NULL`** in
+Returns <span class="classname">Closure</span>. Returns **`null`** in
 case of an error.
 
 ReflectionFunction::invoke
@@ -5625,7 +5625,7 @@ directive.
 
 ### 返回值
 
-**`TRUE`** if it's disable, otherwise **`FALSE`**
+**`true`** if it's disable, otherwise **`false`**
 
 ### 参见
 
@@ -5881,7 +5881,7 @@ class="methodname">ReflectionFunctionAbstract::getClosureScopeClass</span>
 
 ### 返回值
 
-Returns the class on success or **`NULL`** on failure.
+Returns the class on success or **`null`** on failure.
 
 ReflectionFunctionAbstract::getClosureThis
 ==========================================
@@ -5905,7 +5905,7 @@ class="methodname">ReflectionFunctionAbstract::getClosureThis</span> (
 
 ### 返回值
 
-返回 `$this` 指向，产生错误返回 **`NULL`**
+返回 `$this` 指向，产生错误返回 **`null`**
 
 ReflectionFunctionAbstract::getDocComment
 =========================================
@@ -5931,7 +5931,7 @@ class="methodname">ReflectionFunctionAbstract::getDocComment</span> (
 
 ### 返回值
 
-如果存在注释文本返回其内容，否则返回 **`FALSE`**
+如果存在注释文本返回其内容，否则返回 **`false`**
 
 ### 参见
 
@@ -5961,7 +5961,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-获取用户定义函数的结束行号，如果未知返回 **`FALSE`**
+获取用户定义函数的结束行号，如果未知返回 **`false`**
 
 ### 参见
 
@@ -6239,7 +6239,7 @@ Gets the specified return type of a reflected function.
 ### 返回值
 
 Returns a <span class="classname">ReflectionType</span> object if a
-return type is specified, **`NULL`** otherwise.
+return type is specified, **`null`** otherwise.
 
 ### 范例
 
@@ -6398,8 +6398,8 @@ Checks whether the reflected function has a return type specified.
 
 ### 返回值
 
-Returns **`TRUE`** if the function is a specified return type, otherwise
-**`FALSE`**.
+Returns **`true`** if the function is a specified return type, otherwise
+**`false`**.
 
 ### 范例
 
@@ -6468,7 +6468,7 @@ ReflectionFunctionAbstract::inNamespace
 
 ### 返回值
 
-在命名空间内返回 **`TRUE`**，否则返回 **`FALSE`**
+在命名空间内返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -6499,7 +6499,7 @@ ReflectionFunctionAbstract::isClosure
 
 ### 返回值
 
-匿名函数返回 **`TRUE`**，否则返回 **`FALSE`**
+匿名函数返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -6524,7 +6524,7 @@ ReflectionFunctionAbstract::isDeprecated
 
 ### 返回值
 
-弃用返回 **`TRUE`**，否则返回 **`FALSE`**
+弃用返回 **`true`**，否则返回 **`false`**
 
 ### 范例
 
@@ -6569,7 +6569,7 @@ ReflectionFunctionAbstract::isGenerator
 
 ### 返回值
 
-生成器函数返回 **`TRUE`**，否则返回 **`FALSE`** on failure.
+生成器函数返回 **`true`**，否则返回 **`false`** on failure.
 
 ReflectionFunctionAbstract::isInternal
 ======================================
@@ -6594,7 +6594,7 @@ ReflectionFunctionAbstract::isInternal
 
 ### 返回值
 
-内置函数返回 **`TRUE`**，否则返回 **`FALSE`**
+内置函数返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -6625,7 +6625,7 @@ class="methodname">ReflectionFunctionAbstract::isUserDefined</span> (
 
 ### 返回值
 
-用户自定义函数返回 **`TRUE`**，否则返回 **`FALSE`**
+用户自定义函数返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -6652,7 +6652,7 @@ Checks if the function is
 
 ### 返回值
 
-Returns **`TRUE`** if the function is variadic, otherwise **`FALSE`**.
+Returns **`true`** if the function is variadic, otherwise **`false`**.
 
 ReflectionFunctionAbstract::returnsReference
 ============================================
@@ -6678,7 +6678,7 @@ class="methodname">ReflectionFunctionAbstract::returnsReference</span> (
 
 ### 返回值
 
-返回参考信息返回 **`TRUE`**，否则返回 **`FALSE`**
+返回参考信息返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -7165,12 +7165,12 @@ Exports a ReflectionMethod.
 方法名称
 
 `return`  
-设为 **`TRUE`** 时返回导出结果，设为 **`FALSE`**（默认值）则忽略返回。
+设为 **`true`** 时返回导出结果，设为 **`false`**（默认值）则忽略返回。
 
 ### 返回值
 
-如果参数 `return` 设为 **`TRUE`**，导出结果将作为 <span
-class="type">string</span> 返回，否则返回 **`NULL`**。
+如果参数 `return` 设为 **`true`**，导出结果将作为 <span
+class="type">string</span> 返回，否则返回 **`null`**。
 
 ### 参见
 
@@ -7200,7 +7200,7 @@ class="methodparam"><span class="type">object</span> `$object`</span> )
 ### 返回值
 
 返回 <span class="classname">Closure</span> 如果产生任何错误返回
-**`NULL`**
+**`null`**
 
 ReflectionMethod::getDeclaringClass
 ===================================
@@ -7555,7 +7555,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果是抽象方法返回 **`TRUE`**，否则返回 **`FALSE`**
+如果是抽象方法返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -7580,7 +7580,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果是构造方法返回 **`TRUE`**，否则返回 **`FALSE`**
+如果是构造方法返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -7607,7 +7607,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果是析构方法返回 **`TRUE`**，否则返回 **`FALSE`**
+如果是析构方法返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -7632,7 +7632,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果是 final 返回 **`TRUE`**，否则返回 **`FALSE`**
+如果是 final 返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -7661,7 +7661,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-私有方法返回 **`TRUE`**，否则返回 **`FALSE`**
+私有方法返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -7686,7 +7686,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-保护方法返回 **`TRUE`**，否则返回 **`FALSE`**
+保护方法返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -7711,7 +7711,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-公开方法返回 **`TRUE`**，否则返回 **`FALSE`**
+公开方法返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -7736,7 +7736,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-静态方法返回 **`TRUE`**，否则返回 **`FALSE`**
+静态方法返回 **`true`**，否则返回 **`false`**
 
 ### 参见
 
@@ -7759,7 +7759,7 @@ class="methodparam"><span class="type">bool</span> `$accessible`</span>
 ### 参数
 
 `accessible`  
-可以访问设置 **`TRUE`**，否则设置 **`FALSE`**
+可以访问设置 **`true`**，否则设置 **`false`**
 
 ### 返回值
 
@@ -8173,12 +8173,12 @@ Exports a reflection.
 导出的反射。
 
 `return`  
-设为 **`TRUE`** 时返回导出结果，设为 **`FALSE`**（默认值）则忽略返回。
+设为 **`true`** 时返回导出结果，设为 **`false`**（默认值）则忽略返回。
 
 ### 返回值
 
-如果参数 `return` 设为 **`TRUE`**，导出结果将作为 <span
-class="type">string</span> 返回，否则返回 **`NULL`**。
+如果参数 `return` 设为 **`true`**，导出结果将作为 <span
+class="type">string</span> 返回，否则返回 **`null`**。
 
 ### 参见
 
@@ -8330,7 +8330,7 @@ Checks if null is allowed
 <span class="methodname">ReflectionParameter::allowsNull</span> ( <span
 class="methodparam">void</span> )
 
-Checks whether the parameter allows **`NULL`**.
+Checks whether the parameter allows **`null`**.
 
 **Warning**
 
@@ -8342,7 +8342,7 @@ Checks whether the parameter allows **`NULL`**.
 
 ### 返回值
 
-**`TRUE`** if **`NULL`** is allowed, otherwise **`FALSE`**
+**`true`** if **`null`** is allowed, otherwise **`false`**
 
 ### 参见
 
@@ -8369,8 +8369,8 @@ Returns whether this parameter can be passed by value
 
 ### 返回值
 
-Returns **`TRUE`** if the parameter can be passed by value, **`FALSE`**
-otherwise. Returns **`NULL`** in case of an error.
+Returns **`true`** if the parameter can be passed by value, **`false`**
+otherwise. Returns **`null`** in case of an error.
 
 ReflectionParameter::\_\_clone
 ==============================
@@ -8538,7 +8538,7 @@ The function name.
 The parameter name.
 
 `return`  
-设为 **`TRUE`** 时返回导出结果，设为 **`FALSE`**（默认值）则忽略返回。
+设为 **`true`** 时返回导出结果，设为 **`false`**（默认值）则忽略返回。
 
 ### 返回值
 
@@ -8624,7 +8624,7 @@ Gets the declaring class.
 
 ### 返回值
 
-A <span class="classname">ReflectionClass</span> object or **`NULL`** if
+A <span class="classname">ReflectionClass</span> object or **`null`** if
 called on function.
 
 ### 范例
@@ -8784,7 +8784,7 @@ class="classname">ReflectionException</span> will be thrown.
 
 ### 返回值
 
-Returns string on success or **`NULL`** on failure.
+Returns string on success or **`null`** on failure.
 
 ### 更新日志
 
@@ -8901,7 +8901,7 @@ Gets the associated type of a parameter.
 ### 返回值
 
 Returns a <span class="classname">ReflectionType</span> object if a
-parameter type is specified, **`NULL`** otherwise.
+parameter type is specified, **`null`** otherwise.
 
 ### 范例
 
@@ -8982,7 +8982,7 @@ Checks if the parameter has a type associated with it.
 
 ### 返回值
 
-**`TRUE`** if a type is specified, **`FALSE`** otherwise.
+**`true`** if a type is specified, **`false`** otherwise.
 
 ### 范例
 
@@ -9028,8 +9028,8 @@ Checks if the parameter expects an array.
 
 ### 返回值
 
-**`TRUE`** if an <span class="type">array</span> is expected,
-**`FALSE`** otherwise.
+**`true`** if an <span class="type">array</span> is expected,
+**`false`** otherwise.
 
 ### 参见
 
@@ -9056,8 +9056,8 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-Returns **`TRUE`** if the parameter is <span
-class="type">callable</span>, **`FALSE`** if it is not or **`NULL`** on
+Returns **`true`** if the parameter is <span
+class="type">callable</span>, **`false`** if it is not or **`null`** on
 failure.
 
 ReflectionParameter::isDefaultValueAvailable
@@ -9080,8 +9080,8 @@ class="methodname">ReflectionParameter::isDefaultValueAvailable</span> (
 
 ### 返回值
 
-如果有默认值返回，**`TRUE`** if a default value is available, 否则返回
-**`FALSE`**
+如果有默认值返回，**`true`** if a default value is available, 否则返回
+**`false`**
 
 ### 参见
 
@@ -9108,7 +9108,7 @@ Returns whether the default value of this parameter is a constant.
 
 ### 返回值
 
-Returns **`TRUE`** if the default value is constant, and **`FALSE`**
+Returns **`true`** if the default value is constant, and **`false`**
 otherwise.
 
 ### 参见
@@ -9137,7 +9137,7 @@ Checks if the parameter is optional.
 
 ### 返回值
 
-**`TRUE`** if the parameter is optional, otherwise **`FALSE`**
+**`true`** if the parameter is optional, otherwise **`false`**
 
 ### 参见
 
@@ -9166,8 +9166,8 @@ Checks if the parameter is passed in by reference.
 
 ### 返回值
 
-**`TRUE`** if the parameter is passed in by reference, otherwise
-**`FALSE`**
+**`true`** if the parameter is passed in by reference, otherwise
+**`false`**
 
 ### 参见
 
@@ -9193,7 +9193,7 @@ Checks if the parameter was declared as a
 
 ### 返回值
 
-Returns **`TRUE`** if the parameter is variadic, otherwise **`FALSE`**.
+Returns **`true`** if the parameter is variadic, otherwise **`false`**.
 
 ReflectionParameter::\_\_toString
 =================================
@@ -9583,7 +9583,7 @@ Exports a reflection.
 The property name.
 
 `return`  
-设为 **`TRUE`** 时返回导出结果，设为 **`FALSE`**（默认值）则忽略返回。
+设为 **`true`** 时返回导出结果，设为 **`false`**（默认值）则忽略返回。
 
 ### 返回值
 
@@ -9641,8 +9641,8 @@ Gets the implicit or explicitly declared default value for a property.
 ### 返回值
 
 The default value if the property has any default value (including
-**`NULL`**). If there is no default value, then **`NULL`** is returned.
-It is not possible to differentiate between a **`NULL`** default value
+**`null`**). If there is no default value, then **`null`** is returned.
+It is not possible to differentiate between a **`null`** default value
 and an unitialized typed property. Use <span
 class="methodname">ReflectionClass::hasDefaultValue</span> to detect the
 difference.
@@ -9836,7 +9836,7 @@ Gets the associated type of a property.
 ### 返回值
 
 Returns a <span class="classname">ReflectionType</span> if the property
-has a type, and **`NULL`** otherwise.
+has a type, and **`null`** otherwise.
 
 ### 范例
 
@@ -9949,7 +9949,7 @@ Checks if property has a default value declared
 <span class="methodparam">void</span> )
 
 Checks whether the property was declared with a default value, including
-an implicit **`NULL`** default value. Only returns **`FALSE`** for typed
+an implicit **`null`** default value. Only returns **`false`** for typed
 properties without default value (or dynamic properties).
 
 ### 参数
@@ -9958,9 +9958,9 @@ properties without default value (or dynamic properties).
 
 ### 返回值
 
-If the property has any default value (including **`NULL`**) **`TRUE`**
+If the property has any default value (including **`null`**) **`true`**
 is returned; if the property is typed without a default value declared
-or is a dynamic property, **`FALSE`** is returned.
+or is a dynamic property, **`false`** is returned.
 
 ### 范例
 
@@ -10011,7 +10011,7 @@ Checks if the property has a type associated with it.
 
 ### 返回值
 
-**`TRUE`** if a type is specified, **`FALSE`** otherwise.
+**`true`** if a type is specified, **`false`** otherwise.
 
 ### 范例
 
@@ -10059,7 +10059,7 @@ property was dynamically declared at run-time.
 
 ### 返回值
 
-**`TRUE`** if the property was declared at compile-time, or **`FALSE`**
+**`true`** if the property was declared at compile-time, or **`false`**
 if it was created at run-time.
 
 ### 范例
@@ -10114,9 +10114,9 @@ property from.
 
 ### 返回值
 
-Returns **`FALSE`** for typed properties prior to initialization, and
+Returns **`false`** for typed properties prior to initialization, and
 for properties that have been explicitly <span
-class="function">unset</span>. For all other properties **`TRUE`** will
+class="function">unset</span>. For all other properties **`true`** will
 be returned.
 
 ### 错误／异常
@@ -10174,7 +10174,7 @@ Checks whether the property is private.
 
 ### 返回值
 
-**`TRUE`** if the property is private, **`FALSE`** otherwise.
+**`true`** if the property is private, **`false`** otherwise.
 
 ### 参见
 
@@ -10201,7 +10201,7 @@ Checks whether the property is protected.
 
 ### 返回值
 
-**`TRUE`** if the property is protected, **`FALSE`** otherwise.
+**`true`** if the property is protected, **`false`** otherwise.
 
 ### 参见
 
@@ -10228,7 +10228,7 @@ Checks whether the property is public.
 
 ### 返回值
 
-**`TRUE`** if the property is public, **`FALSE`** otherwise.
+**`true`** if the property is public, **`false`** otherwise.
 
 ### 参见
 
@@ -10255,7 +10255,7 @@ Checks whether the property is static.
 
 ### 返回值
 
-**`TRUE`** if the property is static, **`FALSE`** otherwise.
+**`true`** if the property is static, **`false`** otherwise.
 
 ### 参见
 
@@ -10281,7 +10281,7 @@ and private properties to be accessed.
 ### 参数
 
 `accessible`  
-**`TRUE`** to allow accessibility, or **`FALSE`**.
+**`true`** to allow accessibility, or **`false`**.
 
 ### 返回值
 
@@ -10443,7 +10443,7 @@ Checks if null is allowed
 <span class="methodname">ReflectionType::allowsNull</span> ( <span
 class="methodparam">void</span> )
 
-Checks whether the parameter allows **`NULL`**.
+Checks whether the parameter allows **`null`**.
 
 ### 参数
 
@@ -10451,7 +10451,7 @@ Checks whether the parameter allows **`NULL`**.
 
 ### 返回值
 
-**`TRUE`** if **`NULL`** is allowed, otherwise **`FALSE`**
+**`true`** if **`null`** is allowed, otherwise **`false`**
 
 ### 范例
 
@@ -10499,7 +10499,7 @@ Checks if the type is a built-in type in PHP.
 
 ### 返回值
 
-**`TRUE`** if it's a built-in type, otherwise **`FALSE`**
+**`true`** if it's a built-in type, otherwise **`false`**
 
 ### 范例
 
@@ -10960,7 +10960,7 @@ Get the *$this* value that the generator has access to.
 
 ### 返回值
 
-Returns the *$this* value, or **`NULL`** if the generator was not
+Returns the *$this* value, or **`null`** if the generator was not
 created in a class context.
 
 ### 范例

@@ -382,9 +382,9 @@ abstracted module.
 
 ### 返回值
 
-Returns an object on success, **`FALSE`** on error. If a connection has
+Returns an object on success, **`false`** on error. If a connection has
 been made but the database could not be selected, the connection is
-closed and **`FALSE`** is returned.
+closed and **`false`** is returned.
 
 The returned `object` has three properties:
 
@@ -515,7 +515,7 @@ The string to escape.
 ### 返回值
 
 Returns the text, escaped where necessary (such as quotes, backslashes
-etc). On error, **`NULL`** is returned.
+etc). On error, **`null`** is returned.
 
 ### 范例
 
@@ -857,7 +857,7 @@ greater than the second.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

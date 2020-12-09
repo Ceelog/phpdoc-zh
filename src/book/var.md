@@ -38,7 +38,7 @@ Variable handling
     -   [is\_iterable](/ref/var.html#is_iterable) — Verify that the
         contents of a variable is an iterable value
     -   [is\_long](/ref/var.html#is_long) — is\_int 的别名
-    -   [is\_null](/ref/var.html#is_null) — 检测变量是否为 NULL
+    -   [is\_null](/ref/var.html#is_null) — 检测变量是否为 null
     -   [is\_numeric](/ref/var.html#is_numeric) —
         检测变量是否为数字或数字字符串
     -   [is\_object](/ref/var.html#is_object) — 检测变量是否是一个对象
@@ -47,7 +47,7 @@ Variable handling
         检测变量是否为资源类型
     -   [is\_scalar](/ref/var.html#is_scalar) — 检测变量是否是一个标量
     -   [is\_string](/ref/var.html#is_string) — 检测变量是否是字符串
-    -   [isset](/ref/var.html#isset) — 检测变量是否已设置并且非 NULL
+    -   [isset](/ref/var.html#isset) — 检测变量是否已设置并且非 null
     -   [print\_r](/ref/var.html#print_r) — 以易于理解的格式打印变量。
     -   [serialize](/ref/var.html#serialize) — 产生一个可存储的值的表示
     -   [settype](/ref/var.html#settype) — 设置变量的类型

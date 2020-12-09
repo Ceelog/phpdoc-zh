@@ -36,7 +36,7 @@ Enable/disable asynchronous signal handling or return the old setting
 <span class="type">bool</span> <span
 class="methodname">pcntl\_async\_signals</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$on`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 If the `on` parameter is omitted, <span
 class="function">pcntl\_async\_signals</span> returns whether
@@ -101,7 +101,7 @@ value格式的，key代表要传递的环境变量的名称，value代表该环�
 
 ### 返回值
 
-当发生错误时返回 **`FALSE`** ，没有错误时没有返回。
+当发生错误时返回 **`false`** ，没有错误时没有返回。
 
 pcntl\_fork
 ===========
@@ -212,11 +212,11 @@ PRIO\_PROCESS</span></span> \]\] )
 ### 返回值
 
 <span class="function">pcntl\_getpriority</span>
-返回进程的优先级或在错误时返回 **`FALSE`** 。 值越小代表优先级越高。
+返回进程的优先级或在错误时返回 **`false`** 。 值越小代表优先级越高。
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -261,7 +261,7 @@ PRIO\_PROCESS</span></span> \]\] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -284,7 +284,7 @@ class="function">pcntl\_signal</span> 安装的处理器。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -417,7 +417,7 @@ class="function">pcntl\_signal</span>为`signo`指定的信号安装一个新
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -517,7 +517,7 @@ class="function">pcntl\_sigprocmask</span>用来增加，删除或设置阻塞�
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -686,7 +686,7 @@ class="methodparam"><span class="type">int</span> `$errno`</span> )
 
 ### 返回值
 
-Returns error description on success 或者在失败时返回 **`FALSE`**.
+Returns error description on success 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -844,7 +844,7 @@ class="methodname">pcntl\_wexitstatus</span> ( <span
 class="methodparam"><span class="type">int</span> `$status`</span> )
 
 返回一个中断的子进程的返回代码。这个函数仅在函数<span
-class="function">pcntl\_wifexited</span>返回 **`TRUE`**.时有效。
+class="function">pcntl\_wifexited</span>返回 **`true`**.时有效。
 
 ### 参数
 
@@ -882,8 +882,8 @@ class="function">pcntl\_waitpid</span> 时的状态参数。
 
 ### 返回值
 
-当子进程状态代码代表正常退出时返回 **`TRUE`** ，其他情况返回
-**`FALSE`**。
+当子进程状态代码代表正常退出时返回 **`true`** ，其他情况返回
+**`false`**。
 
 ### 参见
 
@@ -911,8 +911,8 @@ class="function">pcntl\_waitpid</span> 时的状态参数。
 
 ### 返回值
 
-如果子进程是由于某个未捕获的信号退出的返回 **`TRUE`** ，其他情况返回
-**`FALSE`** 。
+如果子进程是由于某个未捕获的信号退出的返回 **`true`** ，其他情况返回
+**`false`** 。
 
 ### 参见
 
@@ -942,7 +942,7 @@ class="function">pcntl\_waitpid</span> 时的状态参数。
 
 ### 返回值
 
-如果子进程当前是停止的返回 **`TRUE`** ，其他情况返回 **`FALSE`** 。
+如果子进程当前是停止的返回 **`true`** ，其他情况返回 **`false`** 。
 
 ### 参见
 
@@ -960,7 +960,7 @@ class="methodname">pcntl\_wstopsig</span> ( <span
 class="methodparam"><span class="type">int</span> `$status`</span> )
 
 返回导致子进程停止的信号编号。这个函数仅在<span
-class="function">pcntl\_wifstopped</span>返回 **`TRUE`** 时有效。
+class="function">pcntl\_wifstopped</span>返回 **`true`** 时有效。
 
 ### 参数
 
@@ -989,7 +989,7 @@ class="methodname">pcntl\_wtermsig</span> ( <span
 class="methodparam"><span class="type">int</span> `$status`</span> )
 
 返回导致子进程中断的信号编号。这个函数仅在<span
-class="function">pcntl\_wifsignaled</span> 返回 **`TRUE`** 时有效。
+class="function">pcntl\_wifsignaled</span> 返回 **`true`** 时有效。
 
 ### 参数
 

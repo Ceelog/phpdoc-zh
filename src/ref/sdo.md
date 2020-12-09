@@ -557,8 +557,8 @@ None.
 
 ### 返回值
 
-Returns **`TRUE`** if change logging is on, otherwise returns
-**`FALSE`**.
+Returns **`true`** if change logging is on, otherwise returns
+**`false`**.
 
 SDO\_DAS\_DataFactory::addPropertyToType
 ========================================
@@ -937,8 +937,8 @@ None.
 
 ### 返回值
 
-Returns **`TRUE`** if the property was set prior to being modified,
-otherwise returns **`FALSE`**.
+Returns **`true`** if the property was set prior to being modified,
+otherwise returns **`false`**.
 
 SDO\_DataFactory::create
 ========================
@@ -997,7 +997,7 @@ class="methodparam">void</span> )
 
 Clear an SDO\_DataObject's properties. Read-only properties are
 unaffected. Subsequent calls to isset() for the data object will return
-**`FALSE`**.
+**`false`**.
 
 ### 参数
 
@@ -1355,8 +1355,8 @@ class="methodparam">void</span> )
 发布版本中未通知就被修改。使用本函数风险自担。
 
 Test to see if the property corresponds to a containment relationship.
-Returns **`TRUE`** if the property defines a containment relationship,
-or **`FALSE`** if it is reference.
+Returns **`true`** if the property defines a containment relationship,
+or **`false`** if it is reference.
 
 ### 参数
 
@@ -1364,8 +1364,8 @@ None.
 
 ### 返回值
 
-Returns **`TRUE`** if the property defines a containment relationship,
-or **`FALSE`** if it is reference.
+Returns **`true`** if the property defines a containment relationship,
+or **`false`** if it is reference.
 
 SDO\_Model\_Property::isMany
 ============================
@@ -1383,8 +1383,8 @@ class="methodparam">void</span> )
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
 发布版本中未通知就被修改。使用本函数风险自担。
 
-Test to see if the property is many-valued. Returns **`TRUE`** if this
-is a many-valued property, otherwise returns **`FALSE`**.
+Test to see if the property is many-valued. Returns **`true`** if this
+is a many-valued property, otherwise returns **`false`**.
 
 ### 参数
 
@@ -1392,8 +1392,8 @@ None.
 
 ### 返回值
 
-Returns **`TRUE`** if this is a many-valued property, otherwise returns
-**`FALSE`**.
+Returns **`true`** if this is a many-valued property, otherwise returns
+**`false`**.
 
 SDO\_Model\_ReflectionDataObject::\_\_construct
 ===============================================
@@ -1449,7 +1449,7 @@ class="type">SDO\_Model\_ReflectionDataObject</span> `$rdo`</span> \[,
 发布版本中未通知就被修改。使用本函数风险自担。
 
 Get a string describing the SDO\_DataObject. The default behaviour is to
-print the output, but if **`TRUE`** is specified for return, it is
+print the output, but if **`true`** is specified for return, it is
 returned as a string.
 
 ### 参数
@@ -1458,7 +1458,7 @@ returned as a string.
 An SDO\_Model\_ReflectionDataObject.
 
 `return`  
-If **`TRUE`**, return the output as a string, otherwise print it.
+If **`true`**, return the output as a string, otherwise print it.
 
 ### 返回值
 
@@ -1492,7 +1492,7 @@ None.
 ### 返回值
 
 Returns the container's SDO\_Model\_Property which references the
-SDO\_DataObject, or **`NULL`** if it is a root SDO\_DataObject.
+SDO\_DataObject, or **`null`** if it is a root SDO\_DataObject.
 
 SDO\_Model\_ReflectionDataObject::getInstanceProperties
 =======================================================
@@ -1570,7 +1570,7 @@ class="methodparam">void</span> )
 
 Get the base type for this type. Returns the SDO\_Model\_Type for the
 base type if this type inherits from another, otherwise returns
-**`NULL`**. An example of when base types occur is when a type defined
+**`null`**. An example of when base types occur is when a type defined
 in XML schema inherits from another type by using
 
 ``` description
@@ -1586,7 +1586,7 @@ None.
 ### 返回值
 
 Returns the SDO\_Model\_Type for the base type if this type inherits
-from another, otherwise returns **`NULL`**.
+from another, otherwise returns **`null`**.
 
 SDO\_Model\_Type::getName
 =========================
@@ -1716,7 +1716,7 @@ class="methodparam">void</span> )
 发布版本中未通知就被修改。使用本函数风险自担。
 
 Test to see if this SDO\_Model\_Type is an abstract data type. Returns
-**`TRUE`** if this type is abstract, that is, no SDO\_DataObject of this
+**`true`** if this type is abstract, that is, no SDO\_DataObject of this
 type can be instantiated, though other types may inherit from it.
 
 ### 参数
@@ -1725,8 +1725,8 @@ None.
 
 ### 返回值
 
-Returns **`TRUE`** if this type is an abstract data type, otherwise
-returns **`FALSE`**.
+Returns **`true`** if this type is an abstract data type, otherwise
+returns **`false`**.
 
 SDO\_Model\_Type::isDataType
 ============================
@@ -1745,8 +1745,8 @@ class="methodparam">void</span> )
 发布版本中未通知就被修改。使用本函数风险自担。
 
 Test to see if this SDO\_Model\_Type is a primitive data type. Returns
-**`TRUE`** if this type is a primitive data type, otherwise returns
-**`FALSE`**.
+**`true`** if this type is a primitive data type, otherwise returns
+**`false`**.
 
 ### 参数
 
@@ -1754,8 +1754,8 @@ None.
 
 ### 返回值
 
-Returns **`TRUE`** if this type is a primitive data type, otherwise
-returns **`FALSE`**.
+Returns **`true`** if this type is a primitive data type, otherwise
+returns **`false`**.
 
 SDO\_Model\_Type::isInstance
 ============================
@@ -1775,8 +1775,8 @@ class="methodparam"><span class="type">SDO\_DataObject</span>
 发布版本中未通知就被修改。使用本函数风险自担。
 
 Test for an SDO\_DataObject being an instance of this SDO\_Model\_Type.
-Returns **`TRUE`** if the SDO\_DataObject provided is an instance of
-this SDO\_Model\_Type, or a derived type, otherwise returns **`FALSE`**.
+Returns **`true`** if the SDO\_DataObject provided is an instance of
+this SDO\_Model\_Type, or a derived type, otherwise returns **`false`**.
 
 ### 参数
 
@@ -1785,8 +1785,8 @@ The SDO\_DataObject to be tested.
 
 ### 返回值
 
-Returns **`TRUE`** if the SDO\_DataObject provided is an instance of
-this SDO\_Model\_Type, or a derived type, otherwise returns **`FALSE`**.
+Returns **`true`** if the SDO\_DataObject provided is an instance of
+this SDO\_Model\_Type, or a derived type, otherwise returns **`false`**.
 
 SDO\_Model\_Type::isOpenType
 ============================
@@ -1804,8 +1804,8 @@ class="methodparam">void</span> )
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
 发布版本中未通知就被修改。使用本函数风险自担。
 
-Test to see if this type is open. Returns **`TRUE`** if this type is
-open, otherwise returns **`FALSE`**. An SDO\_DataObject whose type is
+Test to see if this type is open. Returns **`true`** if this type is
+open, otherwise returns **`false`**. An SDO\_DataObject whose type is
 open can have properties added to them which are not described by the
 type. This capability is used to support working with XML documents
 whose schema support open content, such as that defined by an
@@ -1822,7 +1822,7 @@ None.
 
 ### 返回值
 
-Returns **`TRUE`** if this type is open, otherwise returns **`FALSE`**.
+Returns **`true`** if this type is open, otherwise returns **`false`**.
 
 SDO\_Model\_Type::isSequencedType
 =================================
@@ -1840,8 +1840,8 @@ class="methodparam">void</span> )
 此函数是*实验性*的。此函数的表象，包括名称及其相关文档都可能在未来的 PHP
 发布版本中未通知就被修改。使用本函数风险自担。
 
-Test to see if this is a sequenced type. Returns **`TRUE`** if this type
-is sequence, otherwise returns **`FALSE`**. Sequenced types can have the
+Test to see if this is a sequenced type. Returns **`true`** if this type
+is sequence, otherwise returns **`false`**. Sequenced types can have the
 ordering across properties preserved and can contain unstructured text.
 For more information on sequenced types see the section on
 <a href="/sdo/examples.html#Working%20with%20Sequenced%20Data%20Objects" class="link">Working with Sequenced Data Objects</a>.
@@ -1852,8 +1852,8 @@ None.
 
 ### 返回值
 
-Returns **`TRUE`** if this type is sequence, otherwise return
-**`FALSE`**.
+Returns **`true`** if this type is sequence, otherwise return
+**`false`**.
 
 SDO\_Sequence::getProperty
 ==========================

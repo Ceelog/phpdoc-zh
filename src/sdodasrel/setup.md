@@ -83,7 +83,7 @@ order to apply changes back to the database. At the top of the
 `SDO/DAS/Relational.php` you will find a number of constants which
 control whether the process of constructing and executing the SQL
 statements is to be traced. Try setting `DEBUG_EXECUTE_PLAN` to
-**`TRUE`** to see the generated SQL statements.
+**`true`** to see the generated SQL statements.
 
 资源类型
 --------

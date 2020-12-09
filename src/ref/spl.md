@@ -20,11 +20,11 @@ class="methodparam"><span class="type">mixed</span> `$class`</span> \[,
 
 `autoload`  
 是否允许使用<a href="/language/oop5/autoload.html" class="link">__autoload</a>
-魔术函数来自动装载该类。默认值为**`TRUE`**。
+魔术函数来自动装载该类。默认值为**`true`**。
 
 ### 返回值
 
-调用成功则返回一个数组，否则返回**`FALSE`**。
+调用成功则返回一个数组，否则返回**`false`**。
 
 ### 更新日志
 
@@ -97,11 +97,11 @@ class="methodparam"><span class="type">mixed</span> `$class`</span> \[,
 
 `autoload`  
 是否允许使用<a href="/language/oop5/autoload.html" class="link">__autoload</a>
-魔术函数来自动装载该类。默认值为**`TRUE`**。
+魔术函数来自动装载该类。默认值为**`true`**。
 
 ### 返回值
 
-调用成功则返回一个数组，否则返回**`FALSE`**。
+调用成功则返回一个数组，否则返回**`false`**。
 
 ### 更新日志
 
@@ -161,7 +161,7 @@ Return the traits used by the given class
 class="methodname">class\_uses</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$class`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$autoload`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 This function returns an array with the names of the traits that the
 given `class` uses. This does however not include any traits used by a
@@ -178,7 +178,7 @@ the <span class="function">\_\_autoload</span> magic method.
 
 ### 返回值
 
-An array on success, or **`FALSE`** on error.
+An array on success, or **`false`** on error.
 
 ### 范例
 
@@ -253,7 +253,7 @@ class="methodparam"><span class="type">array</span> `$args`</span> \] )
 迭代到每个元素时的调用的回调函数。
 
 > **Note**: <span class="simpara"> 为了遍历 `iterator` 这个函数必须返回
-> **`TRUE`**。 </span>
+> **`true`**。 </span>
 
 `args`  
 传递到回调函数的参数。
@@ -481,7 +481,7 @@ class="methodparam">void</span> )
 
 包含所有已注册的 \_\_autoload 函数的数组（<span
 class="type">array</span>）。如果自动装载函数队列未激活，则返回
-**`FALSE`**。如果没有已注册的函数，则返回一个空数组。
+**`false`**。如果没有已注册的函数，则返回一个空数组。
 
 spl\_autoload\_register
 =======================
@@ -531,7 +531,7 @@ class="function">spl\_autoload\_register</span>是否抛出异常。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -621,7 +621,7 @@ class="methodparam"><span class="type">mixed</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 spl\_autoload
 =============

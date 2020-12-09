@@ -7,7 +7,7 @@ The following opcodes are defined as constants by uopz before 5.0.0:
 
 **`ZEND_EXIT`** (<span class="type">int</span>)  
 <span class="simpara"> Invoked by exit() and die(), receives no
-arguments. Return boolean **`TRUE`** to exit, **`FALSE`** to continue
+arguments. Return boolean **`true`** to exit, **`false`** to continue
 </span>
 
 **`ZEND_NEW`** (<span class="type">int</span>)  

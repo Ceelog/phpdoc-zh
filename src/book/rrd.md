@@ -215,7 +215,7 @@ class="methodname">RRDCreator::\_\_construct</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 简介
 ----
@@ -292,7 +292,7 @@ class="methodname">RRDGraph::\_\_construct</span>.
 
 ### 返回值
 
-Array with information about generated image is returned, **`FALSE`** if
+Array with information about generated image is returned, **`false`** if
 error occurs.
 
 RRDGraph::saveVerbose
@@ -319,7 +319,7 @@ filename, image data are also returned in result array.
 ### 返回值
 
 Array with detailed information about generated image is returned,
-optionally with image data, **`FALSE`** if error occurs.
+optionally with image data, **`false`** if error occurs.
 
 RRDGraph::setOptions
 ====================
@@ -479,7 +479,7 @@ current time.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 

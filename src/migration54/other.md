@@ -8,7 +8,7 @@
 -   <span class="simpara">
     <a href="/book/snmp.html" class="link">SNMP</a> 现在有了 OOP API 。
     </span> <span class="simpara"> 现在包括 SNMP-related
-    在内，函数在每个错误状态都返回 **`FALSE`** （没有这样的实例、MIB
+    在内，函数在每个错误状态都返回 **`false`** （没有这样的实例、MIB
     结束等等）。因此，特别是，当发生 SNMP-related 错误时，get/walk
     函数中断上一个行为返回一个空字符串。 </span> <span class="simpara">
     现在支持多 OID get/getnext/set 查询。 </span> <span class="simpara">

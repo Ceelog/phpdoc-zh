@@ -116,7 +116,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 
 ### 返回值
 
-赋值成功返回`$this`否则返回**`NULL`**
+赋值成功返回`$this`否则返回**`null`**
 
 ### 范例
 
@@ -185,7 +185,7 @@ lua中的函数名。
 
 ### 返回值
 
-返回调用函数的结果，参数错误返回**`NULL`** ，其它错误返回**`FALSE`**。
+返回调用函数的结果，参数错误返回**`null`** ，其它错误返回**`false`**。
 
 ### 范例
 
@@ -260,7 +260,7 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-返回运行结果，参数错误返回**`NULL`** ，其它错误返回**`FALSE`**。
+返回运行结果，参数错误返回**`null`** ，其它错误返回**`false`**。
 
 ### 范例
 
@@ -324,7 +324,7 @@ class="methodparam"><span class="type">string</span> `$file`</span> )
 
 ### 返回值
 
-返回脚本文件运行结果，参数错误返回**`NULL`** ，其它错误返回**`FALSE`**。
+返回脚本文件运行结果，参数错误返回**`null`** ，其它错误返回**`false`**。
 
 Lua::registerCallback
 =====================
@@ -350,7 +350,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 
 ### 返回值
 
-成功返回`$this`，参数错误返回**`NULL`** ，其它错误返回**`FALSE`**。
+成功返回`$this`，参数错误返回**`null`** ，其它错误返回**`false`**。
 
 ### 范例
 

@@ -46,7 +46,7 @@ class="methodparam"><span class="type">resource</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -199,7 +199,7 @@ class="type">string</span> `$mode`</span> \] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 > **Note**:
 >
@@ -243,7 +243,7 @@ class="type">int</span> `$length`<span class="initializer"> =
 ### 返回值
 
 成功的时候返回读取到的数据；到达文件末尾的时候返回一个空的字符串；
-读取出错的时候则会返回**`FALSE`**
+读取出错的时候则会返回**`false`**
 
 ### 参见
 
@@ -302,7 +302,7 @@ class="function">zip\_open</span> 打开。
 ### 返回值
 
 成功的时候返回该当前实体资源供*zip\_entry\_...* 系列函数后续使用;
-如果没有更多的读取项，则会返回 **`FALSE`**
+如果没有更多的读取项，则会返回 **`false`**
 如果遇到错误则会返回相应的错误码。
 
 ### 参见

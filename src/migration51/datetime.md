@@ -24,4 +24,4 @@ The supported timezones are listed, in this format, in the
 <a href="/timezones.html" class="link">timezones appendix</a>.
 
 Also note that <span class="function">strtotime</span> now returns
-**`FALSE`** on failure, instead of -1.
+**`false`** on failure, instead of -1.

@@ -38,9 +38,9 @@
     -   [interface\_exists](/ref/classobj.html#interface_exists) —
         检查接口是否已被定义
     -   [is\_a](/ref/classobj.html#is_a) —
-        如果对象属于该类或该类是此对象的父类则返回 TRUE
+        如果对象属于该类或该类是此对象的父类则返回 true
     -   [is\_subclass\_of](/ref/classobj.html#is_subclass_of) —
-        如果此对象是该类的子类，则返回 TRUE
+        如果此对象是该类的子类，则返回 true
     -   [method\_exists](/ref/classobj.html#method_exists) —
         检查类的方法是否存在
     -   [property\_exists](/ref/classobj.html#property_exists) —

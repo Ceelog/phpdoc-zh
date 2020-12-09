@@ -26,7 +26,7 @@ Delay in seconds
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 This callback is called when all the group requests are done.
@@ -37,7 +37,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_busy</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 
@@ -64,7 +64,7 @@ The request resource
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -157,7 +157,7 @@ The new permissions. E.g. **`0644`**.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -182,7 +182,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_chmod</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 
@@ -226,7 +226,7 @@ Group ID. Is ignored when equal to -1.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -251,7 +251,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_chown</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 
@@ -283,7 +283,7 @@ Stream, Socket resource, or numeric file descriptor
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -308,7 +308,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_close</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 
@@ -353,7 +353,7 @@ modifications `result` value returned by `execute`
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -378,7 +378,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_custom</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 范例
 
@@ -453,7 +453,7 @@ Target stream, Socket resource, or numeric file descriptor
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -478,7 +478,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_dup2</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_event\_loop
 ================
@@ -500,8 +500,8 @@ requests proceeded.
 
 ### 返回值
 
-<span class="function">eio\_event\_loop</span> returns **`TRUE`** on
-success or **`FALSE`** on error.
+<span class="function">eio\_event\_loop</span> returns **`true`** on
+success or **`false`** on error.
 
 ### 范例
 
@@ -587,7 +587,7 @@ Specifies length the byte range.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -612,7 +612,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_fallocate</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_fchmod
 ===========
@@ -646,7 +646,7 @@ The new permissions. E.g. 0644.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -671,7 +671,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_fchmod</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 
@@ -713,7 +713,7 @@ Group ID. Is ignored when equal to -1.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -767,7 +767,7 @@ Stream, Socket resource, or numeric file descriptor, e.g. returned by
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -792,7 +792,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_fdatasync</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_fstat
 ==========
@@ -818,7 +818,7 @@ Stream, Socket resource, or numeric file descriptor.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -843,7 +843,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_busy</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 范例
 
@@ -948,7 +948,7 @@ A file descriptor of a file within the mounted file system.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -973,7 +973,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_fstatvfs</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 
@@ -1005,7 +1005,7 @@ Stream, Socket resource, or numeric file descriptor.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -1030,7 +1030,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_fsync</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 
@@ -1069,7 +1069,7 @@ Offset from beginning of the file
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -1094,7 +1094,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_ftruncate</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 
@@ -1136,7 +1136,7 @@ Modification time
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -1161,7 +1161,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_futime</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 
@@ -1191,7 +1191,7 @@ extension, for example libevent.
 ### 返回值
 
 <span class="function">eio\_get\_event\_stream</span> returns stream on
-success; otherwise, **`NULL`**
+success; otherwise, **`null`**
 
 ### 范例
 
@@ -1482,7 +1482,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_grp</span> returns request group resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 范例
 
@@ -1615,7 +1615,7 @@ Target file path.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -1717,7 +1717,7 @@ The file path
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -1742,7 +1742,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_lstat</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 范例
 
@@ -1838,7 +1838,7 @@ Access mode, e.g. 0755
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -1863,7 +1863,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_mkdir</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 范例
 
@@ -1949,7 +1949,7 @@ details*.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -1974,7 +1974,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_mknod</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 范例
 
@@ -2088,7 +2088,7 @@ the whole request cycle. Could be useful in debugging.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -2113,7 +2113,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_nop</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 
@@ -2305,7 +2305,7 @@ C header file. Required, if a file is created. Otherwise ignored.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -2475,7 +2475,7 @@ Offset within the file.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -2596,7 +2596,7 @@ Number of bytes to be read.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -2621,7 +2621,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_readahead</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_readdir
 ============
@@ -2655,7 +2655,7 @@ Combination of *EIO\_READDIR\_\** constants.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -2680,7 +2680,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_readdir</span> returns request resource on
-success, or **`FALSE`** on error. Sets `result` argument of `callback`
+success, or **`false`** on error. Sets `result` argument of `callback`
 function according to `flags`:
 
 **`EIO_READDIR_DENTS`** (<span class="type">int</span>)  
@@ -2905,7 +2905,7 @@ Source symbolic link path
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -2930,7 +2930,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_readlink</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 范例
 
@@ -3069,7 +3069,7 @@ Target path
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -3094,7 +3094,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_rename</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 范例
 
@@ -3152,7 +3152,7 @@ Directory path
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -3177,7 +3177,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_rmdir</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 范例
 
@@ -3252,7 +3252,7 @@ Number of bytes to be read.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -3277,7 +3277,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_seek</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_sendfile
 =============
@@ -3319,7 +3319,7 @@ Number of bytes to copy.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -3344,7 +3344,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_sendfile</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_set\_max\_idle
 ===================
@@ -3493,7 +3493,7 @@ The file path
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -3518,7 +3518,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_stat</span> returns request resource on
-success or **`FALSE`** on error. On success assigns `result` argument of
+success or **`false`** on error. On success assigns `result` argument of
 `callback` to an array.
 
 ### 范例
@@ -3609,7 +3609,7 @@ Pathname of any file within the mounted file system
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -3634,7 +3634,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_statvfs</span> returns request resource on
-success or **`FALSE`** on error. On success assigns `result` argument of
+success or **`false`** on error. On success assigns `result` argument of
 `callback` to an array.
 
 ### 范例
@@ -3717,7 +3717,7 @@ Target path
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -3742,7 +3742,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_symlink</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 范例
 
@@ -3833,7 +3833,7 @@ man page).
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -3858,7 +3858,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_sync\_file\_range</span> returns request
-resource on success or **`FALSE`** on error.
+resource on success or **`false`** on error.
 
 eio\_sync
 =========
@@ -3883,7 +3883,7 @@ NULL</span></span> \]\]\] )
 ### 返回值
 
 <span class="function">eio\_sync</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_syncfs
 ===========
@@ -3909,7 +3909,7 @@ File descriptor
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -3934,7 +3934,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_syncfs</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_truncate
 =============
@@ -3968,7 +3968,7 @@ Offset from beginning of the file.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -3993,7 +3993,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_busy</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 
@@ -4026,7 +4026,7 @@ Path to file
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -4051,7 +4051,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_unlink</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_utime
 ==========
@@ -4086,7 +4086,7 @@ Modification time
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -4111,7 +4111,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_utime</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 
@@ -4159,7 +4159,7 @@ Offset from the beginning of file.
 
 `pri`  
 请求的优先级：**`EIO_PRI_DEFAULT`**，**`EIO_PRI_MIN`**，**`EIO_PRI_MAX`**
-或 **`NULL`**。如果是 **`NULL`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
+或 **`null`**。如果是 **`null`**，`pri` 将设为 **`EIO_PRI_DEFAULT`**。
 
 `callback`  
 `callback` 函数在请求完成时被调用。其应匹配一下原型：
@@ -4184,7 +4184,7 @@ Arbitrary variable passed to `callback`.
 ### 返回值
 
 <span class="function">eio\_write</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### 参见
 

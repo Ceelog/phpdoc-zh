@@ -49,7 +49,7 @@ Oracle OCI8
     -   [oci\_fetch](/book/oci8.html#oci_fetch) — Fetches the next row
         into result-buffer
     -   [oci\_field\_is\_null](/book/oci8.html#oci_field_is_null) —
-        检查字段是否为 NULL
+        检查字段是否为 null
     -   [oci\_field\_name](/book/oci8.html#oci_field_name) — 返回字段名
     -   [oci\_field\_precision](/book/oci8.html#oci_field_precision) —
         返回字段精度
@@ -597,7 +597,7 @@ using the *SYSTEM* account. Some tests will fail if the test user does
 not have equivalent permissions.
 
 If Oracle Database Resident Connection Pooling is being tested, set
-$test\_drcp to **`TRUE`** and ensure the connection string uses an
+$test\_drcp to **`true`** and ensure the connection string uses an
 appropriate DRCP pooled server.
 
 An alternative to editing `details.inc` is the set environment
@@ -845,7 +845,7 @@ file. Refer to Oracle documentation for more detail.
 | **`OCI_NO_AUTO_COMMIT`**           | Statement execution mode for <span class="function">oci\_execute</span>. The transaction is not automatically committed when using this mode. For readability in new code, use this value instead of the older, equivalent **`OCI_DEFAULT`** constant. Introduced in PHP 5.3.2 (PECL OCI8 1.4).             |
 | **`OCI_NUM`**                      | Used with <span class="function">oci\_fetch\_all</span> and <span class="function">oci\_fetch\_array</span> to get results as an enumerated array.                                                                                                                                                          |
 | **`OCI_RETURN_LOBS`**              | Used with <span class="function">oci\_fetch\_array</span> to get the data value of the LOB instead of the descriptor.                                                                                                                                                                                       |
-| **`OCI_RETURN_NULLS`**             | Used with <span class="function">oci\_fetch\_array</span> to get empty array elements if the row items value is **`NULL`**.                                                                                                                                                                                 |
+| **`OCI_RETURN_NULLS`**             | Used with <span class="function">oci\_fetch\_array</span> to get empty array elements if the row items value is **`null`**.                                                                                                                                                                                 |
 | **`OCI_SEEK_CUR`**                 | Used with <a href="/book/oci8.html#OCILob::seek" class="xref"></a> to set the seek position.                                                                                                                                                                                                                |
 | **`OCI_SEEK_END`**                 | Used with <a href="/book/oci8.html#OCILob::seek" class="xref"></a> to set the seek position.                                                                                                                                                                                                                |
 | **`OCI_SEEK_SET`**                 | Used with <a href="/book/oci8.html#OCILob::seek" class="xref"></a> to set the seek position.                                                                                                                                                                                                                |
@@ -1986,7 +1986,7 @@ available types below:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2244,7 +2244,7 @@ class="function">oci\_bind\_by\_name</span>
 <span class="function">oci\_bind\_by\_name</span>
 不能分辨有意加上的引号和魔术引号。
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 > **Note**:
 >
@@ -2315,7 +2315,7 @@ Possible values for `type` are:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2807,7 +2807,7 @@ var_dump($output2);  // false
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -2878,7 +2878,7 @@ OCI 语句。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 oci\_client\_version
 ====================
@@ -2945,7 +2945,7 @@ class="type">resource</span> `$connection`</span> )
 > <a href="/book/oci8.html#" class="link">oci8.old_oci_close_semantics</a>
 > 选项来恢复本函数的旧行为。
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 > **Note**:
 >
@@ -2965,7 +2965,7 @@ class="function">oci\_new\_connect</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3175,7 +3175,7 @@ class="type">resource</span> `$connection`</span> )
 ?>
 ```
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 > **Note**:
 >
@@ -3204,7 +3204,7 @@ class="function">oci\_new\_connect</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3409,7 +3409,7 @@ echo "</pre>";
 ?>
 ```
 
-<span class="function">oci\_connect</span> 如果出错则返回 **`FALSE`**。
+<span class="function">oci\_connect</span> 如果出错则返回 **`false`**。
 
 > **Note**:
 >
@@ -3482,7 +3482,7 @@ PHP 5.3（PECL OCI8 1.3.4）引进了 **`OCI_CRED_EXT`**
 
 ### 返回值
 
-Returns a connection identifier or **`FALSE`** on error.
+Returns a connection identifier or **`false`** on error.
 
 ### 范例
 
@@ -3781,7 +3781,7 @@ class="function">oci\_connect</span>，<span
 class="function">oci\_new\_connect</span> 或 <span
 class="function">oci\_pconnect</span>
 的连接错误，不要传递参数。如果没有发现错误，<span
-class="function">oci\_error</span> 返回 **`FALSE`**。<span
+class="function">oci\_error</span> 返回 **`false`**。<span
 class="function">oci\_error</span>
 以一个关联数组返回错误。在此数组中，*code* 是 oracle 错误代码而
 *message* 是 oracle 的错误字符串。
@@ -3857,7 +3857,7 @@ class="function">oci\_parse</span>）。可选参数 `mode`
 <span class="function">oci\_commit</span> 来提交事务，或者 <span
 class="function">oci\_rollback</span> 中止事务。
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 > **Note**:
 >
@@ -3903,7 +3903,7 @@ modes in the same script.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4058,7 +4058,7 @@ class="type">int</span> `$flags`</span> \]\]\] )
 <span class="function">oci\_fetch\_all</span>
 从一个结果中获取所有的行到一个用户定义的数组。<span
 class="function">oci\_fetch\_all</span> 返回获取的行数，出错则返回
-**`FALSE`**。`skip` 是从结果中获取数据时，最开始忽略的行数（默认值是
+**`false`**。`skip` 是从结果中获取数据时，最开始忽略的行数（默认值是
 0，即从第一行开始）。`maxrows` 是要读取的行数，从第 `skip`
 行开始（默认值是 -1，即所有行）。
 
@@ -4109,7 +4109,7 @@ oci_close($conn);
 ```
 
 <span class="function">oci\_fetch\_all</span> 如果出错则返回
-**`FALSE`**。
+**`false`**。
 
 > **Note**:
 >
@@ -4173,7 +4173,7 @@ associative array.
 ### 返回值
 
 Returns the number of rows in `output`, which may be 0 or more,
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -4374,7 +4374,7 @@ class="type">int</span> `$mode`</span> \] )
 
 Returns an array containing the next result-set row of a query. Each
 array entry corresponds to a column of the row. This function is
-typically called in a loop until it returns **`FALSE`**, indicating no
+typically called in a loop until it returns **`false`**, indicating no
 more rows exist.
 
 If `statement` corresponds to a PL/SQL block returning Oracle Database
@@ -4405,7 +4405,7 @@ constants:
 | **`OCI_BOTH`**         | Returns an array with both associative and numeric indices. This is the same as **`OCI_ASSOC`** + **`OCI_NUM`** and is the default behavior. |
 | **`OCI_ASSOC`**        | Returns an associative array.                                                                                                                |
 | **`OCI_NUM`**          | Returns a numeric array.                                                                                                                     |
-| **`OCI_RETURN_NULLS`** | Creates elements for **`NULL`** fields. The element values will be a PHP **`NULL`**.                                                         |
+| **`OCI_RETURN_NULLS`** | Creates elements for **`null`** fields. The element values will be a PHP **`null`**.                                                         |
 | **`OCI_RETURN_LOBS`**  | Returns the contents of LOBs instead of the LOB descriptors.                                                                                 |
 
 The default `mode` is **`OCI_BOTH`**.
@@ -4415,7 +4415,7 @@ Use the addition operator "+" to specify more than one mode at a time.
 ### 返回值
 
 Returns an array with associative and/or numeric indices. If there are
-no more rows in the `statement` then **`FALSE`** is returned.
+no more rows in the `statement` then **`false`** is returned.
 
 By default, *LOB* columns are returned as LOB descriptors.
 
@@ -4942,7 +4942,7 @@ class="methodparam"><span class="type">resource</span>
 
 Returns an associative array containing the next result-set row of a
 query. Each array entry corresponds to a column of the row. This
-function is typically called in a loop until it returns **`FALSE`**,
+function is typically called in a loop until it returns **`false`**,
 indicating no more rows exist.
 
 Calling <span class="function">oci\_fetch\_assoc</span> is identical to
@@ -4959,7 +4959,7 @@ statement 标识执行。
 ### 返回值
 
 Returns an associative array. If there are no more rows in the
-`statement` then **`FALSE`** is returned.
+`statement` then **`false`** is returned.
 
 ### 范例
 
@@ -5016,7 +5016,7 @@ class="methodparam"><span class="type">resource</span>
 
 Returns an object containing the next result-set row of a query. Each
 attribute of the object corresponds to a column of the row. This
-function is typically called in a loop until it returns **`FALSE`**,
+function is typically called in a loop until it returns **`false`**,
 indicating no more rows exist.
 
 要获取 OCI8
@@ -5033,7 +5033,7 @@ statement 标识执行。
 
 Returns an object. Each attribute of the object corresponds to a column
 of the row. If there are no more rows in the `statement` then
-**`FALSE`** is returned.
+**`false`** is returned.
 
 Any *LOB* columns are returned as LOB descriptors.
 
@@ -5048,7 +5048,7 @@ using the exact column case. Use <span class="function">var\_dump</span>
 on the result object to verify the appropriate case for attribute
 access.
 
-Attribute values will be **`NULL`** for any *NULL* data fields.
+Attribute values will be **`null`** for any *NULL* data fields.
 
 ### 范例
 
@@ -5187,7 +5187,7 @@ class="methodparam"><span class="type">resource</span>
 
 Returns a numerically indexed array containing the next result-set row
 of a query. Each array entry corresponds to a column of the row. This
-function is typically called in a loop until it returns **`FALSE`**,
+function is typically called in a loop until it returns **`false`**,
 indicating no more rows exist.
 
 Calling <span class="function">oci\_fetch\_row</span> is identical to
@@ -5204,7 +5204,7 @@ statement 标识执行。
 ### 返回值
 
 Returns a numerically indexed array. If there are no more rows in the
-`statement` then **`FALSE`** is returned.
+`statement` then **`false`** is returned.
 
 ### 范例
 
@@ -5277,7 +5277,7 @@ statement 标识执行。
 
 ### 返回值
 
-Returns **`TRUE`** on success or **`FALSE`** if there are no more rows
+Returns **`true`** on success or **`false`** if there are no more rows
 in the `statement`.
 
 ### 范例
@@ -5369,7 +5369,7 @@ oci_close($conn);
 oci\_field\_is\_null
 ====================
 
-检查字段是否为 **`NULL`**
+检查字段是否为 **`null`**
 
 ### 说明
 
@@ -5379,8 +5379,8 @@ class="methodparam"><span class="type">resource</span>
 `$statement`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$field`</span> )
 
-如果 `statement` 语句结果中返回的 `field` 字段的值是 **`NULL`**，<span
-class="function">oci\_field\_is\_null</span> 返回 **`TRUE`**。`field`
+如果 `statement` 语句结果中返回的 `field` 字段的值是 **`null`**，<span
+class="function">oci\_field\_is\_null</span> 返回 **`true`**。`field`
 参数可以是字段的索引或字段名（大写字母）。
 
 > **Note**:
@@ -5497,7 +5497,7 @@ class="methodparam"><span class="type">resource</span>
 class="type">int</span> `$field`</span> )
 
 返回索引为 `field`（从 1 开始）的字段的范围。如果无此字段则返回
-**`FALSE`**。
+**`false`**。
 
 对于 FLOAT 字段，精度为非零值且范围为 -127。如果精度为 0，则字段为
 NUMBER。其它类型为 NUMBER(precision, scale)。
@@ -5685,7 +5685,7 @@ class="function">oci\_new\_descriptor</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -5721,7 +5721,7 @@ class="methodparam"><span class="type">resource</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 oci\_get\_implicit\_resultset
 =============================
@@ -5766,7 +5766,7 @@ Sets.
 ### 返回值
 
 Returns a statement handle for the next child statement available on
-`statement`. Returns **`FALSE`** when child statements do not exist, or
+`statement`. Returns **`false`** when child statements do not exist, or
 all child statements have been returned by previous calls to <span
 class="function">oci\_get\_implicit\_resultset</span>.
 
@@ -6021,7 +6021,7 @@ Indicates the length of data to be copied.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -6055,7 +6055,7 @@ A LOB identifier.
 
 ### 返回值
 
-Returns **`TRUE`** if these objects are equal, **`FALSE`** otherwise.
+Returns **`true`** if these objects are equal, **`false`** otherwise.
 
 ### 注释
 
@@ -6086,7 +6086,7 @@ class="function">oci\_new\_collection</span> 使用当前用户作为 `schema`
 的默认值。
 
 <span class="function">oci\_new\_collection</span> 如果出错返回
-**`FALSE`**。
+**`false`**。
 
 > **Note**:
 >
@@ -6235,7 +6235,7 @@ echo "</pre></html>";
 ```
 
 <span class="function">oci\_new\_connect</span> 在出错时返回
-**`FALSE`**。
+**`false`**。
 
 > **Note**:
 >
@@ -6308,7 +6308,7 @@ PHP 5.3（PECL OCI8 1.3.4）引进了 **`OCI_CRED_EXT`**
 
 ### 返回值
 
-Returns a connection identifier or **`FALSE`** on error.
+Returns a connection identifier or **`false`** on error.
 
 ### 范例
 
@@ -6496,7 +6496,7 @@ oci_close($conn);
 ```
 
 <span class="function">oci\_new\_cursor</span> 如果出错返回
-**`FALSE`**。
+**`false`**。
 
 > **Note**:
 >
@@ -6626,7 +6626,7 @@ Upload file: <input type="file" name="lob_upload" /><br />
 ```
 
 <span class="function">oci\_new\_descriptor</span> 如果出错返回
-**`FALSE`**。
+**`false`**。
 
 > **Note**:
 >
@@ -6680,7 +6680,7 @@ class="methodparam"><span class="type">resource</span>
 ```
 
 <span class="function">oci\_num\_fields</span> 在出错时返回
-**`FALSE`**。
+**`false`**。
 
 > **Note**:
 >
@@ -6736,7 +6736,7 @@ class="methodparam"><span class="type">resource</span> `$stmt`</span> )
 ?>
 ```
 
-<span class="function">oci\_num\_rows</span> 在出错时返回 **`FALSE`**。
+<span class="function">oci\_num\_rows</span> 在出错时返回 **`false`**。
 
 > **Note**:
 >
@@ -6768,7 +6768,7 @@ class="function">oci\_execute</span> 以及其它函数。
 > 本函数*并不*验证 `query`。要知道 `query` 是否是合法的 SQL 或 PL/SQL
 > 语句的唯一方法是执行它。
 
-<span class="function">oci\_parse</span> 在出错时返回 **`FALSE`**。
+<span class="function">oci\_parse</span> 在出错时返回 **`false`**。
 
 > **Note**:
 >
@@ -6809,7 +6809,7 @@ class="methodparam"><span class="type">string</span>
 > class="function">oci\_password\_change</span> 的语法自版本 1.1（OCI8
 > 扩展库版本）起可用。 </span>
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 > **Note**:
 >
@@ -6840,7 +6840,7 @@ The database name.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -6923,7 +6923,7 @@ On。
 传递此参数可减少连接时间。
 
 <span class="function">oci\_pconnect</span> 返回连接标识符，出错则返回
-**`FALSE`**。
+**`false`**。
 
 > **Note**:
 >
@@ -6996,7 +6996,7 @@ PHP 5.3（PECL OCI8 1.3.4）引进了 **`OCI_CRED_EXT`**
 
 ### 返回值
 
-Returns a connection identifier or **`FALSE`** on error.
+Returns a connection identifier or **`false`** on error.
 
 ### 注释
 
@@ -7071,7 +7071,7 @@ page.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -7093,7 +7093,7 @@ class="methodparam"><span class="type">mixed</span> `$field`</span> )
 class="function">oci\_fetch</span> 所取得的当前行中 `field`
 字段的数据。<span class="function">oci\_result</span>
 对所有类型都返回字符串只除了抽象类型（ROWID，LOB 和 FILE）。<span
-class="function">oci\_result</span> 在出错时返回 **`FALSE`**。
+class="function">oci\_result</span> 在出错时返回 **`false`**。
 
 可以使用列序号（从 1 开始）或列名（大写）作为 `col` 的参数。
 
@@ -7125,7 +7125,7 @@ uppercase).
 ### 返回值
 
 Returns everything as strings except for abstract types (ROWIDs, LOBs
-and FILEs). Returns **`FALSE`** on error.
+and FILEs). Returns **`false`** on error.
 
 ### 注释
 
@@ -7160,7 +7160,7 @@ class="methodparam"><span class="type">resource</span>
 <span class="function">oci\_rollback</span> 回滚 Oracle 连接
 `connection` 上所有未提交的语句。
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 > **Note**:
 >
@@ -7188,7 +7188,7 @@ class="function">oci\_new\_connect</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7290,7 +7290,7 @@ class="methodparam"><span class="type">resource</span>
 `$connection`</span> )
 
 以字符串返回 `connection` 所连接的 Oracle 服务器的版本信息。出错则返回
-**`FALSE`**。
+**`false`**。
 
 **示例 \#1 <span class="function">oci\_server\_version</span> 例子**
 
@@ -7348,7 +7348,7 @@ User chosen string up to 32 bytes long.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7453,7 +7453,7 @@ and Oracle Database may take.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7510,7 +7510,7 @@ User chosen string up to 64 bytes long.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7586,7 +7586,7 @@ User chosen string up to 64 bytes long.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7679,7 +7679,7 @@ User chosen string.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7783,7 +7783,7 @@ has been removed with Oracle 11.2.0.2.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -7863,7 +7863,7 @@ User chosen <span class="type">string</span> up to 48 bytes long.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -7941,7 +7941,7 @@ class="type">int</span> `$rows`</span> \] )
 > class="function">oci\_set\_prefetch</span>
 > 的别名。不过其已被废弃，不推荐使用。
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 参见 <a href="/book/oci8.html#" class="link">oci8_.default_prefetch</a>
 INI 选项。
@@ -7958,7 +7958,7 @@ The number of rows to be prefetched, \>= 0
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -8136,7 +8136,7 @@ class="methodparam"><span class="type">resource</span>
 ```
 
 <span class="function">oci\_statement\_type</span> 在出错时返回
-**`FALSE`**。
+**`false`**。
 
 > **Note**:
 >
@@ -8171,7 +8171,7 @@ An Oracle connection identifier.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -8207,7 +8207,7 @@ An Oracle connection identifier.
 -   [oci\_fetch](/book/oci8.html#oci_fetch) — Fetches the next row into
     result-buffer
 -   [oci\_field\_is\_null](/book/oci8.html#oci_field_is_null) —
-    检查字段是否为 NULL
+    检查字段是否为 null
 -   [oci\_field\_name](/book/oci8.html#oci_field_name) — 返回字段名
 -   [oci\_field\_precision](/book/oci8.html#oci_field_precision) —
     返回字段精度
@@ -8342,7 +8342,7 @@ The value to be added to the collection. Can be a string or a number.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -8377,7 +8377,7 @@ An instance of OCI-Collection.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -8414,7 +8414,7 @@ Can be a string or a number.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -8441,7 +8441,7 @@ Frees the resources associated with the collection object.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -8473,8 +8473,8 @@ The element index. First index is 0.
 
 ### 返回值
 
-Returns **`FALSE`** if such element doesn't exist; **`NULL`** if element
-is **`NULL`**; string if element is column of a string datatype or
+Returns **`false`** if such element doesn't exist; **`null`** if element
+is **`null`**; string if element is column of a string datatype or
 number if element is numeric field.
 
 ### 更新日志
@@ -8502,7 +8502,7 @@ Returns the maximum number of elements in the collection.
 
 ### 返回值
 
-Returns the maximum number as an integer, or **`FALSE`** on errors.
+Returns the maximum number as an integer, or **`false`** on errors.
 
 If the returned value is 0, then the number of elements is not limited.
 
@@ -8531,7 +8531,7 @@ Returns the size of the collection.
 
 ### 返回值
 
-Returns the number of elements in the collection or **`FALSE`** on
+Returns the number of elements in the collection or **`false`** on
 error.
 
 ### 更新日志
@@ -8564,7 +8564,7 @@ The number of elements to be trimmed.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -8713,7 +8713,7 @@ The copied LOB.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -8743,7 +8743,7 @@ Closes descriptor of LOB or FILE. This function should be used only with
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -8770,8 +8770,8 @@ Tells whether the internal pointer of large object is at the end of LOB.
 
 ### 返回值
 
-Returns **`TRUE`** if internal pointer of large object is at the end of
-LOB. Otherwise returns **`FALSE`**.
+Returns **`true`** if internal pointer of large object is at the end of
+LOB. Otherwise returns **`false`**.
 
 ### 注释
 
@@ -8822,7 +8822,7 @@ spaces.
 ### 返回值
 
 Returns the actual number of characters/bytes erased 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 更新日志
 
@@ -8863,7 +8863,7 @@ Indicates the length of data to be exported.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -8901,9 +8901,9 @@ when you are not going to work with the LOB anymore.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
-Returns **`FALSE`** if buffering was not enabled or an error occurred.
+Returns **`false`** if buffering was not enabled or an error occurred.
 
 ### 更新日志
 
@@ -8932,7 +8932,7 @@ with <span class="function">oci\_new\_descriptor</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -8955,8 +8955,8 @@ Tells whether the buffering for the large object is on or off.
 
 ### 返回值
 
-Returns **`FALSE`** if buffering for the large object is off and
-**`TRUE`** if buffering is used.
+Returns **`false`** if buffering for the large object is off and
+**`true`** if buffering is used.
 
 ### 更新日志
 
@@ -8990,7 +8990,7 @@ Path to the file.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -9023,7 +9023,7 @@ cases it's recommended to use
 
 ### 返回值
 
-Returns the contents of the object, or **`FALSE`** on errors.
+Returns the contents of the object, or **`false`** on errors.
 
 ### 更新日志
 
@@ -9062,7 +9062,7 @@ to 1 MB.
 
 ### 返回值
 
-Returns the contents as a string, 或者在失败时返回 **`FALSE`**.
+Returns the contents as a string, 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -9090,7 +9090,7 @@ Sets the internal pointer to the beginning of the large object.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -9127,7 +9127,7 @@ Can be used to indicate offset from the beginning of the large object.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -9187,7 +9187,7 @@ May be one of:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -9224,12 +9224,12 @@ when you have finished working with the large object.
 ### 参数
 
 `on_off`  
-**`TRUE`** for on and **`FALSE`** for off.
+**`true`** for on and **`false`** for off.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 Repeated calls to
-this method with the same flag will return **`TRUE`**.
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 Repeated calls to
+this method with the same flag will return **`true`**.
 
 ### 更新日志
 
@@ -9257,7 +9257,7 @@ Gets the size of the large object.
 
 ### 返回值
 
-Returns length of large object value 或者在失败时返回 **`FALSE`**. Empty
+Returns length of large object value 或者在失败时返回 **`false`**. Empty
 objects have zero length.
 
 ### 更新日志
@@ -9281,7 +9281,7 @@ Gets the current position of a LOB's internal pointer.
 
 ### 返回值
 
-Returns current position of a LOB's internal pointer or **`FALSE`** if
+Returns current position of a LOB's internal pointer or **`false`** if
 an error occurred.
 
 ### 更新日志
@@ -9318,7 +9318,7 @@ Otherwise, it will completely purge the LOB.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -9358,7 +9358,7 @@ been written or the end of `data` is reached, whichever comes first.
 
 ### 返回值
 
-Returns the number of bytes written 或者在失败时返回 **`FALSE`**.
+Returns the number of bytes written 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -9401,7 +9401,7 @@ Can be one of the following:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -9444,7 +9444,7 @@ Enables or disables internal debug output.
 ### 参数
 
 `onoff`  
-Set this to **`FALSE`** to turn debug output off or **`TRUE`** to turn
+Set this to **`false`** to turn debug output off or **`true`** to turn
 it on.
 
 ### 返回值

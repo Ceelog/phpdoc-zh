@@ -144,7 +144,7 @@ class="type">resource</span> 分配的唯一资源号。
 
 #### 从<a href="/language/types/boolean.html" class="link">布尔值</a>转换
 
-**`FALSE`** 将产生出 *0*（零），**`TRUE`** 将产生出 *1*（壹）。
+**`false`** 将产生出 *0*（零），**`true`** 将产生出 *1*（壹）。
 
 #### 从<a href="/language/types/float.html" class="link">浮点型</a>转换
 
@@ -179,7 +179,7 @@ echo (int) ( (0.1+0.7) * 10 ); // 显示 7!
 
 #### 从 <span class="type">NULL</span> 转换
 
-**`NULL`** 会转换为零 (*0*)。
+**`null`** 会转换为零 (*0*)。
 
 #### 从其它类型转换
 

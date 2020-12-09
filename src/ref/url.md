@@ -19,12 +19,12 @@ class="initializer"> = false</span></span> \] )
 编码过的数据。
 
 `strict`  
-当设置 `strict` 为 **`TRUE`** 时，一旦输入的数据超出了 base64
-字母表，将返回 **`FALSE`**。 否则会静默丢弃无效的字符。
+当设置 `strict` 为 **`true`** 时，一旦输入的数据超出了 base64
+字母表，将返回 **`false`**。 否则会静默丢弃无效的字符。
 
 ### 返回值
 
-返回原始数据， 或者在失败时返回 **`FALSE`**。返回的数据可能是二进制的。
+返回原始数据， 或者在失败时返回 **`false`**。返回的数据可能是二进制的。
 
 ### 更新日志
 
@@ -78,7 +78,7 @@ Base64-encoded 数据要比原始数据多占用 33% 左右的空间。
 
 ### 返回值
 
-编码后的字符串数据， 或者在失败时返回 **`FALSE`**。
+编码后的字符串数据， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -131,7 +131,7 @@ class="function">get\_headers</span> 会解析相应的信息并设定数组的�
 ### 返回值
 
 返回包含有服务器响应一个 HTTP
-请求所发送标头的索引或关联数组，如果失败则返回 **`FALSE`**。
+请求所发送标头的索引或关联数组，如果失败则返回 **`false`**。
 
 ### 更新日志
 
@@ -238,7 +238,7 @@ HTML 文件的路径字符串。 此参数可以是本地文件也可以是一�
 上的文件将不能在 Unix 上正常工作）。
 
 `use_include_path`  
-将 `use_include_path` 设置为 **`TRUE`** 将使 PHP 尝试按照
+将 `use_include_path` 设置为 **`true`** 将使 PHP 尝试按照
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>
 标准包含路径中的每个指向去打开文件。这只用于本地文件，不适用于 URL。
 
@@ -498,7 +498,7 @@ class="function">parse\_url</span> 会尝试尽量正确地将其解析。
 ### 返回值
 
 对严重不合格的 URL，<span class="function">parse\_url</span> 可能会返回
-**`FALSE`**。
+**`false`**。
 
 如果省略了 `component` 参数，将返回一个关联数组 <span
 class="type">array</span>，在目前至少会有一个元素在该数组中。数组中可能的键有以下几种：
@@ -516,7 +516,7 @@ class="type">array</span>，在目前至少会有一个元素在该数组中。�
 返回一个 <span class="type">string</span> （或在指定为
 **`PHP_URL_PORT`** 时返回一个 <span class="type">integer</span>）而不是
 <span class="type">array</span>。如果 URL
-中指定的组成部分不存在，将会返回 **`NULL`**。
+中指定的组成部分不存在，将会返回 **`null`**。
 
 ### 更新日志
 

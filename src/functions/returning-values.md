@@ -7,7 +7,7 @@
 > **Note**:
 >
 > 如果省略了 <span class="function">return</span>，则返回值为
-> **`NULL`**。
+> **`null`**。
 
 ### return 的使用
 

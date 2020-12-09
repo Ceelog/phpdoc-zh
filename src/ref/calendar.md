@@ -586,7 +586,7 @@ class="initializer"> = 0</span></span> \]\] )
 一个julian天数
 
 `hebrew`  
-如果参数 `hebrew`设置为 **`TRUE`**，参数`fl`可用于希伯莱语的格式。
+如果参数 `hebrew`设置为 **`true`**，参数`fl`可用于希伯莱语的格式。
 
 `fl`  
 可用的格式有： **`CAL_JEWISH_ADD_ALAFIM_GERESH`**,
@@ -657,7 +657,7 @@ jdtounix
 <span class="methodparam"><span class="type">int</span> `$jday`</span> )
 
 这个函数根据给定的julian天数返回一个Unix时间戳，或如果参数`jday`不在Unix时间（Gregorian历法的1970年至2037年，或2440588
-\<= `jday` \<= 2465342）范围内返回 **`FALSE`**
+\<= `jday` \<= 2465342）范围内返回 **`false`**
 。返回的时间是本地时间（不是GMT）。
 
 ### 参数

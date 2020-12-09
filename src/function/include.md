@@ -190,7 +190,7 @@ echo $bar; // prints 1
 *$bar* 的值为 *1* 是因为 include
 成功运行了。注意以上例子中的区别。第一个在被包含的文件中用了 <span
 class="function">return</span> 而另一个没有。如果文件不能被包含，则返回
-**`FALSE`** 并发出一个 **`E_WARNING`** 警告。
+**`false`** 并发出一个 **`E_WARNING`** 警告。
 
 如果在包含文件中定义有函数，这些函数不管是在 <span
 class="function">return</span>

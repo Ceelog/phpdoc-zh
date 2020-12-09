@@ -463,7 +463,7 @@ class="methodname">odbc\_autocommit</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$OnOff`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Toggles autocommit behaviour.
 
@@ -476,17 +476,17 @@ equivalent with starting a transaction.
 ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 
 `OnOff`  
-If `OnOff` is **`TRUE`**, auto-commit is enabled, if it is **`FALSE`**
+If `OnOff` is **`true`**, auto-commit is enabled, if it is **`false`**
 auto-commit is disabled.
 
 ### 返回值
 
 Without the `OnOff` parameter, this function returns auto-commit status
 for `connection_id`. Non-zero is returned if auto-commit is on, 0 if it
-is off, or **`FALSE`** if an error occurs.
+is off, or **`false`** if an error occurs.
 
-If `OnOff` is set, this function returns **`TRUE`** on success and
-**`FALSE`** on failure.
+If `OnOff` is set, this function returns **`true`** on success and
+**`false`** on failure.
 
 ### 参见
 
@@ -560,7 +560,7 @@ Possible values for `mode` are:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 odbc\_close\_all
 ================
@@ -662,7 +662,7 @@ The column name. 此参数接受下列查询模式： *%* 来匹配零到多个�
 
 ### 返回值
 
-Returns an ODBC result identifier 或者在失败时返回 **`FALSE`**. This
+Returns an ODBC result identifier 或者在失败时返回 **`false`**. This
 result identifier can be used to fetch a list of columns and associated
 privileges.
 
@@ -753,7 +753,7 @@ The column name. 此参数接受下列查询模式： *%* 来匹配零到多个�
 
 ### 返回值
 
-Returns an ODBC result identifier 或者在失败时返回 **`FALSE`**.
+Returns an ODBC result identifier 或者在失败时返回 **`false`**.
 
 The result set has the following columns:
 
@@ -845,7 +845,7 @@ ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 odbc\_connect
 =============
@@ -901,7 +901,7 @@ cursortype: </span>
 
 ### 返回值
 
-Returns an ODBC connection or (**`FALSE`**) on error.
+Returns an ODBC connection or (**`false`**) on error.
 
 ### 范例
 
@@ -978,8 +978,8 @@ the first time this function is called, thereafter use the
 
 ### 返回值
 
-Returns **`FALSE`** on error, an <span class="type">array</span> upon
-success, and **`NULL`** after fetching the last available DSN.
+Returns **`false`** on error, an <span class="type">array</span> upon
+success, and **`null`** after fetching the last available DSN.
 
 ### 范例
 
@@ -1044,7 +1044,7 @@ If `connection_id` is specified, the last state of that connection is
 returned, else the last state of any connection is returned.
 
 This function returns meaningful value only if last odbc query failed
-(i.e. <span class="function">odbc\_exec</span> returned **`FALSE`**).
+(i.e. <span class="function">odbc\_exec</span> returned **`false`**).
 
 ### 参见
 
@@ -1077,7 +1077,7 @@ If `connection_id` is specified, the last state of that connection is
 returned, else the last state of any connection is returned.
 
 This function returns meaningful value only if last odbc query failed
-(i.e. <span class="function">odbc\_exec</span> returned **`FALSE`**).
+(i.e. <span class="function">odbc\_exec</span> returned **`false`**).
 
 ### 参见
 
@@ -1114,7 +1114,7 @@ This parameter is currently not used.
 ### 返回值
 
 Returns an ODBC result identifier if the SQL command was executed
-successfully, or **`FALSE`** on error.
+successfully, or **`false`** on error.
 
 ### 参见
 
@@ -1162,14 +1162,14 @@ class="function">odbc\_exec</span>). </span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
 **示例 \#1 <span class="function">odbc\_execute</span> and <span
 class="function">odbc\_prepare</span> example**
 
-In the following code, `$success` will only be **`TRUE`** if all three
+In the following code, `$success` will only be **`true`** if all three
 parameters to myproc are IN parameters:
 
 ``` php
@@ -1216,7 +1216,7 @@ Optionally choose which row number to retrieve.
 
 ### 返回值
 
-Returns an array that corresponds to the fetched row, or **`FALSE`** if
+Returns an array that corresponds to the fetched row, or **`false`** if
 there are no more rows.
 
 ### 注释
@@ -1262,7 +1262,7 @@ The row number.
 
 ### 返回值
 
-Returns the number of columns in the result; **`FALSE`** on error.
+Returns the number of columns in the result; **`false`** on error.
 
 ### 范例
 
@@ -1307,7 +1307,7 @@ Optionally choose which row number to retrieve.
 
 ### 返回值
 
-Returns an object that corresponds to the fetched row, or **`FALSE`** if
+Returns an object that corresponds to the fetched row, or **`false`** if
 there are no more rows.
 
 ### 注释
@@ -1361,7 +1361,7 @@ rows by number, the `row_number` parameter is ignored.
 
 ### 返回值
 
-Returns **`TRUE`** if there was a row, **`FALSE`** otherwise.
+Returns **`true`** if there was a row, **`false`** otherwise.
 
 odbc\_field\_len
 ================
@@ -1389,7 +1389,7 @@ The field number. Field numbering starts at 1.
 
 ### 返回值
 
-Returns the field length, or **`FALSE`** on error.
+Returns the field length, or **`false`** on error.
 
 ### 参见
 
@@ -1422,7 +1422,7 @@ The field number. Field numbering starts at 1.
 
 ### 返回值
 
-Returns the field name as a string, or **`FALSE`** on error.
+Returns the field name as a string, or **`false`** on error.
 
 odbc\_field\_num
 ================
@@ -1450,7 +1450,7 @@ The field name.
 
 ### 返回值
 
-Returns the field number as a integer, or **`FALSE`** on error. Field
+Returns the field number as a integer, or **`false`** on error. Field
 numbering starts at 1.
 
 odbc\_field\_precision
@@ -1493,7 +1493,7 @@ The field number. Field numbering starts at 1.
 
 ### 返回值
 
-Returns the field scale as a integer, or **`FALSE`** on error.
+Returns the field scale as a integer, or **`false`** on error.
 
 odbc\_field\_type
 =================
@@ -1521,7 +1521,7 @@ The field number. Field numbering starts at 1.
 
 ### 返回值
 
-Returns the field type as a string, or **`FALSE`** on error.
+Returns the field type as a string, or **`false`** on error.
 
 odbc\_foreignkeys
 =================
@@ -1573,7 +1573,7 @@ The foreign key table.
 
 ### 返回值
 
-Returns an ODBC result identifier 或者在失败时返回 **`FALSE`**.
+Returns an ODBC result identifier 或者在失败时返回 **`false`**.
 
 The result set has the following columns:
 
@@ -1646,7 +1646,7 @@ The result identifier.
 
 ### 返回值
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### 注释
 
@@ -1683,7 +1683,7 @@ data type.
 
 ### 返回值
 
-Returns an ODBC result identifier or **`FALSE`** on failure.
+Returns an ODBC result identifier or **`false`** on failure.
 
 The result set has the following columns:
 
@@ -1736,7 +1736,7 @@ class="function">odbc\_result</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -1770,7 +1770,7 @@ The result identifier.
 
 ### 返回值
 
-Returns **`TRUE`** if there are more result sets, **`FALSE`** otherwise.
+Returns **`true`** if there are more result sets, **`false`** otherwise.
 
 ### 范例
 
@@ -1926,7 +1926,7 @@ See <span class="function">odbc\_connect</span> for details.
 
 ### 返回值
 
-Returns an ODBC connection id or 0 (**`FALSE`**) on error.
+Returns an ODBC connection id or 0 (**`false`**) on error.
 
 ### 注释
 
@@ -1971,14 +1971,14 @@ The query string statement being prepared.
 ### 返回值
 
 Returns an ODBC result identifier if the SQL command was prepared
-successfully. Returns **`FALSE`** on error.
+successfully. Returns **`false`** on error.
 
 ### 范例
 
 **示例 \#1 <span class="function">odbc\_execute</span> and <span
 class="function">odbc\_prepare</span> example**
 
-In the following code, `$success` will only be **`TRUE`** if all three
+In the following code, `$success` will only be **`true`** if all three
 parameters to myproc are IN parameters:
 
 ``` php
@@ -2035,7 +2035,7 @@ The schema ('owner' in ODBC 2 parlance).
 
 ### 返回值
 
-Returns an ODBC result identifier 或者在失败时返回 **`FALSE`**.
+Returns an ODBC result identifier 或者在失败时返回 **`false`**.
 
 The result set has the following columns:
 
@@ -2133,7 +2133,7 @@ The column. 此参数接受下列查询模式： *%* 来匹配零到多个字符
 
 Returns the list of input and output parameters, as well as the columns
 that make up the result set for the specified procedures. Returns an
-ODBC result identifier 或者在失败时返回 **`FALSE`**.
+ODBC result identifier 或者在失败时返回 **`false`**.
 
 The result set has the following columns:
 
@@ -2250,7 +2250,7 @@ The name. 此参数接受下列查询模式： *%* 来匹配零到多个字符�
 ### 返回值
 
 Returns an ODBC result identifier containing the information
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 The result set has the following columns:
 
@@ -2333,7 +2333,7 @@ Additional overall table formatting.
 
 ### 返回值
 
-Returns the number of rows in the result or **`FALSE`** on error.
+Returns the number of rows in the result or **`false`** on error.
 
 odbc\_result
 ============
@@ -2361,8 +2361,8 @@ containing the name of the field.
 
 ### 返回值
 
-Returns the string contents of the field, **`FALSE`** on error,
-**`NULL`** for NULL data, or **`TRUE`** for binary data.
+Returns the string contents of the field, **`false`** on error,
+**`null`** for NULL data, or **`true`** for binary data.
 
 ### 范例
 
@@ -2412,7 +2412,7 @@ ODBC 连接标识符，详见 <span class="function">odbc\_connect</span>。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 odbc\_setoption
 ===============
@@ -2464,7 +2464,7 @@ The value for the given `option`.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2545,7 +2545,7 @@ One of **`SQL_NO_NULLS`** or **`SQL_NULLABLE `**.
 
 ### 返回值
 
-Returns an ODBC result identifier or **`FALSE`** on failure.
+Returns an ODBC result identifier or **`false`** on failure.
 
 The result set has the following columns:
 
@@ -2612,7 +2612,7 @@ available from the server.
 
 ### 返回值
 
-Returns an ODBC result identifier 或者在失败时返回 **`FALSE`**.
+Returns an ODBC result identifier 或者在失败时返回 **`false`**.
 
 The result set has the following columns:
 
@@ -2711,7 +2711,7 @@ The name. 此参数接受下列查询模式： *%* 来匹配零到多个字符�
 
 ### 返回值
 
-An ODBC result identifier 或者在失败时返回 **`FALSE`**.
+An ODBC result identifier 或者在失败时返回 **`false`**.
 
 The result set has the following columns:
 
@@ -2824,7 +2824,7 @@ not return any results for that type.
 ### 返回值
 
 Returns an ODBC result identifier containing the information
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 The result set has the following columns:
 

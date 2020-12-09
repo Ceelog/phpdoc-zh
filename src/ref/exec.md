@@ -325,19 +325,19 @@ class="type">resource</span>。
 ### 返回值
 
 如果调用成功，则返回一个包含了进程信息的 <span
-class="type">array</span>，如果发生错误，返回 **`FALSE`**。
+class="type">array</span>，如果发生错误，返回 **`false`**。
 返回的数组包含下列元素：
 
 | 元素     | 类型                             | 描述                                                                                                                    |
 |----------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | command  | <span class="type">string</span> | 传入 <span class="function">proc\_open</span> 函数的命令行字符串。                                                      |
 | pid      | <span class="type">int</span>    | 进程 ID                                                                                                                 |
-| running  | <span class="type">bool</span>   | **`TRUE`** 表示进程还在运行中， **`FALSE`** 表示进程已经终止                                                            |
-| signaled | <span class="type">bool</span>   | **`TRUE`** 表示子进程被未捕获的信号所终止。 在 Windows 平台永远为 **`FALSE`**。                                         |
-| stopped  | <span class="type">bool</span>   | **`TRUE`** 表示子进程被信号停止。 在 Windows 平台永远为 **`FALSE`**。                                                   |
-| exitcode | <span class="type">int</span>    | 进程的退出码（仅在 *running* 为 **`FALSE`** 时有意义）。 仅在第一次调用此函数时会返回实际的值， 后续的调用将返回 *-1*。 |
-| termsig  | <span class="type">int</span>    | 导致子进程终止执行的信号值 （仅在 *signaled* 为 **`TRUE`** 时有意义）。                                                 |
-| stopsig  | <span class="type">int</span>    | 导致子进程停止执行的信号值 （仅在 *stopped* 为 **`TRUE`** 时有意义）。                                                  |
+| running  | <span class="type">bool</span>   | **`true`** 表示进程还在运行中， **`false`** 表示进程已经终止                                                            |
+| signaled | <span class="type">bool</span>   | **`true`** 表示子进程被未捕获的信号所终止。 在 Windows 平台永远为 **`false`**。                                         |
+| stopped  | <span class="type">bool</span>   | **`true`** 表示子进程被信号停止。 在 Windows 平台永远为 **`false`**。                                                   |
+| exitcode | <span class="type">int</span>    | 进程的退出码（仅在 *running* 为 **`false`** 时有意义）。 仅在第一次调用此函数时会返回实际的值， 后续的调用将返回 *-1*。 |
+| termsig  | <span class="type">int</span>    | 导致子进程终止执行的信号值 （仅在 *signaled* 为 **`true`** 时有意义）。                                                 |
+| stopsig  | <span class="type">int</span>    | 导致子进程停止执行的信号值 （仅在 *stopped* 为 **`true`** 时有意义）。                                                  |
 
 ### 参见
 
@@ -382,7 +382,7 @@ class="function">proc\_open</span> 相关的函数并无什么关系。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。。
 如果发生错误，例如用户无权修改当前进程的优先级， 会生成 **`E_WARNING`**
 级别的错误。
 
@@ -431,11 +431,11 @@ class="methodparam"><span class="type">array</span>
 `$descriptorspec`</span> , <span class="methodparam"><span
 class="type">array</span> `&$pipes`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$cwd`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$env`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">array</span>
-`$other_options`<span class="initializer"> = **`NULL`**</span></span>
+`$other_options`<span class="initializer"> = **`null`**</span></span>
 \]\]\] )
 
 类似 <span class="function">popen</span> 函数， 但是 <span
@@ -470,26 +470,26 @@ class="function">proc\_open</span> 提供了更加强大的控制程序执行的
 这一端的文件指针。
 
 `cwd`  
-要执行命令的初始工作目录。 必须是 *绝对* 路径， 设置此参数为 **`NULL`**
+要执行命令的初始工作目录。 必须是 *绝对* 路径， 设置此参数为 **`null`**
 表示使用默认值（当前 PHP 进程的工作目录）。
 
 `env`  
-要执行的命令所使用的环境变量。 设置此参数为 **`NULL`** 表示使用和当前
+要执行的命令所使用的环境变量。 设置此参数为 **`null`** 表示使用和当前
 PHP 进程相同的环境变量。
 
 `other_options`  
 你还可以指定一些附加选项。 目前支持的选项包括：
 
--   *suppress\_errors* （仅用于 Windows 平台）： 设置为 **`TRUE`**
+-   *suppress\_errors* （仅用于 Windows 平台）： 设置为 **`true`**
     表示抑制本函数产生的错误。
--   *bypass\_shell* （仅用于 Windows 平台）： 设置为 **`TRUE`** 表示绕过
+-   *bypass\_shell* （仅用于 Windows 平台）： 设置为 **`true`** 表示绕过
     *cmd.exe* shell。
 
 ### 返回值
 
 返回表示进程的资源类型， 当使用完毕之后，请调用 <span
 class="function">proc\_close</span> 函数来关闭此资源。 如果失败，返回
-**`FALSE`**。
+**`false`**。
 
 ### 更新日志
 
@@ -645,12 +645,12 @@ class="type">string</span> `$cmd`</span> )
 ### 返回值
 
 命令执行的输出。 如果执行过程中发生错误或者进程不产生输出，则返回
-**`NULL`**。
+**`null`**。
 
 > **Note**:
 >
 > 当进程执行过程中发生错误，或者进程不产生输出的情况下，都会返回
-> **`NULL`**， 所以，使用本函数无法通过返回值检测进程是否成功执行。
+> **`null`**， 所以，使用本函数无法通过返回值检测进程是否成功执行。
 > 如果需要检查进程执行的退出码，请使用 <span
 > class="function">exec</span> 函数。
 
@@ -702,7 +702,7 @@ class="function">passthru</span> 函数。
 
 ### 返回值
 
-成功则返回命令输出的最后一行， 失败则返回 **`FALSE`**
+成功则返回命令输出的最后一行， 失败则返回 **`false`**
 
 ### 范例
 

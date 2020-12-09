@@ -40,7 +40,7 @@ class="methodname">class\_alias</span> ( <span class="methodparam"><span
 class="type">string</span> `$original`</span> , <span
 class="methodparam"><span class="type">string</span> `$alias`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$autoload`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$autoload`<span class="initializer"> = **`true`**</span></span> \] )
 
 基于用户定义的类 `original` 创建别名 `alias`。
 这个别名类和原有的类完全相同。
@@ -58,7 +58,7 @@ class="methodparam"><span class="type">string</span> `$alias`</span> \[,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -130,8 +130,8 @@ true</span></span> \] )
 
 ### 返回值
 
-如果由 `class_name` 所指的类已经定义，此函数返回 **`TRUE`**，否则返回
-**`FALSE`**。
+如果由 `class_name` 所指的类已经定义，此函数返回 **`true`**，否则返回
+**`false`**。
 
 ### 范例
 
@@ -189,7 +189,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-返回类的名称，如果不是在类中调用则返回 **`FALSE`**。
+返回类的名称，如果不是在类中调用则返回 **`false`**。
 
 ### 范例
 
@@ -246,7 +246,7 @@ class="methodparam"><span class="type">mixed</span> `$class_name`</span>
 ### 返回值
 
 返回由 `class_name` 指定的类中定义的方法名所组成的数组。如果出错，则返回
-**`NULL`**。
+**`null`**。
 
 ### 范例
 
@@ -322,7 +322,7 @@ class="methodparam"><span class="type">string</span>
 Returns an associative array of declared properties visible from the
 current scope, with their default value. The resulting array elements
 are in the form of *varname =\> value*. In case of an error, it returns
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -421,7 +421,7 @@ get\_class
 <span class="type">string</span> <span
 class="methodname">get\_class</span> (\[ <span class="methodparam"><span
 class="type">object</span> `$object`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 返回对象实例 `object` 所属类的名字。
 
@@ -433,7 +433,7 @@ class="type">object</span> `$object`<span class="initializer"> =
 ### 返回值
 
 返回对象实例 `object` 所属类的名字。 如果 `object` 不是一个对象则返回
-**`FALSE`**。
+**`false`**。
 
 如果在一个类里，省略了参数 `object`， 则返回当前所在类的名称。
 
@@ -449,7 +449,7 @@ class="function">get\_class</span>，而不是一个对象的话，就会产生
 
 | 版本     | 说明                                                                                                      |
 |----------|-----------------------------------------------------------------------------------------------------------|
-| 5.3.0 起 | `object` 默认参数现在是 **`NULL`** ，所以，现在传入 **`NULL`** 到 `object` 参数时，和没传参数的结果一样。 |
+| 5.3.0 起 | `object` 默认参数现在是 **`null`** ，所以，现在传入 **`null`** 到 `object` 参数时，和没传参数的结果一样。 |
 
 ### 范例
 
@@ -653,7 +653,7 @@ class="methodparam">void</span> )
 ### 返回值
 
 返回一个数组，其值包含了所有已定义的 traits 的名称。 在失败的情况下返回
-**`NULL`**。
+**`null`**。
 
 ### 参见
 
@@ -677,7 +677,7 @@ class="methodparam"><span class="type">object</span> `$obj`</span> )
 >
 > 在 PHP 4.2.0 之前的版本中，如果在 `obj`
 > 对象实例中声明的变量没有被赋值，则它们将不会在返回的数组中。而在 PHP
-> 4.2.0 之后，这些变量作为键名将被赋予 **`NULL`** 值。
+> 4.2.0 之后，这些变量作为键名将被赋予 **`null`** 值。
 
 **示例 \#1 使用 <span class="function">get\_object\_vars</span>**
 
@@ -744,14 +744,14 @@ An object instance.
 
 Returns an associative array of defined object accessible non-static
 properties for the specified `object` in scope. If a property have not
-been assigned a value, it will be returned with a **`NULL`** value.
+been assigned a value, it will be returned with a **`null`** value.
 
 ### 更新日志
 
 | 版本           | 说明                                                                                                                                                 |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 5.3.0          | This function now returns <span class="type">NULL</span> if the `object` isn't an object.                                                            |
-| prior to 5.3.0 | If the `object` isn't an object, then <span class="function">get\_object\_vars</span> would return **`FALSE`**                                       |
+| prior to 5.3.0 | If the `object` isn't an object, then <span class="function">get\_object\_vars</span> would return **`false`**                                       |
 | prior to 4.2.0 | If the variables declared in the class of which the `object` is an instance, have not been assigned a value, those will not be returned in the array |
 
 ### 范例
@@ -878,16 +878,16 @@ an instance or the name.
 > **Note**:
 >
 > If the object does not have a parent or the class given does not exist
-> **`FALSE`** will be returned.
+> **`false`** will be returned.
 
 If called without parameter outside object, this function returns
-**`FALSE`**.
+**`false`**.
 
 ### 更新日志
 
 | 版本         | 说明                                                                                                     |
 |--------------|----------------------------------------------------------------------------------------------------------|
-| Before 5.1.0 | If called without parameter outside object, this function would have returned **`NULL`** with a warning. |
+| Before 5.1.0 | If called without parameter outside object, this function would have returned **`null`** with a warning. |
 | Since 5.0.0  | The `object` parameter is optional if called from the object's method.                                   |
 | Since 4.0.5  | If `object` is a string, returns the name of the parent class of the class with that name.               |
 
@@ -962,8 +962,8 @@ true</span></span> \] )
 
 ### 返回值
 
-本函数在由 `interface_name` 给出的接口已定义时返回 **`TRUE`**，否则返回
-**`FALSE`**。
+本函数在由 `interface_name` 给出的接口已定义时返回 **`true`**，否则返回
+**`false`**。
 
 ### 范例
 
@@ -991,7 +991,7 @@ if (interface_exists('MyInterface')) {
 is\_a
 =====
 
-如果对象属于该类或该类是此对象的父类则返回 **`TRUE`**
+如果对象属于该类或该类是此对象的父类则返回 **`true`**
 
 ### 说明
 
@@ -1000,7 +1000,7 @@ is\_a
 `$object`</span> , <span class="methodparam"><span
 class="type">string</span> `$class_name`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$allow_string`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 如果 `object` 是该类或该类是此对象的父类。
 
@@ -1013,13 +1013,13 @@ class="initializer"> = **`FALSE`**</span></span> \] )
 类名
 
 `allow_string`  
-如果本参数设置为 **`FALSE`**，`object` 就不允许传入字符串类名。
+如果本参数设置为 **`false`**，`object` 就不允许传入字符串类名。
 这也会在类不存在时，阻止调用自动加载器（autoloader）。
 
 ### 返回值
 
-如果对象属于该类或该类是此对象的父类时返回 **`TRUE`**，否则返回
-**`FALSE`**。
+如果对象属于该类或该类是此对象的父类时返回 **`true`**，否则返回
+**`false`**。
 
 ### 范例
 
@@ -1061,7 +1061,7 @@ if ($WF instanceof WidgetFactory) {
 is\_subclass\_of
 ================
 
-如果此对象是该类的子类，则返回 **`TRUE`**
+如果此对象是该类的子类，则返回 **`true`**
 
 ### 说明
 
@@ -1072,7 +1072,7 @@ class="methodparam"><span class="type">object</span> `$object`</span> ,
 `$class_name`</span> )
 
 如果对象 `object` 所属类是类 `class_name` 的子类，则返回
-**`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，否则返回 **`false`**。
 
 > **Note**:
 >
@@ -1144,8 +1144,8 @@ exist.
 
 ### 返回值
 
-This function returns **`TRUE`** if the object `object`, belongs to a
-class which is a subclass of `class_name`, **`FALSE`** otherwise.
+This function returns **`true`** if the object `object`, belongs to a
+class which is a subclass of `class_name`, **`false`** otherwise.
 
 ### 范例
 
@@ -1238,7 +1238,7 @@ class="methodparam"><span class="type">mixed</span> `$object`</span> ,
 ### 返回值
 
 如果 `method_name` 所指的方法在 `object` 所指的对象类中已定义，则返回
-**`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，否则返回 **`false`**。
 
 ### 注释
 
@@ -1299,8 +1299,8 @@ class="methodparam"><span class="type">mixed</span> `$class`</span> ,
 > **Note**:
 >
 > As opposed with <span class="function">isset</span>, <span
-> class="function">property\_exists</span> returns **`TRUE`** even if
-> the property has the value **`NULL`**.
+> class="function">property\_exists</span> returns **`true`** even if
+> the property has the value **`null`**.
 
 ### 参数
 
@@ -1312,8 +1312,8 @@ class="methodparam"><span class="type">mixed</span> `$class`</span> ,
 
 ### 返回值
 
-如果该属性存在则返回 **`TRUE`**，如果不存在则返回 **`FALSE`**，出错返回
-**`NULL`**。
+如果该属性存在则返回 **`true`**，如果不存在则返回 **`false`**，出错返回
+**`null`**。
 
 ### 注释
 
@@ -1389,8 +1389,8 @@ class="methodparam"><span class="type">string</span> `$traitname`</span>
 
 ### 返回值
 
-如果 trait 存在返回 **`TRUE`**，不存在则返回
-**`FALSE`**。发生错误的时候返回 **`NULL`**。
+如果 trait 存在返回 **`true`**，不存在则返回
+**`false`**。发生错误的时候返回 **`null`**。
 
 **目录**
 
@@ -1417,9 +1417,9 @@ class="methodparam"><span class="type">string</span> `$traitname`</span>
 -   [interface\_exists](/ref/classobj.html#interface_exists) —
     检查接口是否已被定义
 -   [is\_a](/ref/classobj.html#is_a) —
-    如果对象属于该类或该类是此对象的父类则返回 TRUE
+    如果对象属于该类或该类是此对象的父类则返回 true
 -   [is\_subclass\_of](/ref/classobj.html#is_subclass_of) —
-    如果此对象是该类的子类，则返回 TRUE
+    如果此对象是该类的子类，则返回 true
 -   [method\_exists](/ref/classobj.html#method_exists) —
     检查类的方法是否存在
 -   [property\_exists](/ref/classobj.html#property_exists) —

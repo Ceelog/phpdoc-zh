@@ -20,8 +20,8 @@ off。
 ?>
 ```
 
-如果 quick\_print 为 off，上边的函数调用将返回 **`FALSE`**，而如果
-quick\_print 为 on，则返回 **`TRUE`**。
+如果 quick\_print 为 off，上边的函数调用将返回 **`false`**，而如果
+quick\_print 为 on，则返回 **`true`**。
 
 <span class="function">snmp\_get\_quick\_print</span> 仅在使用了 UCD
 SNMP 库时才可用。当使用 Windows SNMP 库时，此函数不可用。
@@ -411,7 +411,7 @@ The number of times to retry if timeouts occur.
 
 ### 返回值
 
-Returns SNMP object value on success or **`FALSE`** on error.
+Returns SNMP object value on success or **`false`** on error.
 
 ### 范例
 
@@ -468,7 +468,7 @@ The number of times to retry if timeouts occur.
 
 ### 返回值
 
-Returns SNMP object value on success or **`FALSE`** on error. In case of
+Returns SNMP object value on success or **`false`** on error. In case of
 an error, an E\_WARNING message is shown.
 
 ### 范例
@@ -529,7 +529,7 @@ The number of times to retry if timeouts occur.
 ### 返回值
 
 Returns an associative array of the SNMP object ids and their values on
-success or **`FALSE`** on error. In case of an error, an E\_WARNING
+success or **`false`** on error. In case of an error, an E\_WARNING
 message is shown.
 
 ### 范例
@@ -648,7 +648,7 @@ The number of times to retry if timeouts occur.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 If the SNMP host rejects the data type, an E\_WARNING message like
 "Warning: Error in packet. Reason: (badValue) The value given has the
@@ -710,7 +710,7 @@ The SNMP agent (server).
 The read community.
 
 `object_id`  
-If **`NULL`**, `object_id` is taken as the root of the SNMP objects tree
+If **`null`**, `object_id` is taken as the root of the SNMP objects tree
 and all objects under that tree are returned as an array.
 
 If `object_id` is specified, all the SNMP objects below that `object_id`
@@ -725,7 +725,7 @@ The number of times to retry if timeouts occur.
 ### 返回值
 
 Returns an array of SNMP object values starting from the `object_id` as
-root or **`FALSE`** on error.
+root or **`false`** on error.
 
 ### 范例
 
@@ -811,7 +811,7 @@ The number of times to retry if timeouts occur.
 
 ### 返回值
 
-Returns SNMP object value on success or **`FALSE`** on error.
+Returns SNMP object value on success or **`false`** on error.
 
 ### 范例
 
@@ -890,7 +890,7 @@ The number of times to retry if timeouts occur.
 
 ### 返回值
 
-Returns SNMP object value on success or **`FALSE`** on error. In case of
+Returns SNMP object value on success or **`false`** on error. In case of
 an error, an E\_WARNING message is shown.
 
 ### 范例
@@ -972,7 +972,7 @@ The number of times to retry if timeouts occur.
 ### 返回值
 
 Returns an associative array of the SNMP object ids and their values on
-success or **`FALSE`** on error. In case of an error, an E\_WARNING
+success or **`false`** on error. In case of an error, an E\_WARNING
 message is shown.
 
 ### 范例
@@ -1116,7 +1116,7 @@ The number of times to retry if timeouts occur.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 If the SNMP host rejects the data type, an E\_WARNING message like
 "Warning: Error in packet. Reason: (badValue) The value given has the
@@ -1199,7 +1199,7 @@ the privacy protocol (DES or AES)
 the privacy pass phrase
 
 `object_id`  
-If **`NULL`**, `object_id` is taken as the root of the SNMP objects tree
+If **`null`**, `object_id` is taken as the root of the SNMP objects tree
 and all objects under that tree are returned as an array.
 
 If `object_id` is specified, all the SNMP objects below that `object_id`
@@ -1214,7 +1214,7 @@ The number of times to retry if timeouts occur.
 ### 返回值
 
 Returns an array of SNMP object values starting from the `object_id` as
-root or **`FALSE`** on error.
+root or **`false`** on error.
 
 ### 范例
 
@@ -1259,7 +1259,7 @@ class="methodparam"><span class="type">string</span> `$object_id`</span>
 `$timeout`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$retries`</span> \]\] )
 
-成功则返回 SNMP 的对象值，失败则返回 **`FALSE`**。
+成功则返回 SNMP 的对象值，失败则返回 **`false`**。
 
 函数 <span class="function">snmpget</span> 用于读取由 `object_id` 指定的
 SNMP 对象值。`hostname` 指定 SNMP 代理，而 `community`
@@ -1311,7 +1311,7 @@ The number of times to retry if timeouts occur.
 
 ### 返回值
 
-Returns SNMP object value on success or **`FALSE`** on error. In case of
+Returns SNMP object value on success or **`false`** on error. In case of
 an error, an E\_WARNING message is shown.
 
 ### 范例
@@ -1371,7 +1371,7 @@ The number of times to retry if timeouts occur.
 ### 返回值
 
 Returns an associative array of the SNMP object ids and their values on
-success or **`FALSE`** on error. In case of an error, an E\_WARNING
+success or **`false`** on error. In case of an error, an E\_WARNING
 message is shown.
 
 ### 范例
@@ -1419,7 +1419,7 @@ class="methodparam"><span class="type">int</span> `$timeout`</span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$retries`</span> \]\] )
 
-设置指定的 SNMP 对象的值，成功返回 **`TRUE`**，错误则返回 **`FALSE`**。
+设置指定的 SNMP 对象的值，成功返回 **`true`**，错误则返回 **`false`**。
 
 函数 <span class="function">snmpset</span> 用于设置由 `object_id` 指定的
 SNMP 对象的值。`hostname` 指定 SNMP 代理，而 `community`
@@ -1442,11 +1442,11 @@ class="methodparam"><span class="type">string</span> `$object_id`</span>
 class="type">int</span> `$retries`</span> \]\] )
 
 返回由 `object_id` 作为根的 SNMP 对象值所组成的数组，错误则返回
-**`FALSE`**。
+**`false`**。
 
 <span class="function">snmpwalk</span> 函数是用来读取所有由 `hostname`
 指定的 SNMP 代理的值。`Community` 指定该代理中具有读权限的域。一个为
-**`NULL`** 的 `object_id` 将被看作 SNMP
+**`null`** 的 `object_id` 将被看作 SNMP
 对象树的根，而在此树下的所有对象将作为一个数组被返回。如果指定了
 `object_id`，则返回所有在 `object_id` 下的 SNMP 对象。
 
@@ -1485,11 +1485,11 @@ class="methodparam"><span class="type">int</span> `$retries`</span> \]\]
 )
 
 返回一个包含对象 id 及它们各自对象值的关联数组，这些对象以 `object_id`
-作为根，错误则返回 **`FALSE`**。
+作为根，错误则返回 **`false`**。
 
 <span class="function">snmpwalkoid</span> 用于从 `hostname` 所指定的
 SNMP 代理那里读取所有对象 id 及它们各自的值。`community`
-指定对于该代理有读权限的域。一个为 **`NULL`** 的 `object_id` 将被看作
+指定对于该代理有读权限的域。一个为 **`null`** 的 `object_id` 将被看作
 SNMP 对象树的根，而在此树下的所有对象将作为一个数组被返回。如果指定了
 `object_id`，则返回所有在 `object_id` 下的 SNMP 对象。
 

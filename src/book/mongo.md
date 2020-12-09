@@ -385,9 +385,9 @@ Return a BSON\_LONG as an instance of <span
 class="classname">MongoInt64</span> (instead of a primitive type).
 
 `mongo.native_long` <span class="type">int</span>  
-*The default behavior for this has been changed to **`TRUE`** in 1.5.0,
+*The default behavior for this has been changed to **`true`** in 1.5.0,
 so make sure to set this variable to the value you want (probably
-**`TRUE`**) so that the driver's behavior doesn't suddenly change when
+**`true`**) so that the driver's behavior doesn't suddenly change when
 you upgrade.*
 
 On 64-bit platforms, the *mongo.native\_long* setting allows for 64-bit
@@ -3204,17 +3204,17 @@ class="function">MongoClient::\_\_construct</span> 和
 /\* 属性 \*/
 
 <span class="modifier">public</span> <span class="type">boolean</span>
-`$connected` <span class="initializer"> = **`FALSE`**</span> ;
+`$connected` <span class="initializer"> = **`false`**</span> ;
 
 <span class="modifier">public</span> <span class="type">string</span>
-`$status` <span class="initializer"> = **`NULL`**</span> ;
+`$status` <span class="initializer"> = **`null`**</span> ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
-`$server` <span class="initializer"> = **`NULL`**</span> ;
+`$server` <span class="initializer"> = **`null`**</span> ;
 
 <span class="modifier">protected</span> <span
 class="type">boolean</span> `$persistent` <span class="initializer"> =
-**`NULL`**</span> ;
+**`null`**</span> ;
 
 /\* 方法 \*/
 
@@ -3224,7 +3224,7 @@ class="methodparam"><span class="type">string</span> `$server`<span
 class="initializer"> = "mongodb://localhost:27017"</span></span> \[,
 <span class="methodparam"><span class="type">array</span>
 `$options`<span class="initializer"> = array("connect" =\>
-**`TRUE`**)</span></span> \]\] )
+**`true`**)</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">close</span> (\[ <span
@@ -3352,15 +3352,15 @@ MongoClient 常量
 --------
 
 `connected`  
-如果我们有一个打开的数据库连接，将会被设置为 **`TRUE`**，否则是
-**`FALSE`**。 如果连接副本集（replica
-set）里一个节点并匹配当前的读取选项 ，该属性仅会是 **`TRUE`**。
+如果我们有一个打开的数据库连接，将会被设置为 **`true`**，否则是
+**`false`**。 如果连接副本集（replica
+set）里一个节点并匹配当前的读取选项 ，该属性仅会是 **`true`**。
 这个属性不考虑账户是否已认证。
 
 版本 1.5.0 后该属性已经废弃（ *deprecated*）。
 
 `status`  
-这个属性不会再被使用，将会被设置为 **`NULL`** 在驱动版本 1.1.x
+这个属性不会再被使用，将会被设置为 **`null`** 在驱动版本 1.1.x
 及更早版本中，使用持久连接时这可能会被设置为字符串的值(比如
 *"recycled"*， *"new"*)。
 
@@ -3402,11 +3402,11 @@ class="methodparam"><span class="type">boolean\|string</span>
 
 `connection`  
 如果没有指定 connection，或者是
-**`FALSE`**，将会选择关闭写作操作的连接。
+**`false`**，将会选择关闭写作操作的连接。
 如果配置为单节点，将会关闭整个连接，但是如果你连接到一个集群， close()
 会*仅仅*关闭 primary 节点的连接。
 
-如果 connection 是 **`TRUE`**，连接管理器将会关闭所有由它管理的连接。
+如果 connection 是 **`true`**，连接管理器将会关闭所有由它管理的连接。
 这也会包括创建对象时所引用的连接字符串之外的连接。
 
 如果 connection 是一个字符串参数，它将仅仅关闭由该 hash 标识的连接。
@@ -3501,7 +3501,7 @@ class="methodparam"><span class="type">string</span> `$server`<span
 class="initializer"> = "mongodb://localhost:27017"</span></span> \[,
 <span class="methodparam"><span class="type">array</span>
 `$options`<span class="initializer"> = array("connect" =\>
-**`TRUE`**)</span></span> \]\] )
+**`true`**)</span></span> \]\] )
 
 如果没有传入参数，它会连接到 "localhost:27017"（或者 php.ini 里指定的
 <a href="/book/mongo.html#" class="link">mongo.default_host</a> 和
@@ -3543,8 +3543,8 @@ class="classname">MongoConnectionException</span>。
 
 -   *"connect"*
 
-    构造器是否应该在返回前连接。 默认为 **`TRUE`**。当设置为
-    **`FALSE`**，驱动会在有查询必要时 *自动* 连接到服务器。
+    构造器是否应该在返回前连接。 默认为 **`true`**。当设置为
+    **`false`**，驱动会在有查询必要时 *自动* 连接到服务器。
     另外，你也可以用 <span class="function">MongoClient::connect</span>
     手动运行。
 
@@ -3685,7 +3685,7 @@ class="classname">MongoConnectionException</span>
 <dd><p>服务器名。</p>
 </dd>
 <dt><code class="parameter">connect</code></dt>
-<dd><p>可选的 boolean 参数指定了构造器是否应该在返回前连接到数据库。默认为 <strong><code>TRUE</code></strong>。</p>
+<dd><p>可选的 boolean 参数指定了构造器是否应该在返回前连接到数据库。默认为 <strong><code>true</code></strong>。</p>
 </dd>
 <dt><code class="parameter">persistent</code></dt>
 <dd><p>连接是否应该是持久的。</p>
@@ -4248,8 +4248,8 @@ necessary on 32 bit platforms (and Windows).
 
 ### 返回值
 
-Returns **`TRUE`** if the method attempted to kill a cursor, and
-**`FALSE`** if there was something wrong with the arguments (such as a
+Returns **`true`** if the method attempted to kill a cursor, and
+**`false`** if there was something wrong with the arguments (such as a
 wrong `server_hash`). The return status does *not reflect* where the
 cursor was actually killed as the server does not provide that
 information.
@@ -4467,7 +4467,7 @@ of criteria used to match tags on replica set members.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### 错误／异常
 
@@ -4529,7 +4529,7 @@ write concern.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### 错误／异常
 
@@ -4740,9 +4740,9 @@ class="methodparam">void</span> )
 <span class="methodname">repair</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$preserve_cloned_files`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$backup_original_files`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">resetError</span> ( <span
@@ -4766,7 +4766,7 @@ class="type">array</span> `$tags`</span> \] )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setSlaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$ok`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setWriteConcern</span> ( <span
@@ -5353,8 +5353,8 @@ $collection = $db->command(array(
 如果是固定大小的，指定集合中最多存储多少个文档。
 
 `autoIndexId`  
-如果 capped 是 **`TRUE`** 你可以显式定义为 **`FALSE`** 来禁用 自增*\_id*
-特性。MongoDB 2.2以前， *autoIndexId* 的默认值是**`FALSE`**。
+如果 capped 是 **`true`** 你可以显式定义为 **`false`** 来禁用 自增*\_id*
+特性。MongoDB 2.2以前， *autoIndexId* 的默认值是**`false`**。
 
 ### 返回值
 
@@ -5426,7 +5426,7 @@ sample log message \#99
 <td>1.4.0</td>
 <td><p>1.4.0以前的版本里，所有选项都是这个方法的参数。之前版本这个方法的签名是这样的：</p>
 <div class="methodsynopsis dc-description">
-<span class="modifier">public</span> <span class="type">MongoCollection</span> <span class="methodname">MongoDB::createCollection</span> ( <span class="methodparam"><span class="type">string</span> <code class="parameter">$name</code></span> [, <span class="methodparam"><span class="type">bool</span> <code class="parameter">$capped</code><span class="initializer"> = <strong><code>FALSE</code></strong></span></span> [, <span class="methodparam"><span class="type">int</span> <code class="parameter">$size</code><span class="initializer"> = 0</span></span> [, <span class="methodparam"><span class="type">int</span> <code class="parameter">$max</code><span class="initializer"> = 0</span></span> ]]] )
+<span class="modifier">public</span> <span class="type">MongoCollection</span> <span class="methodname">MongoDB::createCollection</span> ( <span class="methodparam"><span class="type">string</span> <code class="parameter">$name</code></span> [, <span class="methodparam"><span class="type">bool</span> <code class="parameter">$capped</code><span class="initializer"> = <strong><code>false</code></strong></span></span> [, <span class="methodparam"><span class="type">int</span> <code class="parameter">$size</code><span class="initializer"> = 0</span></span> [, <span class="methodparam"><span class="type">int</span> <code class="parameter">$max</code><span class="initializer"> = 0</span></span> ]]] )
 </div>
 <p>参数的意义与现在版本的 <code class="parameter">options</code> 参数相同。</p></td>
 </tr>
@@ -5463,7 +5463,7 @@ class="classname">MongoId</span> 对象或简单变量，它本身将作为引�
 返回一个数据库引用数组。
 
 如果一个没有 *\_id* 字段的数组作为 *document\_or\_id*
-参数，**`NULL`**会被返回。
+参数，**`null`**会被返回。
 
 ### 范例
 
@@ -5648,7 +5648,7 @@ $db->execute('"foo";');
 ?>
 ```
 
-但是下面这两个例子返回**`NULL`**:
+但是下面这两个例子返回**`null`**:
 
 ``` php
 <?php
@@ -5877,7 +5877,7 @@ options include:
 
 -   *"includeSystemCollections"*
 
-    Boolean, defaults to **`FALSE`**. Determines whether system
+    Boolean, defaults to **`false`**. Determines whether system
     collections should be included in the result.
 
 The following option may be used with MongoDB 2.8+:
@@ -5995,7 +5995,7 @@ options include:
 
 -   *"includeSystemCollections"*
 
-    Boolean, defaults to **`FALSE`**. Determines whether system
+    Boolean, defaults to **`false`**. Determines whether system
     collections should be included in the result.
 
 The following option may be used with MongoDB 2.8+:
@@ -6394,7 +6394,7 @@ Returns the error, if there was one.
 
 ### 范例
 
-**示例 \#1 <span class="function">MongoDB::lastError</span> **`NULL`**
+**示例 \#1 <span class="function">MongoDB::lastError</span> **`null`**
 error example**
 
 ``` php
@@ -6488,7 +6488,7 @@ options include:
 
 -   *"includeSystemCollections"*
 
-    Boolean, defaults to **`FALSE`**. Determines whether system
+    Boolean, defaults to **`false`**. Determines whether system
     collections should be included in the result.
 
 The following option may be used with MongoDB 2.8+:
@@ -6594,9 +6594,9 @@ Repairs and compacts this database
 <span class="methodname">MongoDB::repair</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$preserve_cloned_files`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$backup_original_files`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 This creates a fresh copy of all database data. It will remove any
 corrupt data and compact and large stretches of free space it finds.
@@ -6809,7 +6809,7 @@ of criteria used to match tags on replica set members.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### 错误／异常
 
@@ -6854,7 +6854,7 @@ Change slaveOkay setting for this database
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">MongoDB::setSlaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$ok`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 See
 <a href="/book/mongo.html#Querying" class="link">the query section</a>
@@ -6908,7 +6908,7 @@ write concern.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### 错误／异常
 
@@ -6989,7 +6989,7 @@ create and use a collection with a $ in the name, MongoDB will assert.
 /\* Fields \*/
 
 <span class="modifier">public</span> <span class="type">MongoDB</span>
-`$db` <span class="initializer"> = **`NULL`**</span> ;
+`$db` <span class="initializer"> = **`null`**</span> ;
 
 <span class="modifier">public</span> <span class="type">int</span> `$w`
 ;
@@ -7170,7 +7170,7 @@ class="type">array</span> `$tags`</span> \] )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setSlaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$ok`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setWriteConcern</span> ( <span
@@ -7198,7 +7198,7 @@ class="methodparam"><span class="type">array</span> `$new_object`</span>
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">validate</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$scan_data`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 }
 
@@ -7918,7 +7918,7 @@ available options include:
 
 -   *"continueOnError"*
 
-    Boolean, defaults to **`FALSE`**. If set, the database will not stop
+    Boolean, defaults to **`false`**. If set, the database will not stop
     processing a bulk insert if one fails (eg due to duplicate IDs).
     This makes bulk insert behave similarly to a series of single
     inserts, except that calling <span
@@ -7938,10 +7938,10 @@ available options include:
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    Boolean, defaults to **`false`**. If journaling is enabled, it works
     exactly like *"j"*. If journaling is not enabled, the write
     operation blocks until it is synced to database files on disk. If
-    **`TRUE`**, an acknowledged insert is implied and this option will
+    **`true`**, an acknowledged insert is implied and this option will
     override setting *"w"* to *0*.
 
     > **Note**: <span class="simpara">If journaling is enabled, users
@@ -7951,8 +7951,8 @@ available options include:
 
 -   *"j"*
 
-    Boolean, defaults to **`FALSE`**. Forces the write operation to
-    block until it is synced to the journal on disk. If **`TRUE`**, an
+    Boolean, defaults to **`false`**. Forces the write operation to
+    block until it is synced to the journal on disk. If **`true`**, an
     acknowledged write is implied and this option will override setting
     *"w"* to *0*.
 
@@ -8010,8 +8010,8 @@ The following options are deprecated and should no longer be used:
 
 If the *w* parameter is set to acknowledge the write, returns an
 associative array with the status of the inserts ("ok") and any error
-that may have occurred ("err"). Otherwise, returns **`TRUE`** if the
-batch insert was successfully sent, **`FALSE`** otherwise.
+that may have occurred ("err"). Otherwise, returns **`true`** if the
+batch insert was successfully sent, **`false`** otherwise.
 
 ### 错误／异常
 
@@ -8290,7 +8290,7 @@ given, it will be used as the reference ID.
 返回一个数据库的引用数组。
 
 如果提供了不包含 *\_id* 字段的数组当做 *document\_or\_id* 参数，将会返回
-**`NULL`**。
+**`null`**。
 
 ### 范例
 
@@ -8358,14 +8358,14 @@ options include:
 
 -   *"unique"*
 
-    Specify **`TRUE`** to create a unique index. The default value is
-    **`FALSE`**. This option applies only to ascending/descending
+    Specify **`true`** to create a unique index. The default value is
+    **`false`**. This option applies only to ascending/descending
     indexes.
 
     > **Note**:
     >
     > When MongoDB indexes a field, if a document does not have a value
-    > for the field, a **`NULL`** value is indexed. If multiple
+    > for the field, a **`null`** value is indexed. If multiple
     > documents do not contain a field, a unique index will reject all
     > but the first of those documents. The *"sparse"* option may be
     > used to overcome this, since it will prevent documents without the
@@ -8373,9 +8373,9 @@ options include:
 
 -   *"sparse"*
 
-    Specify **`TRUE`** to create a sparse index, which only indexes
+    Specify **`true`** to create a sparse index, which only indexes
     documents containing a specified field. The default value is
-    **`FALSE`**.
+    **`false`**.
 
 -   *"expireAfterSeconds"*
 
@@ -8411,8 +8411,8 @@ options include:
 -   *"background"*
 
     Builds the index in the background so that building an index does
-    *not* block other database activities. Specify **`TRUE`** to build
-    in the background. The default value is **`FALSE`**.
+    *not* block other database activities. Specify **`true`** to build
+    in the background. The default value is **`false`**.
 
     **Warning**
     Prior to MongoDB 2.6.0, index builds on secondaries were executed as
@@ -8444,11 +8444,11 @@ The following options may be used with MongoDB versions before 2.8:
 
 -   *"dropDups"*
 
-    Specify **`TRUE`** to force creation of a unique index where the
+    Specify **`true`** to force creation of a unique index where the
     collection may contain duplicate values for a key. MongoDB will
     index the first occurrence of a key and delete all subsequent
     documents from the collection that contain a duplicate value for
-    that key. The default value is **`FALSE`**.
+    that key. The default value is **`false`**.
 
     **Warning**
     *"dropDups"* may delete data from your database. Use with extreme
@@ -8508,7 +8508,7 @@ present in lieu of *"numIndexesAfter"*.
 
 With MongoDB 2.4 and earlier, a status document is only returned if the
 <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
-is at least *1*. Otherwise, **`TRUE`** is returned. The fields in the
+is at least *1*. Otherwise, **`true`** is returned. The fields in the
 status document are different, except for the *"ok"* field, which
 signals whether the index creation was successful. Additional fields are
 described in the documentation for <span
@@ -8796,7 +8796,7 @@ distinct 命令返回集合里给定键不同值的列表。
 
 ### 返回值
 
-返回不同值的数组， 或者在失败时返回 **`FALSE`**
+返回不同值的数组， 或者在失败时返回 **`false`**
 
 ### 范例
 
@@ -8967,14 +8967,14 @@ include:
 
 -   *"unique"*
 
-    Specify **`TRUE`** to create a unique index. The default value is
-    **`FALSE`**. This option applies only to ascending/descending
+    Specify **`true`** to create a unique index. The default value is
+    **`false`**. This option applies only to ascending/descending
     indexes.
 
     > **Note**:
     >
     > When MongoDB indexes a field, if a document does not have a value
-    > for the field, a **`NULL`** value is indexed. If multiple
+    > for the field, a **`null`** value is indexed. If multiple
     > documents do not contain a field, a unique index will reject all
     > but the first of those documents. The *"sparse"* option may be
     > used to overcome this, since it will prevent documents without the
@@ -8982,9 +8982,9 @@ include:
 
 -   *"sparse"*
 
-    Specify **`TRUE`** to create a sparse index, which only indexes
+    Specify **`true`** to create a sparse index, which only indexes
     documents containing a specified field. The default value is
-    **`FALSE`**.
+    **`false`**.
 
 -   *"expireAfterSeconds"*
 
@@ -9020,8 +9020,8 @@ include:
 -   *"background"*
 
     Builds the index in the background so that building an index does
-    *not* block other database activities. Specify **`TRUE`** to build
-    in the background. The default value is **`FALSE`**.
+    *not* block other database activities. Specify **`true`** to build
+    in the background. The default value is **`false`**.
 
     **Warning**
     Prior to MongoDB 2.6.0, index builds on secondaries were executed as
@@ -9053,11 +9053,11 @@ The following options may be used with MongoDB versions before 2.8:
 
 -   *"dropDups"*
 
-    Specify **`TRUE`** to force creation of a unique index where the
+    Specify **`true`** to force creation of a unique index where the
     collection may contain duplicate values for a key. MongoDB will
     index the first occurrence of a key and delete all subsequent
     documents from the collection that contain a duplicate value for
-    that key. The default value is **`FALSE`**.
+    that key. The default value is **`false`**.
 
     **Warning**
     *"dropDups"* may delete data from your database. Use with extreme
@@ -9117,7 +9117,7 @@ present in lieu of *"numIndexesAfter"*.
 
 With MongoDB 2.4 and earlier, a status document is only returned if the
 <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
-is at least *1*. Otherwise, **`TRUE`** is returned. The fields in the
+is at least *1*. Otherwise, **`true`** is returned. The fields in the
 status document are different, except for the *"ok"* field, which
 signals whether the index creation was successful. Additional fields are
 described in the documentation for <span
@@ -9574,7 +9574,7 @@ $array = iterator_to_array($cursor);
 会让驱动将强制载入所有搜索结果集到内存，所以对超过内存大小的结果集不要这么做！
 
 同时，有些系统集合不具有 *\_id* 字段。 如果你处理一个可能没有 *\_id*
-字段的集合，需要将 **`FALSE`** 传入 <span
+字段的集合，需要将 **`false`** 传入 <span
 class="function">iterator\_to\_array</span>
 第二个参数（这样它不会尝试使用不存在的 *\_id* 的值作为数组键）。
 
@@ -9625,10 +9625,10 @@ DB and return it.
 | Option                                   | 说明                                                                                                                                                                                                                                                                      |
 |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `sort` <span class="type">array</span>   | Determines which document the operation will modify if the query selects multiple documents. findAndModify will modify the first document in the sort order specified by this argument.                                                                                   |
-| `remove` <span class="type">bool</span>  | Optional if `update` field exists. When **`TRUE`**, removes the selected document. The default is **`FALSE`**.                                                                                                                                                            |
+| `remove` <span class="type">bool</span>  | Optional if `update` field exists. When **`true`**, removes the selected document. The default is **`false`**.                                                                                                                                                            |
 | `update` <span class="type">array</span> | Optional if `remove` field exists. Performs an update of the selected document.                                                                                                                                                                                           |
-| `new` <span class="type">bool</span>     | Optional. When **`TRUE`**, returns the modified document rather than the original. The findAndModify method ignores the `new` option for remove operations. The default is **`FALSE`**.                                                                                   |
-| `upsert` <span class="type">bool</span>  | Optional. Used in conjunction with the `update` field. When **`TRUE`**, the findAndModify command creates a new document if the query returns no documents. The default is false. In MongoDB 2.2, the findAndModify command returns **`NULL`** when upsert is **`TRUE`**. |
+| `new` <span class="type">bool</span>     | Optional. When **`true`**, returns the modified document rather than the original. The findAndModify method ignores the `new` option for remove operations. The default is **`false`**.                                                                                   |
+| `upsert` <span class="type">bool</span>  | Optional. Used in conjunction with the `update` field. When **`true`**, the findAndModify command creates a new document if the query returns no documents. The default is false. In MongoDB 2.2, the findAndModify command returns **`null`** when upsert is **`true`**. |
 | ``                                       |                                                                                                                                                                                                                                                                           |
 
 ### 返回值
@@ -9813,7 +9813,7 @@ This parameter is an associative array of the form *array("name" =\>
 
 ### 返回值
 
-Returns record matching the search or **`NULL`**.
+Returns record matching the search or **`null`**.
 
 ### 错误／异常
 
@@ -10516,10 +10516,10 @@ class="classname">MongoBinData</span>。
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    Boolean, defaults to **`false`**. If journaling is enabled, it works
     exactly like *"j"*. If journaling is not enabled, the write
     operation blocks until it is synced to database files on disk. If
-    **`TRUE`**, an acknowledged insert is implied and this option will
+    **`true`**, an acknowledged insert is implied and this option will
     override setting *"w"* to *0*.
 
     > **Note**: <span class="simpara">If journaling is enabled, users
@@ -10529,8 +10529,8 @@ class="classname">MongoBinData</span>。
 
 -   *"j"*
 
-    Boolean, defaults to **`FALSE`**. Forces the write operation to
-    block until it is synced to the journal on disk. If **`TRUE`**, an
+    Boolean, defaults to **`false`**. Forces the write operation to
+    block until it is synced to the journal on disk. If **`true`**, an
     acknowledged write is implied and this option will override setting
     *"w"* to *0*.
 
@@ -10563,7 +10563,7 @@ class="classname">MongoBinData</span>。
 ### 返回值
 
 如果设置了 *"w"* 选项，将会返回包含插入状态的数组。 否则，将会返回一个
-**`TRUE`** 代表数组不是空的（空数组将会抛出 <span
+**`true`** 代表数组不是空的（空数组将会抛出 <span
 class="classname">MongoException</span> ）。
 
 如果返回了一个 array，将会有以下键：
@@ -10885,10 +10885,10 @@ class="initializer"> = array()</span></span> \]\] )
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    Boolean, defaults to **`false`**. If journaling is enabled, it works
     exactly like *"j"*. If journaling is not enabled, the write
     operation blocks until it is synced to database files on disk. If
-    **`TRUE`**, an acknowledged insert is implied and this option will
+    **`true`**, an acknowledged insert is implied and this option will
     override setting *"w"* to *0*.
 
     > **Note**: <span class="simpara">If journaling is enabled, users
@@ -10898,8 +10898,8 @@ class="initializer"> = array()</span></span> \]\] )
 
 -   *"j"*
 
-    Boolean, defaults to **`FALSE`**. Forces the write operation to
-    block until it is synced to the journal on disk. If **`TRUE`**, an
+    Boolean, defaults to **`false`**. Forces the write operation to
+    block until it is synced to the journal on disk. If **`true`**, an
     acknowledged write is implied and this option will override setting
     *"w"* to *0*.
 
@@ -10932,7 +10932,7 @@ class="initializer"> = array()</span></span> \]\] )
 ### 返回值
 
 如果设置了 *"w"* 选项，将会返回包含删除状态的 array。 否则返回
-**`TRUE`**。
+**`true`**。
 
 状态数组字段的解释位于 <span
 class="function">MongoCollection::insert</span> 的文档。
@@ -11056,10 +11056,10 @@ private 的属性。
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    Boolean, defaults to **`false`**. If journaling is enabled, it works
     exactly like *"j"*. If journaling is not enabled, the write
     operation blocks until it is synced to database files on disk. If
-    **`TRUE`**, an acknowledged insert is implied and this option will
+    **`true`**, an acknowledged insert is implied and this option will
     override setting *"w"* to *0*.
 
     > **Note**: <span class="simpara">If journaling is enabled, users
@@ -11069,8 +11069,8 @@ private 的属性。
 
 -   *"j"*
 
-    Boolean, defaults to **`FALSE`**. Forces the write operation to
-    block until it is synced to the journal on disk. If **`TRUE`**, an
+    Boolean, defaults to **`false`**. Forces the write operation to
+    block until it is synced to the journal on disk. If **`true`**, an
     acknowledged write is implied and this option will override setting
     *"w"* to *0*.
 
@@ -11246,7 +11246,7 @@ of criteria used to match tags on replica set members.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### 错误／异常
 
@@ -11292,7 +11292,7 @@ Change slaveOkay setting for this collection
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">MongoCollection::setSlaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$ok`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 See
 <a href="/book/mongo.html#Querying" class="link">the query section</a>
@@ -11345,7 +11345,7 @@ write concern.
 
 ### 返回值
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### 错误／异常
 
@@ -11537,10 +11537,10 @@ options include:
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    Boolean, defaults to **`false`**. If journaling is enabled, it works
     exactly like *"j"*. If journaling is not enabled, the write
     operation blocks until it is synced to database files on disk. If
-    **`TRUE`**, an acknowledged insert is implied and this option will
+    **`true`**, an acknowledged insert is implied and this option will
     override setting *"w"* to *0*.
 
     > **Note**: <span class="simpara">If journaling is enabled, users
@@ -11550,8 +11550,8 @@ options include:
 
 -   *"j"*
 
-    Boolean, defaults to **`FALSE`**. Forces the write operation to
-    block until it is synced to the journal on disk. If **`TRUE`**, an
+    Boolean, defaults to **`false`**. Forces the write operation to
+    block until it is synced to the journal on disk. If **`true`**, an
     acknowledged write is implied and this option will override setting
     *"w"* to *0*.
 
@@ -11608,7 +11608,7 @@ The following options are deprecated and should no longer be used:
 ### 返回值
 
 Returns an array containing the status of the update if the *"w"* option
-is set. Otherwise, returns **`TRUE`**.
+is set. Otherwise, returns **`true`**.
 
 Fields in the status array are described in the documentation for <span
 class="function">MongoCollection::insert</span>.
@@ -11824,7 +11824,7 @@ Validates this collection
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">MongoCollection::validate</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$scan_data`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 ### 参数
 
@@ -11936,7 +11936,7 @@ class="oointerface">, <span class="interfacename">Iterator</span>
 /\* Static Fields \*/
 
 <span class="modifier">static</span> <span class="type">bool</span>
-`$slaveOkay` <span class="initializer"> = **`FALSE`**</span> ;
+`$slaveOkay` <span class="initializer"> = **`false`**</span> ;
 
 <span class="modifier">static</span> <span class="type">int</span>
 `$timeout` <span class="initializer"> = 30000</span> ;
@@ -11953,7 +11953,7 @@ class="methodparam"><span class="type">mixed</span> `$value`</span> )
 class="type">MongoCursor</span> <span
 class="methodname">awaitData</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$wait`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span
@@ -11973,7 +11973,7 @@ class="initializer"> = array()</span></span> \]\] )
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">count</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$foundOnly`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">current</span> ( <span
@@ -12015,7 +12015,7 @@ class="type">MongoCursor</span> <span class="methodname">hint</span> (
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span class="methodname">immortal</span>
 (\[ <span class="methodparam"><span class="type">bool</span>
-`$liveForever`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$liveForever`<span class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">info</span> ( <span
@@ -12041,7 +12041,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span class="methodname">partial</span>
 (\[ <span class="methodparam"><span class="type">bool</span>
-`$okay`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$okay`<span class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">reset</span> ( <span
@@ -12055,7 +12055,7 @@ class="methodparam">void</span> )
 class="type">MongoCursor</span> <span class="methodname">setFlag</span>
 ( <span class="methodparam"><span class="type">int</span> `$flag`</span>
 \[, <span class="methodparam"><span class="type">bool</span> `$set`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span
@@ -12072,7 +12072,7 @@ class="type">MongoCursor</span> <span class="methodname">skip</span> (
 class="type">MongoCursor</span> <span
 class="methodname">slaveOkay</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$okay`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span class="methodname">snapshot</span>
@@ -12086,7 +12086,7 @@ class="type">MongoCursor</span> <span class="methodname">sort</span> (
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span class="methodname">tailable</span>
 (\[ <span class="methodparam"><span class="type">bool</span>
-`$tail`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$tail`<span class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span class="methodname">timeout</span>
@@ -12274,7 +12274,7 @@ return more data
 class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::awaitData</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$wait`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 This method is to be used with tailable cursors. If we are at the end of
 the data, block for a while rather than returning no data. After a
@@ -12483,7 +12483,7 @@ Counts the number of results for this query
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">MongoCursor::count</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$foundOnly`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 This method does not affect the state of the cursor: if you haven't
 queried yet, you can still apply limits, skips, etc. If you have started
@@ -12547,7 +12547,7 @@ Returns the current element
 <span class="methodname">MongoCursor::current</span> ( <span
 class="methodparam">void</span> )
 
-This returns **`NULL`** until <span
+This returns **`null`** until <span
 class="function">MongoCursor::next</span> is called.
 
 ### 参数
@@ -12556,7 +12556,7 @@ class="function">MongoCursor::next</span> is called.
 
 ### 返回值
 
-The current result document as an associative array. **`NULL`** will be
+The current result document as an associative array. **`null`** will be
 returned if there is no result.
 
 ### 参见
@@ -12580,10 +12580,10 @@ documents per response. This method checks if the database has more
 batches or if the result set has been exhausted.
 
 A cursor being "dead" does not mean that <span
-class="function">MongoCursor::hasNext</span> will return **`FALSE`**, it
+class="function">MongoCursor::hasNext</span> will return **`false`**, it
 only means that the database is done sending results to the client. The
 client should continue iterating through results until <span
-class="function">MongoCursor::hasNext</span> is **`FALSE`**.
+class="function">MongoCursor::hasNext</span> is **`false`**.
 
 ### 参数
 
@@ -12591,8 +12591,8 @@ class="function">MongoCursor::hasNext</span> is **`FALSE`**.
 
 ### 返回值
 
-Returns **`TRUE`** if there are more results that have not yet been sent
-to the client, and **`FALSE`** otherwise.
+Returns **`true`** if there are more results that have not yet been sent
+to the client, and **`false`** otherwise.
 
 ### 参见
 
@@ -12628,7 +12628,7 @@ the existing functionality (see the example below).
 
 ### 返回值
 
-**`NULL`**.
+**`null`**.
 
 ### 错误／异常
 
@@ -12781,10 +12781,10 @@ class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::fields</span> ( <span
 class="methodparam"><span class="type">array</span> `$f`</span> )
 
-Fields are specified by *"fieldname" : bool*. **`TRUE`** indicates that
-a field should be returned, **`FALSE`** indicates that it should not be
-returned. You can also use 1 and 0 instead of **`TRUE`** and
-**`FALSE`**.
+Fields are specified by *"fieldname" : bool*. **`true`** indicates that
+a field should be returned, **`false`** indicates that it should not be
+returned. You can also use 1 and 0 instead of **`true`** and
+**`false`**.
 
 Thus, to return only the "summary" field, one could say:
 
@@ -12985,7 +12985,7 @@ Sets whether this cursor will timeout
 class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::immortal</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$liveForever`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 After remaining idle on the server for some amount of time, cursors, by
 default, "die." This is generally the behavior one wants. The database
@@ -12999,7 +12999,7 @@ If, for some reason, you need a cursor to hang around for a long time,
 you can prevent the database from cleaning it up by using this method.
 However, if you make a cursor immortal, you need to iterate through all
 of its results (or at least until <span
-class="methodname">MongoCursor::dead</span> returns **`TRUE`**) or the
+class="methodname">MongoCursor::dead</span> returns **`true`**) or the
 cursor will hang around the database *forever*, taking up resources.
 
 ### 参数
@@ -13309,7 +13309,7 @@ down
 class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::partial</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$okay`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 This option allows *mongos* to send partial query results if a shard is
 unreachable. This is only applicable when running a sharded MongoDB
@@ -13358,7 +13358,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`NULL`**.
+**`null`**.
 
 MongoCursor::rewind
 ===================
@@ -13390,7 +13390,7 @@ public function rewind() {
 
 ### 返回值
 
-**`NULL`**.
+**`null`**.
 
 ### 错误／异常
 
@@ -13416,7 +13416,7 @@ class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::setFlag</span> ( <span
 class="methodparam"><span class="type">int</span> `$flag`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$set`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 The <span class="classname">MongoCursor</span> class has several methods
 for setting flags on the query object. This method is available in case
@@ -13434,7 +13434,7 @@ this flag. For available flags, please refer to the wire protocol
 <a href="https://docs.mongodb.com/meta-driver/latest/legacy/mongodb-wire-protocol/#MongoWireProtocol-OPQUERY" class="link external">» documentation</a>.
 
 `set`  
-Whether the flag should be set (**`TRUE`**) or unset (**`FALSE`**).
+Whether the flag should be set (**`true`**) or unset (**`false`**).
 
 ### 返回值
 
@@ -13581,7 +13581,7 @@ Sets whether this query can be done on a secondary \[deprecated\]
 class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::slaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$okay`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 **Warning**
 
@@ -13775,7 +13775,7 @@ results
 class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::tailable</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$tail`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 Mongo has a feature known as tailable cursors which are similar to the
 Unix "tail -f" command.
@@ -13937,7 +13937,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`TRUE`** if the current result is not null, and **`FALSE`** otherwise.
+**`true`** if the current result is not null, and **`false`** otherwise.
 
 ### 参见
 
@@ -14078,8 +14078,8 @@ available for iteration.
 
 ### 返回值
 
-Returns **`TRUE`** if there are more results that have not yet been sent
-to the client, and **`FALSE`** otherwise.
+Returns **`true`** if there are more results that have not yet been sent
+to the client, and **`false`** otherwise.
 
 MongoCursorInterface::getReadPreference
 =======================================
@@ -14615,7 +14615,7 @@ Returns the current element
 <span class="methodname">MongoCommandCursor::current</span> ( <span
 class="methodparam">void</span> )
 
-This returns **`NULL`** until <span
+This returns **`null`** until <span
 class="function">MongoCommandCursor::rewind</span> is called.
 
 ### 参数
@@ -14624,7 +14624,7 @@ class="function">MongoCommandCursor::rewind</span> is called.
 
 ### 返回值
 
-The current result document as an associative array. **`NULL`** will be
+The current result document as an associative array. **`null`** will be
 returned if there is no result.
 
 ### 参见
@@ -14655,8 +14655,8 @@ available for iteration.
 
 ### 返回值
 
-Returns **`TRUE`** if there are more results that have not yet been sent
-to the client, and **`FALSE`** otherwise.
+Returns **`true`** if there are more results that have not yet been sent
+to the client, and **`false`** otherwise.
 
 ### 参见
 
@@ -14930,7 +14930,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`NULL`**.
+**`null`**.
 
 ### 错误／异常
 
@@ -15207,7 +15207,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`TRUE`** if the current result is not null, and **`FALSE`** otherwise.
+**`true`** if the current result is not null, and **`false`** otherwise.
 
 ### 参见
 
@@ -15289,10 +15289,10 @@ of the basic PHP types, compound types (arrays, associative arrays, and
 objects), and a half-dozen classes provided by the MongoDB PHP driver
 (for regular expressions, dates, and other specialized applications).
 
-Booleans and **`NULL`**
+Booleans and **`null`**
 -----------------------
 
-**`TRUE`**, **`FALSE`**, and **`NULL`** can be used as-is.
+**`true`**, **`false`**, and **`null`** can be used as-is.
 
 Numbers
 -------
@@ -15559,14 +15559,14 @@ class="classname">MongoId</span> 替换。
 <span class="ooclass"> class **MongoId** </span> {
 
 <span class="modifier">public</span> <span class="type">string</span>
-`$id` <span class="initializer"> = **`NULL`**</span> ;
+`$id` <span class="initializer"> = **`null`**</span> ;
 
 /\* 方法 \*/
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string\|MongoId</span> `$id`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">string</span> <span
@@ -15633,7 +15633,7 @@ MongoId::\_\_construct
 <span class="modifier">public</span> <span
 class="methodname">MongoId::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string\|MongoId</span> `$id`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 ### 参数
 
@@ -15850,9 +15850,9 @@ The value to check for validity.
 
 ### 返回值
 
-Returns **`TRUE`** if `value` is a <span
+Returns **`true`** if `value` is a <span
 class="classname">MongoId</span> instance or a string consisting of
-exactly 24 hexadecimal characters; otherwise, **`FALSE`** is returned.
+exactly 24 hexadecimal characters; otherwise, **`false`** is returned.
 
 MongoId::\_\_set\_state
 =======================
@@ -17128,7 +17128,7 @@ class="methodparam"><span class="type">MongoDB</span> `$db`</span> ,
 
 ### 返回值
 
-返回引用指向的文档，如果文档不存在则返回 **`NULL`**（该引用已损坏）。
+返回引用指向的文档，如果文档不存在则返回 **`null`**（该引用已损坏）。
 
 ### 范例
 
@@ -17183,7 +17183,7 @@ class="methodparam"><span class="type">mixed</span> `$ref`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 **Warning**
 
@@ -17645,13 +17645,13 @@ file which contains any file metadata.
 
 <span class="modifier">public</span> <span
 class="type">MongoCollection</span> `$chunks` <span class="initializer">
-= **`NULL`**</span> ;
+= **`null`**</span> ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
-`$filesName` <span class="initializer"> = **`NULL`**</span> ;
+`$filesName` <span class="initializer"> = **`null`**</span> ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
-`$chunksName` <span class="initializer"> = **`NULL`**</span> ;
+`$chunksName` <span class="initializer"> = **`null`**</span> ;
 
 /\* 方法 \*/
 
@@ -17808,7 +17808,7 @@ class="methodparam"><span class="type">mixed</span> `$id`</span> )
 Returns an array containing the status of the removal (with respect to
 the *files* collection) if a
 <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
-is applied. Otherwise, returns **`TRUE`**.
+is applied. Otherwise, returns **`true`**.
 
 Fields in the status array are described in the documentation for <span
 class="function">MongoCollection::insert</span>.
@@ -17892,7 +17892,7 @@ The filename or criteria for which to search.
 
 ### 返回值
 
-Returns a <span class="classname">MongoGridFSFile</span> or **`NULL`**.
+Returns a <span class="classname">MongoGridFSFile</span> or **`null`**.
 
 ### 范例
 
@@ -17969,7 +17969,7 @@ class="methodparam"><span class="type">mixed</span> `$id`</span> )
 
 ### 返回值
 
-Returns the file, if found, or **`NULL`**.
+Returns the file, if found, or **`null`**.
 
 MongoGridFS::put
 ================
@@ -18064,7 +18064,7 @@ these options.
 
 Returns an array containing the status of the removal (with respect to
 the *files* collection) if the *"w"* option is set. Otherwise, returns
-**`TRUE`**.
+**`true`**.
 
 Fields in the status array are described in the documentation for <span
 class="function">MongoCollection::insert</span>.
@@ -18384,11 +18384,11 @@ A database file object.
 /\* Fields \*/
 
 <span class="modifier">public</span> <span class="type">array</span>
-`$file` <span class="initializer"> = **`NULL`**</span> ;
+`$file` <span class="initializer"> = **`null`**</span> ;
 
 <span class="modifier">protected</span> <span
 class="type">MongoGridFS</span> `$gridfs` <span class="initializer"> =
-**`NULL`**</span> ;
+**`null`**</span> ;
 
 /\* 方法 \*/
 
@@ -18417,7 +18417,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">write</span> (\[ <span class="methodparam"><span
 class="type">string</span> `$filename`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 }
 
@@ -18580,7 +18580,7 @@ Writes this file to the filesystem
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">MongoGridFSFile::write</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$filename`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 ### 参数
 
@@ -18624,7 +18624,7 @@ Cursor for database file results.
 
 <span class="modifier">protected</span> <span
 class="type">MongoGridFS</span> `$gridfs` <span class="initializer"> =
-**`NULL`**</span> ;
+**`null`**</span> ;
 
 /\* 方法 \*/
 
@@ -19028,7 +19028,7 @@ Retrieves the callback function.
 
 ### 返回值
 
-Returns the callback function, or **`FALSE`** if not set yet.
+Returns the callback function, or **`false`** if not set yet.
 
 ### 注释
 
@@ -19166,7 +19166,7 @@ class="methodparam"><span class="type">int</span> `$module`</span> ,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -19650,7 +19650,7 @@ class="type">int</span> `$size`</span> )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setSlaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$ok`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">switchSlave</span> ( <span
@@ -19878,7 +19878,7 @@ state of the object.
 
 When you create a connection to the database, the driver will not
 immediately decide on a secondary to use. Thus, after you connect, this
-function will return **`NULL`** even if there are secondaries available.
+function will return **`null`** even if there are secondaries available.
 When you first do a query with slaveOkay set, at that point the driver
 will choose a secondary for this connection. At that point, this
 function will return the chosen secondary.
@@ -19895,7 +19895,7 @@ of this manual for information on distributing reads to secondaries.
 
 The address of the secondary this connection is using for reads.
 
-This returns **`NULL`** if this is not connected to a replica set or not
+This returns **`null`** if this is not connected to a replica set or not
 yet initialized.
 
 ### 错误／异常
@@ -20095,7 +20095,7 @@ Change slaveOkay setting for this connection
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Mongo::setSlaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$ok`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 See
 <a href="/book/mongo.html#Querying" class="link">the query section</a>

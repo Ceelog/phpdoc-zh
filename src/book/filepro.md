@@ -97,7 +97,7 @@ Returns the number of fields (columns) in the opened filePro database.
 ### 返回值
 
 Returns the number of fields in the opened filePro database, or
-**`FALSE`** on errors.
+**`false`** on errors.
 
 ### 参见
 
@@ -124,7 +124,7 @@ The field number.
 
 ### 返回值
 
-Returns the name of the field as a string, or **`FALSE`** on errors.
+Returns the name of the field as a string, or **`false`** on errors.
 
 filepro\_fieldtype
 ==================
@@ -147,7 +147,7 @@ The field number.
 
 ### 返回值
 
-Returns the edit type of the field as a string, or **`FALSE`** on
+Returns the edit type of the field as a string, or **`false`** on
 errors.
 
 filepro\_fieldwidth
@@ -171,7 +171,7 @@ The field number.
 
 ### 返回值
 
-Returns the width of the field as a integer, or **`FALSE`** on errors.
+Returns the width of the field as a integer, or **`false`** on errors.
 
 filepro\_retrieve
 =================
@@ -201,7 +201,7 @@ fields minus one (0..<span class="function">filepro\_fieldcount</span> -
 
 ### 返回值
 
-Returns the specified data, or **`FALSE`** on errors.
+Returns the specified data, or **`false`** on errors.
 
 filepro\_rowcount
 =================
@@ -219,7 +219,7 @@ Returns the number of rows in the opened filePro database.
 ### 返回值
 
 Returns the number of rows in the opened filePro database, or
-**`FALSE`** on errors.
+**`false`** on errors.
 
 ### 参见
 
@@ -248,7 +248,7 @@ The map directory.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 **目录**
 

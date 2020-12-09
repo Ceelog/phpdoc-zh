@@ -179,7 +179,7 @@ class="methodparam"><span class="type">string</span> `$haystack`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$needle`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$before_needle`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Returns part of haystack string starting from and including the first
 occurrence of case-insensitive needle to the end of haystack.
@@ -193,7 +193,7 @@ The input string. Must be valid UTF-8.
 The string to look for. Must be valid UTF-8.
 
 `before_needle`  
-If **`TRUE`**, grapheme\_strstr() returns the part of the haystack
+If **`true`**, grapheme\_strstr() returns the part of the haystack
 before the first occurrence of the needle (excluding needle).
 
 ### 返回值
@@ -501,7 +501,7 @@ class="methodparam"><span class="type">string</span> `$haystack`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$needle`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$before_needle`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Returns part of haystack string from the first occurrence of needle to
 the end of haystack (including the needle).
@@ -515,7 +515,7 @@ The input string. Must be valid UTF-8.
 The string to look for. Must be valid UTF-8.
 
 `before_needle`  
-If **`TRUE`**, grapheme\_strstr() returns the part of the haystack
+If **`true`**, grapheme\_strstr() returns the part of the haystack
 before the first occurrence of the needle (excluding the needle).
 
 ### 返回值
@@ -586,7 +586,7 @@ from $start (depending on the length of string). If $length is given and
 is negative, then that many grapheme units will be omitted from the end
 of string (after the start position has been calculated when a start is
 negative). If $start denotes a position beyond this truncation,
-**`FALSE`** will be returned.
+**`false`** will be returned.
 
 ### 返回值
 

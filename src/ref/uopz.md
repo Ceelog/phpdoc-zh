@@ -22,7 +22,7 @@ class="type">Closure</span> `$handler`</span> \[, <span
 class="methodparam"><span class="type">int</span> `&$flags`<span
 class="initializer"> = ZEND\_ACC\_PUBLIC</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `&$all`<span
-class="initializer"> = **`TRUE`**</span></span> \]\] )
+class="initializer"> = **`true`**</span></span> \]\] )
 
 Adds a non-existent function or method.
 
@@ -46,7 +46,7 @@ Whether all classes that descend from `class` will also be affected.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -341,7 +341,7 @@ class="methodparam"><span class="type">string</span> `$class`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$function`</span> \[, <span class="methodparam"><span
 class="type">int</span> `&$all`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Deletes a previously added function or method.
 
@@ -358,7 +358,7 @@ Whether all classes that descend from `class` will also be affected.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -482,7 +482,7 @@ The name of the class to inherit
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -719,7 +719,7 @@ class="function">exit</span>.
 
 ### 返回值
 
-This function returns the last exit status, or **`NULL`** if <span
+This function returns the last exit status, or **`null`** if <span
 class="function">exit</span> has not been called.
 
 ### 范例
@@ -778,7 +778,7 @@ The name of the function or method.
 
 ### 返回值
 
-Returns the previously set hook on a function or method, or **`NULL`**
+Returns the previously set hook on a function or method, or **`null`**
 if no hook has been set.
 
 ### 范例
@@ -826,7 +826,7 @@ The name of the mocked class.
 ### 返回值
 
 Either a string containing the name of the mock, or an object, or
-**`NULL`** if no mock has been set.
+**`null`** if no mock has been set.
 
 ### 范例
 
@@ -895,7 +895,7 @@ The name of the property.
 
 ### 返回值
 
-Returns the value of the class or instance property, or **`NULL`** if
+Returns the value of the class or instance property, or **`null`** if
 the property is not defined.
 
 ### 范例
@@ -1003,7 +1003,7 @@ The name of the function or method.
 ### 返回值
 
 Returns an associative <span class="type">array</span> of variable names
-mapped to their current values on success, or **`NULL`** if the function
+mapped to their current values on success, or **`null`** if the function
 or method does not exist.
 
 ### 范例
@@ -1053,7 +1053,7 @@ Makes `class` implement `interface`
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -1166,7 +1166,7 @@ variable
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1353,7 +1353,7 @@ A closure to execute when entering the function or method.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1597,7 +1597,7 @@ class="methodparam"><span class="type">string</span> `$function`</span>
 , <span class="methodparam"><span class="type">mixed</span>
 `$value`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$execute`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="type">bool</span> <span
 class="methodname">uopz\_set\_return</span> ( <span
@@ -1606,7 +1606,7 @@ class="methodparam"><span class="type">string</span> `$class`</span> ,
 `$function`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$value`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$execute`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Sets the return value of the `function` to `value`. If `value` is a
 Closure and `execute` is set, the Closure will be executed in place of
@@ -1776,7 +1776,7 @@ The name of an existing constant
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1826,7 +1826,7 @@ The name of the function or method.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

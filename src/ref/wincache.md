@@ -9,7 +9,7 @@ Retrieves information about files cached in the file cache
 class="type">false</span></span> <span
 class="methodname">wincache\_fcache\_fileinfo</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$summaryonly`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Retrieves information about file cache content and its usage.
 
@@ -21,7 +21,7 @@ individual cache entries along with the file cache summary.
 
 ### 返回值
 
-Array of meta data about file cache 或者在失败时返回 **`FALSE`**
+Array of meta data about file cache 或者在失败时返回 **`false`**
 
 The array returned by this function contains the following elements:
 
@@ -118,7 +118,7 @@ Retrieves information about memory usage by file cache.
 ### 返回值
 
 Array of meta data about file cache memory usage 或者在失败时返回
-**`FALSE`**
+**`false`**
 
 The array returned by this function contains the following elements:
 
@@ -181,7 +181,7 @@ Acquires an exclusive lock on a given key
 class="methodname">wincache\_lock</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$isglobal`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$isglobal`<span class="initializer"> = **`false`**</span></span> \] )
 
 Obtains an exclusive lock on a given key. The execution of the current
 script will be blocked until the lock can be obtained. Once the lock is
@@ -210,7 +210,7 @@ php processes that have the same parent process identifier.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -253,7 +253,7 @@ Retrieves information about files cached in the opcode cache
 class="type">false</span></span> <span
 class="methodname">wincache\_ocache\_fileinfo</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$summaryonly`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Retrieves information about opcode cache content and its usage.
 
@@ -269,7 +269,7 @@ individual cache entries along with the opcode cache summary.
 
 ### 返回值
 
-Array of meta data about opcode cache 或者在失败时返回 **`FALSE`**
+Array of meta data about opcode cache 或者在失败时返回 **`false`**
 
 The array returned by this function contains the following elements:
 
@@ -374,7 +374,7 @@ Retrieves information about memory usage by opcode cache.
 ### 返回值
 
 Array of meta data about opcode cache memory usage 或者在失败时返回
-**`FALSE`**
+**`false`**
 
 The array returned by this function contains the following elements:
 
@@ -454,7 +454,7 @@ or relative file paths can be used.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -504,7 +504,7 @@ Retrieves information about resolve file path cache
 class="type">false</span></span> <span
 class="methodname">wincache\_rplist\_fileinfo</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$summaryonly`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Retrieves information about cached mappings between relative file paths
 and corresponding absolute file paths.
@@ -512,7 +512,7 @@ and corresponding absolute file paths.
 ### 返回值
 
 Array of meta data about the resolve file path cache 或者在失败时返回
-**`FALSE`**
+**`false`**
 
 The array returned by this function contains the following elements:
 
@@ -586,7 +586,7 @@ Retrieves information about memory usage by resolve file path cache.
 ### 返回值
 
 Array of meta data that describes memory usage by resolve file path
-cache. 或者在失败时返回 **`FALSE`**
+cache. 或者在失败时返回 **`false`**
 
 The array returned by this function contains the following elements:
 
@@ -650,7 +650,7 @@ Retrieves information about files cached in the session cache
 class="type">false</span></span> <span
 class="methodname">wincache\_scache\_info</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$summaryonly`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Retrieves information about session cache content and its usage.
 
@@ -662,7 +662,7 @@ individual cache entries along with the session cache summary.
 
 ### 返回值
 
-Array of meta data about session cache 或者在失败时返回 **`FALSE`**
+Array of meta data about session cache 或者在失败时返回 **`false`**
 
 The array returned by this function contains the following elements:
 
@@ -766,7 +766,7 @@ Retrieves information about memory usage by session cache.
 ### 返回值
 
 Array of meta data about session cache memory usage 或者在失败时返回
-**`FALSE`**
+**`false`**
 
 The array returned by this function contains the following elements:
 
@@ -850,7 +850,7 @@ class="function">wincache\_ucache\_clear</span> functions.
 
 `key`  
 Store the variable using this `key` name. If a variable with same key is
-already present the function will fail and return **`FALSE`**. `key` is
+already present the function will fail and return **`false`**. `key` is
 case sensitive. To override the value even if `key` is present use <span
 class="function">wincache\_ucache\_set</span> function instad. `key` can
 also take array of name =\> value pairs where names will be used as
@@ -860,7 +860,7 @@ operation, thus avoiding race condition.
 `value`  
 Value of a variable to store. `Value` supports all data types except
 resources, such as file handles. This paramter is ignored if first
-argument is an array. A general guidance is to pass **`NULL`** as
+argument is an array. A general guidance is to pass **`null`** as
 `value` while using array as `key`. If `value` is an object, or an array
 containing objects, then the objects will be serialized. See
 <a href="/language/oop5/magic.html#object.sleep" class="link">__sleep()</a>
@@ -879,15 +879,15 @@ class="function">wincache\_ucache\_clear</span> functions.
 
 ### 返回值
 
-If `key` is string, the function returns **`TRUE`** on success and
-**`FALSE`** on failure.
+If `key` is string, the function returns **`true`** on success and
+**`false`** on failure.
 
 If `key` is an array, the function returns:
 
 -   <span class="simpara"> If all the name =\> value pairs in the array
     can be set, function returns an empty array; </span>
 -   <span class="simpara"> If all the name =\> value pairs in the array
-    cannot be set, function returns **`FALSE`**; </span>
+    cannot be set, function returns **`false`**; </span>
 -   <span class="simpara"> If some can be set while others cannot,
     function returns an array with name=\>value pair for which the
     addition failed in the user cache. </span>
@@ -971,16 +971,16 @@ sensitive.
 
 `old_value`  
 Old value of the variable pointed by `key` in the user cache. The value
-should be of type *long*, otherwise the function returns **`FALSE`**.
+should be of type *long*, otherwise the function returns **`false`**.
 
 `new_value`  
 New value which will get assigned to variable pointer by `key` if a
 match is found. The value should be of type *long*, otherwise the
-function returns **`FALSE`**.
+function returns **`false`**.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1019,7 +1019,7 @@ Clears/deletes all the values stored in the user cache.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1088,14 +1088,14 @@ The value by which the variable associated with the `key` will get
 decremented. If the argument is a floating point number it will be
 truncated to nearest integer. The variable associated with the `key`
 should be of type *long*, otherwise the function fails and returns
-**`FALSE`**.
+**`false`**.
 
 `success`  
-Will be set to **`TRUE`** on success and **`FALSE`** on failure.
+Will be set to **`true`** on success and **`false`** on failure.
 
 ### 返回值
 
-Returns the decremented value on success and **`FALSE`** on failure.
+Returns the decremented value on success and **`false`** on failure.
 
 ### 范例
 
@@ -1140,9 +1140,9 @@ case sensitive. `key` can be an array of keys.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
-If `key` is an array then the function returns **`FALSE`** if every
+If `key` is an array then the function returns **`false`** if every
 element of the array fails to get deleted from the user cache, otherwise
 returns an array which consists of all the keys that are deleted.
 
@@ -1231,8 +1231,8 @@ case sensitive.
 
 ### 返回值
 
-Returns **`TRUE`** if variable with the `key` exitsts, otherwise returns
-**`FALSE`**.
+Returns **`true`** if variable with the `key` exitsts, otherwise returns
+**`false`**.
 
 ### 范例
 
@@ -1288,16 +1288,16 @@ will be unserialized. See
 for details on unserializing objects.
 
 `success`  
-Will be set to **`TRUE`** on success and **`FALSE`** on failure.
+Will be set to **`true`** on success and **`false`** on failure.
 
 ### 返回值
 
 If `key` is a string, the function returns the value of the variable
-stored with that key. The `success` is set to **`TRUE`** on success and
-to **`FALSE`** on failure.
+stored with that key. The `success` is set to **`true`** on success and
+to **`false`** on failure.
 
 The `key` is an array, the parameter `success` is always set to
-**`TRUE`**. The returned array (name =\> value pairs) will contain only
+**`true`**. The returned array (name =\> value pairs) will contain only
 those name =\> value pairs for which the get operation in user cache was
 successful. If none of the keys in the key array finds a match in the
 user cache an empty array will be returned.
@@ -1381,14 +1381,14 @@ The value by which the variable associated with the `key` will get
 incremented. If the argument is a floating point number it will be
 truncated to nearest integer. The variable associated with the `key`
 should be of type *long*, otherwise the function fails and returns
-**`FALSE`**.
+**`false`**.
 
 `success`  
-Will be set to **`TRUE`** on success and **`FALSE`** on failure.
+Will be set to **`true`** on success and **`false`** on failure.
 
 ### 返回值
 
-Returns the incremented value on success and **`FALSE`** on failure.
+Returns the incremented value on success and **`false`** on failure.
 
 ### 范例
 
@@ -1423,7 +1423,7 @@ Retrieves information about data stored in the user cache
 class="type">false</span></span> <span
 class="methodname">wincache\_ucache\_info</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$summaryonly`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$key`<span
 class="initializer"> = NULL</span></span> \]\] )
 
@@ -1438,12 +1438,12 @@ individual cache entries along with the user cache summary.
 `key`  
 The key of an entry in the user cache. If specified then the returned
 array will contain information only about that cache entry. If not
-specified and `summaryonly` is set to **`FALSE`** then the returned
+specified and `summaryonly` is set to **`false`** then the returned
 array will contain information about all entries in the cache.
 
 ### 返回值
 
-Array of meta data about user cache 或者在失败时返回 **`FALSE`**
+Array of meta data about user cache 或者在失败时返回 **`false`**
 
 The array returned by this function contains the following elements:
 
@@ -1548,7 +1548,7 @@ Retrieves information about memory usage by user cache.
 ### 返回值
 
 Array of meta data about user cache memory usage 或者在失败时返回
-**`FALSE`**
+**`false`**
 
 The array returned by this function contains the following elements:
 
@@ -1642,7 +1642,7 @@ condition.
 `value`  
 Value of a variable to store. `Value` supports all data types except
 resources, such as file handles. This paramter is ignored if first
-argument is an array. A general guidance is to pass **`NULL`** as
+argument is an array. A general guidance is to pass **`null`** as
 `value` while using array as `key`. If `value` is an object, or an array
 containing objects, then the objects will be serialized. See
 <a href="/language/oop5/magic.html#object.sleep" class="link">__sleep()</a>
@@ -1661,15 +1661,15 @@ class="function">wincache\_ucache\_clear</span> functions.
 
 ### 返回值
 
-If `key` is string, the function returns **`TRUE`** on success and
-**`FALSE`** on failure.
+If `key` is string, the function returns **`true`** on success and
+**`false`** on failure.
 
 If `key` is an array, the function returns:
 
 -   <span class="simpara"> If all the name =\> value pairs in the array
     can be set, function returns an empty array; </span>
 -   <span class="simpara"> If all the name =\> value pairs in the array
-    cannot be set, function returns **`FALSE`**; </span>
+    cannot be set, function returns **`false`**; </span>
 -   <span class="simpara"> If some can be set while others cannot,
     function returns an array with name=\>value pair for which the
     addition failed in the user cache. </span>
@@ -1758,7 +1758,7 @@ Name of the key in the cache to release the lock on.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

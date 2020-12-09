@@ -29,7 +29,7 @@ providers with their details.
 | 版本  | 说明                                                                                                                                                                               |
 |-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 8.0.0 | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
-| 8.0.0 | Prior to this version, the function returned **`FALSE`** on failure.                                                                                                               |
+| 8.0.0 | Prior to this version, the function returned **`false`** on failure.                                                                                                               |
 
 ### 范例
 
@@ -106,7 +106,7 @@ non-empty tag in the LOCALE format, ex: us\_US, ch\_DE, etc.
 
 ### 返回值
 
-Returns **`TRUE`** when the tag exist or **`FALSE`** when not.
+Returns **`true`** when the tag exist or **`false`** when not.
 
 ### 更新日志
 
@@ -156,7 +156,7 @@ class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -191,7 +191,7 @@ class="function">enchant\_broker\_init</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -232,7 +232,7 @@ The type of the dictionaries, i.e. **`ENCHANT_MYSPELL`** or
 ### 返回值
 
 Returns the path of the dictionary directory on success 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 更新日志
 
@@ -267,7 +267,7 @@ class="function">enchant\_broker\_init</span>.
 
 ### 返回值
 
-Return the msg string if an error was found or **`FALSE`**
+Return the msg string if an error was found or **`false`**
 
 ### 更新日志
 
@@ -291,7 +291,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-Returns a broker resource on success or **`FALSE`**.
+Returns a broker resource on success or **`false`**.
 
 ### 更新日志
 
@@ -333,7 +333,7 @@ with their details.
 | 版本  | 说明                                                                                                                                                                               |
 |-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 8.0.0 | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
-| 8.0.0 | Prior to this version, the function returned **`FALSE`** on failure.                                                                                                               |
+| 8.0.0 | Prior to this version, the function returned **`false`** on failure.                                                                                                               |
 
 ### 范例
 
@@ -433,7 +433,7 @@ A tag describing the locale, for example en\_US, de\_DE
 
 ### 返回值
 
-Returns a dictionary resource on success 或者在失败时返回 **`FALSE`**.
+Returns a dictionary resource on success 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -495,7 +495,7 @@ created if possible.
 
 ### 返回值
 
-Returns a dictionary resource on success 或者在失败时返回 **`FALSE`**.
+Returns a dictionary resource on success 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -541,7 +541,7 @@ The path of the dictionary directory.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -590,7 +590,7 @@ Comma delimited list of provider names
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -625,7 +625,7 @@ The word to add
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -709,8 +709,8 @@ class="methodparam"><span class="type">EnchantDictionary</span>
 `$dictionary`</span> , <span class="methodparam"><span
 class="type">string</span> `$word`</span> )
 
-If the word is correctly spelled return **`TRUE`**, otherwise return
-**`FALSE`**
+If the word is correctly spelled return **`true`**, otherwise return
+**`false`**
 
 ### 参数
 
@@ -724,7 +724,7 @@ The word to check
 
 ### 返回值
 
-Returns **`TRUE`** if the word is spelled correctly, **`FALSE`** if not.
+Returns **`true`** if the word is spelled correctly, **`false`** if not.
 
 ### 更新日志
 
@@ -755,14 +755,14 @@ class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
 | 版本  | 说明                                                                                                                                                                                       |
 |-------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 8.0.0 | `dictionary` expects an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">资源(resource)</a> was expected. |
-| 8.0.0 | Prior to this version, the function returned **`FALSE`** on failure.                                                                                                                       |
+| 8.0.0 | Prior to this version, the function returned **`false`** on failure.                                                                                                                       |
 
 ### 范例
 
@@ -819,7 +819,7 @@ class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 ### 返回值
 
-Returns the error message as string or **`FALSE`** if no error occurred.
+Returns the error message as string or **`false`** if no error occurred.
 
 ### 更新日志
 
@@ -854,7 +854,7 @@ The word to lookup
 
 ### 返回值
 
-Returns **`TRUE`** if the word exists or **`FALSE`**
+Returns **`true`** if the word exists or **`false`**
 
 ### 更新日志
 
@@ -879,10 +879,10 @@ class="methodparam"><span class="type">EnchantDictionary</span>
 `$dictionary`</span> , <span class="methodparam"><span
 class="type">string</span> `$word`</span> \[, <span
 class="methodparam"><span class="type">array</span> `&$suggestions`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
-If the word is correctly spelled return **`TRUE`**, otherwise return
-**`FALSE`**, if suggestions variable is provided, fill it with spelling
+If the word is correctly spelled return **`true`**, otherwise return
+**`false`**, if suggestions variable is provided, fill it with spelling
 alternatives.
 
 ### 参数
@@ -901,7 +901,7 @@ array of suggestions.
 
 ### 返回值
 
-Returns **`TRUE`** if the word is correctly spelled or **`FALSE`**
+Returns **`true`** if the word is correctly spelled or **`false`**
 
 ### 更新日志
 
@@ -997,7 +997,7 @@ The correct word
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 

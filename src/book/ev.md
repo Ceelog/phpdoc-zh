@@ -1041,9 +1041,9 @@ Begin checking for events and calling callbacks *for the default loop* .
 Returns when a callback calls <span class="methodname">Ev::stop</span>
 method, or the flags are nonzero(in which case the return value is true)
 or when there are no active watchers which reference the loop( <span
-class="methodname">EvWatcher::keepalive</span> is **`TRUE`**), in which
-case the return value will be **`FALSE`**. The return value can
-generally be interpreted as *if **`TRUE`**, there is more work left to
+class="methodname">EvWatcher::keepalive</span> is **`true`**), in which
+case the return value will be **`false`**. The return value can
+generally be interpreted as *if **`true`**, there is more work left to
 do* .
 
 ### 参数
@@ -1512,7 +1512,7 @@ class="methodparam"> <span class="type">bool</span> `$trace` </span> ,
 <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -1601,7 +1601,7 @@ class="methodparam"> <span class="type">int</span> `$pid` </span> ,
 </span> , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -1610,7 +1610,7 @@ Constructs the <span class="classname">EvChild</span> watcher object.
 Call the callback when a status change for process ID `pid` (or any
 *PID* if `pid` is **`0`** ) has been received(a status change happens
 when the process terminates or is killed, or, when `trace` is
-**`TRUE`**, additionally when it is stopped or continued). In other
+**`true`**, additionally when it is stopped or continued). In other
 words, when the process receives a **`SIGCHLD`** , *Ev* will fetch the
 outstanding exit/wait status for all changed/zombie children and call
 the callback.
@@ -1638,8 +1638,8 @@ Wait for status changes of process PID(or any process if PID is
 specified as **`0`** ).
 
 `trace`  
-If **`FALSE`**, only activate the watcher when the process terminates.
-Otherwise(**`TRUE`**) additionally activate the watcher when the process
+If **`false`**, only activate the watcher when the process terminates.
+Otherwise(**`true`**) additionally activate the watcher when the process
 is stopped or continued.
 
 `callback`  
@@ -2058,7 +2058,7 @@ the fork handlers will be invoked, too.
 class="methodname">\_\_construct</span> ( <span class="methodparam">
 <span class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -2124,7 +2124,7 @@ Constructs the EvFork watcher object
 class="methodname">EvFork::\_\_construct</span> ( <span
 class="methodparam"> <span class="type">callable</span> `$callback`
 </span> \[, <span class="methodparam"> <span class="type">mixed</span>
-`$data` <span class="initializer"> = **`NULL`**</span> </span> \[, <span
+`$data` <span class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -2448,7 +2448,7 @@ class="methodparam"> <span class="type">mixed</span> `$fd` </span> ,
 </span> , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -2570,7 +2570,7 @@ class="methodparam"> <span class="type">mixed</span> `$fd` </span> ,
 </span> , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -2731,7 +2731,7 @@ class="methodparam"> <span class="type">string</span> `$priority`
 <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -2740,7 +2740,7 @@ class="type">int</span> `$priority` <span class="initializer"> =
 <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -2755,7 +2755,7 @@ class="methodparam">void</span> )
 </span> , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -2778,7 +2778,7 @@ class="type">float</span> `$offset` </span> , <span class="methodparam">
 <span class="type">float</span> `$interval` </span> , <span
 class="methodparam"> <span class="type">callable</span> `$callback`
 </span> \[, <span class="methodparam"> <span class="type">mixed</span>
-`$data` <span class="initializer"> = **`NULL`**</span> </span> \[, <span
+`$data` <span class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -2787,7 +2787,7 @@ class="initializer"> = 0</span> </span> \]\] )
 class="methodname">prepare</span> ( <span class="methodparam"> <span
 class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -2806,7 +2806,7 @@ class="methodname">signal</span> ( <span class="methodparam"> <span
 class="type">int</span> `$signum` </span> , <span class="methodparam">
 <span class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -2817,7 +2817,7 @@ class="initializer"> = 0</span> </span> \]\] )
 `$interval` </span> , <span class="methodparam"> <span
 class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -2836,7 +2836,7 @@ class="methodparam">void</span> )
 `$repeat` </span> , <span class="methodparam"> <span
 class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -2858,7 +2858,7 @@ Custom data attached to loop
 event backend in use.
 
 `is_default_loop`  
-*Readonly* . **`TRUE`** if it is the default event loop.
+*Readonly* . **`true`** if it is the default event loop.
 
 `iteration`  
 The current iteration count of the loop. See <span
@@ -3123,7 +3123,7 @@ instance
 class="methodname">EvLoop::fork</span> ( <span class="methodparam">
 <span class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -3156,7 +3156,7 @@ instance
 class="methodname">EvLoop::idle</span> ( <span class="methodparam">
 <span class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -3212,7 +3212,7 @@ class="type">mixed</span> `$fd` </span> , <span class="methodparam">
 <span class="type">int</span> `$events` </span> , <span
 class="methodparam"> <span class="type">callable</span> `$callback`
 </span> \[, <span class="methodparam"> <span class="type">mixed</span>
-`$data` <span class="initializer"> = **`NULL`**</span> </span> \[, <span
+`$data` <span class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -3333,7 +3333,7 @@ class="methodparam"> <span class="type">float</span> `$interval` </span>
 , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -3366,7 +3366,7 @@ instance
 class="methodname">EvLoop::prepare</span> ( <span class="methodparam">
 <span class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -3431,9 +3431,9 @@ loop. Returns when a callback calls <span
 class="methodname">Ev::stop</span> method, or the flags are nonzero(in
 which case the return value is true) or when there are no active
 watchers which reference the loop( <span
-class="methodname">EvWatcher::keepalive</span> is **`TRUE`**), in which
-case the return value will be **`FALSE`**. The return value can
-generally be interpreted as *if **`TRUE`**, there is more work left to
+class="methodname">EvWatcher::keepalive</span> is **`true`**), in which
+case the return value will be **`false`**. The return value can
+generally be interpreted as *if **`true`**, there is more work left to
 do* .
 
 ### 参数
@@ -3472,7 +3472,7 @@ class="methodname">EvLoop::signal</span> ( <span class="methodparam">
 <span class="type">int</span> `$signum` </span> , <span
 class="methodparam"> <span class="type">callable</span> `$callback`
 </span> \[, <span class="methodparam"> <span class="type">mixed</span>
-`$data` <span class="initializer"> = **`NULL`**</span> </span> \[, <span
+`$data` <span class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -3508,7 +3508,7 @@ class="methodparam"> <span class="type">float</span> `$interval` </span>
 , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -3600,7 +3600,7 @@ class="methodparam"> <span class="type">float</span> `$repeat` </span> ,
 <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -3719,7 +3719,7 @@ class="methodparam"> <span class="type">string</span> `$interval`
 `$reschedule_cb` </span> , <span class="methodparam"> <span
 class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -3733,7 +3733,7 @@ class="methodparam"> <span class="type">float</span> `$interval` </span>
 `$reschedule_cb` </span> , <span class="methodparam"> <span
 class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -3866,7 +3866,7 @@ class="methodparam"> <span class="type">float</span> `$offset` </span> ,
 `$reschedule_cb` </span> , <span class="methodparam"> <span
 class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -3885,7 +3885,7 @@ See
 <a href="/ev/periodic-modes.html" class="link">Periodic watcher operation modes</a>
 
 `reschedule_cb`  
-Reschedule callback. You can pass **`NULL`**. See
+Reschedule callback. You can pass **`null`**. See
 <a href="/ev/periodic-modes.html" class="link">Periodic watcher operation modes</a>
 
 `callback`  
@@ -3967,7 +3967,7 @@ class="methodparam"> <span class="type">float</span> `$offset` </span> ,
 `$reschedule_cb` </span> , <span class="methodparam"> <span
 class="type">callable</span> `$callback` </span> \[, <span
 class="methodparam"> <span class="type">mixed</span> `$data` <span
-class="initializer"> = **`NULL`**</span> </span> \[, <span
+class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -3986,7 +3986,7 @@ See
 <a href="/ev/periodic-modes.html" class="link">Periodic watcher operation modes</a>
 
 `reschedule_cb`  
-Reschedule callback. You can pass **`NULL`**. See
+Reschedule callback. You can pass **`null`**. See
 <a href="/ev/periodic-modes.html" class="link">Periodic watcher operation modes</a>
 
 `callback`  
@@ -4107,7 +4107,7 @@ class="methodparam"> <span class="type">string</span> `$data` </span>
 <span class="methodname">createStopped</span> ( <span
 class="methodparam"> <span class="type">callable</span> `$callback`
 </span> \[, <span class="methodparam"> <span class="type">mixed</span>
-`$data` <span class="initializer"> = **`NULL`**</span> </span> \[, <span
+`$data` <span class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -4205,7 +4205,7 @@ Creates a stopped instance of EvPrepare watcher
 <span class="methodname">EvPrepare::createStopped</span> ( <span
 class="methodparam"> <span class="type">callable</span> `$callback`
 </span> \[, <span class="methodparam"> <span class="type">mixed</span>
-`$data` <span class="initializer"> = **`NULL`**</span> </span> \[, <span
+`$data` <span class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -4287,7 +4287,7 @@ class="methodname">\_\_construct</span> ( <span class="methodparam">
 <span class="type">int</span> `$signum` </span> , <span
 class="methodparam"> <span class="type">callable</span> `$callback`
 </span> \[, <span class="methodparam"> <span class="type">mixed</span>
-`$data` <span class="initializer"> = **`NULL`**</span> </span> \[, <span
+`$data` <span class="initializer"> = **`null`**</span> </span> \[, <span
 class="methodparam"> <span class="type">int</span> `$priority` <span
 class="initializer"> = 0</span> </span> \]\] )
 
@@ -4298,7 +4298,7 @@ class="methodparam"> <span class="type">int</span> `$signum` </span> ,
 <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -4369,7 +4369,7 @@ class="methodparam"> <span class="type">int</span> `$signum` </span> ,
 <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -4431,7 +4431,7 @@ class="methodparam"> <span class="type">int</span> `$signum` </span> ,
 <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -4555,7 +4555,7 @@ class="methodparam"> <span class="type">float</span> `$interval` </span>
 , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -4567,7 +4567,7 @@ class="methodparam"> <span class="type">string</span> `$path` </span> ,
 </span> , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -4723,7 +4723,7 @@ class="methodparam"> <span class="type">string</span> `$path` </span> ,
 </span> , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -4795,7 +4795,7 @@ class="methodparam"> <span class="type">string</span> `$path` </span> ,
 </span> , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -4910,7 +4910,7 @@ Initiates the stat call(updates internal cache). It stats(using *lstat*
 
 ### 返回值
 
-Returns **`TRUE`** if `path` exists. Otherwise **`FALSE`**.
+Returns **`true`** if `path` exists. Otherwise **`false`**.
 
 ### 参见
 
@@ -4982,7 +4982,7 @@ class="methodparam"> <span class="type">float</span> `$repeat` </span> ,
 <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -4994,7 +4994,7 @@ class="methodparam"> <span class="type">float</span> `$after` </span> ,
 </span> , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -5115,7 +5115,7 @@ class="methodparam"> <span class="type">float</span> `$after` </span> ,
 </span> , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -5244,7 +5244,7 @@ class="methodparam"> <span class="type">float</span> `$after` </span> ,
 </span> , <span class="methodparam"> <span class="type">callable</span>
 `$callback` </span> \[, <span class="methodparam"> <span
 class="type">mixed</span> `$data` <span class="initializer"> =
-**`NULL`**</span> </span> \[, <span class="methodparam"> <span
+**`null`**</span> </span> \[, <span class="methodparam"> <span
 class="type">int</span> `$priority` <span class="initializer"> =
 0</span> </span> \]\] )
 
@@ -5413,15 +5413,15 @@ class="methodparam">void</span> )
 ----
 
 `is_active`  
-*Readonly* . **`TRUE`** if the watcher is active. **`FALSE`** otherwise.
+*Readonly* . **`true`** if the watcher is active. **`false`** otherwise.
 
 `data`  
 User custom data associated with the watcher
 
 `is_pending`  
-*Readonly* .**`TRUE`** if the watcher is pending, i.e. it has
+*Readonly* .**`true`** if the watcher is pending, i.e. it has
 outstanding events, but its callback has not yet been invoked.
-**`FALSE`** otherwise. As long, as a watcher is pending(but not active),
+**`false`** otherwise. As long, as a watcher is pending(but not active),
 one must *not* change its priority.
 
 `priority`  
@@ -5559,12 +5559,12 @@ class="methodparam"> <span class="type">bool</span> `$value` </span> \]
 )
 
 Configures whether to keep the loop from returning. With keepalive
-`value` set to **`FALSE`** the watcher won't keep <span
+`value` set to **`false`** the watcher won't keep <span
 class="methodname">Ev::run</span> / <span
 class="methodname">EvLoop::run</span> from returning even though the
 watcher is active.
 
-Watchers have keepalive `value` **`TRUE`** by default.
+Watchers have keepalive `value` **`true`** by default.
 
 Clearing keepalive status is useful when returning from <span
 class="methodname">Ev::run</span> / <span
@@ -5574,7 +5574,7 @@ undesirable. It could be a long running UDP socket watcher or so.
 ### 参数
 
 `value`  
-With keepalive `value` set to **`FALSE`** the watcher won't keep <span
+With keepalive `value` set to **`false`** the watcher won't keep <span
 class="methodname">Ev::run</span> / <span
 class="methodname">EvLoop::run</span> from returning even though the
 watcher is active.

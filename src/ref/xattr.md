@@ -34,7 +34,7 @@ The name of the attribute.
 
 ### 返回值
 
-Returns a string containing the value or **`FALSE`** if the attribute
+Returns a string containing the value or **`false`** if the attribute
 doesn't exist.
 
 ### 范例
@@ -155,7 +155,7 @@ The name of the attribute to remove.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -223,7 +223,7 @@ The value of the attribute.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -275,8 +275,8 @@ The path of the tested file.
 
 ### 返回值
 
-This function returns **`TRUE`** if filesystem supports extended
-attributes, **`FALSE`** if it doesn't and **`NULL`** if it can't be
+This function returns **`true`** if filesystem supports extended
+attributes, **`false`** if it doesn't and **`null`** if it can't be
 determined (for example wrong path or lack of permissions to file).
 
 ### 范例

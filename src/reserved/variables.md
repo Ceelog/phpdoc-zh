@@ -693,7 +693,7 @@ $php\_errormsg
 **Warning**
 
 如果用户定义了错误处理句柄（<span
-class="function">set\_error\_handler</span>）并且返回 **`FALSE`**
+class="function">set\_error\_handler</span>）并且返回 **`false`**
 的时候，`$php_errormsg` 就会被设置。
 
 ### 范例

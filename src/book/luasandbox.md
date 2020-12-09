@@ -928,7 +928,7 @@ class="classname">LuaSandboxFunction</span>, so it can be passed into
 Lua as an anonymous function.
 
 The function must return either an array of values (which may be empty),
-or **`NULL`** which is equivalent to returning the empty array.
+or **`null`** which is equivalent to returning the empty array.
 
 Exceptions will be raised as errors in Lua, however only <span
 class="classname">LuaSandboxRuntimeError</span> exceptions may be caught
@@ -1004,7 +1004,7 @@ class="classname">LuaSandboxRuntimeError</span> exception being thrown.
 
 PHP and Lua types are converted as follows:
 
--   PHP **`NULL`** is Lua *nil*, and vice versa.
+-   PHP **`null`** is Lua *nil*, and vice versa.
 
 -   PHP <span class="type">int</span>s and <span
     class="type">float</span>s are converted to Lua numbers. Infinity

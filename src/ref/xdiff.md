@@ -79,7 +79,7 @@ human-unreadable.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -140,7 +140,7 @@ Path of the resulting file.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -212,7 +212,7 @@ human-unreadable.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -258,7 +258,7 @@ class="type">string</span> `$dest`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$context`<span
 class="initializer"> = 3</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$minimal`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 Makes an unified diff containing differences between `old_file` and
 `new_file` and stores it in `dest` file. The resulting file is
@@ -282,12 +282,12 @@ Path of the resulting patch file.
 Indicates how many lines of context you want to include in diff result.
 
 `minimal`  
-Set this parameter to **`TRUE`** if you want to minimalize size of the
+Set this parameter to **`true`** if you want to minimalize size of the
 result (can take a long time).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -354,8 +354,8 @@ Path of the resulting file, containing merged changed from both
 
 ### 返回值
 
-Returns **`TRUE`** if merge was successful, string with rejected chunks
-if it was not or **`FALSE`** if an internal error happened.
+Returns **`true`** if merge was successful, string with rejected chunks
+if it was not or **`false`** if an internal error happened.
 
 ### 范例
 
@@ -417,7 +417,7 @@ Path of the resulting file.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -496,8 +496,8 @@ Starting from version 1.5.0, you can also use binary OR to enable
 
 ### 返回值
 
-Returns **`FALSE`** if an internal error happened, string with rejected
-chunks if patch couldn't be applied or **`TRUE`** if patch has been
+Returns **`false`** if an internal error happened, string with rejected
+chunks if patch couldn't be applied or **`true`** if patch has been
 successfully applied.
 
 ### 范例
@@ -585,7 +585,7 @@ human-unreadable.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -689,7 +689,7 @@ Second string with binary data. It acts as "new" data.
 ### 返回值
 
 Returns string with binary diff containing differences between "old" and
-"new" data or **`FALSE`** if an internal error occurred.
+"new" data or **`false`** if an internal error occurred.
 
 ### 参见
 
@@ -724,7 +724,7 @@ The binary patch string.
 
 ### 返回值
 
-Returns the patched string, or **`FALSE`** on error.
+Returns the patched string, or **`false`** on error.
 
 ### 参见
 
@@ -762,7 +762,7 @@ Second string with binary data. It acts as "new" data.
 
 ### 返回值
 
-Returns string with result or **`FALSE`** if an internal error happened.
+Returns string with result or **`false`** if an internal error happened.
 
 ### 参见
 
@@ -784,7 +784,7 @@ class="methodparam"><span class="type">string</span> `$old_data`</span>
 class="type">int</span> `$context`<span class="initializer"> =
 3</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$minimal`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 Makes an unified diff containing differences between `old_data` string
 and `new_data` string and returns it. The resulting diff is
@@ -806,12 +806,12 @@ Indicates how many lines of context you want to include in the diff
 result.
 
 `minimal`  
-Set this parameter to **`TRUE`** if you want to minimalize the size of
+Set this parameter to **`true`** if you want to minimalize the size of
 the result (can take a long time).
 
 ### 返回值
 
-Returns string with resulting diff or **`FALSE`** if an internal error
+Returns string with resulting diff or **`false`** if an internal error
 happened.
 
 ### 范例
@@ -884,8 +884,8 @@ If provided then rejected parts are stored inside this variable.
 
 ### 返回值
 
-Returns the merged string, **`FALSE`** if an internal error happened, or
-**`TRUE`** if merged string is empty.
+Returns the merged string, **`false`** if an internal error happened, or
+**`true`** if merged string is empty.
 
 ### 参见
 
@@ -923,7 +923,7 @@ The binary patch string.
 
 ### 返回值
 
-Returns the patched string, or **`FALSE`** on error.
+Returns the patched string, or **`false`** on error.
 
 ### 参见
 
@@ -976,7 +976,7 @@ If provided then rejected parts are stored inside this variable.
 
 ### 返回值
 
-Returns the patched string, or **`FALSE`** on error.
+Returns the patched string, or **`false`** on error.
 
 ### 范例
 
@@ -1047,7 +1047,7 @@ Second string with binary data. It acts as "new" data.
 ### 返回值
 
 Returns string with binary diff containing differences between "old" and
-"new" data or **`FALSE`** if an internal error occurred.
+"new" data or **`false`** if an internal error occurred.
 
 ### 参见
 

@@ -20,7 +20,7 @@ class="methodparam"><span class="type">string</span> `$file`</span> )
 
 ### 返回值
 
-如果 `file` 被成功编译，则返回 **`TRUE`** 或者在失败时返回 **`FALSE`**。
+如果 `file` 被成功编译，则返回 **`true`** 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -70,7 +70,7 @@ opcache\_get\_status
 <span class="type">array</span> <span
 class="methodname">opcache\_get\_status</span> (\[ <span
 class="methodparam"><span class="type">boolean</span>
-`$get_scripts`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$get_scripts`<span class="initializer"> = **`true`**</span></span> \] )
 
 该函数将返回缓存实例的状态信息。
 
@@ -104,10 +104,10 @@ opcache\_invalidate
 class="methodname">opcache\_invalidate</span> ( <span
 class="methodparam"><span class="type">string</span> `$script`</span>
 \[, <span class="methodparam"><span class="type">boolean</span>
-`$force`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$force`<span class="initializer"> = **`false`**</span></span> \] )
 
 该函数的作用是使得指定脚本的字节码缓存失效。 如果 `force`
-没有设置或者传入的是 **`FALSE`**，那么只有当脚本的修改时间
+没有设置或者传入的是 **`false`**，那么只有当脚本的修改时间
 比对应字节码的时间更新，脚本的缓存才会失效。
 
 ### 参数
@@ -116,12 +116,12 @@ class="methodparam"><span class="type">string</span> `$script`</span>
 缓存需要被作废对应的脚本路径
 
 `force`  
-如果该参数设置为**`TRUE`**，那么不管是否必要，该脚本的缓存都将被废除。
+如果该参数设置为**`true`**，那么不管是否必要，该脚本的缓存都将被废除。
 
 ### 返回值
 
 如果脚本的字节码缓存失效设置成功或者该脚本本来就没有缓存，则返回
-**`TRUE`**；如果字节码缓存被禁用，则返回**`FALSE`**。
+**`true`**；如果字节码缓存被禁用，则返回**`false`**。
 
 ### 参见
 
@@ -151,7 +151,7 @@ The path to the PHP script to be checked.
 
 ### 返回值
 
-Returns **`TRUE`** if `filename` is cached in OPCache, **`FALSE`**
+Returns **`true`** if `filename` is cached in OPCache, **`false`**
 otherwise.
 
 ### 参见
@@ -180,7 +180,7 @@ class="function">opcache\_reset</span>
 ### 返回值
 
 如果字节码缓存被重置成功，则返回
-**`TRUE`**；如果字节码缓存被禁用，则返回 **`FALSE`**。
+**`true`**；如果字节码缓存被禁用，则返回 **`false`**。
 
 ### 参见
 

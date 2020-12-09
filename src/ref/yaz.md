@@ -142,7 +142,7 @@ of failure:
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -180,7 +180,7 @@ Closes the connection given by parameter `id`.
 > **Note**:
 >
 > This function will only close a non-persistent connection opened by
-> setting the *persistent* option to **`FALSE`** with <span
+> setting the *persistent* option to **`false`** with <span
 > class="function">yaz\_connect</span>.
 
 ### 参数
@@ -191,7 +191,7 @@ class="function">yaz\_connect</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -251,7 +251,7 @@ proxy
 Proxy for connection (YAZ proxy).
 
 persistent  
-A boolean. If **`TRUE`** the connection is persistent; If **`FALSE`**
+A boolean. If **`true`** the connection is persistent; If **`false`**
 the connection is not persistent. By default connections are persistent.
 
 > **Note**:
@@ -260,8 +260,8 @@ the connection is not persistent. By default connections are persistent.
 > later with <span class="function">yaz\_close</span>.
 
 piggyback  
-A boolean. If **`TRUE`** piggyback is enabled for searches; If
-**`FALSE`** piggyback is disabled. By default piggyback is enabled.
+A boolean. If **`true`** piggyback is enabled for searches; If
+**`false`** piggyback is disabled. By default piggyback is enabled.
 
 Enabling piggyback is more efficient and usually saves a
 network-round-trip for first time fetches of records. However, a few
@@ -299,7 +299,7 @@ Exceptional-record-size in the
 
 ### 返回值
 
-A connection resource on success, **`FALSE`** on error.
+A connection resource on success, **`false`** on error.
 
 ### 更新日志
 
@@ -341,7 +341,7 @@ separated by a plus sign *+*.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 yaz\_element
 ============
@@ -378,7 +378,7 @@ Most servers support *F* (for full records) and *B* (for brief records).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 yaz\_errno
 ==========
@@ -801,7 +801,7 @@ class="function">yaz\_connect</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 yaz\_range
 ==========
@@ -1257,7 +1257,7 @@ site.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1505,8 +1505,8 @@ A boolean.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 In event mode,
-returns resource 或者在失败时返回 **`FALSE`**.
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 In event mode,
+returns resource 或者在失败时返回 **`false`**.
 
 **目录**
 

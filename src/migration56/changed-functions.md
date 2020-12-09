@@ -15,7 +15,7 @@
 ### <a href="/book/curl.html" class="link">cURL</a>
 
 -   <span class="simpara"> 只有设置 **`CURLOPT_SAFE_UPLOAD`** 为
-    **`FALSE`** 的情况下， 才接受 *@file* 语法上传文件。 最好使用 <span
+    **`false`** 的情况下， 才接受 *@file* 语法上传文件。 最好使用 <span
     class="classname">CURLFile</span> 代替。 </span>
 
 ### <a href="/book/mcrypt.html" class="link">Mcrypt</a>
@@ -58,4 +58,4 @@
     一样，未找到属性的情况下， <span
     class="methodname">XMLReader::getAttributeNs</span> 和 <span
     class="methodname">XMLReader::getAttributeNo</span> 会返回
-    **`NULL`** 。 </span>
+    **`null`** 。 </span>

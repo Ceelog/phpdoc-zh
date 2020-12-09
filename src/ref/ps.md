@@ -109,7 +109,7 @@ The path of the program to be started, when the link is clicked on.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -174,7 +174,7 @@ be *fitpage*, *fitwidth*, *fitheight*, or *fitbbox*.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -246,7 +246,7 @@ opening the document with a pdf viewer.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -316,7 +316,7 @@ be *fitpage*, *fitwidth*, *fitheight*, or *fitbbox*.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -374,7 +374,7 @@ The url of the hyperlink to be opened when clicking on this link, e.g.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -428,7 +428,7 @@ The end angle given in degrees.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -480,7 +480,7 @@ The end angle given in degrees.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -554,7 +554,7 @@ The height of the page in pixel, e.g. 842 for A4 format.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -611,7 +611,7 @@ Must be 1 or 2.
 
 ### 返回值
 
-The identifier of the pattern 或者在失败时返回 **`FALSE`**.
+The identifier of the pattern 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -695,7 +695,7 @@ The height of the template in pixel.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -777,7 +777,7 @@ The radius of the circle
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -806,7 +806,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -842,7 +842,7 @@ class="function">ps\_open\_image\_file</span>.
 
 ### 返回值
 
-Returns **`NULL`** on success 或者在失败时返回 **`FALSE`**.
+Returns **`null`** on success 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -878,7 +878,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -907,7 +907,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -935,7 +935,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -972,7 +972,7 @@ The text to output.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1026,7 +1026,7 @@ y-coordinate of third control point.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1059,7 +1059,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1090,7 +1090,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1119,7 +1119,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1148,7 +1148,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1176,7 +1176,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1205,7 +1205,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1226,7 +1226,7 @@ class="methodparam"><span class="type">string</span> `$fontname`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$encoding`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$embed`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Loads a font for later use. Before text is output with a loaded font it
 must be set with <span class="function">ps\_setfont</span>. This
@@ -1270,7 +1270,7 @@ vector (which is currently not used but must be present) and a list of
 extra ligatures to extend the list of ligatures derived from the afm
 file.
 
-`encoding` can be **`NULL`** or the empty string if the default encoding
+`encoding` can be **`null`** or the empty string if the default encoding
 (TeXBase1) shall be used.
 
 If the encoding is set to *builtin* then there will be no reencoding and
@@ -1378,17 +1378,17 @@ they are numbered within the surrounding box.
 
 *linebreak*  
 Only used if text is output with <span
-class="function">ps\_show\_boxed</span>. If set to **`TRUE`** a carriage
+class="function">ps\_show\_boxed</span>. If set to **`true`** a carriage
 return will add a line break.
 
 *parbreak*  
 Only used if text is output with <span
-class="function">ps\_show\_boxed</span>. If set to **`TRUE`** a carriage
+class="function">ps\_show\_boxed</span>. If set to **`true`** a carriage
 return will start a new paragraph.
 
 *hyphenation*  
 Only used if text is output with <span
-class="function">ps\_show\_boxed</span>. If set to **`TRUE`** the
+class="function">ps\_show\_boxed</span>. If set to **`true`** the
 paragraph will be hyphenated if a hypen dictionary is set and exists.
 
 *hyphendict*  
@@ -1409,7 +1409,7 @@ size of an image. In such a case the resource id is passed.
 
 ### 返回值
 
-Returns the value of the parameter 或者在失败时返回 **`FALSE`**.
+Returns the value of the parameter 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -1536,7 +1536,7 @@ to be retrieved. This can be the id of a font or an image.
 
 ### 返回值
 
-Returns the value of the parameter or **`FALSE`**.
+Returns the value of the parameter or **`false`**.
 
 ### 参见
 
@@ -1582,7 +1582,7 @@ place.
 ### 返回值
 
 An array of integers indicating the position of possible breaks in the
-text 或者在失败时返回 **`FALSE`**.
+text 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1639,7 +1639,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ps\_lineto
 ==========
@@ -1672,7 +1672,7 @@ y-coordinate of the end point of the line.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1813,7 +1813,7 @@ y-coordinate of the point to move to.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1838,7 +1838,7 @@ document.
 
 ### 返回值
 
-Resource of PostScript document 或者在失败时返回 **`FALSE`**. The return
+Resource of PostScript document 或者在失败时返回 **`false`**. The return
 value is passed to all other functions as the first argument.
 
 ### 参见
@@ -1875,7 +1875,7 @@ the browser.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2070,7 +2070,7 @@ resolution of 72 dpi, because each pixel is equivalent to 1 point.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2119,7 +2119,7 @@ The height of the image.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2152,7 +2152,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2183,7 +2183,7 @@ Angle of rotation in degree.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2271,7 +2271,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2306,7 +2306,7 @@ Scaling factor in vertical direction.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2352,7 +2352,7 @@ The blue component of the border color.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2395,7 +2395,7 @@ The length of the gap between dashes.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2438,7 +2438,7 @@ The line width of the border.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2501,7 +2501,7 @@ coordinates of the upper right corner.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2540,7 +2540,7 @@ The value of the parameter.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2583,7 +2583,7 @@ y-coordinate of the new text position.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2666,7 +2666,7 @@ The value of the parameter.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2732,7 +2732,7 @@ passed.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ps\_setdash
 ===========
@@ -2763,7 +2763,7 @@ The length of the gap between dashes.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2796,7 +2796,7 @@ The `value` must be between 0.2 and 1.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ps\_setfont
 ===========
@@ -2831,7 +2831,7 @@ The size of the font.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2863,7 +2863,7 @@ The value must be between 0 (white) and 1 (black).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2895,7 +2895,7 @@ The type of line ends. Possible values are *PS\_LINECAP\_BUTT*,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2929,7 +2929,7 @@ The way lines are joined. Possible values are *PS\_LINEJOIN\_MITER*,
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2963,7 +2963,7 @@ The width of lines in points.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3002,7 +3002,7 @@ small angle. Keep the default unless you know what you are doing.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3036,7 +3036,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ps\_setpolydash
 ===============
@@ -3067,7 +3067,7 @@ portion.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3137,7 +3137,7 @@ This argument is not currently used.
 
 ### 返回值
 
-The identifier of the pattern 或者在失败时返回 **`FALSE`**.
+The identifier of the pattern 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -3199,7 +3199,7 @@ parameters *r0* and *r1* with the radius of the start and end circle.
 
 ### 返回值
 
-Returns the identifier of the pattern 或者在失败时返回 **`FALSE`**.
+Returns the identifier of the pattern 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -3236,7 +3236,7 @@ class="function">ps\_shading</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3269,7 +3269,7 @@ Outputs a text in a given box. The lower left corner of the box is at
 spaces are treated as one. Tabulators are treated as spaces.
 
 The text will be hyphenated if the parameter `hyphenation` is set to
-**`TRUE`** and the parameter `hyphendict` contains a valid filename for
+**`true`** and the parameter `hyphendict` contains a valid filename for
 a hyphenation file. The line spacing is taken from the value *leading*.
 Paragraphs can be separated by an empty line just like in TeX. If the
 value *parindent* is set to value \> 0.0 then the first n lines will be
@@ -3418,7 +3418,7 @@ class="methodparam"><span class="type">float</span> `$ycoor`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ps\_show\_xy
 ============
@@ -3453,7 +3453,7 @@ y-coordinate of the lower left corner of the box surrounding the text.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3490,7 +3490,7 @@ The maximum number of characters to print.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ps\_show
 ========
@@ -3551,7 +3551,7 @@ The text to be output.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3677,7 +3677,7 @@ class="function">ps\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3797,7 +3797,7 @@ The position of the glyph in the font encoding vector.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3833,7 +3833,7 @@ y-coordinate of the origin of the translated coordinate system.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

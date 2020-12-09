@@ -9,6 +9,10 @@
     -   [预定义常量](/enchant/constants.html)
     -   [范例](/enchant/examples.html)
     -   [Enchant 函数](/ref/enchant.html)
+    -   [EnchantBroker](/class/enchantbroker.html) — The EnchantBroker
+        class
+    -   [EnchantDictionary](/class/enchantdictionary.html) — The
+        EnchantDictionary class
 -   [Gender](/book/gender.html) — Determine gender of firstnames
     -   [简介](/intro/gender.html)
     -   [安装／配置](/gender/setup.html)

@@ -24,7 +24,7 @@ SRV，NAPTR，TXT 或者 ANY。
 
 ### 返回值
 
-如果记录能找到，就返回**`TRUE`**；如果查找不到该DNS记录或者发生了错误，就返回**`FALSE`**。
+如果记录能找到，就返回**`true`**；如果查找不到该DNS记录或者发生了错误，就返回**`false`**。
 
 ### 更新日志
 
@@ -66,7 +66,7 @@ class="function">closelog</span>是可选的。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -233,7 +233,7 @@ Name Servers*）的信息。
 ### 返回值
 
 这个函数返回一个关联数组，如果失败则 或者在失败时返回
-**`FALSE`**。每个关联数组都至少包含了以下的这些键。 *at minimum* the
+**`false`**。每个关联数组都至少包含了以下的这些键。 *at minimum* the
 following keys:
 
 | Attribute | Meaning                                                                                                                                                                                                                       |
@@ -493,7 +493,7 @@ class="function">stream\_socket\_client</span>与之非常相似，而且提供�
 如果传入了该参数，holds the system level error number that occurred in
 the system-level *connect()* call。
 
-如果`errno`的返回值为*0*，而且这个函数的返回值为**`FALSE`**，那么这表明该错误发生在套接字连接（*connect()*）调用之前，导致连接失败的原因最大的可能是初始化套接字的时候发生了错误。
+如果`errno`的返回值为*0*，而且这个函数的返回值为**`false`**，那么这表明该错误发生在套接字连接（*connect()*）调用之前，导致连接失败的原因最大的可能是初始化套接字的时候发生了错误。
 
 `errstr`  
 错误信息将以字符串的信息返回。
@@ -515,7 +515,7 @@ class="function">fgets</span>，<span
 class="function">fgetss</span>，<span
 class="function">fwrite</span>，<span
 class="function">fclose</span>还有<span
-class="function">feof</span>）。如果调用失败，将返回**`FALSE`**。
+class="function">feof</span>）。如果调用失败，将返回**`false`**。
 
 ### 错误／异常
 
@@ -616,7 +616,7 @@ class="methodparam"><span class="type">string</span>
 
 ### 返回值
 
-成功则返回主机名；失败则原样输出（输出IP地址）；如果输入的格式不正常，则返回**`FALSE`**。
+成功则返回主机名；失败则原样输出（输出IP地址）；如果输入的格式不正常，则返回**`false`**。
 
 ### 范例
 
@@ -699,7 +699,7 @@ class="methodparam"><span class="type">string</span> `$hostname`</span>
 
 ### 返回值
 
-返回 IPv4 地址数组， 或在 `hostname` 无法解析时返回 **`FALSE`**。
+返回 IPv4 地址数组， 或在 `hostname` 无法解析时返回 **`false`**。
 
 ### 范例
 
@@ -742,7 +742,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回主机名称字符串，失败时返回 **`FALSE`**。
+成功时返回主机名称字符串，失败时返回 **`false`**。
 
 ### 范例
 
@@ -792,7 +792,7 @@ class="methodparam"><span class="type">array</span> `&$weight`</span> \]
 
 ### 返回值
 
-找到记录返回 **`TRUE`**，没找到或者出错时返回 **`FALSE`**。
+找到记录返回 **`true`**，没找到或者出错时返回 **`false`**。
 
 ### 更新日志
 
@@ -847,7 +847,7 @@ The protocol name.
 
 ### 返回值
 
-Returns the protocol number, 或者在失败时返回 **`FALSE`**.
+Returns the protocol number, 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -891,7 +891,7 @@ The protocol number.
 
 ### 返回值
 
-Returns the protocol name as a string, 或者在失败时返回 **`FALSE`**.
+Returns the protocol name as a string, 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -923,7 +923,7 @@ class="methodparam"><span class="type">string</span> `$service`</span> ,
 
 ### 返回值
 
-返回端口号，如果 `service` 或 `protocol` 未找到返回 **`FALSE`**。
+返回端口号，如果 `service` 或 `protocol` 未找到返回 **`false`**。
 
 ### 范例
 
@@ -1004,7 +1004,7 @@ PHP 准备好所有响应头，在发送内容之前执行
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1187,7 +1187,7 @@ exit;
 `replace`  
 可选参数 `replace` 表明是否用后面的头替换前面相同类型的头。
 默认情况下会替换。如果传入
-**`FALSE`**，就可以强制使相同的头信息并存。例如：
+**`false`**，就可以强制使相同的头信息并存。例如：
 
 ``` php
 <?php
@@ -1395,7 +1395,7 @@ class="function">headers\_sent</span> 会把 PHP 文件名放在 `file`
 ### 返回值
 
 HTTP 头未发送时，<span class="function">headers\_sent</span> 返回
-**`FALSE`**，否则返回 **`TRUE`**。
+**`false`**，否则返回 **`true`**。
 
 ### 范例
 
@@ -1468,8 +1468,8 @@ class="methodparam"><span class="type">int</span>
 服务器环境里，这些状态码的默认值都是 *200*。
 
 如果在非 Web 服务器环境里调用（比如 CLI 应用里）， 不提供
-`response_code` 就会返回 **`FALSE`** 。 在非 Web 服务器环境里，提供
-`response_code` 会返回 **`TRUE`** （仅仅在先前没有设置过状态码的时候）。
+`response_code` 就会返回 **`false`** 。 在非 Web 服务器环境里，提供
+`response_code` 会返回 **`true`** （仅仅在先前没有设置过状态码的时候）。
 
 ### 范例
 
@@ -1544,7 +1544,7 @@ A 32bit IPv4, or 128bit IPv6 address.
 ### 返回值
 
 Returns a string representation of the address 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 范例
 
@@ -1596,7 +1596,7 @@ A human readable IPv4 or IPv6 address.
 ### 返回值
 
 Returns the *in\_addr* representation of the given `address`, or
-**`FALSE`** if a syntactically invalid `address` is given (for example,
+**`false`** if a syntactically invalid `address` is given (for example,
 an IPv4 address without dots or an IPv6 address without colons).
 
 ### 范例
@@ -1642,7 +1642,7 @@ ip2long
 
 ### 返回值
 
-返回IP地址转换后的数字 或 **`FALSE`** 如果 `ip_address` 是无效的。
+返回IP地址转换后的数字 或 **`false`** 如果 `ip_address` 是无效的。
 
 ### 更新日志
 
@@ -1696,7 +1696,7 @@ if ($long == -1 || $long === FALSE) {
 
 > **Note**:
 >
-> <span class="function">ip2long</span> 将返回 **`FALSE`** 在IP是
+> <span class="function">ip2long</span> 将返回 **`false`** 在IP是
 > *255.255.255.255* 的情况，版本为 PHP 5 \<= 5.0.2. 在修复后 PHP 5.0.3
 > 会返回 *-1* (与PHP4相同).
 
@@ -1766,7 +1766,7 @@ logger for a program.
 
 The use of <span class="function">openlog</span> is optional. It will
 automatically be called by <span class="function">syslog</span> if
-necessary, in which case `ident` will default to **`FALSE`**.
+necessary, in which case `ident` will default to **`false`**.
 
 ### 参数
 
@@ -1818,7 +1818,7 @@ be handled.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1931,22 +1931,22 @@ w2.www.example.com）。 要让 Cookie
 
 `secure`  
 设置这个 Cookie 是否仅仅通过安全的 HTTPS 连接传给客户端。 设置成
-**`TRUE`** 时，只有安全连接存在时才会设置 Cookie。
+**`true`** 时，只有安全连接存在时才会设置 Cookie。
 如果是在服务器端处理这个需求，程序员需要仅仅在安全连接上发送此类 Cookie
 （通过 `$_SERVER["HTTPS"]` 判断）。
 
 `httponly`  
-设置成 **`TRUE`**，Cookie 仅可通过 HTTP 协议访问。 这意思就是 Cookie
+设置成 **`true`**，Cookie 仅可通过 HTTP 协议访问。 这意思就是 Cookie
 无法通过类似 JavaScript 这样的脚本语言访问。 要有效减少 XSS
 攻击时的身份窃取行为，可建议用此设置（虽然不是所有浏览器都支持），不过这个说法经常有争议。
-PHP 5.2.0 中添加。 **`TRUE`** 或 **`FALSE`**
+PHP 5.2.0 中添加。 **`true`** 或 **`false`**
 
 ### 返回值
 
 如果在调用本函数以前就产生了输出，<span
-class="function">setcookie</span> 会调用失败并返回 **`FALSE`**。 如果
+class="function">setcookie</span> 会调用失败并返回 **`false`**。 如果
 <span class="function">setcookie</span> 成功运行，返回
-**`TRUE`**。当然，它的意思并非用户是否已接受 Cookie。
+**`true`**。当然，它的意思并非用户是否已接受 Cookie。
 
 ### 范例
 
@@ -2055,12 +2055,12 @@ if (isset($_COOKIE['cookie'])) {
     调试检测 Cookie 是个很好的方式。 </span>
 -   <span class="simpara"> 为同一个参数再次设置 Cookie
     前，必须先把它删掉。 如果参数的值是空 string 或
-    **`FALSE`**，并且其他参数和上次调用 setcookie 仍旧一样，
+    **`false`**，并且其他参数和上次调用 setcookie 仍旧一样，
     则指定的名称会被远程客户端删除。 内部的实现是：将值设置成
     'deleted'，并且过期时间是一年前。 </span>
--   <span class="simpara"> 因为设置值成 **`FALSE`** 会导致 Cookie
-    被删除，所以要避免使用布尔值。 代替方式：*0* 是 **`FALSE`**，*1* 是
-    **`TRUE`**。 </span>
+-   <span class="simpara"> 因为设置值成 **`false`** 会导致 Cookie
+    被删除，所以要避免使用布尔值。 代替方式：*0* 是 **`false`**，*1* 是
+    **`true`**。 </span>
 -   <span class="simpara"> Cookie 名称可以设置成数组名称，PHP
     脚本里会是数组， 但用户系统里储存的是单独分开的 Cookie。
     可以考虑使用 <span class="function">explode</span> 为一个 Cookie
@@ -2108,7 +2108,7 @@ cookie 值没有自动经过 URL 编码（urlencode）。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -2198,7 +2198,7 @@ present value of <span class="errortype">errno</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 

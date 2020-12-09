@@ -220,7 +220,7 @@ class="function">px\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -286,7 +286,7 @@ this is not done the field data is truncated.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -355,7 +355,7 @@ y, m, n, d, j, L).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -422,7 +422,7 @@ as they are stored in the database. The first record has number 0.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 px\_delete
 ==========
@@ -445,7 +445,7 @@ class="function">px\_new</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 px\_get\_field
 ==============
@@ -589,7 +589,7 @@ expected to be delivered in this encoding.
 
 ### 返回值
 
-Returns the value of the parameter 或者在失败时返回 **`FALSE`**.
+Returns the value of the parameter 或者在失败时返回 **`false`**.
 
 px\_get\_record
 ===============
@@ -709,7 +709,7 @@ The number of primary keys. Paradox databases always use the first
 
 ### 返回值
 
-Returns the value of the parameter 或者在失败时返回 **`FALSE`**.
+Returns the value of the parameter 或者在失败时返回 **`false`**.
 
 px\_insert\_record
 ==================
@@ -761,7 +761,7 @@ by <span class="function">px\_retrieve\_record</span>.
 
 ### 返回值
 
-Returns **`FALSE`** on failure or the record number in case of success.
+Returns **`false`** on failure or the record number in case of success.
 
 ### 范例
 
@@ -832,7 +832,7 @@ interface is used. Use *new paradox\_db()* instead.
 
 ### 返回值
 
-Returns **`FALSE`** on failure.
+Returns **`false`** on failure.
 
 ### 范例
 
@@ -959,7 +959,7 @@ writable if you plan to update or insert records.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1004,7 +1004,7 @@ parameter.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 px\_retrieve\_record
 ====================
@@ -1101,7 +1101,7 @@ The name of the file. Its extension should be *.MB*.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 px\_set\_parameter
 ==================
@@ -1146,7 +1146,7 @@ iso-8859-1, utf-8, cp850.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1183,7 +1183,7 @@ name of the database file.
 
 ### 返回值
 
-Returns **`NULL`** on success 或者在失败时返回 **`FALSE`**.
+Returns **`null`** on success 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -1227,7 +1227,7 @@ fields is recoded into the targetencoding.
 
 ### 返回值
 
-Returns **`FALSE`** if the encoding could not be set, e.g. the encoding
+Returns **`false`** if the encoding could not be set, e.g. the encoding
 is unknown, or pxlib does not support recoding at all. In the second
 case a warning will be issued.
 
@@ -1268,7 +1268,7 @@ The number of primary keys. Paradox databases always use the first
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1311,7 +1311,7 @@ y, m, n, d, j, H, h, G, g, i, s, A, a, L).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1399,7 +1399,7 @@ as they are stored in the database. The first record has number 0.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 

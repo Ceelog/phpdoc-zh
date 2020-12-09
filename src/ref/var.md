@@ -205,7 +205,7 @@ empty
 <span class="methodparam"><span class="type">mixed</span> `$var`</span>
 )
 
-判断一个变量是否被认为是空的。当一个变量并不存在，或者它的值等同于**`FALSE`**，那么它会被认为不存在。如果变量不存在的话，<span
+判断一个变量是否被认为是空的。当一个变量并不存在，或者它的值等同于**`false`**，那么它会被认为不存在。如果变量不存在的话，<span
 class="function">empty</span>并不会产生警告。
 
 ### 参数
@@ -225,8 +225,8 @@ false** 等价。
 
 ### 返回值
 
-当`var`存在，并且是一个非空非零的值时返回 **`FALSE`** 否则返回
-**`TRUE`**.
+当`var`存在，并且是一个非空非零的值时返回 **`false`** 否则返回
+**`true`**.
 
 以下的东西被认为是空的：
 
@@ -234,8 +234,8 @@ false** 等价。
 -   *0* (作为整数的0)
 -   *0.0* (作为浮点数的0)
 -   *"0"* (作为字符串的0)
--   **`NULL`**
--   **`FALSE`**
+-   **`null`**
+-   **`false`**
 -   *array()* (一个空数组)
 -   *$var;* (一个声明了，但是没有值的变量)
 
@@ -244,7 +244,7 @@ false** 等价。
 | 版本  | 说明                                                                   |
 |-------|------------------------------------------------------------------------|
 | 5.5.0 | <span class="function">empty</span> 现在支持表达式了，而不仅仅是变量。 |
-| 5.4.0 | 检查非数字的字符串偏移量会返回 **`TRUE`**.                             |
+| 5.4.0 | 检查非数字的字符串偏移量会返回 **`true`**.                             |
 
 ### 范例
 
@@ -637,7 +637,7 @@ is\_array
 `$var`</span> )
 
 如果 `var` 是 <span class="type">array</span>，则返回
-**`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，否则返回 **`false`**。
 
 参见 <span class="function">is\_float</span>、<span
 class="function">is\_int</span>、<span
@@ -656,7 +656,7 @@ is\_bool
 ( <span class="methodparam"><span class="type">mixed</span>
 `$var`</span> )
 
-如果 `var` 是 <span class="type">boolean</span> 则返回 **`TRUE`**。
+如果 `var` 是 <span class="type">boolean</span> 则返回 **`true`**。
 
 **示例 \#1 <span class="function">is\_bool</span> 示例**
 
@@ -708,7 +708,7 @@ class="methodparam"><span class="type">string</span>
 要检查的回调函数。
 
 `syntax_only`  
-如果设置为 **`TRUE`**，这个函数仅仅验证 `name` 可能是函数或方法。
+如果设置为 **`true`**，这个函数仅仅验证 `name` 可能是函数或方法。
 它仅仅拒绝非字符，或者未包含能用于回调函数的有效结构。有效的应该包含两个元素，第一个是一个对象或者字符，第二个元素是个字符。
 
 `callable_name`  
@@ -718,7 +718,7 @@ someClass::SomeMethod()
 
 ### 返回值
 
-如果 `name` 可调用则返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果 `name` 可调用则返回 **`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -793,7 +793,7 @@ The value to check
 
 ### 返回值
 
-Returns **`TRUE`** if `var` is countable, **`FALSE`** otherwise.
+Returns **`true`** if `var` is countable, **`false`** otherwise.
 
 ### 更新日志
 
@@ -841,7 +841,7 @@ is\_float
 `$var`</span> )
 
 如果 `var` 是 <span class="type">float</span> 则返回
-**`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，否则返回 **`false`**。
 
 > **Note**:
 >
@@ -868,7 +868,7 @@ is\_int
 )
 
 如果 `var` 是 <span class="type">integer</span> 则返回
-**`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，否则返回 **`false`**。
 
 > **Note**:
 >
@@ -915,7 +915,7 @@ The value to check
 
 ### 返回值
 
-Returns **`TRUE`** if `var` is iterable, **`FALSE`** otherwise.
+Returns **`true`** if `var` is iterable, **`false`** otherwise.
 
 ### 范例
 
@@ -949,7 +949,7 @@ is\_long
 is\_null
 ========
 
-检测变量是否为 **`NULL`**
+检测变量是否为 **`null`**
 
 ### 描述
 
@@ -957,15 +957,15 @@ is\_null
 ( <span class="methodparam"><span class="type">mixed</span>
 `$var`</span> )
 
-如果 `var` 是 <span class="type">null</span> 则返回 **`TRUE`**，否则返回
-**`FALSE`**。
+如果 `var` 是 <span class="type">null</span> 则返回 **`true`**，否则返回
+**`false`**。
 
 查看
-<a href="/language/types/null.html#language.types.null.syntax" class="link"><strong><code>NULL</code></strong></a>
-类型获知变量什么时候被认为是 **`NULL`**，而什么时候不是。
+<a href="/language/types/null.html#language.types.null.syntax" class="link"><strong><code>null</code></strong></a>
+类型获知变量什么时候被认为是 **`null`**，而什么时候不是。
 
 参见
-<a href="/language/types/null.html#language.types.null.syntax" class="link"><strong><code>NULL</code></strong></a>、<span
+<a href="/language/types/null.html#language.types.null.syntax" class="link"><strong><code>null</code></strong></a>、<span
 class="function">is\_bool</span>、<span
 class="function">is\_numeric</span>、<span
 class="function">is\_float</span>、<span
@@ -987,7 +987,7 @@ is\_numeric
 class="methodname">is\_numeric</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$var`</span> )
 
-如果 `var` 是数字和数字字符串则返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果 `var` 是数字和数字字符串则返回 **`true`**，否则返回 **`false`**。
 
 参见 <span class="function">is\_bool</span>、<span
 class="function">is\_float</span>、<span
@@ -1009,7 +1009,7 @@ class="methodname">is\_object</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$var`</span> )
 
 如果 `var` 是一个 <span class="type">object</span> 则返回
-**`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，否则返回 **`false`**。
 
 参见 <span class="function">is\_bool</span>、<span
 class="function">is\_int</span>、<span
@@ -1039,8 +1039,8 @@ class="methodname">is\_resource</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$var`</span> )
 
 如果给出的参数 `var` 是 <span class="type">resource</span> 类型，<span
-class="function">is\_resource</span> 返回 **`TRUE`**，否则返回
-**`FALSE`**。
+class="function">is\_resource</span> 返回 **`true`**，否则返回
+**`false`**。
 
 查看 <span class="type">resource</span> 类型文档获取更多的信息。
 
@@ -1056,8 +1056,8 @@ class="methodname">is\_scalar</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$var`</span> )
 
 如果给出的变量参数 `var` 是一个标量，<span
-class="function">is\_scalar</span> 返回 **`TRUE`**，否则返回
-**`FALSE`**。
+class="function">is\_scalar</span> 返回 **`true`**，否则返回
+**`false`**。
 
 标量变量是指那些包含了 <span class="type">integer</span>、<span
 class="type">float</span>、<span class="type">string</span> 或 <span
@@ -1121,7 +1121,7 @@ class="methodname">is\_string</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$var`</span> )
 
 如果 `var` 是 <span class="type">string</span> 则返回
-**`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，否则返回 **`false`**。
 
 参见 <span class="function">is\_bool</span>、<span
 class="function">is\_int</span>、<span
@@ -1134,7 +1134,7 @@ class="function">is\_array</span>。
 isset
 =====
 
-检测变量是否已设置并且非 **`NULL`**
+检测变量是否已设置并且非 **`null`**
 
 ### 说明
 
@@ -1143,17 +1143,17 @@ isset
 \[, <span class="methodparam"><span class="type">mixed</span>
 `$...`</span> \] )
 
-检测变量是否设置，并且不是 **`NULL`**。
+检测变量是否设置，并且不是 **`null`**。
 
 如果已经使用 <span class="function">unset</span>
 释放了一个变量之后，它将不再是 <span
 class="function">isset</span>。若使用 <span
-class="function">isset</span> 测试一个被设置成 **`NULL`** 的变量，将返回
-**`FALSE`**。同时要注意的是 null 字符（*"\\0"*）并不等同于 PHP 的
-**`NULL`** 常量。
+class="function">isset</span> 测试一个被设置成 **`null`** 的变量，将返回
+**`false`**。同时要注意的是 null 字符（*"\\0"*）并不等同于 PHP 的
+**`null`** 常量。
 
 如果一次传入多个参数，那么 <span class="function">isset</span>
-只有在全部参数都以被设置时返回 **`TRUE`**
+只有在全部参数都以被设置时返回 **`true`**
 计算过程从左至右，中途遇到没有设置的变量时就会立即停止。
 
 ### 参数
@@ -1166,14 +1166,14 @@ class="function">isset</span> 测试一个被设置成 **`NULL`** 的变量，�
 
 ### 返回值
 
-如果 `var` 存在并且值不是 **`NULL`** 则返回 **`TRUE`**，否则返回
-**`FALSE`**。
+如果 `var` 存在并且值不是 **`null`** 则返回 **`true`**，否则返回
+**`false`**。
 
 ### 更新日志
 
 | 版本  | 说明                                         |
 |-------|----------------------------------------------|
-| 5.4.0 | 检查字符的非数字偏移量将会返回 **`FALSE`**。 |
+| 5.4.0 | 检查字符的非数字偏移量将会返回 **`false`**。 |
 
 ### 范例
 
@@ -1311,7 +1311,7 @@ print\_r
 ( <span class="methodparam"><span class="type">mixed</span>
 `$expression`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$return`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="function">print\_r</span>
 以人类易读的格式显示一个变量的信息。
@@ -1328,7 +1328,7 @@ class="function">var\_export</span> 都会显示对象 protected 和 private
 
 `return`  
 想要获取 <span class="function">print\_r</span> 输出的内容，使用
-`return` 参数。 当此参数为 **`TRUE`**，<span
+`return` 参数。 当此参数为 **`true`**，<span
 class="function">print\_r</span> 会直接返回信息，而不是输出。
 
 ### 返回值
@@ -1339,8 +1339,8 @@ class="type">float</span>，会直接输出值本身。 如果输入的内容是
 class="type">array</span>，展示的格式会显示数组的键和包含的元素。<span
 class="type">object</span> 也类似。
 
-当 `return` 参数设置成 **`TRUE`**，本函数会返回 <span
-class="type">string</span> 格式。否则返回 **`TRUE`**。
+当 `return` 参数设置成 **`true`**，本函数会返回 <span
+class="type">string</span> 格式。否则返回 **`true`**。
 
 ### 注释
 
@@ -1484,7 +1484,7 @@ settype
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1571,7 +1571,7 @@ class="type">string</span> `$str`</span> )
 class="type">float</span>、<span class="type">string</span>、<span
 class="type">array</span> 或 <span class="type">object</span>。
 
-如果传递的字符串不可解序列化，则返回 **`FALSE`**，并产生一个
+如果传递的字符串不可解序列化，则返回 **`false`**，并产生一个
 **`E_NOTICE`**。
 
 ### 更新日志
@@ -1627,8 +1627,8 @@ function mycallback($classname)
 
 **Warning**
 
-如果反序列化了 **`FALSE`** 的值，或者在过程中发生了错误，都会返回
-**`FALSE`**。 可以通过 `str` 和 *serialize(false)* 进行比较，或者捕捉
+如果反序列化了 **`false`** 的值，或者在过程中发生了错误，都会返回
+**`false`**。 可以通过 `str` 和 *serialize(false)* 进行比较，或者捕捉
 **`E_NOTICE`** 错误来判断这种特殊情况。
 
 ### 参见
@@ -1912,7 +1912,7 @@ var\_export
 class="methodname">var\_export</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$expression`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$return`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="function">var\_export</span>
 函数返回关于传递给该函数的变量的结构信息，它和 <span
@@ -1925,12 +1925,12 @@ PHP 代码。
 想要输出的变量名。
 
 `return`  
-此参数为 **`TRUE`** 时，<span class="function">var\_export</span>
+此参数为 **`true`** 时，<span class="function">var\_export</span>
 将返回一个变量，而不是输出它。
 
 ### 返回值
 
-参数 `return` 为 **`TRUE`** 时返回变量，否则返回 **`NULL`**。
+参数 `return` 为 **`true`** 时返回变量，否则返回 **`null`**。
 
 ### 注释
 
@@ -2123,7 +2123,7 @@ classes for maximum compatibility.
 -   [is\_iterable](/ref/var.html#is_iterable) — Verify that the contents
     of a variable is an iterable value
 -   [is\_long](/ref/var.html#is_long) — is\_int 的别名
--   [is\_null](/ref/var.html#is_null) — 检测变量是否为 NULL
+-   [is\_null](/ref/var.html#is_null) — 检测变量是否为 null
 -   [is\_numeric](/ref/var.html#is_numeric) —
     检测变量是否为数字或数字字符串
 -   [is\_object](/ref/var.html#is_object) — 检测变量是否是一个对象
@@ -2131,7 +2131,7 @@ classes for maximum compatibility.
 -   [is\_resource](/ref/var.html#is_resource) — 检测变量是否为资源类型
 -   [is\_scalar](/ref/var.html#is_scalar) — 检测变量是否是一个标量
 -   [is\_string](/ref/var.html#is_string) — 检测变量是否是字符串
--   [isset](/ref/var.html#isset) — 检测变量是否已设置并且非 NULL
+-   [isset](/ref/var.html#isset) — 检测变量是否已设置并且非 null
 -   [print\_r](/ref/var.html#print_r) — 以易于理解的格式打印变量。
 -   [serialize](/ref/var.html#serialize) — 产生一个可存储的值的表示
 -   [settype](/ref/var.html#settype) — 设置变量的类型

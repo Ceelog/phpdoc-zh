@@ -18,11 +18,11 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-返回对象的字符串表示或者 **`NULL`** 。
+返回对象的字符串表示或者 **`null`** 。
 
 ### 错误／异常
 
-如果返回除了字符串或 **`NULL`** 之外的其他类型，将抛出 <span
+如果返回除了字符串或 **`null`** 之外的其他类型，将抛出 <span
 class="classname">Exception</span>。
 
 ### 参见

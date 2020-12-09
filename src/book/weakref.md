@@ -154,8 +154,8 @@ this counter will be incremented by one.
 
 ### 返回值
 
-Returns **`TRUE`** if the reference was valid and could be turned into a
-strong reference, **`FALSE`** otherwise.
+Returns **`true`** if the reference was valid and could be turned into a
+strong reference, **`false`** otherwise.
 
 ### 范例
 
@@ -330,7 +330,7 @@ Returns the object pointed to by the weak reference.
 
 ### 返回值
 
-Returns the object if the reference is still valid, **`NULL`**
+Returns the object if the reference is still valid, **`null`**
 otherwise.
 
 ### 参见
@@ -363,8 +363,8 @@ the strong reference is turned back into a weak reference.
 
 ### 返回值
 
-Returns **`TRUE`** if the reference was previously acquired and thus
-could be released, **`FALSE`** otherwise.
+Returns **`true`** if the reference was previously acquired and thus
+could be released, **`false`** otherwise.
 
 ### 范例
 
@@ -425,8 +425,8 @@ Checks whether the object referenced still exists.
 
 ### 返回值
 
-Returns **`TRUE`** if the object still exists and is thus still
-accessible via <span class="methodname">Weakref::get</span>, **`FALSE`**
+Returns **`true`** if the object still exists and is thus still
+accessible via <span class="methodname">Weakref::get</span>, **`false`**
 otherwise.
 
 ### 参见
@@ -658,7 +658,7 @@ Object to check for.
 
 ### 返回值
 
-Returns **`TRUE`** if the object is contained in the map, **`FALSE`**
+Returns **`true`** if the object is contained in the map, **`false`**
 otherwise.
 
 WeakMap::offsetGet
@@ -682,7 +682,7 @@ Some object contained as key in the map.
 ### 返回值
 
 Returns the value associated to the object passed as argument,
-**`NULL`** otherwise.
+**`null`** otherwise.
 
 WeakMap::offsetSet
 ==================
@@ -774,5 +774,5 @@ Returns whether the iterator is still on a valid map element.
 
 ### 返回值
 
-Returns **`TRUE`** if the iterator is on a valid element that can be
-accessed, **`FALSE`** otherwise.
+Returns **`true`** if the iterator is on a valid element that can be
+accessed, **`false`** otherwise.

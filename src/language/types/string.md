@@ -580,7 +580,7 @@ var_dump(isset($str['1x']));
 >
 > 用 *\[\]* 或 *{}*
 > 访问任何其它类型（不包括数组或具有相应接口的对象实现）的变量只会无声地返回
-> **`NULL`**。
+> **`null`**。
 
 > **Note**:
 >
@@ -613,9 +613,9 @@ class="function">echo</span> 或 <span class="function">print</span>
 进行比较时，就会发生这种转换。<a href="/language/types.html" class="link">类型</a>和<a href="/language/types/type-juggling.html" class="link">类型转换</a>可以更好的解释下面的事情，也可参考函数
 <span class="function">settype</span>。
 
-一个布尔值 <span class="type">boolean</span> 的 **`TRUE`** 被转换成
+一个布尔值 <span class="type">boolean</span> 的 **`true`** 被转换成
 <span class="type">string</span> 的 *"1"*。<span
-class="type">Boolean</span> 的 **`FALSE`** 被转换成
+class="type">Boolean</span> 的 **`false`** 被转换成
 *""*（空字符串）。这种转换可以在 <span class="type">boolean</span> 和
 <span class="type">string</span> 之间相互进行。
 
@@ -647,7 +647,7 @@ class="type">resource</span>
 class="type">resource</span> 的类型，可以用函数 <span
 class="function">get\_resource\_type</span>。
 
-**`NULL`** 总是被转变成空字符串。
+**`null`** 总是被转变成空字符串。
 
 如上面所说的，直接把 <span class="type">array</span>，<span
 class="type">object</span> 或 <span class="type">resource</span> 转换成

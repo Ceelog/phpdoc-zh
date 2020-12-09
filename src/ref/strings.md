@@ -100,7 +100,7 @@ class="methodname">addslashes</span> ( <span class="methodparam"><span
 class="type">string</span> `$str`</span> )
 
 返回字符串，该字符串为了数据库查询语句等的需要在某些字符前加上了反斜线。这些字符是单引号（*'*）、双引号（*"*）、反斜线（*\\*）与
-NUL（**`NULL`** 字符）。
+NUL（**`null`** 字符）。
 
 一个使用 <span class="function">addslashes</span>
 的例子是当你要往数据库中输入数据时。 例如，将名字 *O'reilly*
@@ -364,7 +364,7 @@ uuencode 编码后的数据
 
 ### 返回值
 
-返回解码后的字符串数据， 或者在失败时返回 **`FALSE`**.。
+返回解码后的字符串数据， 或者在失败时返回 **`false`**.。
 
 ### 范例
 
@@ -406,7 +406,7 @@ uuencode 算法会将所有（含二进制数据）字符串转化为可输出�
 
 ### 返回值
 
-返回 uuencode 编码后的数据 或者在失败时返回 **`FALSE`**。
+返回 uuencode 编码后的数据 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -912,7 +912,7 @@ class="methodparam"><span class="type">int</span> `$limit`</span> \] )
 `string` 的一个子串，它们被字符串 `delimiter` 作为边界点分割出来。
 
 如果 `delimiter` 为空字符串（""），<span class="function">explode</span>
-将返回 **`FALSE`**。 如果 `delimiter` 所包含的值在 `string`
+将返回 **`false`**。 如果 `delimiter` 所包含的值在 `string`
 中找不到，并且使用了负数的 `limit` ， 那么会返回空的 <span
 class="type">array</span>， 否则返回包含 `string` 单个元素的数组。
 
@@ -1445,7 +1445,7 @@ class="function">base\_convert</span> 函数。
 
 ### 返回值
 
-返回给定数据的二进制表示 或者在失败时返回 **`FALSE`**。
+返回给定数据的二进制表示 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -1493,7 +1493,7 @@ class="methodparam"><span class="type">string</span> `$string`</span>
 `$flags`<span class="initializer"> = **`ENT_COMPAT`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">html\_entity\_decode</span> is the opposite of
 <span class="function">htmlentities</span> in that it converts HTML
@@ -1627,7 +1627,7 @@ class="initializer"> = ENT\_COMPAT \| ENT\_HTML401</span></span> \[,
 `$encoding`<span class="initializer"> =
 ini\_get("default\_charset")</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$double_encode`<span
-class="initializer"> = **`TRUE`**</span></span> \]\]\] )
+class="initializer"> = **`true`**</span></span> \]\]\] )
 
 本函数各方面都和 <span class="function">htmlspecialchars</span> 一样，
 除了 <span class="function">htmlentities</span> 会转换所有具有 HTML
@@ -1848,7 +1848,7 @@ ENT\_HTML401</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$encoding`<span class="initializer"> =
 ini\_get("default\_charset")</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$double_encode`<span
-class="initializer"> = **`TRUE`**</span></span> \]\]\] )
+class="initializer"> = **`true`**</span></span> \]\]\] )
 
 某类字符在 HTML 中有特殊用处，如需保持原意，需要用 HTML 实体来表达。
 本函数会返回字符转义后的表达。
@@ -2326,19 +2326,19 @@ associative array that is returned contains the following fields:
 </tr>
 <tr class="odd">
 <td>p_cs_precedes</td>
-<td><strong><code>TRUE</code></strong> if currency_symbol precedes a positive value, <strong><code>FALSE</code></strong> if it succeeds one</td>
+<td><strong><code>true</code></strong> if currency_symbol precedes a positive value, <strong><code>false</code></strong> if it succeeds one</td>
 </tr>
 <tr class="even">
 <td>p_sep_by_space</td>
-<td><strong><code>TRUE</code></strong> if a space separates currency_symbol from a positive value, <strong><code>FALSE</code></strong> otherwise</td>
+<td><strong><code>true</code></strong> if a space separates currency_symbol from a positive value, <strong><code>false</code></strong> otherwise</td>
 </tr>
 <tr class="odd">
 <td>n_cs_precedes</td>
-<td><strong><code>TRUE</code></strong> if currency_symbol precedes a negative value, <strong><code>FALSE</code></strong> if it succeeds one</td>
+<td><strong><code>true</code></strong> if currency_symbol precedes a negative value, <strong><code>false</code></strong> if it succeeds one</td>
 </tr>
 <tr class="even">
 <td>n_sep_by_space</td>
-<td><strong><code>TRUE</code></strong> if a space separates currency_symbol from a negative value, <strong><code>FALSE</code></strong> otherwise</td>
+<td><strong><code>true</code></strong> if a space separates currency_symbol from a negative value, <strong><code>false</code></strong> otherwise</td>
 </tr>
 <tr class="odd">
 <td>p_sign_posn</td>
@@ -2523,7 +2523,7 @@ md5\_file
 class="methodname">md5\_file</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$raw_output`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 使用
 <a href="http://www.faqs.org/rfcs/rfc1321" class="link external">» RSA 数据安全公司的 MD5 报文算法</a>计算
@@ -2535,11 +2535,11 @@ class="initializer"> = **`FALSE`**</span></span> \] )
 文件名
 
 `raw_output`  
-如果被设置为 **`TRUE`**，那么报文摘要将以原始的 16 位二进制格式返回。
+如果被设置为 **`true`**，那么报文摘要将以原始的 16 位二进制格式返回。
 
 ### 返回值
 
-成功返回字符串，否则返回 **`FALSE`**。
+成功返回字符串，否则返回 **`false`**。
 
 ### 更新日志
 
@@ -2580,7 +2580,7 @@ md5
 <span class="type">string</span> <span class="methodname">md5</span> (
 <span class="methodparam"><span class="type">string</span> `$str`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$raw_output`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$raw_output`<span class="initializer"> = **`false`**</span></span> \] )
 
 使用
 <a href="http://www.faqs.org/rfcs/rfc1321" class="link external">» RSA 数据安全公司的 MD5 报文算法</a>计算
@@ -2592,7 +2592,7 @@ md5
 原始字符串。
 
 `raw_output`  
-如果可选的 `raw_output` 被设置为 **`TRUE`**，那么 MD5
+如果可选的 `raw_output` 被设置为 **`true`**，那么 MD5
 报文摘要将以16字节长度的原始二进制格式返回。
 
 ### 返回值
@@ -2667,7 +2667,7 @@ Returns the metaphone key as a string.
 
 | 版本  | 说明                                          |
 |-------|-----------------------------------------------|
-| 8.0.0 | The function returned **`FALSE`** on failure. |
+| 8.0.0 | The function returned **`false`** on failure. |
 
 ### 范例
 
@@ -2817,7 +2817,7 @@ de\_DE：EU1.234,56）。
 ### 返回值
 
 返回格式化后的字符。格式字符串前后的字符将原封不动返回。 传入的 `number`
-如果不是数字，将返回 **`NULL`** 并且产生 **`E_WARNING`**。
+如果不是数字，将返回 **`null`** 并且产生 **`E_WARNING`**。
 
 ### 注释
 
@@ -2922,7 +2922,7 @@ Constant
 
 ### 返回值
 
-Returns the element as a string, or **`FALSE`** if `item` is not valid.
+Returns the element as a string, or **`false`** if `item` is not valid.
 
 ### 注释
 
@@ -2944,7 +2944,7 @@ nl2br
 <span class="methodparam"><span class="type">string</span>
 `$string`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_xhtml`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 在字符串 `string` 所有新行之前插入 `'<br />'` 或 `'<br>'`，并返回。
 
@@ -3508,7 +3508,7 @@ class="type">string</span> `$str`</span> )
 ### 返回值
 
 返回 元字符集被转义后的 字符串，如果输入字符串`str`为空， 则返回
-**`FALSE`**。
+**`false`**。
 
 ### 注释
 
@@ -3655,7 +3655,7 @@ class="methodparam"><span class="type">array</span> `$locale`</span> )
     (如果PHP使用*libintl*编译) </span>
 
 `locale`  
-If `locale` is **`NULL`** or the empty string *""*, the locale names
+If `locale` is **`null`** or the empty string *""*, the locale names
 will be set from the values of environment variables with the same names
 as the above categories, or from "LANG".
 
@@ -3678,7 +3678,7 @@ available locale.
 
 ### 返回值
 
-Returns the new current locale, or **`FALSE`** if the locale
+Returns the new current locale, or **`false`** if the locale
 functionality is not implemented on your platform, the specified locale
 does not exist or the category name is invalid.
 
@@ -3768,7 +3768,7 @@ sha1\_file
 class="methodname">sha1\_file</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$raw_output`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 利用
 <a href="http://www.faqs.org/rfcs/rfc3174" class="link external">» 美国安全散列算法 1</a>，计算并返回由
@@ -3781,11 +3781,11 @@ class="initializer"> = **`FALSE`**</span></span> \] )
 要散列的文件的文件名。
 
 `raw_output`  
-如果被设置为 **`TRUE`**，sha1 摘要将以 20 字符长度的原始格式返回。
+如果被设置为 **`true`**，sha1 摘要将以 20 字符长度的原始格式返回。
 
 ### 返回值
 
-成功返回一个字符串，否则返回 **`FALSE`**。
+成功返回一个字符串，否则返回 **`false`**。
 
 ### 范例
 
@@ -3837,7 +3837,7 @@ sha1
 输入字符串。
 
 `raw_output`  
-如果可选的 `raw_output` 参数被设置为 **`TRUE`**， 那么 sha1 摘要将以 20
+如果可选的 `raw_output` 参数被设置为 **`true`**， 那么 sha1 摘要将以 20
 字符长度的原始格式返回， 否则返回值是一个 40 字符长度的十六进制数字。
 
 ### 返回值
@@ -3944,7 +3944,7 @@ Returns the soundex key as a <span class="type">string</span>.
 
 | 版本  | 说明                                                                                                            |
 |-------|-----------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | Prior to this version, calling the function with an empty string returned **`FALSE`** for no particular reason. |
+| 8.0.0 | Prior to this version, calling the function with an empty string returned **`false`** for no particular reason. |
 
 ### 范例
 
@@ -4130,7 +4130,7 @@ Variables will be co-erced to a suitable type for the specifier:
 ### 返回值
 
 Returns a string produced according to the formatting string `format`,
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -4382,7 +4382,7 @@ The substring to search for in the `haystack`.
 
 ### 返回值
 
-Returns **`TRUE`** if `needle` is in `haystack`, **`FALSE`** otherwise.
+Returns **`true`** if `needle` is in `haystack`, **`false`** otherwise.
 
 ### 范例
 
@@ -4466,7 +4466,7 @@ The substring to search for in the `haystack`.
 
 ### 返回值
 
-Returns **`TRUE`** if `haystack` ends with `needle`, **`FALSE`**
+Returns **`true`** if `haystack` ends with `needle`, **`false`**
 otherwise.
 
 ### 范例
@@ -5003,7 +5003,7 @@ class="initializer"> = 1</span></span> \] )
 如果指定了可选的 `split_length` 参数，返回数组中的每个元素均为一个长度为
 `split_length` 的字符块，否则每个字符块为单个字符。
 
-如果 `split_length` 小于 1，返回 **`FALSE`**。如果 `split_length`
+如果 `split_length` 小于 1，返回 **`false`**。如果 `split_length`
 参数超过了 `string` 超过了字符串 `string`
 的长度，整个字符串将作为数组仅有的一个元素返回。
 
@@ -5093,7 +5093,7 @@ The substring to search for in the `haystack`.
 
 ### 返回值
 
-Returns **`TRUE`** if `haystack` begins with `needle`, **`FALSE`**
+Returns **`true`** if `haystack` begins with `needle`, **`false`**
 otherwise.
 
 ### 范例
@@ -5647,11 +5647,11 @@ class="function">stripos</span> 不区分大小写。
 返回 needle 存在于 `haystack`
 字符串开始的位置(独立于偏移量)。同时注意字符串位置起始于 0，而不是 1。
 
-如果未发现 needle 将返回 **`FALSE`**。
+如果未发现 needle 将返回 **`false`**。
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -5806,7 +5806,7 @@ stristr
 `$haystack`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$needle`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$before_needle`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 返回 `haystack` 字符串从 `needle` 第一次出现的位置开始到结尾的字符串。
 
@@ -5819,14 +5819,14 @@ class="initializer"> = **`FALSE`**</span></span> \] )
 如果 `needle` 不是一个字符串，那么它将被转换为整型并被视为字符顺序值。
 
 `before_needle`  
-若为 **`TRUE`**，<span class="function">strstr</span> 将返回 `needle` 在
+若为 **`true`**，<span class="function">strstr</span> 将返回 `needle` 在
 `haystack` 中的位置之前的部分(不包括 needle)。
 
 参数 `needle` 和 `haystack` 将以不区分大小写的方式对待。
 
 ### 返回值
 
-返回匹配的子字符串。如果 `needle` 未找到，返回 **`FALSE`**。
+返回匹配的子字符串。如果 `needle` 未找到，返回 **`false`**。
 
 ### 更新日志
 
@@ -5932,7 +5932,7 @@ echo strlen($str); // 7
 
 > **Note**:
 >
-> <span class="function">strlen</span> returns **`NULL`** when executed
+> <span class="function">strlen</span> returns **`null`** when executed
 > on arrays, and an **`E_WARNING`** level error is emitted.
 
 ### 参见
@@ -6174,7 +6174,7 @@ class="type">string</span> `$char_list`</span> )
 
 ### 返回值
 
-返回一个以找到的字符开始的子字符串。如果没有找到，则返回 **`FALSE`**。
+返回一个以找到的字符开始的子字符串。如果没有找到，则返回 **`false`**。
 
 ### 范例
 
@@ -6237,11 +6237,11 @@ be performed.
 返回 needle 存在于 `haystack` 字符串起始的位置(独立于
 offset)。同时注意字符串位置是从0开始，而不是从1开始的。
 
-如果没找到 needle，将返回 **`FALSE`**。
+如果没找到 needle，将返回 **`false`**。
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -6344,7 +6344,7 @@ class="type">mixed</span> `$needle`</span> )
 
 ### 返回值
 
-该函数返回字符串的一部分。如果 `needle` 未被找到，返回 **`FALSE`**。
+该函数返回字符串的一部分。如果 `needle` 未被找到，返回 **`false`**。
 
 ### 更新日志
 
@@ -6445,11 +6445,11 @@ class="function">strripos</span> 不区分大小写。
 字符串的位置(和搜索的方向和偏移量无关)。同时注意字符串的起始位置为 0
 而非 1。
 
-如果 needle 未被发现，返回 **`FALSE`**。
+如果 needle 未被发现，返回 **`false`**。
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -6519,14 +6519,14 @@ class="initializer"> = 0</span></span> \] )
 
 ### 返回值
 
-返回 needle 存在的位置。如果没有找到，返回 **`FALSE`**。 Also note that
+返回 needle 存在的位置。如果没有找到，返回 **`false`**。 Also note that
 string positions start at 0, and not 1.
 
-Returns **`FALSE`** if the needle was not found.
+Returns **`false`** if the needle was not found.
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -6687,7 +6687,7 @@ strstr
 `$haystack`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$needle`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$before_needle`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 返回 `haystack` 字符串从 `needle` 第一次出现的位置开始到 `haystack`
 结尾的字符串。
@@ -6713,12 +6713,12 @@ class="initializer"> = **`FALSE`**</span></span> \] )
 不是一个字符串，那么它将被转化为整型并且作为字符的序号来使用。
 
 `before_needle`  
-若为 **`TRUE`**，<span class="function">strstr</span> 将返回 `needle` 在
+若为 **`true`**，<span class="function">strstr</span> 将返回 `needle` 在
 `haystack` 中的位置之前的部分。
 
 ### 返回值
 
-返回字符串的一部分或者 **`FALSE`**（如果未发现 `needle`）。
+返回字符串的一部分或者 **`false`**（如果未发现 `needle`）。
 
 ### 更新日志
 
@@ -6826,7 +6826,7 @@ var_dump($first_token, $second_token);
 
 **Warning**
 
-此函数可能返回布尔值 **`FALSE`**，但也可能返回等同于 **`FALSE`**
+此函数可能返回布尔值 **`false`**，但也可能返回等同于 **`false`**
 的非布尔值。请阅读
 <a href="/language/types/boolean.html" class="link">布尔类型</a>章节以获取更多信息。应使用
 <a href="/language/operators/comparison.html" class="link">=== 运算符</a>来测试此函数的返回值。
@@ -6991,9 +6991,9 @@ efficient when all the keys have the same size.
 返回转换后的<span class="type">字符串</span>。
 
 如果 `replace_pairs` 中包含一个空<span
-class="type">字符串</span>（*""*）键，那么将返回 **`FALSE`**。 If the
+class="type">字符串</span>（*""*）键，那么将返回 **`false`**。 If the
 `str` is not a scalar then it is not typecasted into a string, instead a
-warning is raised and **`NULL`** is returned.
+warning is raised and **`null`** is returned.
 
 ### 范例
 
@@ -7064,7 +7064,7 @@ class="methodparam"><span class="type">string</span> `$main_str`</span>
 class="type">int</span> `$length`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$case_insensitivity`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 <span class="function">substr\_compare</span> 从偏移位置 `offset`
 开始比较 `main_str` 与 `str`，比较长度为 `length` 个字符。
@@ -7085,7 +7085,7 @@ class="methodparam"><span class="type">bool</span>
 `offset` 后二者中的较大者。
 
 `case_insensitivity`  
-如果 `case_insensitivity` 为 **`TRUE`**，比较将不区分大小写。
+如果 `case_insensitivity` 为 **`true`**，比较将不区分大小写。
 
 ### 返回值
 
@@ -7093,7 +7093,7 @@ class="methodparam"><span class="type">bool</span>
 的数；如果大于 `str`，则返回大于 0 的数；如果二者相等，则返回 0。如果
 `offset` 大于等于 `main_str` 的长度或 `length` 被设置为小于 1 的值（ PHP
 5.5.11 之前的版本），<span class="function">substr\_compare</span>
-将打印出一条警告信息并且返回 **`FALSE`**。
+将打印出一条警告信息并且返回 **`false`**。
 
 ### 更新日志
 
@@ -7351,7 +7351,7 @@ class="methodparam"><span class="type">int</span> `$length`</span> \] )
 如果 `start` 是负数，返回的字符串将从 `string` 结尾处向前数第 `start`
 个字符开始。
 
-如果 `string` 的长度小于 `start`，将返回 **`FALSE`**。
+如果 `string` 的长度小于 `start`，将返回 **`false`**。
 
 **示例 \#1 使用负数 `start`**
 
@@ -7369,9 +7369,9 @@ $rest = substr("abcdef", -3, 1); // 返回 "d"
 
 如果提供了负数的 `length`，那么 `string` 末尾处的 `length`
 个字符将会被省略（若 `start` 是负数则从字符串尾部算起）。如果 `start`
-不在这段文本中，那么将返回 **`FALSE`**。
+不在这段文本中，那么将返回 **`false`**。
 
-如果提供了值为 *0*，**`FALSE`** 或 **`NULL`** 的
+如果提供了值为 *0*，**`false`** 或 **`null`** 的
 `length`，那么将返回一个空字符串。
 
 如果没有提供 `length`，返回的子字符串将从 `start`
@@ -7390,13 +7390,13 @@ $rest = substr("abcdef", -3, -1); // 返回 "de"
 
 ### 返回值
 
-返回提取的子字符串， 或者在失败时返回 **`FALSE`**。
+返回提取的子字符串， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
 | 版本          | 说明                                                                                                                                             |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0         | 如果 `string` 的字符串长度与 `start` 相同时将返回一个空字符串。在之前的版本中，这种情况将返回 **`FALSE`** 。                                     |
+| 7.0.0         | 如果 `string` 的字符串长度与 `start` 相同时将返回一个空字符串。在之前的版本中，这种情况将返回 **`false`** 。                                     |
 | 5.2.2 - 5.2.6 | If the `start` parameter indicates the position of a negative truncation or beyond, false is returned. Other versions get the string from start. |
 
 ### 范例
@@ -7462,7 +7462,7 @@ echo "7) ".var_export(substr(1.2e3, 0, 4), true).PHP_EOL;
 
 ### 错误／异常
 
-错误时返回 **`FALSE`**。
+错误时返回 **`false`**。
 
 ``` php
 <?php
@@ -8002,7 +8002,7 @@ Variables will be co-erced to a suitable type for the specifier:
 ### 返回值
 
 根据 `format` 参数指定的格式，在一个字符串中返回一系列值，
-或者在失败时返回 **`FALSE`**。
+或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -8045,7 +8045,7 @@ class="initializer"> = 75</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$break`<span
 class="initializer"> = "\\n"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$cut`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\] )
 
 使用字符串断点将字符串打断为指定数量的字串。
 
@@ -8061,9 +8061,9 @@ class="initializer"> = **`FALSE`**</span></span> \]\]\] )
 使用可选的 `break` 参数打断字符串。
 
 `cut`  
-如果 `cut` 设置为 **`TRUE`**，字符串总是在指定的 `width`
+如果 `cut` 设置为 **`true`**，字符串总是在指定的 `width`
 或者之前位置被打断。因此，如果有的单词宽度超过了给定的宽度，它将被分隔开来。（参见第二个范例）。
-当它是 **`FALSE`** ，函数不会分割单词，哪怕 `width` 小于单词宽度。
+当它是 **`false`** ，函数不会分割单词，哪怕 `width` 小于单词宽度。
 
 ### 返回值
 

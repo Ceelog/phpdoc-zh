@@ -60,7 +60,7 @@ class="function">error\_get\_last</span>
 ### *(unset)* 类型强制转化
 
 转化任意表达式为此类型，结果总是
-**`NULL`**，所以这个多余的类型转化现在也就被废弃了。
+**`null`**，所以这个多余的类型转化现在也就被废弃了。
 
 ### <span class="function">parse\_str</span> 不加第二个参数
 

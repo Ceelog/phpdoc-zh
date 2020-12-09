@@ -2,12 +2,12 @@ Boolean 布尔类型
 ----------------
 
 这是最简单的类型。<span class="type">boolean</span> 表达了真值，可以为
-**`TRUE`** 或 **`FALSE`**。
+**`true`** 或 **`false`**。
 
 ### 语法
 
-要指定一个布尔值，使用常量 **`TRUE`** 或
-**`FALSE`**。两个都不区分大小写。
+要指定一个布尔值，使用常量 **`true`** 或
+**`false`**。两个都不区分大小写。
 
 ``` php
 <?php
@@ -48,11 +48,11 @@ if ($show_separators) {
 参见<a href="/language/types/type-juggling.html" class="link">类型转换的判别</a>。
 
 当转换为 <span class="type">boolean</span> 时，以下值被认为是
-**`FALSE`**：
+**`false`**：
 
 -   <span class="simpara">
     <a href="/language/types/boolean.html" class="link">布尔</a>值
-    **`FALSE`** 本身 </span>
+    **`false`** 本身 </span>
 -   <span class="simpara">
     <a href="/language/types/integer.html" class="link">整型</a>值
     0（零）及 -0 (零) </span>
@@ -73,12 +73,12 @@ if ($show_separators) {
     </span>
 
 所有其它值都被认为是
-**`TRUE`**（包括任何<a href="/language/types/resource.html" class="link">资源</a>
+**`true`**（包括任何<a href="/language/types/resource.html" class="link">资源</a>
 和 **`NAN`**）。
 
 **Warning**
 
-*-1* 和其它非零值（不论正负）一样，被认为是 **`TRUE`**！
+*-1* 和其它非零值（不论正负）一样，被认为是 **`true`**！
 
 ``` php
 <?php

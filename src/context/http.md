@@ -32,11 +32,11 @@ HTTP context 的选项列表
 URI 指定的代理服务器的地址。(e.g. *tcp://proxy.example.com:5100*).
 
 `request_fulluri` <span class="type">boolean</span>  
-当设置为 **`TRUE`** 时，在构建请求时将使用整个 URI 。(i.e. *GET
+当设置为 **`true`** 时，在构建请求时将使用整个 URI 。(i.e. *GET
 http://www.example.com/path/to/file.html HTTP/1.0*)。
 虽然这是一个非标准的请求格式，但某些代理服务器需要它。
 
-默认值是 **`FALSE`**.
+默认值是 **`false`**.
 
 `follow_location` <span class="type">integer</span>  
 跟随 *Location* header 的重定向。设置为 *0* 以禁用。
@@ -68,7 +68,7 @@ HTTP 协议版本。
 `ignore_errors` <span class="type">boolean</span>  
 即使是故障状态码依然获取内容。
 
-默认值为 **`FALSE`**.
+默认值为 **`false`**.
 
 ### 更新日志
 

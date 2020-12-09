@@ -256,7 +256,7 @@ alters. In most cases this means you will increment `consumed` by
 `closing`  
 If the stream is in the process of closing (and therefore this is the
 last pass through the filterchain), the `closing` parameter will be set
-to **`TRUE`**.
+to **`true`**.
 
 ### 返回值
 
@@ -316,7 +316,7 @@ below.
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | *FilterClass-\>filtername* | A string containing the name the filter was instantiated with. Filters may be registered under multiple names or under wildcards. Use this property to determine which name was used. |
 | *FilterClass-\>params*     | The contents of the `params` parameter passed to <span class="function">stream\_filter\_append</span> or <span class="function">stream\_filter\_prepend</span>.                       |
-| *FilterClass-\>stream*     | The stream resource being filtered. Maybe available only during <span class="methodname">filter</span> calls when the *closing* parameter is set to **`FALSE`**.                      |
+| *FilterClass-\>stream*     | The stream resource being filtered. Maybe available only during <span class="methodname">filter</span> calls when the *closing* parameter is set to **`false`**.                      |
 
 ### 参数
 
@@ -324,8 +324,8 @@ below.
 
 ### 返回值
 
-Your implementation of this method should return **`FALSE`** on failure,
-or **`TRUE`** on success.
+Your implementation of this method should return **`false`** on failure,
+or **`true`** on success.
 
 简介
 ----
@@ -487,7 +487,7 @@ class="methodparam"><span class="type">string</span> `$path`</span> ,
 
 resource `context`  
 The current <a href="/context.html" class="link">context</a>, or
-**`NULL`** if no context was passed to the caller function.
+**`null`** if no context was passed to the caller function.
 
 Use the <span class="function">stream\_context\_get\_options</span> to
 parse the context.
@@ -562,7 +562,7 @@ the directory stream should be released.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -600,7 +600,7 @@ class="function">opendir</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -629,7 +629,7 @@ class="function">readdir</span>.
 ### 返回值
 
 Should return <span class="type">string</span> representing the next
-filename, or **`FALSE`** if there is no next file.
+filename, or **`false`** if there is no next file.
 
 > **Note**:
 >
@@ -775,7 +775,7 @@ class="methodname">streamWrapper::dir\_opendir</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -818,7 +818,7 @@ A bitwise mask of values, such as **`STREAM_MKDIR_RECURSIVE`**.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -870,7 +870,7 @@ The URL which the `path_from` should be renamed to.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -919,7 +919,7 @@ A bitwise mask of values, such as **`STREAM_MKDIR_RECURSIVE`**.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -963,7 +963,7 @@ class="function">stream\_cast</span> or **`STREAM_CAST_AS_STREAM`** when
 ### 返回值
 
 Should return the underlying stream resource used by the wrapper, or
-**`FALSE`**.
+**`false`**.
 
 ### 参见
 
@@ -1018,8 +1018,8 @@ This method is called in response to <span class="function">feof</span>.
 
 ### 返回值
 
-Should return **`TRUE`** if the read/write position is at the end of the
-stream and if no more data is available to be read, or **`FALSE`**
+Should return **`true`** if the read/write position is at the end of the
+stream and if no more data is available to be read, or **`false`**
 otherwise.
 
 ### 注释
@@ -1062,15 +1062,15 @@ underlying storage, you should do so now.
 
 ### 返回值
 
-Should return **`TRUE`** if the cached data was successfully stored (or
-if there was no data to store), or **`FALSE`** if the data could not be
+Should return **`true`** if the cached data was successfully stored (or
+if there was no data to store), or **`false`** if the data could not be
 stored.
 
 ### 注释
 
 > **Note**:
 >
-> If not implemented, **`FALSE`** is assumed as the return value.
+> If not implemented, **`false`** is assumed as the return value.
 
 ### 参见
 
@@ -1110,7 +1110,7 @@ when closing the stream (**`LOCK_UN`**).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -1184,8 +1184,8 @@ If `option` is
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 If `option` is
-not implemented, **`FALSE`** should be returned.
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 If `option` is
+not implemented, **`false`** should be returned.
 
 ### 参见
 
@@ -1248,7 +1248,7 @@ file/resource that was actually opened.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -1293,7 +1293,7 @@ How many bytes of data from the current position should be returned.
 ### 返回值
 
 If there are less than `count` bytes available, return as many as are
-available. If no more data is available, return either **`FALSE`** or an
+available. If no more data is available, return either **`false`** or an
 empty string.
 
 ### 错误／异常
@@ -1366,13 +1366,13 @@ Possible values:
 
 ### 返回值
 
-Return **`TRUE`** if the position was updated, **`FALSE`** otherwise.
+Return **`true`** if the position was updated, **`false`** otherwise.
 
 ### 注释
 
 > **Note**:
 >
-> If not implemented, **`FALSE`** is assumed as the return value.
+> If not implemented, **`false`** is assumed as the return value.
 
 > **Note**:
 >
@@ -1381,7 +1381,7 @@ Return **`TRUE`** if the position was updated, **`FALSE`** otherwise.
 > directly after calling <span
 > class="methodname">streamWrapper::stream\_seek</span>. If <span
 > class="methodname">streamWrapper::stream\_tell</span> fails, the
-> return value to the caller function will be set to **`FALSE`**
+> return value to the caller function will be set to **`false`**
 
 > **Note**:
 >
@@ -1440,8 +1440,8 @@ If `option` is
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 If `option` is
-not implemented, **`FALSE`** should be returned.
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 If `option` is
+not implemented, **`false`** should be returned.
 
 ### 参见
 
@@ -1527,7 +1527,7 @@ The new size.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1607,7 +1607,7 @@ The file URL which should be deleted.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 

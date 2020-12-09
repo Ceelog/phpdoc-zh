@@ -23,14 +23,14 @@ class="methodparam"><span class="type">int</span> `$what`</span> \[,
 | ASSERT\_WARNING     | assert.warning     | 1            | 为每个失败的断言产生一个 PHP 警告（warning）   |
 | ASSERT\_BAIL        | assert.bail        | 0            | 在断言失败时中止执行                           |
 | ASSERT\_QUIET\_EVAL | assert.quiet\_eval | 0            | 在断言表达式求值时禁用 error\_reporting        |
-| ASSERT\_CALLBACK    | assert.callback    | (**`NULL`**) | 断言失败时调用回调函数                         |
+| ASSERT\_CALLBACK    | assert.callback    | (**`null`**) | 断言失败时调用回调函数                         |
 
 `value`  
 标志的新值。
 
 ### 返回值
 
-返回任意标志的原始设置，出错时返回 **`FALSE`**。
+返回任意标志的原始设置，出错时返回 **`false`**。
 
 ### 范例
 
@@ -71,7 +71,7 @@ echo 'Never reached';
 assert
 ======
 
-检查一个断言是否为 **`FALSE`**
+检查一个断言是否为 **`false`**
 
 ### 说明
 
@@ -90,7 +90,7 @@ PHP 7
 class="type">Throwable</span> `$exception`</span> \] )
 
 <span class="function">assert</span> 会检查指定的 `assertion` 并在结果为
-**`FALSE`** 时采取适当的行动。
+**`false`** 时采取适当的行动。
 
 #### Traditional assertions (PHP 5 and 7)
 
@@ -100,12 +100,12 @@ class="type">Throwable</span> `$exception`</span> \] )
 `assertion` 表达式。 这意味着如果你传入了 boolean 的条件作为
 `assertion`，这个条件将不会显示为断言函数的参数；在调用你定义的 <span
 class="function">assert\_options</span>
-处理函数时，条件会转换为字符串，而布尔值 **`FALSE`**
+处理函数时，条件会转换为字符串，而布尔值 **`false`**
 会被转换成空字符串。
 
 断言这个功能应该只被用来调试。
 你应该用于完整性检查时测试条件是否始终应该为
-**`TRUE`**，来指示某些程序错误，或者检查具体功能的存在（类似扩展函数或特定的系统限制和功能）。
+**`true`**，来指示某些程序错误，或者检查具体功能的存在（类似扩展函数或特定的系统限制和功能）。
 
 断言不应该用于普通运行时操作，类似输入参数的检查。
 作为一个经验法则，在断言禁用时你的代码也应该能够正确地运行。
@@ -197,7 +197,7 @@ configuration directive is enabled.
 
 ### 返回值
 
-assertion 是 false 则返回 **`FALSE`**，否则是 **`TRUE`**。
+assertion 是 false 则返回 **`false`**，否则是 **`true`**。
 
 ### 更新日志
 
@@ -375,7 +375,7 @@ This function is available only in
 
 ### 返回值
 
-Return a string with the current process title or **`NULL`** on error.
+Return a string with the current process title or **`null`** on error.
 
 ### 错误／异常
 
@@ -419,7 +419,7 @@ The new title.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -501,11 +501,11 @@ Unix - 如果没有在 `php.ini` 里明确设置，默认的扩展目录依赖�
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 如果加载模块的功能是无效或者禁用的（可以关闭
 <a href="/info/setup.html#" class="link">enable_dl</a> 设置）将导致一个
 **`E_ERROR`** 并中断执行。 如果因为指定的库无法加载而导致 <span
-class="function">dl</span> 失败，除了返回 **`FALSE`**，还会产生一个
+class="function">dl</span> 失败，除了返回 **`false`**，还会产生一个
 **`E_WARNING`** 的消息。
 
 ### 范例
@@ -589,7 +589,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 
 ### 返回值
 
-如果 `name` 指定的扩展已加载，返回**`TRUE`**，否则返回 **`FALSE`**。
+如果 `name` 指定的扩展已加载，返回**`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -709,7 +709,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-如果垃圾收集器已启用则返回 **`TRUE`**，否则返回 **`FALSE`**。
+如果垃圾收集器已启用则返回 **`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -840,7 +840,7 @@ cfg\_file\_path 的配置设置的值。 如果有效，将会使用一个配置
 
 ### 返回值
 
-返回 `option` 指定的当前 PHP 配置变量的值，错误发生时返回 **`FALSE`**。
+返回 `option` 指定的当前 PHP 配置变量的值，错误发生时返回 **`false`**。
 
 ### 更新日志
 
@@ -902,7 +902,7 @@ get\_defined\_constants
 <span class="type">array</span> <span
 class="methodname">get\_defined\_constants</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$categorize`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 返回当前所有已定义的常量名和值。 这包含 <span
 class="function">define</span> 函数所创建的，也包含了所有扩展所创建的。
@@ -968,7 +968,7 @@ print_r(get_defined_constants(true));
 |--------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | 5.3.1  | 仅作用于 Windows：内核常量归类到 *Core*，之前是 *mhash*。                                                                                    |
 | 5.3.0  | 内核常量归类为 *Core*，之前是 *internal*。在 Windows 上，内核常量归类到 *mhash*。                                                            |
-| 5.2.11 | `categorize` 参数现在可以合适得被处理。 在此之前，`categorize` 被解释为 *!is\_null($categorize)*，导致任何非 **`NULL`** 的值会强制常量分类。 |
+| 5.2.11 | `categorize` 参数现在可以合适得被处理。 在此之前，`categorize` 被解释为 *!is\_null($categorize)*，导致任何非 **`null`** 的值会强制常量分类。 |
 
 ### 范例
 
@@ -1032,7 +1032,7 @@ class="methodparam"><span class="type">string</span>
 ### 返回值
 
 返回包含所有函数名的数组，如果 `module_name` 不是一个有效的扩展则返回
-**`FALSE`**。
+**`false`**。
 
 ### 范例
 
@@ -1198,7 +1198,7 @@ get\_loaded\_extensions
 <span class="type">array</span> <span
 class="methodname">get\_loaded\_extensions</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$zend_extensions`<span class="initializer"> = **`FALSE`**</span></span>
+`$zend_extensions`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 该函数返回了 PHP 解析器里所有编译并加载的模块名。
@@ -1206,7 +1206,7 @@ class="methodparam"><span class="type">bool</span>
 ### 参数
 
 `zend_extensions`  
-只返回 Zend 扩展，并非类似 mysqli 的普通扩展。默认是 **`FALSE`**
+只返回 Zend 扩展，并非类似 mysqli 的普通扩展。默认是 **`false`**
 (返回普通扩展)。
 
 ### 返回值
@@ -1272,13 +1272,13 @@ class="methodparam">void</span> )
 ### 返回值
 
 如果 magic\_quotes\_gpc 为关闭时返回 0，否则返回 1。在 PHP 5.4.O
-起将始终返回 **`FALSE`**。
+起将始终返回 **`false`**。
 
 ### 更新日志
 
 | 版本  | 说明                                                            |
 |-------|-----------------------------------------------------------------|
-| 5.4.0 | 始终返回 **`FALSE`**，因为这个魔术引号功能已经从 PHP 中移除了。 |
+| 5.4.0 | 始终返回 **`false`**，因为这个魔术引号功能已经从 PHP 中移除了。 |
 
 ### 范例
 
@@ -1313,7 +1313,7 @@ $sql = "INSERT INTO lastnames (lastname) VALUES ('$lastname')";
 > 如果指令 magic\_quotes\_sybase 为 ON，它会完全覆盖
 > <a href="/info/setup.html#" class="link">magic_quotes_gpc</a>。
 > 所以即使 <span class="function">get\_magic\_quotes\_gpc</span> 返回
-> **`TRUE`**，双引号、反斜杠或 NUL 都不会被转义。 只有单引号会被转义。
+> **`true`**，双引号、反斜杠或 NUL 都不会被转义。 只有单引号会被转义。
 > 这种情况下它们看上去像：*''*
 
 ### 参见
@@ -1341,13 +1341,13 @@ class="methodparam">void</span> )
 ### 返回值
 
 magic\_quotes\_runtime 在关闭时返回 0，否则返回 1。 自 PHP 5.4.0
-起始终返回 **`FALSE`**。
+起始终返回 **`false`**。
 
 ### 更新日志
 
 | 版本  | 说明                                                                      |
 |-------|---------------------------------------------------------------------------|
-| 5.4.0 | 总是返回 **`FALSE`**，因为魔术引号（magic quotes）功能已经从 PHP 中移除。 |
+| 5.4.0 | 总是返回 **`false`**，因为魔术引号（magic quotes）功能已经从 PHP 中移除。 |
 
 ### 范例
 
@@ -1466,7 +1466,7 @@ getenv
 ( <span class="methodparam"><span class="type">string</span>
 `$varname`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$local_only`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="type">array</span> <span class="methodname">getenv</span> (
 <span class="methodparam">void</span> )
@@ -1490,7 +1490,7 @@ class="function">putenv</span> 设置）。
 ### 返回值
 
 返回环境变量 `varname` 的值， 如果环境变量 `varname` 不存在则返回
-**`FALSE`**。 如果省略 `varname`，则所有环境变量都将作为关联数组 <span
+**`false`**。 如果省略 `varname`，则所有环境变量都将作为关联数组 <span
 class="type">array</span> 返回。
 
 ### 更新日志
@@ -1550,7 +1550,7 @@ class="function">filemtime</span>。
 ### 返回值
 
 返回当前页面最后修改的时间。这个值是一个 Unix 时间戳，可以传入 <span
-class="function">date</span>。 错误时返回 **`FALSE`**。
+class="function">date</span>。 错误时返回 **`false`**。
 
 ### 范例
 
@@ -1587,7 +1587,7 @@ getmygid
 
 ### 返回值
 
-返回当前 PHP 脚本拥有者的用户组 ID，或在错误时返回 **`FALSE`**。
+返回当前 PHP 脚本拥有者的用户组 ID，或在错误时返回 **`false`**。
 
 ### 参见
 
@@ -1611,7 +1611,7 @@ getmyinode
 
 ### 返回值
 
-以整型返回当前脚本的索引节点（inode），或在错误时返回 **`FALSE`**。
+以整型返回当前脚本的索引节点（inode），或在错误时返回 **`false`**。
 
 ### 参见
 
@@ -1635,7 +1635,7 @@ getmypid
 
 ### 返回值
 
-返回当前 PHP 进程 ID，或在错误时返回 **`FALSE`**。
+返回当前 PHP 进程 ID，或在错误时返回 **`false`**。
 
 ### 注释
 
@@ -1666,7 +1666,7 @@ getmyuid
 
 ### 返回值
 
-返回当前脚本的用户 ID，或在错误时返回 **`FALSE`**。
+返回当前脚本的用户 ID，或在错误时返回 **`false`**。
 
 ### 参见
 
@@ -1730,7 +1730,7 @@ index where argument parsing stopped will be written to this variable.
 
 ### 返回值
 
-此函数会返回选项/参数对， 或者在失败时返回 **`FALSE`**。
+此函数会返回选项/参数对， 或者在失败时返回 **`false`**。
 
 > **Note**:
 >
@@ -1976,7 +1976,7 @@ ini\_get\_all
 class="methodname">ini\_get\_all</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$extension`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$details`<span class="initializer"> = **`TRUE`**</span></span> \]\] )
+`$details`<span class="initializer"> = **`true`**</span></span> \]\] )
 
 获取所有已注册的配置选项
 
@@ -1987,19 +1987,19 @@ class="methodparam"><span class="type">string</span> `$extension`</span>
 
 `details`  
 获取详细设置或者仅仅是每个设置的当前值。 默认是
-**`TRUE`**（获取详细信息）。
+**`true`**（获取详细信息）。
 
 ### 返回值
 
 返回一个关联数组，指令名称是数组的键。 如果 `extension` 不存在，返回
-**`FALSE`** 并产生 **`E_WARNING`** 级错误。
+**`false`** 并产生 **`E_WARNING`** 级错误。
 
-当 `details` 为 **`TRUE`**（默认），数组会包含
+当 `details` 为 **`true`**（默认），数组会包含
 *global\_value*（`php.ini` 中的设置）、*local\_value*（可能是 <span
 class="function">ini\_set</span> 或 `.htaccess` 中的设置） 以及
 *access*（访问级别）。
 
-当 `details` 为 **`FALSE`**，这个值会是选项的当前值。
+当 `details` 为 **`false`**，这个值会是选项的当前值。
 
 参见<a href="/configuration/changes/modes.html" class="link">手册章节</a>中访问级别含义的信息。
 
@@ -2124,7 +2124,7 @@ class="type">string</span> `$varname`</span> )
 ### 返回值
 
 成功是返回配置选项值的字符串，*null*
-的值则返回空字符串。如果配置选项不存在，将会返回 **`FALSE`**。
+的值则返回空字符串。如果配置选项不存在，将会返回 **`false`**。
 
 ### 范例
 
@@ -2196,13 +2196,13 @@ function return_bytes($val) {
 > **Note**:
 >
 > <span class="function">ini\_get</span> 无法读取 "array" 的 ini
-> 选项，例如 pdo.dsn.\*，在这个例子中会返回 **`FALSE`** 。
+> 选项，例如 pdo.dsn.\*，在这个例子中会返回 **`false`** 。
 
 ### 更新日志
 
 | 版本  | 说明                                                         |
 |-------|--------------------------------------------------------------|
-| 5.3.0 | 当配置项不存在，之前会返回空字符串，现在会返回 **`FALSE`**。 |
+| 5.3.0 | 当配置项不存在，之前会返回空字符串，现在会返回 **`false`**。 |
 
 ### 参见
 
@@ -2290,7 +2290,7 @@ class="methodparam"><span class="type">string</span> `$newvalue`</span>
 
 ### 返回值
 
-成功时返回旧的值，失败时返回 **`FALSE`**。
+成功时返回旧的值，失败时返回 **`false`**。
 
 ### 范例
 
@@ -2367,8 +2367,8 @@ class="initializer"> = false</span></span> \] )
 ### 参数
 
 `real_usage`  
-如果设置为 **`TRUE`** 可以获取从系统分配到的真实内存尺寸。
-如果未设置，或者设置为 **`FALSE`**，仅会报告 *emalloc()* 使用的内存。
+如果设置为 **`true`** 可以获取从系统分配到的真实内存尺寸。
+如果未设置，或者设置为 **`false`**，仅会报告 *emalloc()* 使用的内存。
 
 ### 返回值
 
@@ -2404,8 +2404,8 @@ class="initializer"> = false</span></span> \] )
 
 `real_usage`  
 如果设置为
-**`TRUE`**，获取系统分配总的内存尺寸，包括未使用的页。如果未设置或者设置为
-**`FALSE`**，仅仅报告实际使用的内存量。
+**`true`**，获取系统分配总的内存尺寸，包括未使用的页。如果未设置或者设置为
+**`false`**，仅仅报告实际使用的内存量。
 
 > **Note**:
 >
@@ -2467,7 +2467,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-已加载的 `php.ini` 路径，或在没有时返回 **`FALSE`**。
+已加载的 `php.ini` 路径，或在没有时返回 **`false`**。
 
 ### 范例
 
@@ -2516,7 +2516,7 @@ class="methodparam">void</span> )
 ### 返回值
 
 成功时返回逗号分隔的 .ini 文件字符串。 每个逗号后紧跟新的一行。
-如果未设置指令 **--with-config-file-scan-dir** 将会返回 **`FALSE`**。
+如果未设置指令 **--with-config-file-scan-dir** 将会返回 **`false`**。
 如果它设置了，并且目录是空的，将会返回一个空字符串。
 如果有未识别的文件，此文件也会进入返回的字符串，但是会导致一个 PHP
 错误。 此 PHP 错误即会在编译时出现也会在使用 <span
@@ -2733,7 +2733,7 @@ CREDITS\_ALL</span></span> \] )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2826,7 +2826,7 @@ EGPCS(Environment, GET, POST, Cookie, Server) 数据的调试工具。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -2907,7 +2907,7 @@ class="type">string</span> `$extension`</span> \] )
 
 如果指定了可选参数 `extension`，<span
 class="function">phpversion</span>会返回该扩展的版本。
-如果没有对应的版本信息，或者该扩展未启用，则返回 **`FALSE`**。
+如果没有对应的版本信息，或者该扩展未启用，则返回 **`false`**。
 
 ### 范例
 
@@ -2993,7 +2993,7 @@ putenv
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3085,7 +3085,7 @@ class="methodparam"><span class="type">string</span>
 
 成功时返回旧的
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>
-或者在失败时返回 **`FALSE`**。
+或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -3145,7 +3145,7 @@ class="function">set\_time\_limit</span>会从零开始重新启动超时计数�
 
 ### 返回值
 
-成功时返回 **`TRUE`**，失败时返回 **`FALSE`** 。
+成功时返回 **`true`**，失败时返回 **`false`** 。
 
 ### 注释
 
@@ -3247,7 +3247,7 @@ class="function">version\_compare</span> 返回 *-1*；如果两者相等，返�
 *0*；第二个版本更低时则返回 *1*。
 
 当使用了可选参数 `operator` 时，如果关系是操作符所指定的那个，函数将返回
-**`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，否则返回 **`false`**。
 
 ### 范例
 
@@ -3381,7 +3381,7 @@ echo "Zend engine version: " . zend_version();
 
 -   [assert\_options](/ref/info.html#assert_options) —
     设置/获取断言的各种标志
--   [assert](/ref/info.html#assert) — 检查一个断言是否为 FALSE
+-   [assert](/ref/info.html#assert) — 检查一个断言是否为 false
 -   [cli\_get\_process\_title](/ref/info.html#cli_get_process_title) —
     Returns the current process title
 -   [cli\_set\_process\_title](/ref/info.html#cli_set_process_title) —

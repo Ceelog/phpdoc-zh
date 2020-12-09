@@ -3,10 +3,10 @@
 
 ### PHP 核心
 
--   <span class="simpara"> 使用 **`NULL`** 作为参数调用 <span
+-   <span class="simpara"> 使用 **`null`** 作为参数调用 <span
     class="function">set\_error\_handler</span> 将重置错误处理程序。
     </span>
--   <span class="simpara"> 当使用 **`NULL`** 调用<span
+-   <span class="simpara"> 当使用 **`null`** 调用<span
     class="function">set\_error\_handler</span> 和 <span
     class="function">set\_exception\_handler</span> 时，
     现在分别返回上一个错误或异常处理程序。 </span>

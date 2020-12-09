@@ -104,7 +104,7 @@ class="function">password\_hash</span>。
 -   <span class="simpara"> **`PASSWORD_BCRYPT`** - 使用
     **`CRYPT_BLOWFISH`** 算法创建散列。 这会产生兼容使用 "$2y$" 的 <span
     class="function">crypt</span>。 结果将会是 60 个字符的字符串，
-    或者在失败时返回 **`FALSE`**。 </span>
+    或者在失败时返回 **`false`**。 </span>
 -   <span class="simpara"> **`PASSWORD_ARGON2I`** - 使用 Argon2i
     散列算法创建散列。 只有在 PHP 编译时加入 Argon2
     支持时才能使用该算法。 </span>
@@ -162,7 +162,7 @@ class="function">password\_hash</span>。
 
 ### 返回值
 
-返回散列后的密码， 或者在失败时返回 **`FALSE`**。
+返回散列后的密码， 或者在失败时返回 **`false`**。
 
 使用的算法、cost
 和盐值作为散列的一部分返回。所以验证散列值的所有信息都已经包含在内。
@@ -329,7 +329,7 @@ class="methodparam"><span class="type">string</span> `$hash`</span> ,
 ### 返回值
 
 如果散列需要重新生成才能匹配指定的 `algo` 和 `options`， 则返回
-**`TRUE`**，否则返回 **`FALSE`**。
+**`true`**，否则返回 **`false`**。
 
 ### 更新日志
 
@@ -395,7 +395,7 @@ cost 和盐值。
 
 ### 返回值
 
-如果密码和散列值匹配则返回 **`TRUE`**，否则返回 **`FALSE`** 。
+如果密码和散列值匹配则返回 **`true`**，否则返回 **`false`** 。
 
 ### 范例
 

@@ -13,7 +13,7 @@ class="methodparam">void</span> )
 
 Returns an
 <a href="/openal/setup.html#资源类型" class="link">Open AL(Buffer)</a>
-resource on success or **`FALSE`** on failure.
+resource on success or **`false`** on failure.
 
 ### 参见
 
@@ -55,7 +55,7 @@ Frequency of `data` given in Hz.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -84,7 +84,7 @@ class="function">openal\_buffer\_create</span>).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -119,7 +119,7 @@ Specific property, one of: **`AL_FREQUENCY`**, **`AL_BITS`**,
 ### 返回值
 
 Returns an integer value appropriate to the `property` requested
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -151,7 +151,7 @@ Path to `.wav` file on *local* file system.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -182,7 +182,7 @@ class="function">openal\_device\_open</span>).
 
 Returns an
 <a href="/openal/setup.html#资源类型" class="link">Open AL(Context)</a>
-resource on success or **`FALSE`** on failure.
+resource on success or **`false`** on failure.
 
 ### 参见
 
@@ -211,7 +211,7 @@ class="function">openal\_context\_create</span>).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -239,7 +239,7 @@ class="function">openal\_context\_create</span>).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -267,7 +267,7 @@ class="function">openal\_context\_create</span>).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -297,7 +297,7 @@ class="function">openal\_context\_create</span>).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -327,7 +327,7 @@ class="function">openal\_device\_open</span>) to be closed.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -356,7 +356,7 @@ used.
 
 Returns an
 <a href="/openal/setup.html#资源类型" class="link">Open AL(Device)</a>
-resource on success or **`FALSE`** on failure.
+resource on success or **`false`** on failure.
 
 ### 参见
 
@@ -384,7 +384,7 @@ Property to retrieve, one of: **`AL_GAIN`** (float), **`AL_POSITION`**
 ### 返回值
 
 Returns a float or array of floats (as appropriate) 或者在失败时返回
-**`FALSE`**.
+**`false`**.
 
 ### 参见
 
@@ -415,7 +415,7 @@ Value to set, either float, or an array of floats as appropriate.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -436,7 +436,7 @@ class="methodparam">void</span> )
 
 Returns an
 <a href="/openal/setup.html#资源类型" class="link">Open AL(Source)</a>
-resource on success or **`FALSE`** on failure.
+resource on success or **`false`** on failure.
 
 ### 参见
 
@@ -466,7 +466,7 @@ class="function">openal\_source\_create</span>).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -507,7 +507,7 @@ Property to get, one of: **`AL_SOURCE_RELATIVE`** (int),
 ### 返回值
 
 Returns the type associated with the property being retrieved
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -537,7 +537,7 @@ class="function">openal\_source\_create</span>).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -567,7 +567,7 @@ class="function">openal\_source\_create</span>).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -597,7 +597,7 @@ class="function">openal\_source\_create</span>).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -645,7 +645,7 @@ Value to assign to specified `property`. Refer to the description of
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -675,7 +675,7 @@ class="function">openal\_source\_create</span>).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -715,7 +715,7 @@ Frequency of data to stream given in Hz.
 
 ### 返回值
 
-Returns a stream resource on success 或者在失败时返回 **`FALSE`**.
+Returns a stream resource on success 或者在失败时返回 **`false`**.
 
 ### 参见
 

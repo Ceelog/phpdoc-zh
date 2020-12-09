@@ -61,7 +61,7 @@ class="function">property\_exists</span> 来替代。
 
 魔术引号函数 <span class="function">get\_magic\_quotes\_gpc</span> 和
 <span class="function">get\_magic\_quotes\_runtime</span>
-已被废弃。它们将永远返回 **`FALSE`**。
+已被废弃。它们将永远返回 **`false`**。
 
 #### <span class="function">hebrevc</span> 函数
 

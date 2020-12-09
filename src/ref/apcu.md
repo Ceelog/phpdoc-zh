@@ -33,7 +33,7 @@ Caches a variable in the data store, only if it's not already stored.
 Store the variable using this name. `key`s are cache-unique, so
 attempting to use <span class="function">apcu\_add</span> to store data
 with a key that already exists will not overwrite the existing data, and
-will instead return **`FALSE`**. (This is the only difference between
+will instead return **`false`**. (This is the only difference between
 <span class="function">apcu\_add</span> and <span
 class="function">apcu\_store</span>.)
 
@@ -94,20 +94,20 @@ Retrieves cached information from APCu's data store
 class="type">false</span></span> <span
 class="methodname">apcu\_cache\_info</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$limited`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Retrieves cached information and meta-data from APC's data store.
 
 ### 参数
 
 `limited`  
-If `limited` is **`TRUE`**, the return value will exclude the individual
+If `limited` is **`true`**, the return value will exclude the individual
 list of cache entries. This is useful when trying to optimize calls for
 statistics gathering.
 
 ### 返回值
 
-Array of cached data (and meta-data) 或者在失败时返回 **`FALSE`**
+Array of cached data (and meta-data) 或者在失败时返回 **`false`**
 
 > **Note**: <span class="simpara"> <span
 > class="function">apcu\_cache\_info</span> will raise a warning if it
@@ -196,7 +196,7 @@ The new value to update to.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -254,7 +254,7 @@ Clears the cache.
 
 ### 返回值
 
-Returns **`TRUE`** always
+Returns **`true`** always
 
 ### 参见
 
@@ -298,7 +298,7 @@ decrementing an existing one).
 ### 返回值
 
 Returns the current value of `key`'s value on success, 或者在失败时返回
-**`FALSE`**
+**`false`**
 
 ### 更新日志
 
@@ -376,8 +376,8 @@ for several keys, or as an <span class="classname">APCUIterator</span>
 ### 返回值
 
 If `key` is an <span class="type">array</span>, an indexed <span
-class="type">array</span> of the keys is returned. Otherwise **`TRUE`**
-is returned on success, or **`FALSE`** on failure.
+class="type">array</span> of the keys is returned. Otherwise **`true`**
+is returned on success, or **`false`** on failure.
 
 ### 范例
 
@@ -424,8 +424,8 @@ Returns whether APCu is usable in the current environment.
 
 ### 返回值
 
-Returns **`TRUE`** when APCu is usable in the current environment,
-**`FALSE`** otherwise.
+Returns **`true`** when APCu is usable in the current environment,
+**`false`** otherwise.
 
 apcu\_entry
 ===========
@@ -557,7 +557,7 @@ class="type">array</span> of strings, that contain keys.
 
 ### 返回值
 
-Returns **`TRUE`** if the key exists, otherwise **`FALSE`** Or if an
+Returns **`true`** if the key exists, otherwise **`false`** Or if an
 <span class="type">array</span> was passed to `keys`, then an array is
 returned that contains all existing keys, or an empty array if none
 exist.
@@ -635,11 +635,11 @@ class="function">apcu\_store</span>). If an array is passed then each
 element is fetched and returned.
 
 `success`  
-Set to **`TRUE`** in success and **`FALSE`** in failure.
+Set to **`true`** in success and **`false`** in failure.
 
 ### 返回值
 
-The stored variable or array of variables on success; **`FALSE`** on
+The stored variable or array of variables on success; **`false`** on
 failure
 
 ### 范例
@@ -708,7 +708,7 @@ incrementing an existing one).
 ### 返回值
 
 Returns the current value of `key`'s value on success, 或者在失败时返回
-**`FALSE`**
+**`false`**
 
 ### 更新日志
 
@@ -830,20 +830,20 @@ Retrieves APCu Shared Memory Allocation information
 <span class="type">array</span> <span
 class="methodname">apcu\_sma\_info</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$limited`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Retrieves APCu Shared Memory Allocation information.
 
 ### 参数
 
 `limited`  
-When set to **`FALSE`** (default) <span
+When set to **`false`** (default) <span
 class="function">apcu\_sma\_info</span> will return a detailed
 information about each segment.
 
 ### 返回值
 
-Array of Shared Memory Allocation data; **`FALSE`** on failure.
+Array of Shared Memory Allocation data; **`false`** on failure.
 
 ### 范例
 
@@ -932,7 +932,7 @@ Names in key, variables in value.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。 Second syntax
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。 Second syntax
 returns array with error keys.
 
 ### 范例

@@ -432,9 +432,9 @@ class="methodparam"><span class="type">string</span> `$pathto`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">array</span><span
 class="type">null</span></span> `$files`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">getAlias</span> ( <span
@@ -500,7 +500,7 @@ class="methodparam"><span class="type">int</span> `$format`</span> )
 <span class="methodname">isValidPharFilename</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$executable`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$executable`<span class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">isWritable</span> ( <span
@@ -555,7 +555,7 @@ class="methodparam"><span class="type">string</span> `$offset`</span> )
 <span class="modifier">static</span> <span class="type">string</span>
 <span class="methodname">running</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$retphar`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setAlias</span> ( <span
@@ -1068,7 +1068,7 @@ is possible with a specific compression algorithm (zlib or bzip2).
 
 ### 返回值
 
-**`TRUE`** if compression/decompression is available, **`FALSE`** if
+**`true`** if compression/decompression is available, **`false`** if
 not.
 
 ### 范例
@@ -1118,7 +1118,7 @@ the system php.ini via the
 
 ### 返回值
 
-**`TRUE`** if write access is enabled, **`FALSE`** if it is disabled.
+**`true`** if write access is enabled, **`false`** if it is disabled.
 
 ### 范例
 
@@ -1427,7 +1427,7 @@ finished.
 ### 参数
 
 `format`  
-This should be one of *Phar::TAR* or *Phar::ZIP*. If set to **`NULL`**,
+This should be one of *Phar::TAR* or *Phar::ZIP*. If set to **`null`**,
 the existing file format will be preserved.
 
 `compression`  
@@ -1531,7 +1531,7 @@ finished.
 
 `format`  
 This should be one of *Phar::PHAR*, *Phar::TAR*, or *Phar::ZIP*. If set
-to **`NULL`**, the existing file format will be preserved.
+to **`null`**, the existing file format will be preserved.
 
 `compression`  
 This should be one of *Phar::NONE* for no whole-archive compression,
@@ -1627,7 +1627,7 @@ class="function">copy</span> with the phar stream wrapper.
 
 ### 返回值
 
-returns **`TRUE`** on success, but it is safer to encase method call in
+returns **`true`** on success, but it is safer to encase method call in
 a try/catch block and assume success if no exception is thrown.
 
 ### 错误／异常
@@ -1898,7 +1898,7 @@ must be off in order to succeed.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -1991,7 +1991,7 @@ Deletes the global metadata of the phar
 
 ### 返回值
 
-returns **`TRUE`** on success, but it is better to check for thrown
+returns **`true`** on success, but it is better to check for thrown
 exception, and assume success if none is thrown.
 
 ### 错误／异常
@@ -2058,7 +2058,7 @@ class="function">unlink</span> 处理数据流包装器的方式等价。
 ### 返回值
 
 成功时返回
-**`TRUE`**，但是最好还是检查一下是否抛出了异常，如果没有抛出，可以认定操作成功。
+**`true`**，但是最好还是检查一下是否抛出了异常，如果没有抛出，可以认定操作成功。
 
 ### 错误／异常
 
@@ -2100,9 +2100,9 @@ class="methodparam"><span class="type">string</span> `$pathto`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">array</span><span
 class="type">null</span></span> `$files`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 Extract all files within a phar archive to disk. Extracted files and
 directories preserve permissions as stored in the archive. The optional
@@ -2121,14 +2121,14 @@ Path to extract the given `files` to
 
 `files`  
 The name of a file or directory to extract, or an array of
-files/directories to extract, **`NULL`** to skip this param
+files/directories to extract, **`null`** to skip this param
 
 `overwrite`  
-Set to **`TRUE`** to enable overwriting existing files
+Set to **`true`** to enable overwriting existing files
 
 ### 返回值
 
-returns **`TRUE`** on success, but it is better to check for thrown
+returns **`true`** on success, but it is better to check for thrown
 exception, and assume success if none is thrown.
 
 ### 错误／异常
@@ -2180,7 +2180,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-Returns the alias or **`NULL`** if there's no alias.
+Returns the alias or **`null`** if there's no alias.
 
 Phar::getMetadata
 =================
@@ -2203,7 +2203,7 @@ No parameters.
 ### 返回值
 
 any PHP variable that can be serialized and is stored as meta-data for
-the Phar archive, or **`NULL`** if no meta-data is stored.
+the Phar archive, or **`null`** if no meta-data is stored.
 
 ### 范例
 
@@ -2257,7 +2257,7 @@ No parameters.
 
 ### 返回值
 
-**`TRUE`** if the phar has been modified since opened, **`FALSE`** if
+**`true`** if the phar has been modified since opened, **`false`** if
 not.
 
 Phar::getPath
@@ -2491,7 +2491,7 @@ No parameters.
 
 ### 返回值
 
-Returns **`TRUE`** if meta-data has been set, and **`FALSE`** if not.
+Returns **`true`** if meta-data has been set, and **`false`** if not.
 
 ### 范例
 
@@ -2609,7 +2609,7 @@ Phar archive does not affect changes to the *bar.phar* Phar archive.
 
 ### 返回值
 
-Returns **`TRUE`** if the write operations are being buffer, **`FALSE`**
+Returns **`true`** if the write operations are being buffer, **`false`**
 otherwise.
 
 ### 范例
@@ -2674,7 +2674,7 @@ class="methodparam">void</span> )
 
 Returns Phar::GZ or PHAR::BZ2 if the entire phar archive is compressed
 (.tar.gz/tar.bz and so on). Zip-based phar archives cannot be compressed
-as a file, and so this method will always return **`FALSE`** if a
+as a file, and so this method will always return **`false`** if a
 zip-based phar archive is queried.
 
 ### 参数
@@ -2683,7 +2683,7 @@ No parameters.
 
 ### 返回值
 
-*Phar::GZ*, *Phar::BZ2* or **`FALSE`**
+*Phar::GZ*, *Phar::BZ2* or **`false`**
 
 ### 范例
 
@@ -2742,7 +2742,7 @@ of the archive.
 
 ### 返回值
 
-Returns **`TRUE`** if the phar archive matches the file format requested
+Returns **`true`** if the phar archive matches the file format requested
 by the parameter
 
 ### 错误／异常
@@ -2767,7 +2767,7 @@ Returns whether the given filename is a valid phar filename
 <span class="methodname">Phar::isValidPharFilename</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$executable`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$executable`<span class="initializer"> = **`true`**</span></span> \] )
 
 Returns whether the given filename is a valid phar filename that will be
 recognized as a phar archive by the phar extension. This can be used to
@@ -2786,7 +2786,7 @@ phar executable archive, or a data non-executable archive
 
 ### 返回值
 
-Returns **`TRUE`** if the filename is valid, **`FALSE`** if not.
+Returns **`true`** if the filename is valid, **`false`** if not.
 
 Phar::isWritable
 ================
@@ -2799,7 +2799,7 @@ Returns true if the phar archive can be modified
 <span class="methodname">Phar::isWritable</span> ( <span
 class="methodparam">void</span> )
 
-This method returns **`TRUE`** if *phar.readonly* is *0*, and the actual
+This method returns **`true`** if *phar.readonly* is *0*, and the actual
 phar archive on disk is not read-only.
 
 ### 参数
@@ -2808,7 +2808,7 @@ No parameters.
 
 ### 返回值
 
-Returns **`TRUE`** if the phar archive can be modified
+Returns **`true`** if the phar archive can be modified
 
 ### 参见
 
@@ -2848,7 +2848,7 @@ alias is specified in this case.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -2906,7 +2906,7 @@ Unused variable, here for compatibility with PEAR's PHP\_Archive.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -3139,7 +3139,7 @@ The filename (relative path) to look for in a Phar.
 
 ### 返回值
 
-Returns **`TRUE`** if the file exists within the phar, or **`FALSE`** if
+Returns **`true`** if the file exists within the phar, or **`false`** if
 not.
 
 ### 范例
@@ -3337,7 +3337,7 @@ The filename (relative path) to modify in a Phar.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -3383,7 +3383,7 @@ executing Phar archive
 <span class="modifier">static</span> <span class="type">string</span>
 <span class="methodname">Phar::running</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$retphar`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 Returns the full path to the running phar archive. This is intended for
 use much like the *\_\_FILE\_\_* magic constant, and only has effect
@@ -3396,8 +3396,8 @@ class="function">Phar::running</span> returns *""*. Simply use
 ### 参数
 
 `retphar`  
-If **`FALSE`**, the full path on disk to the phar archive is returned.
-If **`TRUE`**, a full phar URL is returned.
+If **`false`**, the full path on disk to the phar archive is returned.
+If **`true`**, a full phar URL is returned.
 
 ### 返回值
 
@@ -3513,7 +3513,7 @@ browser
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -3733,7 +3733,7 @@ phar archive.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -3953,7 +3953,7 @@ The path on disk to the phar archive.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -4091,7 +4091,7 @@ $mimes = array(
 
 `rewrites`  
 The rewrites function is passed a string as its only parameter and must
-return a <span class="type">string</span> or **`FALSE`**.
+return a <span class="type">string</span> or **`false`**.
 
 If you are using fast-cgi or cgi then the parameter passed to the
 function is the value of the `$_SERVER['PATH_INFO']` variable.
@@ -4099,7 +4099,7 @@ Otherwise, the parameter passed to the function is the value of the
 `$_SERVER['REQUEST_URI']` variable.
 
 If a string is returned it is used as the internal file path. If
-**`FALSE`** is returned then webPhar() will send a HTTP 403 Denied Code.
+**`false`** is returned then webPhar() will send a HTTP 403 Denied Code.
 
 ### 返回值
 
@@ -4296,9 +4296,9 @@ class="methodparam">void</span> )
 `$pathto`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">array</span><span
 class="type">null</span></span> `$files`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 <span class="type">bool</span> <span
 class="methodname">isWritable</span> ( <span
@@ -4459,9 +4459,9 @@ class="methodparam"><span class="type">string</span> `$pathto`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">array</span><span
 class="type">null</span></span> `$files`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">Phar::getAlias</span> ( <span
@@ -4527,7 +4527,7 @@ class="methodparam"><span class="type">int</span> `$format`</span> )
 <span class="methodname">Phar::isValidPharFilename</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$executable`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$executable`<span class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Phar::isWritable</span> ( <span
@@ -4582,7 +4582,7 @@ class="methodparam"><span class="type">string</span> `$offset`</span> )
 <span class="modifier">static</span> <span class="type">string</span>
 <span class="methodname">Phar::running</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$retphar`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Phar::setAlias</span> ( <span
@@ -5264,7 +5264,7 @@ finished.
 ### 参数
 
 `format`  
-This should be one of *Phar::TAR* or *Phar::ZIP*. If set to **`NULL`**,
+This should be one of *Phar::TAR* or *Phar::ZIP*. If set to **`null`**,
 the existing file format will be preserved.
 
 `compression`  
@@ -5364,7 +5364,7 @@ finished.
 
 `format`  
 This should be one of *Phar::PHAR*, *Phar::TAR*, or *Phar::ZIP*. If set
-to **`NULL`**, the existing file format will be preserved.
+to **`null`**, the existing file format will be preserved.
 
 `compression`  
 This should be one of *Phar::NONE* for no whole-archive compression,
@@ -5454,7 +5454,7 @@ class="function">copy</span> with the phar stream wrapper.
 
 ### 返回值
 
-returns **`TRUE`** on success, but it is safer to encase method call in
+returns **`true`** on success, but it is safer to encase method call in
 a try/catch block and assume success if no exception is thrown.
 
 ### 错误／异常
@@ -5593,7 +5593,7 @@ using bzip2/zlib compression.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -5685,7 +5685,7 @@ Deletes the global metadata of the zip archive
 
 ### 返回值
 
-returns **`TRUE`** on success, but it is better to check for thrown
+returns **`true`** on success, but it is better to check for thrown
 exception, and assume success if none is thrown.
 
 ### 错误／异常
@@ -5745,7 +5745,7 @@ Path within an archive to the file to delete.
 
 ### 返回值
 
-returns **`TRUE`** on success, but it is better to check for thrown
+returns **`true`** on success, but it is better to check for thrown
 exception, and assume success if none is thrown.
 
 ### 错误／异常
@@ -5787,9 +5787,9 @@ class="methodparam"><span class="type">string</span> `$pathto`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">array</span><span
 class="type">null</span></span> `$files`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 Extract all files within a tar/zip archive to disk. Extracted files and
 directories preserve permissions as stored in the archive. The optional
@@ -5811,11 +5811,11 @@ The name of a file or directory to extract, or an array of
 files/directories to extract
 
 `overwrite`  
-Set to **`TRUE`** to enable overwriting existing files
+Set to **`true`** to enable overwriting existing files
 
 ### 返回值
 
-returns **`TRUE`** on success, but it is better to check for thrown
+returns **`true`** on success, but it is better to check for thrown
 exception, and assume success if none is thrown.
 
 ### 错误／异常
@@ -5857,7 +5857,7 @@ Returns true if the tar/zip archive can be modified
 class="methodname">PharData::isWritable</span> ( <span
 class="methodparam">void</span> )
 
-This method returns **`TRUE`** if the tar/zip archive on disk is not
+This method returns **`true`** if the tar/zip archive on disk is not
 read-only. Unlike <span class="function">Phar::isWritable</span>,
 data-only tar/zip archives can be modified even if *phar.readonly* is
 set to *1*.
@@ -5868,7 +5868,7 @@ No parameters.
 
 ### 返回值
 
-Returns **`TRUE`** if the tar/zip archive can be modified
+Returns **`true`** if the tar/zip archive can be modified
 
 ### 参见
 
@@ -5959,7 +5959,7 @@ The filename (relative path) to modify in the tar/zip archive.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -6045,7 +6045,7 @@ browser
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -6198,7 +6198,7 @@ phar archive. This parameter is ignored.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -6369,7 +6369,7 @@ class="classname">PharData</span> archives do not have this restriction.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -6506,7 +6506,7 @@ class="classname">PharData</span> archives do not have this restriction.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -6574,7 +6574,7 @@ No parameters.
 
 ### 返回值
 
-Returns **`TRUE`** if successful, **`FALSE`** if the entry had no
+Returns **`true`** if successful, **`false`** if the entry had no
 metadata. As with all functionality that modifies the contents of a
 phar, the <a href="/phar/setup.html#" class="link">phar.readonly</a> INI
 variable must be off in order to succeed if the file is within a <span
@@ -6767,7 +6767,7 @@ file.
 ### 返回值
 
 any PHP variable that can be serialized and is stored as meta-data for
-the file, or **`NULL`** if no meta-data is stored.
+the file, or **`null`** if no meta-data is stored.
 
 ### 范例
 
@@ -6866,8 +6866,8 @@ No parameters.
 
 ### 返回值
 
-Returns **`FALSE`** if no metadata is set or is **`NULL`**, **`TRUE`**
-if metadata is not **`NULL`**
+Returns **`false`** if no metadata is set or is **`null`**, **`true`**
+if metadata is not **`null`**
 
 ### 参见
 
@@ -6894,7 +6894,7 @@ verified.
 
 ### 返回值
 
-**`TRUE`** if the file has had its CRC verified, **`FALSE`** if not.
+**`true`** if the file has had its CRC verified, **`false`** if not.
 
 ### 范例
 
@@ -6941,8 +6941,8 @@ One of **`Phar::GZ`** or **`Phar::BZ2`**, defaults to any compression.
 
 ### 返回值
 
-**`TRUE`** if the file is compressed within the Phar archive,
-**`FALSE`** if not.
+**`true`** if the file is compressed within the Phar archive,
+**`false`** if not.
 
 ### 范例
 

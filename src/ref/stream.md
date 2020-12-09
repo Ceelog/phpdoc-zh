@@ -474,7 +474,7 @@ class="type">array</span> `$options`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 stream\_context\_set\_params
 ============================
@@ -513,7 +513,7 @@ An array of parameters to set.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -558,7 +558,7 @@ The offset where to start to copy data
 
 ### 返回值
 
-Returns the total count of bytes copied, 或者在失败时返回 **`FALSE`**.
+Returns the total count of bytes copied, 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -624,11 +624,11 @@ class="function">stream\_filter\_prepend</span>.
 
 ### 返回值
 
-Returns a resource on success or **`FALSE`** on failure. The resource
+Returns a resource on success or **`false`** on failure. The resource
 can be used to refer to this filter instance during a call to <span
 class="function">stream\_filter\_remove</span>.
 
-**`FALSE`** is returned if `stream` is not a resource or if `filtername`
+**`false`** is returned if `stream` is not a resource or if `filtername`
 cannot be located.
 
 ### 范例
@@ -741,11 +741,11 @@ class="function">stream\_filter\_append</span>.
 
 ### 返回值
 
-Returns a resource on success or **`FALSE`** on failure. The resource
+Returns a resource on success or **`false`** on failure. The resource
 can be used to refer to this filter instance during a call to <span
 class="function">stream\_filter\_remove</span>.
 
-**`FALSE`** is returned if `stream` is not a resource or if `filtername`
+**`false`** is returned if `stream` is not a resource or if `filtername`
 cannot be located.
 
 ### 注释
@@ -809,10 +809,10 @@ will lead to undefined behaviour.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 <span class="function">stream\_filter\_register</span> will return
-**`FALSE`** if the `filtername` is already defined.
+**`false`** if the `filtername` is already defined.
 
 ### 范例
 
@@ -965,7 +965,7 @@ class="methodparam"><span class="type">resource</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1032,7 +1032,7 @@ class="function">stream\_get\_contents</span>
 
 ### 返回值
 
-返回一个字符串 或者在失败时返回 **`FALSE`**.
+返回一个字符串 或者在失败时返回 **`false`**.
 
 ### 更新日志
 
@@ -1158,7 +1158,7 @@ class="type">string</span> `$ending`</span> \] )
 
 返回一个字符串，该字符串的内容根据 `length` 字节数从 `handle` 里读取。
 
-如果发生错误，则返回 **`FALSE`**.
+如果发生错误，则返回 **`false`**.
 
 ### 参见
 
@@ -1184,14 +1184,14 @@ class="function">fopen</span>，<span class="function">fsockopen</span>
 
 -   `timed_out` (bool) - 如果在上次调用 <span
     class="function">fread</span> 或者 <span
-    class="function">fgets</span> 中等待数据时流超时了则为 **`TRUE`**。
+    class="function">fgets</span> 中等待数据时流超时了则为 **`true`**。
 
--   `blocked` (bool) - 如果流处于阻塞 IO 模式时为 **`TRUE`**。参见 <span
+-   `blocked` (bool) - 如果流处于阻塞 IO 模式时为 **`true`**。参见 <span
     class="function">stream\_set\_blocking</span>。
 
--   `eof` (bool) - 如果流到达文件末尾时为 **`TRUE`**。注意对于 socket
+-   `eof` (bool) - 如果流到达文件末尾时为 **`true`**。注意对于 socket
     流甚至当 `unread_bytes` 为非零值时也可以为
-    **`TRUE`**。要测定是否有更多数据可读，用 <span
+    **`true`**。要测定是否有更多数据可读，用 <span
     class="function">feof</span> 替代读取本项目的值。
 
 -   `unread_bytes` (int) - 当前在 PHP 自己的内部缓冲区中的字节数。
@@ -1355,7 +1355,7 @@ The stream <span class="type">resource</span> or URL to check.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1398,7 +1398,7 @@ too.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1669,7 +1669,7 @@ The filename to resolve.
 ### 返回值
 
 Returns a <span class="type">string</span> containing the resolved
-absolute filename, 或者在失败时返回 **`FALSE`**.
+absolute filename, 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -1745,7 +1745,7 @@ class="function">stream\_select</span> will not wait for data - instead
 it will return immediately, indicating the current status of the
 streams.
 
-If `tv_sec` is **`NULL`** <span class="function">stream\_select</span>
+If `tv_sec` is **`null`** <span class="function">stream\_select</span>
 can block indefinitely, returning only when an event on one of the
 watched streams occurs (or if a signal interrupts the system call).
 
@@ -1772,7 +1772,7 @@ See `tv_sec` description.
 On success <span class="function">stream\_select</span> returns the
 number of stream resources contained in the modified arrays, which may
 be zero if the timeout expires before anything interesting happens. On
-error **`FALSE`** is returned and a warning raised (this can happen if
+error **`false`** is returned and a warning raised (this can happen if
 the system call is interrupted by an incoming signal).
 
 ### 范例
@@ -1802,7 +1802,7 @@ if (false === ($num_changed_streams = stream_select($read, $write, $except, 0)))
 > **Note**:
 >
 > Due to a limitation in the current Zend Engine it is not possible to
-> pass a constant modifier like **`NULL`** directly as a parameter to a
+> pass a constant modifier like **`null`** directly as a parameter to a
 > function which expects this parameter to be passed by reference.
 > Instead use a temporary variable or an expression with the leftmost
 > member being a temporary variable:
@@ -1818,7 +1818,7 @@ if (false === ($num_changed_streams = stream_select($read, $write, $except, 0)))
 >
 > Be sure to use the *===* operator when checking for an error. Since
 > the <span class="function">stream\_select</span> may return 0 the
-> comparison with *==* would evaluate to **`TRUE`**:
+> comparison with *==* would evaluate to **`true`**:
 >
 > ``` php
 > <?php
@@ -1844,7 +1844,7 @@ if (false === ($num_changed_streams = stream_select($read, $write, $except, 0)))
 >
 > Use of <span class="function">stream\_select</span> on file
 > descriptors returned by <span class="function">proc\_open</span> will
-> fail and return **`FALSE`** under Windows.
+> fail and return **`false`** under Windows.
 >
 > **`STDIN`** from a console changes status as soon as *any* input
 > events are available, but reading from the stream may still block.
@@ -1876,8 +1876,8 @@ class="methodparam"><span class="type">resource</span> `$stream`</span>
 资源流。
 
 `mode`  
-如果 `mode` 为 **`FALSE`**，资源流将会被转换为非阻塞模式；如果是
-**`TRUE`**，资源流将会被转换为阻塞模式。 该参数的设置将会影响到像 <span
+如果 `mode` 为 **`false`**，资源流将会被转换为非阻塞模式；如果是
+**`true`**，资源流将会被转换为阻塞模式。 该参数的设置将会影响到像 <span
 class="function">fgets</span> 和 <span class="function">fread</span>
 这样的函数从资源流里读取数据。 在非阻塞模式下，调用 <span
 class="function">fgets</span>
@@ -1885,7 +1885,7 @@ class="function">fgets</span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -1932,7 +1932,7 @@ class="methodparam"><span class="type">resource</span> `$fp`</span> ,
 成功的情况下返回资源流之前的区块大小。
 
 如果 `chunk_size` 比 1 小或者比 **`PHP_INT_MAX`** 还大，就将返回
-**`FALSE`** 。
+**`false`** 。
 
 ### 错误／异常
 
@@ -1995,7 +1995,7 @@ and `microseconds`.
 
 When the stream times out, the 'timed\_out' key of the array returned by
 <span class="function">stream\_get\_meta\_data</span> is set to
-**`TRUE`**, although no error/warning is generated.
+**`true`**, although no error/warning is generated.
 
 ### 参数
 
@@ -2010,7 +2010,7 @@ The microseconds part of the timeout to be set.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2156,7 +2156,7 @@ and available from the selected transport.）
 
 ### 返回值
 
-返回接受套接之后的资源流 或者在失败时返回 **`FALSE`**。
+返回接受套接之后的资源流 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -2254,14 +2254,14 @@ On success a stream resource is returned which may be used together with
 the other file functions (such as <span class="function">fgets</span>,
 <span class="function">fgetss</span>, <span
 class="function">fwrite</span>, <span class="function">fclose</span>,
-and <span class="function">feof</span>), **`FALSE`** on failure.
+and <span class="function">feof</span>), **`false`** on failure.
 
 ### 错误／异常
 
 On failure the `errno` and `errstr` arguments will be populated with the
 actual system level error that occurred in the system-level *connect()*
 call. If the value returned in `errno` is *0* and the function returned
-**`FALSE`**, it is an indication that the error occurred before the
+**`false`**, it is an indication that the error occurred before the
 *connect()* call. This is most likely due to a problem initializing the
 socket. Note that the `errno` and `errstr` arguments will always be
 passed by reference.
@@ -2360,7 +2360,7 @@ class="methodparam"><span class="type">resource</span>
 Enable or disable encryption on the stream.
 
 Once the crypto settings are established, cryptography can be turned on
-and off dynamically by passing **`TRUE`** or **`FALSE`** in the `enable`
+and off dynamically by passing **`true`** or **`false`** in the `enable`
 parameter.
 
 ### 参数
@@ -2407,7 +2407,7 @@ Seed the stream with settings from `session_stream`.
 
 ### 返回值
 
-Returns **`TRUE`** on success, **`FALSE`** if negotiation has failed or
+Returns **`true`** on success, **`false`** if negotiation has failed or
 *0* if there isn't enough data and you should try again (only for
 non-blocking sockets).
 
@@ -2474,8 +2474,8 @@ class="methodparam"><span class="type">resource</span> `$handle`</span>
 需要获取其名称的套接字连接。
 
 `want_peer`  
-如果设置为 **`TRUE`** ，那么将返回 *remote* 套接字连接名称；如果设置为
-**`FALSE`** 则返回 *local* 套接字连接名称。
+如果设置为 **`true`** ，那么将返回 *remote* 套接字连接名称；如果设置为
+**`false`** 则返回 *local* 套接字连接名称。
 
 ### 返回值
 
@@ -2526,7 +2526,7 @@ Communication)
 ### 返回值
 
 如果成功将返回一个<span
-class="type">数组</span>包括了两个socket资源，错误时返回**`FALSE`**
+class="type">数组</span>包括了两个socket资源，错误时返回**`false`**
 
 ### 更新日志
 
@@ -2787,7 +2787,7 @@ for a list of bulitin transports.
 If the optional `errno` and `errstr` arguments are present they will be
 set to indicate the actual system level error that occurred in the
 system-level *socket()*, *bind()*, and *listen()* calls. If the value
-returned in `errno` is *0* and the function returned **`FALSE`**, it is
+returned in `errno` is *0* and the function returned **`false`**, it is
 an indication that the error occurred before the *bind()* call. This is
 most likely due to a problem initializing the socket. Note that the
 `errno` and `errstr` arguments will always be passed by reference.
@@ -2808,7 +2808,7 @@ flags.
 
 ### 返回值
 
-Returns the created stream, or **`FALSE`** on error.
+Returns the created stream, or **`false`** on error.
 
 ### 范例
 
@@ -2904,7 +2904,7 @@ receptions), **`STREAM_SHUT_WR`** (disable further transmissions) or
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2958,7 +2958,7 @@ The stream to check.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2997,10 +2997,10 @@ Default is 0, local stream.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 当 `protocol` 已经有处理者时，<span
-class="function">stream\_wrapper\_register</span> 将返回**`FALSE`**
+class="function">stream\_wrapper\_register</span> 将返回**`false`**
 
 ### 更新日志
 
@@ -3082,7 +3082,7 @@ class="function">stream\_wrapper\_unregister</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 stream\_wrapper\_unregister
 ===========================
@@ -3108,7 +3108,7 @@ class="function">stream\_wrapper\_restore</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 **目录**
 

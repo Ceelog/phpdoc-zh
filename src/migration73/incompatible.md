@@ -192,7 +192,7 @@ that this only affects the usage of
 <a href="/book/pdo.html#MySQL%20(PDO)" class="link">PDO_MYSQL</a> with
 emulated prepares turned off (e.g. using the native preparation
 functionality). Statements using connections having
-**`PDO::ATTR_EMULATE_PREPARES`**=**`TRUE`** (which is the default) were
+**`PDO::ATTR_EMULATE_PREPARES`**=**`true`** (which is the default) were
 not affected by the bug fixed and have already been getting the proper
 fractional seconds values from the engine.
 

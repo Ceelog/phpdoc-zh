@@ -133,7 +133,7 @@ class="methodparam"><span class="type">string</span>
 `$module_name`</span> \[, <span class="methodparam"><span
 class="type"><span class="type">array</span><span
 class="type">string</span><span class="type">null</span></span>
-`$server_name`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$server_name`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$codepage`<span
 class="initializer"> = **`CP_ACP`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$typelib`<span
@@ -232,7 +232,7 @@ class="methodparam"><span class="type">string</span>
 `$module_name`</span> \[, <span class="methodparam"><span
 class="type"><span class="type">array</span><span
 class="type">string</span><span class="type">null</span></span>
-`$server_name`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$server_name`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$codepage`<span
 class="initializer"> = **`CP_ACP`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$typelib`<span
@@ -257,14 +257,14 @@ use the ADSI interface to LDAP. </span>
 
 `server_name`  
 <span class="simpara"> The name of the DCOM server on which the
-component should be loaded and run. If **`NULL`**, the object is run
+component should be loaded and run. If **`null`**, the object is run
 using the default for the application. The default is typically to run
 it on the local machine, although the administrator might have
 configured the application to launch on a different machine. </span>
-<span class="simpara"> If you specify a non-**`NULL`** value for server,
+<span class="simpara"> If you specify a non-**`null`** value for server,
 PHP will refuse to load the object unless the
 <a href="/com/setup.html#" class="xref"></a> configuration option is set
-to **`TRUE`**. </span>
+to **`true`**. </span>
 
 If `server_name` is an array, it should contain the following elements
 (case sensitive!). Note that they are all optional (although you need to
@@ -420,7 +420,7 @@ control over the way that PHP passes values to and from COM.
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$value`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$type`<span
 class="initializer"> = **`VT_EMPTY`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$codepage`<span
@@ -465,7 +465,7 @@ variant class constructor
 <span class="modifier">public</span> <span
 class="methodname">variant::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$value`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$type`<span
 class="initializer"> = **`VT_EMPTY`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$codepage`<span
@@ -476,7 +476,7 @@ Constructs a new variant object.
 ### 参数
 
 `value`  
-<span class="simpara"> Initial value. If omitted, or set to **`NULL`**
+<span class="simpara"> Initial value. If omitted, or set to **`null`**
 an VT\_EMPTY object is created. </span>
 
 `type`  
@@ -549,7 +549,7 @@ class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
 `$filename`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$remember`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">SaveToStream</span> ( <span
@@ -583,7 +583,7 @@ any of <span class="classname">COMPersistHelper</span>'s methods, the
 object has to implement <span class="interfacename">IPersistFile</span>,
 <span class="interfacename">IPersistStream</span> and/or <span
 class="interfacename">IPersistStreamInit</span>. </span> <span
-class="simpara"> Passing **`NULL`** as `variant` is only useful if the
+class="simpara"> Passing **`null`** as `variant` is only useful if the
 object is to be loaded from a stream by calling <span
 class="methodname">COMPersistHelper::LoadFromStream</span>. </span>
 
@@ -665,7 +665,7 @@ Initializes an object to a default state.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -707,7 +707,7 @@ when a user opens the file. </span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -739,7 +739,7 @@ from which to load the object. </span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -761,7 +761,7 @@ class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
 `$filename`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$remember`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Saves a copy of the object to the specified file.
 
@@ -773,15 +773,15 @@ Saves a copy of the object to the specified file.
 
 `remember`  
 <span class="simpara"> Indicates whether the `filename` parameter is to
-be used as the current working file. If **`TRUE`**, `filename` becomes
+be used as the current working file. If **`true`**, `filename` becomes
 the current file and the object is supposed to clear its dirty flag
-after the save. If **`FALSE`**, this save operation is a "Save A Copy As
+after the save. If **`false`**, this save operation is a "Save A Copy As
 ..." operation. In this case, the current file is unchanged and the
 object is not supposed to clear its dirty flag. </span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 
@@ -828,7 +828,7 @@ to which to save the object. </span>
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 错误／异常
 

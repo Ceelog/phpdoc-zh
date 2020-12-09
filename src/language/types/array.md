@@ -249,7 +249,7 @@ list(, $secondElement) = getArray();
 > **Note**:
 >
 > 试图访问一个未定义的数组键名与访问任何未定义变量一样：会导致
-> **`E_NOTICE`** 级别错误信息，其结果为 **`NULL`**。
+> **`E_NOTICE`** 级别错误信息，其结果为 **`null`**。
 
 #### 用方括号的语法新建／修改
 
@@ -566,7 +566,7 @@ var_dump((array) new B());
 
 上例会有两个键名为 'AA'，不过其中一个实际上是 '\\0A\\0A'。
 
-将 **`NULL`** 转换为 <span class="type">array</span>
+将 **`null`** 转换为 <span class="type">array</span>
 会得到一个空的数组。
 
 ### 比较

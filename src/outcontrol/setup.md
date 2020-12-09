@@ -58,7 +58,7 @@ Off。
 > class="function">ob\_start</span>。
 
 `implicit_flush` <span class="type">boolean</span>  
-默认为 **`FALSE`**。如将该选项改为 **`TRUE`**，PHP
+默认为 **`false`**。如将该选项改为 **`true`**，PHP
 将使输出层，在每段信息块输出后，自动刷新。这等同于在每次使用 <span
 class="function">print</span>、<span class="function">echo</span>
 等函数或每个 *HTML* 块之后，调用 PHP 中的 <span
@@ -66,7 +66,7 @@ class="function">flush</span> 函数。
 
 不在web环境中使用 PHP
 时，打开这个选项对程序执行的性能有严重的影响，通常只推荐在调试时使用。在
-*CLI SAPI* 的执行模式下，该标记默认为 **`TRUE`**。
+*CLI SAPI* 的执行模式下，该标记默认为 **`true`**。
 
 参见 <span class="function">ob\_implicit\_flush</span>。
 

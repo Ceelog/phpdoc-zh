@@ -42,15 +42,15 @@ class="function">in\_array</span>。其函数原型如下：
 
 这是什么意思？<span class="function">in\_array</span>
 返回一个“<a href="/language/types/boolean.html" class="link">布尔</a>”值，成功（如果在参数
-`haystack` 中能找到参数 `needle`）则返回 **`TRUE`**, 或者在失败时返回
-**`FALSE`**（如果在参数 `haystack` 中找不到参数
+`haystack` 中能找到参数 `needle`）则返回 **`true`**, 或者在失败时返回
+**`false`**（如果在参数 `haystack` 中找不到参数
 `needle`）。第一个参数被命名为 `needle`
 且其<a href="/language/types.html" class="link">类型</a>不定，因此我们将其称为“*混和*”类型。该混和类型的
 `needle`
 参数（我们要找的对象）可以是一个标量的值（字符串、整数、或者<a href="/language/types/float.html" class="link">浮点数</a>），或者一个<a href="/language/types/array.html" class="link">数组</a>。`haystack`（我们寻找的范围）是第二个参数。第三个*可选*参数被命名为
 `strict`。所有的可选参数都用 *\[* 方括号 *\]* 括起来。手册表明 `strict`
 参数默认值为布尔值
-**`FALSE`**。需要了解函数工作的细节，请参阅手册中和该函数相关的页面。
+**`false`**。需要了解函数工作的细节，请参阅手册中和该函数相关的页面。
 
 函数参数前的 & 符号使参数以
 <a href="/language/references/pass.html" class="link">引用</a>

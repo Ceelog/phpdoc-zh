@@ -787,7 +787,7 @@ while ($appendIterator->valid()) {
 
 When using <span class="function">iterator\_to\_array</span> to copy the
 values of the AppendIterator into an array, you have to set the optional
-`use_key` argument to **`FALSE`**. When `use_key` is not **`FALSE`** any
+`use_key` argument to **`false`**. When `use_key` is not **`false`** any
 keys reoccuring in inner iterators will get overwritten in the returned
 array. There is no way to preserve the original keys.
 
@@ -814,7 +814,7 @@ Gets the current value.
 
 ### 返回值
 
-The current value if it is valid or **`NULL`** otherwise.
+The current value if it is valid or **`null`** otherwise.
 
 ### 参见
 
@@ -872,7 +872,7 @@ This method returns the current inner iterator.
 
 ### 返回值
 
-The current inner iterator, or **`NULL`** if there is not one.
+The current inner iterator, or **`null`** if there is not one.
 
 ### 范例
 
@@ -988,7 +988,7 @@ Get the current key.
 
 ### 返回值
 
-The current key if it is valid or **`NULL`** otherwise.
+The current key if it is valid or **`null`** otherwise.
 
 ### 范例
 
@@ -1122,7 +1122,7 @@ Checks validity of the current element.
 
 ### 返回值
 
-Returns **`TRUE`** if the current iteration is valid, **`FALSE`**
+Returns **`true`** if the current iteration is valid, **`false`**
 otherwise.
 
 ### 参见
@@ -1743,7 +1743,7 @@ The offset being checked.
 
 ### 返回值
 
-**`TRUE`** if the offset exists, otherwise **`FALSE`**
+**`true`** if the offset exists, otherwise **`false`**
 
 ### 参见
 
@@ -2119,7 +2119,7 @@ Checks if the <span class="type">array</span> contains any more entries.
 
 ### 返回值
 
-Returns **`TRUE`** if the iterator is valid, otherwise **`FALSE`**
+Returns **`true`** if the iterator is valid, otherwise **`false`**
 
 ### 范例
 
@@ -2504,7 +2504,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 CachingIterator::key
 ====================
@@ -2574,8 +2574,8 @@ The index being checked.
 
 ### 返回值
 
-Returns **`TRUE`** if an entry referenced by the offset exists,
-**`FALSE`** otherwise.
+Returns **`true`** if an entry referenced by the offset exists,
+**`false`** otherwise.
 
 CachingIterator::offsetGet
 ==========================
@@ -2754,7 +2754,7 @@ Check whether the current element is valid.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 简介
 ----
@@ -2885,8 +2885,8 @@ class="methodparam">void</span> )
 This method calls the callback with the current value, current key and
 the inner iterator.
 
-The callback is expected to return **`TRUE`** if the current item is to
-be accepted, or **`FALSE`** otherwise.
+The callback is expected to return **`true`** if the current item is to
+be accepted, or **`false`** otherwise.
 
 ### 参数
 
@@ -2894,7 +2894,7 @@ be accepted, or **`FALSE`** otherwise.
 
 ### 返回值
 
-Returns **`TRUE`** to accept the current item, or **`FALSE`** otherwise.
+Returns **`true`** to accept the current item, or **`false`** otherwise.
 
 ### 参见
 
@@ -2924,8 +2924,8 @@ items are accepted or rejected.
 The iterator to be filtered.
 
 `callback`  
-The callback, which should return **`TRUE`** to accept the current item
-or **`FALSE`** otherwise. See
+The callback, which should return **`true`** to accept the current item
+or **`false`** otherwise. See
 <a href="/spl/iterators.html#范例" class="link">Examples</a>.
 
 May be any valid <span class="type">callable</span> value.
@@ -3976,7 +3976,7 @@ class="classname">DirectoryIterator</span> item is a directory.
 
 ### 返回值
 
-Returns **`TRUE`** if it is a directory, otherwise **`FALSE`**
+Returns **`true`** if it is a directory, otherwise **`false`**
 
 ### 范例
 
@@ -4033,7 +4033,7 @@ either *.* or *..*
 
 ### 返回值
 
-**`TRUE`** if the entry is *.* or *..*, otherwise **`FALSE`**
+**`true`** if the entry is *.* or *..*, otherwise **`false`**
 
 ### 范例
 
@@ -4087,7 +4087,7 @@ class="classname">DirectoryIterator</span> item is executable.
 
 ### 返回值
 
-Returns **`TRUE`** if the entry is executable, otherwise **`FALSE`**
+Returns **`true`** if the entry is executable, otherwise **`false`**
 
 ### 范例
 
@@ -4139,8 +4139,8 @@ class="classname">DirectoryIterator</span> item is a regular file.
 
 ### 返回值
 
-Returns **`TRUE`** if the file exists and is a regular file (not a
-*link* or *dir*), otherwise **`FALSE`**
+Returns **`true`** if the file exists and is a regular file (not a
+*link* or *dir*), otherwise **`false`**
 
 ### 范例
 
@@ -4195,7 +4195,7 @@ class="classname">DirectoryIterator</span> item is a symbolic link.
 
 ### 返回值
 
-Returns **`TRUE`** if the item is a symbolic link, otherwise **`FALSE`**
+Returns **`true`** if the item is a symbolic link, otherwise **`false`**
 
 ### 范例
 
@@ -4256,7 +4256,7 @@ class="classname">DirectoryIterator</span> item is readable.
 
 ### 返回值
 
-Returns **`TRUE`** if the file is readable, otherwise **`FALSE`**
+Returns **`true`** if the file is readable, otherwise **`false`**
 
 ### 范例
 
@@ -4307,8 +4307,8 @@ class="classname">DirectoryIterator</span> item is writable.
 
 ### 返回值
 
-Returns **`TRUE`** if the file/directory is writable, otherwise
-**`FALSE`**
+Returns **`true`** if the file/directory is writable, otherwise
+**`false`**
 
 ### 范例
 
@@ -4623,7 +4623,7 @@ position is a valid file.
 
 ### 返回值
 
-Returns **`TRUE`** if the position is valid, otherwise **`FALSE`**
+Returns **`true`** if the position is valid, otherwise **`false`**
 
 ### 范例
 
@@ -4823,7 +4823,7 @@ The EmptyIterator valid() method.
 
 ### 返回值
 
-**`FALSE`**
+**`false`**
 
 简介
 ----
@@ -5530,7 +5530,7 @@ through this filter.
 
 ### 返回值
 
-**`TRUE`** if the current element is acceptable, otherwise **`FALSE`**.
+**`true`** if the current element is acceptable, otherwise **`false`**.
 
 ### 范例
 
@@ -5763,7 +5763,7 @@ Checks whether the current element is valid.
 
 ### 返回值
 
-**`TRUE`** if the current element is valid, otherwise **`FALSE`**
+**`true`** if the current element is valid, otherwise **`false`**
 
 简介
 ----
@@ -6327,7 +6327,7 @@ Checks if the iterator is valid.
 
 ### 返回值
 
-Returns **`TRUE`** if the iterator is valid, otherwise **`FALSE`**
+Returns **`true`** if the iterator is valid, otherwise **`false`**
 
 ### 参见
 
@@ -6522,7 +6522,7 @@ class="classname">Iterator</span>.
 
 ### 返回值
 
-Returns the current element or **`NULL`** if there is none.
+Returns the current element or **`null`** if there is none.
 
 ### 参见
 
@@ -6758,7 +6758,7 @@ Checks whether the current element is valid.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -6898,7 +6898,7 @@ The new iterator to attach.
 `infos`  
 The associative information for the Iterator, which must be an <span
 class="type">int</span>, a <span class="type">string</span>, or
-**`NULL`**.
+**`null`**.
 
 ### 返回值
 
@@ -7079,7 +7079,7 @@ The iterator to check.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -7139,14 +7139,14 @@ Get the registered iterator instances current() result.
 ### 返回值
 
 An <span class="type">array</span> containing the current values of each
-attached iterator, or **`FALSE`** if no iterators are attached.
+attached iterator, or **`false`** if no iterators are attached.
 
 ### 错误／异常
 
 A <span class="classname">RuntimeException</span> if mode
 **`MIT_NEED_ALL`** is set and at least one attached iterator is not
 valid. Or an <span class="classname">IllegalValueException</span> if a
-key is **`NULL`** and **`MIT_KEYS_ASSOC`** is set.
+key is **`null`** and **`MIT_KEYS_ASSOC`** is set.
 
 ### 参见
 
@@ -7238,7 +7238,7 @@ Get the registered iterator instances key() result.
 ### 返回值
 
 An <span class="type">array</span> of all registered iterator instances,
-or **`FALSE`** if no sub iterator is attached.
+or **`false`** if no sub iterator is attached.
 
 ### 错误／异常
 
@@ -7368,8 +7368,8 @@ Checks the validity of sub iterators.
 
 ### 返回值
 
-Returns **`TRUE`** if one or all sub iterators are valid depending on
-flags, otherwise **`FALSE`**
+Returns **`true`** if one or all sub iterators are valid depending on
+flags, otherwise **`false`**
 
 ### 参见
 
@@ -7707,7 +7707,7 @@ Checks whether the iterator is valid.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -7792,7 +7792,7 @@ Determines if the current element has children.
 
 ### 返回值
 
-**`TRUE`** if the current element is acceptable, otherwise **`FALSE`**.
+**`true`** if the current element is acceptable, otherwise **`false`**.
 
 ### 参见
 
@@ -7876,7 +7876,7 @@ Check whether the inner iterator's current element has children.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ParentIterator::next
 ====================
@@ -8185,9 +8185,9 @@ class="methodname">RecursiveArrayIterator::getChildren</span>.
 
 ### 返回值
 
-Returns **`TRUE`** if the current entry is an <span
+Returns **`true`** if the current entry is an <span
 class="type">array</span> or an <span class="type">object</span>,
-otherwise **`FALSE`** is returned.
+otherwise **`false`** is returned.
 
 ### 范例
 
@@ -8453,7 +8453,7 @@ Check whether the current element of the inner iterator has children
 
 ### 返回值
 
-**`TRUE`** if the inner iterator has children, otherwise **`FALSE`**
+**`true`** if the inner iterator has children, otherwise **`false`**
 
 简介
 ----
@@ -8523,7 +8523,7 @@ function my_callback($current, $key, $iterator) {
 
 Filtering a recursive iterator generally involves two conditions. The
 first is that, to allow recursion, the callback function should return
-**`TRUE`** if the current iterator item has children. The second is the
+**`true`** if the current iterator item has children. The second is the
 normal filter condition, such as a file size or extension check as in
 the example below.
 
@@ -8577,8 +8577,8 @@ determine which items are accepted or rejected.
 The recursive iterator to be filtered.
 
 `callback`  
-The callback, which should return **`TRUE`** to accept the current item
-or **`FALSE`** otherwise. See
+The callback, which should return **`true`** to accept the current item
+or **`false`** otherwise. See
 <a href="/spl/iterators.html#范例" class="link">Examples</a>.
 
 May be any valid <span class="type">callable</span> value.
@@ -8643,7 +8643,7 @@ Check whether the inner iterator's current element has children
 class="methodname">RecursiveCallbackFilterIterator::hasChildren</span> (
 <span class="methodparam">void</span> )
 
-Returns **`TRUE`** if the current element has children, **`FALSE`**
+Returns **`true`** if the current element has children, **`false`**
 otherwise.
 
 ### 参数
@@ -8652,7 +8652,7 @@ otherwise.
 
 ### 返回值
 
-Returns **`TRUE`** if the current element has children, **`FALSE`**
+Returns **`true`** if the current element has children, **`false`**
 otherwise.
 
 ### 范例
@@ -8778,7 +8778,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">hasChildren</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$allow_links`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">key</span> ( <span
@@ -9069,7 +9069,7 @@ Returns whether current entry is a directory and not '.' or '..'
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">RecursiveDirectoryIterator::hasChildren</span>
 (\[ <span class="methodparam"><span class="type">bool</span>
-`$allow_links`<span class="initializer"> = **`FALSE`**</span></span> \]
+`$allow_links`<span class="initializer"> = **`false`**</span></span> \]
 )
 
 **Warning**
@@ -9382,7 +9382,7 @@ Check whether the inner iterator's current element has children.
 
 ### 返回值
 
-**`TRUE`** if the inner iterator has children, otherwise **`FALSE`**
+**`true`** if the inner iterator has children, otherwise **`false`**
 
 ### 参见
 
@@ -9627,7 +9627,7 @@ Called for each element to test whether it has children.
 
 ### 返回值
 
-**`TRUE`** if the element has children, otherwise **`FALSE`**
+**`true`** if the element has children, otherwise **`false`**
 
 RecursiveIteratorIterator::\_\_construct
 ========================================
@@ -9812,7 +9812,7 @@ End Iteration
 
 Called when the iteration ends (when <span
 class="methodname">RecursiveIteratorIterator::valid</span> first returns
-**`FALSE`**.
+**`false`**.
 
 **Warning**
 
@@ -9898,7 +9898,7 @@ Gets the maximum allowable depth.
 
 ### 返回值
 
-The maximum accepted depth, or **`FALSE`** if any depth is allowed.
+The maximum accepted depth, or **`false`** if any depth is allowed.
 
 ### 参见
 
@@ -10077,7 +10077,7 @@ class="methodparam">void</span> )
 
 ### 返回值
 
-**`TRUE`** if the current position is valid, otherwise **`FALSE`**
+**`true`** if the current position is valid, otherwise **`false`**
 
 简介
 ----
@@ -10365,8 +10365,8 @@ class="methodname">RecursiveRegexIterator::getChildren</span>.
 
 ### 返回值
 
-Returns **`TRUE`** if an iterator can be obtained for the current entry,
-otherwise returns **`FALSE`**.
+Returns **`true`** if an iterator can be obtained for the current entry,
+otherwise returns **`false`**.
 
 ### 范例
 
@@ -10758,7 +10758,7 @@ Called for each element to test whether it has children.
 
 ### 返回值
 
-**`TRUE`** if there are children, otherwise **`FALSE`**
+**`true`** if there are children, otherwise **`false`**
 
 RecursiveTreeIterator::\_\_construct
 ====================================
@@ -10874,7 +10874,7 @@ End iteration
 
 Called when the iteration ends (when <span
 class="methodname">RecursiveTreeIterator::valid</span> first returns
-**`FALSE`**)
+**`false`**)
 
 **Warning**
 
@@ -11147,7 +11147,7 @@ Check whether the current position is valid.
 
 ### 返回值
 
-**`TRUE`** if the current position is valid, otherwise **`FALSE`**
+**`true`** if the current position is valid, otherwise **`false`**
 
 简介
 ----
@@ -11323,7 +11323,7 @@ flag is set) against the regular expression.
 
 ### 返回值
 
-**`TRUE`** if a match, **`FALSE`** otherwise.
+**`true`** if a match, **`false`** otherwise.
 
 ### 范例
 

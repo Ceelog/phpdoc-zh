@@ -24,7 +24,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 
 ### 返回值
 
-如果发现了恰当的签名则返回一个对应的常量，否则返回 **`FALSE`**。返回值和
+如果发现了恰当的签名则返回一个对应的常量，否则返回 **`false`**。返回值和
 <span class="function">getimagesize</span> 返回的数组中的索引 2
 的值是一样的，但本函数快得多。
 
@@ -88,7 +88,7 @@ exif\_read\_data
 class="methodname">exif\_read\_data</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$sections`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$sections`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span> `$arrays`<span
 class="initializer"> = false</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$thumbnail`<span
@@ -134,7 +134,7 @@ UserCommentEncoding 和 UserComment。UserComment
 
 `sections`  
 是需要存在于文件中的逗号分隔的区段列表用来产生结果数组。如果未找到所请求的区段则返回值为
-**`FALSE`**。
+**`false`**。
 
 |           |                                                                                                                                                                                                                                                  |
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -151,12 +151,12 @@ UserCommentEncoding 和 UserComment。UserComment
 和*COMMENT* 区段总是成为数组，因为它们里面包含的名字和其它区段冲突。
 
 `thumbnail`  
-当设定为 **`TRUE`** 时，读取缩略图本身。否则只读取标记数据。
+当设定为 **`true`** 时，读取缩略图本身。否则只读取标记数据。
 
 ### 返回值
 
 返回一个关联数组，键名是头信息名，值为与其相应的值。如果没有可供返回的数据，<span
-class="function">exif\_read\_data</span> 将返回 **`FALSE`**。
+class="function">exif\_read\_data</span> 将返回 **`false`**。
 
 ### 更新日志
 
@@ -243,7 +243,7 @@ class="methodparam"><span class="type">int</span> `$index`</span> )
 ### 返回值
 
 返回头名称。 如果 `index` 参数不是预定义的 EXIF 标签 id，则返回
-**`FALSE`**
+**`false`**
 
 ### 范例
 
@@ -284,7 +284,7 @@ class="methodparam"><span class="type">int</span> `&$imagetype`</span>
 \]\]\] )
 
 <span class="function">exif\_thumbnail</span> 读取 TIFF 或 JPEG
-图像中的嵌入缩略图。如果图像不包含缩略图则返回 **`FALSE`**。
+图像中的嵌入缩略图。如果图像不包含缩略图则返回 **`false`**。
 
 If you want to deliver thumbnails through this function, you should send
 the mimetype information using the <span class="function">header</span>
@@ -292,7 +292,7 @@ function.
 
 It is possible that <span class="function">exif\_thumbnail</span> cannot
 create an image but can determine its size. In this case, the return
-value is **`FALSE`** but `width` and `height` are set.
+value is **`false`** but `width` and `height` are set.
 
 ### 参数
 
@@ -312,7 +312,7 @@ or JPEG.
 
 ### 返回值
 
-Returns the embedded thumbnail, or **`FALSE`** if the image contains no
+Returns the embedded thumbnail, or **`false`** if the image contains no
 thumbnail.
 
 ### 更新日志

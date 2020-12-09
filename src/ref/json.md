@@ -9,7 +9,7 @@ json\_decode
 class="methodname">json\_decode</span> ( <span class="methodparam"><span
 class="type">string</span> `$json`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$assoc`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$depth`<span
 class="initializer"> = 512</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$options`<span
@@ -30,7 +30,7 @@ class="initializer"> = 0</span></span> \]\]\] )
 > <a href="http://www.faqs.org/rfcs/rfc7159" class="link external">» RFC 7159</a>.
 
 `assoc`  
-当该参数为 **`TRUE`** 时，将返回 <span class="type">array</span> 而非
+当该参数为 **`true`** 时，将返回 <span class="type">array</span> 而非
 <span class="type">object</span> 。
 
 `depth`  
@@ -45,8 +45,8 @@ class="initializer"> = 0</span></span> \]\]\] )
 ### 返回值
 
 通过恰当的 PHP 类型返回在 `json` 中编码的数据。值*true*, *false* 和
-*null* 会相应地返回 **`TRUE`**, **`FALSE`** 和 **`NULL`**。 如果 `json`
-无法被解码， 或者编码数据深度超过了递归限制的话，将会返回**`NULL`** 。
+*null* 会相应地返回 **`true`**, **`false`** 和 **`null`**。 如果 `json`
+无法被解码， 或者编码数据深度超过了递归限制的话，将会返回**`null`** 。
 
 ### 更新日志
 
@@ -294,7 +294,7 @@ class="initializer"> = 512</span></span> \]\] )
 ### 返回值
 
 成功则返回 JSON 编码的 <span class="type">string</span> 或者在失败时返回
-**`FALSE`** 。
+**`false`** 。
 
 ### 更新日志
 

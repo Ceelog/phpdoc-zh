@@ -21,11 +21,11 @@ class="methodparam"><span class="type">object</span> `$newthis`</span>
 类的成员函数是相同的。
 
 静态闭包不能有绑定的对象（ `newthis` 参数的值应该设为
-**`NULL`**）不过仍然可以用 bubdTo 方法来改变它们的类作用域。
+**`null`**）不过仍然可以用 bubdTo 方法来改变它们的类作用域。
 
 This function will ensure that for a non-static closure, having a bound
 instance will imply being scoped and vice-versa. To this end, non-static
-closures that are given a scope but a **`NULL`** instance are made
+closures that are given a scope but a **`null`** instance are made
 static and non-static non-scoped closures that are given a non-null
 instance are scoped to an unspecified class.
 
@@ -37,7 +37,7 @@ instance are scoped to an unspecified class.
 ### 参数
 
 `newthis`  
-绑定给匿名函数的一个对象，或者 **`NULL`** 来取消绑定。
+绑定给匿名函数的一个对象，或者 **`null`** 来取消绑定。
 
 `newscope`  
 关联到匿名函数的类作用域，或者 'static'
@@ -47,7 +47,7 @@ instance are scoped to an unspecified class.
 ### 返回值
 
 返回新创建的 <span class="classname">Closure</span> 对象
-或者在失败时返回 **`FALSE`**
+或者在失败时返回 **`false`**
 
 ### 范例
 

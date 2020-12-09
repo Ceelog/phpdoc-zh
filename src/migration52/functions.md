@@ -11,7 +11,7 @@ PHP Core:
     *val* </span>
 -   <span class="simpara"> <span
     class="function">error\_get\_last</span> - Get the last occurred
-    error as associative array. Returns **`NULL`** if there hasn't been
+    error as associative array. Returns **`null`** if there hasn't been
     an error yet </span>
 -   <span class="simpara"> <span
     class="function">image\_type\_to\_extension</span> - Get file
@@ -116,7 +116,7 @@ ming (As of PHP 5.2.1):
 
 -   <span class="simpara"> <span
     class="function">pg\_field\_table</span> - Returns the name of the
-    table field belongs to, or table's oid if *oid\_only* is **`TRUE`**
+    table field belongs to, or table's oid if *oid\_only* is **`true`**
     </span>
 
 <a href="/ref/posix.html" class="link">posix</a>:
@@ -135,16 +135,16 @@ ming (As of PHP 5.2.1):
 
 -   <span class="simpara"> <span
     class="function">xmlwriter\_full\_end\_element</span> - End current
-    element - returns **`FALSE`** on error </span>
+    element - returns **`false`** on error </span>
 -   <span class="simpara"> <span
     class="function">xmlwriter\_write\_raw</span> - Write text - returns
-    **`FALSE`** on error </span>
+    **`false`** on error </span>
 -   <span class="simpara"> <span
     class="function">xmlwriter\_start\_dtd\_entity</span> - Create start
-    DTD Entity - returns **`FALSE`** on error </span>
+    DTD Entity - returns **`false`** on error </span>
 -   <span class="simpara"> <span
     class="function">xmlwriter\_end\_dtd\_entity</span> - End current
-    DTD Entity - returns **`FALSE`** on error </span>
+    DTD Entity - returns **`false`** on error </span>
 -   <span class="simpara"> <span
     class="function">xmlwriter\_write\_dtd\_entity</span> - Write full
-    DTD Entity tag - returns **`FALSE`** on error </span>
+    DTD Entity tag - returns **`false`** on error </span>

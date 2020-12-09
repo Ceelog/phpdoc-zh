@@ -120,7 +120,7 @@ class="initializer"> = MCRYPT\_DEV\_URANDOM</span></span> \] )
 
 ### 返回值
 
-返回初始向量。如果发生错误，则返回 **`FALSE`**。
+返回初始向量。如果发生错误，则返回 **`false`**。
 
 ### 更新日志
 
@@ -178,7 +178,7 @@ class="methodparam"><span class="type">string</span> `$iv`</span> \] )
 
 `key`  
 数据加密密钥。 如果密钥长度不是加解密算法能够支持的有效长度，
-那么会产生警告并且返回 **`FALSE`**
+那么会产生警告并且返回 **`false`**
 
 `data`  
 要使用给定的 `cipher` 和 `mode` 解密的数据。 如果数据大小不是 n \*
@@ -193,17 +193,17 @@ class="methodparam"><span class="type">string</span> `$iv`</span> \] )
 Used for the initialization in CBC, CFB, OFB modes, and in some
 algorithms in STREAM mode. If the provided IV size is not supported by
 the chaining mode or no IV was provided, but the chaining mode requires
-one, the function will emit a warning and return **`FALSE`**.
+one, the function will emit a warning and return **`false`**.
 
 ### 返回值
 
-以字符串格式返回解密后的数据， 或者在失败时返回 **`FALSE`**。
+以字符串格式返回解密后的数据， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
 | 版本  | 说明                                                                                                                                                                                                                             |
 |-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.6.0 | 不再接受无效长度的 `key` and `iv` 参数。 如果参数长度无效，则 <span class="function">mcrypt\_decrypt</span> 函数会产生警告并且返回 **`FALSE`**。 之前版本中，对于长度不足的密钥和初始向量会在其后补齐 '*\\0*' 使其达到有效长度。 |
+| 5.6.0 | 不再接受无效长度的 `key` and `iv` 参数。 如果参数长度无效，则 <span class="function">mcrypt\_decrypt</span> 函数会产生警告并且返回 **`false`**。 之前版本中，对于长度不足的密钥和初始向量会在其后补齐 '*\\0*' 使其达到有效长度。 |
 
 ### 参见
 
@@ -488,7 +488,7 @@ class="methodname">mcrypt\_enc\_is\_block\_algorithm\_mode</span> (
 `$td`</span> )
 
 打开的模式的算法是否支持分组加密 （例如： 如果是流模式，则返回
-**`FALSE`**， cbc，cfb，ofb 模式则返回 **`TRUE`**）。
+**`false`**， cbc，cfb，ofb 模式则返回 **`true`**）。
 
 ### 参数
 
@@ -497,7 +497,7 @@ class="methodname">mcrypt\_enc\_is\_block\_algorithm\_mode</span> (
 
 ### 返回值
 
-如果算法支持分组模式，返回 **`TRUE`**， 反之返回 **`FALSE`**。
+如果算法支持分组模式，返回 **`true`**， 反之返回 **`false`**。
 
 mcrypt\_enc\_is\_block\_algorithm
 =================================
@@ -523,7 +523,7 @@ class="methodparam"><span class="type">resource</span> `$td`</span> )
 
 ### 返回值
 
-如果是分组算法，返回 **`TRUE`**， 如果是流模式，返回 **`FALSE`**。
+如果是分组算法，返回 **`true`**， 如果是流模式，返回 **`false`**。
 
 mcrypt\_enc\_is\_block\_mode
 ============================
@@ -541,7 +541,7 @@ class="methodname">mcrypt\_enc\_is\_block\_mode</span> ( <span
 class="methodparam"><span class="type">resource</span> `$td`</span> )
 
 打开的模式是否以分组方式输出 （例如，对于 cbc 和 ecb 模式而言返回
-**`TRUE`**，对于 cfb 和流模式而言，返回 **`FALSE`**）。
+**`true`**，对于 cfb 和流模式而言，返回 **`false`**）。
 
 ### 参数
 
@@ -550,8 +550,8 @@ class="methodparam"><span class="type">resource</span> `$td`</span> )
 
 ### 返回值
 
-如果模式以字节分组（字节块）方式输出，返回 **`TRUE`**，
-如果是以字节方式输出，返回 **`FALSE`**。
+如果模式以字节分组（字节块）方式输出，返回 **`true`**，
+如果是以字节方式输出，返回 **`false`**。
 
 mcrypt\_enc\_self\_test
 =======================
@@ -609,7 +609,7 @@ class="methodparam"><span class="type">string</span> `$iv`</span> \] )
 `key`  
 加密密钥。
 如果密钥长度不是该算法所能够支持的有效长度，则函数将会发出警告并返回
-**`FALSE`**
+**`false`**
 
 `data`  
 使用给定的 `cipher` 和 `mode` 加密的数据。 如果数据长度不是
@@ -626,17 +626,17 @@ n\*分组大小，则在其后使用 '*\\0*' 补齐。
 Used for the initialization in CBC, CFB, OFB modes, and in some
 algorithms in STREAM mode. If the provided IV size is not supported by
 the chaining mode or no IV was provided, but the chaining mode requires
-one, the function will emit a warning and return **`FALSE`**.
+one, the function will emit a warning and return **`false`**.
 
 ### 返回值
 
-以字符串方式返回密文， 或者在失败时返回 **`FALSE`**。
+以字符串方式返回密文， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
 | 版本  | 说明                                                                                                                                                                                                                             |
 |-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.6.0 | 不再接受无效长度的 `key` and `iv` 参数。 如果参数长度无效，则 <span class="function">mcrypt\_decrypt</span> 函数会产生警告并且返回 **`FALSE`**。 之前版本中，对于长度不足的密钥和初始向量会在其后补齐 '*\\0*' 使其达到有效长度。 |
+| 5.6.0 | 不再接受无效长度的 `key` and `iv` 参数。 如果参数长度无效，则 <span class="function">mcrypt\_decrypt</span> 函数会产生警告并且返回 **`false`**。 之前版本中，对于长度不足的密钥和初始向量会在其后补齐 '*\\0*' 使其达到有效长度。 |
 
 ### 范例
 
@@ -738,7 +738,7 @@ class="methodparam"><span class="type">resource</span> `$td`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -777,7 +777,7 @@ class="function">mcrypt\_module\_close</span> 一起使用的时候，
 
 本函数终止由加密描述符（`td`）指定的加密模块。
 实际上，它会清理所有的缓冲区，并且关闭已经打开的模块。
-如果发生错误，返回 **`FALSE`**， 成功返回 **`TRUE`**。
+如果发生错误，返回 **`false`**， 成功返回 **`true`**。
 
 mcrypt\_generic\_init
 =====================
@@ -822,7 +822,7 @@ ECB 模式下，初始向量会被忽略， 在 CFB，CBC，STREAM，nOFB 和 OF
 
 如果发生错误，将会返回负数： -3 表示密钥长度有误，-4 表示内存分配失败，
 其他值表示未知错误， 同时会显示对应的警告信息。 如果传入参数不正确，返回
-**`FALSE`**。
+**`false`**。
 
 ### 参见
 
@@ -929,7 +929,7 @@ class="function">mcrypt\_module\_open</span> 函数所返回的资源。
 
 ### 返回值
 
-返回以字节为单位的此算法的分组数据大小。 或者在失败时返回 **`FALSE`**。
+返回以字节为单位的此算法的分组数据大小。 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -977,7 +977,7 @@ libmcrypt 2.2.x 中，<span
 class="function">mcrypt\_get\_cipher\_name</span>
 接受整数表达的加密算法， libmcrypt 2.4.x
 及更高版本中，它接受字符串表达的加密算法名称，
-返回的都是字符串表达的名称，如果算法不存在则返回 **`FALSE`**。
+返回的都是字符串表达的名称，如果算法不存在则返回 **`false`**。
 
 ### 参数
 
@@ -986,7 +986,7 @@ class="function">mcrypt\_get\_cipher\_name</span>
 
 ### 返回值
 
-本函数返回加密算法名称， 如果算法不存在返回 **`FALSE`**。
+本函数返回加密算法名称， 如果算法不存在返回 **`false`**。
 
 ### 范例
 
@@ -1043,7 +1043,7 @@ class="methodparam"><span class="type">string</span> `$cipher`</span> ,
 
 ### 返回值
 
-返回初始向量的大小，以字节为单位。 如果发生错误，返回 **`FALSE`**。
+返回初始向量的大小，以字节为单位。 如果发生错误，返回 **`false`**。
 如果指定的算法/模式不需要初始向量，返回 0。
 
 ### 范例
@@ -1108,7 +1108,7 @@ class="methodparam"><span class="type">string</span> `$cipher`</span> ,
 ### 返回值
 
 返回算法所支持的最大密钥大小，以字节为单位。 或者在失败时返回
-**`FALSE`**。
+**`false`**。
 
 ### 范例
 
@@ -1267,7 +1267,7 @@ class="methodparam"><span class="type">resource</span> `$td`</span> )
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1392,8 +1392,8 @@ class="methodname">mcrypt\_module\_is\_block\_algorithm\_mode</span> (
 `$mode`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$lib_dir`</span> \] )
 
-对于分组加密模式，返回 **`TRUE`**， 反之返回 **`FALSE`**。 （例如，对于
-STREAM 模式返回 **`FALSE`**，对于 cbc，cfb，ofb 返回 **`TRUE`**）
+对于分组加密模式，返回 **`true`**， 反之返回 **`false`**。 （例如，对于
+STREAM 模式返回 **`false`**，对于 cbc，cfb，ofb 返回 **`true`**）
 
 ### 参数
 
@@ -1405,8 +1405,8 @@ STREAM 模式返回 **`FALSE`**，对于 cbc，cfb，ofb 返回 **`TRUE`**）
 
 ### 返回值
 
-对于分组加密模式，返回 **`TRUE`**， 反之返回 **`FALSE`**。 （例如，对于
-STREAM 模式返回 **`FALSE`**，对于 cbc，cfb，ofb 返回 **`TRUE`**）
+对于分组加密模式，返回 **`true`**， 反之返回 **`false`**。 （例如，对于
+STREAM 模式返回 **`false`**，对于 cbc，cfb，ofb 返回 **`true`**）
 
 mcrypt\_module\_is\_block\_algorithm
 ====================================
@@ -1425,7 +1425,7 @@ class="methodparam"><span class="type">string</span> `$algorithm`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$lib_dir`</span> \] )
 
-如果指定算法是分组加密算法，返回 **`TRUE`**， 反之返回 **`FALSE`**。
+如果指定算法是分组加密算法，返回 **`true`**， 反之返回 **`false`**。
 
 ### 参数
 
@@ -1437,7 +1437,7 @@ class="methodparam"><span class="type">string</span> `$algorithm`</span>
 
 ### 返回值
 
-如果指定算法是分组加密算法，返回 **`TRUE`**， 反之返回 **`FALSE`**。
+如果指定算法是分组加密算法，返回 **`true`**， 反之返回 **`false`**。
 
 mcrypt\_module\_is\_block\_mode
 ===============================
@@ -1456,9 +1456,9 @@ class="methodparam"><span class="type">string</span> `$mode`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$lib_dir`</span> \] )
 
-如果模式是以字节块（分组）方式输出，则返回 **`TRUE`**，
-如果只是以字节方式输出，则返回 **`FALSE`**。 （例如，对于 cbc 和 ecb
-模式，返回 **`TRUE`**，对于 cfb 和 stream 模式，返回 **`FALSE`**）
+如果模式是以字节块（分组）方式输出，则返回 **`true`**，
+如果只是以字节方式输出，则返回 **`false`**。 （例如，对于 cbc 和 ecb
+模式，返回 **`true`**，对于 cfb 和 stream 模式，返回 **`false`**）
 
 ### 参数
 
@@ -1472,9 +1472,9 @@ class="methodparam"><span class="type">string</span> `$mode`</span> \[,
 
 ### 返回值
 
-如果模式是以字节块（分组）方式输出，则返回 **`TRUE`**，
-如果只是以字节方式输出，则返回 **`FALSE`**。 （例如，对于 cbc 和 ecb
-模式，返回 **`TRUE`**，对于 cfb 和 stream 模式，返回 **`FALSE`**）
+如果模式是以字节块（分组）方式输出，则返回 **`true`**，
+如果只是以字节方式输出，则返回 **`false`**。 （例如，对于 cbc 和 ecb
+模式，返回 **`true`**，对于 cfb 和 stream 模式，返回 **`false`**）
 
 mcrypt\_module\_open
 ====================
@@ -1526,7 +1526,7 @@ class="function">mcrypt\_module\_close</span> 函数可以关闭模块。
 
 ### 返回值
 
-成功则返回加密描述符，如果发生错误则返回 **`FALSE`**。
+成功则返回加密描述符，如果发生错误则返回 **`false`**。
 
 ### 范例
 
@@ -1622,7 +1622,7 @@ class="methodparam"><span class="type">string</span> `$algorithm`</span>
 
 ### 返回值
 
-自检成功返回 **`TRUE`**， 自检失败返回 **`FALSE`**。
+自检成功返回 **`true`**， 自检失败返回 **`false`**。
 
 ### 范例
 

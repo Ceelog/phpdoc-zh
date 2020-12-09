@@ -329,7 +329,7 @@ a hexadecimal encoding and returned as an ASCII string. </span>
 
 **`DB2_PASSTHRU`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that binary data shall be converted to
-a **`NULL`** value. </span>
+a **`null`** value. </span>
 
 **`DB2_SCROLLABLE`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies a scrollable cursor for a statement
@@ -440,7 +440,7 @@ of **`DB2_AUTOCOMMIT_ON`** indicates that AUTOCOMMIT is on.
 When <span class="function">db2\_autocommit</span> receives both the
 `connection` parameter and `autocommit` parameter, it attempts to set
 the AUTOCOMMIT state of the requested connection to the corresponding
-state. 成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+state. 成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -573,7 +573,7 @@ database.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -801,7 +801,7 @@ Specifies an active DB2 client connection.
 
 ### 返回值
 
-Returns an object on a successful call. Returns **`FALSE`** on failure.
+Returns an object on a successful call. Returns **`false`** on failure.
 
 ### 范例
 
@@ -876,7 +876,7 @@ Specifies an active DB2 client connection.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -933,19 +933,19 @@ A valid connection to an IBM DB2, Cloudscape, or Apache Derby database.
 
 `qualifier`  
 A qualifier for DB2 databases running on OS/390 or z/OS servers. For
-other databases, pass **`NULL`** or an empty string.
+other databases, pass **`null`** or an empty string.
 
 `schema`  
 The schema which contains the tables. To match all schemas, pass
-**`NULL`** or an empty string.
+**`null`** or an empty string.
 
 `table-name`  
 The name of the table or view. To match all tables in the database, pass
-**`NULL`** or an empty string.
+**`null`** or an empty string.
 
 `column-name`  
 The name of the column. To match all columns in the table, pass
-**`NULL`** or an empty string.
+**`null`** or an empty string.
 
 ### 返回值
 
@@ -1004,18 +1004,18 @@ A valid connection to an IBM DB2, Cloudscape, or Apache Derby database.
 
 `qualifier`  
 A qualifier for DB2 databases running on OS/390 or z/OS servers. For
-other databases, pass **`NULL`** or an empty string.
+other databases, pass **`null`** or an empty string.
 
 `schema`  
 The schema which contains the tables. To match all schemas, pass *'%'*.
 
 `table-name`  
 The name of the table or view. To match all tables in the database, pass
-**`NULL`** or an empty string.
+**`null`** or an empty string.
 
 `column-name`  
 The name of the column. To match all columns in the table, pass
-**`NULL`** or an empty string.
+**`null`** or an empty string.
 
 ### 返回值
 
@@ -1033,14 +1033,14 @@ composed of the following columns:
 | TYPE\_NAME          | A string representing the data type for the column.                                                                                                                                                         |
 | COLUMN\_SIZE        | An integer value representing the size of the column.                                                                                                                                                       |
 | BUFFER\_LENGTH      | Maximum number of bytes necessary to store data from this column.                                                                                                                                           |
-| DECIMAL\_DIGITS     | The scale of the column, or **`NULL`** where scale is not applicable.                                                                                                                                       |
-| NUM\_PREC\_RADIX    | An integer value of either *10* (representing an exact numeric data type), *2* (representing an approximate numeric data type), or **`NULL`** (representing a data type for which radix is not applicable). |
+| DECIMAL\_DIGITS     | The scale of the column, or **`null`** where scale is not applicable.                                                                                                                                       |
+| NUM\_PREC\_RADIX    | An integer value of either *10* (representing an exact numeric data type), *2* (representing an approximate numeric data type), or **`null`** (representing a data type for which radix is not applicable). |
 | NULLABLE            | An integer value representing whether the column is nullable or not.                                                                                                                                        |
 | REMARKS             | Description of the column.                                                                                                                                                                                  |
 | COLUMN\_DEF         | Default value for the column.                                                                                                                                                                               |
 | SQL\_DATA\_TYPE     | An integer value representing the size of the column.                                                                                                                                                       |
-| SQL\_DATETIME\_SUB  | Returns an integer value representing a datetime subtype code, or **`NULL`** for SQL data types to which this does not apply.                                                                               |
-| CHAR\_OCTET\_LENGTH | Maximum length in octets for a character data type column, which matches COLUMN\_SIZE for single-byte character set data, or **`NULL`** for non-character data types.                                       |
+| SQL\_DATETIME\_SUB  | Returns an integer value representing a datetime subtype code, or **`null`** for SQL data types to which this does not apply.                                                                               |
+| CHAR\_OCTET\_LENGTH | Maximum length in octets for a character data type column, which matches COLUMN\_SIZE for single-byte character set data, or **`null`** for non-character data types.                                       |
 | ORDINAL\_POSITION   | The 1-indexed position of the column in the table.                                                                                                                                                          |
 | IS\_NULLABLE        | A string value where 'YES' means that the column is nullable and 'NO' means that the column is not nullable.                                                                                                |
 
@@ -1082,7 +1082,7 @@ class="function">db2\_pconnect</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1105,7 +1105,7 @@ class="methodparam"><span class="type">resource</span>
 <span class="function">db2\_conn\_error</span> returns an SQLSTATE value
 representing the reason the last attempt to connect to a database
 failed. As <span class="function">db2\_connect</span> returns
-**`FALSE`** in the event of a failed connection attempt, you do not pass
+**`false`** in the event of a failed connection attempt, you do not pass
 any parameters to <span class="function">db2\_conn\_error</span> to
 retrieve the SQLSTATE value.
 
@@ -1175,7 +1175,7 @@ class="methodparam"><span class="type">resource</span>
 <span class="function">db2\_conn\_errormsg</span> returns an error
 message and SQLCODE value representing the reason the last database
 connection attempt failed. As <span class="function">db2\_connect</span>
-returns **`FALSE`** in the event of a failed connection attempt, do not
+returns **`false`** in the event of a failed connection attempt, do not
 pass any parameters to <span class="function">db2\_conn\_errormsg</span>
 to retrieve the associated error message and SQLCODE value.
 
@@ -1278,13 +1278,13 @@ The password with which you are connecting to the database.
 `username`  
 The username with which you are connecting to the database.
 
-For uncataloged connections, you must pass a **`NULL`** value or empty
+For uncataloged connections, you must pass a **`null`** value or empty
 string.
 
 `password`  
 The password with which you are connecting to the database.
 
-For uncataloged connections, you must pass a **`NULL`** value or empty
+For uncataloged connections, you must pass a **`null`** value or empty
 string.
 
 `options`  
@@ -1494,7 +1494,7 @@ separated by blanks 'i5\_libl'=\>"MYLIB YOURLIB ANYLIB".
 
 Returns a connection handle resource if the connection attempt is
 successful. If the connection attempt fails, <span
-class="function">db2\_connect</span> returns **`FALSE`**.
+class="function">db2\_connect</span> returns **`false`**.
 
 ### 范例
 
@@ -1827,7 +1827,7 @@ class="function">db2\_set\_option</span>.
 ### 返回值
 
 Returns a statement resource if the SQL statement was issued
-successfully, or **`FALSE`** if the database failed to execute the SQL
+successfully, or **`false`** if the database failed to execute the SQL
 statement.
 
 ### 范例
@@ -2110,7 +2110,7 @@ the prepared statement.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -2388,7 +2388,7 @@ cursor.
 
 Returns a 0-indexed array with column values indexed by the column
 position representing the next or requested row in the result set.
-Returns **`FALSE`** if there are no rows left in the result set, or if
+Returns **`false`** if there are no rows left in the result set, or if
 the row requested by `row_number` does not exist in the result set.
 
 ### 范例
@@ -2487,7 +2487,7 @@ cursor.
 
 Returns an associative array with column values indexed by the column
 name representing the next or requested row in the result set. Returns
-**`FALSE`** if there are no rows left in the result set, or if the row
+**`false`** if there are no rows left in the result set, or if the row
 requested by `row_number` does not exist in the result set.
 
 ### 范例
@@ -2590,7 +2590,7 @@ cursor.
 
 Returns an associative array with column values indexed by both the
 column name and 0-indexed column number. The array represents the next
-or requested row in the result set. Returns **`FALSE`** if there are no
+or requested row in the result set. Returns **`false`** if there are no
 rows left in the result set, or if the row requested by `row_number`
 does not exist in the result set.
 
@@ -2703,7 +2703,7 @@ the column in the result set. If you prefer a more descriptive column
 name and object property, you can use the AS clause to assign a name to
 the column in the result set.
 
-Returns **`FALSE`** if no row was retrieved.
+Returns **`false`** if no row was retrieved.
 
 ### 范例
 
@@ -2786,8 +2786,8 @@ result set. Row numbering is 1-indexed.
 
 ### 返回值
 
-Returns **`TRUE`** if the requested row exists in the result set.
-Returns **`FALSE`** if the requested row does not exist in the result
+Returns **`true`** if the requested row exists in the result set.
+Returns **`false`** if the requested row does not exist in the result
 set.
 
 ### 范例
@@ -2905,7 +2905,7 @@ containing the name of the column.
 Returns an integer value with the maximum number of bytes required to
 display the specified column. If the column does not exist in the result
 set, <span class="function">db2\_field\_display\_size</span> returns
-**`FALSE`**.
+**`false`**.
 
 ### 参见
 
@@ -2945,7 +2945,7 @@ containing the name of the column.
 
 Returns a string containing the name of the specified column. If the
 specified column does not exist in the result set, <span
-class="function">db2\_field\_name</span> returns **`FALSE`**.
+class="function">db2\_field\_name</span> returns **`false`**.
 
 ### 参见
 
@@ -2985,7 +2985,7 @@ containing the name of the column.
 
 Returns an integer containing the 0-indexed position of the named column
 in the result set. If the specified column does not exist in the result
-set, <span class="function">db2\_field\_num</span> returns **`FALSE`**.
+set, <span class="function">db2\_field\_num</span> returns **`false`**.
 
 ### 参见
 
@@ -3025,7 +3025,7 @@ containing the name of the column.
 
 Returns an integer containing the precision of the specified column. If
 the specified column does not exist in the result set, <span
-class="function">db2\_field\_precision</span> returns **`FALSE`**.
+class="function">db2\_field\_precision</span> returns **`false`**.
 
 ### 参见
 
@@ -3065,7 +3065,7 @@ containing the name of the column.
 
 Returns an integer containing the scale of the specified column. If the
 specified column does not exist in the result set, <span
-class="function">db2\_field\_scale</span> returns **`FALSE`**.
+class="function">db2\_field\_scale</span> returns **`false`**.
 
 ### 参见
 
@@ -3105,7 +3105,7 @@ containing the name of the column.
 
 Returns a string containing the defined data type of the specified
 column. If the specified column does not exist in the result set, <span
-class="function">db2\_field\_type</span> returns **`FALSE`**.
+class="function">db2\_field\_type</span> returns **`false`**.
 
 ### 参见
 
@@ -3150,7 +3150,7 @@ containing the name of the column.
 Returns an integer containing the width of the specified character or
 binary data type column in a result set. If the specified column does
 not exist in the result set, <span
-class="function">db2\_field\_width</span> returns **`FALSE`**.
+class="function">db2\_field\_width</span> returns **`false`**.
 
 ### 参见
 
@@ -3186,10 +3186,10 @@ A valid connection to an IBM DB2, Cloudscape, or Apache Derby database.
 
 `qualifier`  
 A qualifier for DB2 databases running on OS/390 or z/OS servers. For
-other databases, pass **`NULL`** or an empty string.
+other databases, pass **`null`** or an empty string.
 
 `schema`  
-The schema which contains the tables. If `schema` is **`NULL`**, <span
+The schema which contains the tables. If `schema` is **`null`**, <span
 class="function">db2\_foreign\_keys</span> matches the schema for the
 current connection.
 
@@ -3254,7 +3254,7 @@ A valid statement resource.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3283,7 +3283,7 @@ A valid statement resource.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -3438,7 +3438,7 @@ X
 ### 返回值
 
 Returns the current setting of the connection attribute provided on
-success 或者在失败时返回 **`FALSE`**.
+success 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -3648,7 +3648,7 @@ The size of the LOB data to be retrieved from the *stmt* resource.
 
 ### 返回值
 
-Returns the amount of data the user specifies. Returns **`FALSE`** if
+Returns the amount of data the user specifies. Returns **`false`** if
 the data cannot be retrieved.
 
 ### 范例
@@ -3773,7 +3773,7 @@ class="function">db2\_execute</span>.
 ### 返回值
 
 Returns a new statement resource containing the next result set if the
-stored procedure returned another result set. Returns **`FALSE`** if the
+stored procedure returned another result set. Returns **`false`** if the
 stored procedure did not return another result set.
 
 ### 范例
@@ -3894,7 +3894,7 @@ A valid statement resource containing a result set.
 
 Returns an integer value representing the number of fields in the result
 set associated with the specified statement resource. Returns
-**`FALSE`** if the statement resource is not a valid input value.
+**`false`** if the statement resource is not a valid input value.
 
 ### 范例
 
@@ -3955,7 +3955,7 @@ class="function">db2\_fetch\_assoc</span>, <span
 class="function">db2\_fetch\_both</span>, <span
 class="function">db2\_fetch\_array</span>, or <span
 class="function">db2\_fetch\_row</span>, and branch if the fetch
-function returns **`FALSE`**.
+function returns **`false`**.
 
 > **Note**:
 >
@@ -4013,7 +4013,7 @@ Specifies an active DB2 client connection.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -4064,7 +4064,7 @@ For more information on persistent connections, refer to
 <a href="/features/persistent-connections.html" class="xref">数据库持久连接</a>.
 
 Calling <span class="function">db2\_close</span> on a persistent
-connection always returns **`TRUE`**, but the underlying DB2 client
+connection always returns **`true`**, but the underlying DB2 client
 connection remains open and waiting to serve the next matching <span
 class="function">db2\_pconnect</span> request.
 
@@ -4304,7 +4304,7 @@ Returns a connection handle resource if the connection attempt is
 successful. <span class="function">db2\_pconnect</span> tries to reuse
 an existing connection resource that exactly matches the `database`,
 `username`, and `password` parameters. If the connection attempt fails,
-<span class="function">db2\_pconnect</span> returns **`FALSE`**.
+<span class="function">db2\_pconnect</span> returns **`false`**.
 
 ### 更新日志
 
@@ -4478,7 +4478,7 @@ class="function">db2\_set\_option</span>.
 ### 返回值
 
 Returns a statement resource if the SQL statement was successfully
-parsed and prepared by the database server. Returns **`FALSE`** if the
+parsed and prepared by the database server. Returns **`false`** if the
 database server returned an error. You can determine which error was
 returned by calling <span class="function">db2\_stmt\_error</span> or
 <span class="function">db2\_stmt\_errormsg</span>.
@@ -4543,10 +4543,10 @@ A valid connection to an IBM DB2, Cloudscape, or Apache Derby database.
 
 `qualifier`  
 A qualifier for DB2 databases running on OS/390 or z/OS servers. For
-other databases, pass **`NULL`** or an empty string.
+other databases, pass **`null`** or an empty string.
 
 `schema`  
-The schema which contains the tables. If `schema` is **`NULL`**, <span
+The schema which contains the tables. If `schema` is **`null`**, <span
 class="function">db2\_primary\_keys</span> matches the schema for the
 current connection.
 
@@ -4607,7 +4607,7 @@ A valid connection to an IBM DB2, Cloudscape, or Apache Derby database.
 
 `qualifier`  
 A qualifier for DB2 databases running on OS/390 or z/OS servers. For
-other databases, pass **`NULL`** or an empty string.
+other databases, pass **`null`** or an empty string.
 
 `schema`  
 The schema which contains the procedures. This parameter accepts a
@@ -4619,7 +4619,7 @@ containing *\_* and *%* as wildcards.
 
 `parameter`  
 The name of the parameter. This parameter accepts a search pattern
-containing *\_* and *%* as wildcards. If this parameter is **`NULL`**,
+containing *\_* and *%* as wildcards. If this parameter is **`null`**,
 all parameters for the specified stored procedures are returned.
 
 ### 返回值
@@ -4642,7 +4642,7 @@ specified parameters. The rows are composed of the following columns:
 <tbody>
 <tr class="odd">
 <td>PROCEDURE_CAT</td>
-<td>The catalog that contains the procedure. The value is <strong><code>NULL</code></strong> if this table does not have catalogs.</td>
+<td>The catalog that contains the procedure. The value is <strong><code>null</code></strong> if this table does not have catalogs.</td>
 </tr>
 <tr class="even">
 <td>PROCEDURE_SCHEM</td>
@@ -4700,11 +4700,11 @@ specified parameters. The rows are composed of the following columns:
 </tr>
 <tr class="even">
 <td>DECIMAL_DIGITS</td>
-<td>The scale of the parameter, or <strong><code>NULL</code></strong> where scale is not applicable.</td>
+<td>The scale of the parameter, or <strong><code>null</code></strong> where scale is not applicable.</td>
 </tr>
 <tr class="odd">
 <td>NUM_PREC_RADIX</td>
-<td>An integer value of either <em>10</em> (representing an exact numeric data type), <em>2</em> (representing an approximate numeric data type), or <strong><code>NULL</code></strong> (representing a data type for which radix is not applicable).</td>
+<td>An integer value of either <em>10</em> (representing an exact numeric data type), <em>2</em> (representing an approximate numeric data type), or <strong><code>null</code></strong> (representing a data type for which radix is not applicable).</td>
 </tr>
 <tr class="even">
 <td>NULLABLE</td>
@@ -4724,11 +4724,11 @@ specified parameters. The rows are composed of the following columns:
 </tr>
 <tr class="even">
 <td>SQL_DATETIME_SUB</td>
-<td>Returns an integer value representing a datetime subtype code, or <strong><code>NULL</code></strong> for SQL data types to which this does not apply.</td>
+<td>Returns an integer value representing a datetime subtype code, or <strong><code>null</code></strong> for SQL data types to which this does not apply.</td>
 </tr>
 <tr class="odd">
 <td>CHAR_OCTET_LENGTH</td>
-<td>Maximum length in octets for a character data type parameter, which matches COLUMN_SIZE for single-byte character set data, or <strong><code>NULL</code></strong> for non-character data types.</td>
+<td>Maximum length in octets for a character data type parameter, which matches COLUMN_SIZE for single-byte character set data, or <strong><code>null</code></strong> for non-character data types.</td>
 </tr>
 <tr class="even">
 <td>ORDINAL_POSITION</td>
@@ -4736,7 +4736,7 @@ specified parameters. The rows are composed of the following columns:
 </tr>
 <tr class="odd">
 <td>IS_NULLABLE</td>
-<td>A string value where 'YES' means that the parameter accepts or returns <strong><code>NULL</code></strong> values and 'NO' means that the parameter does not accept or return <strong><code>NULL</code></strong> values.</td>
+<td>A string value where 'YES' means that the parameter accepts or returns <strong><code>null</code></strong> values and 'NO' means that the parameter does not accept or return <strong><code>null</code></strong> values.</td>
 </tr>
 </tbody>
 </table>
@@ -4780,7 +4780,7 @@ A valid connection to an IBM DB2, Cloudscape, or Apache Derby database.
 
 `qualifier`  
 A qualifier for DB2 databases running on OS/390 or z/OS servers. For
-other databases, pass **`NULL`** or an empty string.
+other databases, pass **`null`** or an empty string.
 
 `schema`  
 The schema which contains the procedures. This parameter accepts a
@@ -4798,7 +4798,7 @@ rows are composed of the following columns:
 
 | Column name         | Description                                                                                            |
 |---------------------|--------------------------------------------------------------------------------------------------------|
-| PROCEDURE\_CAT      | The catalog that contains the procedure. The value is **`NULL`** if this table does not have catalogs. |
+| PROCEDURE\_CAT      | The catalog that contains the procedure. The value is **`null`** if this table does not have catalogs. |
 | PROCEDURE\_SCHEM    | Name of the schema that contains the stored procedure.                                                 |
 | PROCEDURE\_NAME     | Name of the procedure.                                                                                 |
 | NUM\_INPUT\_PARAMS  | Number of input (IN) parameters for the stored procedure.                                              |
@@ -4915,7 +4915,7 @@ class="function">db2\_pconnect</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -5067,7 +5067,7 @@ server. The following table lists the database server properties:
 <tr class="even">
 <td>LIKE_ESCAPE_CLAUSE</td>
 <td>bool</td>
-<td><strong><code>TRUE</code></strong> if the database server supports the use of <em>%</em> and <em>_</em> wildcard characters. <strong><code>FALSE</code></strong> if the database server does not support these wildcard characters.</td>
+<td><strong><code>true</code></strong> if the database server supports the use of <em>%</em> and <em>_</em> wildcard characters. <strong><code>false</code></strong> if the database server does not support these wildcard characters.</td>
 </tr>
 <tr class="odd">
 <td>MAX_COL_NAME_LEN</td>
@@ -5112,12 +5112,12 @@ server. The following table lists the database server properties:
 <tr class="odd">
 <td>NON_NULLABLE_COLUMNS</td>
 <td>bool</td>
-<td><strong><code>TRUE</code></strong> if the database server supports columns that can be defined as NOT NULL, <strong><code>FALSE</code></strong> if the database server does not support columns defined as NOT NULL.</td>
+<td><strong><code>true</code></strong> if the database server supports columns that can be defined as NOT NULL, <strong><code>false</code></strong> if the database server does not support columns defined as NOT NULL.</td>
 </tr>
 <tr class="even">
 <td>PROCEDURES</td>
 <td>bool</td>
-<td><strong><code>TRUE</code></strong> if the database server supports the use of the CALL statement to call stored procedures, <strong><code>FALSE</code></strong> if the database server does not support the CALL statement.</td>
+<td><strong><code>true</code></strong> if the database server supports the use of the CALL statement to call stored procedures, <strong><code>false</code></strong> if the database server does not support the CALL statement.</td>
 </tr>
 <tr class="odd">
 <td>SPECIAL_CHARS</td>
@@ -5153,7 +5153,7 @@ Specifies an active DB2 client connection.
 
 ### 返回值
 
-Returns an object on a successful call. Returns **`FALSE`** on failure.
+Returns an object on a successful call. Returns **`false`** on failure.
 
 ### 范例
 
@@ -5291,7 +5291,7 @@ hexadecimal encoding, and will be returned as such. This is the
 equivalent of setting *ibm\_db2.binmode=2* in `php.ini`.
 
 Passing *DB2\_PASSTHRU* specifies that binary data will be converted to
-**`NULL`**. This is the equivalent of setting *ibm\_db2.binmode=3* in
+**`null`**. This is the equivalent of setting *ibm\_db2.binmode=3* in
 `php.ini`.
 
 `db2_attr_case`  
@@ -5657,7 +5657,7 @@ X
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -6065,7 +6065,7 @@ A valid connection to an IBM DB2, Cloudscape, or Apache Derby database.
 
 `qualifier`  
 A qualifier for DB2 databases running on OS/390 or z/OS servers. For
-other databases, pass **`NULL`** or an empty string.
+other databases, pass **`null`** or an empty string.
 
 `schema`  
 The schema which contains the tables.
@@ -6152,11 +6152,11 @@ the following columns:
 </tr>
 <tr class="odd">
 <td>DECIMAL_DIGITS</td>
-<td>The scale of the column, or <strong><code>NULL</code></strong> where scale is not applicable.</td>
+<td>The scale of the column, or <strong><code>null</code></strong> where scale is not applicable.</td>
 </tr>
 <tr class="even">
 <td>NUM_PREC_RADIX</td>
-<td>An integer value of either <em>10</em> (representing an exact numeric data type), <em>2</em> (representing an approximate numeric data type), or <strong><code>NULL</code></strong> (representing a data type for which radix is not applicable).</td>
+<td>An integer value of either <em>10</em> (representing an exact numeric data type), <em>2</em> (representing an approximate numeric data type), or <strong><code>null</code></strong> (representing a data type for which radix is not applicable).</td>
 </tr>
 <tr class="odd">
 <td>PSEUDO_COLUMN</td>
@@ -6203,11 +6203,11 @@ A valid connection to an IBM DB2, Cloudscape, or Apache Derby database.
 
 `qualifier`  
 A qualifier for DB2 databases running on OS/390 or z/OS servers. For
-other databases, pass **`NULL`** or an empty string.
+other databases, pass **`null`** or an empty string.
 
 `schema`  
 The schema that contains the targeted table. If this parameter is
-**`NULL`**, the statistics and indexes are returned for the schema of
+**`null`**, the statistics and indexes are returned for the schema of
 the current user.
 
 `table_name`  
@@ -6242,7 +6242,7 @@ specified parameters. The rows are composed of the following columns:
 <tbody>
 <tr class="odd">
 <td>TABLE_CAT</td>
-<td>The catalog that contains the table. The value is <strong><code>NULL</code></strong> if this table does not have catalogs.</td>
+<td>The catalog that contains the table. The value is <strong><code>null</code></strong> if this table does not have catalogs.</td>
 </tr>
 <tr class="even">
 <td>TABLE_SCHEM</td>
@@ -6272,7 +6272,7 @@ specified parameters. The rows are composed of the following columns:
 <td>The index values must be unique.</td>
 </tr>
 <tr class="odd">
-<td><strong><code>NULL</code></strong></td>
+<td><strong><code>null</code></strong></td>
 <td>This row is statistics information for the table itself.</td>
 </tr>
 </tbody>
@@ -6318,15 +6318,15 @@ specified parameters. The rows are composed of the following columns:
 </tr>
 <tr class="even">
 <td>ORDINAL_POSITION</td>
-<td>The 1-indexed position of the column in the index. <strong><code>NULL</code></strong> if the row contains statistics information about the table itself.</td>
+<td>The 1-indexed position of the column in the index. <strong><code>null</code></strong> if the row contains statistics information about the table itself.</td>
 </tr>
 <tr class="odd">
 <td>COLUMN_NAME</td>
-<td>The name of the column in the index. <strong><code>NULL</code></strong> if the row contains statistics information about the table itself.</td>
+<td>The name of the column in the index. <strong><code>null</code></strong> if the row contains statistics information about the table itself.</td>
 </tr>
 <tr class="even">
 <td>ASC_OR_DESC</td>
-<td><em>A</em> if the column is sorted in ascending order, <em>D</em> if the column is sorted in descending order, <strong><code>NULL</code></strong> if the row contains statistics information about the table itself.</td>
+<td><em>A</em> if the column is sorted in ascending order, <em>D</em> if the column is sorted in descending order, <strong><code>null</code></strong> if the row contains statistics information about the table itself.</td>
 </tr>
 <tr class="odd">
 <td>CARDINALITY</td>
@@ -6340,7 +6340,7 @@ specified parameters. The rows are composed of the following columns:
 </tr>
 <tr class="odd">
 <td>FILTER_CONDITION</td>
-<td>Always returns <strong><code>NULL</code></strong>.</td>
+<td>Always returns <strong><code>null</code></strong>.</td>
 </tr>
 </tbody>
 </table>
@@ -6462,7 +6462,7 @@ A valid connection to an IBM DB2, Cloudscape, or Apache Derby database.
 
 `qualifier`  
 A qualifier for DB2 databases running on OS/390 or z/OS servers. For
-other databases, pass **`NULL`** or an empty string.
+other databases, pass **`null`** or an empty string.
 
 `schema`  
 The schema which contains the tables. This parameter accepts a search
@@ -6480,7 +6480,7 @@ parameters. The rows are composed of the following columns:
 
 | Column name   | Description                                                                                                                   |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------|
-| TABLE\_CAT    | The catalog that contains the table. The value is **`NULL`** if this table does not have catalogs.                            |
+| TABLE\_CAT    | The catalog that contains the table. The value is **`null`** if this table does not have catalogs.                            |
 | TABLE\_SCHEM  | Name of the schema that contains the table.                                                                                   |
 | TABLE\_NAME   | Name of the table.                                                                                                            |
 | GRANTOR       | Authorization ID of the user who granted the privilege.                                                                       |
@@ -6528,7 +6528,7 @@ A valid connection to an IBM DB2, Cloudscape, or Apache Derby database.
 
 `qualifier`  
 A qualifier for DB2 databases running on OS/390 or z/OS servers. For
-other databases, pass **`NULL`** or an empty string.
+other databases, pass **`null`** or an empty string.
 
 `schema`  
 The schema which contains the tables. This parameter accepts a search
@@ -6540,7 +6540,7 @@ containing *\_* and *%* as wildcards.
 
 `table-type`  
 A list of comma-delimited table type identifiers. To match all table
-types, pass **`NULL`** or an empty string. Valid table type identifiers
+types, pass **`null`** or an empty string. Valid table type identifiers
 include: ALIAS, HIERARCHY TABLE, INOPERATIVE VIEW, NICKNAME,
 MATERIALIZED QUERY TABLE, SYSTEM TABLE, TABLE, TYPED TABLE, TYPED VIEW,
 and VIEW.
@@ -6553,7 +6553,7 @@ composed of the following columns:
 
 | Column name  | Description                                                                                        |
 |--------------|----------------------------------------------------------------------------------------------------|
-| TABLE\_CAT   | The catalog that contains the table. The value is **`NULL`** if this table does not have catalogs. |
+| TABLE\_CAT   | The catalog that contains the table. The value is **`null`** if this table does not have catalogs. |
 | TABLE\_SCHEM | Name of the schema that contains the table.                                                        |
 | TABLE\_NAME  | Name of the table.                                                                                 |
 | TABLE\_TYPE  | Table type identifier for the table.                                                               |

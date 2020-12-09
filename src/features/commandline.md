@@ -96,12 +96,12 @@ PHP 5 中，CLI 存在于主文件夹中，名为 `php.exe`，而 CGI 版本名�
     <tbody>
     <tr class="odd">
     <td><a href="/errorfunc/setup.html#" class="link">html_errors</a></td>
-    <td><strong><code>FALSE</code></strong></td>
-    <td>无意义的 HTML 标记符会使得出错信息很凌乱，所以在外壳下阅读报错信息是十分困难的。因此将该选项的默认值改为 <strong><code>FALSE</code></strong>。</td>
+    <td><strong><code>false</code></strong></td>
+    <td>无意义的 HTML 标记符会使得出错信息很凌乱，所以在外壳下阅读报错信息是十分困难的。因此将该选项的默认值改为 <strong><code>false</code></strong>。</td>
     </tr>
     <tr class="even">
     <td><a href="/outcontrol/setup.html#" class="link">implicit_flush</a></td>
-    <td><strong><code>TRUE</code></strong></td>
+    <td><strong><code>true</code></strong></td>
     <td>在命令行模式下，所有来自 <span class="function">print</span> 和 <span class="function">echo</span> 的输出将被立即写到输出端，而不作任何地缓冲操作。如果希望延缓或控制标准输出，仍然可以使用 <a href="/ref/outcontrol.html" class="link">output buffering</a> 设置项。</td>
     </tr>
     <tr class="odd">
@@ -111,8 +111,8 @@ PHP 5 中，CLI 存在于主文件夹中，名为 `php.exe`，而 CGI 版本名�
     </tr>
     <tr class="even">
     <td><a href="/ini/core.html#ini.register-argc-argv" class="link">register_argc_argv</a></td>
-    <td><strong><code>TRUE</code></strong></td>
-    <td><p>由于该设置为 <strong><code>TRUE</code></strong>，将总是可以在 <em>CLI SAPI</em> 中访问到 <em>argc</em>（传送给应用程序参数的个数）和 <em>argv</em>（包含有实际参数的数组）。</p>
+    <td><strong><code>true</code></strong></td>
+    <td><p>由于该设置为 <strong><code>true</code></strong>，将总是可以在 <em>CLI SAPI</em> 中访问到 <em>argc</em>（传送给应用程序参数的个数）和 <em>argv</em>（包含有实际参数的数组）。</p>
     <p>对于 PHP 4.3.0，在使用 <em>CLI SAPI</em> 时，PHP 变量 <em>$argc</em> 和 <em>$argv</em> 已被注册并且设定了对应的值。而在这之前的版本，这两个变量在 <em>CGI</em> 或者 <em>模块</em> 版本中的建立依赖于将 PHP 的设置选项 <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a> 设为 <em>on</em>。除了版本和 <em>register_globals</em> 设定以外，可以随时通过调用 <a href="/reserved/variables/server.html" class="link">$_SERVER</a> 或者 <var class="varname">$HTTP_SERVER_VARS</var> 来访问它们。例如：<var class="varname">$_SERVER['argv']</var></p></td>
     </tr>
     </tbody>

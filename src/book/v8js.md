@@ -71,7 +71,7 @@ class="methodparam"><span class="type">array</span> `$extensions`<span
 class="initializer"> = array()</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$report_uncaught_exceptions`<span class="initializer"> =
-**`TRUE`**</span></span> \]\]\]\] )
+**`true`**</span></span> \]\]\]\] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">executeString</span> ( <span
@@ -101,7 +101,7 @@ class="type">string</span> `$script`</span> \[, <span
 class="methodparam"><span class="type">array</span> `$dependencies`<span
 class="initializer"> = array()</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$auto_enable`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 }
 
@@ -134,7 +134,7 @@ class="methodparam"><span class="type">array</span> `$extensions`<span
 class="initializer"> = array()</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$report_uncaught_exceptions`<span class="initializer"> =
-**`TRUE`**</span></span> \]\]\]\] )
+**`true`**</span></span> \]\]\]\] )
 
 Constructs a new <span class="classname">V8Js</span> object.
 
@@ -163,7 +163,7 @@ class="classname">V8Js</span> object.
 
 `report_uncaught_exceptions`  
 Controls whether uncaught Javascript exceptions are reported immediately
-or not. Defaults to **`TRUE`**. If set to **`FALSE`** the uncaught
+or not. Defaults to **`true`**. If set to **`false`** the uncaught
 exception can be accessed using <span
 class="function">V8Js::getPendingException</span>.
 
@@ -258,7 +258,7 @@ class="function">V8Js::executeString</span> call(s).
 
 ### 返回值
 
-Either <span class="classname">V8JsException</span> or **`NULL`**.
+Either <span class="classname">V8JsException</span> or **`null`**.
 
 V8Js::registerExtension
 =======================
@@ -276,7 +276,7 @@ class="type">string</span> `$script`</span> \[, <span
 class="methodparam"><span class="type">array</span> `$dependencies`<span
 class="initializer"> = array()</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$auto_enable`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 Registers passed Javascript `script` as extension to be used in <span
 class="classname">V8Js</span> contexts.
@@ -299,12 +299,12 @@ such extension is enabled automatically when this extension is loaded.
 > any <span class="classname">V8Js</span> are created which use them.
 
 `auto_enable`  
-If set to **`TRUE`**, the extension will be enabled automatically in all
+If set to **`true`**, the extension will be enabled automatically in all
 <span class="classname">V8Js</span> contexts.
 
 ### 返回值
 
-Returns **`TRUE`** if extension was registered successfully, **`FALSE`**
+Returns **`true`** if extension was registered successfully, **`false`**
 otherwise.
 
 简介

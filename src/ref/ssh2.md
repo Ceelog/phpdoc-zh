@@ -29,7 +29,7 @@ Remote user name.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -93,7 +93,7 @@ used for it.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -149,7 +149,7 @@ Remote user name.
 
 ### 返回值
 
-Returns **`TRUE`** if the server does accept "none" as an authentication
+Returns **`true`** if the server does accept "none" as an authentication
 method, or an array of accepted authentication methods on failure.
 
 ### 范例
@@ -199,7 +199,7 @@ Password for `username`
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -258,7 +258,7 @@ must be provided.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -357,12 +357,12 @@ parameters.
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
 | ignore     | Name of function to call when an **`SSH2_MSG_IGNORE`** packet is received                                                                                                                                     | void ignore\_cb($message)                             |
 | debug      | Name of function to call when an **`SSH2_MSG_DEBUG`** packet is received                                                                                                                                      | void debug\_cb($message, $language, $always\_display) |
-| macerror   | Name of function to call when a packet is received but the message authentication code failed. If the callback returns **`TRUE`**, the mismatch will be ignored, otherwise the connection will be terminated. | bool macerror\_cb($packet)                            |
+| macerror   | Name of function to call when a packet is received but the message authentication code failed. If the callback returns **`true`**, the mismatch will be ignored, otherwise the connection will be terminated. | bool macerror\_cb($packet)                            |
 | disconnect | Name of function to call when an **`SSH2_MSG_DISCONNECT`** packet is received                                                                                                                                 | void disconnect\_cb($reason, $message, $language)     |
 
 ### 返回值
 
-Returns a resource on success, or **`FALSE`** on error.
+Returns a resource on success, or **`false`** on error.
 
 ### 范例
 
@@ -426,7 +426,7 @@ class="function">ssh2\_connect</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -483,7 +483,7 @@ Height of the virtual terminal.
 
 ### 返回值
 
-Returns a stream on success 或者在失败时返回 **`FALSE`**.
+Returns a stream on success 或者在失败时返回 **`false`**.
 
 ### 范例
 
@@ -670,7 +670,7 @@ class="methodparam"><span class="type">resource</span> `$pkey`</span> ,
 `$algoname`</span> , <span class="methodparam"><span
 class="type">string</span> `$blob`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$overwrite`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$attributes`</span>
 \]\] )
 
@@ -702,7 +702,7 @@ abort the add process.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -751,7 +751,7 @@ client to manage the list of authorized public keys stored on the target
 server in an implementation agnostic manner. If the remote server does
 not support the publickey subsystem, the <span
 class="function">ssh2\_publickey\_init</span> function will return
-**`FALSE`**.
+**`false`**.
 
 ### 参数
 
@@ -760,7 +760,7 @@ class="function">ssh2\_publickey\_init</span> function will return
 ### 返回值
 
 Returns an *SSH2 Publickey Subsystem* resource for use with all other
-ssh2\_publickey\_\*() methods 或者在失败时返回 **`FALSE`**.
+ssh2\_publickey\_\*() methods 或者在失败时返回 **`false`**.
 
 ### 注释
 
@@ -883,7 +883,7 @@ Publickey blob as raw binary data
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -928,7 +928,7 @@ Path to the local file.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -984,7 +984,7 @@ The file will be created with the mode specified by `create_mode`.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1036,7 +1036,7 @@ more details on this parameter.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1135,7 +1135,7 @@ class="methodparam"><span class="type">resource</span> `$sftp`</span> ,
 class="type">int</span> `$mode`<span class="initializer"> =
 0777</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$recursive`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 Creates a directory on the remote file server with permissions set to
 `mode`.
@@ -1157,12 +1157,12 @@ Path of the new directory.
 Permissions on the new directory.
 
 `recursive`  
-If `recursive` is **`TRUE`** any parent directories required for
+If `recursive` is **`true`** any parent directories required for
 `dirname` will be automatically created as well.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1311,7 +1311,7 @@ The new file name that replaces `from`.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1360,7 +1360,7 @@ class="function">ssh2\_sftp</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1472,7 +1472,7 @@ Target of the symbolic link.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1518,7 +1518,7 @@ class="function">ssh2\_sftp</span>.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1563,7 +1563,7 @@ class="function">ssh2\_connect</span>.
 This method returns an *SSH2 SFTP* resource for use with all other
 ssh2\_sftp\_\*() methods and the
 <a href="/wrappers/ssh2.html" class="link">ssh2.sftp://</a> fopen
-wrapper, 或者在失败时返回 **`FALSE`**.
+wrapper, 或者在失败时返回 **`false`**.
 
 ### 范例
 

@@ -17,7 +17,7 @@ class="function">list</span>.
 #### Instanceof Operator accepts Literals
 
 *instanceof* now allows literals as the first operand, in which case the
-result is always **`FALSE`**.
+result is always **`false`**.
 
 #### CompileError Exception instead of some Compilation Errors
 

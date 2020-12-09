@@ -20,7 +20,7 @@ class="methodname">Exception::\_\_construct</span>方法的第三个参数）。
 ### 返回值
 
 返回异常链中的前一个异常 <span
-class="classname">Throwable</span>，否则返回**`NULL`**。
+class="classname">Throwable</span>，否则返回**`null`**。
 
 ### 更新日志
 

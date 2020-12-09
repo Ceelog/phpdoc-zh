@@ -25,3 +25,19 @@ Shared Memory
         memory block
     -   [shmop\_write](/ref/shmop.html#shmop_write) — Write data into
         shared memory block
+-   [Shmop](/class/shmop.html) — The Shmop class
+
+简介
+----
+
+A fully opaque class which replaces *shmop* resources as of PHP 8.0.0.
+
+类摘要
+------
+
+**Shmop**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**Shmop** </span> {
+
+}

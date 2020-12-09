@@ -119,7 +119,7 @@ Command to execute.
 Returns an open PTY stream to the processes *stdio*, *stdout*, and
 *stderr*.
 
-On failure this function returns **`FALSE`**.
+On failure this function returns **`false`**.
 
 ### 范例
 

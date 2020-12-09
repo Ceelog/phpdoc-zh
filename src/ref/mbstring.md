@@ -19,7 +19,7 @@ mb\_check\_encoding
 <span class="type">bool</span> <span
 class="methodname">mb\_check\_encoding</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$var`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$encoding`<span
 class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
 
@@ -36,7 +36,7 @@ Encoding Attack）”。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 mb\_chr
 =======
@@ -63,7 +63,7 @@ class="type">false</span></span> <span class="methodname">mb\_chr</span>
 
 ### 返回值
 
-Returns a specific character 或者在失败时返回 **`FALSE`**.
+Returns a specific character 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -322,7 +322,7 @@ class="methodparam"><span class="type">mixed</span> `&$vars`</span> \[,
 
 ### 返回值
 
-成功时返回转换前的字符编码，失败时返回 **`FALSE`**。
+成功时返回转换前的字符编码，失败时返回 **`false`**。
 
 ### 范例
 
@@ -511,11 +511,11 @@ false</span></span> \]\] )
 如果省略了 `encoding_list` 将会使用 detect\_order。
 
 `strict`  
-`strict` 指定了是否严格地检测编码。 默认是 **`FALSE`**。
+`strict` 指定了是否严格地检测编码。 默认是 **`false`**。
 
 ### 返回值
 
-检测到的字符编码，或者无法检测指定字符串的编码时返回 **`FALSE`**。
+检测到的字符编码，或者无法检测指定字符串的编码时返回 **`false`**。
 
 ### 范例
 
@@ -583,7 +583,7 @@ class="function">mb\_send\_mail</span>。
 
 ### 返回值
 
-设置编码检测顺序时候，成功时返回 **`TRUE`**，识别时候返回 **`FALSE`**。
+设置编码检测顺序时候，成功时返回 **`true`**，识别时候返回 **`false`**。
 
 在获取编码检测顺序的时候，会返回排序过的编码数组。
 
@@ -714,7 +714,7 @@ class="methodparam"><span class="type">string</span> `$str`</span> ,
 class="type">string</span> `$encoding`<span class="initializer"> =
 mb\_internal\_encoding()</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_hex`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 Converts specified character codes in <span class="type">string</span>
 `str` from character code to HTML numeric character reference.
@@ -810,7 +810,7 @@ The encoding type being checked, for aliases.
 ### 返回值
 
 Returns a numerically indexed array of encoding aliases on success,
-或者在失败时返回 **`FALSE`**
+或者在失败时返回 **`false`**
 
 ### 错误／异常
 
@@ -889,8 +889,8 @@ class="function">mb\_regex\_set\_options</span> for explanation.
 
 ### 返回值
 
-Returns **`TRUE`** if `string` matches the regular expression `pattern`,
-**`FALSE`** if not.
+Returns **`true`** if `string` matches the regular expression `pattern`,
+**`false`** if not.
 
 ### 注释
 
@@ -960,7 +960,7 @@ class="function">mb\_regex\_set\_options</span> for explanation.
 ### 返回值
 
 The resultant <span class="type">string</span> on success, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### 注释
 
@@ -1065,7 +1065,7 @@ class="function">mb\_regex\_set\_options</span> for explanation. </span>
 ### 返回值
 
 The resultant <span class="type">string</span> on success, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### 更新日志
 
@@ -1154,7 +1154,7 @@ class="function">mb\_ereg\_search\_regs</span>. If there are some
 matches, the first element will have the matched sub-string, the second
 element will have the first part grouped with brackets, the third
 element will have the second part grouped with brackets, and so on. It
-returns **`FALSE`** on error;
+returns **`false`** on error;
 
 ### 注释
 
@@ -1204,7 +1204,7 @@ class="function">mb\_regex\_set\_options</span> for explanation.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 注释
 
@@ -1255,7 +1255,7 @@ element is the offset, in bytes, where the match begins relative to the
 start of the search string, and the second element is the length in
 bytes of the match.
 
-If an error occurs, **`FALSE`** is returned.
+If an error occurs, **`false`** is returned.
 
 ### 注释
 
@@ -1300,7 +1300,7 @@ multibyte regular expression match, and if there are some matched part,
 it returns an <span class="type">array</span> including substring of
 matched part as first element, the first grouped part with brackets as
 second element, the second grouped part as third element, and so on. It
-returns **`FALSE`** on error.
+returns **`false`** on error.
 
 ### 注释
 
@@ -1336,7 +1336,7 @@ string.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 更新日志
 
@@ -1383,8 +1383,8 @@ class="function">mb\_regex\_set\_options</span> for explanation.
 
 ### 返回值
 
-<span class="function">mb\_ereg\_search</span> returns **`TRUE`** if the
-multibyte string matches with the regular expression, or **`FALSE`**
+<span class="function">mb\_ereg\_search</span> returns **`true`** if the
+multibyte string matches with the regular expression, or **`false`**
 otherwise. The <span class="type">string</span> for matching is set by
 <span class="function">mb\_ereg\_search\_init</span>. If `pattern` is
 not specified, the previous one is used.
@@ -1438,7 +1438,7 @@ matched.
 ### 返回值
 
 Returns the byte length of the matched string if a match for `pattern`
-was found in `string`, or **`FALSE`** if no matches were found or an
+was found in `string`, or **`false`** if no matches were found or an
 error occurred.
 
 If the optional parameter `regs` was not passed or the length of the
@@ -1499,7 +1499,7 @@ class="function">mb\_regex\_set\_options</span> for explanation. </span>
 
 ### 返回值
 
-The resultant <span class="type">string</span> or **`FALSE`** on error.
+The resultant <span class="type">string</span> or **`false`** on error.
 
 ### 更新日志
 
@@ -1562,7 +1562,7 @@ matched.
 ### 返回值
 
 Returns the byte length of the matched string if a match for `pattern`
-was found in `string`, or **`FALSE`** if no matches were found or an
+was found in `string`, or **`false`** if no matches were found or an
 error occurred.
 
 If the optional parameter `regs` was not passed or the length of the
@@ -1654,7 +1654,7 @@ type，它将返回最后处理的一种输入类型。
 
 每个 `type` 的字符编码名称。 如果 <span
 class="function">mb\_http\_input</span> 没有处理过任何指定的 HTTP
-输入，它将返回 **`FALSE`**。
+输入，它将返回 **`false`**。
 
 ### 参见
 
@@ -1689,8 +1689,8 @@ class="initializer"> = mb\_http\_output()</span></span> \] )
 ### 返回值
 
 如果省略了 `encoding`，<span class="function">mb\_http\_output</span>
-返回当前的 HTTP 输出字符编码。 否则成功时返回 **`TRUE`**，
-或者在失败时返回 **`FALSE`**。
+返回当前的 HTTP 输出字符编码。 否则成功时返回 **`true`**，
+或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1722,8 +1722,8 @@ one for multibyte regex.
 
 ### 返回值
 
-如果设置了 `encoding`，则成功时返回 **`TRUE`**， 或者在失败时返回
-**`FALSE`**。 In this case, the character encoding for multibyte regex
+如果设置了 `encoding`，则成功时返回 **`true`**， 或者在失败时返回
+**`false`**。 In this case, the character encoding for multibyte regex
 is NOT changed. 如果省略了 `encoding`，则返回当前的字符编码名称。
 
 ### 范例
@@ -1774,10 +1774,10 @@ ISO-8859-1/quoted。
 ### 返回值
 
 如果设置了 `language`，并且 `language` 是有效的，它将返回
-**`TRUE`**。否则将返回 **`FALSE`**。 当省略了 `language`
+**`true`**。否则将返回 **`false`**。 当省略了 `language`
 参数，它将返回语言名称的 <span
 class="type">string</span>。如果之前没有设置过语言，则将返回
-**`FALSE`**。
+**`false`**。
 
 ### 参见
 
@@ -1911,7 +1911,7 @@ class="type">string</span> `$encoding`</span> \] )
 
 ### 返回值
 
-Returns a code point of character 或者在失败时返回 **`FALSE`**.
+Returns a code point of character 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -2029,7 +2029,7 @@ URL 编码过的数据。
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2094,8 +2094,8 @@ Set/Get character encoding for a multibyte regex.
 
 ### 返回值
 
-If `encoding` is set, then 成功时返回 **`TRUE`**， 或者在失败时返回
-**`FALSE`**。 In this case, the internal character encoding is NOT
+If `encoding` is set, then 成功时返回 **`true`**， 或者在失败时返回
+**`false`**。 In this case, the internal character encoding is NOT
 changed. If `encoding` is omitted, then the current character encoding
 name for a multibyte regex is returned.
 
@@ -2211,9 +2211,9 @@ class="methodparam"><span class="type">string</span> `$to`</span> ,
 class="type">string</span> `$message`</span> \[, <span
 class="methodparam"><span class="type">string</span>
 `$additional_headers`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$additional_parameter`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 发送邮件。邮件头和内容根据 <span class="function">mb\_language</span>
 设置来转换编码。 这是 <span class="function">mail</span>
@@ -2280,7 +2280,7 @@ method. For sendmail users, this file is `/etc/mail/trusted-users`.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -2375,7 +2375,7 @@ A string specifying one of the supported encodings.
 ### 返回值
 
 <span class="function">mb\_str\_split</span> returns an array of
-strings, 或者在失败时返回 **`FALSE`**.
+strings, 或者在失败时返回 **`false`**.
 
 ### 参见
 
@@ -2526,7 +2526,7 @@ class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
 `haystack` 中首次出现位置的数值。 和 <span
 class="function">mb\_strpos</span> 不同的是，<span
 class="function">mb\_stripos</span> 是大小写不敏感的。 如果 `needle`
-没找到，它将返回 **`FALSE`**。
+没找到，它将返回 **`false`**。
 
 ### 参数
 
@@ -2545,7 +2545,7 @@ class="function">mb\_stripos</span> 是大小写不敏感的。 如果 `needle`
 ### 返回值
 
 返回字符串 `haystack` 中 `needle` 首次出现位置的数值。 如果没有找到
-`needle`，它将返回 **`FALSE`**。
+`needle`，它将返回 **`false`**。
 
 ### 更新日志
 
@@ -2580,7 +2580,7 @@ mb\_internal\_encoding()</span></span> \]\] )
 中首次的出现并返回 `haystack` 的一部分。 和 <span
 class="function">mb\_strstr</span> 不同的是，<span
 class="function">mb\_stristr</span> 是大小写不敏感的。 如果 `needle`
-没有找到，它将返回 **`FALSE`**。
+没有找到，它将返回 **`false`**。
 
 ### 参数
 
@@ -2591,9 +2591,9 @@ class="function">mb\_stristr</span> 是大小写不敏感的。 如果 `needle`
 在 `haystack` 中查找这个字符串。
 
 `before_needle`  
-决定这个函数返回 `haystack` 的哪一部分。 如果设置为 **`TRUE`**，它返回
+决定这个函数返回 `haystack` 的哪一部分。 如果设置为 **`true`**，它返回
 `haystack` 中从开始到 `needle` 出现位置的所有字符（不包括 needle）。
-如果设置为 **`FALSE`**，它返回 `haystack` 中 `needle`
+如果设置为 **`false`**，它返回 `haystack` 中 `needle`
 出现位置到最后的所有字符（包括了 needle）。
 
 `encoding`  
@@ -2601,7 +2601,7 @@ class="function">mb\_stristr</span> 是大小写不敏感的。 如果 `needle`
 
 ### 返回值
 
-返回 `haystack` 的一部分，或者 `needle` 没找到则返回 **`FALSE`**。
+返回 `haystack` 的一部分，或者 `needle` 没找到则返回 **`false`**。
 
 ### 参见
 
@@ -2637,7 +2637,7 @@ class="initializer"> = mb\_internal\_encoding()</span></span> \] )
 返回具有 `encoding` 编码的<span class="type">字符串</span> `str`
 包含的字符数。 多字节的字符被计为 1。
 
-如果给定的 `encoding` 无效则返回 **`FALSE`**。
+如果给定的 `encoding` 无效则返回 **`false`**。
 
 ### 参见
 
@@ -2687,7 +2687,7 @@ class="type">string</span> 中首次出现的位置。
 ### 返回值
 
 返回 <span class="type">string</span> 的 `haystack` 中 `needle`
-首次出现位置的数值。 如果没有找到 `needle`，它将返回 **`FALSE`**。
+首次出现位置的数值。 如果没有找到 `needle`，它将返回 **`false`**。
 
 ### 更新日志
 
@@ -2718,7 +2718,7 @@ class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
 
 <span class="function">mb\_strrchr</span> 查找了 `needle` 在 `haystack`
 中最后一次出现的位置，并返回 `haystack` 的部分。 如果没有找到
-`needle`，它将返回 **`FALSE`**。
+`needle`，它将返回 **`false`**。
 
 ### 参数
 
@@ -2730,8 +2730,8 @@ class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
 
 `part`  
 决定这个函数返回 `haystack` 的哪一部分。 如果设置为
-**`TRUE`**，它将返回的字符是从 `haystack` 的开始到 `needle`
-最后出现的位置。 如果设置为 **`FALSE`**，它将返回的字符是从 `needle`
+**`true`**，它将返回的字符是从 `haystack` 的开始到 `needle`
+最后出现的位置。 如果设置为 **`false`**，它将返回的字符是从 `needle`
 最后出现的位置到 `haystack` 的末尾。
 
 `encoding`  
@@ -2739,7 +2739,7 @@ class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
 
 ### 返回值
 
-返回 `haystack` 的一部分。 或者在没有找到 `needle` 时返回 **`FALSE`**。
+返回 `haystack` 的一部分。 或者在没有找到 `needle` 时返回 **`false`**。
 
 ### 参见
 
@@ -2767,7 +2767,7 @@ class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
 `needle` 在 `haystack` 中最后一次的出现，并返回 `haystack` 的一部分。 和
 <span class="function">mb\_strrchr</span> 不同的是，<span
 class="function">mb\_strrichr</span> 是大小写不敏感的。 如果 `needle`
-没有找到，它将返回 **`FALSE`**。
+没有找到，它将返回 **`false`**。
 
 ### 参数
 
@@ -2779,8 +2779,8 @@ class="function">mb\_strrichr</span> 是大小写不敏感的。 如果 `needle`
 
 `part`  
 决定这个函数返回 `haystack` 的哪一部分。 如果设置为
-**`TRUE`**，它将返回的字符是从 `haystack` 的开始到 `needle`
-最后出现的位置。 如果设置为 **`FALSE`**，它将返回的字符是从 `needle`
+**`true`**，它将返回的字符是从 `haystack` 的开始到 `needle`
+最后出现的位置。 如果设置为 **`false`**，它将返回的字符是从 `needle`
 最后出现的位置到 `haystack` 的末尾。
 
 `encoding`  
@@ -2788,7 +2788,7 @@ class="function">mb\_strrichr</span> 是大小写不敏感的。 如果 `needle`
 
 ### 返回值
 
-返回 `haystack` 的一部分。 或者在没有找到 `needle` 时返回 **`FALSE`**。
+返回 `haystack` 的一部分。 或者在没有找到 `needle` 时返回 **`false`**。
 
 ### 参见
 
@@ -2835,7 +2835,7 @@ class="function">mb\_strripos</span> 是大小写不敏感的。
 ### 返回值
 
 返回字符串 `haystack` 中 `needle` 最后出现位置的数值。 如果没有找到
-`needle`，它将返回 **`FALSE`**。
+`needle`，它将返回 **`false`**。
 
 ### 参见
 
@@ -2882,7 +2882,7 @@ class="type">string</span> 末尾的任意点。 </span>
 ### 返回值
 
 返回 <span class="type">string</span> 的 `haystack` 中，`needle`
-最后出现位置的数值。 如果没有找到 `needle`，它将返回 **`FALSE`**。
+最后出现位置的数值。 如果没有找到 `needle`，它将返回 **`false`**。
 
 ### 更新日志
 
@@ -2922,7 +2922,7 @@ mb\_internal\_encoding()</span></span> \]\] )
 
 <span class="function">mb\_strstr</span> 查找了 `needle` 在 `haystack`
 中首次的出现并返回 `haystack` 的一部分。 如果 `needle`
-没有找到，它将返回 **`FALSE`**。
+没有找到，它将返回 **`false`**。
 
 ### 参数
 
@@ -2933,9 +2933,9 @@ mb\_internal\_encoding()</span></span> \]\] )
 在 `haystack` 中查找这个字符串。
 
 `before_needle`  
-决定这个函数返回 `haystack` 的哪一部分。 如果设置为 **`TRUE`**，它返回
+决定这个函数返回 `haystack` 的哪一部分。 如果设置为 **`true`**，它返回
 `haystack` 中从开始到 `needle` 出现位置的所有字符（不包括 needle）。
-如果设置为 **`FALSE`**，它返回 `haystack` 中 `needle`
+如果设置为 **`false`**，它返回 `haystack` 中 `needle`
 出现位置到最后的所有字符（包括了 needle）。
 
 `encoding`  
@@ -2943,7 +2943,7 @@ mb\_internal\_encoding()</span></span> \]\] )
 
 ### 返回值
 
-返回 `haystack` 的一部分，或者 `needle` 没找到则返回 **`FALSE`**。
+返回 `haystack` 的一部分，或者 `needle` 没找到则返回 **`false`**。
 
 ### 参见
 
@@ -3140,7 +3140,7 @@ class="methodparam"><span class="type">mixed</span> `$substchar`<span
 class="initializer"> = mb\_substitute\_character()</span></span> \] )
 
 当输入字符的编码是无效的，或者字符代码不存在于输出的字符编码中时，可以为其指定一个替代字符。
-无效字符可以被替换为 **`NULL`**（不输出）、<span
+无效字符可以被替换为 **`null`**（不输出）、<span
 class="type">string</span> 或者 <span class="type">integer</span>
 值（Unicode 字符代码的值）。
 
@@ -3163,8 +3163,8 @@ class="type">字符串</span>中的一个：
 
 ### 返回值
 
-如果设置了 `substchar`，在成功时返回 **`TRUE`**，失败时返回
-**`FALSE`**。 如果没有设置 `substchar`，它将返回当前设置。
+如果设置了 `substchar`，在成功时返回 **`true`**，失败时返回
+**`false`**。 如果没有设置 `substchar`，它将返回当前设置。
 
 ### 范例
 

@@ -34,7 +34,7 @@ of the file.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -86,7 +86,7 @@ class="function">posix\_get\_last\_error</span>
 ### 返回值
 
 Upon successful completion, returns <span class="type">string</span> of
-the pathname to the current controlling terminal. Otherwise **`FALSE`**
+the pathname to the current controlling terminal. Otherwise **`false`**
 is returned and errno is set, which can be checked with <span
 class="function">posix\_get\_last\_error</span>.
 
@@ -174,7 +174,7 @@ class="function">posix\_get\_last\_error</span>
 ### 返回值
 
 Returns a <span class="type">string</span> of the absolute pathname on
-success. On error, returns **`FALSE`** and sets errno which can be
+success. On error, returns **`false`** and sets errno which can be
 checked with <span class="function">posix\_get\_last\_error</span>.
 
 ### 范例
@@ -417,7 +417,7 @@ The name of the group
 ### 返回值
 
 Returns an <span class="type">array</span> on success, 或者在失败时返回
-**`FALSE`**. The array elements returned are:
+**`false`**. The array elements returned are:
 
 | Element | Description                                                                                                                                                                                                                                           |
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -564,7 +564,7 @@ class="methodname">posix\_getpgid</span> ( <span
 class="methodparam"><span class="type">int</span> `$pid`</span> )
 
 Returns the process group identifier of the process `pid`
-或者在失败时返回 **`FALSE`**.
+或者在失败时返回 **`false`**.
 
 ### 参数
 
@@ -705,7 +705,7 @@ An alphanumeric username.
 ### 返回值
 
 On success an array with the following elements is returned, else
-**`FALSE`** is returned:
+**`false`** is returned:
 
 | Element | Description                                                                                                                                                                                                                                                                                                                                                                         |
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -917,7 +917,7 @@ is the process group id of the session leader.
 
 `pid`  
 The process identifier. If set to 0, the current process is assumed. If
-an invalid `pid` is specified, then **`FALSE`** is returned and an error
+an invalid `pid` is specified, then **`false`** is returned and an error
 is set which can be checked with <span
 class="function">posix\_get\_last\_error</span>.
 
@@ -999,7 +999,7 @@ Typically the group number from the password file.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1032,8 +1032,8 @@ class="type">resource</span>.
 
 ### 返回值
 
-Returns **`TRUE`** if `fd` is an open descriptor connected to a terminal
-and **`FALSE`** otherwise.
+Returns **`true`** if `fd` is an open descriptor connected to a terminal
+and **`false`** otherwise.
 
 ### 参见
 
@@ -1065,7 +1065,7 @@ One of the
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1103,7 +1103,7 @@ permissions of the created file are (mode & \~umask).
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 posix\_mknod
 ============
@@ -1143,7 +1143,7 @@ The minor device kernel identifier.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1191,7 +1191,7 @@ The group id.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1236,7 +1236,7 @@ The user id.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1273,7 +1273,7 @@ The group id.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1319,7 +1319,7 @@ The process group id.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1366,7 +1366,7 @@ The hard limit, in whatever unit the resource limit requires, or
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 参见
 
@@ -1417,7 +1417,7 @@ The user id.
 
 ### 返回值
 
-成功时返回 **`TRUE`**， 或者在失败时返回 **`FALSE`**。
+成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 ### 范例
 
@@ -1579,7 +1579,7 @@ class="type">resource</span>.
 ### 返回值
 
 On success, returns a <span class="type">string</span> of the absolute
-path of the `fd`. On failure, returns **`FALSE`**
+path of the `fd`. On failure, returns **`false`**
 
 posix\_uname
 ============

@@ -16,12 +16,12 @@ SSL 上下文选项清单
 `verify_peer` <span class="type">boolean</span>  
 是否需要验证 SSL 证书。
 
-默认值为 **`TRUE`**。
+默认值为 **`true`**。
 
 `verify_peer_name` <span class="type">boolean</span>  
 是否需要验证 peer name。
 
-默认值为 **`TRUE`**.
+默认值为 **`true`**.
 
 `allow_self_signed` <span class="type">boolean</span>  
 是否允许自签名证书。需要配合
@@ -29,7 +29,7 @@ SSL 上下文选项清单
 参数使用（注：当 verify\_peer 参数为 true 时才会根据 allow\_self\_signed
 参数值来决定是否允许自签名证书）。
 
-默认值为 **`FALSE`**
+默认值为 **`false`**
 
 `cafile` <span class="type">string</span>  
 当设置 *verify\_peer* 为 true 时， 用来验证远端证书所用到的 CA 证书。
@@ -73,15 +73,15 @@ CN 名称和本地访问的名称不匹配，则视为连接失败。
 默认值为 *DEFAULT*.
 
 `capture_peer_cert` <span class="type">boolean</span>  
-如果设置为 **`TRUE`** 将会在上下文中创建 *peer\_certificate* 选项，
+如果设置为 **`true`** 将会在上下文中创建 *peer\_certificate* 选项，
 该选项中包含远端证书。
 
 `capture_peer_cert_chain` <span class="type">boolean</span>  
-如果设置为 **`TRUE`** 将会在上下文中创建 *peer\_certificate\_chain*
+如果设置为 **`true`** 将会在上下文中创建 *peer\_certificate\_chain*
 选项， 该选项中包含远端证书链条。
 
 `SNI_enabled` <span class="type">boolean</span>  
-设置为 **`TRUE`** 将启用服务器名称指示（server name indication）。 启用
+设置为 **`true`** 将启用服务器名称指示（server name indication）。 启用
 SNI 将允许同一 IP 地址使用多个证书。
 
 `SNI_server_name` <span class="type">string</span>  
