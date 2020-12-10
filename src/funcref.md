@@ -82,6 +82,7 @@
     -   [BC Math](/book/bc.html) — BCMath 任意精度数学
     -   [GMP](/book/gmp.html) — GNU Multiple Precision
     -   [Math](/book/math.html) — Mathematical Functions
+    -   [Statistics](/book/stats.html)
     -   [Trader](/book/trader.html) — Technical Analysis for Traders
 -   [非文本内容的 MIME 输出](/refs/utilspec/nontext.html)
     -   [FDF](/book/fdf.html) — Forms Data Format

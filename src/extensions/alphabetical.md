@@ -310,6 +310,8 @@
 -   <span
     class="simpara"><a href="/book/ssh2.html" class="xref">SSH2</a></span>
 -   <span
+    class="simpara"><a href="/book/stats.html" class="xref">Statistics</a></span>
+-   <span
     class="simpara"><a href="/book/stomp.html" class="xref">Stomp</a></span>
 -   <span
     class="simpara"><a href="/book/stream.html" class="xref">Streams</a></span>

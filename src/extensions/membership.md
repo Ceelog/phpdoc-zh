@@ -344,6 +344,8 @@ PECL 扩展存在，但是在 PHP 手册中尚未有文档。
 
 -   <a href="/book/ssh2.html" class="xref">SSH2</a>
 
+-   <a href="/book/stats.html" class="xref">Statistics</a>
+
 -   <a href="/book/stomp.html" class="xref">Stomp</a>
 
 -   <a href="/book/swoole.html" class="xref">Swoole</a>

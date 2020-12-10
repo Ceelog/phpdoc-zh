@@ -426,26 +426,29 @@ Connect to an LDAP server
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_connect</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$ldap_uri`<span
-class="initializer"> = **`null`**</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$uri`<span class="initializer"> = **`null`**</span></span> \] )
 
 **Warning**
 
-The *following* signature is still supported for backwards
-compatibility, but is considered deprecated and should not be used
-anymore!
+The *following* signature is still supported for backwards compatibility
+(except for using named parameters), but is considered deprecated and
+should not be used anymore!
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_connect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$host`<span
 class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$port`<span
 class="initializer"> = 389</span></span> \]\] )
 
-Creates an LDAP link identifier and checks whether the given `host` and
-`port` are plausible.
+Creates an LDAP link identifier and checks whether the given `uri` is
+plausible.
 
 > **Note**: <span class="simpara"> This function does *not* open a
 > connection. It checks whether the given parameters are plausible and
@@ -453,7 +456,7 @@ Creates an LDAP link identifier and checks whether the given `host` and
 
 ### 参数
 
-`ldap_uri`  
+`uri`  
 A full LDAP URI of the form *ldap://hostname:port* or
 *ldaps://hostname:port* for SSL encryption.
 
@@ -1871,40 +1874,45 @@ Single-level search
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">array</span><span class="type">false</span></span> <span
 class="methodname">ldap\_list</span> ( <span class="methodparam"><span
-class="type">resource</span> `$link_identifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$base_dn`</span> ,
-<span class="methodparam"><span class="type">string</span>
+class="type"><span class="type">resource</span><span
+class="type">array</span></span> `$ldap`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$base`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
 `$filter`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$attributes`<span class="initializer"> =
-array("\*")</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$attrsonly`<span class="initializer"> =
+\[\]</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$attributes_only`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$sizelimit`<span class="initializer"> =
 -1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$timelimit`<span class="initializer"> =
 -1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$deref`<span class="initializer"> =
-LDAP\_DEREF\_NEVER</span></span> \[, <span class="methodparam"><span
-class="type">array</span> `$serverctrls`<span class="initializer"> =
-array()</span></span> \]\]\]\]\]\] )
+**`LDAP_DEREF_NEVER`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">null</span></span> `$controls`<span class="initializer"> =
+**`null`**</span></span> \]\]\]\]\]\] )
 
 Performs the search for a specified `filter` on the directory with the
 scope **`LDAP_SCOPE_ONELEVEL`**.
 
 **`LDAP_SCOPE_ONELEVEL`** means that the search should only return
-information that is at the level immediately below the `base_dn` given
-in the call. (Equivalent to typing "**ls**" and getting a list of files
-and folders in the current working directory.)
+information that is at the level immediately below the `base` given in
+the call. (Equivalent to typing "**ls**" and getting a list of files and
+folders in the current working directory.)
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`base_dn`  
+`base`  
 The base DN for the directory.
 
 `filter`  
@@ -1918,7 +1926,7 @@ Using this parameter is much more efficient than the default action
 (which is to return all attributes and their associated values). The use
 of this parameter should therefore be considered good practice.
 
-`attrsonly`  
+`attributes_only`  
 Should be set to 1 if only attribute types are wanted. If set to 0 both
 attributes types and attribute values are fetched which is the default
 behaviour.
@@ -1961,7 +1969,7 @@ of the following:
 -   <span class="simpara"> **`LDAP_DEREF_ALWAYS`** - aliases should be
     dereferenced always. </span>
 
-`serverctrls`  
+`controls`  
 Array of <a href="/ldap/controls.html" class="link">LDAP Controls</a> to
 send with the request.
 
@@ -1971,9 +1979,10 @@ Returns a search result identifier or **`false`** on error.
 
 ### 更新日志
 
-| 版本 | 说明                            |
-|------|---------------------------------|
-| 7.3  | Support for `serverctrls` added |
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 范例
 
@@ -2739,24 +2748,29 @@ Read an entry
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">array</span><span class="type">false</span></span> <span
 class="methodname">ldap\_read</span> ( <span class="methodparam"><span
-class="type">resource</span> `$link_identifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$base_dn`</span> ,
-<span class="methodparam"><span class="type">string</span>
+class="type"><span class="type">resource</span><span
+class="type">array</span></span> `$ldap`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$base`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
 `$filter`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$attributes`<span class="initializer"> =
-array("\*")</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$attrsonly`<span class="initializer"> =
+\[\]</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$attributes_only`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$sizelimit`<span class="initializer"> =
 -1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$timelimit`<span class="initializer"> =
 -1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$deref`<span class="initializer"> =
-LDAP\_DEREF\_NEVER</span></span> \[, <span class="methodparam"><span
-class="type">array</span> `$serverctrls`<span class="initializer"> =
-array()</span></span> \]\]\]\]\]\] )
+**`LDAP_DEREF_NEVER`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">null</span></span> `$controls`<span class="initializer"> =
+**`null`**</span></span> \]\]\]\]\]\] )
 
 Performs the search for a specified `filter` on the directory with the
 scope **`LDAP_SCOPE_BASE`**. So it is equivalent to reading an entry
@@ -2764,11 +2778,11 @@ from the directory.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`base_dn`  
+`base`  
 The base DN for the directory.
 
 `filter`  
@@ -2786,7 +2800,7 @@ Using this parameter is much more efficient than the default action
 (which is to return all attributes and their associated values). The use
 of this parameter should therefore be considered good practice.
 
-`attrsonly`  
+`attributes_only`  
 Should be set to 1 if only attribute types are wanted. If set to 0 both
 attributes types and attribute values are fetched which is the default
 behaviour.
@@ -2829,7 +2843,7 @@ of the following:
 -   <span class="simpara"> **`LDAP_DEREF_ALWAYS`** - aliases should be
     dereferenced always. </span>
 
-`serverctrls`  
+`controls`  
 Array of <a href="/ldap/controls.html" class="link">LDAP Controls</a> to
 send with the request.
 
@@ -2841,8 +2855,9 @@ Returns a search result identifier or **`false`** on error.
 
 | 版本  | 说明                                                                                             |
 |-------|--------------------------------------------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*.                                  |
 | 4.0.5 | Parallel searches support was added. See <span class="function">ldap\_search</span> for details. |
-| 7.3   | Support for `serverctrls` added                                                                  |
+| 7.3   | Support for `controls` added                                                                     |
 
 ldap\_rename\_ext
 =================
@@ -3021,24 +3036,29 @@ Search LDAP tree
 
 ### 说明
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">array</span><span class="type">false</span></span> <span
 class="methodname">ldap\_search</span> ( <span class="methodparam"><span
-class="type">resource</span> `$link_identifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$base_dn`</span> ,
-<span class="methodparam"><span class="type">string</span>
+class="type"><span class="type">resource</span><span
+class="type">array</span></span> `$ldap`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$base`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
 `$filter`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$attributes`<span class="initializer"> =
-array("\*")</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$attrsonly`<span class="initializer"> =
+\[\]</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$attributes_only`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$sizelimit`<span class="initializer"> =
 -1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$timelimit`<span class="initializer"> =
 -1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$deref`<span class="initializer"> =
-LDAP\_DEREF\_NEVER</span></span> \[, <span class="methodparam"><span
-class="type">array</span> `$serverctrls`<span class="initializer"> =
-array()</span></span> \]\]\]\]\]\] )
+**`LDAP_DEREF_NEVER`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">null</span></span> `$controls`<span class="initializer"> =
+**`null`**</span></span> \]\]\]\]\]\] )
 
 Performs the search for a specified filter on the directory with the
 scope of **`LDAP_SCOPE_SUBTREE`**. This is equivalent to searching the
@@ -3060,11 +3080,11 @@ returns **`false`** while the parallel search returns an identifier.
 
 ### 参数
 
-`link_identifier`  
+`ldap`  
 An LDAP link identifier, returned by <span
 class="function">ldap\_connect</span>.
 
-`base_dn`  
+`base`  
 The base DN for the directory.
 
 `filter`  
@@ -3084,7 +3104,7 @@ Using this parameter is much more efficient than the default action
 (which is to return all attributes and their associated values). The use
 of this parameter should therefore be considered good practice.
 
-`attrsonly`  
+`attributes_only`  
 Should be set to 1 if only attribute types are wanted. If set to 0 both
 attributes types and attribute values are fetched which is the default
 behaviour.
@@ -3127,7 +3147,7 @@ of the following:
 -   <span class="simpara"> **`LDAP_DEREF_ALWAYS`** - aliases should be
     dereferenced always. </span>
 
-`serverctrls`  
+`controls`  
 Array of <a href="/ldap/controls.html" class="link">LDAP Controls</a> to
 send with the request.
 
@@ -3137,9 +3157,10 @@ Returns a search result identifier or **`false`** on error.
 
 ### 更新日志
 
-| 版本 | 说明                            |
-|------|---------------------------------|
-| 7.3  | Support for `serverctrls` added |
+| 版本  | 说明                                                            |
+|-------|-----------------------------------------------------------------|
+| 8.0.0 | `controls` is nullable now; previously, it defaulted to *\[\]*. |
+| 7.3   | Support for `controls` added                                    |
 
 ### 范例
 

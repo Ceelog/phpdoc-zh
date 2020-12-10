@@ -174,7 +174,11 @@ Streams
 ----
 
 Children of this class are passed to <span
-class="function">stream\_filter\_register</span>.
+class="function">stream\_filter\_register</span>. Note that the
+<a href="/language/oop5/decon.html#object.construct" class="link">__construct</a>
+method is not called; instead, <span
+class="methodname">php\_user\_filter::onCreate</span> should be used for
+initialization.
 
 类摘要
 ------

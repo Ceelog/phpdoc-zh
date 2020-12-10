@@ -20,6 +20,11 @@
     -   [安装／配置](/math/setup.html)
     -   [预定义常量](/math/constants.html)
     -   [Math 函数](/ref/math.html)
+-   [Statistics](/book/stats.html)
+    -   [简介](/intro/stats.html)
+    -   [安装／配置](/stats/setup.html)
+    -   [预定义常量](/stats/constants.html)
+    -   [Statistic 函数](/ref/stats.html)
 -   [Trader](/book/trader.html) — Technical Analysis for Traders
     -   [简介](/intro/trader.html)
     -   [安装／配置](/trader/setup.html)
