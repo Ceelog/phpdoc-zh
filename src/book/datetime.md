@@ -23,6 +23,9 @@
     -   [DateTime::createFromImmutable](/class/datetime.html#DateTime::createFromImmutable)
         — Returns new DateTime object encapsulating the given
         DateTimeImmutable object
+    -   [DateTime::createFromInterface](/class/datetime.html#DateTime::createFromInterface)
+        — Returns new DateTime object encapsulating the given
+        DateTimeInterface object
     -   [DateTime::getLastErrors](/class/datetime.html#DateTime::getLastErrors)
         — 获取警告和错误信息
     -   [DateTime::modify](/class/datetime.html#DateTime::modify) —
@@ -50,6 +53,9 @@
         — Returns new DateTimeImmutable object
     -   [DateTimeImmutable::createFromFormat](/class/datetimeimmutable.html#DateTimeImmutable::createFromFormat)
         — Parses a time string according to a specified format
+    -   [DateTimeImmutable::createFromInterface](/class/datetimeimmutable.html#DateTimeImmutable::createFromInterface)
+        — Returns new DateTimeImmutable object encapsulating the given
+        DateTimeInterface object
     -   [DateTimeImmutable::createFromMutable](/class/datetimeimmutable.html#DateTimeImmutable::createFromMutable)
         — Returns new DateTimeImmutable object encapsulating the given
         DateTime object
@@ -324,6 +330,12 @@ class="type">DateTimeZone</span> `$timezone`</span> \] )
 class="modifier">static</span> <span class="type">DateTime</span> <span
 class="methodname">createFromImmutable</span> ( <span
 class="methodparam"><span class="type">DateTimeImmutable</span>
+`$object`</span> )
+
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">DateTime</span> <span
+class="methodname">createFromInterface</span> ( <span
+class="methodparam"><span class="type">DateTimeInterface</span>
 `$object`</span> )
 
 <span class="modifier">public</span> <span
@@ -929,6 +941,47 @@ $mutable = DateTime::createFromImmutable( $date );
 ### 返回值
 
 Returns a new <span class="classname">DateTime</span> instance.
+
+DateTime::createFromInterface
+=============================
+
+Returns new DateTime object encapsulating the given DateTimeInterface
+object
+
+### 说明
+
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">DateTime</span> <span
+class="methodname">DateTime::createFromInterface</span> ( <span
+class="methodparam"><span class="type">DateTimeInterface</span>
+`$object`</span> )
+
+### 参数
+
+`object`  
+The <span class="classname">DateTimeInterface</span> object that needs
+to be converted to a mutable version. This object is not modified, but
+instead a new <span class="classname">DateTime</span> object is created
+containing the same date, time, and timezone information.
+
+### 返回值
+
+Returns a new <span class="classname">DateTime</span> instance.
+
+### 范例
+
+**示例 \#1 Creating a mutable date time object**
+
+``` php
+<?php
+$date = new DateTimeImmutable("2014-06-20 11:45 Europe/London");
+
+$mutable = DateTime::createFromInterface($date);
+
+$date = new DateTime("2014-06-20 11:45 Europe/London");
+$also_mutable = DateTime::createFromInterface($date);
+?>
+```
 
 DateTime::getLastErrors
 =======================
@@ -1894,6 +1947,13 @@ class="type">DateTimeZone</span> `$timezone`</span> \] )
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span
 class="type">DateTimeImmutable</span> <span
+class="methodname">createFromInterface</span> ( <span
+class="methodparam"><span class="type">DateTimeInterface</span>
+`$object`</span> )
+
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span
+class="type">DateTimeImmutable</span> <span
 class="methodname">createFromMutable</span> ( <span
 class="methodparam"><span class="type">DateTime</span> `$object`</span>
 )
@@ -2066,6 +2126,49 @@ class="type">DateTimeZone</span> `$timezone`</span> \] )
 
 Like <span class="methodname">DateTime::createFromFormat</span> but
 works with <span class="classname">DateTimeImmutable</span>.
+
+DateTimeImmutable::createFromInterface
+======================================
+
+Returns new DateTimeImmutable object encapsulating the given
+DateTimeInterface object
+
+### 说明
+
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span
+class="type">DateTimeImmutable</span> <span
+class="methodname">DateTimeImmutable::createFromInterface</span> ( <span
+class="methodparam"><span class="type">DateTimeInterface</span>
+`$object`</span> )
+
+### 参数
+
+`object`  
+The <span class="classname">DateTimeInterface</span> object that needs
+to be converted to an immutable version. This object is not modified,
+but instead a new <span class="classname">DateTimeImmutable</span>
+object is created containing the same date, time, and timezone
+information.
+
+### 返回值
+
+Returns a new <span class="classname">DateTimeImmutable</span> instance.
+
+### 范例
+
+**示例 \#1 Creating an immutable date time object**
+
+``` php
+<?php
+$date = new DateTime("2014-06-20 11:45 Europe/London");
+
+$immutable = DateTimeImmutable::createFromInterface($date);
+
+$date = new DateTimeImmutable("2014-06-20 11:45 Europe/London");
+$also_immutable = DateTimeImmutable::createFromInterface($date);
+?>
+```
 
 DateTimeImmutable::createFromMutable
 ====================================

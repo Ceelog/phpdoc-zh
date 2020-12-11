@@ -138,11 +138,11 @@ Archives based on the zip file format support several features built
 into the zip file format. Per-file and whole-archive metadata is stored
 in the zip file comment and zip archive comment as a serialized string.
 Pre-existing zip comments will be successfully read as a string.
-Per-file compression read/write is supported with zlib compression, and
-read access is supported with bzip2 compression. There is no limit on
-the number of files within a zip-based phar archive. Empty directories
-are stored in the zip archive as files with a trailing slash like
-*my/directory/*
+Per-file compression read/write is supported with zlib DEFLATE
+compression, and read access is supported with bzip2 compression. There
+is no limit on the number of files within a zip-based phar archive.
+Empty directories are stored in the zip archive as files with a trailing
+slash like *my/directory/*
 
 Phar File Format
 ----------------
@@ -182,11 +182,11 @@ Global Phar bitmapped flags
 Here are the bitmapped flags currently recognized by the Phar extension
 for the global Phar flat bitmap:
 
-| Value        | Description                                                                         |
-|--------------|-------------------------------------------------------------------------------------|
-| *0x00010000* | If set, this Phar contains a verification signature                                 |
-| *0x00001000* | If set, this Phar contains at least 1 file that is compressed with zlib compression |
-| *0x00002000* | If set, this Phar contains at least 1 file that is compressed with bzip compression |
+| Value        | Description                                                                                 |
+|--------------|---------------------------------------------------------------------------------------------|
+| *0x00010000* | If set, this Phar contains a verification signature                                         |
+| *0x00001000* | If set, this Phar contains at least 1 file that is compressed with zlib DEFLATE compression |
+| *0x00002000* | If set, this Phar contains at least 1 file that is compressed with bzip2 compression        |
 
 Phar manifest file entry definition
 -----------------------------------
@@ -213,8 +213,8 @@ The File-specific bitmap values recognized are:
 | Value        | Description                                                                                                                                                                                             |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | *0x000001FF* | These bits are reserved for defining specific file permissions of a file. Permissions are used for <span class="function">fstat</span> and can be used to recreate desired permissions upon extraction. |
-| *0x00001000* | If set, this file is compressed with zlib compression                                                                                                                                                   |
-| *0x00002000* | If set, this file is compressed with bzip compression                                                                                                                                                   |
+| *0x00001000* | If set, this file is compressed with zlib DEFLATE compression                                                                                                                                           |
+| *0x00002000* | If set, this file is compressed with bzip2 compression                                                                                                                                                  |
 
 Phar Signature format
 ---------------------
