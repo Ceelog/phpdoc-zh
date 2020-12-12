@@ -902,6 +902,58 @@ expm1
 -   <span class="function">log1p</span>
 -   <span class="function">exp</span>
 
+fdiv
+====
+
+Divides two numbers, according to IEEE 754
+
+### 说明
+
+<span class="type">float</span> <span class="methodname">fdiv</span> (
+<span class="methodparam"><span class="type">float</span>
+`$dividend`</span> , <span class="methodparam"><span
+class="type">float</span> `$divisor`</span> )
+
+Returns the floating point result of dividing the `dividend` by the
+`divisor`. If the `divisor` is zero, then one of *INF*, *-INF*, or *NAN*
+will be returned.
+
+Note that in comparisons, *NAN* will never `==` or `===`, any value,
+including itself.
+
+### 参数
+
+`dividend`  
+The dividend (numerator)
+
+`divisor`  
+The divisor
+
+### 返回值
+
+The floating point result of `dividend`/`divisor`
+
+### 范例
+
+**示例 \#1 Using <span class="function">fdiv</span>**
+
+``` php
+<?php
+var_dump(fdiv(5.7, 1.3)); // float(4.384615384615385)
+var_dump(fdiv(4, 2)); // float(2)
+var_dump(fdiv(1.0, 0.0)); // float(INF)
+var_dump(fdiv(-1.0, 0.0)); // float(-INF)
+var_dump(fdiv(0.0, 0.0)); // float(NAN)
+?>
+```
+
+### 参见
+
+-   <a href="/language/operators/arithmetic.html" class="link"><em>/</em></a> -
+    Floating-point division
+-   <span class="function">intdiv</span> - Integer division
+-   <span class="function">fmod</span> - Modulus
+
 floor
 =====
 
@@ -2341,6 +2393,8 @@ tanh
 -   [exp](/ref/math.html#exp) — 计算 e 的指数
 -   [expm1](/ref/math.html#expm1) — 返回 exp(number) - 1，甚至当 number
     的值接近零也能计算出准确结果
+-   [fdiv](/ref/math.html#fdiv) — Divides two numbers, according to IEEE
+    754
 -   [floor](/ref/math.html#floor) — 舍去法取整
 -   [fmod](/ref/math.html#fmod) — 返回除法的浮点数余数
 -   [getrandmax](/ref/math.html#getrandmax) — 显示随机数最大的可能值

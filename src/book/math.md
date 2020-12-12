@@ -32,6 +32,8 @@ Mathematical Functions
     -   [exp](/ref/math.html#exp) — 计算 e 的指数
     -   [expm1](/ref/math.html#expm1) — 返回 exp(number) - 1，甚至当
         number 的值接近零也能计算出准确结果
+    -   [fdiv](/ref/math.html#fdiv) — Divides two numbers, according to
+        IEEE 754
     -   [floor](/ref/math.html#floor) — 舍去法取整
     -   [fmod](/ref/math.html#fmod) — 返回除法的浮点数余数
     -   [getrandmax](/ref/math.html#getrandmax) — 显示随机数最大的可能值

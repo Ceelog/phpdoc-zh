@@ -6284,6 +6284,134 @@ class="methodparam"><span class="type">int</span>
 <span class="methodname">setMetadata</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$metadata`</span> )
 
+/\* 继承的方法 \*/
+
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">SplFileInfo::getATime</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileInfo::getBasename</span> (\[ <span
+class="methodparam"><span class="type">string</span> `$suffix`</span> \]
+)
+
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">SplFileInfo::getCTime</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileInfo::getExtension</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span
+class="type">SplFileInfo</span> <span
+class="methodname">SplFileInfo::getFileInfo</span> (\[ <span
+class="methodparam"><span class="type">string</span>
+`$class_name`</span> \] )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileInfo::getFilename</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">SplFileInfo::getGroup</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">SplFileInfo::getInode</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileInfo::getLinkTarget</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">SplFileInfo::getMTime</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">SplFileInfo::getOwner</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileInfo::getPath</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span
+class="type">SplFileInfo</span> <span
+class="methodname">SplFileInfo::getPathInfo</span> (\[ <span
+class="methodparam"><span class="type">string</span>
+`$class_name`</span> \] )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileInfo::getPathname</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">SplFileInfo::getPerms</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileInfo::getRealPath</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">SplFileInfo::getSize</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileInfo::getType</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SplFileInfo::isDir</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SplFileInfo::isExecutable</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SplFileInfo::isFile</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SplFileInfo::isLink</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SplFileInfo::isReadable</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SplFileInfo::isWritable</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span
+class="type">SplFileObject</span> <span
+class="methodname">SplFileInfo::openFile</span> (\[ <span
+class="methodparam"><span class="type">string</span> `$open_mode`<span
+class="initializer"> = "r"</span></span> \[, <span
+class="methodparam"><span class="type">bool</span>
+`$use_include_path`<span class="initializer"> =
+**`false`**</span></span> \[, <span class="methodparam"><span
+class="type">resource</span> `$context`<span class="initializer"> =
+**`null`**</span></span> \]\]\] )
+
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">SplFileInfo::setFileClass</span> (\[ <span
+class="methodparam"><span class="type">string</span> `$class_name`<span
+class="initializer"> = "SplFileObject"</span></span> \] )
+
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">SplFileInfo::setInfoClass</span> (\[ <span
+class="methodparam"><span class="type">string</span> `$class_name`<span
+class="initializer"> = "SplFileInfo"</span></span> \] )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileInfo::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
 }
 
 PharFileInfo::chmod
