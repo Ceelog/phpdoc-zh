@@ -47,9 +47,11 @@ Get a specific character
 
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span class="methodname">mb\_chr</span>
-( <span class="methodparam"><span class="type">int</span> `$cp`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$encoding`</span> \] )
+( <span class="methodparam"><span class="type">int</span>
+`$codepoint`</span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 **Warning**
 
@@ -57,13 +59,19 @@ class="type">false</span></span> <span class="methodname">mb\_chr</span>
 
 ### 参数
 
-`cp`  
+`codepoint`  
 
 `encoding`  
 
 ### 返回值
 
 Returns a specific character 或者在失败时返回 **`false`**.
+
+### 更新日志
+
+| 版本  | 说明                        |
+|-------|-----------------------------|
+| 8.0.0 | `encoding` is nullable now. |
 
 ### 参见
 
@@ -220,22 +228,23 @@ Convert "kana" one from another ("zen-kaku", "han-kaku" and more)
 
 <span class="type">string</span> <span
 class="methodname">mb\_convert\_kana</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$option`<span class="initializer"> = "KV"</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$mode`<span class="initializer"> = "KV"</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Performs a "han-kaku" - "zen-kaku" conversion for <span
-class="type">string</span> `str`. This function is only useful for
+class="type">string</span> `string`. This function is only useful for
 Japanese.
 
 ### 参数
 
-`str`  
+`string`  
 The <span class="type">string</span> being converted.
 
-`option`  
+`mode`  
 The conversion option.
 
 Specify with a combination of following options.
@@ -264,6 +273,12 @@ Specify with a combination of following options.
 ### 返回值
 
 The converted <span class="type">string</span>.
+
+### 更新日志
+
+| 版本  | 说明                        |
+|-------|-----------------------------|
+| 8.0.0 | `encoding` is nullable now. |
 
 ### 范例
 
@@ -708,29 +723,29 @@ Encode character to HTML numeric string reference
 
 <span class="type">string</span> <span
 class="methodname">mb\_encode\_numericentity</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> ,
-<span class="methodparam"><span class="type">array</span>
-`$convmap`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`<span class="initializer"> =
-mb\_internal\_encoding()</span></span> \[, <span
-class="methodparam"><span class="type">bool</span> `$is_hex`<span
+class="methodparam"><span class="type">string</span> `$string`</span> ,
+<span class="methodparam"><span class="type">array</span> `$map`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type">bool</span> `$hex`<span
 class="initializer"> = **`false`**</span></span> \]\] )
 
 Converts specified character codes in <span class="type">string</span>
-`str` from character code to HTML numeric character reference.
+`string` from character code to HTML numeric character reference.
 
 ### 参数
 
-`str`  
+`string`  
 The <span class="type">string</span> being encoded.
 
-`convmap`  
-`convmap` is array specifies code area to convert.
+`map`  
+`map` is array specifies code area to convert.
 
 `encoding`  
 `encoding` 参数为字符编码。如果省略，则使用内部字符编码。
 
-`is_hex`  
+`hex`  
 Whether the returned entity reference should be in hexadecimal notation
 (otherwise it is in decimal notation).
 
@@ -738,9 +753,15 @@ Whether the returned entity reference should be in hexadecimal notation
 
 The converted <span class="type">string</span>.
 
+### 更新日志
+
+| 版本  | 说明                        |
+|-------|-----------------------------|
+| 8.0.0 | `encoding` is nullable now. |
+
 ### 范例
 
-**示例 \#1 `convmap` example**
+**示例 \#1 `map` example**
 
 ``` php
 <?php
@@ -754,8 +775,6 @@ $convmap = array (
 // it converts value to numeric string reference.
 ?>
 ```
-
-### 范例
 
 **示例 \#2 <span class="function">mb\_encode\_numericentity</span>
 example**
@@ -794,8 +813,7 @@ Get aliases of a known encoding type
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mb\_encoding\_aliases</span> ( <span
 class="methodparam"><span class="type">string</span> `$encoding`</span>
 )
@@ -869,9 +887,9 @@ Regular expression match for multibyte string
 class="methodname">mb\_ereg\_match</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$string`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$option`<span class="initializer"> =
-"msr"</span></span> \] )
+`$string`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \] )
 
 A regular expression match for a multibyte string
 
@@ -883,7 +901,7 @@ The regular expression pattern.
 `string`  
 The <span class="type">string</span> being evaluated.
 
-`option`  
+`options`  
 The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation.
 
@@ -891,6 +909,12 @@ class="function">mb\_regex\_set\_options</span> for explanation.
 
 Returns **`true`** if `string` matches the regular expression `pattern`,
 **`false`** if not.
+
+### 更新日志
+
+| 版本  | 说明                       |
+|-------|----------------------------|
+| 8.0.0 | `options` is nullable now. |
 
 ### 注释
 
@@ -912,14 +936,16 @@ using a callback
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span><span class="type">null</span></span> <span
 class="methodname">mb\_ereg\_replace\_callback</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">callable</span>
 `$callback`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$option`<span
-class="initializer"> = "msr"</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \] )
 
 Scans `string` for matches to `pattern`, then replaces the matched text
 with the output of `callback` function.
@@ -953,14 +979,15 @@ anywhere else.
 `string`  
 The <span class="type">string</span> being checked.
 
-`option`  
+`options`  
 The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation.
 
 ### 返回值
 
 The resultant <span class="type">string</span> on success, or
-**`false`** on error.
+**`false`** on error. If `string` is not valid for the current encoding,
+**`null`** is returned.
 
 ### 注释
 
@@ -968,6 +995,13 @@ The resultant <span class="type">string</span> on success, or
 >
 > <span class="function">mb\_regex\_encoding</span>
 > 指定的内部编码或字符编码将会当作此函数用的字符编码。
+
+### 更新日志
+
+| 版本  | 说明                                                                    |
+|-------|-------------------------------------------------------------------------|
+| 8.0.0 | `options` is nullable now.                                              |
+| 7.1.0 | The function checks whether `string` is valid for the current encoding. |
 
 ### 范例
 
@@ -1033,14 +1067,16 @@ Replace regular expression with multibyte support
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span><span class="type">null</span></span> <span
 class="methodname">mb\_ereg\_replace</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$replacement`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$option`<span
-class="initializer"> = "msr"</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \] )
 
 Scans `string` for matches to `pattern`, then replaces the matched text
 with `replacement`
@@ -1058,20 +1094,23 @@ The replacement text.
 `string`  
 The <span class="type">string</span> being checked.
 
-`option`  
+`options`  
 <span class="simpara"> The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation. </span>
 
 ### 返回值
 
 The resultant <span class="type">string</span> on success, or
-**`false`** on error.
+**`false`** on error. If `string` is not valid for the current encoding,
+**`null`** is returned.
 
 ### 更新日志
 
-| 版本  | 说明                                  |
-|-------|---------------------------------------|
-| 7.1.0 | The *e* modifier has been deprecated. |
+| 版本  | 说明                                                                    |
+|-------|-------------------------------------------------------------------------|
+| 8.0.0 | `options` is nullable now.                                              |
+| 7.1.0 | The function checks whether `string` is valid for the current encoding. |
+| 7.1.0 | The *e* modifier has been deprecated.                                   |
 
 ### 注释
 
@@ -1135,7 +1174,8 @@ Retrieve the result from the last multibyte regular expression match
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_search\_getregs</span> ( <span
 class="methodparam">void</span> )
 
@@ -1154,7 +1194,7 @@ class="function">mb\_ereg\_search\_regs</span>. If there are some
 matches, the first element will have the matched sub-string, the second
 element will have the first part grouped with brackets, the third
 element will have the second part grouped with brackets, and so on. It
-returns **`false`** on error;
+returns **`false`** on error.
 
 ### 注释
 
@@ -1179,10 +1219,12 @@ match
 <span class="type">bool</span> <span
 class="methodname">mb\_ereg\_search\_init</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$pattern`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$option`<span class="initializer"> =
-"msr"</span></span> \]\] )
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$pattern`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">mb\_ereg\_search\_init</span> sets `string` and
 `pattern` for a multibyte regular expression. These values are used for
@@ -1198,13 +1240,19 @@ The search string.
 `pattern`  
 The search pattern.
 
-`option`  
+`options`  
 The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation.
 
 ### 返回值
 
 成功时返回 **`true`**， 或者在失败时返回 **`false`**。
+
+### 更新日志
+
+| 版本  | 说明                                      |
+|-------|-------------------------------------------|
+| 8.0.0 | `pattern` and `options` are nullable now. |
 
 ### 注释
 
@@ -1226,11 +1274,15 @@ expression for a predefined multibyte string
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_search\_pos</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$pattern`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$option`<span class="initializer"> = "ms"</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$pattern`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Returns position and length of a matched part of the multibyte regular
 expression for a predefined multibyte string
@@ -1244,7 +1296,7 @@ the previous one will be used.
 `pattern`  
 The search pattern.
 
-`option`  
+`options`  
 The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation.
 
@@ -1256,6 +1308,12 @@ start of the search string, and the second element is the length in
 bytes of the match.
 
 If an error occurs, **`false`** is returned.
+
+### 更新日志
+
+| 版本  | 说明                                      |
+|-------|-------------------------------------------|
+| 8.0.0 | `pattern` and `options` are nullable now. |
 
 ### 注释
 
@@ -1276,11 +1334,15 @@ Returns the matched part of a multibyte regular expression
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_search\_regs</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$pattern`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$option`<span class="initializer"> = "ms"</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$pattern`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Returns the matched part of a multibyte regular expression.
 
@@ -1289,7 +1351,7 @@ Returns the matched part of a multibyte regular expression.
 `pattern`  
 The search pattern.
 
-`option`  
+`options`  
 The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation.
 
@@ -1301,6 +1363,12 @@ it returns an <span class="type">array</span> including substring of
 matched part as first element, the first grouped part with brackets as
 second element, the second grouped part as third element, and so on. It
 returns **`false`** on error.
+
+### 更新日志
+
+| 版本  | 说明                                      |
+|-------|-------------------------------------------|
+| 8.0.0 | `pattern` and `options` are nullable now. |
 
 ### 注释
 
@@ -1323,14 +1391,14 @@ Set start point of next regular expression match
 
 <span class="type">bool</span> <span
 class="methodname">mb\_ereg\_search\_setpos</span> ( <span
-class="methodparam"><span class="type">int</span> `$position`</span> )
+class="methodparam"><span class="type">int</span> `$offset`</span> )
 
 <span class="function">mb\_ereg\_search\_setpos</span> sets the starting
 point of a match for <span class="function">mb\_ereg\_search</span>.
 
 ### 参数
 
-`position`  
+`offset`  
 The position to set. If it is negative, it counts from the end of the
 string.
 
@@ -1340,9 +1408,9 @@ string.
 
 ### 更新日志
 
-| 版本  | 说明                                             |
-|-------|--------------------------------------------------|
-| 7.1.0 | Support for negative `position`s has been added. |
+| 版本  | 说明                                           |
+|-------|------------------------------------------------|
+| 7.1.0 | Support for negative `offset`s has been added. |
 
 ### 注释
 
@@ -1365,9 +1433,12 @@ Multibyte regular expression match for predefined multibyte string
 
 <span class="type">bool</span> <span
 class="methodname">mb\_ereg\_search</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$pattern`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$option`<span class="initializer"> = "ms"</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$pattern`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Performs a multibyte regular expression match for a predefined multibyte
 string.
@@ -1377,7 +1448,7 @@ string.
 `pattern`  
 The search pattern.
 
-`option`  
+`options`  
 The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation.
 
@@ -1388,6 +1459,12 @@ multibyte string matches with the regular expression, or **`false`**
 otherwise. The <span class="type">string</span> for matching is set by
 <span class="function">mb\_ereg\_search\_init</span>. If `pattern` is
 not specified, the previous one is used.
+
+### 更新日志
+
+| 版本  | 说明                                      |
+|-------|-------------------------------------------|
+| 8.0.0 | `pattern` and `options` are nullable now. |
 
 ### 注释
 
@@ -1408,11 +1485,12 @@ Regular expression match with multibyte support
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">mb\_ereg</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type">bool</span> <span class="methodname">mb\_ereg</span>
+( <span class="methodparam"><span class="type">string</span>
 `$pattern`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$regs`</span> \] )
+class="methodparam"><span class="type">array</span> `&$matches`<span
+class="initializer"> = **`null`**</span></span> \] )
 
 Executes the regular expression match with multibyte support.
 
@@ -1424,31 +1502,27 @@ The search pattern.
 `string`  
 The search <span class="type">string</span>.
 
-`regs`  
+`matches`  
 If matches are found for parenthesized substrings of `pattern` and the
-function is called with the third argument `regs`, the matches will be
-stored in the elements of the array `regs`. If no matches are found,
-`regs` is set to an empty array.
+function is called with the third argument `matches`, the matches will
+be stored in the elements of the array `matches`. If no matches are
+found, `matches` is set to an empty array.
 
-`$regs[1]` will contain the substring which starts at the first left
-parenthesis; `$regs[2]` will contain the substring starting at the
-second, and so on. `$regs[0]` will contain a copy of the complete string
-matched.
+`$matches[1]` will contain the substring which starts at the first left
+parenthesis; `$matches[2]` will contain the substring starting at the
+second, and so on. `$matches[0]` will contain a copy of the complete
+string matched.
 
 ### 返回值
 
-Returns the byte length of the matched string if a match for `pattern`
-was found in `string`, or **`false`** if no matches were found or an
-error occurred.
-
-If the optional parameter `regs` was not passed or the length of the
-matched string is *0*, this function returns *1*.
+Returns whether `pattern` matches `string`.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                        |
-|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0 | <span class="function">mb\_ereg</span> will now set `regs` to an empty <span class="type">array</span>, if nothing matched. Formerly, `regs` was not modified in that case. |
+| 版本  | 说明                                                                                                                                                                                                                                                                                                                |
+|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | This function returns **`true`** on success now. Previously, it returned the byte length of the matched string if a match for `pattern` was found in `string` and `matches` was passed. If the optional parameter `matches` was not passed or the length of the matched string was *0*, this function returned *1*. |
+| 7.1.0 | <span class="function">mb\_ereg</span> will now set `matches` to an empty <span class="type">array</span>, if nothing matched. Formerly, `matches` was not modified in that case.                                                                                                                                   |
 
 ### 注释
 
@@ -1469,14 +1543,16 @@ Replace regular expression with multibyte support ignoring case
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span><span class="type">null</span></span> <span
 class="methodname">mb\_eregi\_replace</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$replace`</span> , <span class="methodparam"><span
+`$replacement`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$option`<span
-class="initializer"> = "msri"</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \] )
 
 Scans `string` for matches to `pattern`, then replaces the matched text
 with `replacement`.
@@ -1487,25 +1563,29 @@ with `replacement`.
 The regular expression pattern. Multibyte characters may be used. The
 case will be ignored.
 
-`replace`  
+`replacement`  
 The replacement text.
 
 `string`  
 The searched <span class="type">string</span>.
 
-`option`  
+`options`  
 <span class="simpara"> The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation. </span>
 
 ### 返回值
 
 The resultant <span class="type">string</span> or **`false`** on error.
+If `string` is not valid for the current encoding, **`null`** is
+returned.
 
 ### 更新日志
 
-| 版本  | 说明                                  |
-|-------|---------------------------------------|
-| 7.1.0 | The *e* modifier has been deprecated. |
+| 版本  | 说明                                                                    |
+|-------|-------------------------------------------------------------------------|
+| 8.0.0 | `options` is nullable now.                                              |
+| 7.1.0 | The function checks whether `string` is valid for the current encoding. |
+| 7.1.0 | The *e* modifier has been deprecated.                                   |
 
 ### 注释
 
@@ -1531,11 +1611,12 @@ Regular expression match ignoring case with multibyte support
 
 ### 说明
 
-<span class="type">int</span> <span class="methodname">mb\_eregi</span>
+<span class="type">bool</span> <span class="methodname">mb\_eregi</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$pattern`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$regs`</span> \] )
+class="methodparam"><span class="type">array</span> `&$matches`<span
+class="initializer"> = **`null`**</span></span> \] )
 
 Executes the case insensitive regular expression match with multibyte
 support.
@@ -1548,31 +1629,27 @@ The regular expression pattern.
 `string`  
 The <span class="type">string</span> being searched.
 
-`regs`  
+`matches`  
 If matches are found for parenthesized substrings of `pattern` and the
-function is called with the third argument `regs`, the matches will be
-stored in the elements of the array `regs`. If no matches are found,
-`regs` is set to an empty array.
+function is called with the third argument `matches`, the matches will
+be stored in the elements of the array `matches`. If no matches are
+found, `matches` is set to an empty array.
 
-`$regs[1]` will contain the substring which starts at the first left
-parenthesis; `$regs[2]` will contain the substring starting at the
-second, and so on. `$regs[0]` will contain a copy of the complete string
-matched.
+`$matches[1]` will contain the substring which starts at the first left
+parenthesis; `$matches[2]` will contain the substring starting at the
+second, and so on. `$matches[0]` will contain a copy of the complete
+string matched.
 
 ### 返回值
 
-Returns the byte length of the matched string if a match for `pattern`
-was found in `string`, or **`false`** if no matches were found or an
-error occurred.
-
-If the optional parameter `regs` was not passed or the length of the
-matched string is *0*, this function returns *1*.
+Returns whether `pattern` matches `string`.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                                                                         |
-|-------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0 | <span class="function">mb\_eregi</span> will now set `regs` to an empty <span class="type">array</span>, if nothing matched. Formerly, `regs` was not modified in that case. |
+| 版本  | 说明                                                                                                                                                                                                                                                                                                                |
+|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | This function returns **`true`** on success now. Previously, it returned the byte length of the matched string if a match for `pattern` was found in `string` and `matches` was passed. If the optional parameter `matches` was not passed or the length of the matched string was *0*, this function returned *1*. |
+| 7.1.0 | <span class="function">mb\_eregi</span> will now set `matches` to an empty <span class="type">array</span>, if nothing matched. Formerly, `matches` was not modified in that case.                                                                                                                                  |
 
 ### 注释
 
@@ -1896,8 +1973,9 @@ Get code point of character
 <span class="type"><span class="type">int</span><span
 class="type">false</span></span> <span class="methodname">mb\_ord</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$str`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \] )
+`$string`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 **Warning**
 
@@ -1905,13 +1983,19 @@ class="type">string</span> `$encoding`</span> \] )
 
 ### 参数
 
-`str`  
+`string`  
 
 `encoding`  
 
 ### 返回值
 
 Returns a code point of character 或者在失败时返回 **`false`**.
+
+### 更新日志
+
+| 版本  | 说明                        |
+|-------|-----------------------------|
+| 8.0.0 | `encoding` is nullable now. |
 
 ### 参见
 
@@ -2080,10 +2164,12 @@ Set/Get character encoding for multibyte regex
 
 ### 说明
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">mb\_regex\_encoding</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_regex\_encoding()</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 Set/Get character encoding for a multibyte regex.
 
@@ -2103,6 +2189,7 @@ name for a multibyte regex is returned.
 
 | 版本  | 说明                                                            |
 |-------|-----------------------------------------------------------------|
+| 8.0.0 | `encoding` is nullable now.                                     |
 | 5.6.0 | Default encoding is changed to UTF-8. It was EUC-JP Previously. |
 
 ### 参见
@@ -2119,8 +2206,9 @@ Set/Get the default options for mbregex functions
 
 <span class="type">string</span> <span
 class="methodname">mb\_regex\_set\_options</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$options`<span
-class="initializer"> = mb\_regex\_set\_options()</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \] )
 
 Sets the default options described by `options` for multibyte regex
 functions.
@@ -2156,14 +2244,15 @@ there can only be set one mode but multiple options.
 
 ### 返回值
 
-The previous options. If `options` is omitted, it returns the <span
-class="type">string</span> that describes the current options.
+The previous options. If `options` is omitted or **`null`**, it returns
+the <span class="type">string</span> that describes the current options.
 
 ### 更新日志
 
-| 版本  | 说明                                                                                                                          |
-|-------|-------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0 | If the parameter `options` is given, the *previous* options are returned. Formerly, the *current* options have been returned. |
+| 版本  | 说明                                                                                                                                             |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | If the parameter `options` is given and not **`null`**, the *previous* options are returned. Formerly, the *current* options have been returned. |
+| 8.0.0 | `options` is nullable now.                                                                                                                       |
 
 ### 参见
 
@@ -2180,9 +2269,10 @@ Description
 
 <span class="type">string</span> <span
 class="methodname">mb\_scrub</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`</span>
-\] )
+class="type">string</span> `$string`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 **Warning**
 
@@ -2190,11 +2280,17 @@ class="methodparam"><span class="type">string</span> `$encoding`</span>
 
 ### 参数
 
-`str`  
+`string`  
 
 `encoding`  
 
 ### 返回值
+
+### 更新日志
+
+| 版本  | 说明                        |
+|-------|-----------------------------|
+| 8.0.0 | `encoding` is nullable now. |
 
 mb\_send\_mail
 ==============
@@ -2341,29 +2437,29 @@ Given a multibyte string, return an array of its characters
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mb\_str\_split</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$split_length`<span class="initializer"> = 1</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+`$length`<span class="initializer"> = 1</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 This function will return an array of strings, it is a version of <span
 class="function">str\_split</span> with support for encodings of
 variable character size as well as fixed-size encodings of 1,2 or 4 byte
-characters. If the `split_length` parameter is specified, the string is
-broken down into chunks of the specified length in characters (not
-bytes). The `encoding` parameter can be optionally specified and it is
-good practice to do so.
+characters. If the `length` parameter is specified, the string is broken
+down into chunks of the specified length in characters (not bytes). The
+`encoding` parameter can be optionally specified and it is good practice
+to do so.
 
 ### 参数
 
 `string`  
 The <span class="type">string</span> to split into characters or chunks.
 
-`split_length`  
+`length`  
 If specified, each element of the returned array will be composed of
 multiple characters instead of a single character.
 
@@ -2375,7 +2471,14 @@ A string specifying one of the supported encodings.
 ### 返回值
 
 <span class="function">mb\_str\_split</span> returns an array of
-strings, 或者在失败时返回 **`false`**.
+strings.
+
+### 更新日志
+
+| 版本  | 说明                                                    |
+|-------|---------------------------------------------------------|
+| 8.0.0 | `encoding` is nullable now.                             |
+| 8.0.0 | This function no longer returns **`false`** on failure. |
 
 ### 参见
 

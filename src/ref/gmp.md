@@ -12,19 +12,21 @@ Absolute value
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_abs</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
 Get the absolute value of a number.
 
 ### 参数
 
-`a`  
+`num`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-Returns the absolute value of `a`, as a GMP number.
+Returns the absolute value of `num`, as a GMP number.
 
 ### 范例
 
@@ -53,20 +55,24 @@ Add numbers
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_add</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Add two numbers.
 
 ### 参数
 
-`a`  
+`num1`  
 The first summand (augent).
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
+`num2`  
 The second summand (addend).
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
@@ -99,18 +105,22 @@ Bitwise AND
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_and</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Calculates bitwise AND of two GMP numbers.
 
 ### 参数
 
-`a`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
+`num2`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
@@ -143,10 +153,11 @@ Calculates binomial coefficient
 
 ### 说明
 
-<span class="type"><span class="type">GMP</span><span
-class="type">false</span></span> <span
+<span class="type">GMP</span> <span
 class="methodname">gmp\_binomial</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$n`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$n`</span> , <span
 class="methodparam"><span class="type">int</span> `$k`</span> )
 
 Calculates the binomial coefficient C(n, k).
@@ -161,11 +172,18 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-Returns the binomial coefficient C(n, k), 或者在失败时返回 **`false`**.
+Returns the binomial coefficient C(n, k).
 
 ### 错误／异常
 
-Issues E\_WARNING if `k` is negative.
+Throws <span class="classname">ValueError</span> if `k` is negative.
+Prior to PHP 8.0.0, **`E_WARNING`** was issued instead.
+
+### 更新日志
+
+| 版本  | 说明                                                    |
+|-------|---------------------------------------------------------|
+| 8.0.0 | This function no longer returns **`false`** on failure. |
 
 gmp\_clrbit
 ===========
@@ -176,14 +194,14 @@ Clear bit
 
 <span class="type">void</span> <span
 class="methodname">gmp\_clrbit</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
+class="type">GMP</span> `$num`</span> , <span class="methodparam"><span
 class="type">int</span> `$index`</span> )
 
-Clears (sets to 0) bit `index` in `a`. The index starts at 0.
+Clears (sets to 0) bit `index` in `num`. The index starts at 0.
 
 ### 参数
 
-`a`  
+`num`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
@@ -216,7 +234,7 @@ echo gmp_strval($a) . "\n";
 > **Note**:
 >
 > Unlike most of the other GMP functions, <span
-> class="function">gmp\_clrbit</span> must be called with a GMP resource
+> class="function">gmp\_clrbit</span> must be called with a GMP object
 > that already exists (using <span class="function">gmp\_init</span> for
 > example). One will not be automatically created.
 
@@ -233,18 +251,22 @@ Compare numbers
 ### 说明
 
 <span class="type">int</span> <span class="methodname">gmp\_cmp</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Compares two numbers.
 
 ### 参数
 
-`a`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
+`num2`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
@@ -279,19 +301,21 @@ Calculates one's complement
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_com</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
-Returns the one's complement of `a`.
+Returns the one's complement of `num`.
 
 ### 参数
 
-`a`  
+`num`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-Returns the one's complement of `a`, as a GMP number.
+Returns the one's complement of `num`, as a GMP number.
 
 ### 范例
 
@@ -317,30 +341,33 @@ Divide numbers
 
 <span class="type">GMP</span> <span
 class="methodname">gmp\_div\_q</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$b`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$round`<span class="initializer"> =
-GMP\_ROUND\_ZERO</span></span> \] )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$rounding_mode`<span
+class="initializer"> = **`GMP_ROUND_ZERO`**</span></span> \] )
 
-Divides `a` by `b` and returns the integer result.
+Divides `num1` by `num2` and returns the integer result.
 
 ### 参数
 
-`a`  
+`num1`  
 The number being divided.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
-The number that `a` is being divided by.
+`num2`  
+The number that `num1` is being divided by.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`round`  
-The result rounding is defined by the `round`, which can have the
-following values:
+`rounding_mode`  
+The result rounding is defined by the `rounding_mode`, which can have
+the following values:
 
 -   <span class="simpara"> **`GMP_ROUND_ZERO`**: The result is truncated
     towards 0. </span>
@@ -408,30 +435,33 @@ Divide numbers and get quotient and remainder
 
 <span class="type">array</span> <span
 class="methodname">gmp\_div\_qr</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$n`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$d`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$round`<span class="initializer"> =
-GMP\_ROUND\_ZERO</span></span> \] )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$rounding_mode`<span
+class="initializer"> = **`GMP_ROUND_ZERO`**</span></span> \] )
 
-The function divides `n` by `d`.
+The function divides `num1` by `num2`.
 
 ### 参数
 
-`n`  
+`num1`  
 The number being divided.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`d`  
-The number that `n` is being divided by.
+`num2`  
+The number that `num1` is being divided by.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`round`  
+`rounding_mode`  
 See the <span class="function">gmp\_div\_q</span> function for
-description of the `round` argument.
+description of the `rounding_mode` argument.
 
 ### 返回值
 
@@ -466,31 +496,34 @@ Remainder of the division of numbers
 
 <span class="type">GMP</span> <span
 class="methodname">gmp\_div\_r</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$n`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$d`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$round`<span class="initializer"> =
-GMP\_ROUND\_ZERO</span></span> \] )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$rounding_mode`<span
+class="initializer"> = **`GMP_ROUND_ZERO`**</span></span> \] )
 
-Calculates remainder of the integer division of `n` by `d`. The
-remainder has the sign of the `n` argument, if not zero.
+Calculates remainder of the integer division of `num1` by `num2`. The
+remainder has the sign of the `num1` argument, if not zero.
 
 ### 参数
 
-`n`  
+`num1`  
 The number being divided.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`d`  
-The number that `n` is being divided by.
+`num2`  
+The number that `num1` is being divided by.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`round`  
+`rounding_mode`  
 See the <span class="function">gmp\_div\_q</span> function for
-description of the `round` argument.
+description of the `rounding_mode` argument.
 
 ### 返回值
 
@@ -534,22 +567,26 @@ Exact division of numbers
 
 <span class="type">GMP</span> <span
 class="methodname">gmp\_divexact</span> ( <span
-class="methodparam"><span class="type">GMP</span> `$n`</span> , <span
-class="methodparam"><span class="type">GMP</span> `$d`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Divides `n` by `d`, using fast "exact division" algorithm. This function
-produces correct results only when it is known in advance that `d`
-divides `n`.
+Divides `num1` by `num2`, using fast "exact division" algorithm. This
+function produces correct results only when it is known in advance that
+`num2` divides `num1`.
 
 ### 参数
 
-`n`  
+`num1`  
 The number being divided.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`d`  
+`num2`  
 The number that `a` is being divided by.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
@@ -585,33 +622,39 @@ Export to a binary string
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">gmp\_export</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$gmpnumber`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$word_size`<span
-class="initializer"> = 1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$options`<span
-class="initializer"> = **`GMP_MSW_FIRST`** \|
-**`GMP_NATIVE_ENDIAN`**</span></span> \]\] )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$word_size`<span class="initializer"> =
+1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$flags`<span class="initializer"> =
+**`GMP_MSW_FIRST`** \| **`GMP_NATIVE_ENDIAN`**</span></span> \]\] )
 
 Export a GMP number to a binary string
 
 ### 参数
 
-`gmpnumber`  
+`num`  
 The GMP number being exported
 
 `word_size`  
 Default value is 1. The number of bytes in each chunk of binary data.
 This is mainly used in conjunction with the options parameter.
 
-`options`  
+`flags`  
 Default value is GMP\_MSW\_FIRST \| GMP\_NATIVE\_ENDIAN.
 
 ### 返回值
 
-Returns a string 或者在失败时返回 **`false`**.
+Returns a string.
+
+### 更新日志
+
+| 版本  | 说明                                                    |
+|-------|---------------------------------------------------------|
+| 8.0.0 | This function no longer returns **`false`** on failure. |
 
 ### 范例
 
@@ -640,14 +683,15 @@ Factorial
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_fact</span>
-( <span class="methodparam"><span class="type">mixed</span> `$a`</span>
-)
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
-Calculates factorial (*a!*) of `a`.
+Calculates factorial (*num!*) of `num`.
 
 ### 参数
 
-`a`  
+`num`  
 The factorial number.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
@@ -684,25 +728,29 @@ Calculate GCD
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_gcd</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Calculate greatest common divisor of `a` and `b`. The result is always
-positive even if either of, or both, input operands are negative.
+Calculate greatest common divisor of `num1` and `num2`. The result is
+always positive even if either of, or both, input operands are negative.
 
 ### 参数
 
-`a`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
+`num2`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-A positive GMP number that divides into both `a` and `b`.
+A positive GMP number that divides into both `num1` and `num2`.
 
 ### 范例
 
@@ -732,8 +780,11 @@ Calculate GCD and multipliers
 
 <span class="type">array</span> <span
 class="methodname">gmp\_gcdext</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$b`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Calculates g, s, and t, such that *a\*s + b\*t = g = gcd(a,b)*, where
 gcd is the greatest common divisor. Returns an array with respective
@@ -746,11 +797,11 @@ have the form: *a\*x + b\*y = c*. For more information, go to the
 
 ### 参数
 
-`a`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
+`num2`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
@@ -796,21 +847,24 @@ Hamming distance
 
 <span class="type">int</span> <span
 class="methodname">gmp\_hamdist</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$b`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Returns the hamming distance between `a` and `b`. Both operands should
-be non-negative.
+Returns the hamming distance between `num1` and `num2`. Both operands
+should be non-negative.
 
 ### 参数
 
-`a`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 It should be positive.
 
-`b`  
+`num2`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
@@ -818,7 +872,7 @@ It should be positive.
 
 ### 返回值
 
-The hamming distance between `a` and `b`, as an <span
+The hamming distance between `num1` and `num2`, as an <span
 class="type">int</span>.
 
 ### 范例
@@ -853,13 +907,12 @@ Import from a binary string
 
 ### 说明
 
-<span class="type"><span class="type">GMP</span><span
-class="type">false</span></span> <span
+<span class="type">GMP</span> <span
 class="methodname">gmp\_import</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$word_size`<span
 class="initializer"> = 1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$options`<span
+class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = **`GMP_MSW_FIRST`** \|
 **`GMP_NATIVE_ENDIAN`**</span></span> \]\] )
 
@@ -874,12 +927,18 @@ The binary string being imported
 Default value is 1. The number of bytes in each chunk of binary data.
 This is mainly used in conjunction with the options parameter.
 
-`options`  
+`flags`  
 Default value is GMP\_MSW\_FIRST \| GMP\_NATIVE\_ENDIAN.
 
 ### 返回值
 
-Returns a GMP number 或者在失败时返回 **`false`**.
+Returns a GMP number.
+
+### 更新日志
+
+| 版本  | 说明                                                    |
+|-------|---------------------------------------------------------|
+| 8.0.0 | This function no longer returns **`false`** on failure. |
 
 ### 范例
 
@@ -912,8 +971,9 @@ Create GMP number
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_init</span>
-( <span class="methodparam"><span class="type">mixed</span>
-`$number`</span> \[, <span class="methodparam"><span
+( <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$base`<span class="initializer"> =
 0</span></span> \] )
 
@@ -921,7 +981,7 @@ Creates a GMP number from an integer or string.
 
 ### 参数
 
-`number`  
+`num`  
 An integer or a string. The string representation can be decimal,
 hexadecimal or octal.
 
@@ -936,13 +996,6 @@ first character is "0", octal is assumed, otherwise decimal is assumed.
 ### 返回值
 
 <span class="classname">GMP</span> 对象。
-
-### 注释
-
-> **Note**:
->
-> To use the extended base introduced in PHP 5.3.2, then PHP must be
-> compiled against GMP 4.2.0 or greater.
 
 ### 范例
 
@@ -975,20 +1028,22 @@ Convert GMP number to integer
 
 <span class="type">int</span> <span
 class="methodname">gmp\_intval</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$gmpnumber`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> )
 
 This function converts GMP number into native PHP <span
 class="type">int</span>s.
 
 ### 参数
 
-`gmpnumber`  
+`num`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-The <span class="type">int</span> value of `gmpnumber`.
+The <span class="type">int</span> value of `num`.
 
 ### 范例
 
@@ -1028,20 +1083,24 @@ Inverse by modulo
 
 ### 说明
 
-<span class="type">GMP</span> <span
+<span class="type"><span class="type">GMP</span><span
+class="type">false</span></span> <span
 class="methodname">gmp\_invert</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$b`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Computes the inverse of `a` modulo `b`.
+Computes the inverse of `num1` modulo `num2`.
 
 ### 参数
 
-`a`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
+`num2`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
@@ -1074,20 +1133,23 @@ Jacobi symbol
 
 <span class="type">int</span> <span
 class="methodname">gmp\_jacobi</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$p`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Computes
 <a href="http://primes.utm.edu/glossary/page.php?sort=JacobiSymbol" class="link external">» Jacobi symbol</a>
-of `a` and `p`. `p` should be odd and must be positive.
+of `num1` and `num2`. `num2` should be odd and must be positive.
 
 ### 参数
 
-`a`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`p`  
+`num2`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
@@ -1127,24 +1189,28 @@ Kronecker symbol
 
 <span class="type">int</span> <span
 class="methodname">gmp\_kronecker</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$a`</span> , <span
-class="methodparam"><span class="type">mixed</span> `$b`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-This function computes the Kronecker symbol of `a` and `b`.
+This function computes the Kronecker symbol of `num1` and `num2`.
 
 ### 参数
 
-`a`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
+`num2`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-Returns the Kronecker symbol of `a` and `b`
+Returns the Kronecker symbol of `num1` and `num2`
 
 ### 参见
 
@@ -1159,18 +1225,23 @@ Calculate LCM
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_lcm</span> (
-<span class="methodparam"><span class="type">mixed</span> `$a`</span> ,
-<span class="methodparam"><span class="type">mixed</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-This function computes the least common multiple (lcm) of `a` and `b`.
+This function computes the least common multiple (lcm) of `num1` and
+`num2`.
 
 ### 参数
 
-`a`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
+`num2`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
@@ -1191,20 +1262,24 @@ Legendre symbol
 
 <span class="type">int</span> <span
 class="methodname">gmp\_legendre</span> ( <span
-class="methodparam"><span class="type">GMP</span> `$a`</span> , <span
-class="methodparam"><span class="type">GMP</span> `$p`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Compute the
 <a href="http://primes.utm.edu/glossary/page.php?sort=LegendreSymbol" class="link external">»  Legendre symbol</a>
-of `a` and `p`. `p` should be odd and must be positive.
+of `num1` and `num2`. `num2` should be odd and must be positive.
 
 ### 参数
 
-`a`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`p`  
+`num2`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
@@ -1243,19 +1318,23 @@ Modulo operation
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_mod</span> (
-<span class="methodparam"><span class="type">GMP</span> `$n`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$d`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Calculates `n` modulo `d`. The result is always non-negative, the sign
-of `d` is ignored.
+Calculates `num1` modulo `num2`. The result is always non-negative, the
+sign of `num2` is ignored.
 
 ### 参数
 
-`n`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`d`  
+`num2`  
 The modulo that is being evaluated.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
@@ -1288,21 +1367,25 @@ Multiply numbers
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_mul</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Multiplies `a` by `b` and returns the result.
+Multiplies `num1` by `num2` and returns the result.
 
 ### 参数
 
-`a`  
-A number that will be multiplied by `b`.
+`num1`  
+A number that will be multiplied by `num2`.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
-A number that will be multiplied by `a`.
+`num2`  
+A number that will be multiplied by `num1`.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
@@ -1334,19 +1417,21 @@ Negate number
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_neg</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
 Returns the negative value of a number.
 
 ### 参数
 
-`a`  
+`num`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-Returns -`a`, as a GMP number.
+Returns -`num`, as a GMP number.
 
 ### 范例
 
@@ -1375,19 +1460,21 @@ Find next prime number
 
 <span class="type">GMP</span> <span
 class="methodname">gmp\_nextprime</span> ( <span
-class="methodparam"><span class="type">int</span> `$a`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
 Find next prime number
 
 ### 参数
 
-`a`  
+`num`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-Return the next prime number greater than `a`, as a GMP number.
+Return the next prime number greater than `num`, as a GMP number.
 
 ### 范例
 
@@ -1423,18 +1510,22 @@ Bitwise OR
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_or</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Calculates bitwise inclusive OR of two GMP numbers.
 
 ### 参数
 
-`a`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
+`num2`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
@@ -1469,19 +1560,21 @@ Perfect power check
 
 <span class="type">bool</span> <span
 class="methodname">gmp\_perfect\_power</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$a`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
-Checks whether `a` is a perfect power.
+Checks whether `num` is a perfect power.
 
 ### 参数
 
-`a`  
+`num`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-Returns **`true`** if `a` is a perfect power, **`false`** otherwise.
+Returns **`true`** if `num` is a perfect power, **`false`** otherwise.
 
 ### 参见
 
@@ -1496,13 +1589,15 @@ Perfect square check
 
 <span class="type">bool</span> <span
 class="methodname">gmp\_perfect\_square</span> ( <span
-class="methodparam"><span class="type">GMP</span> `$a`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
 Check if a number is a perfect square.
 
 ### 参数
 
-`a`  
+`num`  
 The number being checked as a perfect square.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
@@ -1510,7 +1605,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-Returns **`true`** if `a` is a perfect square, **`false`** otherwise.
+Returns **`true`** if `num` is a perfect square, **`false`** otherwise.
 
 ### 范例
 
@@ -1550,19 +1645,21 @@ Population count
 
 <span class="type">int</span> <span
 class="methodname">gmp\_popcount</span> ( <span
-class="methodparam"><span class="type">GMP</span> `$a`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
 Get the population count.
 
 ### 参数
 
-`a`  
+`num`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 ### 返回值
 
-The population count of `a`, as an <span class="type">int</span>.
+The population count of `num`, as an <span class="type">int</span>.
 
 ### 范例
 
@@ -1590,21 +1687,23 @@ Raise number into power
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_pow</span> (
-<span class="methodparam"><span class="type">GMP</span> `$base`</span> ,
-<span class="methodparam"><span class="type">int</span> `$exp`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> , <span
+class="methodparam"><span class="type">int</span> `$exponent`</span> )
 
-Raise `base` into power `exp`.
+Raise `num` into power `exponent`.
 
 ### 参数
 
-`base`  
+`num`  
 The base number.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`exp`  
-The positive power to raise the `base`.
+`exponent`  
+The positive power to raise the `num`.
 
 ### 返回值
 
@@ -1638,29 +1737,34 @@ Raise number into power with modulo
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_powm</span>
-( <span class="methodparam"><span class="type">GMP</span> `$base`</span>
-, <span class="methodparam"><span class="type">GMP</span> `$exp`</span>
-, <span class="methodparam"><span class="type">GMP</span> `$mod`</span>
-)
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$exponent`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$modulus`</span> )
 
-Calculate (`base` raised into power `exp`) modulo `mod`. If `exp` is
-negative, result is undefined.
+Calculate (`num` raised into power `exponent`) modulo `modulus`. If
+`exponent` is negative, result is undefined.
 
 ### 参数
 
-`base`  
+`num`  
 The base number.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`exp`  
-The positive power to raise the `base`.
+`exponent`  
+The positive power to raise the `num`.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`mod`  
+`modulus`  
 The modulo.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
@@ -1694,8 +1798,10 @@ Check if number is "probably prime"
 
 <span class="type">int</span> <span
 class="methodname">gmp\_prob\_prime</span> ( <span
-class="methodparam"><span class="type">GMP</span> `$a`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$reps`<span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$repetitions`<span
 class="initializer"> = 10</span></span> \] )
 
 The function uses Miller-Rabin's probabilistic test to check if a number
@@ -1703,15 +1809,15 @@ is a prime.
 
 ### 参数
 
-`a`  
+`num`  
 The number being checked as a prime.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`reps`  
-Reasonable values of `reps` vary from 5 to 10 (default being 10); a
-higher value lowers the probability for a non-prime to pass as a
+`repetitions`  
+Reasonable values of `repetitions` vary from 5 to 10 (default being 10);
+a higher value lowers the probability for a non-prime to pass as a
 "probable" prime.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
@@ -1719,8 +1825,8 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-If this function returns 0, `a` is definitely not prime. If it returns
-1, then `a` is "probably" prime. If it returns 2, then `a` is surely
+If this function returns 0, `num` is definitely not prime. If it returns
+1, then `num` is "probably" prime. If it returns 2, then `num` is surely
 prime.
 
 ### 范例
@@ -1800,8 +1906,12 @@ Random number
 
 <span class="type">GMP</span> <span
 class="methodname">gmp\_random\_range</span> ( <span
-class="methodparam"><span class="type">GMP</span> `$min`</span> , <span
-class="methodparam"><span class="type">GMP</span> `$max`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$min`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$max`</span> )
 
 Generate a random number. The number will be between `min` and `max`.
 
@@ -1848,7 +1958,9 @@ Sets the RNG seed
 
 <span class="type">void</span> <span
 class="methodname">gmp\_random\_seed</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$seed`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$seed`</span> )
 
 ### 参数
 
@@ -1967,20 +2079,22 @@ Take the integer part of nth root
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_root</span>
-( <span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">int</span> `$nth`</span> )
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> , <span
+class="methodparam"><span class="type">int</span> `$nth`</span> )
 
-Takes the `nth` root of `a` and returns the integer component of the
+Takes the `nth` root of `num` and returns the integer component of the
 result.
 
 ### 参数
 
-`a`  
+`num`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `nth`  
-The positive root to take of `a`.
+The positive root to take of `num`.
 
 ### 返回值
 
@@ -1995,20 +2109,22 @@ Take the integer part and remainder of nth root
 
 <span class="type">array</span> <span
 class="methodname">gmp\_rootrem</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">int</span> `$nth`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> , <span class="methodparam"><span class="type">int</span>
+`$nth`</span> )
 
-Takes the `nth` root of `a` and returns the integer component and
+Takes the `nth` root of `num` and returns the integer component and
 remainder of the result.
 
 ### 参数
 
-`a`  
+`num`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
 `nth`  
-The positive root to take of `a`.
+The positive root to take of `num`.
 
 ### 返回值
 
@@ -2024,16 +2140,17 @@ Scan for 0
 ### 说明
 
 <span class="type">int</span> <span class="methodname">gmp\_scan0</span>
-( <span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">int</span> `$start`</span>
-)
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type">int</span> `$start`</span> )
 
-Scans `a`, starting with bit `start`, towards more significant bits,
+Scans `num1`, starting with bit `start`, towards more significant bits,
 until the first clear bit is found.
 
 ### 参数
 
-`a`  
+`num1`  
 The number to scan.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
@@ -2076,16 +2193,17 @@ Scan for 1
 ### 说明
 
 <span class="type">int</span> <span class="methodname">gmp\_scan1</span>
-( <span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">int</span> `$start`</span>
-)
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type">int</span> `$start`</span> )
 
-Scans `a`, starting with bit `start`, towards more significant bits,
+Scans `num1`, starting with bit `start`, towards more significant bits,
 until the first set bit is found.
 
 ### 参数
 
-`a`  
+`num1`  
 The number to scan.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
@@ -2129,16 +2247,16 @@ Set bit
 
 <span class="type">void</span> <span
 class="methodname">gmp\_setbit</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
+class="type">GMP</span> `$num`</span> , <span class="methodparam"><span
 class="type">int</span> `$index`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$bit_on`<span
+class="methodparam"><span class="type">bool</span> `$value`<span
 class="initializer"> = **`true`**</span></span> \] )
 
-Sets bit `index` in `a`.
+Sets bit `index` in `num`.
 
 ### 参数
 
-`a`  
+`num`  
 The value to modify.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
@@ -2148,7 +2266,7 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 The index of the bit to set. Index 0 represents the least significant
 bit.
 
-`bit_on`  
+`value`  
 True to set the bit (set it to 1/on); false to clear the bit (set it to
 0/off).
 
@@ -2212,7 +2330,7 @@ echo gmp_strval($a), ' -> 0b', gmp_strval($a, 2), "\n";
 > **Note**:
 >
 > Unlike most of the other GMP functions, <span
-> class="function">gmp\_setbit</span> must be called with a GMP resource
+> class="function">gmp\_setbit</span> must be called with a GMP object
 > that already exists (using <span class="function">gmp\_init</span> for
 > example). One will not be automatically created.
 
@@ -2229,13 +2347,15 @@ Sign of number
 ### 说明
 
 <span class="type">int</span> <span class="methodname">gmp\_sign</span>
-( <span class="methodparam"><span class="type">GMP</span> `$a`</span> )
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
 Checks the sign of a number.
 
 ### 参数
 
-`a`  
+`num`  
 Either a GMP number <span class="type">resource</span> in PHP 5.5 and
 earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
 later, or a numeric string provided that it is possible to convert the
@@ -2243,8 +2363,8 @@ latter to an <span class="type">int</span>.
 
 ### 返回值
 
-Returns 1 if `a` is positive, -1 if `a` is negative, and 0 if `a` is
-zero.
+Returns 1 if `num` is positive, -1 if `num` is negative, and 0 if `num`
+is zero.
 
 ### 范例
 
@@ -2282,13 +2402,15 @@ Calculate square root
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_sqrt</span>
-( <span class="methodparam"><span class="type">GMP</span> `$a`</span> )
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
-Calculates square root of `a`.
+Calculates square root of `num`.
 
 ### 参数
 
-`a`  
+`num`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
@@ -2327,13 +2449,15 @@ Square root with remainder
 
 <span class="type">array</span> <span
 class="methodname">gmp\_sqrtrem</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> )
 
 Calculate the square root of a number, with remainder.
 
 ### 参数
 
-`a`  
+`num`  
 The number being square rooted.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
@@ -2341,9 +2465,9 @@ PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 
 ### 返回值
 
-Returns array where first element is the integer square root of `a` and
-the second is the remainder (i.e., the difference between `a` and the
-first element squared).
+Returns array where first element is the integer square root of `num`
+and the second is the remainder (i.e., the difference between `num` and
+the first element squared).
 
 ### 范例
 
@@ -2376,16 +2500,18 @@ Convert GMP number to string
 
 <span class="type">string</span> <span
 class="methodname">gmp\_strval</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$gmpnumber`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$base`<span
-class="initializer"> = 10</span></span> \] )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$base`<span class="initializer"> =
+10</span></span> \] )
 
 Convert GMP number to string representation in base `base`. The default
 base is 10.
 
 ### 参数
 
-`gmpnumber`  
+`num`  
 The GMP number that will be converted to a string.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
@@ -2398,13 +2524,6 @@ for the base are from 2 to 62 and -2 to -36.
 ### 返回值
 
 The number, as a <span class="type">string</span>.
-
-### 注释
-
-> **Note**:
->
-> To use the extended base introduced in PHP 5.3.2, then PHP must be
-> compiled against GMP 4.2.0 or greater.
 
 ### 范例
 
@@ -2425,21 +2544,25 @@ Subtract numbers
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_sub</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Subtracts `b` from `a` and returns the result.
+Subtracts `num2` from `num1` and returns the result.
 
 ### 参数
 
-`a`  
+`num1`  
 The number being subtracted from.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
-The number subtracted from `a`.
+`num2`  
+The number subtracted from `num1`.
 
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
@@ -2472,14 +2595,16 @@ Tests if a bit is set
 
 <span class="type">bool</span> <span
 class="methodname">gmp\_testbit</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">int</span> `$index`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> , <span class="methodparam"><span class="type">int</span>
+`$index`</span> )
 
 Tests if the specified bit is set.
 
 ### 参数
 
-`a`  
+`num`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
@@ -2527,18 +2652,22 @@ Bitwise XOR
 ### 说明
 
 <span class="type">GMP</span> <span class="methodname">gmp\_xor</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Calculates bitwise exclusive OR (XOR) of two GMP numbers.
 
 ### 参数
 
-`a`  
+`num1`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
-`b`  
+`num2`  
 PHP 5.5 之前为 GMP 数值<span class="type">资源</span>，PHP 5.6 之后为
 <span class="classname">GMP</span> 对象或数字，或可以转为数字的字符串。
 
