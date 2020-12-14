@@ -46,12 +46,11 @@ PECL 扩展安装
 
 这些函数的行为受 `php.ini` 中的设置影响。
 
-| 名字                                                           | 默认 | 可修改范围       | 更新日志                                              |
-|----------------------------------------------------------------|------|------------------|-------------------------------------------------------|
-| <a href="/phar/setup.html#" class="link">phar.readonly</a>     | "1"  | PHP\_INI\_ALL    |                                                       |
-| <a href="/phar/setup.html#" class="link">phar.require_hash</a> | "1"  | PHP\_INI\_ALL    |                                                       |
-| <a href="/phar/setup.html#" class="link">phar.extract_list</a> | ""   | PHP\_INI\_ALL    | Available from phar 1.1.0 to 1.2.3, removed in 2.0.0. |
-| <a href="/phar/setup.html#" class="link">phar.cache_list</a>   | ""   | PHP\_INI\_SYSTEM | Available from phar 2.0.0.                            |
+| 名字                                                           | 默认 | 可修改范围       | 更新日志 |
+|----------------------------------------------------------------|------|------------------|----------|
+| <a href="/phar/setup.html#" class="link">phar.readonly</a>     | "1"  | PHP\_INI\_ALL    |          |
+| <a href="/phar/setup.html#" class="link">phar.require_hash</a> | "1"  | PHP\_INI\_ALL    |          |
+| <a href="/phar/setup.html#" class="link">phar.cache_list</a>   | ""   | PHP\_INI\_SYSTEM |          |
 
 这是配置指令的简短说明。
 
@@ -88,36 +87,13 @@ signature.
 > This setting does not affect reading plain tar files with the <span
 > class="classname">PharData</span> class.
 
-`phar.extract_list` <span class="type">string</span>  
-This INI setting has been removed as of phar 2.0.0
-
-Allows mappings from a full path to a phar archive or its alias to the
-location of its extracted files. The format of the parameter is
-*name=archive,name2=archive2*. This allows extraction of phar files to
-disk, and allows phar to act as a kind of mapper to extracted disk
-files. This is often done for performance reasons, or to assist with
-debugging a phar.
-
-**示例 \#1 phar.extract\_list usage example**
-
-``` php
-in php.ini:
-phar.extract_list = archive=/full/path/to/archive/,arch2=/full/path/to/arch2
-<?php
-include "phar://archive/content.php";
-include "phar://arch2/foo.php";
-?>
-```
-
 `phar.cache_list` <span class="type">string</span>  
-This INI setting was added in phar 2.0.0
-
 Allows mapping phar archives to be pre-parsed at web server startup,
 providing a performance improvement that brings running files out of a
 phar archive very close to the speed of running those files from a
 traditional disk-based installation.
 
-**示例 \#2 phar.cache\_list usage example**
+**示例 \#1 phar.cache\_list usage example**
 
     in php.ini (windows):
     phar.cache_list =C:\path\to\phar1.phar;C:\path\to\phar2.phar

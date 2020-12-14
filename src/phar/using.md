@@ -112,9 +112,9 @@ try {
 In addition, verification of phar file contents can be done using any of
 the supported symmetric hash algorithms (MD5, SHA1, SHA256 and SHA512 if
 ext/hash is enabled) and using asymmetric public/private key signing
-using OpenSSL (new in Phar 2.0.0). To take advantage of OpenSSL signing,
-you need to generate a public/private key pair, and use the private key
-to set the signature using <span
+using OpenSSL. To take advantage of OpenSSL signing, you need to
+generate a public/private key pair, and use the private key to set the
+signature using <span
 class="function">Phar::setSignatureAlgorithm</span>. In addition, the
 public key as extracted using this code:
 
@@ -131,9 +131,9 @@ archive is saved as */path/to/my.phar*, the public key must be saved as
 */path/to/my.phar.pubkey*, or phar will be unable to verify the OpenSSL
 signature.
 
-As of version 2.0.0, The <span class="classname">Phar</span> class also
-provides 3 static methods, <span class="function">Phar::webPhar</span>,
-<span class="function">Phar::mungServer</span> and <span
+The <span class="classname">Phar</span> class also provides 3 static
+methods, <span class="function">Phar::webPhar</span>, <span
+class="function">Phar::mungServer</span> and <span
 class="function">Phar::interceptFileFuncs</span> that are crucial to
 packaging up PHP applications designed for usage on regular filesystems
 and for web-based applications. <span
@@ -202,8 +202,8 @@ class="function">fopen</span> for read and write (not append), <span
 class="function">unlink</span>, <span class="function">stat</span>,
 <span class="function">fstat</span>, <span
 class="function">fseek</span>, <span class="function">rename</span> and
-directory stream operations <span class="function">opendir</span> and as
-of version 2.0.0, <span class="function">rmdir</span> and <span
+directory stream operations <span class="function">opendir</span> and
+<span class="function">rmdir</span> and <span
 class="function">mkdir</span>.
 
 Individual file compression and per-file metadata can also be
