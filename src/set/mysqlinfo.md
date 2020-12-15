@@ -562,16 +562,16 @@ following will not have an effect on them:
 $mysqli = new mysqli("localhost", "my_user", "my_password", "world");
 
 // Will NOT affect $mysqli->real_escape_string();
-$mysqli->query("SET NAMES utf8");
+$mysqli->query("SET NAMES utf8mb4");
 
 // Will NOT affect $mysqli->real_escape_string();
-$mysqli->query("SET CHARACTER SET utf8");
+$mysqli->query("SET CHARACTER SET utf8mb4");
 
 // But, this will affect $mysqli->real_escape_string();
-$mysqli->set_charset('utf8');
+$mysqli->set_charset('utf8mb4');
 
-// But, this will NOT affect it (utf-8 vs utf8) -- don't use dashes here
-$mysqli->set_charset('utf-8');
+// But, this will NOT affect it (UTF-8 vs utf8mb4) -- don't use dashes here
+$mysqli->set_charset('UTF-8');
 
 ?>
 ```
@@ -582,9 +582,10 @@ set at runtime using each API.
 > **Note**: **Possible UTF-8 confusion**  
 >
 > Because character set names in MySQL do not contain dashes, the string
-> "utf8" is valid in MySQL to set the character set to UTF-8. The string
-> "utf-8" is not valid, as using "utf-8" will fail to change the
-> character set.
+> "utf8" is valid in MySQL to set the character set to UTF-8 (up to 3
+> byte UTF-8 Unicode Encoding). The string "UTF-8" is not valid, as
+> using "UTF-8" will fail to change the character set and will throw an
+> error.
 
 **示例 \#2 Setting the character set example: mysqli**
 
@@ -594,8 +595,8 @@ $mysqli = new mysqli("localhost", "my_user", "my_password", "world");
 
 printf("Initial character set: %s\n", $mysqli->character_set_name());
 
-if (!$mysqli->set_charset('utf8')) {
-    printf("Error loading character set utf8: %s\n", $mysqli->error);
+if (!$mysqli->set_charset('utf8mb4')) {
+    printf("Error loading character set utf8mb4: %s\n", $mysqli->error);
     exit;
 }
 
@@ -612,7 +613,7 @@ Note: This only works as of PHP 5.3.6.
 
 ``` php
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=world;charset=utf8", 'my_user', 'my_pass');
+$pdo = new PDO("mysql:host=localhost;dbname=world;charset=utf8mb4", 'my_user', 'my_pass');
 ?>
 ```
 
@@ -625,7 +626,7 @@ $db   = mysql_select_db("world");
 
 echo 'Initial character set: ' .  mysql_client_encoding($conn) . "\n";
 
-if (!mysql_set_charset('utf8', $conn)) {
+if (!mysql_set_charset('utf8mb4', $conn)) {
     echo "Error: Unable to set the character set.\n";
     exit;
 }
@@ -13808,18 +13809,18 @@ class="function">mysqli\_use\_result</span>返回的结果集标识。
 Returns an array of objects which contains field definition information
 or **`false`** if no field information is available.
 
-| Property    | Description                                                                                                                                                                                                                                                                                                                                                            |
-|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| name        | The name of the column                                                                                                                                                                                                                                                                                                                                                 |
-| orgname     | Original column name if an alias was specified                                                                                                                                                                                                                                                                                                                         |
-| table       | The name of the table this field belongs to (if not calculated)                                                                                                                                                                                                                                                                                                        |
-| orgtable    | Original table name if an alias was specified                                                                                                                                                                                                                                                                                                                          |
-| max\_length | The maximum width of the field for the result set.                                                                                                                                                                                                                                                                                                                     |
-| length      | The width of the field, in bytes, as specified in the table definition. Note that this number (bytes) might differ from your table definition value (characters), depending on the character set you use. For example, the character set utf8 has 3 bytes per character, so varchar(10) will return a length of 30 for utf8 (10\*3), but return 10 for latin1 (10\*1). |
-| charsetnr   | The character set number (id) for the field.                                                                                                                                                                                                                                                                                                                           |
-| flags       | An integer representing the bit-flags for the field.                                                                                                                                                                                                                                                                                                                   |
-| type        | The data type used for this field                                                                                                                                                                                                                                                                                                                                      |
-| decimals    | The number of decimals used (for integer fields)                                                                                                                                                                                                                                                                                                                       |
+| Property    | Description                                                                                                                                                                                                                                                                                                                                                                        |
+|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| name        | The name of the column                                                                                                                                                                                                                                                                                                                                                             |
+| orgname     | Original column name if an alias was specified                                                                                                                                                                                                                                                                                                                                     |
+| table       | The name of the table this field belongs to (if not calculated)                                                                                                                                                                                                                                                                                                                    |
+| orgtable    | Original table name if an alias was specified                                                                                                                                                                                                                                                                                                                                      |
+| max\_length | The maximum width of the field for the result set.                                                                                                                                                                                                                                                                                                                                 |
+| length      | The width of the field, in bytes, as specified in the table definition. Note that this number (bytes) might differ from your table definition value (characters), depending on the character set you use. For example, the character set utf8 has up to 3 bytes per character, so varchar(10) can return a length of up to 30 for utf8 (10\*3), but returns 10 for latin1 (10\*1). |
+| charsetnr   | The character set number (id) for the field.                                                                                                                                                                                                                                                                                                                                       |
+| flags       | An integer representing the bit-flags for the field.                                                                                                                                                                                                                                                                                                                               |
+| type        | The data type used for this field                                                                                                                                                                                                                                                                                                                                                  |
+| decimals    | The number of decimals used (for integer fields)                                                                                                                                                                                                                                                                                                                                   |
 
 ### 范例
 
@@ -15943,7 +15944,7 @@ on Ubuntu 18.04 example:
 安装此 PECL 扩展相关的信息可在手册中标题为
 <a href="/install/pecl.html" class="link">PECL 扩展的安装</a>章节中找到。更多信息如新的发行版本、下载、源文件、
 维护人员信息及变更日志等，都在此处：
-<a href="https://pecl.php.net/package/apc" class="link external">» https://pecl.php.net/package/mysql_xdevapi</a>.
+<a href="https://pecl.php.net/package/mysql_xdevapi" class="link external">» https://pecl.php.net/package/mysql_xdevapi</a>.
 
 运行时配置
 ----------
