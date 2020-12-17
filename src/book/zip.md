@@ -2619,7 +2619,7 @@ This example creates a ZIP file archive `test.zip` and add the file
 $zip = new ZipArchive();
 if ($zip->open('test.zip', ZipArchive::CREATE) === TRUE) {
     $zip->addFile('text.txt');
-    $zip->setMtimIndex(0, mktime(0,0,0,12,25,2019));
+    $zip->setMtimeIndex(0, mktime(0,0,0,12,25,2019));
     $zip->close();
     echo "Ok\n";
 } else {

@@ -72,9 +72,9 @@ common security vulnerabilities.
 
 `phar.require_hash` <span class="type">bool</span>  
 This option will force all opened Phar archives to contain some kind of
-signature (currently MD5, SHA1, SHA256 and SHA512 are supported), and
-will refuse to process any Phar archive that does not contain a
-signature.
+signature (currently MD5, SHA1, SHA256, SHA512 and OpenSSL are
+supported), and will refuse to process any Phar archive that does not
+contain a signature.
 
 > **Note**:
 >
