@@ -5356,6 +5356,15 @@ class="methodparam"><span class="type">resource</span> `$image`</span> ,
 class="type">int</span> `$num_points`</span> , <span
 class="methodparam"><span class="type">int</span> `$color`</span> )
 
+Alternative signature (as of PHP 8.0.0)
+
+<span class="type">bool</span> <span
+class="methodname">imageopenpolygon</span> ( <span
+class="methodparam"><span class="type">resource</span> `$image`</span> ,
+<span class="methodparam"><span class="type">array</span>
+`$points`</span> , <span class="methodparam"><span
+class="type">int</span> `$color`</span> )
+
 <span class="function">imageopenpolygon</span> draws an open polygon on
 the given `image`. Contrary to <span
 class="function">imagepolygon</span>, no line is drawn between the last
@@ -5379,6 +5388,10 @@ An array containing the polygon's vertices, e.g.:
 
 `num_points`  
 Total number of points (vertices), which must be at least 3.
+
+<span class="simpara"> If this parameter is omitted as per the second
+signature, `points` must have an even number of elements, and
+`num_points` is assumed to be `count($points)/2`. </span>
 
 `color`  
 颜色标识符使用 <span class="function">imagecolorallocate</span> 创建。

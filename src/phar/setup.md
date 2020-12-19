@@ -78,14 +78,20 @@ contain a signature.
 
 > **Note**:
 >
-> This setting can only be unset in php.ini due to security reasons. If
-> *phar.require\_hash* is disabled in php.ini, the user may enable
-> *phar.require\_hash* in a script or disable it later. If
-> *phar.require\_hash* is enabled in php.ini, a script may harmlessly
-> "re-enable" the INI variable, but may not disable it.
+> This setting can only be unset in php.ini. If *phar.require\_hash* is
+> disabled in php.ini, the user may enable *phar.require\_hash* in a
+> script or disable it later. If *phar.require\_hash* is enabled in
+> php.ini, a script may harmlessly "re-enable" the INI variable, but may
+> not disable it.
 >
 > This setting does not affect reading plain tar files with the <span
 > class="classname">PharData</span> class.
+
+**Caution**
+*phar.require\_hash* does not provide any security per se, it is merely
+a measure against running accidentially corrupted Phar archives, because
+anyone who would be able to tamper with the Phar could easily fix the
+signature afterwards.
 
 `phar.cache_list` <span class="type">string</span>  
 Allows mapping phar archives to be pre-parsed at web server startup,
