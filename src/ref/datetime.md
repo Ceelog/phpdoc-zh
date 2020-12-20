@@ -423,8 +423,7 @@ Returns associative array with detailed info about given date/time
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">date\_parse</span> ( <span class="methodparam"><span
 class="type">string</span> `$datetime`</span> )
 
@@ -547,8 +546,7 @@ begin/end
 
 ### 说明
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">date\_sun\_info</span> ( <span
 class="methodparam"><span class="type">int</span> `$timestamp`</span> ,
 <span class="methodparam"><span class="type">float</span>
