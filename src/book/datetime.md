@@ -2471,8 +2471,7 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getOffset</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getTimestamp</span> ( <span
 class="methodparam">void</span> )
 
@@ -2975,8 +2974,7 @@ class="methodparam">void</span> )
 class="methodname">DateTimeImmutable::getTimestamp</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">DateTimeInterface::getTimestamp</span> ( <span
 class="methodparam">void</span> )
 
@@ -2996,6 +2994,12 @@ Gets the Unix timestamp.
 ### 返回值
 
 Returns the Unix timestamp representing the date.
+
+### 更新日志
+
+| 版本  | 说明                                                     |
+|-------|----------------------------------------------------------|
+| 8.0.0 | These functions no longer return **`false`** on failure. |
 
 ### 范例
 
