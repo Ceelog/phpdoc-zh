@@ -328,10 +328,12 @@ class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
 `$filename`</span> )
 
-<span class="type"><span class="type">bool</span><span
-class="type">XMLReader</span></span> <span class="methodname">XML</span>
-( <span class="methodparam"><span class="type">string</span>
-`$source`</span> \[, <span class="methodparam"><span class="type"><span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">bool</span><span class="type">XMLReader</span></span> <span
+class="methodname">XML</span> ( <span class="methodparam"><span
+class="type">string</span> `$source`</span> \[, <span
+class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
 `$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
@@ -1253,8 +1255,9 @@ Set the data containing the XML to parse
 
 ### 说明
 
-<span class="type"><span class="type">bool</span><span
-class="type">XMLReader</span></span> <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">bool</span><span class="type">XMLReader</span></span> <span
 class="methodname">XMLReader::XML</span> ( <span
 class="methodparam"><span class="type">string</span> `$source`</span>
 \[, <span class="methodparam"><span class="type"><span

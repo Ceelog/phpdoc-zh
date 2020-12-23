@@ -108,8 +108,9 @@ class="methodparam"><span class="type">string</span>
 class="type">mixed</span> `$value`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">asort</span> ( <span
-class="methodparam">void</span> )
+<span class="methodname">asort</span> (\[ <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`SORT_REGULAR`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">count</span> ( <span class="methodparam">void</span>
@@ -137,8 +138,9 @@ class="methodparam">void</span> )
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">ksort</span> ( <span
-class="methodparam">void</span> )
+<span class="methodname">ksort</span> (\[ <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`SORT_REGULAR`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">natcasesort</span> ( <span
@@ -287,8 +289,9 @@ Sort the entries by value
 ### 说明
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">ArrayObject::asort</span> ( <span
-class="methodparam">void</span> )
+<span class="methodname">ArrayObject::asort</span> (\[ <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`SORT_REGULAR`**</span></span> \] )
 
 Sorts the entries such that the keys maintain their correlation with the
 entries they are associated with. This is used mainly when sorting
@@ -296,7 +299,29 @@ associative arrays where the actual element order is significant.
 
 ### 参数
 
-此函数没有参数。
+`flags`  
+The optional second parameter `flags` may be used to modify the sorting
+behavior using these values:
+
+Sorting type flags:
+
+-   <span class="simpara">**`SORT_REGULAR`** - compare items normally;
+    the details are described in the
+    <a href="/language/operators/comparison.html" class="link">comparison operators</a>
+    section</span>
+-   <span class="simpara">**`SORT_NUMERIC`** - compare items
+    numerically</span>
+-   <span class="simpara">**`SORT_STRING`** - compare items as
+    strings</span>
+-   <span class="simpara"> **`SORT_LOCALE_STRING`** - compare items as
+    strings, based on the current locale. It uses the locale, which can
+    be changed using <span class="function">setlocale</span> </span>
+-   <span class="simpara"> **`SORT_NATURAL`** - compare items as strings
+    using "natural ordering" like <span class="function">natsort</span>
+    </span>
+-   <span class="simpara"> **`SORT_FLAG_CASE`** - can be combined
+    (bitwise OR) with **`SORT_STRING`** or **`SORT_NATURAL`** to sort
+    strings case-insensitively </span>
 
 ### 返回值
 
@@ -763,15 +788,38 @@ Sort the entries by key
 ### 说明
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">ArrayObject::ksort</span> ( <span
-class="methodparam">void</span> )
+<span class="methodname">ArrayObject::ksort</span> (\[ <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`SORT_REGULAR`**</span></span> \] )
 
 Sorts the entries by key, maintaining key to entry correlations. This is
 useful mainly for associative arrays.
 
 ### 参数
 
-此函数没有参数。
+`flags`  
+The optional second parameter `flags` may be used to modify the sorting
+behavior using these values:
+
+Sorting type flags:
+
+-   <span class="simpara">**`SORT_REGULAR`** - compare items normally;
+    the details are described in the
+    <a href="/language/operators/comparison.html" class="link">comparison operators</a>
+    section</span>
+-   <span class="simpara">**`SORT_NUMERIC`** - compare items
+    numerically</span>
+-   <span class="simpara">**`SORT_STRING`** - compare items as
+    strings</span>
+-   <span class="simpara"> **`SORT_LOCALE_STRING`** - compare items as
+    strings, based on the current locale. It uses the locale, which can
+    be changed using <span class="function">setlocale</span> </span>
+-   <span class="simpara"> **`SORT_NATURAL`** - compare items as strings
+    using "natural ordering" like <span class="function">natsort</span>
+    </span>
+-   <span class="simpara"> **`SORT_FLAG_CASE`** - can be combined
+    (bitwise OR) with **`SORT_STRING`** or **`SORT_NATURAL`** to sort
+    strings case-insensitively </span>
 
 ### 返回值
 
