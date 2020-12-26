@@ -7,8 +7,8 @@ Add large numbers
 
 <span class="type">void</span> <span
 class="methodname">sodium\_add</span> ( <span class="methodparam"><span
-class="type">string</span> `&$val`</span> , <span
-class="methodparam"><span class="type">string</span> `$addv`</span> )
+class="type">string</span> `&$string1`</span> , <span
+class="methodparam"><span class="type">string</span> `$string2`</span> )
 
 **Warning**
 
@@ -16,9 +16,9 @@ class="methodparam"><span class="type">string</span> `$addv`</span> )
 
 ### 参数
 
-`val`  
+`string1`  
 
-`addv`  
+`string2`  
 
 ### 返回值
 
@@ -33,10 +33,10 @@ Description
 
 <span class="type">string</span> <span
 class="methodname">sodium\_base642bin</span> ( <span
-class="methodparam"><span class="type">string</span> `$b64`</span> ,
+class="methodparam"><span class="type">string</span> `$string`</span> ,
 <span class="methodparam"><span class="type">int</span> `$id`</span> \[,
 <span class="methodparam"><span class="type">string</span>
-`$ignore`</span> \] )
+`$ignore`<span class="initializer"> = ""</span></span> \] )
 
 **Warning**
 
@@ -44,7 +44,7 @@ class="methodparam"><span class="type">string</span> `$b64`</span> ,
 
 ### 参数
 
-`b64`  
+`string`  
 
 `id`  
 
@@ -61,7 +61,7 @@ Description
 
 <span class="type">string</span> <span
 class="methodname">sodium\_bin2base64</span> ( <span
-class="methodparam"><span class="type">string</span> `$bin`</span> ,
+class="methodparam"><span class="type">string</span> `$string`</span> ,
 <span class="methodparam"><span class="type">int</span> `$id`</span> )
 
 **Warning**
@@ -70,7 +70,7 @@ class="methodparam"><span class="type">string</span> `$bin`</span> ,
 
 ### 参数
 
-`bin`  
+`string`  
 
 `id`  
 
@@ -85,7 +85,7 @@ Encode to hexadecimal
 
 <span class="type">string</span> <span
 class="methodname">sodium\_bin2hex</span> ( <span
-class="methodparam"><span class="type">string</span> `$bin`</span> )
+class="methodparam"><span class="type">string</span> `$string`</span> )
 
 **Warning**
 
@@ -93,7 +93,7 @@ class="methodparam"><span class="type">string</span> `$bin`</span> )
 
 ### 参数
 
-`bin`  
+`string`  
 
 ### 返回值
 
@@ -106,9 +106,9 @@ Compare large numbers
 
 <span class="type">int</span> <span
 class="methodname">sodium\_compare</span> ( <span
-class="methodparam"><span class="type">string</span> `$buf1`</span> ,
+class="methodparam"><span class="type">string</span> `$string1`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$buf2`</span> )
+`$string2`</span> )
 
 **Warning**
 
@@ -116,9 +116,9 @@ class="methodparam"><span class="type">string</span> `$buf1`</span> ,
 
 ### 参数
 
-`buf1`  
+`string1`  
 
-`buf2`  
+`string2`  
 
 ### 返回值
 
@@ -129,11 +129,12 @@ Decrypt in combined mode with precalculation
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">sodium\_crypto\_aead\_aes256gcm\_decrypt</span> (
 <span class="methodparam"><span class="type">string</span>
 `$ciphertext`</span> , <span class="methodparam"><span
-class="type">string</span> `$ad`</span> , <span
+class="type">string</span> `$additional_data`</span> , <span
 class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 )
@@ -146,7 +147,7 @@ class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 
 `ciphertext`  
 
-`ad`  
+`additional_data`  
 
 `nonce`  
 
@@ -163,11 +164,12 @@ Encrypt in combined mode with precalculation
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_aead\_aes256gcm\_encrypt</span> (
-<span class="methodparam"><span class="type">string</span> `$msg`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$ad`</span> , <span class="methodparam"><span
-class="type">string</span> `$nonce`</span> , <span
-class="methodparam"><span class="type">string</span> `$key`</span> )
+<span class="methodparam"><span class="type">string</span>
+`$message`</span> , <span class="methodparam"><span
+class="type">string</span> `$additional_data`</span> , <span
+class="methodparam"><span class="type">string</span> `$nonce`</span> ,
+<span class="methodparam"><span class="type">string</span> `$key`</span>
+)
 
 **Warning**
 
@@ -175,9 +177,9 @@ class="methodparam"><span class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`msg`  
+`message`  
 
-`ad`  
+`additional_data`  
 
 `nonce`  
 
@@ -234,11 +236,12 @@ Verify that the ciphertext includes a valid tag
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">sodium\_crypto\_aead\_chacha20poly1305\_decrypt</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$ciphertext`</span> , <span class="methodparam"><span
-class="type">string</span> `$ad`</span> , <span
+class="type">string</span> `$additional_data`</span> , <span
 class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 )
@@ -251,7 +254,7 @@ class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 
 `ciphertext`  
 
-`ad`  
+`additional_data`  
 
 `nonce`  
 
@@ -269,8 +272,8 @@ Encrypt a message
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_aead\_chacha20poly1305\_encrypt</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$msg`</span> , <span class="methodparam"><span
-class="type">string</span> `$ad`</span> , <span
+`$message`</span> , <span class="methodparam"><span
+class="type">string</span> `$additional_data`</span> , <span
 class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 )
@@ -281,9 +284,9 @@ class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 
 ### 参数
 
-`msg`  
+`message`  
 
-`ad`  
+`additional_data`  
 
 `nonce`  
 
@@ -298,11 +301,12 @@ Verify that the ciphertext includes a valid tag
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">sodium\_crypto\_aead\_chacha20poly1305\_ietf\_decrypt</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$ciphertext`</span> , <span class="methodparam"><span
-class="type">string</span> `$ad`</span> , <span
+class="type">string</span> `$additional_data`</span> , <span
 class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 )
@@ -315,7 +319,7 @@ class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 
 `ciphertext`  
 
-`ad`  
+`additional_data`  
 
 `nonce`  
 
@@ -333,8 +337,8 @@ Encrypt a message
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_aead\_chacha20poly1305\_ietf\_encrypt</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$msg`</span> , <span class="methodparam"><span
-class="type">string</span> `$ad`</span> , <span
+`$message`</span> , <span class="methodparam"><span
+class="type">string</span> `$additional_data`</span> , <span
 class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 )
@@ -345,9 +349,9 @@ class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 
 ### 参数
 
-`msg`  
+`message`  
 
-`ad`  
+`additional_data`  
 
 `nonce`  
 
@@ -404,11 +408,12 @@ Description
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">sodium\_crypto\_aead\_xchacha20poly1305\_ietf\_decrypt</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$ciphertext`</span> , <span class="methodparam"><span
-class="type">string</span> `$ad`</span> , <span
+class="type">string</span> `$additional_data`</span> , <span
 class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 )
@@ -421,7 +426,7 @@ class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 
 `ciphertext`  
 
-`ad`  
+`additional_data`  
 
 `nonce`  
 
@@ -439,8 +444,8 @@ Description
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_aead\_xchacha20poly1305\_ietf\_encrypt</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$msg`</span> , <span class="methodparam"><span
-class="type">string</span> `$ad`</span> , <span
+`$message`</span> , <span class="methodparam"><span
+class="type">string</span> `$additional_data`</span> , <span
 class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 )
@@ -451,9 +456,9 @@ class="methodparam"><span class="type">string</span> `$nonce`</span> ,
 
 ### 参数
 
-`msg`  
+`message`  
 
-`ad`  
+`additional_data`  
 
 `nonce`  
 
@@ -512,9 +517,9 @@ Verifies that the tag is valid for the message
 
 <span class="type">bool</span> <span
 class="methodname">sodium\_crypto\_auth\_verify</span> ( <span
-class="methodparam"><span class="type">string</span> `$signature`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$msg`</span> , <span class="methodparam"><span
+class="methodparam"><span class="type">string</span> `$mac`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$message`</span> , <span class="methodparam"><span
 class="type">string</span> `$key`</span> )
 
 **Warning**
@@ -523,9 +528,9 @@ class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`signature`  
+`mac`  
 
-`msg`  
+`message`  
 
 `key`  
 
@@ -540,7 +545,7 @@ Compute a tag for the message
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_auth</span> ( <span
-class="methodparam"><span class="type">string</span> `$msg`</span> ,
+class="methodparam"><span class="type">string</span> `$message`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 )
 
@@ -550,7 +555,7 @@ class="methodparam"><span class="type">string</span> `$msg`</span> ,
 
 ### 参数
 
-`msg`  
+`message`  
 
 `key`  
 
@@ -609,12 +614,14 @@ Verify and decrypt a ciphertext
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">sodium\_crypto\_box\_open</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$ciphertext`</span> , <span class="methodparam"><span
 class="type">string</span> `$nonce`</span> , <span
-class="methodparam"><span class="type">string</span> `$key`</span> )
+class="methodparam"><span class="type">string</span> `$key_pair`</span>
+)
 
 **Warning**
 
@@ -626,7 +633,7 @@ class="methodparam"><span class="type">string</span> `$key`</span> )
 
 `nonce`  
 
-`key`  
+`key_pair`  
 
 ### 返回值
 
@@ -640,7 +647,7 @@ Description
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_box\_publickey\_from\_secretkey</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$key`</span> )
+`$secret_key`</span> )
 
 **Warning**
 
@@ -648,7 +655,7 @@ class="methodname">sodium\_crypto\_box\_publickey\_from\_secretkey</span>
 
 ### 参数
 
-`key`  
+`secret_key`  
 
 ### 返回值
 
@@ -661,7 +668,8 @@ Description
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_box\_publickey</span> ( <span
-class="methodparam"><span class="type">string</span> `$key`</span> )
+class="methodparam"><span class="type">string</span> `$key_pair`</span>
+)
 
 **Warning**
 
@@ -669,7 +677,7 @@ class="methodparam"><span class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`key`  
+`key_pair`  
 
 ### 返回值
 
@@ -680,11 +688,12 @@ Decrypt the ciphertext
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">sodium\_crypto\_box\_seal\_open</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$ciphertext`</span> , <span class="methodparam"><span
-class="type">string</span> `$key`</span> )
+class="type">string</span> `$key_pair`</span> )
 
 **Warning**
 
@@ -694,7 +703,7 @@ class="type">string</span> `$key`</span> )
 
 `ciphertext`  
 
-`key`  
+`key_pair`  
 
 ### 返回值
 
@@ -707,9 +716,9 @@ Encrypt a message
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_box\_seal</span> ( <span
-class="methodparam"><span class="type">string</span> `$msg`</span> ,
-<span class="methodparam"><span class="type">string</span> `$key`</span>
-)
+class="methodparam"><span class="type">string</span> `$message`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$key_pair`</span> )
 
 **Warning**
 
@@ -717,9 +726,9 @@ class="methodparam"><span class="type">string</span> `$msg`</span> ,
 
 ### 参数
 
-`msg`  
+`message`  
 
-`key`  
+`key_pair`  
 
 ### 返回值
 
@@ -732,7 +741,8 @@ Description
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_box\_secretkey</span> ( <span
-class="methodparam"><span class="type">string</span> `$key`</span> )
+class="methodparam"><span class="type">string</span> `$key_pair`</span>
+)
 
 **Warning**
 
@@ -740,7 +750,7 @@ class="methodparam"><span class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`key`  
+`key_pair`  
 
 ### 返回值
 
@@ -753,7 +763,7 @@ Deterministically derive the key pair from a single key
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_box\_seed\_keypair</span> ( <span
-class="methodparam"><span class="type">string</span> `$key`</span> )
+class="methodparam"><span class="type">string</span> `$seed`</span> )
 
 **Warning**
 
@@ -761,7 +771,7 @@ class="methodparam"><span class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`key`  
+`seed`  
 
 ### 返回值
 
@@ -774,10 +784,10 @@ Encrypt a message
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_box</span> ( <span
-class="methodparam"><span class="type">string</span> `$msg`</span> ,
+class="methodparam"><span class="type">string</span> `$message`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$nonce`</span> , <span class="methodparam"><span
-class="type">string</span> `$key`</span> )
+class="type">string</span> `$key_pair`</span> )
 
 **Warning**
 
@@ -785,11 +795,11 @@ class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`msg`  
+`message`  
 
 `nonce`  
 
-`key`  
+`key_pair`  
 
 ### 返回值
 
@@ -805,7 +815,7 @@ class="methodname">sodium\_crypto\_generichash\_final</span> ( <span
 class="methodparam"><span class="type">string</span> `&$state`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$length`<span class="initializer"> =
-SODIUM\_CRYPTO\_GENERICHASH\_BYTES</span></span> \] )
+**`SODIUM_CRYPTO_GENERICHASH_BYTES`**</span></span> \] )
 
 **Warning**
 
@@ -828,10 +838,11 @@ Initialize a hash
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_generichash\_init</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$key`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$length`<span
-class="initializer"> = SODIUM\_CRYPTO\_GENERICHASH\_BYTES</span></span>
-\]\] )
+class="methodparam"><span class="type">string</span> `$key`<span
+class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$length`<span
+class="initializer"> =
+**`SODIUM_CRYPTO_GENERICHASH_BYTES`**</span></span> \]\] )
 
 **Warning**
 
@@ -876,8 +887,8 @@ Add message to a hash
 <span class="type">bool</span> <span
 class="methodname">sodium\_crypto\_generichash\_update</span> ( <span
 class="methodparam"><span class="type">string</span> `&$state`</span> ,
-<span class="methodparam"><span class="type">string</span> `$msg`</span>
-)
+<span class="methodparam"><span class="type">string</span>
+`$message`</span> )
 
 **Warning**
 
@@ -887,7 +898,7 @@ class="methodparam"><span class="type">string</span> `&$state`</span> ,
 
 `state`  
 
-`msg`  
+`message`  
 
 ### 返回值
 
@@ -900,11 +911,12 @@ Get a hash of the message
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_generichash</span> ( <span
-class="methodparam"><span class="type">string</span> `$msg`</span> \[,
-<span class="methodparam"><span class="type">string</span> `$key`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$length`<span class="initializer"> =
-SODIUM\_CRYPTO\_GENERICHASH\_BYTES</span></span> \]\] )
+class="methodparam"><span class="type">string</span> `$message`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$key`<span class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$length`<span
+class="initializer"> =
+**`SODIUM_CRYPTO_GENERICHASH_BYTES`**</span></span> \]\] )
 
 **Warning**
 
@@ -912,7 +924,7 @@ SODIUM\_CRYPTO\_GENERICHASH\_BYTES</span></span> \]\] )
 
 ### 参数
 
-`msg`  
+`message`  
 
 `key`  
 
@@ -929,11 +941,12 @@ Derive a subkey
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_kdf\_derive\_from\_key</span> ( <span
-class="methodparam"><span class="type">int</span> `$subkey_len`</span> ,
-<span class="methodparam"><span class="type">int</span>
-`$subkey_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$context`</span> , <span
-class="methodparam"><span class="type">string</span> `$key`</span> )
+class="methodparam"><span class="type">int</span>
+`$subkey_length`</span> , <span class="methodparam"><span
+class="type">int</span> `$subkey_id`</span> , <span
+class="methodparam"><span class="type">string</span> `$context`</span> ,
+<span class="methodparam"><span class="type">string</span> `$key`</span>
+)
 
 **Warning**
 
@@ -941,7 +954,7 @@ class="methodparam"><span class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`subkey_len`  
+`subkey_length`  
 
 `subkey_id`  
 
@@ -982,7 +995,7 @@ Description
 <span class="type">array</span> <span
 class="methodname">sodium\_crypto\_kx\_client\_session\_keys</span> (
 <span class="methodparam"><span class="type">string</span>
-`$client_keypair`</span> , <span class="methodparam"><span
+`$client_key_pair`</span> , <span class="methodparam"><span
 class="type">string</span> `$server_key`</span> )
 
 **Warning**
@@ -991,7 +1004,7 @@ class="type">string</span> `$server_key`</span> )
 
 ### 参数
 
-`client_keypair`  
+`client_key_pair`  
 
 `server_key`  
 
@@ -1052,7 +1065,8 @@ Description
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_kx\_publickey</span> ( <span
-class="methodparam"><span class="type">string</span> `$key`</span> )
+class="methodparam"><span class="type">string</span> `$key_pair`</span>
+)
 
 **Warning**
 
@@ -1060,7 +1074,7 @@ class="methodparam"><span class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`key`  
+`key_pair`  
 
 ### 返回值
 
@@ -1073,7 +1087,8 @@ Description
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_kx\_secretkey</span> ( <span
-class="methodparam"><span class="type">string</span> `$key`</span> )
+class="methodparam"><span class="type">string</span> `$key_pair`</span>
+)
 
 **Warning**
 
@@ -1081,7 +1096,7 @@ class="methodparam"><span class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`key`  
+`key_pair`  
 
 ### 返回值
 
@@ -1094,7 +1109,7 @@ Description
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_kx\_seed\_keypair</span> ( <span
-class="methodparam"><span class="type">string</span> `$string`</span> )
+class="methodparam"><span class="type">string</span> `$seed`</span> )
 
 **Warning**
 
@@ -1102,7 +1117,7 @@ class="methodparam"><span class="type">string</span> `$string`</span> )
 
 ### 参数
 
-`string`  
+`seed`  
 
 ### 返回值
 
@@ -1116,7 +1131,7 @@ Description
 <span class="type">array</span> <span
 class="methodname">sodium\_crypto\_kx\_server\_session\_keys</span> (
 <span class="methodparam"><span class="type">string</span>
-`$server_keypair`</span> , <span class="methodparam"><span
+`$server_key_pair`</span> , <span class="methodparam"><span
 class="type">string</span> `$client_key`</span> )
 
 **Warning**
@@ -1125,7 +1140,7 @@ class="type">string</span> `$client_key`</span> )
 
 ### 参数
 
-`server_keypair`  
+`server_key_pair`  
 
 `client_key`  
 
@@ -1299,8 +1314,7 @@ Get an ASCII-encoded hash
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">sodium\_crypto\_pwhash\_str</span> ( <span
 class="methodparam"><span class="type">string</span> `$password`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -1335,7 +1349,7 @@ paired with the matching opslimit values.
 
 ### 返回值
 
-Returns the hashed password, 或者在失败时返回 **`false`**.
+Returns the hashed password.
 
 In order to produce the same password hash from the same password, the
 same values for `opslimit` and `memlimit` must be used. These are
@@ -1388,8 +1402,7 @@ Derive a key from a password
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">sodium\_crypto\_pwhash</span> ( <span
 class="methodparam"><span class="type">int</span> `$length`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1398,7 +1411,8 @@ class="type">string</span> `$salt`</span> , <span
 class="methodparam"><span class="type">int</span> `$opslimit`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$memlimit`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$alg`</span> \] )
+class="type">int</span> `$algo`<span class="initializer"> =
+**`SODIUM_CRYPTO_PWHASH_ALG_DEFAULT`**</span></span> \] )
 
 This function provides low-level access to libsodium's crypto\_pwhash
 key derivation function. Unless you have specific reason to use this
@@ -1439,7 +1453,7 @@ are constants to help you choose an appropriate value, in order of size:
 **`SODIUM_CRYPTO_PWHASH_MEMLIMIT_SENSITIVE`**. Typically these should be
 paired with the matching `opslimit` values.
 
-`alg`  
+`algo`  
 <span class="type">int</span> A number indicating the hash algorithm to
 use. By default **`SODIUM_CRYPTO_PWHASH_ALG_DEFAULT`** (the currently
 recommended algorithm, which can change from one version of libsodium to
@@ -1448,11 +1462,11 @@ representing the Argon2id algorithm version 1.3.
 
 ### 返回值
 
-Returns the derived key, 或者在失败时返回 **`false`**. The return value
-is a binary string of the hash, not an ASCII-encoded representation, and
-does not contain additional information about the parameters used to
-create the hash, so you will need to keep that information if you are
-ever going to verify the password in future. Use <span
+Returns the derived key. The return value is a binary string of the
+hash, not an ASCII-encoded representation, and does not contain
+additional information about the parameters used to create the hash, so
+you will need to keep that information if you are ever going to verify
+the password in future. Use <span
 class="function">sodium\_crypto\_pwhash\_str</span> to avoid needing to
 do all that.
 
@@ -1546,7 +1560,8 @@ Verify and decrypt a ciphertext
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">sodium\_crypto\_secretbox\_open</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$ciphertext`</span> , <span class="methodparam"><span
@@ -1576,7 +1591,7 @@ Encrypt a message
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_secretbox</span> ( <span
-class="methodparam"><span class="type">string</span> `$string`</span> ,
+class="methodparam"><span class="type">string</span> `$message`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$nonce`</span> , <span class="methodparam"><span
 class="type">string</span> `$key`</span> )
@@ -1587,7 +1602,7 @@ class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`string`  
+`message`  
 
 `nonce`  
 
@@ -1670,12 +1685,14 @@ Description
 
 ### 说明
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">sodium\_crypto\_secretstream\_xchacha20poly1305\_pull</span>
 ( <span class="methodparam"><span class="type">string</span>
 `&$state`</span> , <span class="methodparam"><span
-class="type">string</span> `$c`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$ad`</span> \] )
+class="type">string</span> `$ciphertext`</span> \[, <span
+class="methodparam"><span class="type">string</span>
+`$additional_data`<span class="initializer"> = ""</span></span> \] )
 
 **Warning**
 
@@ -1685,9 +1702,9 @@ class="methodparam"><span class="type">string</span> `$ad`</span> \] )
 
 `state`  
 
-`c`  
+`ciphertext`  
 
-`ad`  
+`additional_data`  
 
 ### 返回值
 
@@ -1702,9 +1719,12 @@ Description
 class="methodname">sodium\_crypto\_secretstream\_xchacha20poly1305\_push</span>
 ( <span class="methodparam"><span class="type">string</span>
 `&$state`</span> , <span class="methodparam"><span
-class="type">string</span> `$msg`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$ad`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$tag`</span>
+class="type">string</span> `$message`</span> \[, <span
+class="methodparam"><span class="type">string</span>
+`$additional_data`<span class="initializer"> = ""</span></span> \[,
+<span class="methodparam"><span class="type">int</span> `$tag`<span
+class="initializer"> =
+**`SODIUM_CRYPTO_SECRETSTREAM_XCHACHA20POLY1305_TAG_MESSAGE`**</span></span>
 \]\] )
 
 **Warning**
@@ -1715,9 +1735,9 @@ class="methodparam"><span class="type">string</span> `$ad`</span> \[,
 
 `state`  
 
-`msg`  
+`message`  
 
-`ad`  
+`additional_data`  
 
 `tag`  
 
@@ -1775,7 +1795,7 @@ Compute a fixed-size fingerprint for the message
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_shorthash</span> ( <span
-class="methodparam"><span class="type">string</span> `$msg`</span> ,
+class="methodparam"><span class="type">string</span> `$message`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 )
 
@@ -1785,7 +1805,7 @@ class="methodparam"><span class="type">string</span> `$msg`</span> ,
 
 ### 参数
 
-`msg`  
+`message`  
 
 `key`  
 
@@ -1800,9 +1820,9 @@ Sign the message
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_sign\_detached</span> ( <span
-class="methodparam"><span class="type">string</span> `$msg`</span> ,
+class="methodparam"><span class="type">string</span> `$message`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$secretkey`</span> )
+`$secret_key`</span> )
 
 **Warning**
 
@@ -1810,9 +1830,9 @@ class="methodparam"><span class="type">string</span> `$msg`</span> ,
 
 ### 参数
 
-`msg`  
+`message`  
 
-`secretkey`  
+`secret_key`  
 
 ### 返回值
 
@@ -1826,7 +1846,7 @@ Convert an Ed25519 public key to a Curve25519 public key
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_sign\_ed25519\_pk\_to\_curve25519</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$key`</span> )
+`$public_key`</span> )
 
 **Warning**
 
@@ -1834,7 +1854,7 @@ class="methodname">sodium\_crypto\_sign\_ed25519\_pk\_to\_curve25519</span>
 
 ### 参数
 
-`key`  
+`public_key`  
 
 ### 返回值
 
@@ -1848,7 +1868,7 @@ Convert an Ed25519 secret key to a Curve25519 secret key
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_sign\_ed25519\_sk\_to\_curve25519</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$key`</span> )
+`$secret_key`</span> )
 
 **Warning**
 
@@ -1856,7 +1876,7 @@ class="methodname">sodium\_crypto\_sign\_ed25519\_sk\_to\_curve25519</span>
 
 ### 参数
 
-`key`  
+`secret_key`  
 
 ### 返回值
 
@@ -1913,11 +1933,12 @@ Check that the signed message has a valid signature
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">sodium\_crypto\_sign\_open</span> ( <span
-class="methodparam"><span class="type">string</span> `$string`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$public_key`</span> )
+class="methodparam"><span class="type">string</span>
+`$ciphertext`</span> , <span class="methodparam"><span
+class="type">string</span> `$public_key`</span> )
 
 **Warning**
 
@@ -1925,7 +1946,7 @@ class="methodparam"><span class="type">string</span> `$string`</span> ,
 
 ### 参数
 
-`string`  
+`ciphertext`  
 
 `public_key`  
 
@@ -1941,7 +1962,7 @@ Extract the public key from the secret key
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_sign\_publickey\_from\_secretkey</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$key`</span> )
+`$secret_key`</span> )
 
 **Warning**
 
@@ -1949,7 +1970,7 @@ class="methodname">sodium\_crypto\_sign\_publickey\_from\_secretkey</span>
 
 ### 参数
 
-`key`  
+`secret_key`  
 
 ### 返回值
 
@@ -1962,7 +1983,8 @@ Description
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_sign\_publickey</span> ( <span
-class="methodparam"><span class="type">string</span> `$keypair`</span> )
+class="methodparam"><span class="type">string</span> `$key_pair`</span>
+)
 
 **Warning**
 
@@ -1970,7 +1992,7 @@ class="methodparam"><span class="type">string</span> `$keypair`</span> )
 
 ### 参数
 
-`keypair`  
+`key_pair`  
 
 ### 返回值
 
@@ -1983,7 +2005,8 @@ Description
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_sign\_secretkey</span> ( <span
-class="methodparam"><span class="type">string</span> `$key`</span> )
+class="methodparam"><span class="type">string</span> `$key_pair`</span>
+)
 
 **Warning**
 
@@ -1991,7 +2014,7 @@ class="methodparam"><span class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`key`  
+`key_pair`  
 
 ### 返回值
 
@@ -2004,7 +2027,7 @@ Deterministically derive the key pair from a single key
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_sign\_seed\_keypair</span> ( <span
-class="methodparam"><span class="type">string</span> `$key`</span> )
+class="methodparam"><span class="type">string</span> `$seed`</span> )
 
 **Warning**
 
@@ -2012,7 +2035,7 @@ class="methodparam"><span class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`key`  
+`seed`  
 
 ### 返回值
 
@@ -2027,7 +2050,7 @@ Verify signature for the message
 class="methodname">sodium\_crypto\_sign\_verify\_detached</span> ( <span
 class="methodparam"><span class="type">string</span> `$signature`</span>
 , <span class="methodparam"><span class="type">string</span>
-`$msg`</span> , <span class="methodparam"><span
+`$message`</span> , <span class="methodparam"><span
 class="type">string</span> `$public_key`</span> )
 
 **Warning**
@@ -2038,7 +2061,7 @@ class="type">string</span> `$public_key`</span> )
 
 `signature`  
 
-`msg`  
+`message`  
 
 `public_key`  
 
@@ -2053,7 +2076,7 @@ Sign a message
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_sign</span> ( <span
-class="methodparam"><span class="type">string</span> `$msg`</span> ,
+class="methodparam"><span class="type">string</span> `$message`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$secret_key`</span> )
 
@@ -2063,7 +2086,7 @@ class="methodparam"><span class="type">string</span> `$msg`</span> ,
 
 ### 参数
 
-`msg`  
+`message`  
 
 `secret_key`  
 
@@ -2099,7 +2122,7 @@ Encrypt a message
 
 <span class="type">string</span> <span
 class="methodname">sodium\_crypto\_stream\_xor</span> ( <span
-class="methodparam"><span class="type">string</span> `$msg`</span> ,
+class="methodparam"><span class="type">string</span> `$message`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$nonce`</span> , <span class="methodparam"><span
 class="type">string</span> `$key`</span> )
@@ -2110,7 +2133,7 @@ class="type">string</span> `$key`</span> )
 
 ### 参数
 
-`msg`  
+`message`  
 
 `nonce`  
 
@@ -2155,9 +2178,9 @@ Decodes a hexadecimally encoded binary string
 
 <span class="type">string</span> <span
 class="methodname">sodium\_hex2bin</span> ( <span
-class="methodparam"><span class="type">string</span> `$hex`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$ignore`</span> \] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$ignore`<span class="initializer"> = ""</span></span> \] )
 
 Decodes a hexadecimally encoded binary string.
 
@@ -2167,7 +2190,7 @@ attacks while <span class="function">hex2bin</span> is not.
 
 ### 参数
 
-`hex`  
+`string`  
 Hexadecimal representation of data.
 
 `ignore`  
@@ -2175,7 +2198,7 @@ Optional string argument for characters to ignore.
 
 ### 返回值
 
-Returns the binary representation of the given `hex` data.
+Returns the binary representation of the given `string` data.
 
 sodium\_increment
 =================
@@ -2186,7 +2209,7 @@ Increment large number
 
 <span class="type">void</span> <span
 class="methodname">sodium\_increment</span> ( <span
-class="methodparam"><span class="type">string</span> `&$val`</span> )
+class="methodparam"><span class="type">string</span> `&$string`</span> )
 
 **Warning**
 
@@ -2194,7 +2217,7 @@ class="methodparam"><span class="type">string</span> `&$val`</span> )
 
 ### 参数
 
-`val`  
+`string`  
 
 ### 返回值
 
@@ -2207,9 +2230,9 @@ Test for equality in constant-time
 
 <span class="type">int</span> <span
 class="methodname">sodium\_memcmp</span> ( <span
-class="methodparam"><span class="type">string</span> `$buf1`</span> ,
+class="methodparam"><span class="type">string</span> `$string1`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$buf2`</span> )
+`$string2`</span> )
 
 **Warning**
 
@@ -2217,9 +2240,9 @@ class="methodparam"><span class="type">string</span> `$buf1`</span> ,
 
 ### 参数
 
-`buf1`  
+`string1`  
 
-`buf2`  
+`string2`  
 
 ### 返回值
 
@@ -2232,7 +2255,7 @@ Overwrite buf with zeros
 
 <span class="type">void</span> <span
 class="methodname">sodium\_memzero</span> ( <span
-class="methodparam"><span class="type">string</span> `&$buf`</span> )
+class="methodparam"><span class="type">string</span> `&$string`</span> )
 
 **Warning**
 
@@ -2240,7 +2263,7 @@ class="methodparam"><span class="type">string</span> `&$buf`</span> )
 
 ### 参数
 
-`buf`  
+`string`  
 
 ### 返回值
 
@@ -2253,7 +2276,7 @@ Add padding data
 
 <span class="type">string</span> <span
 class="methodname">sodium\_pad</span> ( <span class="methodparam"><span
-class="type">string</span> `$unpadded`</span> , <span
+class="type">string</span> `$string`</span> , <span
 class="methodparam"><span class="type">int</span> `$length`</span> )
 
 **Warning**
@@ -2262,7 +2285,7 @@ class="methodparam"><span class="type">int</span> `$length`</span> )
 
 ### 参数
 
-`unpadded`  
+`string`  
 
 `length`  
 
@@ -2277,9 +2300,9 @@ Remove padding data
 
 <span class="type">string</span> <span
 class="methodname">sodium\_unpad</span> ( <span
-class="methodparam"><span class="type">string</span> `$padded`</span> ,
-<span class="methodparam"><span class="type">int</span> `$length`</span>
-)
+class="methodparam"><span class="type">string</span> `$string`</span> ,
+<span class="methodparam"><span class="type">int</span>
+`$block_size`</span> )
 
 **Warning**
 
@@ -2287,9 +2310,9 @@ class="methodparam"><span class="type">string</span> `$padded`</span> ,
 
 ### 参数
 
-`padded`  
+`string`  
 
-`length`  
+`block_size`  
 
 ### 返回值
 
