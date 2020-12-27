@@ -835,14 +835,15 @@ Get protocol number associated with protocol name
 <span class="type"><span class="type">int</span><span
 class="type">false</span></span> <span
 class="methodname">getprotobyname</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> )
+class="methodparam"><span class="type">string</span> `$protocol`</span>
+)
 
 <span class="function">getprotobyname</span> returns the protocol number
-associated with the protocol `name` as per `/etc/protocols`.
+associated with the protocol `protocol` as per `/etc/protocols`.
 
 ### 参数
 
-`name`  
+`protocol`  
 The protocol name.
 
 ### 返回值
@@ -879,14 +880,14 @@ Get protocol name associated with protocol number
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">getprotobynumber</span> ( <span
-class="methodparam"><span class="type">int</span> `$number`</span> )
+class="methodparam"><span class="type">int</span> `$protocol`</span> )
 
 <span class="function">getprotobynumber</span> returns the protocol name
-associated with protocol `number` as per `/etc/protocols`.
+associated with protocol `protocol` as per `/etc/protocols`.
 
 ### 参数
 
-`number`  
+`protocol`  
 The protocol number.
 
 ### 返回值
@@ -954,7 +955,8 @@ Get Internet service which corresponds to port and protocol
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">getservbyport</span> ( <span
 class="methodparam"><span class="type">int</span> `$port`</span> , <span
 class="methodparam"><span class="type">string</span> `$protocol`</span>
@@ -974,7 +976,8 @@ The port number.
 
 ### 返回值
 
-Returns the Internet service name as a string.
+Returns the Internet service name as a string, 或者在失败时返回
+**`false`**.
 
 ### 参见
 
@@ -1530,7 +1533,7 @@ Converts a packed internet address to a human readable representation
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">inet\_ntop</span> ( <span class="methodparam"><span
-class="type">string</span> `$in_addr`</span> )
+class="type">string</span> `$ip`</span> )
 
 This function converts a 32bit IPv4, or 128bit IPv6 address (if PHP was
 built with IPv6 support enabled) into an address family appropriate
@@ -1538,7 +1541,7 @@ string representation.
 
 ### 参数
 
-`in_addr`  
+`ip`  
 A 32bit IPv4, or 128bit IPv6 address.
 
 ### 返回值
@@ -1580,9 +1583,10 @@ representation
 
 ### 说明
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">inet\_pton</span> ( <span class="methodparam"><span
-class="type">string</span> `$address`</span> )
+class="type">string</span> `$ip`</span> )
 
 This function converts a human readable IPv4 or IPv6 address (if PHP was
 built with IPv6 support enabled) into an address family appropriate
@@ -1590,14 +1594,14 @@ built with IPv6 support enabled) into an address family appropriate
 
 ### 参数
 
-`address`  
+`ip`  
 A human readable IPv4 or IPv6 address.
 
 ### 返回值
 
-Returns the *in\_addr* representation of the given `address`, or
-**`false`** if a syntactically invalid `address` is given (for example,
-an IPv4 address without dots or an IPv6 address without colons).
+Returns the *in\_addr* representation of the given `ip`, or **`false`**
+if a syntactically invalid `ip` is given (for example, an IPv4 address
+without dots or an IPv6 address without colons).
 
 ### 范例
 
@@ -1757,8 +1761,8 @@ Open connection to system logger
 
 <span class="type">bool</span> <span class="methodname">openlog</span> (
 <span class="methodparam"><span class="type">string</span>
-`$ident`</span> , <span class="methodparam"><span
-class="type">int</span> `$option`</span> , <span
+`$prefix`</span> , <span class="methodparam"><span
+class="type">int</span> `$flags`</span> , <span
 class="methodparam"><span class="type">int</span> `$facility`</span> )
 
 <span class="function">openlog</span> opens a connection to the system
@@ -1766,15 +1770,15 @@ logger for a program.
 
 The use of <span class="function">openlog</span> is optional. It will
 automatically be called by <span class="function">syslog</span> if
-necessary, in which case `ident` will default to **`false`**.
+necessary, in which case `prefix` will default to **`false`**.
 
 ### 参数
 
-`ident`  
-The string `ident` is added to each message.
+`prefix`  
+The string `prefix` is added to each message.
 
-`option`  
-The `option` argument is used to indicate what logging options will be
+`flags`  
+The `flags` argument is used to indicate what logging options will be
 used when generating a log message.
 
 | Constant         | Description                                                                                        |

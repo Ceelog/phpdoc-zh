@@ -910,28 +910,28 @@ Divides two numbers, according to IEEE 754
 ### 说明
 
 <span class="type">float</span> <span class="methodname">fdiv</span> (
-<span class="methodparam"><span class="type">float</span>
-`$dividend`</span> , <span class="methodparam"><span
-class="type">float</span> `$divisor`</span> )
+<span class="methodparam"><span class="type">float</span> `$num1`</span>
+, <span class="methodparam"><span class="type">float</span>
+`$num2`</span> )
 
-Returns the floating point result of dividing the `dividend` by the
-`divisor`. If the `divisor` is zero, then one of *INF*, *-INF*, or *NAN*
-will be returned.
+Returns the floating point result of dividing the `num1` by the `num2`.
+If the `num2` is zero, then one of *INF*, *-INF*, or *NAN* will be
+returned.
 
 Note that in comparisons, *NAN* will never `==` or `===`, any value,
 including itself.
 
 ### 参数
 
-`dividend`  
+`num1`  
 The dividend (numerator)
 
-`divisor`  
+`num2`  
 The divisor
 
 ### 返回值
 
-The floating point result of `dividend`/`divisor`
+The floating point result of `num1`/`num2`
 
 ### 范例
 

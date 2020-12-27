@@ -107,81 +107,99 @@ servers. It can be used in WSDL or non-WSDL mode.
 
 /\* 方法 \*/
 
-<span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">\_\_call</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$function_name`</span> , <span class="methodparam"><span
-class="type">array</span> `$arguments`</span> )
-
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$wsdl`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$options`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$wsdl`</span> \[, <span class="methodparam"><span
+class="type">array</span> `$options`<span class="initializer"> =
+\[\]</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">\_\_doRequest</span> ( <span
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">\_\_call</span> ( <span
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">array</span> `$args`</span>
+)
+
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">\_\_doRequest</span> ( <span
 class="methodparam"><span class="type">string</span> `$request`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$location`</span> , <span class="methodparam"><span
 class="type">string</span> `$action`</span> , <span
 class="methodparam"><span class="type">int</span> `$version`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$one_way`<span
-class="initializer"> = 0</span></span> \] )
+<span class="methodparam"><span class="type">bool</span> `$oneWay`<span
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">\_\_getCookies</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">\_\_getFunctions</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span> <span
+class="methodname">\_\_getFunctions</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">\_\_getLastRequest</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">\_\_getLastRequest</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">\_\_getLastRequestHeaders</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">\_\_getLastRequestHeaders</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">\_\_getLastResponse</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">\_\_getLastResponse</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">\_\_getLastResponseHeaders</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">\_\_getLastResponseHeaders</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">\_\_getTypes</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span> <span
+class="methodname">\_\_getTypes</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">\_\_setCookie</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$value`</span> \] )
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$value`<span class="initializer"> = **`null`**</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">\_\_setLocation</span> (\[ <span
-class="methodparam"><span class="type">string</span>
-`$new_location`</span> \] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">\_\_setLocation</span> (\[ <span
+class="methodparam"><span class="type">string</span> `$location`<span
+class="initializer"> = ""</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">\_\_setSoapHeaders</span> (\[ <span
-class="methodparam"><span class="type">mixed</span>
-`$soapheaders`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">SoapHeader</span><span class="type">array</span><span
+class="type">null</span></span> `$headers`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">\_\_soapCall</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$function_name`</span> , <span class="methodparam"><span
-class="type">array</span> `$arguments`</span> \[, <span
-class="methodparam"><span class="type">array</span> `$options`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$input_headers`</span> \[, <span class="methodparam"><span
-class="type">array</span> `&$output_headers`</span> \]\]\] )
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">array</span> `$args`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">SoapHeader</span><span class="type">array</span><span
+class="type">null</span></span> `$inputHeaders`<span
+class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type">array</span>
+`&$outputHeaders`<span class="initializer"> = **`null`**</span></span>
+\]\]\] )
 
 <span class="modifier">public</span> <span
 class="methodname">SoapClient</span> ( <span class="methodparam"><span
@@ -200,9 +218,9 @@ Calls a SOAP function (deprecated)
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">SoapClient::\_\_call</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$function_name`</span> , <span class="methodparam"><span
-class="type">array</span> `$arguments`</span> )
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">array</span> `$args`</span>
+)
 
 Calling this method directly is deprecated. Usually, SOAP functions can
 be called as methods of the <span class="classname">SoapClient</span>
@@ -218,9 +236,11 @@ SoapClient constructor
 
 <span class="modifier">public</span> <span
 class="methodname">SoapClient::\_\_construct</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$wsdl`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$options`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$wsdl`</span> \[, <span class="methodparam"><span
+class="type">array</span> `$options`<span class="initializer"> =
+\[\]</span></span> \] )
 
 此函数是该函数的别名： <span
 class="methodname">SoapClient::SoapClient</span>
@@ -232,15 +252,16 @@ Performs a SOAP request
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">SoapClient::\_\_doRequest</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">SoapClient::\_\_doRequest</span> ( <span
 class="methodparam"><span class="type">string</span> `$request`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$location`</span> , <span class="methodparam"><span
 class="type">string</span> `$action`</span> , <span
 class="methodparam"><span class="type">int</span> `$version`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$one_way`<span
-class="initializer"> = 0</span></span> \] )
+<span class="methodparam"><span class="type">bool</span> `$oneWay`<span
+class="initializer"> = **`false`**</span></span> \] )
 
 Performs SOAP request over HTTP.
 
@@ -261,13 +282,19 @@ The SOAP action.
 `version`  
 The SOAP version.
 
-`one_way`  
+`oneWay`  
 If *one\_way* is set to 1, this method returns nothing. Use this where a
 response is not expected.
 
 ### 返回值
 
 The XML SOAP response.
+
+### 更新日志
+
+| 版本  | 说明                                                                                                       |
+|-------|------------------------------------------------------------------------------------------------------------|
+| 8.0.0 | The type of `oneWay` is <span class="type">bool</span> now; formerly it was <span class="type">int</span>. |
 
 ### 范例
 
@@ -332,8 +359,9 @@ Returns list of available SOAP functions
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">SoapClient::\_\_getFunctions</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span> <span
+class="methodname">SoapClient::\_\_getFunctions</span> ( <span
 class="methodparam">void</span> )
 
 Returns an array of functions described in the WSDL for the Web service.
@@ -392,8 +420,9 @@ Returns last SOAP request
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">SoapClient::\_\_getLastRequest</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">SoapClient::\_\_getLastRequest</span> ( <span
 class="methodparam">void</span> )
 
 Returns the XML sent in the last SOAP request.
@@ -439,9 +468,10 @@ Returns the SOAP headers from the last request
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">SoapClient::\_\_getLastRequestHeaders</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">SoapClient::\_\_getLastRequestHeaders</span> ( <span
+class="methodparam">void</span> )
 
 Returns the SOAP headers from the last request.
 
@@ -485,8 +515,9 @@ Returns last SOAP response
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">SoapClient::\_\_getLastResponse</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">SoapClient::\_\_getLastResponse</span> ( <span
 class="methodparam">void</span> )
 
 Returns the XML received in the last SOAP response.
@@ -532,9 +563,10 @@ Returns the SOAP headers from the last response
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">SoapClient::\_\_getLastResponseHeaders</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">SoapClient::\_\_getLastResponseHeaders</span> ( <span
+class="methodparam">void</span> )
 
 Returns the SOAP headers from the last response.
 
@@ -578,8 +610,9 @@ Returns a list of SOAP types
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">SoapClient::\_\_getTypes</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span> <span
+class="methodname">SoapClient::\_\_getTypes</span> ( <span
 class="methodparam">void</span> )
 
 Returns an array of types described in the WSDL for the Web service.
@@ -658,8 +691,9 @@ The \_\_setCookie purpose
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">SoapClient::\_\_setCookie</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$value`</span> \] )
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$value`<span class="initializer"> = **`null`**</span></span> \] )
 
 Defines a cookie to be sent along with the SOAP requests.
 
@@ -680,6 +714,12 @@ The value of the cookie. If not specified, the cookie will be deleted.
 
 没有返回值。
 
+### 更新日志
+
+| 版本  | 说明                     |
+|-------|--------------------------|
+| 8.0.0 | `value` is now nullable. |
+
 SoapClient::\_\_setLocation
 ===========================
 
@@ -687,10 +727,11 @@ Sets the location of the Web service to use
 
 ### 说明
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">SoapClient::\_\_setLocation</span> (\[ <span
-class="methodparam"><span class="type">string</span>
-`$new_location`</span> \] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">SoapClient::\_\_setLocation</span> (\[ <span
+class="methodparam"><span class="type">string</span> `$location`<span
+class="initializer"> = ""</span></span> \] )
 
 Sets the endpoint URL that will be touched by following SOAP requests.
 This is equivalent to specifying the *location* option when constructing
@@ -703,7 +744,7 @@ the SoapClient.
 
 ### 参数
 
-`new_location`  
+`location`  
 The new endpoint URL.
 
 ### 返回值
@@ -745,8 +786,10 @@ Sets SOAP headers for subsequent calls
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">SoapClient::\_\_setSoapHeaders</span> (\[ <span
-class="methodparam"><span class="type">mixed</span>
-`$soapheaders`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">SoapHeader</span><span class="type">array</span><span
+class="type">null</span></span> `$headers`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 Defines headers to be sent along with the SOAP requests.
 
@@ -756,7 +799,7 @@ Defines headers to be sent along with the SOAP requests.
 
 ### 参数
 
-`soapheaders`  
+`headers`  
 The headers to be set. It could be <span
 class="classname">SoapHeader</span> object or array of <span
 class="classname">SoapHeader</span> objects. If not specified or set to
@@ -818,13 +861,18 @@ Calls a SOAP function
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">SoapClient::\_\_soapCall</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$function_name`</span> , <span class="methodparam"><span
-class="type">array</span> `$arguments`</span> \[, <span
-class="methodparam"><span class="type">array</span> `$options`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$input_headers`</span> \[, <span class="methodparam"><span
-class="type">array</span> `&$output_headers`</span> \]\]\] )
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">array</span> `$args`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">SoapHeader</span><span class="type">array</span><span
+class="type">null</span></span> `$inputHeaders`<span
+class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type">array</span>
+`&$outputHeaders`<span class="initializer"> = **`null`**</span></span>
+\]\]\] )
 
 This is a low level API function that is used to make a SOAP call.
 Usually, in WSDL mode, SOAP functions can be called as methods of the
@@ -840,10 +888,10 @@ class="function">is\_soap\_fault</span>.
 
 ### 参数
 
-`function_name`  
+`name`  
 The name of the SOAP function to call.
 
-`arguments`  
+`args`  
 An array of the arguments to pass to the function. This can be either an
 ordered or an associative array. Note that most SOAP servers require
 parameter names to be provided, in which case this must be an
@@ -858,10 +906,10 @@ The *uri* option is the target namespace of the SOAP service.
 
 The *soapaction* option is the action to call.
 
-`input_headers`  
+`inputHeaders`  
 An array of headers to be sent along with the SOAP request.
 
-`output_headers`  
+`outputHeaders`  
 If supplied, this array will be filled with the headers from the SOAP
 response.
 
@@ -1091,6 +1139,14 @@ protocols. It can be used with or without a WSDL service description.
 
 /\* 方法 \*/
 
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> ( <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$wsdl`</span> \[, <span class="methodparam"><span
+class="type">array</span> `$options`<span class="initializer"> =
+\[\]</span></span> \] )
+
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">addFunction</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$functions`</span>
@@ -1099,23 +1155,18 @@ class="methodparam"><span class="type">mixed</span> `$functions`</span>
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">addSoapHeader</span> ( <span
 class="methodparam"><span class="type">SoapHeader</span>
-`$object`</span> )
-
-<span class="modifier">public</span> <span
-class="methodname">\_\_construct</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$wsdl`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$options`</span> \] )
+`$header`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">fault</span> ( <span class="methodparam"><span
 class="type">string</span> `$code`</span> , <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$actor`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$details`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$name`</span>
-\]\]\] )
+`$actor`<span class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">mixed</span> `$details`<span
+class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$name`<span
+class="initializer"> = ""</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">getFunctions</span> ( <span
@@ -1123,14 +1174,15 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">handle</span> (\[ <span
-class="methodparam"><span class="type">string</span>
-`$soap_request`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$request`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setClass</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$class_name`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$args`</span> )
+class="methodparam"><span class="type">string</span> `$class`</span> ,
+<span class="methodparam"><span class="type">mixed</span> `$args`</span>
+)
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setObject</span> ( <span
@@ -1223,14 +1275,14 @@ Add a SOAP header to the response
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">SoapServer::addSoapHeader</span> ( <span
 class="methodparam"><span class="type">SoapHeader</span>
-`$object`</span> )
+`$header`</span> )
 
 Adds a SOAP header to be returned with the response to the current
 request.
 
 ### 参数
 
-`object`  
+`header`  
 The header to be returned.
 
 ### 返回值
@@ -1246,9 +1298,11 @@ SoapServer constructor
 
 <span class="modifier">public</span> <span
 class="methodname">SoapServer::\_\_construct</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$wsdl`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$options`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$wsdl`</span> \[, <span class="methodparam"><span
+class="type">array</span> `$options`<span class="initializer"> =
+\[\]</span></span> \] )
 
 此函数是该函数的别名： <span
 class="methodname">SoapServer::SoapServer</span>
@@ -1265,10 +1319,12 @@ Issue SoapServer fault indicating an error
 class="methodparam"><span class="type">string</span> `$code`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$string`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$actor`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$details`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$name`</span> \]\]\] )
+class="type">string</span> `$actor`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">mixed</span> `$details`<span class="initializer"> =
+**`null`**</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$name`<span class="initializer"> =
+""</span></span> \]\]\] )
 
 Sends a response to the client of the current request indicating an
 error.
@@ -1363,15 +1419,16 @@ Handles a SOAP request
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">SoapServer::handle</span> (\[ <span
-class="methodparam"><span class="type">string</span>
-`$soap_request`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$request`<span class="initializer"> = **`null`**</span></span> \] )
 
 Processes a SOAP request, calls necessary functions, and sends a
 response back.
 
 ### 参数
 
-`soap_request`  
+`request`  
 The SOAP request. If this argument is omitted, the request is assumed to
 be in the raw POST data of the HTTP request.
 
@@ -1396,6 +1453,12 @@ $server->handle();
 ?>
 ```
 
+### 更新日志
+
+| 版本  | 说明                       |
+|-------|----------------------------|
+| 8.0.0 | `request` is now nullable. |
+
 ### 参见
 
 -   <span class="methodname">SoapServer::SoapServer</span>
@@ -1409,9 +1472,9 @@ Sets the class which handles SOAP requests
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">SoapServer::setClass</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$class_name`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$args`</span> )
+class="methodparam"><span class="type">string</span> `$class`</span> ,
+<span class="methodparam"><span class="type">mixed</span> `$args`</span>
+)
 
 Exports all methods from specified class.
 
@@ -1421,7 +1484,7 @@ method.
 
 ### 参数
 
-`class_name`  
+`class`  
 The name of the exported class.
 
 `args`  
@@ -1673,15 +1736,22 @@ class="ooclass"> <span class="modifier">extends</span> **Exception**
 
 /\* 方法 \*/
 
-<span class="methodname">\_\_construct</span> ( <span
-class="methodparam"><span class="type">string</span> `$faultcode`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$faultstring`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$faultactor`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$detail`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$faultname`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$headerfault`</span> \]\]\]\] )
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> ( <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$code`</span> , <span
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$actor`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type">mixed</span> `$details`<span
+class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$name`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type">mixed</span> `$headerFault`<span
+class="initializer"> = **`null`**</span></span> \]\]\]\] )
 
 <span class="methodname">SoapFault</span> ( <span
 class="methodparam"><span class="type">string</span> `$faultcode`</span>
@@ -1752,15 +1822,22 @@ SoapFault constructor
 
 ### 说明
 
-<span class="methodname">SoapFault::\_\_construct</span> ( <span
-class="methodparam"><span class="type">string</span> `$faultcode`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$faultstring`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$faultactor`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$detail`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$faultname`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$headerfault`</span> \]\]\]\] )
+<span class="modifier">public</span> <span
+class="methodname">SoapFault::\_\_construct</span> ( <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$code`</span> , <span
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$actor`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type">mixed</span> `$details`<span
+class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$name`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type">mixed</span> `$headerFault`<span
+class="initializer"> = **`null`**</span></span> \]\]\]\] )
 
 此函数是该函数的别名： <span
 class="methodname">SoapFault::SoapFault</span>
@@ -1995,7 +2072,8 @@ Represents parameter to a SOAP call.
 
 /\* 方法 \*/
 
-<span class="methodname">\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$data`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> )
@@ -2014,7 +2092,8 @@ SoapParam constructor
 
 ### 说明
 
-<span class="methodname">SoapParam::\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">SoapParam::\_\_construct</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$data`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> )
@@ -2079,16 +2158,20 @@ A class representing a variable or object for use with SOAP services.
 
 /\* 方法 \*/
 
-<span class="methodname">\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$data`</span> ,
-<span class="methodparam"><span class="type">string</span>
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
 `$encoding`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$type_name`</span> \[, <span
-class="methodparam"><span class="type">string</span>
-`$type_namespace`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$node_name`</span> \[, <span
-class="methodparam"><span class="type">string</span>
-`$node_namespace`</span> \]\]\]\] )
+class="type">string</span> `$typeName`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$typeNamespace`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$nodeName`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$nodeNamespace`<span class="initializer"> =
+""</span></span> \]\]\]\] )
 
 <span class="methodname">SoapVar</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$data`</span> ,
@@ -2110,16 +2193,20 @@ SoapVar constructor
 
 ### 说明
 
-<span class="methodname">SoapVar::\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">SoapVar::\_\_construct</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$data`</span> ,
-<span class="methodparam"><span class="type">string</span>
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
 `$encoding`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$type_name`</span> \[, <span
-class="methodparam"><span class="type">string</span>
-`$type_namespace`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$node_name`</span> \[, <span
-class="methodparam"><span class="type">string</span>
-`$node_namespace`</span> \]\]\]\] )
+class="type">string</span> `$typeName`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$typeNamespace`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$nodeName`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$nodeNamespace`<span class="initializer"> =
+""</span></span> \]\]\]\] )
 
 此函数是该函数的别名： <span class="methodname">SoapVar::SoapVar</span>
 

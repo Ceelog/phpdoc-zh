@@ -1784,7 +1784,7 @@ Unpack data from binary string
 class="type">false</span></span> <span class="methodname">unpack</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$format`</span> , <span class="methodparam"><span
-class="type">string</span> `$data`</span> \[, <span
+class="type">string</span> `$string`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 0</span></span> \] )
 
@@ -1802,7 +1802,7 @@ have a sequence number behind the given name.
 See <span class="function">pack</span> for an explanation of the format
 codes.
 
-`data`  
+`string`  
 The packed data.
 
 `offset`  

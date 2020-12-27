@@ -71,7 +71,7 @@ Set whether to use the SOAP error handler
 
 <span class="type">bool</span> <span
 class="methodname">use\_soap\_error\_handler</span> (\[ <span
-class="methodparam"><span class="type">bool</span> `$handler`<span
+class="methodparam"><span class="type">bool</span> `$enable`<span
 class="initializer"> = **`true`**</span></span> \] )
 
 This function sets whether or not to use the SOAP error handler in the
@@ -83,7 +83,7 @@ send error to the client as SOAP fault message.
 
 ### 参数
 
-`handler`  
+`enable`  
 Set to **`true`** to send error details to clients.
 
 ### 返回值

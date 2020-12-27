@@ -485,15 +485,15 @@ Set parameters for a stream/wrapper/context
 
 <span class="type">bool</span> <span
 class="methodname">stream\_context\_set\_params</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$stream_or_context`</span> , <span class="methodparam"><span
-class="type">array</span> `$params`</span> )
+class="methodparam"><span class="type">resource</span> `$context`</span>
+, <span class="methodparam"><span class="type">array</span>
+`$params`</span> )
 
 Sets parameters on the specified context.
 
 ### 参数
 
-`stream_or_context`  
+`context`  
 The stream or context to apply the parameters too.
 
 `params`  
@@ -784,8 +784,8 @@ Register a user defined stream filter
 <span class="type">bool</span> <span
 class="methodname">stream\_filter\_register</span> ( <span
 class="methodparam"><span class="type">string</span>
-`$filtername`</span> , <span class="methodparam"><span
-class="type">string</span> `$classname`</span> )
+`$filter_name`</span> , <span class="methodparam"><span
+class="type">string</span> `$class`</span> )
 
 <span class="function">stream\_filter\_register</span> allows you to
 implement your own filter on any registered stream used with all the
@@ -794,10 +794,10 @@ other filesystem functions (such as <span class="function">fopen</span>,
 
 ### 参数
 
-`filtername`  
+`filter_name`  
 The filter name to be registered.
 
-`classname`  
+`class`  
 To implement a filter, you need to define a class as an extension of
 <span class="classname">php\_user\_filter</span> with a number of member
 functions. When performing read/write operations on the stream to which
@@ -812,7 +812,7 @@ will lead to undefined behaviour.
 成功时返回 **`true`**， 或者在失败时返回 **`false`**。
 
 <span class="function">stream\_filter\_register</span> will return
-**`false`** if the `filtername` is already defined.
+**`false`** if the `filter_name` is already defined.
 
 ### 范例
 
@@ -1343,14 +1343,15 @@ Checks if a stream is a local stream
 
 <span class="type">bool</span> <span
 class="methodname">stream\_is\_local</span> ( <span
-class="methodparam"><span class="type">mixed</span>
-`$stream_or_url`</span> )
+class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">string</span></span>
+`$stream`</span> )
 
 Checks if a stream, or a URL, is a local one or not.
 
 ### 参数
 
-`stream_or_url`  
+`stream`  
 The stream <span class="type">resource</span> or URL to check.
 
 ### 返回值
@@ -1949,8 +1950,8 @@ Set read file buffering on the given stream
 <span class="type">int</span> <span
 class="methodname">stream\_set\_read\_buffer</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stream`</span>
-, <span class="methodparam"><span class="type">int</span>
-`$buffer`</span> )
+, <span class="methodparam"><span class="type">int</span> `$size`</span>
+)
 
 Sets the read buffer. It's the equivalent of <span
 class="function">stream\_set\_write\_buffer</span>, but for read
@@ -1961,8 +1962,8 @@ operations.
 `stream`  
 The file pointer.
 
-`buffer`  
-The number of bytes to buffer. If `buffer` is 0 then read operations are
+`size`  
+The number of bytes to buffer. If `size` is 0 then read operations are
 unbuffered. This ensures that all reads with <span
 class="function">fread</span> are completed before other processes are
 allowed to read from that input stream.
@@ -2882,7 +2883,7 @@ Shutdown a full-duplex connection
 <span class="type">bool</span> <span
 class="methodname">stream\_socket\_shutdown</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stream`</span>
-, <span class="methodparam"><span class="type">int</span> `$how`</span>
+, <span class="methodparam"><span class="type">int</span> `$mode`</span>
 )
 
 Shutdowns (partially or not) a full-duplex connection.
@@ -2897,7 +2898,7 @@ Shutdowns (partially or not) a full-duplex connection.
 An open stream (opened with <span
 class="function">stream\_socket\_client</span>, for example)
 
-`how`  
+`mode`  
 One of the following constants: **`STREAM_SHUT_RD`** (disable further
 receptions), **`STREAM_SHUT_WR`** (disable further transmissions) or
 **`STREAM_SHUT_RDWR`** (disable further receptions and transmissions).

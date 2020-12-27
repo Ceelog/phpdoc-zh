@@ -72,18 +72,18 @@ Dumps a string representation of an internal zend value to output
 
 <span class="type">void</span> <span
 class="methodname">debug\_zval\_dump</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$variable`</span> ,
+class="methodparam"><span class="type">mixed</span> `$value`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
-`$variables`</span> )
+`$values`</span> )
 
 Dumps a string representation of an internal zend value to output.
 
 ### 参数
 
-`variable`  
+`value`  
 The variable to dump.
 
-`variables`  
+`values`  
 Further variables to dump.
 
 ### 返回值
@@ -780,7 +780,7 @@ Verify that the contents of a variable is a countable value
 
 <span class="type">bool</span> <span
 class="methodname">is\_countable</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$var`</span> )
+class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
 Verify that the contents of a variable is an <span
 class="type">array</span> or an object implementing <span
@@ -788,12 +788,12 @@ class="classname">Countable</span>
 
 ### 参数
 
-`var`  
+`value`  
 The value to check
 
 ### 返回值
 
-Returns **`true`** if `var` is countable, **`false`** otherwise.
+Returns **`true`** if `value` is countable, **`false`** otherwise.
 
 ### 更新日志
 
@@ -901,7 +901,7 @@ Verify that the contents of a variable is an iterable value
 
 <span class="type">bool</span> <span
 class="methodname">is\_iterable</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$var`</span> )
+class="type">mixed</span> `$value`</span> )
 
 Verify that the contents of a variable is accepted by the <span
 class="type">iterable</span> pseudo-type, i.e. that it is either an
@@ -910,12 +910,12 @@ class="classname">Traversable</span>
 
 ### 参数
 
-`var`  
+`value`  
 The value to check
 
 ### 返回值
 
-Returns **`true`** if `var` is iterable, **`false`** otherwise.
+Returns **`true`** if `value` is iterable, **`false`** otherwise.
 
 ### 范例
 

@@ -7,19 +7,19 @@ Convert a pathname and a project identifier to a System V IPC key
 
 <span class="type">int</span> <span class="methodname">ftok</span> (
 <span class="methodparam"><span class="type">string</span>
-`$pathname`</span> , <span class="methodparam"><span
-class="type">string</span> `$proj`</span> )
+`$filename`</span> , <span class="methodparam"><span
+class="type">string</span> `$project_id`</span> )
 
-The function converts the `pathname` of an existing accessible file and
+The function converts the `filename` of an existing accessible file and
 a project identifier into an *integer* for use with for example <span
 class="function">shmop\_open</span> and other System V IPC keys.
 
 ### 参数
 
-`pathname`  
+`filename`  
 Path to an accessible file.
 
-`proj`  
+`project_id`  
 Project identifier. This must be a one character string.
 
 ### 返回值
