@@ -3974,8 +3974,7 @@ Return a formatted string
 
 ### 说明
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">sprintf</span>
+<span class="type">string</span> <span class="methodname">sprintf</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$format`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$values`</span> )
@@ -4129,8 +4128,13 @@ Variables will be co-erced to a suitable type for the specifier:
 
 ### 返回值
 
-Returns a string produced according to the formatting string `format`,
-或者在失败时返回 **`false`**.
+Returns a string produced according to the formatting string `format`.
+
+### 更新日志
+
+| 版本  | 说明                                                    |
+|-------|---------------------------------------------------------|
+| 8.0.0 | This function no longer returns **`false`** on failure. |
 
 ### 范例
 

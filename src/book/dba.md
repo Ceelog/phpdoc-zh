@@ -328,14 +328,14 @@ Close a DBA database
 
 <span class="type">void</span> <span
 class="methodname">dba\_close</span> ( <span class="methodparam"><span
-class="type">resource</span> `$handle`</span> )
+class="type">resource</span> `$dba`</span> )
 
 <span class="function">dba\_close</span> closes the established database
 and frees all resources of the specified database handle.
 
 ### 参数
 
-`handle`  
+`dba`  
 The database handler, returned by <span
 class="function">dba\_open</span> or <span
 class="function">dba\_popen</span>.
@@ -358,9 +358,9 @@ Delete DBA entry specified by key
 
 <span class="type">bool</span> <span
 class="methodname">dba\_delete</span> ( <span class="methodparam"><span
-class="type">string</span> `$key`</span> , <span
-class="methodparam"><span class="type">resource</span> `$handle`</span>
-)
+class="type"><span class="type">string</span><span
+class="type">array</span></span> `$key`</span> , <span
+class="methodparam"><span class="type">resource</span> `$dba`</span> )
 
 <span class="function">dba\_delete</span> deletes the specified entry
 from the database.
@@ -370,7 +370,7 @@ from the database.
 `key`  
 The key of the entry which is deleted.
 
-`handle`  
+`dba`  
 The database handler, returned by <span
 class="function">dba\_open</span> or <span
 class="function">dba\_popen</span>.
@@ -395,9 +395,9 @@ Check whether key exists
 
 <span class="type">bool</span> <span
 class="methodname">dba\_exists</span> ( <span class="methodparam"><span
-class="type">string</span> `$key`</span> , <span
-class="methodparam"><span class="type">resource</span> `$handle`</span>
-)
+class="type"><span class="type">string</span><span
+class="type">array</span></span> `$key`</span> , <span
+class="methodparam"><span class="type">resource</span> `$dba`</span> )
 
 <span class="function">dba\_exists</span> checks whether the specified
 `key` exists in the database.
@@ -407,7 +407,7 @@ class="methodparam"><span class="type">resource</span> `$handle`</span>
 `key`  
 The key the check is performed for.
 
-`handle`  
+`dba`  
 The database handler, returned by <span
 class="function">dba\_open</span> or <span
 class="function">dba\_popen</span>.
@@ -490,8 +490,7 @@ Fetch first key
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">dba\_firstkey</span> ( <span
-class="methodparam"><span class="type">resource</span> `$handle`</span>
-)
+class="methodparam"><span class="type">resource</span> `$dba`</span> )
 
 <span class="function">dba\_firstkey</span> returns the first key of the
 database and resets the internal key pointer. This permits a linear
@@ -499,7 +498,7 @@ search through the whole database.
 
 ### 参数
 
-`handle`  
+`dba`  
 The database handler, returned by <span
 class="function">dba\_open</span> or <span
 class="function">dba\_popen</span>.
@@ -582,10 +581,11 @@ Insert entry
 
 <span class="type">bool</span> <span
 class="methodname">dba\_insert</span> ( <span class="methodparam"><span
-class="type">string</span> `$key`</span> , <span
+class="type"><span class="type">string</span><span
+class="type">array</span></span> `$key`</span> , <span
 class="methodparam"><span class="type">string</span> `$value`</span> ,
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> )
+`$dba`</span> )
 
 <span class="function">dba\_insert</span> inserts the entry described
 with `key` and `value` into the database.
@@ -601,7 +601,7 @@ key.
 `value`  
 The value to be inserted.
 
-`handle`  
+`dba`  
 The database handler, returned by <span
 class="function">dba\_open</span> or <span
 class="function">dba\_popen</span>.
@@ -624,9 +624,12 @@ Splits a key in string representation into array representation
 
 ### 说明
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">dba\_key\_split</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$key`</span> )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">false</span><span
+class="type">null</span></span> `$key`</span> )
 
 <span class="function">dba\_key\_split</span> splits a key (string
 representation) into an array representation.
@@ -675,14 +678,14 @@ Fetch next key
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">dba\_nextkey</span> ( <span class="methodparam"><span
-class="type">resource</span> `$handle`</span> )
+class="type">resource</span> `$dba`</span> )
 
 <span class="function">dba\_nextkey</span> returns the next key of the
 database and advances the internal key pointer.
 
 ### 参数
 
-`handle`  
+`dba`  
 The database handler, returned by <span
 class="function">dba\_open</span> or <span
 class="function">dba\_popen</span>.
@@ -811,15 +814,14 @@ Optimize database
 
 <span class="type">bool</span> <span
 class="methodname">dba\_optimize</span> ( <span
-class="methodparam"><span class="type">resource</span> `$handle`</span>
-)
+class="methodparam"><span class="type">resource</span> `$dba`</span> )
 
 <span class="function">dba\_optimize</span> optimizes the underlying
 database.
 
 ### 参数
 
-`handle`  
+`dba`  
 The database handler, returned by <span
 class="function">dba\_open</span> or <span
 class="function">dba\_popen</span>.
@@ -904,14 +906,14 @@ Replace or insert entry
 
 <span class="type">bool</span> <span
 class="methodname">dba\_replace</span> ( <span class="methodparam"><span
-class="type">string</span> `$key`</span> , <span
+class="type"><span class="type">string</span><span
+class="type">array</span></span> `$key`</span> , <span
 class="methodparam"><span class="type">string</span> `$value`</span> ,
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> )
+`$dba`</span> )
 
 <span class="function">dba\_replace</span> replaces or inserts the entry
-described with `key` and `value` into the database specified by
-`handle`.
+described with `key` and `value` into the database specified by `dba`.
 
 ### 参数
 
@@ -921,7 +923,7 @@ The key of the entry to be replaced.
 `value`  
 The value to be replaced.
 
-`handle`  
+`dba`  
 The database handler, returned by <span
 class="function">dba\_open</span> or <span
 class="function">dba\_popen</span>.
@@ -946,14 +948,14 @@ Synchronize database
 
 <span class="type">bool</span> <span class="methodname">dba\_sync</span>
 ( <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> )
+`$dba`</span> )
 
 <span class="function">dba\_sync</span> synchronizes the database. This
 will probably trigger a physical write to the disk, if supported.
 
 ### 参数
 
-`handle`  
+`dba`  
 The database handler, returned by <span
 class="function">dba\_open</span> or <span
 class="function">dba\_popen</span>.

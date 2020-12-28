@@ -1168,7 +1168,7 @@ class="methodname">Exception::getPrevious</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">int</span> <span
+<span class="type">mixed</span> <span
 class="methodname">Exception::getCode</span> ( <span
 class="methodparam">void</span> )
 
@@ -1255,7 +1255,7 @@ class="methodname">Exception::getPrevious</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">int</span> <span
+<span class="type">mixed</span> <span
 class="methodname">Exception::getCode</span> ( <span
 class="methodparam">void</span> )
 
@@ -1333,7 +1333,7 @@ class="methodname">Exception::getPrevious</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">int</span> <span
+<span class="type">mixed</span> <span
 class="methodname">Exception::getCode</span> ( <span
 class="methodparam">void</span> )
 
@@ -1409,7 +1409,7 @@ class="methodname">Exception::getPrevious</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">int</span> <span
+<span class="type">mixed</span> <span
 class="methodname">Exception::getCode</span> ( <span
 class="methodparam">void</span> )
 
@@ -1492,7 +1492,7 @@ class="methodname">Exception::getPrevious</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">int</span> <span
+<span class="type">mixed</span> <span
 class="methodname">Exception::getCode</span> ( <span
 class="methodparam">void</span> )
 
@@ -1568,7 +1568,7 @@ class="methodname">Exception::getPrevious</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">int</span> <span
+<span class="type">mixed</span> <span
 class="methodname">Exception::getCode</span> ( <span
 class="methodparam">void</span> )
 
@@ -1644,7 +1644,7 @@ class="methodname">Exception::getPrevious</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">int</span> <span
+<span class="type">mixed</span> <span
 class="methodname">Exception::getCode</span> ( <span
 class="methodparam">void</span> )
 

@@ -100,7 +100,8 @@ class="type">FFI\\CData</span> `&$ptr`</span> )
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">alignof</span> ( <span class="methodparam"><span
-class="type">mixed</span> `&$ptr`</span> )
+class="type"><span class="type">FFI\\CData</span><span
+class="type">FFI\\CType</span></span> `&$ptr`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">FFI\\CType</span>
@@ -126,8 +127,9 @@ class="type">FFI\\CData</span> <span class="methodname">cast</span> (
 class="modifier">static</span> <span class="type">FFI</span> <span
 class="methodname">cdef</span> (\[ <span class="methodparam"><span
 class="type">string</span> `$code`<span class="initializer"> =
-""</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$lib`</span> \]\] )
+""</span></span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$lib`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
@@ -140,45 +142,55 @@ class="methodname">isNull</span> ( <span class="methodparam"><span
 class="type">FFI\\CData</span> `&$ptr`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">FFI</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">FFI</span><span class="type">null</span></span> <span
 class="methodname">load</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">memcmp</span> ( <span class="methodparam"><span
-class="type">mixed</span> `&$ptr1`</span> , <span
-class="methodparam"><span class="type">mixed</span> `&$ptr2`</span> ,
-<span class="methodparam"><span class="type">int</span> `$size`</span> )
+class="type"><span class="type">string</span><span
+class="type">FFI\\CData</span></span> `&$ptr1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">FFI\\CData</span></span>
+`&$ptr2`</span> , <span class="methodparam"><span
+class="type">int</span> `$size`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">memcpy</span> ( <span class="methodparam"><span
-class="type">FFI\\CData</span> `&$dst`</span> , <span
-class="methodparam"><span class="type">mixed </span> `&$src`</span> ,
-<span class="methodparam"><span class="type">int</span> `$size`</span> )
+class="type">FFI\\CData</span> `&$to`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">FFI\\CData</span><span class="type">string</span></span>
+`&$from`</span> , <span class="methodparam"><span
+class="type">int</span> `$size`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">memset</span> ( <span class="methodparam"><span
 class="type">FFI\\CData</span> `&$ptr`</span> , <span
-class="methodparam"><span class="type">int</span> `$ch`</span> , <span
-class="methodparam"><span class="type">int</span> `$size`</span> )
+class="methodparam"><span class="type">int</span> `$value`</span> ,
+<span class="methodparam"><span class="type">int</span> `$size`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">FFI\\CData</span>
+class="modifier">static</span> <span class="type"><span
+class="type">FFI\\CData</span><span class="type">null</span></span>
 <span class="methodname">new</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$type`</span> \[, <span
+class="type"><span class="type">FFI\\CType</span><span
+class="type">string</span></span> `$type`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$owned`<span
 class="initializer"> = **`true`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$persistent`<span
 class="initializer"> = **`false`**</span></span> \]\] )
 
-<span class="modifier">public</span> <span
-class="type">FFI\\CData</span> <span class="methodname">new</span> (
-<span class="methodparam"><span class="type">mixed</span> `$type`</span>
-\[, <span class="methodparam"><span class="type">bool</span>
-`$owned`<span class="initializer"> = **`true`**</span></span> \[, <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">FFI\\CData</span><span class="type">null</span></span>
+<span class="methodname">new</span> ( <span class="methodparam"><span
+class="type"><span class="type">FFI\\CType</span><span
+class="type">string</span></span> `$type`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$owned`<span
+class="initializer"> = **`true`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$persistent`<span
 class="initializer"> = **`false`**</span></span> \]\] )
 
@@ -190,7 +202,8 @@ class="type">string</span> `$scope_name`</span> )
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">sizeof</span> ( <span class="methodparam"><span
-class="type">mixed</span> `&$ptr`</span> )
+class="type"><span class="type">FFI\\CData</span><span
+class="type">FFI\\CType</span></span> `&$ptr`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">string</span> <span
@@ -199,14 +212,15 @@ class="type">FFI\\CData</span> `&$ptr`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$size`</span> \] )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">FFI\\CType</span>
+class="modifier">static</span> <span class="type"><span
+class="type">FFI\\CType</span><span class="type">null</span></span>
 <span class="methodname">type</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$type`</span> )
+class="type">string</span> `$type`</span> )
 
-<span class="modifier">public</span> <span
-class="type">FFI\\CType</span> <span class="methodname">type</span> (
-<span class="methodparam"><span class="type">mixed</span> `$type`</span>
-)
+<span class="modifier">public</span> <span class="type"><span
+class="type">FFI\\CType</span><span class="type">null</span></span>
+<span class="methodname">type</span> ( <span class="methodparam"><span
+class="type">string</span> `$type`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">FFI\\CType</span>
@@ -253,7 +267,8 @@ Gets the alignment
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">FFI::alignof</span> ( <span class="methodparam"><span
-class="type">mixed</span> `&$ptr`</span> )
+class="type"><span class="type">FFI\\CData</span><span
+class="type">FFI\\CType</span></span> `&$ptr`</span> )
 
 Gets the alignment of the given <span
 class="classname">FFI\\CData</span> or <span
@@ -367,8 +382,9 @@ Creates a new FFI object
 class="modifier">static</span> <span class="type">FFI</span> <span
 class="methodname">FFI::cdef</span> (\[ <span class="methodparam"><span
 class="type">string</span> `$code`<span class="initializer"> =
-""</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$lib`</span> \]\] )
+""</span></span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$lib`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Creates a new FFI object.
 
@@ -397,6 +413,12 @@ definitions.
 ### 返回值
 
 Returns the freshly created <span class="classname">FFI</span> object.
+
+### 更新日志
+
+| 版本  | 说明                   |
+|-------|------------------------|
+| 8.0.0 | `lib` is nullable now. |
 
 FFI::free
 =========
@@ -452,7 +474,8 @@ Loads C declarations from a C header file
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">FFI</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">FFI</span><span class="type">null</span></span> <span
 class="methodname">FFI::load</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> )
 
@@ -482,7 +505,8 @@ relative path is required, e.g.: `#define FFI_LIB "./mylib.so"`.
 
 ### 返回值
 
-Returns the freshly created <span class="classname">FFI</span> object.
+Returns the freshly created <span class="classname">FFI</span> object,
+or **`null`** on failure.
 
 ### 参见
 
@@ -498,9 +522,12 @@ Compares memory areas
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">FFI::memcmp</span> ( <span class="methodparam"><span
-class="type">mixed</span> `&$ptr1`</span> , <span
-class="methodparam"><span class="type">mixed</span> `&$ptr2`</span> ,
-<span class="methodparam"><span class="type">int</span> `$size`</span> )
+class="type"><span class="type">string</span><span
+class="type">FFI\\CData</span></span> `&$ptr1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">FFI\\CData</span></span>
+`&$ptr2`</span> , <span class="methodparam"><span
+class="type">int</span> `$size`</span> )
 
 Compares `size` bytes from the memory areas `ptr1` and `ptr2`. Both
 `ptr1` and `ptr2` can be any native data structures (<span
@@ -535,21 +562,20 @@ Copies one memory area to another
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">FFI::memcpy</span> ( <span class="methodparam"><span
-class="type">FFI\\CData</span> `&$dst`</span> , <span
-class="methodparam"><span class="type">mixed </span> `&$src`</span> ,
-<span class="methodparam"><span class="type">int</span> `$size`</span> )
+class="type">FFI\\CData</span> `&$to`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">FFI\\CData</span><span class="type">string</span></span>
+`&$from`</span> , <span class="methodparam"><span
+class="type">int</span> `$size`</span> )
 
-Copies `size` bytes from the memory area `src` to the memory area `dst`.
-Both `src` and `dst` can be any native data structures (<span
-class="classname">FFI\\CData</span>) or PHP <span
-class="type">string</span>s.
+Copies `size` bytes from the memory area `from` to the memory area `to`.
 
 ### 参数
 
-`dst`  
+`to`  
 The start of the memory area to copy to.
 
-`src`  
+`from`  
 The start of the memory area to copy from.
 
 `size`  
@@ -570,18 +596,18 @@ Fills a memory area
 class="modifier">static</span> <span class="type">void</span> <span
 class="methodname">FFI::memset</span> ( <span class="methodparam"><span
 class="type">FFI\\CData</span> `&$ptr`</span> , <span
-class="methodparam"><span class="type">int</span> `$ch`</span> , <span
-class="methodparam"><span class="type">int</span> `$size`</span> )
+class="methodparam"><span class="type">int</span> `$value`</span> ,
+<span class="methodparam"><span class="type">int</span> `$size`</span> )
 
 Fills `size` bytes of the memory area pointed to by `ptr` with the given
-byte `ch`.
+byte `value`.
 
 ### 参数
 
 `ptr`  
 The start of the memory area to fill.
 
-`ch`  
+`value`  
 The byte to fill with.
 
 `size`  
@@ -599,17 +625,22 @@ Creates a C data structure
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">FFI\\CData</span>
+class="modifier">static</span> <span class="type"><span
+class="type">FFI\\CData</span><span class="type">null</span></span>
 <span class="methodname">FFI::new</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$type`</span> \[,
-<span class="methodparam"><span class="type">bool</span> `$owned`<span
-class="initializer"> = **`true`**</span></span> \[, <span
-class="methodparam"><span class="type">bool</span> `$persistent`<span
-class="initializer"> = **`false`**</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">FFI\\CType</span><span class="type">string</span></span>
+`$type`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$owned`<span class="initializer"> =
+**`true`**</span></span> \[, <span class="methodparam"><span
+class="type">bool</span> `$persistent`<span class="initializer"> =
+**`false`**</span></span> \]\] )
 
-<span class="modifier">public</span> <span
-class="type">FFI\\CData</span> <span class="methodname">FFI::new</span>
-( <span class="methodparam"><span class="type">mixed</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">FFI\\CData</span><span class="type">null</span></span>
+<span class="methodname">FFI::new</span> ( <span
+class="methodparam"><span class="type"><span
+class="type">FFI\\CType</span><span class="type">string</span></span>
 `$type`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$owned`<span class="initializer"> =
 **`true`**</span></span> \[, <span class="methodparam"><span
@@ -644,7 +675,7 @@ Whether to allocate the C data structure permanently on the system heap
 ### 返回值
 
 Returns the freshly created <span class="classname">FFI\\CData</span>
-object.
+object, or **`null`** on failure.
 
 FFI::scope
 ==========
@@ -687,7 +718,8 @@ Gets the size of C data or types
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">FFI::sizeof</span> ( <span class="methodparam"><span
-class="type">mixed</span> `&$ptr`</span> )
+class="type"><span class="type">FFI\\CData</span><span
+class="type">FFI\\CType</span></span> `&$ptr`</span> )
 
 Returns the size of the given <span class="classname">FFI\\CData</span>
 or <span class="classname">FFI\\CType</span> object.
@@ -739,14 +771,15 @@ Creates an FFI\\CType object from a C declaration
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">FFI\\CType</span>
+class="modifier">static</span> <span class="type"><span
+class="type">FFI\\CType</span><span class="type">null</span></span>
 <span class="methodname">FFI::type</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$type`</span> )
+class="methodparam"><span class="type">string</span> `$type`</span> )
 
-<span class="modifier">public</span> <span
-class="type">FFI\\CType</span> <span class="methodname">FFI::type</span>
-( <span class="methodparam"><span class="type">mixed</span>
-`$type`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">FFI\\CType</span><span class="type">null</span></span>
+<span class="methodname">FFI::type</span> ( <span
+class="methodparam"><span class="type">string</span> `$type`</span> )
 
 This function creates and returns a <span
 class="classname">FFI\\CType</span> object for the given <span
@@ -765,7 +798,7 @@ been created.
 ### 返回值
 
 Returns the freshly created <span class="classname">FFI\\CType</span>
-object.
+object, or **`null`** on failure.
 
 FFI::typeof
 ===========

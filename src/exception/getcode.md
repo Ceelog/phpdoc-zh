@@ -6,7 +6,7 @@ Exception::getCode
 ### 说明
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">int</span> <span
+<span class="type">mixed</span> <span
 class="methodname">Exception::getCode</span> ( <span
 class="methodparam">void</span> )
 
@@ -19,7 +19,7 @@ class="methodparam">void</span> )
 ### 返回值
 
 <span class="classname">Exception</span> 返回整型（<span
-class="type">integer</span>）的异常代码，但在其他类中可能返回其他类型(比如在
+class="type">int</span>）的异常代码，但在其他类中可能返回其他类型(比如在
 <span class="classname">PDOException</span> 中返回 <span
 class="type">string</span>)。
 

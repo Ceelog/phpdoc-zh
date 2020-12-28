@@ -414,8 +414,6 @@
     class
     -   [ReflectionType::allowsNull](/class/reflectiontype.html#ReflectionType::allowsNull)
         — Checks if null is allowed
-    -   [ReflectionType::isBuiltin](/class/reflectiontype.html#ReflectionType::isBuiltin)
-        — Checks if it is a built-in type
     -   [ReflectionType::\_\_toString](/class/reflectiontype.html#ReflectionType::__toString)
         — To string
 -   [ReflectionGenerator](/class/reflectiongenerator.html) —
@@ -10422,10 +10420,6 @@ To string.
 <span class="methodname">allowsNull</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">isBuiltin</span> ( <span
-class="methodparam">void</span> )
-
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">\_\_toString</span> ( <span
 class="methodparam">void</span> )
@@ -10469,74 +10463,15 @@ var_dump($reflectionParams[0]->getType()->allowsNull());
 var_dump($reflectionParams[1]->getType()->allowsNull());
 ```
 
-以上例程的输出类似于：
+以上例程会输出：
 
     bool(false)
     bool(true)
 
 ### 参见
 
--   <span class="methodname">ReflectionType::isBuiltin</span>
+-   <span class="methodname">ReflectionNamedType::isBuiltin</span>
 -   <span class="methodname">ReflectionType::\_\_toString</span>
--   <span class="methodname">ReflectionParameter::getType</span>
-
-ReflectionType::isBuiltin
-=========================
-
-Checks if it is a built-in type
-
-### 说明
-
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">ReflectionType::isBuiltin</span> ( <span
-class="methodparam">void</span> )
-
-Checks if the type is a built-in type in PHP.
-
-### 参数
-
-此函数没有参数。
-
-### 返回值
-
-**`true`** if it's a built-in type, otherwise **`false`**
-
-### 范例
-
-**示例 \#1 <span class="methodname">ReflectionType::isBuiltin</span>
-example**
-
-``` php
-<?php
-class SomeClass {}
-
-function someFunction(string $param, SomeClass $param2, StdClass $param3) {}
-
-$reflectionFunc = new ReflectionFunction('someFunction');
-$reflectionParams = $reflectionFunc->getParameters();
-
-var_dump($reflectionParams[0]->getType()->isBuiltin());
-var_dump($reflectionParams[1]->getType()->isBuiltin());
-var_dump($reflectionParams[2]->getType()->isBuiltin());
-```
-
-以上例程的输出类似于：
-
-    bool(true)
-    bool(false)
-    bool(false)
-
-Note that the <span class="methodname">ReflectionType::isBuiltin</span>
-method does not distinguish between internal and custom classes. To make
-this distinction, the <span
-class="methodname">ReflectionClass::isInternal</span> method should be
-used on the returned class name.
-
-### 参见
-
--   <span class="methodname">ReflectionType::allowsNull</span>
--   <span class="methodname">ReflectionType::\_\_toString</span>
--   <span class="methodname">ReflectionClass::isInternal</span>
 -   <span class="methodname">ReflectionParameter::getType</span>
 
 ReflectionType::\_\_toString
@@ -10592,8 +10527,9 @@ echo $reflectionParam->getType();
 ### 参见
 
 -   <span class="methodname">ReflectionNamedType::getName</span>
+-   <span class="methodname">ReflectionNamedType::isBuiltin</span>
 -   <span class="methodname">ReflectionType::allowsNull</span>
--   <span class="methodname">ReflectionType::isBuiltin</span>
+-   <span class="methodname">ReflectionUnionType::getTypes</span>
 -   <span class="methodname">ReflectionParameter::getType</span>
 
 简介
@@ -11209,7 +11145,7 @@ class="methodname">Exception::getPrevious</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">int</span> <span
+<span class="type">mixed</span> <span
 class="methodname">Exception::getCode</span> ( <span
 class="methodparam">void</span> )
 
