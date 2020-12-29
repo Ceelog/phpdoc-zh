@@ -17,8 +17,8 @@ package. SNMPv3 functions available only when
 <a href="http://www.openssl.org/" class="link external">» OpenSSL</a>
 package is installed too.
 
-Beginning with PHP 5.4.0 Net-SNMP version 5.3+ is required for Unix
-installations and Net-SNMP version 5.4+ for Windows.
+Net-SNMP version 5.3+ is required for Unix installations and Net-SNMP
+version 5.4+ for Windows.
 
 安装
 ----

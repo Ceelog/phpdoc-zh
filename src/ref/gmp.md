@@ -988,10 +988,14 @@ hexadecimal or octal.
 `base`  
 The base.
 
-The base may vary from 2 to 36. If base is 0 (default value), the actual
+The base may vary from 2 to 62. If base is 0 (default value), the actual
 base is determined from the leading characters: if the first two
-characters are *0x* or *0X*, hexadecimal is assumed, otherwise if the
-first character is "0", octal is assumed, otherwise decimal is assumed.
+characters are *0x* or *0X*, hexadecimal is assumed, if the first two
+characters are *0b* or *0B*, binary is assumed, otherwise if the first
+character is *0*, octal is assumed, otherwise decimal is assumed. For
+bases up to 36, case is ignored; upper-case and lower-case letters have
+the same value. For bases 37 to 62, upper-case letter represent the
+usual 10 to 35 while lower-case letter represent 36 to 61.
 
 ### 返回值
 

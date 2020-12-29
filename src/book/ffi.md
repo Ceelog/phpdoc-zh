@@ -108,20 +108,28 @@ class="modifier">static</span> <span class="type">FFI\\CType</span>
 <span class="methodname">arrayType</span> ( <span
 class="methodparam"><span class="type">FFI\\CType</span> `$type`</span>
 , <span class="methodparam"><span class="type">array </span>
-`$dims`</span> )
+`$dimensions`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">FFI\\CData</span>
+class="modifier">static</span> <span class="type"><span
+class="type">FFI\\CData</span><span class="type">null</span></span>
 <span class="methodname">cast</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$type`</span> , <span
-class="methodparam"><span class="type">FFI\\CData</span> `&$ptr`</span>
-)
+class="type"><span class="type">FFI\\CType</span><span
+class="type">string</span></span> `$type`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">FFI\\CData</span><span class="type">int</span><span
+class="type">float</span><span class="type">bool</span><span
+class="type">null</span></span> `&$ptr`</span> )
 
-<span class="modifier">public</span> <span
-class="type">FFI\\CData</span> <span class="methodname">cast</span> (
-<span class="methodparam"><span class="type">mixed</span> `$type`</span>
-, <span class="methodparam"><span class="type">FFI\\CData</span>
-`&$ptr`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">FFI\\CData</span><span class="type">null</span></span>
+<span class="methodname">cast</span> ( <span class="methodparam"><span
+class="type"><span class="type">FFI\\CType</span><span
+class="type">string</span></span> `$type`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">FFI\\CData</span><span class="type">int</span><span
+class="type">float</span><span class="type">bool</span><span
+class="type">null</span></span> `&$ptr`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">FFI</span> <span
@@ -197,7 +205,7 @@ class="initializer"> = **`false`**</span></span> \]\] )
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">FFI</span> <span
 class="methodname">scope</span> ( <span class="methodparam"><span
-class="type">string</span> `$scope_name`</span> )
+class="type">string</span> `$name`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">int</span> <span
@@ -209,7 +217,9 @@ class="type">FFI\\CType</span></span> `&$ptr`</span> )
 class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">string</span> ( <span class="methodparam"><span
 class="type">FFI\\CData</span> `&$ptr`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$size`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$size`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type"><span
@@ -297,11 +307,11 @@ class="modifier">static</span> <span class="type">FFI\\CType</span>
 <span class="methodname">FFI::arrayType</span> ( <span
 class="methodparam"><span class="type">FFI\\CType</span> `$type`</span>
 , <span class="methodparam"><span class="type">array </span>
-`$dims`</span> )
+`$dimensions`</span> )
 
 Dynamically constructs a new C array type with elements of type defined
-by `type`, and dimensions specified by `dims`. In the following example
-`$t1` and `$t2` are equivalent array types:
+by `type`, and dimensions specified by `dimensions`. In the following
+example `$t1` and `$t2` are equivalent array types:
 
 ``` php
 <?php
@@ -317,7 +327,7 @@ A valid C declaration as <span class="type">string</span>, or an
 instance of <span class="classname">FFI\\CType</span> which has already
 been created.
 
-`dims`  
+`dimensions`  
 The dimensions of the type as <span class="type">array</span>.
 
 ### 返回值
@@ -333,17 +343,25 @@ Performs a C type cast
 ### 说明
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">FFI\\CData</span>
+class="modifier">static</span> <span class="type"><span
+class="type">FFI\\CData</span><span class="type">null</span></span>
 <span class="methodname">FFI::cast</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$type`</span> ,
-<span class="methodparam"><span class="type">FFI\\CData</span>
-`&$ptr`</span> )
+class="methodparam"><span class="type"><span
+class="type">FFI\\CType</span><span class="type">string</span></span>
+`$type`</span> , <span class="methodparam"><span class="type"><span
+class="type">FFI\\CData</span><span class="type">int</span><span
+class="type">float</span><span class="type">bool</span><span
+class="type">null</span></span> `&$ptr`</span> )
 
-<span class="modifier">public</span> <span
-class="type">FFI\\CData</span> <span class="methodname">FFI::cast</span>
-( <span class="methodparam"><span class="type">mixed</span>
-`$type`</span> , <span class="methodparam"><span
-class="type">FFI\\CData</span> `&$ptr`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">FFI\\CData</span><span class="type">null</span></span>
+<span class="methodname">FFI::cast</span> ( <span
+class="methodparam"><span class="type"><span
+class="type">FFI\\CType</span><span class="type">string</span></span>
+`$type`</span> , <span class="methodparam"><span class="type"><span
+class="type">FFI\\CData</span><span class="type">int</span><span
+class="type">float</span><span class="type">bool</span><span
+class="type">null</span></span> `&$ptr`</span> )
 
 <span class="methodname">FFI::cast</span> creates a new <span
 class="classname">FFI\\CData</span> object, that references the same C
@@ -687,7 +705,7 @@ Instantiates an FFI object with C declarations parsed during preloading
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">FFI</span> <span
 class="methodname">FFI::scope</span> ( <span class="methodparam"><span
-class="type">string</span> `$scope_name`</span> )
+class="type">string</span> `$name`</span> )
 
 Instantiates an FFI object with C declarations parsed during preloading.
 
@@ -697,7 +715,7 @@ may be loaded at the same time.
 
 ### 参数
 
-`scope_name`  
+`name`  
 The scope name defined by a special *FFI\_SCOPE* define.
 
 ### 返回值
@@ -744,7 +762,9 @@ Creates a PHP string from a memory area
 class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">FFI::string</span> ( <span class="methodparam"><span
 class="type">FFI\\CData</span> `&$ptr`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$size`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$size`<span class="initializer"> = **`null`**</span></span> \] )
 
 Creates a PHP <span class="type">string</span> from `size` bytes of the
 memory area pointed to by `ptr`.
@@ -762,6 +782,12 @@ The number of bytes to copy to the <span class="type">string</span>. If
 ### 返回值
 
 The freshly created PHP <span class="type">string</span>.
+
+### 更新日志
+
+| 版本  | 说明                                                     |
+|-------|----------------------------------------------------------|
+| 8.0.0 | `size` is nullable now; previously, its default was *0*. |
 
 FFI::type
 =========
