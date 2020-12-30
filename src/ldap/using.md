@@ -1,7 +1,7 @@
 Using the PHP LDAP calls
 ========================
 
-Before you can use the LDAP calls you will need to know ..
+Before you can use the LDAP calls you will need to know...
 
 -   The name or address of the directory server you will use
 

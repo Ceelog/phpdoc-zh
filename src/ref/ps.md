@@ -1080,7 +1080,7 @@ Ends a page which was started with <span
 class="function">ps\_begin\_page</span>. Ending a page will leave the
 current drawing context, which e.g. requires to reload fonts if they
 were loading within the page, and to set many other drawing parameters
-like the line width, or color..
+like the line width, or color.
 
 ### 参数
 

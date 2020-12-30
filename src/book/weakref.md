@@ -518,7 +518,7 @@ class A {
 $wm[$o] = new A;
 
 var_dump(count($wm));
-echo "Unsetting..\n";
+echo "Unsetting...\n";
 unset($o);
 echo "Done\n";
 var_dump(count($wm));
@@ -527,7 +527,7 @@ var_dump(count($wm));
 以上例程会输出：
 
     int(1)
-    Unsetting..
+    Unsetting...
     Dead!
     Done
     int(0)
