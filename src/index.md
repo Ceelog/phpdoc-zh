@@ -192,7 +192,7 @@ class="surname family-name">Vrana</span> </span>
 <a href="/preface.html#contributors" class="link">其他贡献者</a> </span>
 </span>
 
-2020-12-31
+2021-01-01
 
 **Edited By**: <span class="personname fn"> <span
 class="firstname given-name">Peter</span> <span
@@ -220,5 +220,5 @@ class="surname family-name">Cowburn</span> </span>
 
 <span class="personname fn">褚兆玮</span>
 
-© <span class="year">1997-2020</span> <span class="holder">PHP
+© <span class="year">1997-2021</span> <span class="holder">PHP
 文档组</span>
