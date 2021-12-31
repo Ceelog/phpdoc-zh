@@ -1,4 +1,4 @@
-Copyright © 1997 - 2021，PHP 文档组版权所有。发行本资料必须服从 Creative
+Copyright © 1997 - 2022，PHP 文档组版权所有。发行本资料必须服从 Creative
 Commons Attribution 3.0
 或更新版许可中阐明的条款及条件。<a href="/cc/license.html" class="link">Creative Commons Attribution 3.0 license</a>
 的副本已随本手册发行。其最新版本位于
